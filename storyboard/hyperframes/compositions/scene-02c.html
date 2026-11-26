@@ -1,0 +1,37 @@
+<!doctype html>
+<template>
+  <style>
+    #root { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; background: transparent; }
+    #scene02c-artwork { display: block; width: 100%; height: 100%; overflow: hidden; }
+    #scene02c-shelf-upper-flower, #scene02c-shelf-lower-flower { transform-box: fill-box; transform-origin: 50% 100%; }
+    #scene02c-artwork { transform-box: fill-box; transform-origin: 50% 50%; }
+  </style>
+  <div id="root" data-composition-id="scene-02c" data-width="1920" data-height="1080">
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1920 1080" role="img" aria-labelledby="scene02c-frame-title scene02c-frame-desc" id="scene02c-artwork">
+  <title id="scene02c-frame-title">Scene 2C: understanding psychology and misusing terms</title>
+  <desc id="scene02c-frame-desc">Centered sage pill: Understanding psychology = Good! Centered terracotta pill: Misusing psychological terms = Problematic.</desc>
+  <metadata>Editable animation frame. Existing Storyset vector groups are recolored in SVG; all added elements are hand-edited vector shapes. No generated imagery.</metadata>
+  <rect x="0" y="0" width="1920" height="1080" fill="#FFF6EC" rx="0" />
+  <g id="scene02c-understanding-statement">
+    <rect x="385" y="304" width="1150" height="148" fill="#7FB89A" rx="30" />
+    <text x="960" y="398" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="960" dy="0">Understanding psychology = Good!</tspan>
+    </text>
+  </g>
+  <g id="scene02c-misuse-statement">
+    <rect x="270" y="552" width="1380" height="176" fill="#E4572E" rx="30" />
+    <text x="960" y="660" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="960" dy="0">Misusing psychological terms = Problematic.</tspan>
+    </text>
+  </g>
+</svg>
+  </div>
+  <script>
+    window.__timelines = window.__timelines || {};
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#scene02c-artwork", { opacity: 0 }, { opacity: 1, duration: 0.35, ease: "power2.out" }, 0)
+      .fromTo("#scene02c-understanding-statement", { opacity: 0, y: 56, scale: 0.92 }, { opacity: 1, y: 0, scale: 1, duration: 0.85, ease: "back.out(1.25)" }, 0.2)
+      .fromTo("#scene02c-misuse-statement", { opacity: 0, y: 64, scale: 0.9 }, { opacity: 1, y: 0, scale: 1, duration: 1.05, ease: "back.out(1.25)" }, 0.62);
+    window.__timelines["scene-02c"] = tl;
+  </script>
+</template>

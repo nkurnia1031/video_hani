@@ -2040,6 +2040,12 @@ def make_zip():
                 archive.write(source_asset, source_asset.name)
         for path in sorted(PREVIEW_DIR.glob("*.png")):
             archive.write(path, "previews/" + path.name)
+        hyperframes = ROOT / "hyperframes"
+        if hyperframes.exists():
+            for path in sorted(hyperframes.rglob("*")):
+                if not path.is_file() or ".hyperframes" in path.parts or "node_modules" in path.parts:
+                    continue
+                archive.write(path, "hyperframes/" + path.relative_to(hyperframes).as_posix())
     return out
 
 
