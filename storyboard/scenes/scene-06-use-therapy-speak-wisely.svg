@@ -1,38 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="scene-title scene-desc">
-  <title id="scene-title">Scene 6: How to Use Therapy Speak Wisely</title>
-  <desc id="scene-desc">A checklist illustration sits beside three practical steps and short Indonesian explanations.</desc>
-  <metadata>Scene 6 | How to Use Therapy Speak Wisely | Editable vector storyboard. Existing Storyset art is embedded as SVG; all other visuals are hand-edited vector shapes, not generated images.</metadata>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="frame-title frame-desc">
+  <title id="frame-title">Scene 6: How to Use Therapy Speak Wisely</title>
+  <desc id="frame-desc">Satu komposisi animasi layar penuh: ilustrasi checklist di kiri dan tiga langkah praktis di kanan, diakhiri ajakan membiarkan emosi manusia hadir.</desc>
+  <metadata>Scene 6 · How to Use Therapy Speak Wisely · Standalone editable animation frame. Only the scene background, source illustration, animated props, and audience-facing text are included; production-board labels remain outside the artwork.</metadata>
   <rect x="0" y="0" width="1920" height="1080" fill="#FFF6EC" rx="0" />
-  <circle cx="1790" cy="165" r="165" fill="#7FB89A" opacity="0.075" />
-  <circle cx="120" cy="900" r="110" fill="#7FB89A" opacity="0.045" />
-  <circle cx="1780" cy="920" r="8" fill="#7FB89A" opacity="0.55" />
-  <circle cx="1812" cy="920" r="8" fill="#E4572E" opacity="0.75" />
-  <circle cx="1844" cy="920" r="8" fill="#2A1F2D" opacity="0.6" />
-  <text x="92" y="66" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start" letter-spacing="1.2">
-    <tspan x="92" dy="0">THERAPY SPEAK GONE WRONG</tspan>
-  </text>
-  <text x="92" y="94" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" text-anchor="start" letter-spacing="1.4">
-    <tspan x="92" dy="0">PRODUCTION BOARD  /  EDITABLE VECTOR</tspan>
-  </text>
-  <rect x="1575" y="43" width="250" height="48" fill="#FFF6EC" rx="24.0" stroke="#FFC4A3" stroke-width="2" />
-  <text x="1700.0" y="74.68" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="1700.0" dy="0">03:20–03:50</tspan>
-  </text>
-  <text x="92" y="168" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="49" font-weight="700" text-anchor="start" letter-spacing="0">
-    <tspan x="92" dy="0">How to Use Therapy Speak Wisely</tspan>
-  </text>
-  <line x1="92" y1="195" x2="1828" y2="195" stroke="#FFC4A3" stroke-width="2" stroke-linecap="round" />
-  <line x1="92" y1="1015" x2="1828" y2="1015" stroke="#FFC4A3" stroke-width="2" stroke-linecap="round" />
-  <text x="92" y="1045" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" text-anchor="start" letter-spacing="1.1">
-    <tspan x="92" dy="0">VISUAL + TEKS LAYAR + GERAK</tspan>
-  </text>
-  <text x="1828" y="1045" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="end" letter-spacing="0">
-    <tspan x="1828" dy="0">06 / 07</tspan>
-  </text>
-  <rect x="79" y="245" width="660" height="660" fill="#2A1F2D" rx="24" opacity="0.12" />
-  <rect x="72" y="235" width="660" height="660" fill="#FFF6EC" rx="24" stroke="#FFC4A3" stroke-width="2" />
-  <svg x="90" y="250" width="620" height="615" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet" overflow="hidden" aria-label="To do list illustration, Storyset Rafiki">
+  <rect x="79" y="140" width="660" height="760" fill="#2A1F2D" rx="24" opacity="0.12" />
+  <rect x="72" y="130" width="660" height="760" fill="#FFF6EC" rx="24" stroke="#FFC4A3" stroke-width="2" />
+  <svg x="90" y="145" width="620" height="720" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet" overflow="hidden" aria-label="To do list illustration, Storyset Rafiki">
     <g id="stodo-background-complete">
       <rect y="382.4" width="500" height="0.25" style="fill:#FFF6EC" />
       <path d="M237,337.8H43.91a5.71,5.71,0,0,1-5.7-5.71V60.66A5.71,5.71,0,0,1,43.91,55H237a5.71,5.71,0,0,1,5.71,5.71V332.09A5.71,5.71,0,0,1,237,337.8ZM43.91,55.2a5.46,5.46,0,0,0-5.45,5.46V332.09a5.46,5.46,0,0,0,5.45,5.46H237a5.47,5.47,0,0,0,5.46-5.46V60.66A5.47,5.47,0,0,0,237,55.2Z" style="fill:#FFF6EC" />
@@ -154,49 +128,53 @@
       <path d="M218.6,182.9l-.18,1.76a3.36,3.36,0,0,1-1.14,2.18l-1.23,1-2.32-8.36.71-.18A3.34,3.34,0,0,1,218.6,182.9Z" style="fill:#FFC4A3" />
     </g>
   </svg>
-  <rect x="777" y="255" width="1070" height="190" fill="#2A1F2D" rx="20" opacity="0.12" />
-  <rect x="770" y="245" width="1070" height="190" fill="#FFF6EC" rx="20" stroke="#FFC4A3" stroke-width="2" />
-  <circle cx="844" cy="320" r="37" fill="#F2B134" />
-  <text x="844" y="330" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" text-anchor="middle" letter-spacing="0">
+  <rect x="777" y="138" width="1070" height="206" fill="#2A1F2D" rx="20" opacity="0.12" />
+  <rect x="770" y="128" width="1070" height="206" fill="#FFF6EC" rx="20" stroke="#FFC4A3" stroke-width="2" />
+  <circle cx="844" cy="209" r="37" fill="#F2B134" />
+  <text x="844" y="219" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" text-anchor="middle" letter-spacing="0">
     <tspan x="844" dy="0">1</tspan>
   </text>
-  <text x="910" y="315" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700">
+  <text x="910" y="201" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700">
     <tspan fill="#3D2645">Understand before you </tspan>
     <tspan fill="#E4572E">label</tspan>
   </text>
-  <text x="910" y="361" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" letter-spacing="0">
+  <text x="910" y="249" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" letter-spacing="0">
     <tspan x="910" dy="0">Cari tahu makna istilah sebelum memakainya.</tspan>
   </text>
-  <circle cx="1740" cy="318" r="25" fill="none" stroke="#7FB89A" stroke-width="5" />
-  <line x1="1758" y1="336" x2="1779" y2="357" stroke="#7FB89A" stroke-width="6" stroke-linecap="round" />
-  <rect x="777" y="471" width="1070" height="190" fill="#2A1F2D" rx="20" opacity="0.12" />
-  <rect x="770" y="461" width="1070" height="190" fill="#FFF6EC" rx="20" stroke="#FFC4A3" stroke-width="2" />
-  <circle cx="844" cy="536" r="37" fill="#F2B134" />
-  <text x="844" y="546" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" text-anchor="middle" letter-spacing="0">
+  <circle cx="1740" cy="207" r="25" fill="none" stroke="#7FB89A" stroke-width="5" />
+  <line x1="1758" y1="225" x2="1779" y2="246" stroke="#7FB89A" stroke-width="6" stroke-linecap="round" />
+  <rect x="777" y="380" width="1070" height="206" fill="#2A1F2D" rx="20" opacity="0.12" />
+  <rect x="770" y="370" width="1070" height="206" fill="#FFF6EC" rx="20" stroke="#FFC4A3" stroke-width="2" />
+  <circle cx="844" cy="451" r="37" fill="#F2B134" />
+  <text x="844" y="461" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" text-anchor="middle" letter-spacing="0">
     <tspan x="844" dy="0">2</tspan>
   </text>
-  <text x="910" y="531" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700">
+  <text x="910" y="443" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700">
     <tspan fill="#3D2645">Describe, don’t </tspan>
     <tspan fill="#E4572E">diagnose</tspan>
   </text>
-  <text x="910" y="577" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" letter-spacing="0">
+  <text x="910" y="491" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" letter-spacing="0">
     <tspan x="910" dy="0">Jelaskan perilaku spesifik yang membuat tidak nyaman.</tspan>
   </text>
-  <rect x="1700" y="506" width="93" height="58" fill="#FFC4A3" rx="12" stroke="#7FB89A" stroke-width="3" />
-  <path d="M1720,533 L1734,547 L1769,519" fill="none" stroke="#7FB89A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
-  <rect x="777" y="687" width="1070" height="190" fill="#2A1F2D" rx="20" opacity="0.12" />
-  <rect x="770" y="677" width="1070" height="190" fill="#FFF6EC" rx="20" stroke="#FFC4A3" stroke-width="2" />
-  <circle cx="844" cy="752" r="37" fill="#F2B134" />
-  <text x="844" y="762" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" text-anchor="middle" letter-spacing="0">
+  <rect x="1700" y="421" width="93" height="58" fill="#FFC4A3" rx="12" stroke="#7FB89A" stroke-width="3" />
+  <path d="M1720,448 L1734,462 L1769,434" fill="none" stroke="#7FB89A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="777" y="622" width="1070" height="206" fill="#2A1F2D" rx="20" opacity="0.12" />
+  <rect x="770" y="612" width="1070" height="206" fill="#FFF6EC" rx="20" stroke="#FFC4A3" stroke-width="2" />
+  <circle cx="844" cy="693" r="37" fill="#F2B134" />
+  <text x="844" y="703" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" text-anchor="middle" letter-spacing="0">
     <tspan x="844" dy="0">3</tspan>
   </text>
-  <text x="910" y="747" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700">
+  <text x="910" y="685" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700">
     <tspan fill="#3D2645">Learn, don’t </tspan>
     <tspan fill="#E4572E">self-diagnose</tspan>
   </text>
-  <text x="910" y="793" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" letter-spacing="0">
+  <text x="910" y="733" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" letter-spacing="0">
     <tspan x="910" dy="0">Konten edukasi bukan pengganti asesmen profesional.</tspan>
   </text>
-  <circle cx="1744" cy="752" r="29" fill="#FFF6EC" stroke="#7FB89A" stroke-width="3" />
-  <path d="M1728,753 L1740,765 L1762,738" fill="none" stroke="#7FB89A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="1744" cy="693" r="29" fill="#FFF6EC" stroke="#7FB89A" stroke-width="3" />
+  <path d="M1728,694 L1740,706 L1762,679" fill="none" stroke="#7FB89A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="770" y="895" width="1070" height="66" fill="#7FB89A" rx="33.0" />
+  <text x="1305.0" y="938.56" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <tspan x="1305.0" dy="0">Allow normal human emotions.</tspan>
+  </text>
 </svg>

@@ -1,36 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="scene-title scene-desc">
-  <title id="scene-title">Scene 7: Closing</title>
-  <desc id="scene-desc">A group scene sits beside four everyday emotion icons and the closing title card.</desc>
-  <metadata>Scene 7 | Closing | Editable vector storyboard. Existing Storyset art is embedded as SVG; all other visuals are hand-edited vector shapes, not generated images.</metadata>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="frame-title frame-desc">
+  <title id="frame-title">Scene 7: Closing</title>
+  <desc id="frame-desc">Komposisi penutup layar penuh: istilah viral memudar di dekat kelompok, empat ekspresi emosi tetap berwarna, lalu pesan penutup memenuhi sisi kanan.</desc>
+  <metadata>Scene 7 · Closing · Standalone editable animation frame. Only the scene background, source illustration, animated props, and audience-facing text are included; production-board labels remain outside the artwork.</metadata>
   <rect x="0" y="0" width="1920" height="1080" fill="#3D2645" rx="0" />
-  <circle cx="1790" cy="165" r="165" fill="#E4572E" opacity="0.075" />
-  <circle cx="120" cy="900" r="110" fill="#E4572E" opacity="0.045" />
-  <circle cx="1780" cy="920" r="8" fill="#E4572E" opacity="0.55" />
-  <circle cx="1812" cy="920" r="8" fill="#E4572E" opacity="0.75" />
-  <circle cx="1844" cy="920" r="8" fill="#FFF6EC" opacity="0.6" />
-  <text x="92" y="66" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start" letter-spacing="1.2">
-    <tspan x="92" dy="0">THERAPY SPEAK GONE WRONG</tspan>
-  </text>
-  <text x="92" y="94" fill="#FFC4A3" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" text-anchor="start" letter-spacing="1.4">
-    <tspan x="92" dy="0">PRODUCTION BOARD  /  EDITABLE VECTOR</tspan>
-  </text>
-  <rect x="1575" y="43" width="250" height="48" fill="#FFF6EC" rx="24.0" stroke="#FFC4A3" stroke-width="2" />
-  <text x="1700.0" y="74.68" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="1700.0" dy="0">03:50–04:00</tspan>
-  </text>
-  <text x="92" y="168" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="49" font-weight="700" text-anchor="start" letter-spacing="0">
-    <tspan x="92" dy="0">Closing</tspan>
-  </text>
-  <line x1="92" y1="195" x2="1828" y2="195" stroke="#3D2645" stroke-width="2" stroke-linecap="round" />
-  <line x1="92" y1="1015" x2="1828" y2="1015" stroke="#3D2645" stroke-width="2" stroke-linecap="round" />
-  <text x="92" y="1045" fill="#FFC4A3" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" text-anchor="start" letter-spacing="1.1">
-    <tspan x="92" dy="0">VISUAL + TEKS LAYAR + GERAK</tspan>
-  </text>
-  <text x="1828" y="1045" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="end" letter-spacing="0">
-    <tspan x="1828" dy="0">07 / 07</tspan>
-  </text>
-  <svg x="88" y="250" width="770" height="620" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet" overflow="hidden" aria-label="Social Interaction illustration, Storyset Rafiki">
+  <svg x="52" y="148" width="870" height="760" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet" overflow="hidden" aria-label="Social Interaction illustration, Storyset Rafiki">
     <g id="ssocial-freepik--Shadow--inject-2">
       <ellipse id="ssocial-freepik--path--inject-2" cx="250" cy="416.24" rx="193.89" ry="11.32" style="fill:#3D2645" />
     </g>
@@ -173,69 +147,62 @@
       <path d="M287,77.54A7,7,0,0,0,280.76,71c-23.46-2.45-56.3,3-69.4,5.54a7.05,7.05,0,0,0-5.72,7.16c.47,15.5,4.5,25.67,10.94,35.9a7.08,7.08,0,0,0,5.79,3.27c4.62.13,9.17.09,13.59-.09a25.23,25.23,0,0,0,8.86,7.67,26.88,26.88,0,0,1,0-8.24c14.18-1.23,26.57-3.88,35.06-7a7.13,7.13,0,0,0,4.35-4.68C287.49,99.61,287.53,85.89,287,77.54Z" style="fill:#7FB89A" />
     </g>
   </svg>
-  <rect x="114" y="258" width="180" height="40" fill="#E4572E" rx="20.0" opacity="0.58" />
-  <text x="204.0" y="284.4" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="middle" letter-spacing="0" opacity="0.58">
-    <tspan x="204.0" dy="0">toxic</tspan>
+  <rect x="82" y="118" width="180" height="40" fill="#E4572E" rx="20.0" opacity="0.58" />
+  <text x="172.0" y="144.4" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="middle" letter-spacing="0" opacity="0.58">
+    <tspan x="172.0" dy="0">toxic</tspan>
   </text>
-  <rect x="300" y="258" width="204" height="40" fill="#E4572E" rx="20.0" opacity="0.42" />
-  <text x="402.0" y="284.4" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="middle" letter-spacing="0" opacity="0.42">
-    <tspan x="402.0" dy="0">trauma</tspan>
+  <rect x="268" y="118" width="204" height="40" fill="#E4572E" rx="20.0" opacity="0.42" />
+  <text x="370.0" y="144.4" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="middle" letter-spacing="0" opacity="0.42">
+    <tspan x="370.0" dy="0">trauma</tspan>
   </text>
-  <rect x="512" y="258" width="190" height="40" fill="#E4572E" rx="20.0" opacity="0.28" />
-  <text x="607.0" y="284.4" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="middle" letter-spacing="0" opacity="0.28">
-    <tspan x="607.0" dy="0">avoidant</tspan>
+  <rect x="478" y="118" width="190" height="40" fill="#E4572E" rx="20.0" opacity="0.28" />
+  <text x="573.0" y="144.4" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="middle" letter-spacing="0" opacity="0.28">
+    <tspan x="573.0" dy="0">avoidant</tspan>
   </text>
-  <text x="1373" y="290" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="middle" letter-spacing="1.2">
-    <tspan x="1373" dy="0">NORMAL HUMAN EMOTIONS</tspan>
+  <text x="1370" y="136" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="middle" letter-spacing="1.2">
+    <tspan x="1370" dy="0">NORMAL HUMAN EMOTIONS</tspan>
   </text>
-  <circle cx="1055" cy="370" r="38" fill="#FFC4A3" stroke="#FFF6EC" stroke-width="4" />
-  <circle cx="1043" cy="362" r="3.5" fill="#2A1F2D" />
-  <circle cx="1067" cy="362" r="3.5" fill="#2A1F2D" />
-  <path d="M1040,377 Q1055,395 1070,377" fill="none" stroke="#2A1F2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-  <text x="1055" y="444" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="middle" letter-spacing="0">
+  <circle cx="1055" cy="230" r="38" fill="#FFC4A3" stroke="#FFF6EC" stroke-width="4" />
+  <circle cx="1043" cy="222" r="3.5" fill="#2A1F2D" />
+  <circle cx="1067" cy="222" r="3.5" fill="#2A1F2D" />
+  <path d="M1040,237 Q1055,255 1070,237" fill="none" stroke="#2A1F2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="1055" y="304" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="middle" letter-spacing="0">
     <tspan x="1055" dy="0">Gembira</tspan>
   </text>
-  <circle cx="1265" cy="370" r="38" fill="#7FB89A" stroke="#FFF6EC" stroke-width="4" />
-  <circle cx="1253" cy="362" r="3.5" fill="#2A1F2D" />
-  <circle cx="1277" cy="362" r="3.5" fill="#2A1F2D" />
-  <path d="M1251,389 Q1265,374 1279,389" fill="none" stroke="#2A1F2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M1287,369 Q1294,378 1287,384 Q1281,378 1287,369" fill="#FFC4A3" />
-  <text x="1265" y="444" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="middle" letter-spacing="0">
+  <circle cx="1265" cy="230" r="38" fill="#7FB89A" stroke="#FFF6EC" stroke-width="4" />
+  <circle cx="1253" cy="222" r="3.5" fill="#2A1F2D" />
+  <circle cx="1277" cy="222" r="3.5" fill="#2A1F2D" />
+  <path d="M1251,249 Q1265,234 1279,249" fill="none" stroke="#2A1F2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M1287,229 Q1294,238 1287,244 Q1281,238 1287,229" fill="#FFC4A3" />
+  <text x="1265" y="304" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="middle" letter-spacing="0">
     <tspan x="1265" dy="0">Sedih</tspan>
   </text>
-  <circle cx="1475" cy="370" r="38" fill="#F2B134" stroke="#FFF6EC" stroke-width="4" />
-  <circle cx="1463" cy="362" r="3.5" fill="#2A1F2D" />
-  <circle cx="1487" cy="362" r="3.5" fill="#2A1F2D" />
-  <circle cx="1475" cy="383" r="5" fill="none" stroke="#2A1F2D" stroke-width="3" />
-  <text x="1475" y="444" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="middle" letter-spacing="0">
+  <circle cx="1475" cy="230" r="38" fill="#F2B134" stroke="#FFF6EC" stroke-width="4" />
+  <circle cx="1463" cy="222" r="3.5" fill="#2A1F2D" />
+  <circle cx="1487" cy="222" r="3.5" fill="#2A1F2D" />
+  <circle cx="1475" cy="243" r="5" fill="none" stroke="#2A1F2D" stroke-width="3" />
+  <text x="1475" y="304" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="middle" letter-spacing="0">
     <tspan x="1475" dy="0">Takut</tspan>
   </text>
-  <circle cx="1685" cy="370" r="38" fill="#FFF6EC" stroke="#FFF6EC" stroke-width="4" />
-  <circle cx="1673" cy="362" r="3.5" fill="#2A1F2D" />
-  <circle cx="1697" cy="362" r="3.5" fill="#2A1F2D" />
-  <line x1="1670" y1="382" x2="1700" y2="382" stroke="#2A1F2D" stroke-width="3" stroke-linecap="round" />
-  <text x="1685" y="444" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="middle" letter-spacing="0">
+  <circle cx="1685" cy="230" r="38" fill="#FFF6EC" stroke="#FFF6EC" stroke-width="4" />
+  <circle cx="1673" cy="222" r="3.5" fill="#2A1F2D" />
+  <circle cx="1697" cy="222" r="3.5" fill="#2A1F2D" />
+  <line x1="1670" y1="242" x2="1700" y2="242" stroke="#2A1F2D" stroke-width="3" stroke-linecap="round" />
+  <text x="1685" y="304" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="middle" letter-spacing="0">
     <tspan x="1685" dy="0">Tenang</tspan>
   </text>
-  <line x1="980" y1="500" x2="1764" y2="500" stroke="#2A1F2D" stroke-width="2" stroke-linecap="round" />
-  <text x="1250" y="638" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="700" text-anchor="middle" letter-spacing="0.6">
+  <line x1="980" y1="354" x2="1764" y2="354" stroke="#2A1F2D" stroke-width="2" stroke-linecap="round" />
+  <text x="1250" y="514" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="43" font-weight="700" text-anchor="middle" letter-spacing="0.6">
     <tspan x="1250" dy="0">THINK BEFORE YOU</tspan>
   </text>
-  <text x="1594" y="638" fill="#F2B134" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="700" text-anchor="middle" letter-spacing="0.6">
+  <text x="1594" y="514" fill="#F2B134" font-family="Arial, Helvetica, sans-serif" font-size="43" font-weight="700" text-anchor="middle" letter-spacing="0.6">
     <tspan x="1594" dy="0">LABEL.</tspan>
   </text>
-  <text x="1373" y="692" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="middle" letter-spacing="0">
+  <text x="1373" y="582" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="middle" letter-spacing="0">
     <tspan x="1373" dy="0">Understand psychology. Use it responsibly.</tspan>
   </text>
-  <rect x="1088" y="748" width="570" height="55" fill="#F2B134" rx="27.5" />
-  <text x="1373.0" y="784.3" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="1373.0" dy="0">PSYCHOLOGY HELPS US UNDERSTAND PEOPLE</tspan>
-  </text>
-  <text x="1373" y="850" fill="#FFC4A3" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="0.7">
-    <tspan x="1373" dy="0">END CARD  ·  VIDEO TITLE  ·  CREATOR IDENTITY</tspan>
-  </text>
-  <rect x="92" y="926" width="1736" height="47" fill="#2A1F2D" rx="15" />
-  <text x="960" y="958" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="960" dy="0">Stay curious. Stay kind.</tspan>
+  <rect x="1020" y="682" width="710" height="82" fill="#F2B134" rx="22" />
+  <text x="1375" y="735" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <tspan x="1375" dy="0">Stay curious. Stay kind.</tspan>
   </text>
 </svg>

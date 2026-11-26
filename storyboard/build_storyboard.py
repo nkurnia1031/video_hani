@@ -202,10 +202,10 @@ SCENES = [
     {
         "no": 3, "slug": "normal-emotions-become-labels", "time": "01:05–01:55", "title": "When Normal Emotions Become Labels",
         "visual": "Three separate full-screen examples: an unanswered message, a worried student at a study desk as a crossed-out 100 changes to a red 45 remedial score, and a disagreement. A final frame brings the examples together behind centered on-screen text.",
-        "screen": "They're avoidant! · I'm depressed! (100 dicoret → 45 · REMEDI) · You're gaslighting me!\nOne behavior ≠ A psychological diagnosis.",
-        "motion": "03A–03C: tiap contoh tampil sendiri; bubble terracotta muncul lebih dulu, lalu koreksi sage. 03B: kotak nilai untuk penonton menampilkan 100 yang dicoret dan berubah menjadi 45 · REMEDI. 03D: ketiga contoh bertemu dan kalimat penutup tampil di tengah.",
+        "screen": "They're avoidant! · I'm depressed! (target tidak tercapai) · You're gaslighting me!\nOne behavior ≠ A psychological diagnosis.",
+        "motion": "03A–03C: tiap contoh tampil sendiri; bubble terracotta muncul lebih dulu, lalu koreksi sage. 03B memakai ilustrasi Raka yang sama dengan 4A dan penanda target gagal yang terpisah. 03D: ketiga contoh bertemu dan kalimat penutup tampil di tengah.",
         "voice": "Contoh pertama. Teman kita belum membalas chat selama beberapa jam. Lalu kita langsung menyimpulkan bahwa dia punya avoidant attachment. Padahal, mungkin dia sedang sibuk, kelelahan, atau memang belum sempat membalas. One situation doesn't define someone's entire personality. Contoh kedua. Kita merasa sedih setelah gagal mencapai target. Kemudian langsung menyebut diri sendiri mengalami depresi. Padahal, sedih merupakan emosi manusia yang normal. Kesedihan setelah mengalami kegagalan tidak otomatis menunjukkan adanya gangguan depresi. Contoh ketiga. Seseorang tidak setuju dengan pendapat kita, lalu langsung dituduh melakukan gaslighting. Padahal, disagreement atau perbedaan pendapat tidak otomatis termasuk gaslighting. Kita perlu melihat konteks, pola perilaku, dan bagaimana tindakan tersebut terjadi.",
-        "assets": ["texting", "student_stress", "couple"], "roles": ["Texting-rafiki.svg: pesan belum dibalas di 03A.", "Student-stress_Rafiki.svg: siswa cemas di meja belajar; kotak nilai menjadi overlay penonton di 03B.", "Couple stress-rafiki.svg: konteks perbedaan pendapat."],
+        "assets": ["texting", "student_stress", "couple"], "roles": ["Texting-rafiki.svg: pesan belum dibalas di 03A.", "Student-stress_Rafiki.svg: Raka dari pose 4A dipakai kembali di 03B; penanda target gagal menjadi overlay animasi terpisah.", "Couple stress-rafiki.svg: konteks perbedaan pendapat."],
         "credits": ["texting", "student_stress", "couple"], "background": "Case 1 peach tint #FFE3D3, Case 2 sage tint #DCEFE4, and Case 3 mustard tint #FCE9C2; terracotta labels and sage corrections use the PDF's contrast rules.",
         "frames": [
             {"code": "03A", "slug": "03a-case-01-avoidant", "title": "Case 1 · Unanswered Message", "time": "01:05–01:20"},
@@ -233,27 +233,27 @@ SCENES = [
     },
     {
         "no": 5, "slug": "ethics", "time": "02:35–03:20", "title": "The Ethical Side of Psychology",
-        "visual": "A digital-document composition supports four concise article cards.",
-        "screen": "Pasal 9 · 15 · 28 · 31",
-        "motion": "Kartu pasal masuk satu per satu. Pita dasar ilmiah dan kehati-hatian menyatukan keempatnya.",
+        "visual": "Satu komposisi animasi layar penuh: dokumen digital dan riset di kiri, empat kartu pasal berurutan di kanan, lalu pita dasar ilmiah dan kehati-hatian menutup komposisi.",
+        "screen": "Pasal 9 · 15 · 28 · 31 · Scientific basis + professional care",
+        "motion": "Dokumen terbuka dengan gerak lembaran, empat kartu pasal masuk bertahap dengan aksen penanda, lalu pita dasar ilmiah menyapu sebagai penutup. Tidak ada judul produksi, timestamp, atau footer di dalam frame.",
         "voice": "That's also why ethical responsibility matters when we talk about psychology. Dalam Kode Etik Psikologi Indonesia, ada beberapa prinsip yang relevan dengan fenomena ini. Pasal 9 menekankan bahwa keputusan psikolog dan ilmuwan psikologi harus didasarkan pada pengetahuan ilmiah dan sikap profesional yang telah teruji. Artinya, psychological claims should not be based on assumptions or viral trends alone. Pasal 15 membahas penghindaran dampak buruk. Jadi, informasi psikologi perlu disampaikan dengan mempertimbangkan kemungkinan dampaknya terhadap orang lain. Pasal 28 mengingatkan bahwa pernyataan publik harus disampaikan secara bijaksana, jujur, teliti, dan hati-hati, serta berpedoman pada dasar ilmiah. Sementara itu, Pasal 31 menekankan bahwa pernyataan melalui media harus konsisten dengan kode etik dan didasarkan pada pengetahuan serta praktik psikologi yang tepat. So, sharing psychology is not just about being relatable. It's also about being responsible.",
         "assets": ["document", "research"], "roles": ["Online document-rafiki.svg: halaman digital.", "Research paper-rafiki.svg: konteks dasar ilmiah.", "Empat kartu pasal dibuat sebagai vektor."],
         "credits": ["document", "research"], "background": "Warm white document page on a pale-lilac digital canvas.",
     },
     {
         "no": 6, "slug": "use-therapy-speak-wisely", "time": "03:20–03:50", "title": "How to Use Therapy Speak Wisely",
-        "visual": "A checklist illustration sits beside three practical steps and short Indonesian explanations.",
-        "screen": "Understand before you label · Describe, don’t diagnose · Learn, don’t self-diagnose",
-        "motion": "Tiga baris checklist dan ikon sederhana muncul satu per satu.",
+        "visual": "Satu komposisi animasi layar penuh: ilustrasi checklist di kiri dan tiga langkah praktis di kanan, diakhiri ajakan membiarkan emosi manusia hadir.",
+        "screen": "Understand before you label · Describe, don’t diagnose · Learn, don’t self-diagnose · Allow normal human emotions.",
+        "motion": "Checklist bergerak masuk dan tiga langkah tersusun berurutan. Frasa ‘Allow normal human emotions.’ menjadi teks terakhir di layar. Frame hanya berisi ilustrasi, langkah, ikon, dan teks animasi.",
         "voice": "So, how can we use psychological terms more wisely? Here's your three-step reminder. Number one, understand before you label. Cari tahu makna suatu istilah sebelum menggunakannya. Number two, describe behavior, not diagnose people. Daripada langsung menyebut seseorang narcissist, lebih baik jelaskan perilaku spesifik yang membuat kita merasa tidak nyaman. Number three, know your limits. Konten media sosial bisa menjadi sumber edukasi awal, but it cannot replace professional assessment. And most importantly, allow yourself and others to experience normal human emotions without immediately turning them into disorders.",
         "assets": ["todo"], "roles": ["To-do list-rafiki.svg: ilustrasi checklist; tiga langkah dan ikon pendamping disusun sebagai vektor."],
         "credits": ["todo"], "background": "Light mint backdrop with blue checklist rows.",
     },
     {
         "no": 7, "slug": "closing", "time": "03:50–04:00", "title": "Closing",
-        "visual": "A group scene sits beside four everyday emotion icons and the closing title card.",
-        "screen": "THINK BEFORE YOU LABEL.\nUnderstand psychology. Use it responsibly.",
-        "motion": "Istilah memudar; ekspresi dan judul penutup muncul. Sisakan slot identitas pembuat.",
+        "visual": "Komposisi penutup layar penuh: istilah viral memudar di dekat kelompok, empat ekspresi emosi tetap berwarna, lalu pesan penutup memenuhi sisi kanan.",
+        "screen": "THINK BEFORE YOU LABEL.\nStay curious. Stay kind!",
+        "motion": "Istilah viral meredup, empat ekspresi menyala bergantian, kemudian ‘THINK BEFORE YOU LABEL.’ dan ‘Stay curious. Stay kind!’ masuk sebagai teks akhir. Tidak ada slot produksi atau identitas pembuat di artwork.",
         "voice": "Psychology should help us understand people, not reduce them to labels. So, before you say it, make sure you understand it. Because not every emotion is a disorder, and not every behavior needs a psychological label. Think before you label. Stay curious, stay kind!",
         "assets": ["social"], "roles": ["Social interaction-rafiki.svg: kelompok dengan ekspresi beragam.", "Empat ikon emosi dan end card dibuat sebagai vektor."],
         "credits": ["social"], "background": "Soft peach paper, muted fading labels, and a clear final card.",
@@ -274,10 +274,10 @@ SCENES[0].update({
     ],
 })
 SCENES[2].update({
-    "visual": "Tiga case terpisah, masing-masing memakai satu ilustrasi dan satu latar warna sendiri: pesan belum dibalas; seseorang menangis setelah gagal mencapai target; dua orang berbeda pendapat. Koreksi sage muncul saat VO sampai ‘Padahal...’. Frame terakhir menampilkan kalimat penutup di tengah.",
-    "screen": "03A · They're avoidant! · Mungkin sibuk, kelelahan, atau belum sempat.\n03B · I'm depressed! · Sedih setelah gagal itu emosi yang normal.\n03C · You're gaslighting me! · Beda pendapat bukan otomatis gaslighting.\n03D · One behavior ≠ A psychological diagnosis.",
-    "motion": "Tiga case tampil sendiri-sendiri. Di tiap case, bubble label terracotta muncul dahulu; saat VO mencapai ‘Padahal...’, kotak koreksi sage masuk. Frame 03D menyatukan komposisi dan menampilkan teks penutup.",
-    "roles": ["Texting · Rafiki: teman mengirim pesan yang hanya dibaca, tanpa balasan.", "Student Stress · Rafiki: seseorang kecewa setelah gagal mencapai target; air mata dan penanda target adalah overlay terpisah, bukan perubahan karakter sumber.", "Couple Stress · Rafiki: dua orang tidak sependapat. Semua asset credit dan komposisi tetap berada di luar artwork frame."],
+    "visual": "Tiga case terpisah, masing-masing memakai satu ilustrasi dan satu latar warna sendiri: pesan belum dibalas; Raka dari frame 4A sedih setelah gagal mencapai target; dua orang berbeda pendapat. Koreksi sage muncul saat VO sampai ‘Padahal...’. Frame terakhir menampilkan kalimat penutup di tengah.",
+    "screen": "03A · They're avoidant! · Mungkin sibuk, kelelahan, atau belum sempat.\n03B · I'm depressed! · Penanda target tidak tercapai · Sedih setelah gagal itu emosi yang normal.\n03C · You're gaslighting me! · Beda pendapat bukan otomatis gaslighting.\n03D · One behavior ≠ A psychological diagnosis.",
+    "motion": "Tiga case tampil sendiri-sendiri. Di tiap case, bubble label terracotta muncul dahulu; saat VO mencapai ‘Padahal...’, kotak koreksi sage masuk. 03B memakai Raka dari frame 4A dan mempertahankan penanda target gagal sebagai layer terpisah. Frame 03D menyatukan komposisi dan menampilkan teks penutup.",
+    "roles": ["Texting · Rafiki: teman mengirim pesan yang hanya dibaca, tanpa balasan.", "Student Stress · Rafiki: karakter Raka dari 4A dipakai ulang sebagai sosok yang sedih setelah target tidak tercapai; kartu target terpisah memperjelas konteks kegagalan.", "Couple Stress · Rafiki: dua orang tidak sependapat. Semua asset credit dan komposisi tetap berada di luar artwork frame."],
     "background": "Case 1 peach muda #FFE3D3, Case 2 sage muda #DCEFE4, Case 3 mustard muda #FCE9C2. Label terracotta dengan teks putih; koreksi sage dengan teks espresso. Maksimal tiga warna dominan per case.",
     "frames": [
         {"code": "03A", "slug": "03a-case-01-avoidant", "title": "Case 1 · Unanswered Message", "time": "01:05–01:20", "voice": "Contoh pertama. Teman kita belum membalas chat selama beberapa jam. Lalu kita langsung menyimpulkan bahwa dia punya avoidant attachment. Padahal, mungkin dia sedang sibuk, kelelahan, atau memang belum sempat membalas. One situation doesn't define someone's entire personality."},
@@ -507,31 +507,15 @@ def embed_asset(parent, asset_key, x, y, w, h, omit_ids=(), include_ids=None, co
 
 
 def start_scene(scene, bg=CREAM, accent=PLUM, dark=False):
-    root = ET.Element(tag("svg"), {"width": str(W), "height": str(H), "viewBox": f"0 0 {W} {H}", "role": "img", "aria-labelledby": "scene-title scene-desc"})
-    foreground = CREAM if dark else ESPRESSO
-    secondary = PEACH if dark else PLUM
-    divider = PLUM if dark else PEACH
-    title_node = add(root, "title", id="scene-title")
-    title_node.text = f"Scene {scene['no']}: {scene['title']}"
-    desc_node = add(root, "desc", id="scene-desc")
-    desc_node.text = scene["visual"]
-    metadata = add(root, "metadata")
-    metadata.text = f"Scene {scene['no']} | {scene['title']} | Editable vector storyboard. Existing Storyset art is embedded as SVG; all other visuals are hand-edited vector shapes, not generated images."
-    rect(root, 0, 0, W, H, bg)
-    # Shared editorial frame and recurring dots keep the seven boards related.
-    circle(root, 1790, 165, 165, accent, opacity=0.075)
-    circle(root, 120, 900, 110, accent, opacity=0.045)
-    circle(root, 1780, 920, 8, accent, opacity=0.55)
-    circle(root, 1812, 920, 8, TERRACOTTA, opacity=0.75)
-    circle(root, 1844, 920, 8, foreground, opacity=0.60)
-    txt(root, 92, 66, "THERAPY SPEAK GONE WRONG", 20, foreground, 700, letter=1.2)
-    txt(root, 92, 94, "PRODUCTION BOARD  /  EDITABLE VECTOR", 13, secondary, 700, letter=1.4)
-    pill(root, 1575, 43, 250, 48, scene["time"], CREAM, PLUM, 19, stroke=PEACH)
-    txt(root, 92, 168, scene["title"], 49 if len(scene["title"]) < 35 else 43, foreground, 700)
-    line(root, 92, 195, 1828, 195, divider, 2)
-    line(root, 92, 1015, 1828, 1015, divider, 2)
-    txt(root, 92, 1045, "VISUAL + TEKS LAYAR + GERAK", 13, secondary, 700, letter=1.1)
-    txt(root, 1828, 1045, f"{scene['no']:02d} / 07", 15, foreground, 700, "end")
+    root = clean_frame(
+        f"Scene {scene['no']}: {scene['title']}",
+        scene["visual"],
+        bg,
+    )
+    root.find(tag("metadata")).text = (
+        f"Scene {scene['no']} · {scene['title']} · Standalone editable animation frame. "
+        "Only the scene background, source illustration, animated props, and audience-facing text are included; production-board labels remain outside the artwork."
+    )
     return root
 
 
@@ -827,7 +811,7 @@ def draw_case_frame(case_index):
     case = SCENE3_CASES[case_index]
     number = case_index + 1
     description = (
-        "A person at a desk looks overwhelmed and cries after missing a target. Cream tears and a separate target-progress overlay clarify the moment without changing the source character. The terracotta label says I'm depressed!; a sage correction says sadness after failure is a normal emotion."
+        "Raka sits with his head bowed and both hands holding his head after missing a work target. A separate target progress marker cues the failure; the terracotta label says I'm depressed! and a sage correction says sadness after failure is a normal emotion."
         if case["key"] == "student_stress"
         else f"{case['quote']} A terracotta assumption appears beside the illustration, then a sage correction reads: {' '.join(case['correction'])}"
     )
@@ -837,7 +821,10 @@ def draw_case_frame(case_index):
         case["background"],
     )
     if case["key"] == "student_stress":
-        root.find(tag("metadata")).text = "Storyset Student Stress Rafiki SVG; 34 of 254 original drawable elements changed or omitted (13.4%). The cream tears and missed-target marker are separate editable overlays; no grade or score card is present. No generated imagery."
+        root.find(tag("metadata")).text = (
+            "Storyset Student Stress · Rafiki. The same Raka illustration and grouped pose from Scene 4A are reused. "
+            "The target progress marker, mistaken label, and sage correction are independent editable overlays; no generated imagery."
+        )
     color_map = case.get("colors", {})
     omit_bg = {f"freepik--background-complete--inject-2"}
     if case["key"] == "texting":
@@ -856,12 +843,9 @@ def draw_case_frame(case_index):
         txt(root, 535, 400, "Balas dong :( ", 26, WHITE, 700, "middle")
         txt(root, 800, 468, "Dibaca · 3 jam", 18, ESPRESSO, 700, "end")
     elif case["key"] == "student_stress":
-        embed_asset(root, "student_stress", 58, 160, 920, 920,
-                    omit_ids={"speech-bubble"}, color_map=color_map)
-        # Tears and the missed-target marker are separate animation overlays, not edits to the character.
-        tears = add(root, "g", id="tears-after-missed-target")
-        path(tears, "M584,596 C575,612 576,621 585,625 C594,621 595,612 584,596 Z", fill=CREAM, stroke=ESPRESSO, sw=2)
-        path(tears, "M621,596 C612,612 613,621 622,625 C631,621 632,612 621,596 Z", fill=CREAM, stroke=ESPRESSO, sw=2)
+        # Reuse the cleaner Raka source pose from 4A, keeping the target card and
+        # case text as separate composition layers for animation.
+        embed_raka_puppet(root, 0, 0, 1080, 1080, pose="hands-on-head")
         target = add(root, "g", id="missed-target-prop")
         rect(target, 116, 106, 390, 110, CREAM, rx=22, stroke=PEACH, sw=3)
         txt(target, 148, 151, "TARGET", 20, ESPRESSO, 700, letter=1.2)
@@ -1085,7 +1069,7 @@ def draw_domino(parent, element_id, x, y, fill, angle=0, width=88, height=166):
     return group
 
 
-def embed_raka_puppet(parent, x, y, w, h, pose="hands-on-head"):
+def embed_raka_puppet(parent, x, y, w, h, pose="hands-on-head", include_ids=None):
     """Embed the licensed Student Stress source and expose editable pose groups."""
     palette = {
         "#407BFF": PLUM, "#263238": ESPRESSO,
@@ -1093,7 +1077,7 @@ def embed_raka_puppet(parent, x, y, w, h, pose="hands-on-head"):
         "#D4827D": TERRACOTTA,
     }
     nested = embed_asset(parent, "student_stress", x, y, w, h,
-                         omit_ids={"speech-bubble"}, color_map=palette,
+                         omit_ids={"speech-bubble"}, include_ids=include_ids, color_map=palette,
                          student_typing_expression=pose == "typing")
     character = next((node for node in nested.iter() if node.get("id") == "sstudentstress-Character"), None)
     if character is None:
@@ -1110,8 +1094,8 @@ def embed_raka_puppet(parent, x, y, w, h, pose="hands-on-head"):
         ("raka-rig-right-arm", [36, 37], None),
     ]
     typing_transforms = {
-        "raka-rig-left-arm-upper": "rotate(-70 284 315)",
-        "raka-rig-left-arm-lower": "rotate(-70 284 315)",
+        "raka-rig-left-arm-upper": "rotate(-110 284 315)",
+        "raka-rig-left-arm-lower": "rotate(-110 284 315)",
         "raka-rig-right-arm": "rotate(-130 372 315)",
     }
     character[:] = []
@@ -1180,18 +1164,27 @@ def build_story_03b(scene):
         "At a work meeting, Raka hears Dina's feedback as a personal attack. Their two editable dialogue bubbles show both lines and keep the disagreement ambiguous.",
         "04B",
     )
+    # Slim connector tails run through the open wall to each speaker so the
+    # larger conversation cards can stay together on the right without
+    # covering either person or their name label.
+    path(root, "M1110,188 C964,223 835,329 700,424", fill="none", stroke=PLUM, sw=8)
+    path(root, "M700,424 L729,405 L733,438 Z", fill=PLUM)
+    path(root, "M1110,488 C982,432 838,345 690,345 C560,345 466,351 365,356", fill="none", stroke=CREAM, sw=12)
+    path(root, "M365,356 L399,343 L398,373 Z", fill=CREAM)
+    path(root, "M1110,488 C982,432 838,345 690,345 C560,345 466,351 365,356", fill="none", stroke=PLUM, sw=4)
+    path(root, "M365,356 L399,343 L398,373 Z", fill=CREAM, stroke=PLUM, sw=4)
+
     raka = add(root, "g", id="raka-quote")
-    rect(raka, 720, 90, 850, 220, PLUM, rx=28)
-    path(raka, "M806,300 L685,434 L916,300 Z", fill=PLUM)
-    txt(raka, 760, 137, "RAKA", 17, CREAM, 700, letter=1.2)
-    txt(raka, 1145, 213, "Kamu selalu bikin aku", 29, CREAM, 600, "middle")
-    txt(raka, 1145, 256, "merasa salah!", 29, CREAM, 600, "middle")
+    rect(raka, 1080, 70, 790, 232, PLUM, rx=28)
+    txt(raka, 1124, 116, "RAKA", 17, CREAM, 700, letter=1.2)
+    txt(raka, 1124, 185, "Kamu selalu bikin aku", 29, CREAM, 600)
+    txt(raka, 1124, 229, "merasa salah!", 29, CREAM, 600)
+
     dina = add(root, "g", id="dina-quote")
-    rect(dina, 70, 520, 790, 220, CREAM, rx=28, stroke=PLUM, sw=4)
-    path(dina, "M336,520 L325,352 L392,520 Z", fill=CREAM, stroke=PLUM, sw=4)
-    txt(dina, 110, 562, "DINA", 17, PLUM, 700, letter=1.2)
-    txt(dina, 465, 638, "Aku cuma kasih masukan.", 26, PLUM, 600, "middle")
-    txt(dina, 465, 686, "Jangan baper terus, deh.", 26, PLUM, 600, "middle")
+    rect(dina, 1080, 394, 790, 242, CREAM, rx=28, stroke=PLUM, sw=4)
+    txt(dina, 1124, 442, "DINA", 17, PLUM, 700, letter=1.2)
+    txt(dina, 1124, 512, "Aku cuma kasih masukan.", 27, PLUM, 600)
+    txt(dina, 1124, 558, "Jangan baper terus, deh.", 27, PLUM, 600)
     draw_domino(root, "domino-2-misjudgment", 1650, 800, TERRACOTTA, -14, 78, 144)
     draw_domino(root, "domino-3-relationship-conflict", 1740, 824, PLUM, 10, 78, 144)
     return root
@@ -1224,11 +1217,14 @@ def build_story_04a(scene):
     root.set("data-frame", "4C")
     root.find(tag("metadata")).text = (
         "Storyset Student Stress · Rafiki. The same source figure and named editable puppet groups are used as in 4A. "
-        "For this typing pose, the original source's arm groups are repositioned and five facial paths are adjusted; two tiny eye overlays direct the gaze toward the laptop; the original speech bubble is omitted. "
-        "Conservative upper bound including the eye overlays: 86/254 source drawables are changed, omitted, or supplemented (33.9%); at least 168/254 remain unchanged. "
+        "In the 38-path Character object, seven arm paths are repositioned and five facial paths are adjusted (12/38 = 31.6%); the other 26 paths remain unchanged. "
+        "Two small eye overlays and the laptop post are separate editable layers. The original desk and laptop stay in their source orientation; background clutter and the source bubble are left out of this composition. "
         "The post and notification chain are separate, editable vector layers. Bone-rig software is unavailable here; the SVG group pivots are the production alternative."
     )
-    embed_raka_puppet(root, 0, 0, 1080, 1080, pose="typing")
+    embed_raka_puppet(
+        root, 0, 0, 1080, 1080, pose="typing",
+        include_ids={"Character", "Shadow", "Device", "Table"},
+    )
 
     # Keep the source laptop visible and put the same warning on its screen.
     laptop_screen = add(root, "g", id="laptop-screen-post", data_text="Hati-hati sama Dina, dia narsistik")
@@ -1254,21 +1250,20 @@ def build_story_04a(scene):
     txt(zoom, 1140, 407, "Biar yang lain aman.", 19, PEACH, 600)
 
     notifications = add(root, "g", id="notification-chain", data_motion="notifications-spread-outward")
-    notification_connector = path(notifications, "M1160,524 C1268,578 1465,562 1640,666", fill="none", stroke=PEACH, sw=4)
-    notification_connector.set("stroke-dasharray", "6 14")
-    for index, (x, y, number) in enumerate([(1110, 552, "1"), (1322, 622, "2"), (1530, 694, "3")]):
+    notification_connector = path(notifications, "M1160,624 C1240,575 1305,575 1360,624 S1510,680 1590,624", fill="none", stroke=PEACH, sw=5)
+    notification_connector.set("stroke-dasharray", "7 12")
+    for index, (x, y, number, heading, message) in enumerate([
+        (1045, 555, "1", "GRUP KERJA", "Postingan dibagikan"),
+        (1300, 555, "2", "GRUP KERJA", "Dina dikeluarkan\ndari grup"),
+        (1555, 555, "3", "GRUP KERJA", "Post dilihat 4 orang"),
+    ]):
         card_group = add(notifications, "g", id=f"notification-{index + 1}")
-        rect(card_group, x, y, 190, 92, CREAM, rx=18, stroke=PEACH, sw=3)
-        circle(card_group, x + 31, y + 32, 13, PLUM)
-        txt(card_group, x + 58, y + 37, "GRUP", 12, PLUM, 700, letter=0.8)
-        if index == 1:
-            txt(card_group, x + 23, y + 71, "DINA DIKELUARKAN", 12, PLUM, 700, letter=0.25)
-            txt(card_group, x + 23, y + 84, "DARI GRUP", 12, PLUM, 700, letter=0.25)
-        else:
-            line(card_group, x + 23, y + 60, x + 153, y + 60, PLUM, 3, opacity=0.55)
-            line(card_group, x + 23, y + 72, x + 124, y + 72, PLUM, 3, opacity=0.35)
-        circle(card_group, x + 169, y + 25, 8, TERRACOTTA)
-        txt(card_group, x + 169, y + 29, number, 10, CREAM, 700, "middle")
+        rect(card_group, x, y, 230, 142, CREAM, rx=18, stroke=PEACH, sw=3)
+        circle(card_group, x + 28, y + 31, 13, PLUM)
+        txt(card_group, x + 53, y + 37, heading, 14, PLUM, 700, letter=0.6)
+        txt(card_group, x + 19, y + 83, message, 18, ESPRESSO, 700)
+        circle(card_group, x + 207, y + 22, 11, TERRACOTTA)
+        txt(card_group, x + 207, y + 27, number, 13, CREAM, 700, "middle")
 
     draw_domino(root, "domino-4-stigma", 1780, 844, ESPRESSO, 13, 74, 132)
     return root
@@ -1327,15 +1322,15 @@ def build_story_04b(scene):
 
 def build_scene_5(scene):
     root = start_scene(scene, CREAM, PLUM)
-    card(root, 72, 240, 680, 638, CREAM, PEACH, 26)
+    card(root, 72, 106, 680, 854, CREAM, PEACH, 26)
     doc_colors = {"#263238": ESPRESSO, "#407BFF": PLUM, "#D58745": MUSTARD, "#EBB376": PEACH,
                   "#E0E0E0": PEACH, "#E6E6E6": CREAM, "#EBEBEB": CREAM, "#F0F0F0": CREAM,
                   "#F5F5F5": CREAM, "#FAFAFA": CREAM}
     research_colors = {**doc_colors, "#2E353A": ESPRESSO, "#577AFA": PLUM, "#D4827D": TERRACOTTA,
                        "#EBC0BB": PEACH, "#EEC1BB": PEACH}
-    embed_asset(root, "document", 92, 250, 595, 580, color_map=doc_colors)
-    embed_asset(root, "research", 390, 516, 326, 314, color_map=research_colors)
-    pill(root, 125, 832, 555, 42, "KODE ETIK PSIKOLOGI INDONESIA", PLUM, MUSTARD, 15, stroke=PEACH)
+    embed_asset(root, "document", 92, 122, 595, 650, color_map=doc_colors)
+    embed_asset(root, "research", 390, 430, 326, 365, color_map=research_colors)
+    pill(root, 125, 866, 555, 46, "KODE ETIK PSIKOLOGI INDONESIA", PLUM, MUSTARD, 15, stroke=PEACH)
     articles = [
         ("9", "Dasar ilmiah & profesional", "Keputusan psikologi berlandaskan pengetahuan yang teruji."),
         ("15", "Menghindari dampak buruk", "Sampaikan informasi dengan mempertimbangkan dampaknya."),
@@ -1343,51 +1338,52 @@ def build_scene_5(scene):
         ("31", "Komunikasi media bertanggung jawab", "Selaras dengan kode etik dan praktik psikologi yang tepat."),
     ]
     for i, (num, title, desc) in enumerate(articles):
-        y = 230 + i * 164
-        rect(root, 799, y + 8, 1032, 145, ESPRESSO, rx=18, opacity=0.10)
-        rect(root, 792, y, 1032, 145, PLUM, rx=18, stroke=PEACH, sw=2)
-        circle(root, 858, y + 72, 39, MUSTARD)
-        txt(root, 858, y + 82, num, 27, ESPRESSO, 700, "middle")
-        txt(root, 924, y + 60, "PASAL " + num, 14, MUSTARD, 700, letter=1)
-        txt(root, 924, y + 91, title, 24, CREAM, 700)
-        txt(root, 924, y + 121, desc, 17, CREAM, 400)
-    pill(root, 792, 906, 1032, 53, "SCIENTIFIC BASIS  +  PROFESSIONAL CARE", PLUM, CREAM, 19, stroke=PEACH)
+        y = 112 + i * 174
+        rect(root, 799, y + 8, 1032, 153, ESPRESSO, rx=18, opacity=0.10)
+        rect(root, 792, y, 1032, 153, PLUM, rx=18, stroke=PEACH, sw=2)
+        circle(root, 858, y + 76, 39, MUSTARD)
+        txt(root, 858, y + 86, num, 27, ESPRESSO, 700, "middle")
+        txt(root, 924, y + 58, "PASAL " + num, 14, MUSTARD, 700, letter=1)
+        txt(root, 924, y + 92, title, 24, CREAM, 700)
+        txt(root, 924, y + 124, desc, 17, CREAM, 400)
+    pill(root, 792, 846, 1032, 62, "SCIENTIFIC BASIS  +  PROFESSIONAL CARE", PLUM, CREAM, 19, stroke=PEACH)
     return root
 
 
 def build_scene_6(scene):
     root = start_scene(scene, CREAM, SAGE)
-    card(root, 72, 235, 660, 660, CREAM, PEACH, 24)
+    card(root, 72, 130, 660, 760, CREAM, PEACH, 24)
     todo_colors = {"#263238": ESPRESSO, "#407BFF": SAGE, "#E6E6E6": CREAM, "#EBEBEB": CREAM,
                    "#F0F0F0": CREAM, "#F5F5F5": CREAM, "#FAFAFA": CREAM,
                    "#ED847E": PEACH, "#FFC3BD": PEACH}
-    embed_asset(root, "todo", 90, 250, 620, 615, color_map=todo_colors)
+    embed_asset(root, "todo", 90, 145, 620, 720, color_map=todo_colors)
     steps = [
         ("1", "Understand before you label", "Cari tahu makna istilah sebelum memakainya."),
         ("2", "Describe, don’t diagnose", "Jelaskan perilaku spesifik yang membuat tidak nyaman."),
         ("3", "Learn, don’t self-diagnose", "Konten edukasi bukan pengganti asesmen profesional."),
     ]
     for i, (num, title, desc) in enumerate(steps):
-        y = 245 + i * 216
-        card(root, 770, y, 1070, 190, CREAM, PEACH, 20)
-        circle(root, 844, y + 75, 37, MUSTARD)
-        txt(root, 844, y + 85, num, 26, ESPRESSO, 700, "middle")
-        title_node = add(root, "text", x=910, y=y + 70, fill=PLUM, font_family="Arial, Helvetica, sans-serif", font_size=27, font_weight=700)
+        y = 128 + i * 242
+        card(root, 770, y, 1070, 206, CREAM, PEACH, 20)
+        circle(root, 844, y + 81, 37, MUSTARD)
+        txt(root, 844, y + 91, num, 26, ESPRESSO, 700, "middle")
+        title_node = add(root, "text", x=910, y=y + 73, fill=PLUM, font_family="Arial, Helvetica, sans-serif", font_size=27, font_weight=700)
         split = [("Understand before you ", "label"), ("Describe, don’t ", "diagnose"), ("Learn, don’t ", "self-diagnose")][i]
         for value, color in [(split[0], PLUM), (split[1], TERRACOTTA)]:
             span = add(title_node, "tspan", fill=color)
             span.text = value
-        txt(root, 910, y + 116, desc, 20, ESPRESSO, 400)
+        txt(root, 910, y + 121, desc, 20, ESPRESSO, 400)
         # Small, editable line icons: learn, describe, and know the limit.
         if i == 0:
-            circle(root, 1740, y + 73, 25, "none", stroke=SAGE, sw=5)
-            line(root, 1758, y + 91, 1779, y + 112, SAGE, 6)
+            circle(root, 1740, y + 79, 25, "none", stroke=SAGE, sw=5)
+            line(root, 1758, y + 97, 1779, y + 118, SAGE, 6)
         elif i == 1:
-            rect(root, 1700, y + 45, 93, 58, PEACH, rx=12, stroke=SAGE, sw=3)
-            path(root, f"M1720,{y+72} L1734,{y+86} L1769,{y+58}", stroke=SAGE, sw=5)
+            rect(root, 1700, y + 51, 93, 58, PEACH, rx=12, stroke=SAGE, sw=3)
+            path(root, f"M1720,{y+78} L1734,{y+92} L1769,{y+64}", stroke=SAGE, sw=5)
         else:
-            circle(root, 1744, y + 75, 29, CREAM, stroke=SAGE, sw=3)
-            path(root, f"M1728,{y+76} L1740,{y+88} L1762,{y+61}", stroke=SAGE, sw=5)
+            circle(root, 1744, y + 81, 29, CREAM, stroke=SAGE, sw=3)
+            path(root, f"M1728,{y+82} L1740,{y+94} L1762,{y+67}", stroke=SAGE, sw=5)
+    pill(root, 770, 895, 1070, 66, "Allow normal human emotions.", SAGE, ESPRESSO, 25)
     return root
 
 
@@ -1413,26 +1409,24 @@ def build_scene_7(scene):
                      "#E0E0E0": PLUM, "#E6E6E6": PLUM, "#EBEBEB": PLUM,
                      "#F0F0F0": PLUM, "#F5F5F5": PLUM, "#FAFAFA": PLUM,
                      "#ED847E": PEACH, "#FFC3BD": PEACH}
-    embed_asset(root, "social", 88, 250, 770, 620,
+    embed_asset(root, "social", 52, 148, 870, 760,
                 omit_ids={"freepik--background-complete--inject-2"}, color_map=social_colors)
     # Viral labels fade from terracotta toward the plum closing field.
-    pill(root, 114, 258, 180, 40, "toxic", TERRACOTTA, WHITE, 15, opacity=0.58)
-    pill(root, 300, 258, 204, 40, "trauma", TERRACOTTA, WHITE, 15, opacity=0.42)
-    pill(root, 512, 258, 190, 40, "avoidant", TERRACOTTA, WHITE, 15, opacity=0.28)
-    txt(root, 1373, 290, "NORMAL HUMAN EMOTIONS", 15, CREAM, 700, "middle", letter=1.2)
+    pill(root, 82, 118, 180, 40, "toxic", TERRACOTTA, WHITE, 15, opacity=0.58)
+    pill(root, 268, 118, 204, 40, "trauma", TERRACOTTA, WHITE, 15, opacity=0.42)
+    pill(root, 478, 118, 190, 40, "avoidant", TERRACOTTA, WHITE, 15, opacity=0.28)
+    txt(root, 1370, 136, "NORMAL HUMAN EMOTIONS", 17, CREAM, 700, "middle", letter=1.2)
     emotions = [("joy", "Gembira", PEACH), ("sadness", "Sedih", SAGE), ("fear", "Takut", MUSTARD), ("calm", "Tenang", CREAM)]
     for i, (kind, label, color) in enumerate(emotions):
         x = 960 + i * 210
-        face(root, x + 95, 370, kind, color)
-        txt(root, x + 95, 444, label, 17, CREAM, 700, "middle")
-    line(root, 980, 500, 1764, 500, ESPRESSO, 2)
-    txt(root, 1250, 638, "THINK BEFORE YOU", 40, CREAM, 700, "middle", letter=0.6)
-    txt(root, 1594, 638, "LABEL.", 40, MUSTARD, 700, "middle", letter=0.6)
-    txt(root, 1373, 692, "Understand psychology. Use it responsibly.", 19, CREAM, 400, "middle")
-    pill(root, 1088, 748, 570, 55, "PSYCHOLOGY HELPS US UNDERSTAND PEOPLE", MUSTARD, ESPRESSO, 16)
-    txt(root, 1373, 850, "END CARD  ·  VIDEO TITLE  ·  CREATOR IDENTITY", 14, PEACH, 700, "middle", letter=0.7)
-    rect(root, 92, 926, 1736, 47, ESPRESSO, rx=15)
-    txt(root, 960, 958, "Stay curious. Stay kind.", 23, CREAM, 700, "middle")
+        face(root, x + 95, 230, kind, color)
+        txt(root, x + 95, 304, label, 17, CREAM, 700, "middle")
+    line(root, 980, 354, 1764, 354, ESPRESSO, 2)
+    txt(root, 1250, 514, "THINK BEFORE YOU", 43, CREAM, 700, "middle", letter=0.6)
+    txt(root, 1594, 514, "LABEL.", 43, MUSTARD, 700, "middle", letter=0.6)
+    txt(root, 1373, 582, "Understand psychology. Use it responsibly.", 20, CREAM, 400, "middle")
+    rect(root, 1020, 682, 710, 82, MUSTARD, rx=22)
+    txt(root, 1375, 735, "Stay curious. Stay kind.", 30, ESPRESSO, 700, "middle")
     return root
 
 

@@ -1,38 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="scene-title scene-desc">
-  <title id="scene-title">Scene 5: The Ethical Side of Psychology</title>
-  <desc id="scene-desc">A digital-document composition supports four concise article cards.</desc>
-  <metadata>Scene 5 | The Ethical Side of Psychology | Editable vector storyboard. Existing Storyset art is embedded as SVG; all other visuals are hand-edited vector shapes, not generated images.</metadata>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="frame-title frame-desc">
+  <title id="frame-title">Scene 5: The Ethical Side of Psychology</title>
+  <desc id="frame-desc">Satu komposisi animasi layar penuh: dokumen digital dan riset di kiri, empat kartu pasal berurutan di kanan, lalu pita dasar ilmiah dan kehati-hatian menutup komposisi.</desc>
+  <metadata>Scene 5 · The Ethical Side of Psychology · Standalone editable animation frame. Only the scene background, source illustration, animated props, and audience-facing text are included; production-board labels remain outside the artwork.</metadata>
   <rect x="0" y="0" width="1920" height="1080" fill="#FFF6EC" rx="0" />
-  <circle cx="1790" cy="165" r="165" fill="#3D2645" opacity="0.075" />
-  <circle cx="120" cy="900" r="110" fill="#3D2645" opacity="0.045" />
-  <circle cx="1780" cy="920" r="8" fill="#3D2645" opacity="0.55" />
-  <circle cx="1812" cy="920" r="8" fill="#E4572E" opacity="0.75" />
-  <circle cx="1844" cy="920" r="8" fill="#2A1F2D" opacity="0.6" />
-  <text x="92" y="66" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start" letter-spacing="1.2">
-    <tspan x="92" dy="0">THERAPY SPEAK GONE WRONG</tspan>
-  </text>
-  <text x="92" y="94" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" text-anchor="start" letter-spacing="1.4">
-    <tspan x="92" dy="0">PRODUCTION BOARD  /  EDITABLE VECTOR</tspan>
-  </text>
-  <rect x="1575" y="43" width="250" height="48" fill="#FFF6EC" rx="24.0" stroke="#FFC4A3" stroke-width="2" />
-  <text x="1700.0" y="74.68" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="1700.0" dy="0">02:35–03:20</tspan>
-  </text>
-  <text x="92" y="168" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="49" font-weight="700" text-anchor="start" letter-spacing="0">
-    <tspan x="92" dy="0">The Ethical Side of Psychology</tspan>
-  </text>
-  <line x1="92" y1="195" x2="1828" y2="195" stroke="#FFC4A3" stroke-width="2" stroke-linecap="round" />
-  <line x1="92" y1="1015" x2="1828" y2="1015" stroke="#FFC4A3" stroke-width="2" stroke-linecap="round" />
-  <text x="92" y="1045" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" text-anchor="start" letter-spacing="1.1">
-    <tspan x="92" dy="0">VISUAL + TEKS LAYAR + GERAK</tspan>
-  </text>
-  <text x="1828" y="1045" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="end" letter-spacing="0">
-    <tspan x="1828" dy="0">05 / 07</tspan>
-  </text>
-  <rect x="79" y="250" width="680" height="638" fill="#2A1F2D" rx="26" opacity="0.12" />
-  <rect x="72" y="240" width="680" height="638" fill="#FFF6EC" rx="26" stroke="#FFC4A3" stroke-width="2" />
-  <svg x="92" y="250" width="595" height="580" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet" overflow="hidden" aria-label="Online Document illustration, Storyset Rafiki">
+  <rect x="79" y="116" width="680" height="854" fill="#2A1F2D" rx="26" opacity="0.12" />
+  <rect x="72" y="106" width="680" height="854" fill="#FFF6EC" rx="26" stroke="#FFC4A3" stroke-width="2" />
+  <svg x="92" y="122" width="595" height="650" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet" overflow="hidden" aria-label="Online Document illustration, Storyset Rafiki">
     <g id="sdocument-freepik--background-complete--inject-2">
       <rect y="382.4" width="500" height="0.25" style="fill:#FFF6EC" />
       <rect x="416.78" y="398.49" width="33.12" height="0.25" style="fill:#FFF6EC" />
@@ -260,7 +234,7 @@
       <polygon points="104.56 365.1 113.79 356.85 115.97 359.9 107.72 368 104.56 365.1" style="fill:#fff;opacity:0.4;isolation:isolate" />
     </g>
   </svg>
-  <svg x="390" y="516" width="326" height="314" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet" overflow="hidden" aria-label="Research Paper illustration, Storyset Rafiki">
+  <svg x="390" y="430" width="326" height="365" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet" overflow="hidden" aria-label="Research Paper illustration, Storyset Rafiki">
     <g id="sresearch-freepik--background-complete--inject-2">
       <rect y="382.4" width="500" height="0.25" style="fill:#FFF6EC" />
       <rect x="416.78" y="398.49" width="33.12" height="0.25" style="fill:#FFF6EC" />
@@ -552,72 +526,72 @@
       <path d="M286.19,291.41h0c0,2.91-3.13,5.28-5.42,5.28s-3.65-2.37-3-5.28,2.94-5.2,5.18-5.28c-.65,2.91.75,5.28,3,5.28Z" style="isolation:isolate;opacity:0.2" />
     </g>
   </svg>
-  <rect x="125" y="832" width="555" height="42" fill="#3D2645" rx="21.0" stroke="#FFC4A3" stroke-width="2" />
-  <text x="402.5" y="859.72" fill="#F2B134" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="middle" letter-spacing="0">
+  <rect x="125" y="866" width="555" height="46" fill="#3D2645" rx="23.0" stroke="#FFC4A3" stroke-width="2" />
+  <text x="402.5" y="896.36" fill="#F2B134" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="middle" letter-spacing="0">
     <tspan x="402.5" dy="0">KODE ETIK PSIKOLOGI INDONESIA</tspan>
   </text>
-  <rect x="799" y="238" width="1032" height="145" fill="#2A1F2D" rx="18" opacity="0.1" />
-  <rect x="792" y="230" width="1032" height="145" fill="#3D2645" rx="18" stroke="#FFC4A3" stroke-width="2" />
-  <circle cx="858" cy="302" r="39" fill="#F2B134" />
-  <text x="858" y="312" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" text-anchor="middle" letter-spacing="0">
+  <rect x="799" y="120" width="1032" height="153" fill="#2A1F2D" rx="18" opacity="0.1" />
+  <rect x="792" y="112" width="1032" height="153" fill="#3D2645" rx="18" stroke="#FFC4A3" stroke-width="2" />
+  <circle cx="858" cy="188" r="39" fill="#F2B134" />
+  <text x="858" y="198" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" text-anchor="middle" letter-spacing="0">
     <tspan x="858" dy="0">9</tspan>
   </text>
-  <text x="924" y="290" fill="#F2B134" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" text-anchor="start" letter-spacing="1">
+  <text x="924" y="170" fill="#F2B134" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" text-anchor="start" letter-spacing="1">
     <tspan x="924" dy="0">PASAL 9</tspan>
   </text>
-  <text x="924" y="321" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="start" letter-spacing="0">
+  <text x="924" y="204" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="start" letter-spacing="0">
     <tspan x="924" dy="0">Dasar ilmiah &amp; profesional</tspan>
   </text>
-  <text x="924" y="351" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" letter-spacing="0">
+  <text x="924" y="236" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" letter-spacing="0">
     <tspan x="924" dy="0">Keputusan psikologi berlandaskan pengetahuan yang teruji.</tspan>
   </text>
-  <rect x="799" y="402" width="1032" height="145" fill="#2A1F2D" rx="18" opacity="0.1" />
-  <rect x="792" y="394" width="1032" height="145" fill="#3D2645" rx="18" stroke="#FFC4A3" stroke-width="2" />
-  <circle cx="858" cy="466" r="39" fill="#F2B134" />
-  <text x="858" y="476" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" text-anchor="middle" letter-spacing="0">
+  <rect x="799" y="294" width="1032" height="153" fill="#2A1F2D" rx="18" opacity="0.1" />
+  <rect x="792" y="286" width="1032" height="153" fill="#3D2645" rx="18" stroke="#FFC4A3" stroke-width="2" />
+  <circle cx="858" cy="362" r="39" fill="#F2B134" />
+  <text x="858" y="372" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" text-anchor="middle" letter-spacing="0">
     <tspan x="858" dy="0">15</tspan>
   </text>
-  <text x="924" y="454" fill="#F2B134" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" text-anchor="start" letter-spacing="1">
+  <text x="924" y="344" fill="#F2B134" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" text-anchor="start" letter-spacing="1">
     <tspan x="924" dy="0">PASAL 15</tspan>
   </text>
-  <text x="924" y="485" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="start" letter-spacing="0">
+  <text x="924" y="378" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="start" letter-spacing="0">
     <tspan x="924" dy="0">Menghindari dampak buruk</tspan>
   </text>
-  <text x="924" y="515" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" letter-spacing="0">
+  <text x="924" y="410" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" letter-spacing="0">
     <tspan x="924" dy="0">Sampaikan informasi dengan mempertimbangkan dampaknya.</tspan>
   </text>
-  <rect x="799" y="566" width="1032" height="145" fill="#2A1F2D" rx="18" opacity="0.1" />
-  <rect x="792" y="558" width="1032" height="145" fill="#3D2645" rx="18" stroke="#FFC4A3" stroke-width="2" />
-  <circle cx="858" cy="630" r="39" fill="#F2B134" />
-  <text x="858" y="640" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" text-anchor="middle" letter-spacing="0">
+  <rect x="799" y="468" width="1032" height="153" fill="#2A1F2D" rx="18" opacity="0.1" />
+  <rect x="792" y="460" width="1032" height="153" fill="#3D2645" rx="18" stroke="#FFC4A3" stroke-width="2" />
+  <circle cx="858" cy="536" r="39" fill="#F2B134" />
+  <text x="858" y="546" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" text-anchor="middle" letter-spacing="0">
     <tspan x="858" dy="0">28</tspan>
   </text>
-  <text x="924" y="618" fill="#F2B134" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" text-anchor="start" letter-spacing="1">
+  <text x="924" y="518" fill="#F2B134" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" text-anchor="start" letter-spacing="1">
     <tspan x="924" dy="0">PASAL 28</tspan>
   </text>
-  <text x="924" y="649" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="start" letter-spacing="0">
+  <text x="924" y="552" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="start" letter-spacing="0">
     <tspan x="924" dy="0">Pernyataan publik yang cermat</tspan>
   </text>
-  <text x="924" y="679" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" letter-spacing="0">
+  <text x="924" y="584" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" letter-spacing="0">
     <tspan x="924" dy="0">Bijaksana, jujur, teliti, hati-hati, dan berbasis ilmiah.</tspan>
   </text>
-  <rect x="799" y="730" width="1032" height="145" fill="#2A1F2D" rx="18" opacity="0.1" />
-  <rect x="792" y="722" width="1032" height="145" fill="#3D2645" rx="18" stroke="#FFC4A3" stroke-width="2" />
-  <circle cx="858" cy="794" r="39" fill="#F2B134" />
-  <text x="858" y="804" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" text-anchor="middle" letter-spacing="0">
+  <rect x="799" y="642" width="1032" height="153" fill="#2A1F2D" rx="18" opacity="0.1" />
+  <rect x="792" y="634" width="1032" height="153" fill="#3D2645" rx="18" stroke="#FFC4A3" stroke-width="2" />
+  <circle cx="858" cy="710" r="39" fill="#F2B134" />
+  <text x="858" y="720" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" text-anchor="middle" letter-spacing="0">
     <tspan x="858" dy="0">31</tspan>
   </text>
-  <text x="924" y="782" fill="#F2B134" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" text-anchor="start" letter-spacing="1">
+  <text x="924" y="692" fill="#F2B134" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" text-anchor="start" letter-spacing="1">
     <tspan x="924" dy="0">PASAL 31</tspan>
   </text>
-  <text x="924" y="813" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="start" letter-spacing="0">
+  <text x="924" y="726" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="start" letter-spacing="0">
     <tspan x="924" dy="0">Komunikasi media bertanggung jawab</tspan>
   </text>
-  <text x="924" y="843" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" letter-spacing="0">
+  <text x="924" y="758" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start" letter-spacing="0">
     <tspan x="924" dy="0">Selaras dengan kode etik dan praktik psikologi yang tepat.</tspan>
   </text>
-  <rect x="792" y="906" width="1032" height="53" fill="#3D2645" rx="26.5" stroke="#FFC4A3" stroke-width="2" />
-  <text x="1308.0" y="940.98" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" text-anchor="middle" letter-spacing="0">
+  <rect x="792" y="846" width="1032" height="62" fill="#3D2645" rx="31.0" stroke="#FFC4A3" stroke-width="2" />
+  <text x="1308.0" y="886.92" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" text-anchor="middle" letter-spacing="0">
     <tspan x="1308.0" dy="0">SCIENTIFIC BASIS  +  PROFESSIONAL CARE</tspan>
   </text>
 </svg>

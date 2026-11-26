@@ -171,30 +171,34 @@
       <path d="M173.61,221h-.92c-.18,0-.32-.1-.31-.21l.43-4c0-.12.17-.21.36-.21h.92c.18,0,.32.09.31.21l-.43,4C174,220.88,173.8,221,173.61,221Z" style="fill:#263238" />
     </g>
   </svg>
+  <path d="M1110,188 C964,223 835,329 700,424" fill="none" stroke="#3D2645" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M700,424 L729,405 L733,438 Z" fill="#3D2645" />
+  <path d="M1110,488 C982,432 838,345 690,345 C560,345 466,351 365,356" fill="none" stroke="#FFF6EC" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M365,356 L399,343 L398,373 Z" fill="#FFF6EC" />
+  <path d="M1110,488 C982,432 838,345 690,345 C560,345 466,351 365,356" fill="none" stroke="#3D2645" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M365,356 L399,343 L398,373 Z" fill="#FFF6EC" stroke="#3D2645" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
   <g id="raka-quote">
-    <rect x="720" y="90" width="850" height="220" fill="#3D2645" rx="28" />
-    <path d="M806,300 L685,434 L916,300 Z" fill="#3D2645" />
-    <text x="760" y="137" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="start" letter-spacing="1.2">
-      <tspan x="760" dy="0">RAKA</tspan>
+    <rect x="1080" y="70" width="790" height="232" fill="#3D2645" rx="28" />
+    <text x="1124" y="116" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="start" letter-spacing="1.2">
+      <tspan x="1124" dy="0">RAKA</tspan>
     </text>
-    <text x="1145" y="213" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="600" text-anchor="middle" letter-spacing="0">
-      <tspan x="1145" dy="0">Kamu selalu bikin aku</tspan>
+    <text x="1124" y="185" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="600" text-anchor="start" letter-spacing="0">
+      <tspan x="1124" dy="0">Kamu selalu bikin aku</tspan>
     </text>
-    <text x="1145" y="256" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="600" text-anchor="middle" letter-spacing="0">
-      <tspan x="1145" dy="0">merasa salah!</tspan>
+    <text x="1124" y="229" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="600" text-anchor="start" letter-spacing="0">
+      <tspan x="1124" dy="0">merasa salah!</tspan>
     </text>
   </g>
   <g id="dina-quote">
-    <rect x="70" y="520" width="790" height="220" fill="#FFF6EC" rx="28" stroke="#3D2645" stroke-width="4" />
-    <path d="M336,520 L325,352 L392,520 Z" fill="#FFF6EC" stroke="#3D2645" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-    <text x="110" y="562" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="start" letter-spacing="1.2">
-      <tspan x="110" dy="0">DINA</tspan>
+    <rect x="1080" y="394" width="790" height="242" fill="#FFF6EC" rx="28" stroke="#3D2645" stroke-width="4" />
+    <text x="1124" y="442" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="start" letter-spacing="1.2">
+      <tspan x="1124" dy="0">DINA</tspan>
     </text>
-    <text x="465" y="638" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="middle" letter-spacing="0">
-      <tspan x="465" dy="0">Aku cuma kasih masukan.</tspan>
+    <text x="1124" y="512" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="600" text-anchor="start" letter-spacing="0">
+      <tspan x="1124" dy="0">Aku cuma kasih masukan.</tspan>
     </text>
-    <text x="465" y="686" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="middle" letter-spacing="0">
-      <tspan x="465" dy="0">Jangan baper terus, deh.</tspan>
+    <text x="1124" y="558" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="600" text-anchor="start" letter-spacing="0">
+      <tspan x="1124" dy="0">Jangan baper terus, deh.</tspan>
     </text>
   </g>
   <g id="domino-2-misjudgment" transform="rotate(-14 1689.0 872.0)">
