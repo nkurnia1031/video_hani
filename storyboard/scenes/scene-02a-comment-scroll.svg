@@ -245,45 +245,44 @@
   <rect x="777" y="357" width="95" height="8" fill="#CAD5E0" rx="4" />
   <rect x="777" y="371" width="141" height="6" fill="#E1E6EB" rx="3" />
   <text x="746" y="403" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" text-anchor="start" letter-spacing="0">
-    <tspan x="746" dy="0">Chat 3 jam nggak dibales,</tspan>
+    <tspan x="746" dy="0">Slow respon dikit</tspan>
   </text>
   <text x="746" y="426" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" text-anchor="start">
-    <tspan fill="#2859BE" font-weight="700">avoidant</tspan>
-    <tspan fill="#263238" font-weight="500"> banget ya?</tspan>
+    <tspan fill="#263238" font-weight="500">langsung dicap </tspan>
+    <tspan fill="#2859BE" font-weight="700">avoidant.</tspan>
   </text>
   <rect x="724" y="454" width="490" height="106" fill="#FFFFFF" rx="15" stroke="#E0E6ED" stroke-width="1" />
   <circle cx="751" cy="484" r="11" fill="#ED8067" />
   <rect x="777" y="476" width="95" height="8" fill="#CAD5E0" rx="4" />
   <rect x="777" y="490" width="141" height="6" fill="#E1E6EB" rx="3" />
   <text x="746" y="522" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" text-anchor="start" letter-spacing="0">
-    <tspan x="746" dy="0">Baru batal sekali,</tspan>
+    <tspan x="746" dy="0">Batalin janji sekali</tspan>
   </text>
   <text x="746" y="545" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" text-anchor="start">
-    <tspan fill="#263238" font-weight="500">kok udah </tspan>
-    <tspan fill="#ED8067" font-weight="700">toxic</tspan>
-    <tspan fill="#263238" font-weight="500">?</tspan>
+    <tspan fill="#263238" font-weight="500">langsung </tspan>
+    <tspan fill="#ED8067" font-weight="700">toxic.</tspan>
   </text>
   <rect x="724" y="573" width="490" height="106" fill="#FFFFFF" rx="15" stroke="#E0E6ED" stroke-width="1" />
   <circle cx="751" cy="603" r="11" fill="#8878D2" />
   <rect x="777" y="595" width="95" height="8" fill="#CAD5E0" rx="4" />
   <rect x="777" y="609" width="141" height="6" fill="#E1E6EB" rx="3" />
   <text x="746" y="641" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" text-anchor="start" letter-spacing="0">
-    <tspan x="746" dy="0">Beda pendapat dikit,</tspan>
+    <tspan x="746" dy="0">Nggak setuju dikit</tspan>
   </text>
   <text x="746" y="664" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" text-anchor="start">
-    <tspan fill="#263238" font-weight="500">langsung </tspan>
-    <tspan fill="#2859BE" font-weight="700">gaslighting?</tspan>
+    <tspan fill="#263238" font-weight="500">langsung dibilang </tspan>
+    <tspan fill="#2859BE" font-weight="700">gaslighting.</tspan>
   </text>
   <rect x="724" y="692" width="490" height="106" fill="#FFFFFF" rx="15" stroke="#E0E6ED" stroke-width="1" />
   <circle cx="751" cy="722" r="11" fill="#589681" />
   <rect x="777" y="714" width="95" height="8" fill="#CAD5E0" rx="4" />
   <rect x="777" y="728" width="141" height="6" fill="#E1E6EB" rx="3" />
   <text x="746" y="760" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" text-anchor="start" letter-spacing="0">
-    <tspan x="746" dy="0">Sedih dikit habis gagal,</tspan>
+    <tspan x="746" dy="0">Sedih beberapa hari aja</tspan>
   </text>
   <text x="746" y="783" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" text-anchor="start">
-    <tspan fill="#263238" font-weight="500">dibilang </tspan>
-    <tspan fill="#ED8067" font-weight="700">depressed?</tspan>
+    <tspan fill="#263238" font-weight="500">udah </tspan>
+    <tspan fill="#ED8067" font-weight="700">depresi.</tspan>
   </text>
   <rect x="1221" y="374" width="5" height="390" fill="#D9E1E9" rx="3" />
   <rect x="1218" y="466" width="11" height="122" fill="#407BFF" rx="5" />
@@ -304,11 +303,11 @@
   </text>
   <rect x="1340" y="516" width="430" height="142" fill="#F4F7FB" rx="15" />
   <text x="1363" y="560" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="500" text-anchor="start" letter-spacing="0">
-    <tspan x="1363" dy="0">Beda pendapat dikit,</tspan>
+    <tspan x="1363" dy="0">Nggak setuju dikit</tspan>
   </text>
   <text x="1363" y="595" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="500" text-anchor="start">
-    <tspan fill="#263238" font-weight="500">langsung </tspan>
-    <tspan fill="#2859BE" font-weight="700">gaslighting?</tspan>
+    <tspan fill="#263238" font-weight="500">langsung dibilang </tspan>
+    <tspan fill="#2859BE" font-weight="700">gaslighting.</tspan>
   </text>
   <line x1="1364" y1="620" x2="1510" y2="620" stroke="#407BFF" stroke-width="4" stroke-linecap="round" />
   <text x="1340" y="712" fill="#697985" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start" letter-spacing="0">

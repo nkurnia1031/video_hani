@@ -312,10 +312,10 @@ def build_scene_2(scene):
     txt(root, 740, 310, "KOMENTAR NETIZEN", 16, MUTED, 700, letter=1)
     circle(root, 1195, 304, 5, CORAL)
     comments = [
-        ("Chat 3 jam nggak dibales,", [("avoidant", BLUE_DARK, True), (" banget ya?", INK, False)]),
-        ("Baru batal sekali,", [("kok udah ", INK, False), ("toxic", CORAL, True), ("?", INK, False)]),
-        ("Beda pendapat dikit,", [("langsung ", INK, False), ("gaslighting?", BLUE_DARK, True)]),
-        ("Sedih dikit habis gagal,", [("dibilang ", INK, False), ("depressed?", CORAL, True)]),
+        ("Slow respon dikit", [("langsung dicap ", INK, False), ("avoidant.", BLUE_DARK, True)]),
+        ("Batalin janji sekali", [("langsung ", INK, False), ("toxic.", CORAL, True)]),
+        ("Nggak setuju dikit", [("langsung dibilang ", INK, False), ("gaslighting.", BLUE_DARK, True)]),
+        ("Sedih beberapa hari aja", [("udah ", INK, False), ("depresi.", CORAL, True)]),
     ]
     for i, (first_line, second_line) in enumerate(comments):
         y = 335 + i * 119
@@ -335,8 +335,8 @@ def build_scene_2(scene):
     txt(root, 1340, 435, "Komentarnya tetap utuh.", 22, INK, 700)
     txt(root, 1340, 473, "Yang disorot hanya istilahnya.", 18, MUTED, 400)
     rect(root, 1340, 516, 430, 142, "#F4F7FB", rx=15)
-    txt(root, 1363, 560, "Beda pendapat dikit,", 20, INK, 500)
-    inline_txt(root, 1363, 595, [("langsung ", INK, False), ("gaslighting?", BLUE_DARK, True)], 20)
+    txt(root, 1363, 560, "Nggak setuju dikit", 20, INK, 500)
+    inline_txt(root, 1363, 595, [("langsung dibilang ", INK, False), ("gaslighting.", BLUE_DARK, True)], 20)
     line(root, 1364, 620, 1510, 620, BLUE, 4)
     txt(root, 1340, 712, "Kutipan ini contoh percakapan,", 16, MUTED, 400)
     txt(root, 1340, 739, "bukan kesimpulan atau diagnosis.", 16, MUTED, 400)
