@@ -1,6 +1,6 @@
 # Therapy Speak Gone Wrong storyboard
 
-The selected **C production board** contains seven scenes and eight 16:9 keyframes as standalone, editable SVGs. Scene 2 is split into 02A (phone zoom with full-sentence comment scroll, 00:30–00:48) and 02B (a separate full-frame hashtag-cloud transition, 00:48–01:05). The website presents one production row per scene; the Word document keeps the same storyboard in a printable format.
+The selected **C production board** contains seven scenes and eight 16:9 keyframes as standalone, editable SVGs. Scene 2 is split into 02A (phone zoom with natural-sounding full-sentence comments and inline word highlights, 00:30–00:48) and 02B (a separate full-frame hashtag transition, with each word on a colored backplate in a loose stack, 00:48–01:05). The website presents one production row per scene; the Word document keeps the same storyboard in a printable format.
 
 ## Files
 

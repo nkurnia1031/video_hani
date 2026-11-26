@@ -30,80 +30,361 @@
   <text x="1828" y="1045" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="end" letter-spacing="0">
     <tspan x="1828" dy="0">02 / 07</tspan>
   </text>
-  <rect x="236" y="252" width="1448" height="613" fill="#FFFFFF" rx="190" opacity="0.82" />
-  <circle cx="365" cy="427" r="137" fill="#FFFFFF" opacity="0.68" />
-  <circle cx="610" cy="337" r="125" fill="#FFFFFF" opacity="0.68" />
-  <circle cx="850" cy="326" r="146" fill="#FFFFFF" opacity="0.68" />
-  <circle cx="1094" cy="327" r="146" fill="#FFFFFF" opacity="0.68" />
-  <circle cx="1346" cy="352" r="138" fill="#FFFFFF" opacity="0.68" />
-  <circle cx="1580" cy="454" r="142" fill="#FFFFFF" opacity="0.68" />
-  <circle cx="478" cy="728" r="124" fill="#FFFFFF" opacity="0.68" />
-  <circle cx="752" cy="785" r="132" fill="#FFFFFF" opacity="0.68" />
-  <circle cx="1128" cy="783" r="137" fill="#FFFFFF" opacity="0.68" />
-  <circle cx="1434" cy="744" r="127" fill="#FFFFFF" opacity="0.68" />
-  <text x="164" y="386" fill="#407BFF" font-family="Arial, Helvetica, sans-serif" font-size="94" font-weight="700" text-anchor="middle" letter-spacing="0" opacity="0.17">
-    <tspan x="164" dy="0">#</tspan>
+  <text x="165" y="384" fill="#407BFF" font-family="Arial, Helvetica, sans-serif" font-size="88" font-weight="700" text-anchor="middle" letter-spacing="0" opacity="0.14">
+    <tspan x="165" dy="0">#</tspan>
   </text>
-  <text x="1757" y="400" fill="#ED8067" font-family="Arial, Helvetica, sans-serif" font-size="96" font-weight="700" text-anchor="middle" letter-spacing="0" opacity="0.23">
-    <tspan x="1757" dy="0">#</tspan>
+  <text x="1760" y="405" fill="#ED8067" font-family="Arial, Helvetica, sans-serif" font-size="92" font-weight="700" text-anchor="middle" letter-spacing="0" opacity="0.18">
+    <tspan x="1760" dy="0">#</tspan>
   </text>
-  <text x="170" y="772" fill="#8878D2" font-family="Arial, Helvetica, sans-serif" font-size="78" font-weight="700" text-anchor="middle" letter-spacing="0" opacity="0.18">
+  <text x="170" y="798" fill="#8878D2" font-family="Arial, Helvetica, sans-serif" font-size="78" font-weight="700" text-anchor="middle" letter-spacing="0" opacity="0.16">
     <tspan x="170" dy="0">#</tspan>
   </text>
-  <text x="1755" y="786" fill="#2859BE" font-family="Arial, Helvetica, sans-serif" font-size="83" font-weight="700" text-anchor="middle" letter-spacing="0" opacity="0.16">
-    <tspan x="1755" dy="0">#</tspan>
+  <text x="1752" y="788" fill="#2859BE" font-family="Arial, Helvetica, sans-serif" font-size="84" font-weight="700" text-anchor="middle" letter-spacing="0" opacity="0.15">
+    <tspan x="1752" dy="0">#</tspan>
   </text>
-  <text x="420" y="326" fill="#2859BE" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="420" dy="0">#PsychologyTok</tspan>
-  </text>
-  <text x="960" y="326" fill="#ED8067" font-family="Arial, Helvetica, sans-serif" font-size="37" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="960" dy="0">#Trauma</tspan>
-  </text>
-  <text x="1485" y="326" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="1485" dy="0">#MentalHealth</tspan>
-  </text>
-  <text x="365" y="430" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="365" dy="0">#ToxicRelationship</tspan>
-  </text>
-  <text x="960" y="430" fill="#2859BE" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="960" dy="0">#Gaslighting</tspan>
-  </text>
-  <text x="1510" y="430" fill="#589681" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="1510" dy="0">#Boundaries</tspan>
-  </text>
-  <text x="405" y="541" fill="#ED8067" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="405" dy="0">#Narcissist</tspan>
-  </text>
-  <text x="960" y="541" fill="#407BFF" font-family="Arial, Helvetica, sans-serif" font-size="62" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="960" dy="0">#TherapySpeak</tspan>
-  </text>
-  <text x="1518" y="541" fill="#589681" font-family="Arial, Helvetica, sans-serif" font-size="35" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="1518" dy="0">#Healing</tspan>
-  </text>
-  <text x="425" y="650" fill="#2859BE" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="425" dy="0">#Avoidant</tspan>
-  </text>
-  <text x="960" y="650" fill="#ED8067" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="960" dy="0">#Depressed</tspan>
-  </text>
-  <text x="1500" y="650" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="1500" dy="0">#AttachmentStyle</tspan>
-  </text>
-  <text x="405" y="755" fill="#589681" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="405" dy="0">#RedFlag</tspan>
-  </text>
-  <text x="960" y="755" fill="#2859BE" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="960" dy="0">#SelfDiagnosis</tspan>
-  </text>
-  <text x="1510" y="755" fill="#ED8067" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="1510" dy="0">#NarcissisticBehavior</tspan>
-  </text>
-  <text x="650" y="836" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="650" dy="0">#Context</tspan>
-  </text>
-  <text x="1260" y="836" fill="#407BFF" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="1260" dy="0">#ViralTerms</tspan>
-  </text>
+  <g transform="rotate(-3 222.5 296.0)">
+    <rect x="105" y="258" width="245" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="100" y="252" width="245" height="88" fill="#2859BE" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="222.5" y="309.2" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="222.5" dy="0">#psychologytok</tspan>
+    </text>
+  </g>
+  <g transform="rotate(3 522.5 303.0)">
+    <rect x="360" y="265" width="335" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="355" y="259" width="335" height="88" fill="#ED8067" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="522.5" y="316.2" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="522.5" dy="0">#toxicrelationship</tspan>
+    </text>
+  </g>
+  <g transform="rotate(-2 835.0 297.0)">
+    <rect x="705" y="259" width="270" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="700" y="253" width="270" height="88" fill="#407BFF" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="835.0" y="310.2" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="835.0" dy="0">#gaslighting</tspan>
+    </text>
+  </g>
+  <g transform="rotate(4 1070.0 304.0)">
+    <rect x="985" y="266" width="180" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="980" y="260" width="180" height="88" fill="#FFFFFF" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="1070.0" y="317.2" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="1070.0" dy="0">#trauma</tspan>
+    </text>
+  </g>
+  <g transform="rotate(-3 1277.5 298.0)">
+    <rect x="1175" y="260" width="215" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="1170" y="254" width="215" height="88" fill="#DADFFC" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="1277.5" y="311.2" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="1277.5" dy="0">#avoidant</tspan>
+    </text>
+  </g>
+  <g transform="rotate(3 1487.5 305.0)">
+    <rect x="1400" y="267" width="185" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="1395" y="261" width="185" height="88" fill="#263238" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="1487.5" y="318.2" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="1487.5" dy="0">#redflag</tspan>
+    </text>
+  </g>
+  <g transform="rotate(-3 1700.0 299.0)">
+    <rect x="1595" y="261" width="220" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="1590" y="255" width="220" height="88" fill="#B9D8CA" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="1700.0" y="312.2" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="1700.0" dy="0">#depressed</tspan>
+    </text>
+  </g>
+  <g transform="rotate(4 245.0 390.0)">
+    <rect x="125" y="352" width="250" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="120" y="346" width="250" height="88" fill="#2859BE" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="245.0" y="403.2" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="245.0" dy="0">#narcissist</tspan>
+    </text>
+  </g>
+  <g transform="rotate(-4 472.5 384.0)">
+    <rect x="385" y="346" width="185" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="380" y="340" width="185" height="88" fill="#B9D8CA" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="472.5" y="397.2" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="472.5" dy="0">#healing</tspan>
+    </text>
+  </g>
+  <g transform="rotate(3 665.0 391.0)">
+    <rect x="580" y="353" width="180" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="575" y="347" width="180" height="88" fill="#FFFFFF" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="665.0" y="404.2" fill="#2859BE" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="665.0" dy="0">#therapy</tspan>
+    </text>
+  </g>
+  <g transform="rotate(-4 865.0 385.0)">
+    <rect x="770" y="347" width="200" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="765" y="341" width="200" height="88" fill="#ED8067" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="865.0" y="398.2" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="865.0" dy="0">#ghosting</tspan>
+    </text>
+  </g>
+  <g transform="rotate(3 1085.0 392.0)">
+    <rect x="980" y="354" width="220" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="975" y="348" width="220" height="88" fill="#DADFFC" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="1085.0" y="405.2" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="1085.0" dy="0">#innerchild</tspan>
+    </text>
+  </g>
+  <g transform="rotate(-2 1327.5 386.0)">
+    <rect x="1210" y="348" width="245" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="1205" y="342" width="245" height="88" fill="#407BFF" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="1327.5" y="399.2" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="1327.5" dy="0">#boundaries</tspan>
+    </text>
+  </g>
+  <g transform="rotate(4 1585.0 380.0)">
+    <rect x="1465" y="342" width="250" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="1460" y="336" width="250" height="88" fill="#FFFFFF" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="1585.0" y="393.2" fill="#2859BE" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="1585.0" dy="0">#selfdiagnose</tspan>
+    </text>
+  </g>
+  <g transform="rotate(-3 1805.0 387.0)">
+    <rect x="1725" y="349" width="170" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="1720" y="343" width="170" height="88" fill="#ED8067" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="1805.0" y="400.2" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="1805.0" dy="0">#triggered</tspan>
+    </text>
+  </g>
+  <g transform="rotate(-2 255.0 465.0)">
+    <rect x="110" y="427" width="300" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="105" y="421" width="300" height="88" fill="#DADFFC" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="255.0" y="478.2" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="255.0" dy="0">#attachmentstyle</tspan>
+    </text>
+  </g>
+  <g transform="rotate(3 537.5 472.0)">
+    <rect x="420" y="434" width="245" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="415" y="428" width="245" height="88" fill="#407BFF" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="537.5" y="485.2" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="537.5" dy="0">#situationship</tspan>
+    </text>
+  </g>
+  <g transform="rotate(-3 780.0 466.0)">
+    <rect x="675" y="428" width="220" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="670" y="422" width="220" height="88" fill="#FFFFFF" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="780.0" y="479.2" fill="#ED8067" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="780.0" dy="0">#lovebombing</tspan>
+    </text>
+  </g>
+  <g transform="rotate(3 1037.5 473.0)">
+    <rect x="905" y="435" width="275" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="900" y="429" width="275" height="88" fill="#ED8067" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="1037.5" y="486.2" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="1037.5" dy="0">#emotionalabuse</tspan>
+    </text>
+  </g>
+  <g transform="rotate(-3 1310.0 467.0)">
+    <rect x="1190" y="429" width="250" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="1185" y="423" width="250" height="88" fill="#2859BE" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="1310.0" y="480.2" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="1310.0" dy="0">#mentalhealth</tspan>
+    </text>
+  </g>
+  <g transform="rotate(3 1620.0 474.0)">
+    <rect x="1450" y="436" width="350" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="1445" y="430" width="350" height="88" fill="#B9D8CA" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="1620.0" y="487.2" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="1620.0" dy="0">#relationshipgoals</tspan>
+    </text>
+  </g>
+  <g transform="rotate(3 180.0 552.0)">
+    <rect x="100" y="514" width="170" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="95" y="508" width="170" height="88" fill="#ED8067" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="180.0" y="565.2" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="180.0" dy="0">#toxic</tspan>
+    </text>
+  </g>
+  <g transform="rotate(-3 397.5 559.0)">
+    <rect x="280" y="521" width="245" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="275" y="515" width="245" height="88" fill="#FFFFFF" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="397.5" y="572.2" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="397.5" dy="0">#narcissistic</tspan>
+    </text>
+  </g>
+  <g transform="rotate(3 670.0 553.0)">
+    <rect x="535" y="515" width="280" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="530" y="509" width="280" height="88" fill="#2859BE" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="670.0" y="566.2" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="670.0" dy="0">#traumaresponse</tspan>
+    </text>
+  </g>
+  <g transform="rotate(-2 915.0 560.0)">
+    <rect x="825" y="522" width="190" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="820" y="516" width="190" height="88" fill="#B9D8CA" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="915.0" y="573.2" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="915.0" dy="0">#selflove</tspan>
+    </text>
+  </g>
+  <g transform="rotate(3 1190.0 554.0)">
+    <rect x="1025" y="516" width="340" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="1020" y="510" width="340" height="88" fill="#DADFFC" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="1190.0" y="567.2" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="1190.0" dy="0">#healthyrelationships</tspan>
+    </text>
+  </g>
+  <g transform="rotate(-3 1470.0 548.0)">
+    <rect x="1375" y="510" width="200" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="1370" y="504" width="200" height="88" fill="#407BFF" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="1470.0" y="561.2" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="1470.0" dy="0">#viralterms</tspan>
+    </text>
+  </g>
+  <g transform="rotate(3 1682.5 555.0)">
+    <rect x="1585" y="517" width="205" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="1580" y="511" width="205" height="88" fill="#FFFFFF" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="1682.5" y="568.2" fill="#2859BE" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="1682.5" dy="0">#context</tspan>
+    </text>
+  </g>
+  <g transform="rotate(-3 205.0 633.0)">
+    <rect x="115" y="595" width="190" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="110" y="589" width="190" height="88" fill="#263238" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="205.0" y="646.2" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="205.0" dy="0">#redflag</tspan>
+    </text>
+  </g>
+  <g transform="rotate(3 455.0 640.0)">
+    <rect x="315" y="602" width="290" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="310" y="596" width="290" height="88" fill="#FFFFFF" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="455.0" y="653.2" fill="#2859BE" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="455.0" dy="0">#healingjourney</tspan>
+    </text>
+  </g>
+  <g transform="rotate(-3 737.5 634.0)">
+    <rect x="615" y="596" width="255" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="610" y="590" width="255" height="88" fill="#407BFF" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="737.5" y="647.2" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="737.5" dy="0">#mentalhealth</tspan>
+    </text>
+  </g>
+  <g transform="rotate(4 980.0 641.0)">
+    <rect x="880" y="603" width="210" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="875" y="597" width="210" height="88" fill="#B9D8CA" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="980.0" y="654.2" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="980.0" dy="0">#avoidant</tspan>
+    </text>
+  </g>
+  <g transform="rotate(-3 1200.0 635.0)">
+    <rect x="1100" y="597" width="210" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="1095" y="591" width="210" height="88" fill="#ED8067" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="1200.0" y="648.2" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="1200.0" dy="0">#depressed</tspan>
+    </text>
+  </g>
+  <g transform="rotate(3 1427.5 642.0)">
+    <rect x="1320" y="604" width="225" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="1315" y="598" width="225" height="88" fill="#DADFFC" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="1427.5" y="655.2" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="1427.5" dy="0">#innerchild</tspan>
+    </text>
+  </g>
+  <g transform="rotate(-3 1675.0 636.0)">
+    <rect x="1555" y="598" width="250" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="1550" y="592" width="250" height="88" fill="#2859BE" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="1675.0" y="649.2" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="1675.0" dy="0">#selfdiagnose</tspan>
+    </text>
+  </g>
+  <g transform="rotate(-3 197.5 727.0)">
+    <rect x="110" y="689" width="185" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="105" y="683" width="185" height="88" fill="#407BFF" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="197.5" y="740.2" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="197.5" dy="0">#therapy</tspan>
+    </text>
+  </g>
+  <g transform="rotate(3 420.0 721.0)">
+    <rect x="305" y="683" width="240" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="300" y="677" width="240" height="88" fill="#ED8067" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="420.0" y="734.2" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="420.0" dy="0">#boundaries</tspan>
+    </text>
+  </g>
+  <g transform="rotate(-3 652.5 728.0)">
+    <rect x="555" y="690" width="205" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="550" y="684" width="205" height="88" fill="#FFFFFF" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="652.5" y="741.2" fill="#2859BE" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="652.5" dy="0">#ghosting</tspan>
+    </text>
+  </g>
+  <g transform="rotate(3 915.0 722.0)">
+    <rect x="770" y="684" width="300" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="765" y="678" width="300" height="88" fill="#B9D8CA" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="915.0" y="735.2" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="915.0" dy="0">#attachmentstyle</tspan>
+    </text>
+  </g>
+  <g transform="rotate(-3 1210.0 716.0)">
+    <rect x="1080" y="678" width="270" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="1075" y="672" width="270" height="88" fill="#2859BE" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="1210.0" y="729.2" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="1210.0" dy="0">#gaslighting</tspan>
+    </text>
+  </g>
+  <g transform="rotate(3 1482.5 723.0)">
+    <rect x="1360" y="685" width="255" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="1355" y="679" width="255" height="88" fill="#263238" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="1482.5" y="736.2" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="1482.5" dy="0">#psychologytok</tspan>
+    </text>
+  </g>
+  <g transform="rotate(-3 1725.0 717.0)">
+    <rect x="1625" y="679" width="210" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="1620" y="673" width="210" height="88" fill="#DADFFC" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="1725.0" y="730.2" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="1725.0" dy="0">#selflove</tspan>
+    </text>
+  </g>
+  <g transform="rotate(3 285.0 808.0)">
+    <rect x="125" y="770" width="330" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="120" y="764" width="330" height="88" fill="#ED8067" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="285.0" y="821.2" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="285.0" dy="0">#toxicrelationship</tspan>
+    </text>
+  </g>
+  <g transform="rotate(-3 582.5 802.0)">
+    <rect x="465" y="764" width="245" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="460" y="758" width="245" height="88" fill="#407BFF" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="582.5" y="815.2" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="582.5" dy="0">#situationship</tspan>
+    </text>
+  </g>
+  <g transform="rotate(3 830.0 809.0)">
+    <rect x="720" y="771" width="230" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="715" y="765" width="230" height="88" fill="#FFFFFF" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="830.0" y="822.2" fill="#ED8067" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="830.0" dy="0">#lovebombing</tspan>
+    </text>
+  </g>
+  <g transform="rotate(-3 1080.0 803.0)">
+    <rect x="960" y="765" width="250" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="955" y="759" width="250" height="88" fill="#2859BE" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="1080.0" y="816.2" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="1080.0" dy="0">#narcissist</tspan>
+    </text>
+  </g>
+  <g transform="rotate(3 1307.5 810.0)">
+    <rect x="1220" y="772" width="185" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="1215" y="766" width="185" height="88" fill="#B9D8CA" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="1307.5" y="823.2" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="1307.5" dy="0">#redflag</tspan>
+    </text>
+  </g>
+  <g transform="rotate(-3 1500.0 804.0)">
+    <rect x="1415" y="766" width="180" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="1410" y="760" width="180" height="88" fill="#FFFFFF" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="1500.0" y="817.2" fill="#2859BE" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="1500.0" dy="0">#healing</tspan>
+    </text>
+  </g>
+  <g transform="rotate(3 1725.0 811.0)">
+    <rect x="1605" y="773" width="250" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
+    <rect x="1600" y="767" width="250" height="88" fill="#263238" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <text x="1725.0" y="824.2" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="1725.0" dy="0">#mentalhealth</tspan>
+    </text>
+  </g>
   <rect x="92" y="919" width="1736" height="57" fill="#263238" rx="17" />
   <text x="960" y="955" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="middle" letter-spacing="0.3">
     <tspan x="960" dy="0">02B  ·  SEPARATE TRANSITION  →  HASHTAGS GATHER AND FILL THE SCREEN</tspan>

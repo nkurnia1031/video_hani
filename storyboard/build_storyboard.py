@@ -309,13 +309,13 @@ def build_scene_2(scene):
     card(root, 685, 235, 570, 650, INK, INK, 38)
     rect(root, 704, 266, 532, 586, "#F5F8FC", rx=25)
     rect(root, 899, 246, 142, 8, "#89939B", rx=4)
-    txt(root, 740, 310, "SOCIAL COMMENTS", 16, MUTED, 700, letter=1)
+    txt(root, 740, 310, "KOMENTAR NETIZEN", 16, MUTED, 700, letter=1)
     circle(root, 1195, 304, 5, CORAL)
     comments = [
-        ("Nggak balas berjam-jam?", [("Dia pasti ", INK, False), ("avoidant.", BLUE_DARK, True)]),
-        ("Batal sekali langsung", [("disebut ", INK, False), ("toxic.", CORAL, True)]),
-        ("Beda pendapat kok", [("disebut ", INK, False), ("gaslighting?", BLUE_DARK, True)]),
-        ("Sedih setelah gagal", [("langsung ", INK, False), ("depressed?", CORAL, True)]),
+        ("Chat 3 jam nggak dibales,", [("avoidant", BLUE_DARK, True), (" banget ya?", INK, False)]),
+        ("Baru batal sekali,", [("kok udah ", INK, False), ("toxic", CORAL, True), ("?", INK, False)]),
+        ("Beda pendapat dikit,", [("langsung ", INK, False), ("gaslighting?", BLUE_DARK, True)]),
+        ("Sedih dikit habis gagal,", [("dibilang ", INK, False), ("depressed?", CORAL, True)]),
     ]
     for i, (first_line, second_line) in enumerate(comments):
         y = 335 + i * 119
@@ -331,12 +331,12 @@ def build_scene_2(scene):
     txt(root, 969, 838, "SCROLL", 12, MUTED, 700, "middle", letter=1.1)
 
     card(root, 1304, 306, 510, 498, WHITE, "#D8E3EE", 22)
-    pill(root, 1340, 344, 265, 40, "HIGHLIGHT IN CONTEXT", "#EAF1FF", BLUE_DARK, 13)
-    txt(root, 1340, 435, "Kalimat komentar tetap utuh.", 22, INK, 700)
+    pill(root, 1340, 344, 300, 40, "KATA KUNCI DALAM KONTEKS", "#EAF1FF", BLUE_DARK, 13)
+    txt(root, 1340, 435, "Komentarnya tetap utuh.", 22, INK, 700)
     txt(root, 1340, 473, "Yang disorot hanya istilahnya.", 18, MUTED, 400)
     rect(root, 1340, 516, 430, 142, "#F4F7FB", rx=15)
-    txt(root, 1363, 560, "Beda pendapat kok", 20, INK, 500)
-    inline_txt(root, 1363, 595, [("disebut ", INK, False), ("gaslighting?", BLUE_DARK, True)], 20)
+    txt(root, 1363, 560, "Beda pendapat dikit,", 20, INK, 500)
+    inline_txt(root, 1363, 595, [("langsung ", INK, False), ("gaslighting?", BLUE_DARK, True)], 20)
     line(root, 1364, 620, 1510, 620, BLUE, 4)
     txt(root, 1340, 712, "Kutipan ini contoh percakapan,", 16, MUTED, 400)
     txt(root, 1340, 739, "bukan kesimpulan atau diagnosis.", 16, MUTED, 400)
@@ -347,25 +347,68 @@ def build_scene_2(scene):
 
 def build_scene_2b(scene):
     root = start_scene(scene, "#EAF1FB", BLUE)
-    # The separate transition becomes a centered word cloud that fills the frame.
-    rect(root, 236, 252, 1448, 613, WHITE, rx=190, opacity=0.82)
-    for cx, cy, radius in [(365, 427, 137), (610, 337, 125), (850, 326, 146), (1094, 327, 146), (1346, 352, 138), (1580, 454, 142), (478, 728, 124), (752, 785, 132), (1128, 783, 137), (1434, 744, 127)]:
-        circle(root, cx, cy, radius, WHITE, opacity=0.68)
-    # Hash marks drift in from the edges as background accents.
-    txt(root, 164, 386, "#", 94, BLUE, 700, "middle", opacity=0.17)
-    txt(root, 1757, 400, "#", 96, CORAL, 700, "middle", opacity=0.23)
-    txt(root, 170, 772, "#", 78, "#8878D2", 700, "middle", opacity=0.18)
-    txt(root, 1755, 786, "#", 83, BLUE_DARK, 700, "middle", opacity=0.16)
-    words = [
-        ("#PsychologyTok", 420, 326, 30, BLUE_DARK), ("#Trauma", 960, 326, 37, CORAL), ("#MentalHealth", 1485, 326, 28, INK),
-        ("#ToxicRelationship", 365, 430, 32, INK), ("#Gaslighting", 960, 430, 48, BLUE_DARK), ("#Boundaries", 1510, 430, 29, "#589681"),
-        ("#Narcissist", 405, 541, 38, CORAL), ("#TherapySpeak", 960, 541, 62, BLUE), ("#Healing", 1518, 541, 35, "#589681"),
-        ("#Avoidant", 425, 650, 40, BLUE_DARK), ("#Depressed", 960, 650, 42, CORAL), ("#AttachmentStyle", 1500, 650, 27, INK),
-        ("#RedFlag", 405, 755, 30, "#589681"), ("#SelfDiagnosis", 960, 755, 32, BLUE_DARK), ("#NarcissisticBehavior", 1510, 755, 25, CORAL),
-        ("#Context", 650, 836, 25, INK), ("#ViralTerms", 1260, 836, 25, BLUE),
+    # Each hashtag has its own colored backing; offsets and slight rotations make a layered word cloud.
+    txt(root, 165, 384, "#", 88, BLUE, 700, "middle", opacity=0.14)
+    txt(root, 1760, 405, "#", 92, CORAL, 700, "middle", opacity=0.18)
+    txt(root, 170, 798, "#", 78, "#8878D2", 700, "middle", opacity=0.16)
+    txt(root, 1752, 788, "#", 84, BLUE_DARK, 700, "middle", opacity=0.15)
+    tags = [
+        ("#psychologytok", 100, 258, 245, 88, BLUE_DARK, WHITE, -3, 22),
+        ("#toxicrelationship", 355, 258, 335, 88, CORAL, WHITE, 3, 23),
+        ("#gaslighting", 700, 258, 270, 88, BLUE, WHITE, -2, 26),
+        ("#trauma", 980, 258, 180, 88, WHITE, INK, 4, 27),
+        ("#avoidant", 1170, 258, 215, 88, LILAC, INK, -3, 24),
+        ("#redflag", 1395, 258, 185, 88, INK, WHITE, 3, 24),
+        ("#depressed", 1590, 258, 220, 88, MINT, INK, -3, 23),
+        ("#narcissist", 120, 342, 250, 88, BLUE_DARK, WHITE, 4, 24),
+        ("#healing", 380, 342, 185, 88, MINT, INK, -4, 24),
+        ("#therapy", 575, 342, 180, 88, WHITE, BLUE_DARK, 3, 24),
+        ("#ghosting", 765, 342, 200, 88, CORAL, WHITE, -4, 24),
+        ("#innerchild", 975, 342, 220, 88, LILAC, INK, 3, 22),
+        ("#boundaries", 1205, 342, 245, 88, BLUE, WHITE, -2, 23),
+        ("#selfdiagnose", 1460, 342, 250, 88, WHITE, BLUE_DARK, 4, 22),
+        ("#triggered", 1720, 342, 170, 88, CORAL, WHITE, -3, 21),
+        ("#attachmentstyle", 105, 426, 300, 88, LILAC, INK, -2, 21),
+        ("#situationship", 415, 426, 245, 88, BLUE, WHITE, 3, 22),
+        ("#lovebombing", 670, 426, 220, 88, WHITE, CORAL, -3, 22),
+        ("#emotionalabuse", 900, 426, 275, 88, CORAL, WHITE, 3, 21),
+        ("#mentalhealth", 1185, 426, 250, 88, BLUE_DARK, WHITE, -3, 22),
+        ("#relationshipgoals", 1445, 426, 350, 88, MINT, INK, 3, 20),
+        ("#toxic", 95, 510, 170, 88, CORAL, WHITE, 3, 26),
+        ("#narcissistic", 275, 510, 245, 88, WHITE, INK, -3, 21),
+        ("#traumaresponse", 530, 510, 280, 88, BLUE_DARK, WHITE, 3, 21),
+        ("#selflove", 820, 510, 190, 88, MINT, INK, -2, 23),
+        ("#healthyrelationships", 1020, 510, 340, 88, LILAC, INK, 3, 19),
+        ("#viralterms", 1370, 510, 200, 88, BLUE, WHITE, -3, 22),
+        ("#context", 1580, 510, 205, 88, WHITE, BLUE_DARK, 3, 23),
+        ("#redflag", 110, 594, 190, 88, INK, WHITE, -3, 24),
+        ("#healingjourney", 310, 594, 290, 88, WHITE, BLUE_DARK, 3, 21),
+        ("#mentalhealth", 610, 594, 255, 88, BLUE, WHITE, -3, 22),
+        ("#avoidant", 875, 594, 210, 88, MINT, INK, 4, 24),
+        ("#depressed", 1095, 594, 210, 88, CORAL, WHITE, -3, 23),
+        ("#innerchild", 1315, 594, 225, 88, LILAC, INK, 3, 22),
+        ("#selfdiagnose", 1550, 594, 250, 88, BLUE_DARK, WHITE, -3, 21),
+        ("#therapy", 105, 678, 185, 88, BLUE, WHITE, -3, 24),
+        ("#boundaries", 300, 678, 240, 88, CORAL, WHITE, 3, 22),
+        ("#ghosting", 550, 678, 205, 88, WHITE, BLUE_DARK, -3, 23),
+        ("#attachmentstyle", 765, 678, 300, 88, MINT, INK, 3, 21),
+        ("#gaslighting", 1075, 678, 270, 88, BLUE_DARK, WHITE, -3, 24),
+        ("#psychologytok", 1355, 678, 255, 88, INK, WHITE, 3, 21),
+        ("#selflove", 1620, 678, 210, 88, LILAC, INK, -3, 23),
+        ("#toxicrelationship", 120, 762, 330, 88, CORAL, WHITE, 3, 21),
+        ("#situationship", 460, 762, 245, 88, BLUE, WHITE, -3, 22),
+        ("#lovebombing", 715, 762, 230, 88, WHITE, CORAL, 3, 22),
+        ("#narcissist", 955, 762, 250, 88, BLUE_DARK, WHITE, -3, 23),
+        ("#redflag", 1215, 762, 185, 88, MINT, INK, 3, 24),
+        ("#healing", 1410, 762, 180, 88, WHITE, BLUE_DARK, -3, 23),
+        ("#mentalhealth", 1600, 762, 250, 88, INK, WHITE, 3, 21),
     ]
-    for word, x, y, size, color in words:
-        txt(root, x, y, word, size, color, 700, "middle")
+    for index, (word, x, y, w, h, fill, color, angle, size) in enumerate(tags):
+        y += ((index * 7) % 13) - 6
+        group = add(root, "g", transform=f"rotate({angle} {x + w / 2} {y + h / 2})")
+        rect(group, x + 5, y + 6, w, h, "#AEBFD1", rx=17, opacity=0.3)
+        rect(group, x, y, w, h, fill, rx=17, stroke="#FFFFFF", sw=2)
+        txt(group, x + w / 2, y + h * 0.65, word, size, color, 700, "middle")
     rect(root, 92, 919, 1736, 57, INK, rx=17)
     txt(root, 960, 955, "02B  ·  SEPARATE TRANSITION  →  HASHTAGS GATHER AND FILL THE SCREEN", 18, WHITE, 700, "middle", letter=0.3)
     return root
