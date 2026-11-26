@@ -244,9 +244,9 @@
     let lastBeat = '';
 
     const frameFiles = [
-      ['frame-02a', 'scenes/scene-02a-comment-scroll.svg'],
-      ['frame-02b', 'scenes/scene-02b-hashtag-cloud.svg'],
-      ['frame-02c', 'scenes/scene-02c-on-screen-text.svg'],
+      ['frame-02a', 'scenes/scene-02a-comment-scroll.svg?v=motion-20261126'],
+      ['frame-02b', 'scenes/scene-02b-hashtag-cloud.svg?v=motion-20261126'],
+      ['frame-02c', 'scenes/scene-02c-on-screen-text.svg?v=motion-20261126'],
     ];
 
     function isSvgTag(node, name) {
@@ -262,7 +262,7 @@
     }
 
     async function loadFrame(id, url) {
-      const response = await fetch(url);
+      const response = await fetch(url, { cache: 'reload' });
       if (!response.ok) throw new Error(`Could not load ${url}`);
       const documentSvg = new DOMParser().parseFromString(await response.text(), 'image/svg+xml');
       const source = documentSvg.documentElement;
@@ -301,6 +301,7 @@
     }
 
     function placeExtraComments(feed, componentRoot) {
+      if (!feed || !componentRoot) return false;
       for (let number = 5; number <= 10; number += 1) {
         const original = componentRoot.querySelector(`#comment-${String(number).padStart(2, '0')}`);
         if (!original) continue;
@@ -309,6 +310,7 @@
         clone.setAttribute('transform', `translate(666 ${859 + row * 166})`);
         feed.append(clone);
       }
+      return true;
     }
 
     function prepareMotion() {
@@ -317,6 +319,8 @@
       const frameB = document.querySelector('#frame-02b');
       const frameC = document.querySelector('#frame-02c');
       const feed = layer('comment-feed');
+      const scrollThumb = layer('phone-scroll-thumb');
+      const hand = layer('phone-hand-motion');
 
       frameA.style.opacity = '1';
       frameB.style.opacity = '0';
@@ -361,15 +365,19 @@
         .add('#phone-scroller', { opacity: [0, 1], translateX: [74, 0], translateY: [16, 0], duration: 850, ease: 'outBack' }, 1930)
         .add('#phone-shell', { opacity: [0, 1], translateY: [62, 0], scale: [.92, 1], duration: 950, ease: 'outBack' }, 2230)
         .add('#phone-header', { opacity: [0, 1], translateY: [12, 0], duration: 500, ease: 'outCubic' }, 2800)
-        .add(feed, { opacity: [0, 1], duration: 500, ease: 'outSine' }, 3000)
-        .add('#phone-hand-motion', { rotate: [-5, 2, 0], duration: 460, ease: 'inOutSine' }, 3300)
-        .add('#phone-hand-motion', { rotate: [0, -3, 0], duration: 420, ease: 'inOutSine' }, 5800)
-        .add('#phone-scroll-thumb', { translateY: [0, 360], duration: 10000, ease: 'inOutSine' }, 4300)
-        .add(feed, { translateY: [0, -1160], duration: 10300, ease: 'inOutSine' }, 4300)
-        .add('#phone-hand-motion', { rotate: [0, 3, 0], duration: 420, ease: 'inOutSine' }, 9300)
-        .add('#phone-hand-motion', { rotate: [0, -2, 0], duration: 360, ease: 'inOutSine' }, 11900)
         .add('#frame-02a', { opacity: [1, 0], duration: 620, ease: 'inOutSine' }, 14400)
         .add('#frame-02b', { opacity: [0, 1], duration: 520, ease: 'outExpo' }, 14700);
+      if (feed) {
+        timeline.add(feed, { opacity: [0, 1], duration: 500, ease: 'outSine' }, 3000);
+        timeline.add(feed, { translateY: [0, -1160], duration: 10300, ease: 'inOutSine' }, 4300);
+      }
+      if (scrollThumb) timeline.add(scrollThumb, { translateY: [0, 360], duration: 10000, ease: 'inOutSine' }, 4300);
+      if (hand) {
+        timeline.add(hand, { rotate: [-5, 2, 0], duration: 460, ease: 'inOutSine' }, 3300);
+        timeline.add(hand, { rotate: [0, -3, 0], duration: 420, ease: 'inOutSine' }, 5800);
+        timeline.add(hand, { rotate: [0, 3, 0], duration: 420, ease: 'inOutSine' }, 9300);
+        timeline.add(hand, { rotate: [0, -2, 0], duration: 360, ease: 'inOutSine' }, 11900);
+      }
 
       const wordTags = [...frameB.querySelectorAll('[id^="word-cloud-tag-"]')];
       const surrounding = wordTags.filter(tag => tag.dataset.scriptTerm !== 'true');
@@ -390,10 +398,13 @@
     async function start() {
       try {
         await Promise.all(frameFiles.map(([id, url]) => loadFrame(id, url)));
-        const componentsResponse = await fetch('scenes/scene-02-komponen.svg');
+        const componentsResponse = await fetch('scenes/scene-02-komponen.svg?v=motion-20261126', { cache: 'reload' });
         if (componentsResponse.ok) {
           const componentsDocument = new DOMParser().parseFromString(await componentsResponse.text(), 'image/svg+xml');
-          placeExtraComments(document.querySelector('#frame-02a #comment-feed'), componentsDocument.documentElement);
+          const commentFeed = document.querySelector('#frame-02a #comment-feed');
+          if (!placeExtraComments(commentFeed, componentsDocument.documentElement)) {
+            console.warn('Scene 02A is missing its comment feed layer; continuing with the available comments.');
+          }
         }
         timeline = prepareMotion();
         stage.classList.add('is-live');
