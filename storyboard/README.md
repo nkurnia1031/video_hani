@@ -1,13 +1,13 @@
 # Therapy Speak Gone Wrong storyboard
 
-The selected **C production board** contains seven 16:9 scene frames as standalone, editable SVGs. The website presents one production row per scene; the Word document keeps the same storyboard in a printable format.
+The selected **C production board** contains seven scenes and eight 16:9 keyframes as standalone, editable SVGs. Scene 2 is split into 02A (phone zoom with full-sentence comment scroll, 00:30–00:48) and 02B (a separate full-frame hashtag-cloud transition, 00:48–01:05). The website presents one production row per scene; the Word document keeps the same storyboard in a printable format.
 
 ## Files
 
 - `index.html` — production board website with each scene's timing, visual description, on-screen copy, motion notes, voice-over cue, and asset links.
-- `scenes/scene-*.svg` — editable 1920 × 1080 scene compositions. Storyset artwork is embedded as SVG groups; backgrounds, type, chips, cards, and icons are editable vector elements.
+- `scenes/scene-*.svg` — editable 1920 × 1080 scene compositions. Scene 2 has separate `02a-comment-scroll` and `02b-hashtag-cloud` frames. Storyset artwork is embedded as SVG groups; backgrounds, type, chips, cards, and icons are editable vector elements.
 - `previews/scene-*.png` — raster previews used in the website and Word document.
-- `previews/contact-sheet.png` — seven-scene visual audit sheet.
+- `previews/contact-sheet.png` — seven-scene/eight-frame visual audit sheet.
 - `Storyboard_Therapy_Speak_Gone_Wrong.docx` — landscape production board with contact sheet, per-scene layouts, source links, and visual audit notes.
 - `Storyboard_Editable_Source.zip` — self-contained website, SVGs, additional illustration, PNG previews, and Word file.
 - `build_storyboard.py` — rebuilds the scene SVGs, previews, contact sheet, Word document, website, and source bundle.

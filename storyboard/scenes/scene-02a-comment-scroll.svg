@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="scene-title scene-desc">
-  <title id="scene-title">Scene 2: What Is Therapy Speak?</title>
-  <desc id="scene-desc">A social feed sits beside six terms transforming into hashtags.</desc>
-  <metadata>Scene 2 | What Is Therapy Speak? | Editable vector storyboard. Existing Storyset art is embedded as SVG; all other visuals are hand-edited vector shapes, not generated images.</metadata>
+  <title id="scene-title">Scene 2: Phone Zoom + Comment Scroll</title>
+  <desc id="scene-desc">Two keyframes: a seated person scrolls complete social-media comments as the phone moves to center; a separate transition gathers the highlighted terms into a full-screen hashtag cloud.</desc>
+  <metadata>Scene 2 | Phone Zoom + Comment Scroll | Editable vector storyboard. Existing Storyset art is embedded as SVG; all other visuals are hand-edited vector shapes, not generated images.</metadata>
   <rect x="0" y="0" width="1920" height="1080" fill="#EDF4FC" rx="0" />
   <circle cx="1790" cy="165" r="165" fill="#407BFF" opacity="0.075" />
   <circle cx="120" cy="900" r="110" fill="#407BFF" opacity="0.045" />
@@ -17,10 +17,10 @@
   </text>
   <rect x="1575" y="43" width="250" height="48" fill="#FFFFFF" rx="24.0" stroke="#D8E3F1" stroke-width="2" />
   <text x="1700.0" y="74.68" fill="#2859BE" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="1700.0" dy="0">00:30–01:05</tspan>
+    <tspan x="1700.0" dy="0">00:30–00:48</tspan>
   </text>
   <text x="92" y="168" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="49" font-weight="700" text-anchor="start" letter-spacing="0">
-    <tspan x="92" dy="0">What Is Therapy Speak?</tspan>
+    <tspan x="92" dy="0">Phone Zoom + Comment Scroll</tspan>
   </text>
   <line x1="92" y1="195" x2="1828" y2="195" stroke="#D8E0E7" stroke-width="2" stroke-linecap="round" />
   <line x1="92" y1="1015" x2="1828" y2="1015" stroke="#D8E0E7" stroke-width="2" stroke-linecap="round" />
@@ -30,77 +30,12 @@
   <text x="1828" y="1045" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="end" letter-spacing="0">
     <tspan x="1828" dy="0">02 / 07</tspan>
   </text>
-  <rect x="118" y="244" width="8" height="585" fill="#D8E7F7" rx="4" />
-  <rect x="1010" y="244" width="8" height="585" fill="#D8E7F7" rx="4" />
-  <text x="120" y="257" fill="#697985" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="start" letter-spacing="1.2">
-    <tspan x="120" dy="0">ISTILAH DI KOMENTAR</tspan>
+  <text x="118" y="253" fill="#697985" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" text-anchor="start" letter-spacing="1">
+    <tspan x="118" dy="0">ESTABLISHING  ·  SEATED SCROLL</tspan>
   </text>
-  <text x="614" y="257" fill="#697985" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="start" letter-spacing="1.2">
-    <tspan x="614" dy="0">BERUBAH JADI HASHTAG</tspan>
-  </text>
-  <rect x="128" y="292" width="330" height="58" fill="#FFFFFF" rx="29.0" stroke="#D8E3EE" stroke-width="2" />
-  <text x="293.0" y="330.28" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="293.0" dy="0">Toxic</tspan>
-  </text>
-  <path d="M474,321 L552,321" fill="none" stroke="#407BFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M542,309 L560,321 L542,333 Z" fill="#407BFF" />
-  <rect x="580" y="292" width="386" height="58" fill="#407BFF" rx="29.0" />
-  <text x="773.0" y="330.28" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="773.0" dy="0">#Toxic</tspan>
-  </text>
-  <rect x="128" y="374" width="330" height="58" fill="#FFFFFF" rx="29.0" stroke="#D8E3EE" stroke-width="2" />
-  <text x="293.0" y="412.28" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="293.0" dy="0">Narcissist</tspan>
-  </text>
-  <path d="M474,403 L552,403" fill="none" stroke="#407BFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M542,391 L560,403 L542,415 Z" fill="#407BFF" />
-  <rect x="580" y="374" width="386" height="58" fill="#407BFF" rx="29.0" />
-  <text x="773.0" y="412.28" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="773.0" dy="0">#Narcissist</tspan>
-  </text>
-  <rect x="128" y="456" width="330" height="58" fill="#FFFFFF" rx="29.0" stroke="#D8E3EE" stroke-width="2" />
-  <text x="293.0" y="494.28" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="293.0" dy="0">Gaslighting</tspan>
-  </text>
-  <path d="M474,485 L552,485" fill="none" stroke="#407BFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M542,473 L560,485 L542,497 Z" fill="#407BFF" />
-  <rect x="580" y="456" width="386" height="58" fill="#407BFF" rx="29.0" />
-  <text x="773.0" y="494.28" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="773.0" dy="0">#Gaslighting</tspan>
-  </text>
-  <rect x="128" y="538" width="330" height="58" fill="#FFFFFF" rx="29.0" stroke="#D8E3EE" stroke-width="2" />
-  <text x="293.0" y="576.28" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="293.0" dy="0">Trauma</tspan>
-  </text>
-  <path d="M474,567 L552,567" fill="none" stroke="#407BFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M542,555 L560,567 L542,579 Z" fill="#407BFF" />
-  <rect x="580" y="538" width="386" height="58" fill="#407BFF" rx="29.0" />
-  <text x="773.0" y="576.28" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="773.0" dy="0">#Trauma</tspan>
-  </text>
-  <rect x="128" y="620" width="330" height="58" fill="#FFFFFF" rx="29.0" stroke="#D8E3EE" stroke-width="2" />
-  <text x="293.0" y="658.28" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="293.0" dy="0">Avoidant</tspan>
-  </text>
-  <path d="M474,649 L552,649" fill="none" stroke="#407BFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M542,637 L560,649 L542,661 Z" fill="#407BFF" />
-  <rect x="580" y="620" width="386" height="58" fill="#407BFF" rx="29.0" />
-  <text x="773.0" y="658.28" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="773.0" dy="0">#Avoidant</tspan>
-  </text>
-  <rect x="128" y="702" width="330" height="58" fill="#FFFFFF" rx="29.0" stroke="#D8E3EE" stroke-width="2" />
-  <text x="293.0" y="740.28" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="293.0" dy="0">Depressed</tspan>
-  </text>
-  <path d="M474,731 L552,731" fill="none" stroke="#407BFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M542,719 L560,731 L542,743 Z" fill="#407BFF" />
-  <rect x="580" y="702" width="386" height="58" fill="#407BFF" rx="29.0" />
-  <text x="773.0" y="740.28" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="773.0" dy="0">#Depressed</tspan>
-  </text>
-  <rect x="1051" y="247" width="770" height="666" fill="#D7E0EA" rx="24" opacity="0.42" />
-  <rect x="1044" y="237" width="770" height="666" fill="#FFFFFF" rx="24" stroke="#D7E3F0" stroke-width="2" />
-  <svg x="1092" y="261" width="670" height="610" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet" overflow="hidden" aria-label="Feed illustration, Storyset Rafiki">
+  <rect x="89" y="280" width="560" height="575" fill="#D7E0EA" rx="22" opacity="0.42" />
+  <rect x="82" y="270" width="560" height="575" fill="#FFFFFF" rx="22" stroke="#D8E3EE" stroke-width="2" />
+  <svg x="94" y="282" width="536" height="548" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet" overflow="hidden" aria-label="Feed illustration, Storyset Rafiki">
     <g id="sfeed-freepik--background-complete--inject-2">
       <rect y="382.4" width="500" height="0.25" style="fill:#ebebeb" />
       <rect x="416.78" y="398.49" width="33.12" height="0.25" style="fill:#ebebeb" />
@@ -295,8 +230,94 @@
       </g>
     </g>
   </svg>
-  <rect x="92" y="923" width="1736" height="52" fill="#263238" rx="16" />
-  <text x="960" y="958" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="960" dy="0">Understanding psychology = good   ·   Misusing terms without context = problematic</tspan>
+  <path d="M625,565 C650,548 664,548 684,548" fill="none" stroke="#ED8067" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M671,534 L691,548 L671,562 Z" fill="#ED8067" />
+  <rect x="692" y="245" width="570" height="650" fill="#D7E0EA" rx="38" opacity="0.42" />
+  <rect x="685" y="235" width="570" height="650" fill="#263238" rx="38" stroke="#263238" stroke-width="2" />
+  <rect x="704" y="266" width="532" height="586" fill="#F5F8FC" rx="25" />
+  <rect x="899" y="246" width="142" height="8" fill="#89939B" rx="4" />
+  <text x="740" y="310" fill="#697985" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" text-anchor="start" letter-spacing="1">
+    <tspan x="740" dy="0">SOCIAL COMMENTS</tspan>
+  </text>
+  <circle cx="1195" cy="304" r="5" fill="#ED8067" />
+  <rect x="724" y="335" width="490" height="106" fill="#FFFFFF" rx="15" stroke="#E0E6ED" stroke-width="1" />
+  <circle cx="751" cy="365" r="11" fill="#407BFF" />
+  <rect x="777" y="357" width="95" height="8" fill="#CAD5E0" rx="4" />
+  <rect x="777" y="371" width="141" height="6" fill="#E1E6EB" rx="3" />
+  <text x="746" y="403" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" text-anchor="start" letter-spacing="0">
+    <tspan x="746" dy="0">Nggak balas berjam-jam?</tspan>
+  </text>
+  <text x="746" y="426" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" text-anchor="start">
+    <tspan fill="#263238" font-weight="500">Dia pasti </tspan>
+    <tspan fill="#2859BE" font-weight="700">avoidant.</tspan>
+  </text>
+  <rect x="724" y="454" width="490" height="106" fill="#FFFFFF" rx="15" stroke="#E0E6ED" stroke-width="1" />
+  <circle cx="751" cy="484" r="11" fill="#ED8067" />
+  <rect x="777" y="476" width="95" height="8" fill="#CAD5E0" rx="4" />
+  <rect x="777" y="490" width="141" height="6" fill="#E1E6EB" rx="3" />
+  <text x="746" y="522" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" text-anchor="start" letter-spacing="0">
+    <tspan x="746" dy="0">Batal sekali langsung</tspan>
+  </text>
+  <text x="746" y="545" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" text-anchor="start">
+    <tspan fill="#263238" font-weight="500">disebut </tspan>
+    <tspan fill="#ED8067" font-weight="700">toxic.</tspan>
+  </text>
+  <rect x="724" y="573" width="490" height="106" fill="#FFFFFF" rx="15" stroke="#E0E6ED" stroke-width="1" />
+  <circle cx="751" cy="603" r="11" fill="#8878D2" />
+  <rect x="777" y="595" width="95" height="8" fill="#CAD5E0" rx="4" />
+  <rect x="777" y="609" width="141" height="6" fill="#E1E6EB" rx="3" />
+  <text x="746" y="641" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" text-anchor="start" letter-spacing="0">
+    <tspan x="746" dy="0">Beda pendapat kok</tspan>
+  </text>
+  <text x="746" y="664" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" text-anchor="start">
+    <tspan fill="#263238" font-weight="500">disebut </tspan>
+    <tspan fill="#2859BE" font-weight="700">gaslighting?</tspan>
+  </text>
+  <rect x="724" y="692" width="490" height="106" fill="#FFFFFF" rx="15" stroke="#E0E6ED" stroke-width="1" />
+  <circle cx="751" cy="722" r="11" fill="#589681" />
+  <rect x="777" y="714" width="95" height="8" fill="#CAD5E0" rx="4" />
+  <rect x="777" y="728" width="141" height="6" fill="#E1E6EB" rx="3" />
+  <text x="746" y="760" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" text-anchor="start" letter-spacing="0">
+    <tspan x="746" dy="0">Sedih setelah gagal</tspan>
+  </text>
+  <text x="746" y="783" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" text-anchor="start">
+    <tspan fill="#263238" font-weight="500">langsung </tspan>
+    <tspan fill="#ED8067" font-weight="700">depressed?</tspan>
+  </text>
+  <rect x="1221" y="374" width="5" height="390" fill="#D9E1E9" rx="3" />
+  <rect x="1218" y="466" width="11" height="122" fill="#407BFF" rx="5" />
+  <text x="969" y="838" fill="#697985" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="1.1">
+    <tspan x="969" dy="0">SCROLL</tspan>
+  </text>
+  <rect x="1311" y="316" width="510" height="498" fill="#D7E0EA" rx="22" opacity="0.42" />
+  <rect x="1304" y="306" width="510" height="498" fill="#FFFFFF" rx="22" stroke="#D8E3EE" stroke-width="2" />
+  <rect x="1340" y="344" width="265" height="40" fill="#EAF1FF" rx="20.0" />
+  <text x="1472.5" y="370.4" fill="#2859BE" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <tspan x="1472.5" dy="0">HIGHLIGHT IN CONTEXT</tspan>
+  </text>
+  <text x="1340" y="435" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start" letter-spacing="0">
+    <tspan x="1340" dy="0">Kalimat komentar tetap utuh.</tspan>
+  </text>
+  <text x="1340" y="473" fill="#697985" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" letter-spacing="0">
+    <tspan x="1340" dy="0">Yang disorot hanya istilahnya.</tspan>
+  </text>
+  <rect x="1340" y="516" width="430" height="142" fill="#F4F7FB" rx="15" />
+  <text x="1363" y="560" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="500" text-anchor="start" letter-spacing="0">
+    <tspan x="1363" dy="0">Beda pendapat kok</tspan>
+  </text>
+  <text x="1363" y="595" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="500" text-anchor="start">
+    <tspan fill="#263238" font-weight="500">disebut </tspan>
+    <tspan fill="#2859BE" font-weight="700">gaslighting?</tspan>
+  </text>
+  <line x1="1364" y1="620" x2="1510" y2="620" stroke="#407BFF" stroke-width="4" stroke-linecap="round" />
+  <text x="1340" y="712" fill="#697985" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start" letter-spacing="0">
+    <tspan x="1340" dy="0">Kutipan ini contoh percakapan,</tspan>
+  </text>
+  <text x="1340" y="739" fill="#697985" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start" letter-spacing="0">
+    <tspan x="1340" dy="0">bukan kesimpulan atau diagnosis.</tspan>
+  </text>
+  <rect x="92" y="919" width="1736" height="57" fill="#263238" rx="17" />
+  <text x="960" y="955" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="middle" letter-spacing="0.6">
+    <tspan x="960" dy="0">02A  ·  PHONE PUSH-IN  +  FULL-SENTENCE COMMENT SCROLL</tspan>
   </text>
 </svg>
