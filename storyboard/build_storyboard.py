@@ -312,33 +312,47 @@ def build_scene_2(scene):
     txt(root, 740, 310, "KOMENTAR NETIZEN", 16, MUTED, 700, letter=1)
     circle(root, 1195, 304, 5, CORAL)
     comments = [
-        ("Slow respon dikit", [("langsung dicap ", INK, False), ("avoidant.", BLUE_DARK, True)]),
-        ("Batalin janji sekali", [("langsung ", INK, False), ("toxic.", CORAL, True)]),
-        ("Nggak setuju dikit", [("langsung dibilang ", INK, False), ("gaslighting.", BLUE_DARK, True)]),
-        ("Sedih beberapa hari aja", [("udah ", INK, False), ("depresi.", CORAL, True)]),
+        [
+            [("Pacar gue tiap ada masalah suka ngilang.", INK, False)],
+            [("Gue chat malam, pagi baru dibales", INK, False)],
+            [("“ketiduran”. Fix ", INK, False), ("avoidant", BLUE_DARK, True), (" sih.", INK, False)],
+        ],
+        [
+            [("Gue kemarin dimarahin temen.", INK, False)],
+            [("Padahal dia yang salah, malah marah", INK, False)],
+            [("ke gue. ", INK, False), ("Toxic", CORAL, True), (" banget, asli.", INK, False)],
+        ],
+        [
+            [("Ih kak, itu ", INK, False), ("gaslight", BLUE_DARK, True), (" dah kayaknya.", INK, False)],
+            [("Padahal kakaknya cuma cerita soal", INK, False)],
+            [("apa yang dia rasain.", INK, False)],
+        ],
+        [
+            [("Kak, dia murung terus akhir-akhir ini.", INK, False)],
+            [("Kayaknya ", INK, False), ("depresi", CORAL, True), (" deh.", INK, False)],
+        ],
     ]
-    for i, (first_line, second_line) in enumerate(comments):
+    for i, lines in enumerate(comments):
         y = 335 + i * 119
         rect(root, 724, y, 490, 106, WHITE, rx=15, stroke="#E0E6ED")
         circle(root, 751, y + 30, 11, [BLUE, CORAL, "#8878D2", "#589681"][i])
         rect(root, 777, y + 22, 95, 8, "#CAD5E0", rx=4)
         rect(root, 777, y + 36, 141, 6, "#E1E6EB", rx=3)
-        txt(root, 746, y + 68, first_line, 17, INK, 500)
-        inline_txt(root, 746, y + 91, second_line, 17)
+        for line_no, pieces in enumerate(lines):
+            inline_txt(root, 746, y + 63 + line_no * 18, pieces, 16)
     # Scroll track and handle make the movement legible in a still frame.
     rect(root, 1221, 374, 5, 390, "#D9E1E9", rx=3)
     rect(root, 1218, 466, 11, 122, BLUE, rx=5)
     txt(root, 969, 838, "SCROLL", 12, MUTED, 700, "middle", letter=1.1)
 
     card(root, 1304, 306, 510, 498, WHITE, "#D8E3EE", 22)
-    pill(root, 1340, 344, 300, 40, "KATA KUNCI DALAM KONTEKS", "#EAF1FF", BLUE_DARK, 13)
-    txt(root, 1340, 435, "Komentarnya tetap utuh.", 22, INK, 700)
-    txt(root, 1340, 473, "Yang disorot hanya istilahnya.", 18, MUTED, 400)
+    pill(root, 1340, 344, 300, 40, "KOMENTAR YANG TERASA NYATA", "#EAF1FF", BLUE_DARK, 13)
+    txt(root, 1340, 435, "Bahasanya terasa spontan.", 22, INK, 700)
+    txt(root, 1340, 473, "Highlight tetap di dalam kalimat.", 18, MUTED, 400)
     rect(root, 1340, 516, 430, 142, "#F4F7FB", rx=15)
-    txt(root, 1363, 560, "Nggak setuju dikit", 20, INK, 500)
-    inline_txt(root, 1363, 595, [("langsung dibilang ", INK, False), ("gaslighting.", BLUE_DARK, True)], 20)
+    inline_txt(root, 1363, 578, [("Ih kak, itu ", INK, False), ("gaslight", BLUE_DARK, True), (" dah kayaknya.", INK, False)], 20)
     line(root, 1364, 620, 1510, 620, BLUE, 4)
-    txt(root, 1340, 712, "Kutipan ini contoh percakapan,", 16, MUTED, 400)
+    txt(root, 1340, 712, "Contoh komentar spontan,", 16, MUTED, 400)
     txt(root, 1340, 739, "bukan kesimpulan atau diagnosis.", 16, MUTED, 400)
     rect(root, 92, 919, 1736, 57, INK, rx=17)
     txt(root, 960, 955, "02A  ·  PHONE PUSH-IN  +  FULL-SENTENCE COMMENT SCROLL", 18, WHITE, 700, "middle", letter=0.6)
