@@ -50,7 +50,7 @@ PALETTE = [PLUM, SAGE, TERRACOTTA, MUSTARD, PEACH, CREAM, ESPRESSO]
 PALETTE_NAMES = ["deep plum", "sage", "terracotta", "mustard", "peach", "cream", "espresso"]
 
 ASSETS = {
-    "presenter": {"file": ASSETS_DIR / "OpenPeeps_peep-standing-16.svg", "title": "Open Peeps · Standing 16", "url": "https://openpeeps.com/", "license": "CC0 1.0"},
+    "presenter": {"file": ASSETS_DIR / "Girl_pointing_OpenClipart.svg", "title": "Girl pointing · OpenClipart / FreeSVG", "url": "https://freesvg.org/girl-pointing", "license": "CC0 1.0"},
     "feed": {"file": REPO / "Feed-rafiki.svg", "title": "Feed", "url": "https://storyset.com/illustration/feed/rafiki"},
     "texting": {"file": REPO / "Texting-rafiki.svg", "title": "Texting", "url": "https://storyset.com/illustration/texting/rafiki"},
     "student_stress": {"file": ASSETS_DIR / "Student-stress_Rafiki.svg", "title": "Student Stress · Rafiki", "url": "https://storyset.com/illustration/student-stress/rafiki"},
@@ -64,6 +64,33 @@ ASSETS = {
     "social": {"file": REPO / "Social interaction-rafiki.svg", "title": "Social Interaction", "url": "https://storyset.com/illustration/social-interaction/rafiki"},
     "coworkers": {"file": ASSETS_DIR / "Co-workers_Rafiki.svg", "title": "Co-workers · Rafiki", "url": "https://storyset.com/illustration/co-workers/rafiki"},
 }
+
+SCENE1_COMMENT_SOURCES = [
+    {
+        "id": "avoidant", "quote": "pengalaman gue pacaran sama orang avoidant sih",
+        "lines": ["pengalaman gue pacaran", "sama orang avoidant sih"], "sequence": 1,
+        "platform": "Reddit · r/r4rindonesia", "url": "https://www.reddit.com/r/r4rindonesia/comments/1oi543a/dealing_with_avoidant_partner_with_possible_ptsd/",
+        "posted": "2025-10-28", "accessed": "2026-11-26", "kind": "ASLI",
+    },
+    {
+        "id": "toxic", "quote": "gua ngerasa lg “toxic” bgt.",
+        "lines": ["gua ngerasa lg “toxic” bgt."], "sequence": 2,
+        "platform": "Reddit · r/indonesia", "url": "https://www.reddit.com/r/indonesia/comments/n73anm/",
+        "posted": "2021-05-08", "accessed": "2026-11-26", "kind": "ASLI",
+    },
+    {
+        "id": "depresi", "quote": "depresi dikira sedih dll",
+        "lines": ["depresi dikira sedih dll"], "sequence": 3,
+        "platform": "Reddit · r/indonesiabebas", "url": "https://www.reddit.com/r/indonesiabebas/comments/1wje4q0/jangan_sepelekan_stress/",
+        "posted": "2026-09-18", "accessed": "2026-11-26", "kind": "ASLI",
+    },
+    {
+        "id": "narcissistic", "quote": "Nggak sesuai ekspektasi dikit, langsung dibilang narcissistic.",
+        "lines": ["Nggak sesuai ekspektasi dikit,", "langsung dibilang narcissistic."], "sequence": 4,
+        "platform": "Tiruan · tidak berasal dari platform atau akun nyata", "url": "",
+        "posted": "Tiruan, ditulis 2026-11-26", "accessed": "2026-11-26", "kind": "TIRUAN (bukan komentar asli)",
+    },
+]
 
 SCENE2_COMMENTS = [
     {
@@ -161,7 +188,7 @@ SCENES = [
         "motion": "02A · 00:30–00:45: comments scroll through the centered phone. 02B · 00:45–00:58: selected terms lift from the feed into a loose, full-screen hashtag stack. 02C · 00:58–01:05: show the two centered on-screen statements.",
         "voice": "Di era social media, istilah psikologi semakin sering kita dengar. Mulai dari toxic relationship, gaslighting, trauma, sampai narcissistic behavior. Fenomena ini sering disebut sebagai therapy speak, yaitu penggunaan istilah yang berasal dari dunia psikologi atau terapi dalam percakapan sehari-hari. Actually, there's nothing wrong with learning psychological terms. Justru, memahami psikologi bisa membantu kita mengenali emosi, memahami perilaku, dan membangun hubungan yang lebih sehat. But here's the problem: ketika istilah-istilah tersebut digunakan tanpa memahami maknanya, kita bisa salah menilai diri sendiri maupun orang lain.",
         "assets": ["feed"], "roles": ["Feed-rafiki.svg: karakter dan sofa dipisahkan dari seluruh perangkat latar; ukurannya disesuaikan dengan komposisi ruang yang lebih lebar.", "Rak buku, bunga, TV, lukisan, dan latar ruang biru adalah vektor editable.", "Scene-02-komponen.svg: enam komentar tambahan sebagai grup SVG terpisah untuk animasi scroll."],
-        "credits": ["feed"], "background": "02A: cream room, espresso phone, plum UI details, and restrained warm accents. 02B: cream field with overlapping hashtag cards in terracotta, mustard, and peach. 02C: centered sage and terracotta statements.",
+        "credits": ["feed"], "background": "02A: cream room, espresso phone, plum UI details, and restrained warm accents. 02B: deep plum full-screen word cloud in Caveat handwritten font, with cream base text and selected terracotta, mustard, and peach terms. 02C: centered sage and terracotta statements.",
         "frames": [
             {"code": "02A", "slug": "02a-comment-scroll", "title": "Phone Zoom + Comment Scroll", "time": "00:30–00:45"},
             {"code": "02B", "slug": "02b-hashtag-cloud", "title": "Hashtag Cloud Transition", "time": "00:45–00:58"},
@@ -231,20 +258,15 @@ SCENES = [
 
 # Revised visual scope from the attached script. Dialogue and voice-over stay verbatim.
 SCENES[0].update({
-    "visual": "Placeholder perempuan Open Peeps, medium close-up menghadap kamera, ukuran dan framing tetap pada latar plum polos. Empat screenshot chat generik muncul cepat di sekelilingnya; nama dan avatar disamarkan. Frame akhir menampilkan pertanyaan layar lalu presenter bertransisi menjadi smartphone.",
+    "visual": "Satu komposisi utuh: placeholder presenter perempuan baru dari OpenClipart/FreeSVG, setengah badan menghadap kamera, ber-outfit peach dengan framing tetap di latar plum polos. Empat potongan komentar publik anonim mengitari presenter; tanpa nama akun, foto profil, atau merek platform. Presenter menunjuk kamera; zoom menjadi smartphone pada akhir adegan.",
     "screen": "Are we using psychology terms correctly?",
-    "motion": "Presenter tetap pada posisi dan ukuran yang sama. Screenshot generik masuk bergantian: pesan dibaca tanpa balasan → janji batal → curhat sedih beberapa hari → ekspektasi tidak terpenuhi. Presenter menunjuk ke kamera, zoom-in, lalu berubah menjadi smartphone.",
+    "motion": "Satu scene berlanjut tanpa pemotongan keyframe: empat screenshot komentar publik masuk berurutan mengitari presenter, mengikuti dialog ‘Dia avoidant!’ → ‘toxic’ → ‘depresi’ → ‘That's narcissistic!’. Nama dan avatar disamarkan; tak ada logo aplikasi. Presenter menunjuk kamera, zoom-in, dan berubah menjadi smartphone pada penutup. Kutipan dan tanggal akses tercatat pada audit sumber Scene 1.",
     "assets": ["presenter"],
-    "roles": ["Open Peeps standing-16: placeholder presenter dari ilustrasi sumber CC0, dipotong lewat viewport menjadi medium close-up tanpa menggambar ulang karakter.", "Screenshot chat generik tanpa logo aplikasi; nama dan avatar anonim. Smartphone, label, dan on-screen text adalah lapisan SVG editable."],
+    "roles": ["Girl pointing · OpenClipart/FreeSVG: placeholder perempuan setengah badan menghadap kamera; sumber CC0 tetap menjadi ilustrasi dasar. Layer warna outfit berada di belakang gambar sumber dan tetap dapat diedit.", "Empat kartu komentar memakai potongan publik yang dianonimkan. Tiga berlabel ASLI dengan tautan sumber; satu komentar bertema narcissistic diberi label TIRUAN (bukan komentar asli) pada audit sumber. Tidak ada logo, nama akun, atau foto profil nyata.", "Pembungkus smartphone, pertanyaan layar, komentar, dan semua overlay adalah grup SVG editable. Komentar tampil bergantian di dalam satu scene."],
     "credits": ["presenter"],
-    "background": "Deep Plum #3D2645 polos; screenshot menggunakan cream, espresso, dan terracotta Opsi B.",
+    "background": "Deep Plum #3D2645 polos; komentar memakai Cream #FFF6EC, tulisan Espresso #2A1F2D, dan aksen Terracotta #E4572E untuk label istilah.",
     "frames": [
-        {"code": "01A", "slug": "01a-presenter-placeholder", "title": "Presenter Placeholder", "time": "00:00–00:04"},
-        {"code": "01B", "slug": "01b-chat-unanswered", "title": "Read Without Reply · Avoidant", "time": "00:04–00:08"},
-        {"code": "01C", "slug": "01c-chat-cancelled-plan", "title": "Cancelled Plan · Toxic", "time": "00:08–00:12"},
-        {"code": "01D", "slug": "01d-chat-sad-days", "title": "Sad for Several Days · Depresi", "time": "00:12–00:16"},
-        {"code": "01E", "slug": "01e-chat-expectation-mismatch", "title": "Expectation Mismatch · On-Screen Question", "time": "00:16–00:24"},
-        {"code": "01F", "slug": "01f-smartphone-transition", "title": "Presenter Zooms Into Smartphone", "time": "00:24–00:30"},
+        {"code": "01", "slug": "01-the-hook", "title": "The Hook · One Continuous Scene", "time": "00:00–00:30"},
     ],
 })
 SCENES[2].update({
@@ -262,20 +284,20 @@ SCENES[2].update({
 })
 SCENES[3].update({
     "time": "01:55–02:35",
-    "visual": "Satu cerita Raka dan Dina bergerak dalam lima beat: salah memahami emosi sendiri → salah menilai Dina → konflik rapat → label menyebar dan mengucilkan Dina → Dina sendirian sementara Raka mulai ragu. Label tidak membuktikan bahwa Dina narsistik.",
-    "screen": "04A · Aku depresi. Ada yang salah banget sama aku.\n04B · Raka: Kamu selalu bikin aku merasa salah! · Dina: Aku cuma kasih masukan. Jangan baper terus, deh.\n04C · Dia narsistik. · Cap: NARSISTIK.\n04D · Hati-hati sama Dina, dia narsistik. · Raka mengeluarkan Dina dari grup.\n04E · Don't reduce people to labels.",
-    "motion": "Transisi objek tanpa potong kasar: bubble ‘Aku depresi’ menjadi awan gelap di atas Raka → awan berubah menjadi bubble debat → bubble menjadi cap NARSISTIK → cap menyebar menjadi notifikasi chat → berakhir di Dina yang sendirian. Domino 1–4 jatuh berurutan: mustard, terracotta, plum, espresso.",
+    "visual": "Satu cerita domino Raka dan Dina bergerak dalam lima beat: Raka salah memahami emosinya → konflik saat rapat → ia menyimpulkan Dina narsistik tanpa bukti → sebuah post menyebarkan stigma dan Raka mengeluarkan Dina dari grup → Dina sendirian tanpa Raka, ditutup teks layar.",
+    "screen": "4A · Aku depresi. Ada yang salah banget sama aku.\n4B · Raka: Kamu selalu bikin aku merasa salah! · Dina: Aku cuma kasih masukan. Jangan baper terus, deh.\n4B2 · Dia narsistik. · Cap: NARSISTIK.\n4C · Hati-hati sama Dina, dia narsistik. · Biar yang lain aman. · Dina dikeluarkan dari grup; post menyebar menjadi notifikasi.\n4D · Don't reduce people to labels.",
+    "motion": "Transisi objek tetap mengalir: bubble self-label menjadi awan pikiran dan debat → berubah menjadi cap NARSISTIK → cap menyebar sebagai post laptop dan rantai notifikasi → berakhir pada Dina sendirian dengan bubble ‘...’ dan teks layar. Domino 1–4 jatuh berurutan; Raka tidak muncul di frame 4D.",
     "voice": "Now, why should we care? First, misusing psychological terms can make us misunderstand our own emotions. Normal feelings like sadness, fear, or disappointment can feel like something is seriously wrong with us. Second, it can create unnecessary conflict. Imagine labeling someone as narcissistic just because they disagree with you. And third, it can reinforce stigma. Mental health conditions are complex experiences, not simply labels we can attach to someone based on one behavior. Remember, psychology is more than just a collection of viral terms. It is a scientific discipline that requires context, evidence, and careful understanding.",
-    "assets": ["coworkers"],
-    "roles": ["Co-workers · Rafiki: satu ilustrasi yang dipakai berulang untuk Raka dan Dina; konteksnya rapat kantor. Label dan warna tidak menyatakan diagnosis Dina.", "Awan, bubble dialog, cap NARSISTIK, domino, notifikasi grup, post peringatan, tombol mengeluarkan anggota, serta teks penutup adalah layer SVG editable terpisah."],
-    "credits": ["coworkers"],
-    "background": "Palet Opsi B. Terracotta menandai label/kesalahan; sage menandai koreksi. Domino berturut-turut memakai mustard, terracotta, plum, espresso; tiap frame menjaga maksimal tiga warna dominan.",
+    "assets": ["student_stress", "coworkers"],
+    "roles": ["4A dan 4C · Student Stress · Rafiki: pose stres menjadi Raka; lengan, torso, dan kepala tersedia sebagai grup SVG editable dengan nama konsisten. 4C memakai grup yang sama dalam pose mengetik dan ekspresi serius.", "4B dan 4B2 · Co-workers · Rafiki: karakter Raka dan Dina di rapat serta cap NARSISTIK. Ekor bubble tiap pembicara mengarah ke mulut; cap tetap kesimpulan Raka, bukan diagnosis.", "4C · Post laptop dan rantai notifikasi dibuat sebagai layer SVG editable.", "4D · Co-workers · Rafiki Dina tetap menjadi satu-satunya karakter; wash cream, area meja yang ditutup, bubble ‘...’, notifikasi tak terjawab, bayangan label memudar, dan teks penutup adalah layer komposisi terpisah."],
+    "credits": ["student_stress", "coworkers"],
+    "background": "Palet Opsi B. 4A dan 4C memakai cream, plum, dan terracotta; 4B dan 4B2 mempertahankan palette rapat; 4D memudarkan ruang menjadi cream dan plum. Terracotta hanya menandai label/kesalahan, sage dipakai untuk tanda pemahaman.",
     "frames": [
-        {"code": "04A", "slug": "04a-self-misunderstanding", "title": "Raka Mislabels His Own Sadness", "time": "01:55–02:07", "voice": "Now, why should we care? First, misusing psychological terms can make us misunderstand our own emotions. Normal feelings like sadness, fear, or disappointment can feel like something is seriously wrong with us."},
-        {"code": "04B", "slug": "04b-conflict-in-the-meeting", "title": "Misjudgment Becomes Conflict", "time": "02:07–02:12", "voice": "Second, it can create unnecessary conflict."},
-        {"code": "04C", "slug": "04c-narcissistic-label", "title": "One Disagreement Becomes a Label", "time": "02:12–02:17", "voice": "Imagine labeling someone as narcissistic just because they disagree with you."},
-        {"code": "04D", "slug": "04d-stigma-and-removal", "title": "Stigma Spreads Through the Group", "time": "02:17–02:27", "voice": "And third, it can reinforce stigma. Mental health conditions are complex experiences, not simply labels we can attach to someone based on one behavior."},
-        {"code": "04E", "slug": "04e-dina-alone-closing-text", "title": "Dina Alone · Closing On-Screen Text", "time": "02:27–02:35", "voice": "Remember, psychology is more than just a collection of viral terms. It is a scientific discipline that requires context, evidence, and careful understanding."},
+        {"code": "4A", "slug": "4a-self-misunderstanding", "title": "Raka Mislabels His Own Sadness", "time": "01:55–02:07", "voice": "Now, why should we care? First, misusing psychological terms can make us misunderstand our own emotions. Normal feelings like sadness, fear, or disappointment can feel like something is seriously wrong with us."},
+        {"code": "4B", "slug": "4b-conflict-in-the-meeting", "title": "Misjudgment Becomes Conflict", "time": "02:07–02:12", "voice": "Second, it can create unnecessary conflict."},
+        {"code": "4B2", "slug": "4b2-narcissistic-label", "title": "One Disagreement Becomes a Label", "time": "02:12–02:17", "voice": "Imagine labeling someone as narcissistic just because they disagree with you."},
+        {"code": "4C", "slug": "4c-stigma-and-removal", "title": "Stigma Spreads Through the Group", "time": "02:17–02:27", "voice": "And third, it can reinforce stigma. Mental health conditions are complex experiences, not simply labels we can attach to someone based on one behavior."},
+        {"code": "4D", "slug": "4d-dina-alone-closing-text", "title": "Dina Alone · Closing On-Screen Text", "time": "02:27–02:35", "voice": "Remember, psychology is more than just a collection of viral terms. It is a scientific discipline that requires context, evidence, and careful understanding."},
     ],
 })
 
@@ -374,17 +396,36 @@ def card(parent, x, y, w, h, fill=WHITE, border="#E3E8ED", radius=22):
 
 
 def embed_asset(parent, asset_key, x, y, w, h, omit_ids=(), include_ids=None, color_map=None,
-                view_box=None, sad_expression=False, raka_expression=False, color_map_policy=None):
+                view_box=None, sad_expression=False, raka_expression=False, color_map_policy=None,
+                child_omit_indices=None, student_typing_expression=False):
     info = ASSETS[asset_key]
     source = ET.parse(info["file"]).getroot()
     vb = view_box or source.get("viewBox", "0 0 500 500")
-    source_label = "Open Peeps CC0" if asset_key == "presenter" else "Storyset Rafiki"
+    source_label = "FreeSVG/OpenClipart CC0" if asset_key == "presenter" else "Storyset Rafiki"
     nested = add(parent, "svg", x=x, y=y, width=w, height=h, viewBox=vb, preserveAspectRatio="xMidYMid meet", overflow="hidden", aria_label=info["title"] + " illustration, " + source_label)
-    copied = [
-        deepcopy(child)
-        for child in list(source)
-        if (child.get("id") in include_ids if include_ids is not None else child.get("id") not in omit_ids)
-    ]
+    copied = []
+    child_omit_indices = child_omit_indices or {}
+    for child in list(source):
+        if include_ids is not None and child.get("id") not in include_ids:
+            continue
+        if include_ids is None and child.get("id") in omit_ids:
+            continue
+        clone = deepcopy(child)
+        omitted = set(child_omit_indices.get(child.get("id"), ()))
+        if omitted:
+            clone[:] = [element for index, element in enumerate(list(clone)) if index not in omitted]
+        if student_typing_expression and child.get("id") == "Character":
+            source_parts = list(clone)
+            if len(source_parts) > 23:
+                source_parts[19].set("d", "M303,231 Q307,230 311,232 L311,234 Q307,233 303,232 Z")
+                source_parts[20].set("d", "M286,230 Q290,230 293,232 L293,234 Q289,232 286,232 Z")
+                source_parts[21].set("d", "M305,239 Q308,236 311,239 Q309,242 305,240 Z")
+                source_parts[21].set("style", "fill:#FFF6EC;stroke:#2A1F2D;stroke-width:0.8px")
+                source_parts[22].set("d", "M286,241 Q289,238 292,241 Q289,244 286,242 Z")
+                source_parts[22].set("style", "fill:#FFF6EC;stroke:#2A1F2D;stroke-width:0.8px")
+                source_parts[23].set("d", "M298,255 L310,255")
+                source_parts[23].set("style", "fill:none;stroke:#263238;stroke-width:2;stroke-linecap:round")
+        copied.append(clone)
     mapping = {}
     prefix = "s" + re.sub(r"[^a-z0-9]", "", asset_key.lower()) + "-"
     for child in copied:
@@ -467,83 +508,74 @@ def start_scene(scene, bg=CREAM, accent=PLUM, dark=False):
     return root
 
 
-def build_scene_1(scene):
-    return build_scene_1_frame(scene, "01A")
-
-
-def draw_generic_chat(root, x, y, label, message_lines, status=None):
-    """Draw an anonymized, brand-free chat screenshot as an editable composition layer."""
-    group = add(root, "g", id="chat-screenshot-" + re.sub(r"[^a-z0-9]+", "-", label.lower()).strip("-"), role="group")
-    width, height = 470, 312
-    rect(group, x, y, width, height, CREAM, rx=24, stroke=PLUM, sw=3)
-    rect(group, x, y, width, 72, PLUM, rx=24)
-    rect(group, x, y + 50, width, 22, PLUM)
-    circle(group, x + 40, y + 36, 20, CREAM)
-    circle(group, x + 40, y + 30, 7, CREAM)
-    path(group, f"M{x+27},{y+48} Q{x+40},{y+34} {x+53},{y+48} Z", fill=PLUM)
-    txt(group, x + 76, y + 31, "Nama disamarkan", 18, CREAM, 700)
-    txt(group, x + 76, y + 54, "Percakapan pribadi", 13, CREAM, 500)
-    rect(group, x + 28, y + 100, width - 56, 112, CREAM, rx=17, stroke=PLUM, sw=2)
-    for index, line_text in enumerate(message_lines):
-        txt(group, x + 50, y + 140 + index * 34, line_text, 19, ESPRESSO, 500)
-    if status:
-        txt(group, x + width - 30, y + 240, status, 14, PLUM, 600, "end")
-    else:
-        txt(group, x + width - 30, y + 240, "10.14", 14, PLUM, 600, "end")
-    pill(group, x + 30, y + 250, width - 60, 48, label, TERRACOTTA, WHITE, 21)
+def draw_public_comment(root, comment, x, y, width=432, height=174):
+    group = add(root, "g", id="public-comment-" + comment["id"], role="group",
+                data_sequence=comment["sequence"], data_source_type=comment["kind"], opacity="0")
+    rect(group, x + 7, y + 9, width, height, ESPRESSO, rx=20, opacity=0.32)
+    rect(group, x, y, width, height, CREAM, rx=20, stroke=PEACH, sw=3)
+    circle(group, x + 31, y + 32, 18, PLUM)
+    circle(group, x + 31, y + 25, 6, PEACH)
+    path(group, f"M{x+19},{y+41} Q{x+31},{y+27} {x+43},{y+41} Z", fill=PEACH)
+    txt(group, x + 63, y + 38, "AKUN DISAMARKAN", 14, PLUM, 700, letter=1.0)
+    line(group, x + 22, y + 60, x + width - 22, y + 60, PEACH, 2)
+    lines = comment["lines"]
+    first_y = y + (110 if len(lines) == 2 else 125)
+    for index, line_text in enumerate(lines):
+        txt(group, x + width / 2, first_y + index * 36, line_text, 25, ESPRESSO, 600, "middle")
+    delay = [3.0, 8.0, 13.0, 18.0][comment["sequence"] - 1]
+    add(group, "animate", attributeName="opacity", values="0;1", begin=f"{delay}s", dur="0.25s", fill="freeze")
     return group
 
 
-def build_scene_1_frame(scene, code):
-    title_by_code = {
-        "01A": "Presenter placeholder · medium close-up",
-        "01B": "Read message · ‘Dia avoidant!’",
-        "01C": "Cancelled plan · ‘toxic’",
-        "01D": "Several sad days · ‘depresi’",
-        "01E": "Expectation mismatch · question to camera",
-        "01F": "Zoom into smartphone",
-    }
-    descriptions = {
-        "01A": "A front-facing Open Peeps presenter placeholder stays centered in a plain deep plum 16:9 frame, with clear negative space around the fixed medium close-up.",
-        "01B": "The same presenter remains fixed while an anonymized, brand-free read-without-reply chat screenshot appears beside them with the label Dia avoidant!.",
-        "01C": "The same presenter remains fixed while an anonymized cancelled-plan chat screenshot appears beside them with the label toxic.",
-        "01D": "The same presenter remains fixed while an anonymized sad-for-several-days chat screenshot appears beside them with the label depresi.",
-        "01E": "The same presenter remains fixed beside a generic expectation-mismatch chat. The presenter points toward the viewer and the on-screen question appears.",
-        "01F": "A clean, centered smartphone contains the same presenter illustration and the question Are we using psychology terms correctly? on its screen.",
-    }
-    root = clean_frame("Scene 1: " + title_by_code[code], descriptions[code], PLUM)
-    root.set("data-frame", code)
-    root.find(tag("metadata")).text = (
-        "Open Peeps standing-16 source illustration, CC0 1.0. The camera viewport crops the original five drawable groups to a medium close-up; "
-        "the illustration itself is not redrawn. Four anonymized chat screenshots, the smartphone shell, and text remain separate editable SVG groups."
+def build_scene_1(scene):
+    root = clean_frame(
+        "Scene 1 · The Hook",
+        "One continuous plum-background scene. Four anonymized public-comment cards surround a new front-facing female presenter placeholder; the presenter points at the camera before the composition zooms into a smartphone.",
+        PLUM,
     )
-    if code == "01F":
-        phone = add(root, "g", id="smartphone-transition")
-        rect(phone, 674, 70, 572, 940, CREAM, rx=78, stroke=CREAM, sw=7)
-        rect(phone, 702, 108, 516, 864, PLUM, rx=50)
-        rect(phone, 877, 124, 166, 18, ESPRESSO, rx=9)
-        embed_asset(phone, "presenter", 760, 178, 400, 505, view_box="0 0 309 390")
-        line(phone, 770, 710, 1150, 710, CREAM, 3)
-        txt(phone, 960, 785, "Are we using psychology", 27, CREAM, 700, "middle")
-        txt(phone, 960, 826, "terms correctly?", 27, CREAM, 700, "middle")
-        circle(phone, 960, 915, 25, "none", stroke=CREAM, sw=4)
-        return root
+    root.set("data-frame", "01")
+    root.find(tag("metadata")).text = (
+        "Scene 1 is one continuous editable composition. Presenter source: Girl pointing, OpenClipart via FreeSVG, CC0 1.0. "
+        "The original line art is kept unchanged; peach/cream outfit underlays, comment cards, smartphone transition shell, and on-screen question are separate SVG layers. "
+        "Public quote sources and access dates are recorded outside this artwork in the storyboard source audit."
+    )
+    # Smartphone frame is a separate transition layer and stays behind the fixed presenter crop.
+    phone = add(root, "g", id="smartphone-transition-shell", data_motion="zoom-in-on-presenter")
+    phone.set("opacity", "0")
+    rect(phone, 530, 42, 860, 958, "none", rx=88, stroke=CREAM, sw=5, opacity=0.55)
+    rect(phone, 552, 64, 816, 914, "none", rx=70, stroke=PEACH, sw=2, opacity=0.48)
+    rect(phone, 854, 82, 212, 15, CREAM, rx=8, opacity=0.58)
+    add(phone, "animate", attributeName="opacity", values="0;1", begin="24.5s", dur="0.8s", fill="freeze")
 
-    # Fixed presenter crop and position across the opening beats.
-    embed_asset(root, "presenter", 645, 138, 630, 800, view_box="0 0 309 390")
-    if code == "01B":
-        draw_generic_chat(root, 93, 366, "Dia avoidant!", ["Hei, jadi ketemu hari ini?", "Aku tunggu kabarmu ya."], "Dibaca · 3 jam lalu")
-    elif code == "01C":
-        draw_generic_chat(root, 1357, 366, "toxic", ["Maaf, aku nggak jadi datang.", "Ada urusan mendadak hari ini."], "Pesan diterima · 10.14")
-    elif code == "01D":
-        draw_generic_chat(root, 93, 366, "depresi", ["Aku sedih terus akhir-akhir ini.", "Sudah beberapa hari begini."], "Pesan diterima · 22.08")
-    elif code == "01E":
-        draw_generic_chat(root, 93, 348, "That's narcissistic!", ["Aku kira kita bakal sepakat.", "Ternyata keinginanku nggak dituruti."], "Pesan diterima · 11.32")
-        camera_target = add(root, "g", id="presenter-points-toward-camera")
-        circle(camera_target, 1280, 440, 48, "none", stroke=CREAM, sw=5)
-        circle(camera_target, 1280, 440, 9, TERRACOTTA)
-        rect(root, 250, 930, 1420, 100, CREAM, rx=24)
-        txt(root, 960, 992, "Are we using psychology terms correctly?", 35, PLUM, 700, "middle")
+    # A restrained outfit tint sits underneath the OpenClipart line art; it is not a new character drawing.
+    presenter = embed_asset(root, "presenter", 480, 116, 960, 803,
+                            view_box="0 0 271.84 227.21")
+    for attr, end_value in (("x", 630), ("y", 205), ("width", 660), ("height", 552)):
+        add(presenter, "animate", attributeName=attr,
+            values=f"{presenter.get(attr)};{end_value}", begin="25s", dur="1.4s", fill="freeze")
+    outfit = ET.Element(tag("g"), {"id": "presenter-outfit-color-underlay"})
+    # Independent color layers sit behind the licensed source line art; source
+    # drawable paths stay intact. Keep hair transparent against plum and fill
+    # only the face and clothing so the head does not read as a large helmet.
+    garment = add(outfit, "path", d="M0,227.21 L0,183 Q32,165 72,153 L104,145 Q135,151 169,145 L201,153 Q244,165 271.84,183 L271.84,227.21 Z", fill=PEACH)
+    garment.set("data-role", "underlay-for-existing-presenter-outfit")
+    insert_at = 0
+    presenter.insert(insert_at, outfit)
+    shirt = add(outfit, "path", d="M103,146 Q135,155 169,146 L189,157 L161,190 L136,171 L111,190 L84,157 Z", fill=CREAM)
+    add(outfit, "path", d="M100,81 Q115,68 142,68 Q171,68 186,82 L183,111 Q177,132 160,144 Q143,155 126,144 Q108,132 102,110 Z", fill=PEACH)
+
+    positions = [(36, 228), (1452, 228), (36, 622), (1452, 622)]
+    for comment, (x, y) in zip(SCENE1_COMMENT_SOURCES, positions):
+        draw_public_comment(root, comment, x, y)
+
+    pointer = add(root, "g", id="presenter-camera-pointing-transition", data_motion="point-zoom-transform")
+    circle(pointer, 548, 492, 38, "none", stroke=PEACH, sw=4, opacity=0.8)
+    circle(pointer, 548, 492, 7, TERRACOTTA)
+    question = add(root, "g", id="closing-onscreen-question", data_motion="appears-before-phone-zoom")
+    question.set("opacity", "0")
+    rect(question, 566, 944, 788, 72, CREAM, rx=22)
+    txt(question, 960, 991, "Are we using psychology terms correctly?", 27, PLUM, 700, "middle")
+    add(question, "animate", attributeName="opacity", values="0;1", begin="22.5s", dur="0.6s", fill="freeze")
     return root
 
 
@@ -667,82 +699,73 @@ def build_scene_2_components():
 
 
 def build_scene_2b(scene):
-    root = ET.Element(tag("svg"), {"width": str(W), "height": str(H), "viewBox": f"0 0 {W} {H}", "role": "img", "aria-labelledby": "scene-title scene-desc"})
-    title_node = add(root, "title", id="scene-title")
-    title_node.text = "Scene 2B: full-screen hashtag cloud"
-    desc_node = add(root, "desc", id="scene-desc")
-    desc_node.text = "A loose stack of overlapping hashtag word cards in terracotta, mustard, and peach fills a cream frame."
-    rect(root, 0, 0, W, H, CREAM)
-    circle(root, 140, 230, 200, MUSTARD, opacity=0.10)
-    circle(root, 1780, 870, 245, PEACH, opacity=0.20)
-    # Each hashtag has its own colored backing; offsets and slight rotations make a layered word cloud.
-    txt(root, 165, 384, "#", 88, PLUM, 700, "middle", opacity=0.14)
-    txt(root, 1760, 405, "#", 92, TERRACOTTA, 700, "middle", opacity=0.18)
-    txt(root, 170, 798, "#", 78, MUSTARD, 700, "middle", opacity=0.24)
-    txt(root, 1752, 788, "#", 84, PLUM, 700, "middle", opacity=0.15)
-    tags = [
-        ("#psychologytok", 100, 258, 245, 88, BLUE_DARK, WHITE, -3, 22),
-        ("#toxicrelationship", 355, 258, 335, 88, CORAL, WHITE, 3, 23),
-        ("#gaslighting", 700, 258, 270, 88, BLUE, WHITE, -2, 26),
-        ("#trauma", 980, 258, 180, 88, WHITE, INK, 4, 27),
-        ("#avoidant", 1170, 258, 215, 88, LILAC, INK, -3, 24),
-        ("#redflag", 1395, 258, 185, 88, INK, WHITE, 3, 24),
-        ("#depressed", 1590, 258, 220, 88, MINT, INK, -3, 23),
-        ("#narcissist", 120, 342, 250, 88, BLUE_DARK, WHITE, 4, 24),
-        ("#healing", 380, 342, 185, 88, MINT, INK, -4, 24),
-        ("#therapy", 575, 342, 180, 88, WHITE, BLUE_DARK, 3, 24),
-        ("#ghosting", 765, 342, 200, 88, CORAL, WHITE, -4, 24),
-        ("#innerchild", 975, 342, 220, 88, LILAC, INK, 3, 22),
-        ("#boundaries", 1205, 342, 245, 88, BLUE, WHITE, -2, 23),
-        ("#selfdiagnose", 1460, 342, 250, 88, WHITE, BLUE_DARK, 4, 22),
-        ("#triggered", 1720, 342, 170, 88, CORAL, WHITE, -3, 21),
-        ("#attachmentstyle", 105, 426, 300, 88, LILAC, INK, -2, 21),
-        ("#situationship", 415, 426, 245, 88, BLUE, WHITE, 3, 22),
-        ("#lovebombing", 670, 426, 220, 88, WHITE, CORAL, -3, 22),
-        ("#emotionalabuse", 900, 426, 275, 88, CORAL, WHITE, 3, 21),
-        ("#mentalhealth", 1185, 426, 250, 88, BLUE_DARK, WHITE, -3, 22),
-        ("#relationshipgoals", 1445, 426, 350, 88, MINT, INK, 3, 20),
-        ("#toxic", 95, 510, 170, 88, CORAL, WHITE, 3, 26),
-        ("#narcissistic", 275, 510, 245, 88, WHITE, INK, -3, 21),
-        ("#traumaresponse", 530, 510, 280, 88, BLUE_DARK, WHITE, 3, 21),
-        ("#selflove", 820, 510, 190, 88, MINT, INK, -2, 23),
-        ("#healthyrelationships", 1020, 510, 340, 88, LILAC, INK, 3, 19),
-        ("#viralterms", 1370, 510, 200, 88, BLUE, WHITE, -3, 22),
-        ("#context", 1580, 510, 205, 88, WHITE, BLUE_DARK, 3, 23),
-        ("#redflag", 110, 594, 190, 88, INK, WHITE, -3, 24),
-        ("#healingjourney", 310, 594, 290, 88, WHITE, BLUE_DARK, 3, 21),
-        ("#mentalhealth", 610, 594, 255, 88, BLUE, WHITE, -3, 22),
-        ("#avoidant", 875, 594, 210, 88, MINT, INK, 4, 24),
-        ("#depressed", 1095, 594, 210, 88, CORAL, WHITE, -3, 23),
-        ("#innerchild", 1315, 594, 225, 88, LILAC, INK, 3, 22),
-        ("#selfdiagnose", 1550, 594, 250, 88, BLUE_DARK, WHITE, -3, 21),
-        ("#therapy", 105, 678, 185, 88, BLUE, WHITE, -3, 24),
-        ("#boundaries", 300, 678, 240, 88, CORAL, WHITE, 3, 22),
-        ("#ghosting", 550, 678, 205, 88, WHITE, BLUE_DARK, -3, 23),
-        ("#attachmentstyle", 765, 678, 300, 88, MINT, INK, 3, 21),
-        ("#gaslighting", 1075, 678, 270, 88, BLUE_DARK, WHITE, -3, 24),
-        ("#psychologytok", 1355, 678, 255, 88, INK, WHITE, 3, 21),
-        ("#selflove", 1620, 678, 210, 88, LILAC, INK, -3, 23),
-        ("#toxicrelationship", 120, 762, 330, 88, CORAL, WHITE, 3, 21),
-        ("#situationship", 460, 762, 245, 88, BLUE, WHITE, -3, 22),
-        ("#lovebombing", 715, 762, 230, 88, WHITE, CORAL, 3, 22),
-        ("#narcissist", 955, 762, 250, 88, BLUE_DARK, WHITE, -3, 23),
-        ("#redflag", 1215, 762, 185, 88, MINT, INK, 3, 24),
-        ("#healing", 1410, 762, 180, 88, WHITE, BLUE_DARK, -3, 23),
-        ("#mentalhealth", 1600, 762, 250, 88, INK, WHITE, 3, 21),
-    ]
-    backplates = [TERRACOTTA, MUSTARD, PEACH]
-    for index, (word, x, y, w, h, fill, color, angle, size) in enumerate(tags):
-        y += ((index * 7) % 13) - 6
-        y = 72 + (y - 258) * 1.6
-        fill = backplates[index % len(backplates)]
-        color = WHITE if fill == TERRACOTTA else ESPRESSO
-        group = add(root, "g", transform=f"rotate({angle} {x + w / 2} {y + h / 2})")
-        rect(group, x + 5, y + 6, w, h, ESPRESSO, rx=17, opacity=0.12)
-        rect(group, x, y, w, h, fill, rx=17, stroke=CREAM, sw=2)
-        txt(group, x + w / 2, y + h * 0.65, word, size, color, 700, "middle")
-    return root
+    import base64
+    import random
 
+    root = ET.Element(tag("svg"), {"width": str(W), "height": str(H), "viewBox": f"0 0 {W} {H}",
+                                    "role": "img", "aria-labelledby": "scene-title scene-desc",
+                                    "data-frame": "02B"})
+    title_node = add(root, "title", id="scene-title")
+    title_node.text = "Scene 2B · chaotic hashtag word cloud"
+    desc_node = add(root, "desc", id="scene-desc")
+    desc_node.text = "A dense, overlapping field of handwritten hashtags in varied sizes and rotations fills a deep-plum frame."
+    metadata = add(root, "metadata")
+    metadata.text = "56 editable Caveat hashtag texts, including six script terms and fifty social-media trigger terms. The bundled Caveat variable font is licensed under SIL OFL 1.1. Tags appear one by one with shrinking intervals and pile into this final full-screen state."
+    rect(root, 0, 0, W, H, PLUM)
+    defs = add(root, "defs")
+    font_data = base64.b64encode((ASSETS_DIR / "Caveat[wght].ttf").read_bytes()).decode("ascii")
+    style = add(defs, "style", type="text/css")
+    style.text = "@font-face{font-family:Caveat;src:url(data:font/ttf;base64," + font_data + ") format('truetype');font-weight:400 700}"
+    # Seeded coordinates keep this editable cloud stable from build to build.
+    rng = random.Random(2402)
+    everyday_tags = [
+        "#redflag", "#healing", "#baper", "#overthinking", "#triggered", "#insecure",
+        "#boundaries", "#manipulatif", "#selflove", "#cutoff", "#mentalhealth", "#ghosting",
+        "#toxicrelationship", "#attachmentstyle", "#situationship", "#lovebombing", "#selfdiagnose",
+        "#traumaresponse", "#innerchild", "#relationshipgoals", "#psychologytok", "#healingjourney",
+        "#validasi", "#capekmental", "#sadboy", "#sadgirl", "#peoplepleaser", "#narsis",
+        "#emosional", "#coping", "#anxiety", "#burnout", "#selfcare", "#healingera",
+        "#redflagcheck", "#staystrong", "#relatable", "#fyp", "#curhat", "#overreacting",
+        "#silenttreatment", "#selfdiagnosis", "#innerwork", "#emositidakstabil", "#cintasehat",
+        "#toxicbehavior", "#emotionaldamage", "#marup", "#detachment", "#unhealed",
+    ]
+    tags = []
+    # Peripheral tags arrive first and remain behind the script terms and three central heroes.
+    for word in everyday_tags:
+        # Most tags carry enough visual weight to close gaps. A few stay small,
+        # so the largest script terms remain about 6–8x their size.
+        size = rng.choices([26, 34, 44, 54, 64, 74], weights=[1, 2, 2, 3, 3, 2])[0]
+        x = rng.randint(10, W - 10)
+        y = rng.randint(58, H - 24)
+        angle = rng.randint(-30, 30)
+        color = rng.choices([CREAM, MUSTARD, PEACH], weights=[8, 1, 1])[0]
+        tags.append((word, x, y, size, angle, color, False))
+    script_terms = [
+        ("#narcissist", 330, 760, 132, -18),
+        ("#trauma", 1520, 392, 126, 17),
+        ("#depressed", 1510, 872, 122, -11),
+    ]
+    for word, x, y, size, angle in script_terms:
+        tags.append((word, x, y, size, angle, TERRACOTTA, True))
+    # Three oversized center words form the cloud's 6–8x visual hierarchy.
+    tags.extend([
+        ("#toxic", 640, 493, 208, -12, TERRACOTTA, True),
+        ("#gaslighting", 1195, 552, 176, 9, TERRACOTTA, True),
+        ("#avoidant", 885, 735, 166, -19, TERRACOTTA, True),
+    ])
+    for index, (word, x, y, size, angle, color, is_script) in enumerate(tags):
+        group = add(root, "g", id=f"word-cloud-tag-{index + 1:02d}",
+                    transform=f"rotate({angle} {x} {y})", data_word=word,
+                    data_order=index + 1, data_script_term=str(is_script).lower(), opacity="0")
+        node = add(group, "text", x=x, y=y, fill=color, font_family="Caveat, cursive",
+                   font_size=size, font_weight=700, text_anchor="middle",
+                   letter_spacing="-0.035em")
+        node.text = word
+        # The shrinking gaps make the initial trickle accelerate into a dense pile.
+        delay = 0.38 * (1 - 0.92 ** index) / (1 - 0.92)
+        add(group, "animate", attributeName="opacity", values="0;1",
+            begin=f"{delay:.2f}s", dur="0.10s", fill="freeze")
+    return root
 
 def build_scene_2c(scene):
     root = clean_frame(
@@ -1054,32 +1077,92 @@ def draw_domino(parent, element_id, x, y, fill, angle=0, width=88, height=166):
     return group
 
 
-def build_story_03a(scene):
-    root = continuous_office_base(
-        "04A · Raka mislabels his sadness",
-        "Raka misses a work target, feels sad for several days, and concludes he is depressed. The missed target card, days passing, and self-label remain visible in this full-screen frame.",
-        "04A",
-    )
-    target = add(root, "g", id="missed-target-card")
-    rect(target, 1090, 96, 730, 184, PLUM, rx=24)
-    txt(target, 1130, 143, "TARGET KERJA", 20, CREAM, 700, letter=1.1)
-    txt(target, 1150, 226, "10", 54, CREAM, 700)
-    txt(target, 1230, 223, "target", 18, CREAM, 500)
-    line(target, 1380, 162, 1380, 243, CREAM, 2, opacity=0.5)
-    txt(target, 1430, 226, "6", 54, TERRACOTTA, 700)
-    txt(target, 1505, 223, "tercapai", 18, CREAM, 500)
-    rect(target, 1130, 248, 620, 8, CREAM, rx=4, opacity=0.35)
-    rect(target, 1130, 248, 372, 8, TERRACOTTA, rx=4)
+def embed_raka_puppet(parent, x, y, w, h, pose="hands-on-head"):
+    """Embed the licensed Student Stress source and expose editable pose groups."""
+    palette = {
+        "#407BFF": PLUM, "#263238": ESPRESSO,
+        "#EBC0BB": PEACH, "#EEC1BB": PEACH,
+        "#D4827D": TERRACOTTA,
+    }
+    nested = embed_asset(parent, "student_stress", x, y, w, h,
+                         omit_ids={"speech-bubble"}, color_map=palette,
+                         student_typing_expression=pose == "typing")
+    character = next((node for node in nested.iter() if node.get("id") == "sstudentstress-Character"), None)
+    if character is None:
+        return nested
+    source_parts = list(character)
+    groups = [
+        ("raka-rig-left-arm-upper", [0, 1, 2], None),
+        ("raka-rig-head-hair", [3], None),
+        ("raka-rig-torso-under", [4], None),
+        ("raka-rig-left-arm-lower", [5, 6], None),
+        ("raka-rig-torso-sleeves", list(range(7, 14)), None),
+        ("raka-rig-head-face", list(range(14, 35)), None),
+        ("raka-rig-torso-shadow", [35], None),
+        ("raka-rig-right-arm", [36, 37], None),
+    ]
+    typing_transforms = {
+        "raka-rig-left-arm-upper": "rotate(-70 284 315)",
+        "raka-rig-left-arm-lower": "rotate(-70 284 315)",
+        "raka-rig-right-arm": "rotate(-130 372 315)",
+    }
+    character[:] = []
+    for group_id, indexes, _ in groups:
+        part_group = add(character, "g", id=group_id, data_rig_part=group_id.removeprefix("raka-rig-"))
+        if pose == "typing" and group_id in typing_transforms:
+            part_group.set("transform", typing_transforms[group_id])
+        elif pose == "hands-on-head" and group_id in ("raka-rig-head-hair", "raka-rig-head-face"):
+            # A small source-group rotation gives the existing hands-on-head
+            # pose a bowed-head beat without redrawing any character parts.
+            part_group.set("transform", "rotate(6 317 280)")
+            add(part_group, "animateTransform", attributeName="transform", type="rotate",
+                values="0 317 280;6 317 280", begin="0s", dur="1.4s", fill="freeze")
+        for index in indexes:
+            if index < len(source_parts):
+                part_group.append(source_parts[index])
+        if pose == "typing" and group_id == "raka-rig-head-face":
+            # Reuse the source eye/brow/mouth paths, opening the eyes toward the
+            # laptop and flattening the mouth for a cool, serious expression.
+            circle(part_group, 306.8, 240.7, 1.05, ESPRESSO)
+            circle(part_group, 287.2, 241.8, 1.05, ESPRESSO)
+    return nested
 
-    cloud = add(root, "g", id="emotion-cloud")
-    rect(cloud, 832, 400, 806, 238, PLUM, rx=72)
-    for cx, cy, r in [(900, 407, 64), (1000, 387, 78), (1120, 390, 76), (1235, 396, 82), (1360, 407, 68)]:
+
+def build_story_03a(scene):
+    root = clean_frame(
+        "4A · Raka mislabels his sadness",
+        "Raka is the only person in frame. After missing a work target, he sits with his head bowed and both hands holding his head; a small thought cloud shows his self-label.",
+        CASE_TINTS[0],
+    )
+    root.set("data-frame", "4A")
+    root.find(tag("metadata")).text = (
+        "Storyset Student Stress · Rafiki. The original SVG character, desk, and objects are reused; the original speech-bubble group is omitted. "
+        "The Character paths are organized into editable named SVG puppet groups for head, torso, and arms; the head group bows 6 degrees over 1.4 seconds. "
+        "Conservative upper bound: 94/254 source drawables are recolored, omitted, or transformed (37.0%); at least 160/254 remain unchanged. "
+        "No bone-rigging application is installed here; these grouped pivots are the editable alternative for downstream motion."
+    )
+    # The source illustration already contains the stressed hands-on-head pose; only its source bubble is removed.
+    embed_raka_puppet(root, 0, 0, 1080, 1080, pose="hands-on-head")
+
+    target = add(root, "g", id="missed-target-card")
+    rect(target, 1178, 114, 560, 142, PLUM, rx=22)
+    txt(target, 1210, 155, "TARGET KERJA", 17, CREAM, 700, letter=1.0)
+    txt(target, 1230, 222, "10", 41, CREAM, 700)
+    txt(target, 1294, 217, "target", 15, CREAM, 500)
+    txt(target, 1452, 222, "6", 41, TERRACOTTA, 700)
+    txt(target, 1507, 217, "tercapai", 15, CREAM, 500)
+    line(target, 1392, 172, 1392, 224, CREAM, 2, opacity=0.45)
+
+    cloud = add(root, "g", id="raka-small-thought-cloud", data_role="animatable-thought-label")
+    rect(cloud, 512, 198, 536, 154, PLUM, rx=56)
+    for cx, cy, r in [(566, 204, 40), (635, 193, 48), (714, 192, 49), (796, 196, 45), (875, 202, 37), (949, 211, 26)]:
         circle(cloud, cx, cy, r, PLUM)
-    path(cloud, "M892,615 L850,675 L978,632 Z", fill=PLUM)
-    txt(cloud, 1235, 489, "Aku depresi. Ada yang", 31, CREAM, 700, "middle")
-    txt(cloud, 1235, 549, "salah banget sama aku.", 31, CREAM, 600, "middle")
-    pill(cloud, 1034, 589, 405, 41, "SEDIH BEBERAPA HARI", TERRACOTTA, CREAM, 16)
-    draw_domino(root, "domino-1-self-misunderstanding", 1720, 810, MUSTARD, -16, 82, 150)
+    for cx, cy, r in [(756, 363, 15), (735, 389, 10), (716, 410, 6)]:
+        circle(cloud, cx, cy, r, PLUM)
+    txt(cloud, 780, 265, "Aku depresi. Ada yang salah", 24, CREAM, 700, "middle")
+    txt(cloud, 780, 300, "banget sama aku.", 24, CREAM, 700, "middle")
+    txt(cloud, 780, 332, "SEDIH BEBERAPA HARI", 13, PEACH, 700, "middle", letter=0.8)
+    draw_domino(root, "domino-1-self-misunderstanding", 1790, 844, MUSTARD, -16, 76, 138)
     return root
 
 
@@ -1090,17 +1173,17 @@ def build_story_03b(scene):
         "04B",
     )
     raka = add(root, "g", id="raka-quote")
-    rect(raka, 1050, 224, 804, 226, PLUM, rx=28)
-    path(raka, "M1090,426 L1065,468 L1150,440 Z", fill=PLUM)
-    txt(raka, 1092, 269, "RAKA", 17, CREAM, 700, letter=1.2)
-    txt(raka, 1452, 337, "Kamu selalu bikin aku", 30, CREAM, 600, "middle")
-    txt(raka, 1452, 387, "merasa salah!", 30, CREAM, 600, "middle")
+    rect(raka, 720, 90, 850, 220, PLUM, rx=28)
+    path(raka, "M806,300 L685,434 L916,300 Z", fill=PLUM)
+    txt(raka, 760, 137, "RAKA", 17, CREAM, 700, letter=1.2)
+    txt(raka, 1145, 213, "Kamu selalu bikin aku", 29, CREAM, 600, "middle")
+    txt(raka, 1145, 256, "merasa salah!", 29, CREAM, 600, "middle")
     dina = add(root, "g", id="dina-quote")
-    rect(dina, 1050, 522, 804, 244, CREAM, rx=28, stroke=PLUM, sw=4)
-    path(dina, "M1792,743 L1830,786 L1735,756 Z", fill=CREAM, stroke=PLUM, sw=4)
-    txt(dina, 1092, 568, "DINA", 17, PLUM, 700, letter=1.2)
-    txt(dina, 1452, 638, "Aku cuma kasih masukan.", 27, PLUM, 600, "middle")
-    txt(dina, 1452, 687, "Jangan baper terus, deh.", 27, PLUM, 600, "middle")
+    rect(dina, 70, 520, 790, 220, CREAM, rx=28, stroke=PLUM, sw=4)
+    path(dina, "M336,520 L325,352 L392,520 Z", fill=CREAM, stroke=PLUM, sw=4)
+    txt(dina, 110, 562, "DINA", 17, PLUM, 700, letter=1.2)
+    txt(dina, 465, 638, "Aku cuma kasih masukan.", 26, PLUM, 600, "middle")
+    txt(dina, 465, 686, "Jangan baper terus, deh.", 26, PLUM, 600, "middle")
     draw_domino(root, "domino-2-misjudgment", 1650, 800, TERRACOTTA, -14, 78, 144)
     draw_domino(root, "domino-3-relationship-conflict", 1740, 824, PLUM, 10, 78, 144)
     return root
@@ -1108,9 +1191,9 @@ def build_story_03b(scene):
 
 def build_story_03c(scene):
     root = continuous_office_base(
-        "04C · Raka labels Dina narcissistic",
+        "4B2 · Raka labels Dina narcissistic",
         "Raka turns Dina's one defensive reply into the stamp NARSISTIK. The frame marks this as Raka's conclusion, based on one reply rather than evidence of a pattern.",
-        "04C",
+        "4B2",
     )
     thought = add(root, "g", id="raka-conclusion")
     pill(thought, 1100, 186, 700, 54, "KESIMPULAN RAKA · DARI SATU BALASAN", CREAM, PLUM, 18, stroke=PLUM)
@@ -1120,64 +1203,119 @@ def build_story_03c(scene):
     txt(stamp, 1452, 403, "DIA", 23, CREAM, 700, "middle", letter=1.4)
     txt(stamp, 1452, 474, "NARSISTIK", 52, CREAM, 700, "middle", letter=1.3)
     txt(thought, 1452, 622, "Satu balasan belum membuktikan pola.", 25, PLUM, 600, "middle")
+    root.set("data-frame", "4B2")
     return root
 
 
 def build_story_04a(scene):
-    root = continuous_office_base(
-        "04D · Stigma spreads through the office group chat",
-        "Raka's unsupported label spreads through the group chat. Coworkers begin to avoid Dina; Raka posts a warning and removes her, believing he is protecting others.",
-        "04D",
-        character_color=PLUM,
+    root = clean_frame(
+        "4C · Stigma spreads through a post",
+        "Raka sits alone at his laptop, looking at the screen with a cold, serious expression as he types a warning about Dina. A zoomed view of the laptop post expands into a chain of notifications.",
+        CREAM,
     )
-    panel = add(root, "g", id="group-chat-stigma-and-removal")
-    rect(panel, 1048, 72, 816, 808, CREAM, rx=30, stroke=PLUM, sw=4)
-    rect(panel, 1048, 72, 816, 76, PLUM, rx=28)
-    rect(panel, 1048, 126, 816, 22, PLUM)
-    txt(panel, 1090, 123, "GRUP KANTOR", 21, CREAM, 700, letter=1.1)
-    circle(panel, 1808, 110, 10, TERRACOTTA)
-    rows = [
-        ("RAKA", "Dina narsistik."),
-        ("TEMAN", "Oh… pantes."),
-        ("TEMAN", "Aku skip kalau Dina ikut."),
-    ]
-    for i, (speaker, text) in enumerate(rows):
-        y = 172 + i * 100
-        rect(panel, 1084, y, 744, 82, CREAM, rx=17, stroke=PEACH, sw=2)
-        txt(panel, 1114, y + 28, speaker, 14, PLUM, 700, letter=1)
-        txt(panel, 1114, y + 62, text, 22, TERRACOTTA if i == 2 else ESPRESSO, 700 if i == 2 else 500)
-    line(panel, 1084, 483, 1828, 483, PEACH, 3)
-    rect(panel, 1084, 503, 744, 186, CREAM, rx=22, stroke=TERRACOTTA, sw=4)
-    txt(panel, 1122, 544, "PERINGATAN", 15, TERRACOTTA, 700, letter=1.3)
-    txt(panel, 1122, 590, "Hati-hati sama Dina,", 25, ESPRESSO, 600)
-    txt(panel, 1122, 628, "dia narsistik.", 25, ESPRESSO, 700)
-    rect(panel, 1084, 711, 744, 70, TERRACOTTA, rx=17)
-    txt(panel, 1456, 755, "KELUARKAN DINA DARI GRUP", 19, CREAM, 700, "middle", letter=0.5)
-    txt(panel, 1122, 829, "Dina dikeluarkan. · Raka merasa sedang melindungi yang lain.", 17, PLUM, 600)
-    draw_domino(root, "domino-4-stigma", 1744, 898, ESPRESSO, 13, 74, 132)
+    root.set("data-frame", "4C")
+    root.find(tag("metadata")).text = (
+        "Storyset Student Stress · Rafiki. The same source figure and named editable puppet groups are used as in 4A. "
+        "For this typing pose, the original source's arm groups are repositioned and five facial paths are adjusted; two tiny eye overlays direct the gaze toward the laptop; the original speech bubble is omitted. "
+        "Conservative upper bound including the eye overlays: 86/254 source drawables are changed, omitted, or supplemented (33.9%); at least 168/254 remain unchanged. "
+        "The post and notification chain are separate, editable vector layers. Bone-rig software is unavailable here; the SVG group pivots are the production alternative."
+    )
+    embed_raka_puppet(root, 0, 0, 1080, 1080, pose="typing")
+
+    # Keep the source laptop visible and put the same warning on its screen.
+    laptop_screen = add(root, "g", id="laptop-screen-post", data_text="Hati-hati sama Dina, dia narsistik")
+    screen_shape = add(laptop_screen, "polygon", points="260,713 431,707 460,842 296,852", fill=ESPRESSO, stroke=PLUM, stroke_width=5)
+    screen_copy = add(laptop_screen, "g", transform="rotate(-2 350 780)")
+    txt(screen_copy, 351, 756, "POSTINGAN", 10, PEACH, 700, "middle", letter=0.7)
+    txt(screen_copy, 351, 779, "Hati-hati sama Dina,", 12, CREAM, 700, "middle")
+    txt(screen_copy, 351, 800, "dia narsistik", 13, CREAM, 700, "middle")
+    circle(screen_copy, 296, 820, 4, TERRACOTTA)
+    line(screen_copy, 306, 820, 405, 820, PEACH, 2, opacity=0.65)
+
+    # A separate zoom layer makes the exact post readable without replacing the source laptop.
+    zoom = add(root, "g", id="laptop-post-zoom", data_motion="screen-zooms-out-to-readable-post")
+    zoom_connector = path(zoom, "M452,754 C664,724 815,507 1080,410", fill="none", stroke=PLUM, sw=3, opacity=0.55)
+    zoom_connector.set("stroke-dasharray", "8 12")
+    rect(zoom, 1082, 132, 690, 356, PLUM, rx=28)
+    rect(zoom, 1104, 154, 646, 312, ESPRESSO, rx=19)
+    rect(zoom, 1104, 154, 646, 54, ESPRESSO, rx=19)
+    txt(zoom, 1140, 190, "POSTINGAN", 16, PEACH, 700, letter=1.2)
+    circle(zoom, 1708, 181, 7, TERRACOTTA)
+    txt(zoom, 1140, 292, "Hati-hati sama Dina,", 34, CREAM, 700)
+    txt(zoom, 1140, 341, "dia narsistik", 34, CREAM, 700)
+    txt(zoom, 1140, 407, "Biar yang lain aman.", 19, PEACH, 600)
+
+    notifications = add(root, "g", id="notification-chain", data_motion="notifications-spread-outward")
+    notification_connector = path(notifications, "M1160,524 C1268,578 1465,562 1640,666", fill="none", stroke=PEACH, sw=4)
+    notification_connector.set("stroke-dasharray", "6 14")
+    for index, (x, y, number) in enumerate([(1110, 552, "1"), (1322, 622, "2"), (1530, 694, "3")]):
+        card_group = add(notifications, "g", id=f"notification-{index + 1}")
+        rect(card_group, x, y, 190, 92, CREAM, rx=18, stroke=PEACH, sw=3)
+        circle(card_group, x + 31, y + 32, 13, PLUM)
+        txt(card_group, x + 58, y + 37, "GRUP", 12, PLUM, 700, letter=0.8)
+        if index == 1:
+            txt(card_group, x + 23, y + 71, "DINA DIKELUARKAN", 12, PLUM, 700, letter=0.25)
+            txt(card_group, x + 23, y + 84, "DARI GRUP", 12, PLUM, 700, letter=0.25)
+        else:
+            line(card_group, x + 23, y + 60, x + 153, y + 60, PLUM, 3, opacity=0.55)
+            line(card_group, x + 23, y + 72, x + 124, y + 72, PLUM, 3, opacity=0.35)
+        circle(card_group, x + 169, y + 25, 8, TERRACOTTA)
+        txt(card_group, x + 169, y + 29, number, 10, CREAM, 700, "middle")
+
+    draw_domino(root, "domino-4-stigma", 1780, 844, ESPRESSO, 13, 74, 132)
     return root
 
 
 def build_story_04b(scene):
-    root = continuous_office_base(
-        "04E · Dina is left alone; Raka begins to doubt",
-        "Dina stands alone after being removed from the group. The same Raka illustration reappears as a separate close-up inset; his expression begins to turn uncertain.",
-        "04E", isolate_dina=True,
+    root = clean_frame(
+        "4D · Dina alone · closing text",
+        "Dina stands alone in a wide, faded field with a small empty speech bubble and unanswered group notifications. A fading NARSISTIK shadow sits behind her; the final on-screen text occupies the open space to her right.",
+        CREAM,
     )
-    doubt = add(root, "g", id="raka-doubt")
-    rect(doubt, 756, 284, 258, 344, CREAM, rx=26, stroke=PLUM, sw=3)
+    root.set("data-frame", "4D")
+    root.find(tag("metadata")).text = (
+        "Storyset Co-workers · Rafiki Dina source. Raka's 54 source paths are omitted and three of 158 source elements are recolored (57/158 = 36.1% changed or omitted; 63.9% remain unchanged). "
+        "The source room is washed with a cream overlay and the desk area is masked as separate editable composition layers. Dina is the only person; there is no table or Raka."
+    )
+    background = embed_asset(
+        root, "coworkers", 0, 74, 1000, 1000,
+        include_ids={"background-complete", "background-simple", "Shadow", "Chat", "Desk"},
+    )
+    background.set("opacity", "0.24")
+    rect(root, 0, 74, 1000, 1000, CREAM, opacity=0.88)
+    # Mask the inherited table zone, then place the source character back over it.
+    rect(root, 200, 548, 790, 440, CREAM, rx=12)
+
+    shadow = add(root, "g", id="dina-isolation-shadow")
+    add(shadow, "ellipse", cx=394, cy=824, rx=200, ry=28, fill=ESPRESSO, opacity=0.12)
+    fading_label = add(root, "g", id="fading-narcissistic-stamp", transform="rotate(-7 1000 390)")
+    rect(fading_label, 810, 331, 470, 124, TERRACOTTA, rx=17, opacity=0.09)
+    txt(fading_label, 1045, 411, "NARSISTIK", 48, PLUM, 700, "middle", letter=1.4, opacity=0.12)
+
+    bubble = add(root, "g", id="dina-empty-speech-bubble")
+    rect(bubble, 360, 144, 286, 134, CREAM, rx=36, stroke=PLUM, sw=3)
+    path(bubble, "M407,276 L326,351 L501,278 Z", fill=CREAM, stroke=PLUM, sw=3)
+    txt(bubble, 503, 229, "...", 58, PLUM, 700, "middle")
+
+    notifications = add(root, "g", id="unanswered-group-notifications")
+    for index, (x, y) in enumerate([(974, 208), (1210, 376), (970, 552)]):
+        card_group = add(notifications, "g", id=f"unanswered-notification-{index + 1}", opacity=0.56 - index * 0.1)
+        rect(card_group, x, y, 264, 92, CREAM, rx=18, stroke=PEACH, sw=2)
+        circle(card_group, x + 30, y + 31, 11, SAGE)
+        line(card_group, x + 54, y + 29, x + 205, y + 29, PLUM, 3, opacity=0.58)
+        line(card_group, x + 24, y + 57, x + 201, y + 57, PLUM, 3, opacity=0.30)
+        line(card_group, x + 24, y + 69, x + 132, y + 69, PLUM, 3, opacity=0.23)
+        circle(card_group, x + 238, y + 21, 6, TERRACOTTA)
+
     embed_asset(
-        doubt, "coworkers", 786, 348, 198, 176,
-        include_ids={"character-2"}, view_box="326 156 50 50",
-        color_map={"#407BFF": PLUM}, raka_expression=True,
+        root, "coworkers", 0, 74, 1000, 1000,
+        include_ids={"character-1"}, color_map={"#407BFF": PLUM},
+        color_map_policy={"character-1": (6, 3)},
     )
-    txt(doubt, 985, 333, "?", 42, TERRACOTTA, 700, "middle")
-
     ending = add(root, "g", id="final-onscreen-text")
-    rect(ending, 420, 888, 1080, 92, PLUM, rx=24)
-    txt(ending, 960, 947, "Don't reduce people to labels.", 34, CREAM, 700, "middle")
+    rect(ending, 710, 848, 988, 96, PLUM, rx=24)
+    txt(ending, 1204, 909, "Don't reduce people to labels.", 34, CREAM, 700, "middle")
     return root
-
 
 def build_scene_5(scene):
     root = start_scene(scene, CREAM, PLUM)
@@ -1331,6 +1469,28 @@ def create_previews():
         PREVIEW_DIR / "scene-04a-label-becomes-stigma.png",
         SCENES_DIR / "scene-04b-warning-and-removal.svg",
         PREVIEW_DIR / "scene-04b-warning-and-removal.png",
+        SCENES_DIR / "scene-01a-presenter-placeholder.svg",
+        PREVIEW_DIR / "scene-01a-presenter-placeholder.png",
+        SCENES_DIR / "scene-01b-chat-unanswered.svg",
+        PREVIEW_DIR / "scene-01b-chat-unanswered.png",
+        SCENES_DIR / "scene-01c-chat-cancelled-plan.svg",
+        PREVIEW_DIR / "scene-01c-chat-cancelled-plan.png",
+        SCENES_DIR / "scene-01d-chat-sad-days.svg",
+        PREVIEW_DIR / "scene-01d-chat-sad-days.png",
+        SCENES_DIR / "scene-01e-chat-expectation-mismatch.svg",
+        PREVIEW_DIR / "scene-01e-chat-expectation-mismatch.png",
+        SCENES_DIR / "scene-01f-smartphone-transition.svg",
+        PREVIEW_DIR / "scene-01f-smartphone-transition.png",
+        SCENES_DIR / "scene-04a-self-misunderstanding.svg",
+        PREVIEW_DIR / "scene-04a-self-misunderstanding.png",
+        SCENES_DIR / "scene-04b-conflict-in-the-meeting.svg",
+        PREVIEW_DIR / "scene-04b-conflict-in-the-meeting.png",
+        SCENES_DIR / "scene-04c-narcissistic-label.svg",
+        PREVIEW_DIR / "scene-04c-narcissistic-label.png",
+        SCENES_DIR / "scene-04d-stigma-and-removal.svg",
+        PREVIEW_DIR / "scene-04d-stigma-and-removal.png",
+        SCENES_DIR / "scene-04e-dina-alone-closing-text.svg",
+        PREVIEW_DIR / "scene-04e-dina-alone-closing-text.png",
     ]:
         if stale.exists():
             stale.unlink()
@@ -1338,12 +1498,7 @@ def create_previews():
     for scene, draw_scene in zip(SCENES, DRAW):
         if scene["no"] == 1:
             frames = [
-                ("01A", "01a-presenter-placeholder", "Presenter Placeholder", "00:00–00:04", lambda s: build_scene_1_frame(s, "01A")),
-                ("01B", "01b-chat-unanswered", "Read Without Reply · Avoidant", "00:04–00:08", lambda s: build_scene_1_frame(s, "01B")),
-                ("01C", "01c-chat-cancelled-plan", "Cancelled Plan · Toxic", "00:08–00:12", lambda s: build_scene_1_frame(s, "01C")),
-                ("01D", "01d-chat-sad-days", "Sad for Several Days · Depresi", "00:12–00:16", lambda s: build_scene_1_frame(s, "01D")),
-                ("01E", "01e-chat-expectation-mismatch", "Expectation Mismatch · On-Screen Question", "00:16–00:24", lambda s: build_scene_1_frame(s, "01E")),
-                ("01F", "01f-smartphone-transition", "Presenter Zooms Into Smartphone", "00:24–00:30", lambda s: build_scene_1_frame(s, "01F")),
+                ("01", "01-the-hook", "The Hook · One Continuous Scene", "00:00–00:30", build_scene_1),
             ]
         elif scene["no"] == 2:
             frames = [
@@ -1360,11 +1515,11 @@ def create_previews():
             ]
         elif scene["no"] == 4:
             frames = [
-                ("04A", "04a-self-misunderstanding", "Raka Mislabels His Own Sadness", "01:55–02:07", build_story_03a),
-                ("04B", "04b-conflict-in-the-meeting", "Misjudgment Becomes Conflict", "02:07–02:12", build_story_03b),
-                ("04C", "04c-narcissistic-label", "One Disagreement Becomes a Label", "02:12–02:17", build_story_03c),
-                ("04D", "04d-stigma-and-removal", "Stigma Spreads Through the Group", "02:17–02:27", build_story_04a),
-                ("04E", "04e-dina-alone-closing-text", "Dina Alone · Closing On-Screen Text", "02:27–02:35", build_story_04b),
+                ("4A", "4a-self-misunderstanding", "Raka Mislabels His Own Sadness", "01:55–02:07", build_story_03a),
+                ("4B", "4b-conflict-in-the-meeting", "Misjudgment Becomes Conflict", "02:07–02:12", build_story_03b),
+                ("4B2", "4b2-narcissistic-label", "One Disagreement Becomes a Label", "02:12–02:17", build_story_03c),
+                ("4C", "4c-stigma-and-removal", "Stigma Spreads Through the Group", "02:17–02:27", build_story_04a),
+                ("4D", "4d-dina-alone-closing-text", "Dina Alone · Closing On-Screen Text", "02:27–02:35", build_story_04b),
             ]
         else:
             frames = [(f"{scene['no']:02d}", f"{scene['no']:02d}-{scene['slug']}", scene["title"], scene["time"], draw_scene)]
@@ -1375,7 +1530,17 @@ def create_previews():
             svg_path = SCENES_DIR / f"scene-{slug}.svg"
             svg_path.write_bytes(ET.tostring(root, encoding="utf-8", xml_declaration=True))
             png_path = PREVIEW_DIR / f"scene-{slug}.png"
-            cairosvg.svg2png(url=str(svg_path), write_to=str(png_path), output_width=1440, output_height=810)
+            preview_root = deepcopy(root)
+            if scene["no"] == 1 or (scene["no"] == 2 and code == "02B"):
+                for node in preview_root.iter():
+                    if node.get("id", "").startswith(("public-comment-", "word-cloud-tag-")) or node.get("id") in ("smartphone-transition-shell", "closing-onscreen-question"):
+                        node.attrib.pop("opacity", None)
+                    for child in list(node):
+                        if child.tag == tag("animate"):
+                            node.remove(child)
+                cairosvg.svg2png(bytestring=ET.tostring(preview_root), write_to=str(png_path), output_width=1440, output_height=810)
+            else:
+                cairosvg.svg2png(url=str(svg_path), write_to=str(png_path), output_width=1440, output_height=810)
             thumbs.append((code, title, png_path))
     components = build_scene_2_components()
     ET.indent(components, space="  ")
@@ -1487,9 +1652,9 @@ def make_docx(contact):
     set_run(r, 28, INK, True)
     p = doc.add_paragraph()
     p.paragraph_format.space_after = Pt(7)
-    r = p.add_run("Storyboard produksi · Layout C · 7 scene · 21 keyframe · 00:00–04:00")
+    r = p.add_run("Storyboard produksi · Layout C · 7 scene · 16 keyframe · 00:00–04:00")
     set_run(r, 15, PLUM, True)
-    p = doc.add_paragraph("Setiap frame tersedia sebagai SVG mandiri yang editable. Scene 1 memakai placeholder presenter bersumber dan empat chat anonim. Scene 3 kembali menjadi tiga contoh terpisah sesuai naskah. Scene 4 menjadi satu cerita domino lima beat sepanjang 40 detik dengan VO asli: salah memahami emosi → konflik → label narsistik → stigma → Dina sendirian dan Raka ragu. Semua frame adalah komposisi animasi; tidak ada judul produksi di dalam artwork dan tidak ada gambar generatif.")
+    p = doc.add_paragraph("Setiap frame tersedia sebagai SVG mandiri yang editable. Scene 1 adalah satu scene presenter dengan empat komentar publik anonim. Scene 3 tetap tiga contoh terpisah sesuai naskah. Scene 4 adalah satu cerita domino lima beat sepanjang 40 detik dengan VO asli: salah memahami emosi → konflik → label narsistik → stigma → Dina sendirian. Semua frame adalah komposisi animasi; tidak ada judul produksi di dalam artwork dan tidak ada gambar generatif.")
     p.paragraph_format.space_after = Pt(10)
     for r in p.runs:
         set_run(r, 10, MUTED)
@@ -1499,11 +1664,12 @@ def make_docx(contact):
     r = heading.add_run("AUDIT VISUAL")
     set_run(r, 14, INK, True)
     audit = [
-        "Scene 2 menggunakan cream, espresso, dan plum sebagai warna utama; istilah diberi chip terracotta, mustard, atau peach sesuai pedoman Opsi B.",
+        "Scene 1 kini satu komposisi berkelanjutan: presenter placeholder perempuan dari OpenClipart/FreeSVG, empat kartu komentar anonim, dan shell smartphone untuk transisi. Tiga kutipan memiliki URL publik; kartu ‘narcissistic’ ditandai tiruan di audit sumber Scene 1.",
+        "Scene 2B kini berupa word cloud Caveat 56 hashtag: enam istilah naskah dan lima puluh pemicu, dengan ukuran 26–208 px, rotasi acak, tumpang tindih, dan tiga hero term di tengah.",
         "Scene 3 memisahkan case avoidant, depresi, dan gaslighting. Label terracotta muncul lebih dulu; koreksi sage dikelompokkan terpisah untuk animasi saat VO mengatakan ‘Padahal...’. Latar case memakai peach, sage, dan mustard muda sesuai naskah.",
-        "Scene 4 berlangsung 40 detik dalam lima beat dan VO tetap naskah. Gelembung self-label berubah menjadi debat, cap NARSISTIK, notifikasi grup, lalu Dina sendiri; penutupnya ‘Don't reduce people to labels.’",
+        "Scene 4 berlangsung 40 detik dalam urutan baru 4A, 4B, 4B2, 4C, 4D; VO tetap naskah. Ekor bubble 4B mengarah ke pembicara dan tidak menutup label nama. Di 4C Raka mengirim post melalui laptop, menyebut alasan ‘Biar yang lain aman’, mengeluarkan Dina dari grup, dan notifikasi mulai menyebar; 4D hanya menampilkan Dina dan teks ‘Don't reduce people to labels.’",
         "Semua frame mandiri memuat hanya komposisi animasi, latar, source illustration, overlay, properti, dan teks layar. Judul board, waktu, footer, legenda, kredit aset, dan catatan produksi ditempatkan di luar artwork.",
-        "Co-workers · Rafiki mempertahankan 122/158 elemen (77,2%) di frame bersama; frame Dina sendiri mempertahankan sekurangnya 95/158 (60,1%) setelah hitungan konservatif. Open Peeps presenter memakai sumber utuh dengan crop viewport; empat dari lima drawable elements tetap tidak berubah.",
+        "Scene 4D memakai Co-workers · Rafiki: 54/158 path Raka dihilangkan, 3/158 shape baju Dina diwarnai ulang, dan 101/158 (63,9%) elemen tetap tidak berubah. Scene 4A memakai Student Stress · Rafiki dengan konservatif maksimal 94/254 elemen sumber berubah, dihilangkan, atau diputar (37,0%); setidaknya 160/254 tetap. 4C memakai grup rig yang sama; termasuk dua overlay pupil, maksimal 86/254 elemen berubah, dihilangkan, atau ditambah (33,9%). Tidak ada bone-rig app tersedia, sehingga grup SVG bernama dan transform yang bisa diedit menjadi alternatif.",
         "Student Stress · Rafiki di Scene 3B mempertahankan 220/254 drawable elements (86,6%); 34 elemen (13,4%) berubah atau dihilangkan. Air mata, penanda target, label, dan koreksi adalah overlay terpisah.",
         "Semua karakter berasal dari SVG sumber yang dapat diunduh; chat, label, background, domino, dan teks adalah layer vektor editable. Tidak ada gambar yang dihasilkan atau karakter yang digambar dari nol.",
     ]
@@ -1521,18 +1687,20 @@ def make_docx(contact):
         set_run(r, 8, ESPRESSO, True)
     p = doc.add_paragraph()
     p.paragraph_format.space_before = Pt(4)
-    r = p.add_run("Open Peeps standing-16 berada di domain publik CC0. Aset Storyset gratis dengan atribusi; tautan sumber per ilustrasi dicantumkan pada scene terkait. Periksa ketentuan Storyset sebelum penggunaan final.")
+    r = p.add_run("Girl pointing · OpenClipart/FreeSVG berada di domain publik CC0. Caveat menggunakan SIL Open Font License 1.1; salinan lisensi ikut dalam source bundle. Aset Storyset gratis dengan atribusi; tautan sumber per ilustrasi dicantumkan pada scene terkait. Periksa ketentuan Storyset sebelum penggunaan final.")
     set_run(r, 9, MUTED)
-    add_hyperlink(p, "Open Peeps · CC0", "https://openpeeps.com/")
+    add_hyperlink(p, "Girl pointing · CC0", "https://freesvg.org/girl-pointing")
+    p.add_run("  ·  ")
+    add_hyperlink(p, "Caveat · SIL OFL", "https://github.com/google/fonts/blob/main/ofl/caveat/OFL.txt")
     p.add_run("  ·  ")
     add_hyperlink(p, "Storyset terms", "https://storyset.com/terms")
 
     doc.add_page_break()
     p = doc.add_paragraph()
-    r = p.add_run("CONTACT SHEET · AUDIT 7 SCENE / 21 FRAME")
+    r = p.add_run("CONTACT SHEET · AUDIT 7 SCENE / 16 FRAME")
     set_run(r, 20, INK, True)
     doc.add_picture(str(contact), width=Inches(10.65))
-    p = doc.add_paragraph("Ritme visual bergerak dari placeholder presenter → feed → tiga case terpisah pada Scene 3 → cerita domino Raka dan Dina dalam lima beat → etika → checklist → closing. Scene 4 berakhir dengan Dina sendiri, ekspresi Raka yang mulai ragu, dan teks layar; seluruh frame mengikuti palet Opsi B.")
+    p = doc.add_paragraph("Ritme visual bergerak dari presenter dan komentar publik → feed → tiga case terpisah pada Scene 3 → cerita domino Raka dan Dina dalam lima beat → etika → checklist → closing. Scene 4 berakhir dengan Dina sendiri dan teks layar; seluruh frame mengikuti palet Opsi B.")
     for r in p.runs:
         set_run(r, 9, MUTED)
 
@@ -1586,7 +1754,7 @@ def make_docx(contact):
                 (f"{frame['code']} · {frame['time']}", f"scene-{frame['slug']}.png")
                 for frame in scene["frames"]
             ]
-            grid_columns = 3 if scene["no"] == 1 else len(frame_data)
+            grid_columns = 1 if scene["no"] == 1 else len(frame_data)
             grid_rows = (len(frame_data) + grid_columns - 1) // grid_columns
             inner = left.add_table(rows=grid_rows, cols=grid_columns)
             inner.autofit = False
@@ -1674,6 +1842,45 @@ def make_docx(contact):
         r = p.add_run(scene["background"])
         set_run(r, 8, MUTED)
 
+    doc.add_page_break()
+    p = doc.add_paragraph()
+    r = p.add_run("PUBLIC COMMENT SOURCE AUDIT · SCENE 1")
+    set_run(r, 19, INK, True)
+    p = doc.add_paragraph("Tanggal akses semua tautan: 26 November 2026. Nama akun, foto profil, dan merek platform tidak ditampilkan di artwork. Kutipan dibatasi pada potongan pendek. Komentar bertema narcissistic adalah tiruan karena tidak ditemukan kutipan publik yang aman dan sesuai.")
+    for r in p.runs:
+        set_run(r, 9, MUTED)
+    source_table = doc.add_table(rows=1, cols=3)
+    source_table.autofit = False
+    for column, width in zip(source_table.columns, (Inches(2.15), Inches(3.7), Inches(4.6))):
+        column.width = width
+    for cell, heading_text in zip(source_table.rows[0].cells, ("KATA / PLATFORM", "POTONGAN KOMENTAR", "URL / STATUS / AKSES")):
+        shade(cell, PLUM)
+        set_cell_margins(cell, 100, 110, 100, 110)
+        cell.text = heading_text
+        for run in cell.paragraphs[0].runs:
+            set_run(run, 8, CREAM, True)
+    for comment in SCENE1_COMMENT_SOURCES:
+        cells = source_table.add_row().cells
+        for cell in cells:
+            set_cell_margins(cell, 90, 110, 90, 110)
+            shade(cell, CREAM)
+            cell.vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.CENTER
+        cells[0].text = comment["id"].upper() + "\n" + comment["platform"]
+        cells[1].text = "“" + comment["quote"] + "”"
+        for run in cells[0].paragraphs[0].runs:
+            set_run(run, 8, INK, True)
+        for run in cells[1].paragraphs[0].runs:
+            set_run(run, 9, ESPRESSO)
+        if comment["url"]:
+            add_hyperlink(cells[2].paragraphs[0], comment["url"], comment["url"])
+            status_line = comment["kind"] + " · Tanggal akses: " + comment["accessed"]
+        else:
+            cells[2].paragraphs[0].add_run("Tidak ada URL publik · ")
+            status_line = "TIRUAN (bukan komentar asli) · Tanggal akses: " + comment["accessed"]
+        status_paragraph = cells[2].add_paragraph(status_line)
+        for run in status_paragraph.runs:
+            set_run(run, 8, TERRACOTTA if "TIRUAN" in status_line else MUTED, "TIRUAN" in status_line)
+
     out = ROOT / "Storyboard_Therapy_Speak_Gone_Wrong.docx"
     doc.save(out)
     return out
@@ -1687,10 +1894,21 @@ def make_website():
             info = ASSETS[key]
             asset_links.append(f'<a href="{info["url"]}" target="_blank" rel="noreferrer">{info["title"]} ↗</a>')
         role_text = "<br>".join(scene["roles"])
+        comment_source_markup = ""
+        if scene["no"] == 1:
+            audit_items = []
+            for item in SCENE1_COMMENT_SOURCES:
+                url_markup = (f'<a href="{escape(item["url"])}" target="_blank" rel="noreferrer">{escape(item["url"])}</a>'
+                              if item["url"] else "Tidak ada URL publik")
+                audit_items.append(
+                    f'<li><b>{escape(item["id"].upper())} · {escape(item["platform"])}</b> · '
+                    f'“{escape(item["quote"])}”<br>{url_markup}<br>{escape(item["kind"])} · Tanggal akses: {escape(item["accessed"])}</li>'
+                )
+            comment_source_markup = '<div><dt>Public comment source audit</dt><dd><ul class="comment-source-list">' + "".join(audit_items) + '</ul></dd></div>'
         if scene["no"] == 2:
             frame_markup = '''<div class="frame-stack">
               <section class="frame-card"><div class="frame-label"><b>02A · PHONE + COMMENT SCROLL</b><span>00:30–00:45</span></div><a href="scenes/scene-02a-comment-scroll.svg" target="_blank" aria-label="Open editable SVG for Scene 2A"><img src="scenes/scene-02a-comment-scroll.svg" alt="Cream living room with TV and art at left, an espresso phone in the center, and the reclining man on a sage sofa at right"></a><div class="file-links"><a href="scenes/scene-02a-comment-scroll.svg" download>Download editable SVG</a><a href="previews/scene-02a-comment-scroll.png" download>Download PNG preview</a></div></section>
-              <section class="frame-card"><div class="frame-label"><b>02B · HASHTAG CLOUD</b><span>00:45–00:58</span></div><a href="scenes/scene-02b-hashtag-cloud.svg" target="_blank" aria-label="Open editable SVG for Scene 2B"><img src="scenes/scene-02b-hashtag-cloud.svg" alt="Overlapping hashtag cards fill the cream frame"></a><div class="file-links"><a href="scenes/scene-02b-hashtag-cloud.svg" download>Download editable SVG</a><a href="previews/scene-02b-hashtag-cloud.png" download>Download PNG preview</a></div></section>
+              <section class="frame-card"><div class="frame-label"><b>02B · HASHTAG CLOUD</b><span>00:45–00:58</span></div><a href="scenes/scene-02b-hashtag-cloud.svg" target="_blank" aria-label="Open editable SVG for Scene 2B"><img src="scenes/scene-02b-hashtag-cloud.svg" alt="Dense cream handwritten hashtags overlap across a deep plum frame"></a><div class="file-links"><a href="scenes/scene-02b-hashtag-cloud.svg" download>Download editable SVG</a><a href="previews/scene-02b-hashtag-cloud.png" download>Download PNG preview</a></div></section>
               <section class="frame-card"><div class="frame-label"><b>02C · ON-SCREEN TEXT</b><span>00:58–01:05</span></div><a href="scenes/scene-02c-on-screen-text.svg" target="_blank" aria-label="Open editable SVG for Scene 2C"><img src="scenes/scene-02c-on-screen-text.svg" alt="Centered sage and terracotta statements on a cream background"></a><div class="file-links"><a href="scenes/scene-02c-on-screen-text.svg" download>Download editable SVG</a><a href="previews/scene-02c-on-screen-text.png" download>Download PNG preview</a></div></section>
               <section class="frame-card"><div class="frame-label"><b>02 · SCROLL COMPONENTS</b><span>6 extra comments</span></div><p class="component-copy">The six separate SVG groups use IDs comment-05 through comment-10, ready to animate inside the phone feed.</p><div class="file-links"><a href="scenes/scene-02-komponen.svg" target="_blank">Open SVG components</a><a href="scenes/scene-02-komponen.svg" download>Download SVG</a><a href="previews/scene-02-komponen.png" target="_blank">Preview sheet</a></div></section>
             </div>'''
@@ -1715,29 +1933,29 @@ def make_website():
         rows.append(f'''<article class="board-row">
           <header class="row-meta"><span class="scene-number">{scene['no']:02d}</span><span class="time">{scene['time']}</span><h2>{scene['title']}</h2><p>{scene['visual']}</p></header>
           <div class="row-frame">{frame_markup}</div>
-          <dl class="row-notes"><div><dt>On-screen text</dt><dd>{scene['screen'].replace(chr(10), '<br>')}</dd></div><div><dt>Motion / camera</dt><dd>{scene['motion']}</dd></div><div><dt>Script / voice-over</dt><dd>{script_markup}</dd></div><div><dt>Assets & roles</dt><dd>{role_text}</dd><p class="asset-sources">{' · '.join(asset_links) if asset_links else 'Custom editable SVG vectors; no external illustration.'}</p></div></dl>
+          <dl class="row-notes"><div><dt>On-screen text</dt><dd>{scene['screen'].replace(chr(10), '<br>')}</dd></div><div><dt>Motion / camera</dt><dd>{scene['motion']}</dd></div><div><dt>Script / voice-over</dt><dd>{script_markup}</dd></div><div><dt>Assets & roles</dt><dd>{role_text}</dd><p class="asset-sources">{' · '.join(asset_links) if asset_links else 'Custom editable SVG vectors; no external illustration.'}</p></div>{comment_source_markup}</dl>
         </article>''')
     html = '''<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Editable production board with twenty-one SVG animation frames for Therapy Speak Gone Wrong.">
+<meta name="description" content="Editable production board with sixteen SVG animation frames for Therapy Speak Gone Wrong.">
 <title>Therapy Speak Gone Wrong · Production Board</title>
 <style>
 :root{--ink:#2a1f2d;--plum:#3d2645;--sage:#7fb89a;--terracotta:#e4572e;--mustard:#f2b134;--peach:#ffc4a3;--cream:#fff6ec;--blue:#3d2645;--blue-dark:#3d2645;--paper:#fff6ec;--line:#e8dacf;--muted:#665967;--coral:#e4572e;--white:#fff;--shadow:0 12px 30px rgba(42,31,45,.09)}
-*{box-sizing:border-box}html{background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}body{margin:0;padding:42px 28px 92px}.shell{max-width:1560px;margin:0 auto}.hero{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:end;margin:8px 0 32px}.eyebrow{color:var(--blue-dark);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}.hero h1{max-width:920px;margin:12px 0 12px;font-size:clamp(38px,5.5vw,76px);line-height:.98;letter-spacing:-.055em}.hero p{max-width:760px;margin:0;color:var(--muted);font-size:16px;line-height:1.55}.hero-actions{display:flex;flex-direction:column;gap:9px;align-items:stretch}.action{display:inline-block;padding:12px 16px;border:1px solid var(--line);border-radius:999px;background:var(--white);color:var(--ink);font-size:13px;font-weight:700;text-align:center;text-decoration:none}.action.primary{border-color:var(--blue);background:var(--blue);color:var(--white)}.style-strip{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:28px 0 18px;padding:15px 18px;border:1px solid var(--line);border-radius:14px;background:var(--white);color:var(--muted);font-size:12px}.swatch{display:inline-flex;align-items:center;gap:6px}.swatch i{width:15px;height:15px;border:1px solid #d5dce2;border-radius:50%}.board{display:grid;gap:13px}.board-row{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;align-items:stretch;padding:15px;border:1px solid var(--line);border-radius:17px;background:var(--white);box-shadow:var(--shadow)}.row-meta{display:flex;flex-direction:column;align-items:flex-start;padding:5px 0}.scene-number{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--ink);color:white;font-size:12px;font-weight:700}.time{margin:12px 0 9px;color:var(--blue-dark);font-size:11px;font-weight:700;letter-spacing:.08em}.row-meta h2{margin:0;font-size:19px;line-height:1.12;letter-spacing:-.02em}.row-meta p{margin:12px 0 0;color:var(--muted);font-size:12px;line-height:1.45}.row-frame{min-width:0;display:flex;flex-direction:column;justify-content:center}.row-frame img{display:block;width:100%;aspect-ratio:16/9;height:auto;object-fit:contain;object-position:center;border-radius:10px;background:#fff6ec}.frame-stack,.case-frame-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:22px}.frame-card{padding:9px;border:1px solid var(--line);border-radius:12px;background:#fffaf5}.frame-label{display:flex;justify-content:space-between;gap:8px;margin-bottom:7px;color:var(--blue-dark);font-size:10px;letter-spacing:.04em}.frame-label span{color:var(--muted);font-weight:400}.component-copy{margin:0;color:var(--muted);font-size:11px;line-height:1.45}.file-links{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;padding:9px 2px 0}.file-links a,.asset-sources a{color:var(--blue-dark);font-size:11px;font-weight:700;text-decoration:none}.file-links a:hover,.asset-sources a:hover{text-decoration:underline}.row-notes{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;align-content:center;margin:0;padding:2px 4px}.row-notes div{min-width:0}.row-notes dt{margin-bottom:4px;color:var(--blue-dark);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}.row-notes dd{margin:0;color:#50616d;font-size:11px;line-height:1.4}.asset-sources{margin:7px 0 0}.asset-sources a{margin-right:6px}.audit{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;padding:20px;border:1px solid var(--line);border-radius:16px;background:#fff0e6}.audit h2{margin:0 0 8px;font-size:16px}.audit p{margin:0;color:#566974;font-size:12px;line-height:1.5}.footer{margin-top:24px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:11px;line-height:1.5}.footer a{color:var(--blue-dark)}
+*{box-sizing:border-box}html{background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}body{margin:0;padding:42px 28px 92px}.shell{max-width:1560px;margin:0 auto}.hero{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:end;margin:8px 0 32px}.eyebrow{color:var(--blue-dark);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}.hero h1{max-width:920px;margin:12px 0 12px;font-size:clamp(38px,5.5vw,76px);line-height:.98;letter-spacing:-.055em}.hero p{max-width:760px;margin:0;color:var(--muted);font-size:16px;line-height:1.55}.hero-actions{display:flex;flex-direction:column;gap:9px;align-items:stretch}.action{display:inline-block;padding:12px 16px;border:1px solid var(--line);border-radius:999px;background:var(--white);color:var(--ink);font-size:13px;font-weight:700;text-align:center;text-decoration:none}.action.primary{border-color:var(--blue);background:var(--blue);color:var(--white)}.style-strip{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:28px 0 18px;padding:15px 18px;border:1px solid var(--line);border-radius:14px;background:var(--white);color:var(--muted);font-size:12px}.swatch{display:inline-flex;align-items:center;gap:6px}.swatch i{width:15px;height:15px;border:1px solid #d5dce2;border-radius:50%}.board{display:grid;gap:13px}.board-row{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;align-items:stretch;padding:15px;border:1px solid var(--line);border-radius:17px;background:var(--white);box-shadow:var(--shadow)}.row-meta{display:flex;flex-direction:column;align-items:flex-start;padding:5px 0}.scene-number{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--ink);color:white;font-size:12px;font-weight:700}.time{margin:12px 0 9px;color:var(--blue-dark);font-size:11px;font-weight:700;letter-spacing:.08em}.row-meta h2{margin:0;font-size:19px;line-height:1.12;letter-spacing:-.02em}.row-meta p{margin:12px 0 0;color:var(--muted);font-size:12px;line-height:1.45}.row-frame{min-width:0;display:flex;flex-direction:column;justify-content:center}.row-frame img{display:block;width:100%;aspect-ratio:16/9;height:auto;object-fit:contain;object-position:center;border-radius:10px;background:#fff6ec}.frame-stack,.case-frame-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:22px}.frame-card{padding:9px;border:1px solid var(--line);border-radius:12px;background:#fffaf5}.frame-label{display:flex;justify-content:space-between;gap:8px;margin-bottom:7px;color:var(--blue-dark);font-size:10px;letter-spacing:.04em}.frame-label span{color:var(--muted);font-weight:400}.component-copy{margin:0;color:var(--muted);font-size:11px;line-height:1.45}.file-links{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;padding:9px 2px 0}.file-links a,.asset-sources a{color:var(--blue-dark);font-size:11px;font-weight:700;text-decoration:none}.file-links a:hover,.asset-sources a:hover{text-decoration:underline}.row-notes{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;align-content:center;margin:0;padding:2px 4px}.row-notes div{min-width:0}.row-notes dt{margin-bottom:4px;color:var(--blue-dark);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}.row-notes dd{margin:0;color:#50616d;font-size:11px;line-height:1.4}.asset-sources{margin:7px 0 0}.asset-sources a{margin-right:6px}.comment-source-list{margin:4px 0 0;padding-left:17px}.comment-source-list li{margin:0 0 8px;color:#50616d;font-size:10px;line-height:1.45;overflow-wrap:anywhere}.comment-source-list a{color:var(--blue-dark);font-weight:700}.audit{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;padding:20px;border:1px solid var(--line);border-radius:16px;background:#fff0e6}.audit h2{margin:0 0 8px;font-size:16px}.audit p{margin:0;color:#566974;font-size:12px;line-height:1.5}.footer{margin-top:24px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:11px;line-height:1.5}.footer a{color:var(--blue-dark)}
 @media(max-width:1100px){.board-row{grid-template-columns:minmax(0,1fr)}.row-notes{grid-column:auto;grid-template-columns:1fr 1fr}.hero{grid-template-columns:1fr}.hero-actions{flex-direction:row;justify-content:flex-start}.action{min-width:180px}}
 @media(max-width:700px){body{padding:24px 12px 60px}.hero h1{font-size:42px}.board-row{grid-template-columns:1fr;gap:12px;padding:13px}.row-meta{display:grid;grid-template-columns:40px 1fr;column-gap:8px;align-items:center}.scene-number{grid-row:span 2}.time{margin:0 0 4px}.row-meta h2{grid-column:2}.row-meta p{grid-column:1/-1;margin-top:10px}.row-notes{grid-column:auto;grid-template-columns:1fr}.hero-actions{flex-wrap:wrap}.action{min-width:0}.audit{grid-template-columns:1fr}}
 </style>
 </head>
 <body><main class="shell">
-<header class="hero"><div><div class="eyebrow">Editable production board · Layout C</div><h1>Therapy Speak Gone Wrong</h1><p>Seven scenes in twenty-one animation keyframes. Scene 3 returns to three independent examples. Scene 4 follows one 40-second domino chain: misunderstanding an emotion, misjudging Dina, conflict, stigma, then Dina alone as Raka begins to doubt. The narration stays verbatim from the script. Every frame is an editable SVG.</p></div><div class="hero-actions"><a class="action primary" href="Storyboard_Therapy_Speak_Gone_Wrong.docx" download>Download Word storyboard</a><a class="action" href="Storyboard_Editable_Source.zip" download>Download editable source bundle</a></div></header>
+<header class="hero"><div><div class="eyebrow">Editable production board · Layout C</div><h1>Therapy Speak Gone Wrong</h1><p>Seven scenes in sixteen animation keyframes. Scene 1 is one continuous presenter scene with four sourced, anonymized public comments. Scene 3 keeps three independent examples. Scene 4 follows one 40-second domino chain through five beats and ends with Dina alone. The narration stays verbatim from the script. Every frame is an editable SVG.</p></div><div class="hero-actions"><a class="action primary" href="Storyboard_Therapy_Speak_Gone_Wrong.docx" download>Download Word storyboard</a><a class="action" href="Storyboard_Editable_Source.zip" download>Download editable source bundle</a></div></header>
 <div class="style-strip"><strong>Opsi B · Warm Peach &amp; Mustard</strong><span class="swatch"><i style="background:#3d2645"></i>deep plum</span><span class="swatch"><i style="background:#7fb89a"></i>sage</span><span class="swatch"><i style="background:#e4572e"></i>terracotta</span><span class="swatch"><i style="background:#f2b134"></i>mustard</span><span class="swatch"><i style="background:#ffc4a3"></i>peach</span><span class="swatch"><i style="background:#fff6ec"></i>cream</span><span class="swatch"><i style="background:#2a1f2d"></i>espresso</span><span>· terracotta for mistaken labels; sage for corrections</span></div>
 <section class="board" aria-label="Seven scene production board">
 ''' + "\n".join(rows) + '''
 </section>
-<section class="audit"><div><h2>Visual audit</h2><p>Scene 3 has three independent case frames and a centered closing frame. Case 2 uses the original Student Stress character with separate tear and missed-target overlays; the previous grade card is gone. Scene 4 contains five frames over 40 seconds with the original narration: domino 1 marks self-misunderstanding; dominoes 2–3 mark misjudgment and conflict; domino 4 marks stigma and exclusion. The label remains Raka’s unsupported conclusion, not a claim about Dina. All frames were rendered and checked at full size and on the contact sheet. Co-workers · Rafiki uses 36/158 changed or omitted drawable elements (22.8%) in the shared frames and a conservative 63/158 (39.9%) in the final isolation frame, preserving at least 60.1%.</p></div><div><h2>Editing & attribution</h2><p>Open or download each SVG to edit its vector layers and text. The source bundle contains the HTML board and all scene SVGs. <a href="https://openpeeps.com/" target="_blank" rel="noreferrer">Open Peeps standing-16</a> is from the public-domain CC0 library. <a href="https://storyset.com/illustration/co-workers/rafiki" target="_blank" rel="noreferrer">Co-workers · Rafiki</a> is free with attribution; cite Storyset when publishing and review the <a href="https://storyset.com/terms" target="_blank" rel="noreferrer">Storyset terms</a>.</p></div></section>
-<footer class="footer">Scene 1 uses an Open Peeps placeholder presenter that can be replaced by live footage. Scene backgrounds, chat screenshots, chips, labels, cards, connectors, dominoes, and text are editable SVG layers. No images were generated.</footer>
+<section class="audit"><div><h2>Visual audit</h2><p>Scene 3 remains three independent case frames and a centered closing frame. Scene 4 has five beats with its original narration and updated numbering: 4A, 4B, 4B2, 4C, 4D. Raka’s 4C post is visible on his laptop and expands into notifications; 4D contains Dina alone with no table or Raka. The Co-workers source changes 57/158 drawable elements in 4D (36.1%), leaving 101/158 unchanged. Scene 1 has one editable composition with sequential comment groups. Scene 2B contains 56 independently editable handwritten hashtags (six script terms plus fifty related terms) with accelerating appearance timings. All retained frames were rendered and inspected.</p></div><div><h2>Editing &amp; attribution</h2><p>Open or download each SVG to edit its vector layers and text. The source bundle contains the HTML board, all SVG frames, source illustration assets, and the Caveat font/license. The <a href="https://freesvg.org/girl-pointing" target="_blank" rel="noreferrer">Girl pointing · OpenClipart / FreeSVG</a> presenter is public domain CC0. <a href="https://github.com/google/fonts/tree/main/ofl/caveat" target="_blank" rel="noreferrer">Caveat</a> is distributed under SIL OFL 1.1. <a href="https://storyset.com/illustration/co-workers/rafiki" target="_blank" rel="noreferrer">Co-workers · Rafiki</a> and <a href="https://storyset.com/illustration/student-stress/rafiki" target="_blank" rel="noreferrer">Student Stress · Rafiki</a> are free with attribution; cite Storyset when publishing and review the <a href="https://storyset.com/terms" target="_blank" rel="noreferrer">Storyset terms</a>.</p></div></section>
+<footer class="footer">Scene 1 uses a CC0 placeholder presenter that can be replaced by live footage. Scene backgrounds, public-comment cards, cloud words, labels, cards, connectors, notifications, and text are editable SVG layers. No images were generated.</footer>
 </main></body></html>'''
     output = ROOT / "index.html"
     output.write_text(html, encoding="utf-8")
@@ -1756,8 +1974,9 @@ def make_zip():
             archive.write(readme, "README.md")
         for path in sorted(SCENES_DIR.glob("*.svg")):
             archive.write(path, "scenes/" + path.name)
-        for path in sorted(ASSETS_DIR.glob("*.svg")):
-            archive.write(path, "assets/" + path.name)
+        for pattern in ("*.svg", "*.ttf", "*.txt"):
+            for path in sorted(ASSETS_DIR.glob(pattern)):
+                archive.write(path, "assets/" + path.name)
         for info in ASSETS.values():
             source_asset = info["file"]
             if source_asset.exists() and source_asset.parent != ASSETS_DIR:

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="frame-title frame-desc" data-frame="04D">
-  <title id="frame-title">04D · Stigma spreads through the office group chat</title>
-  <desc id="frame-desc">Raka's unsupported label spreads through the group chat. Coworkers begin to avoid Dina; Raka posts a warning and removes her, believing he is protecting others.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="frame-title frame-desc" data-frame="04B">
+  <title id="frame-title">04B · Raka and Dina argue in a work meeting</title>
+  <desc id="frame-desc">At a work meeting, Raka hears Dina's feedback as a personal attack. Their two editable dialogue bubbles show both lines and keep the disagreement ambiguous.</desc>
   <metadata>Storyset Co-workers Rafiki. 36 of 158 original drawable elements changed or omitted (22.8%): 28 blue elements recolored plum, 7 placeholder-chat elements omitted, and Raka's mouth adjusted. 122 of 158 source elements (77.2%) remain unchanged. All dialogue and interface overlays are separate editable SVG groups.</metadata>
   <rect x="0" y="0" width="1920" height="1080" fill="#FFF6EC" rx="0" id="scene-background" />
   <svg x="0" y="74" width="1000" height="1000" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet" overflow="hidden" aria-label="Co-workers · Rafiki illustration, Storyset Rafiki">
@@ -171,60 +171,46 @@
       <path d="M173.61,221h-.92c-.18,0-.32-.1-.31-.21l.43-4c0-.12.17-.21.36-.21h.92c.18,0,.32.09.31.21l-.43,4C174,220.88,173.8,221,173.61,221Z" style="fill:#263238" />
     </g>
   </svg>
-  <g id="group-chat-stigma-and-removal">
-    <rect x="1048" y="72" width="816" height="808" fill="#FFF6EC" rx="30" stroke="#3D2645" stroke-width="4" />
-    <rect x="1048" y="72" width="816" height="76" fill="#3D2645" rx="28" />
-    <rect x="1048" y="126" width="816" height="22" fill="#3D2645" rx="0" />
-    <text x="1090" y="123" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="start" letter-spacing="1.1">
-      <tspan x="1090" dy="0">GRUP KANTOR</tspan>
+  <g id="raka-quote">
+    <rect x="720" y="90" width="850" height="220" fill="#3D2645" rx="28" />
+    <path d="M806,300 L685,434 L916,300 Z" fill="#3D2645" />
+    <text x="760" y="137" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="start" letter-spacing="1.2">
+      <tspan x="760" dy="0">RAKA</tspan>
     </text>
-    <circle cx="1808" cy="110" r="10" fill="#E4572E" />
-    <rect x="1084" y="172" width="744" height="82" fill="#FFF6EC" rx="17" stroke="#FFC4A3" stroke-width="2" />
-    <text x="1114" y="200" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" text-anchor="start" letter-spacing="1">
-      <tspan x="1114" dy="0">RAKA</tspan>
+    <text x="1145" y="213" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="600" text-anchor="middle" letter-spacing="0">
+      <tspan x="1145" dy="0">Kamu selalu bikin aku</tspan>
     </text>
-    <text x="1114" y="234" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="500" text-anchor="start" letter-spacing="0">
-      <tspan x="1114" dy="0">Dina narsistik.</tspan>
-    </text>
-    <rect x="1084" y="272" width="744" height="82" fill="#FFF6EC" rx="17" stroke="#FFC4A3" stroke-width="2" />
-    <text x="1114" y="300" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" text-anchor="start" letter-spacing="1">
-      <tspan x="1114" dy="0">TEMAN</tspan>
-    </text>
-    <text x="1114" y="334" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="500" text-anchor="start" letter-spacing="0">
-      <tspan x="1114" dy="0">Oh… pantes.</tspan>
-    </text>
-    <rect x="1084" y="372" width="744" height="82" fill="#FFF6EC" rx="17" stroke="#FFC4A3" stroke-width="2" />
-    <text x="1114" y="400" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" text-anchor="start" letter-spacing="1">
-      <tspan x="1114" dy="0">TEMAN</tspan>
-    </text>
-    <text x="1114" y="434" fill="#E4572E" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start" letter-spacing="0">
-      <tspan x="1114" dy="0">Aku skip kalau Dina ikut.</tspan>
-    </text>
-    <line x1="1084" y1="483" x2="1828" y2="483" stroke="#FFC4A3" stroke-width="3" stroke-linecap="round" />
-    <rect x="1084" y="503" width="744" height="186" fill="#FFF6EC" rx="22" stroke="#E4572E" stroke-width="4" />
-    <text x="1122" y="544" fill="#E4572E" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="start" letter-spacing="1.3">
-      <tspan x="1122" dy="0">PERINGATAN</tspan>
-    </text>
-    <text x="1122" y="590" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="600" text-anchor="start" letter-spacing="0">
-      <tspan x="1122" dy="0">Hati-hati sama Dina,</tspan>
-    </text>
-    <text x="1122" y="628" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="start" letter-spacing="0">
-      <tspan x="1122" dy="0">dia narsistik.</tspan>
-    </text>
-    <rect x="1084" y="711" width="744" height="70" fill="#E4572E" rx="17" />
-    <text x="1456" y="755" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" text-anchor="middle" letter-spacing="0.5">
-      <tspan x="1456" dy="0">KELUARKAN DINA DARI GRUP</tspan>
-    </text>
-    <text x="1122" y="829" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="600" text-anchor="start" letter-spacing="0">
-      <tspan x="1122" dy="0">Dina dikeluarkan. · Raka merasa sedang melindungi yang lain.</tspan>
+    <text x="1145" y="256" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="600" text-anchor="middle" letter-spacing="0">
+      <tspan x="1145" dy="0">merasa salah!</tspan>
     </text>
   </g>
-  <g id="domino-4-stigma" transform="rotate(13 1781.0 964.0)">
-    <rect x="1744" y="898" width="74" height="132" fill="#2A1F2D" rx="16" stroke="#2A1F2D" stroke-width="3" />
-    <line x1="1756" y1="964.0" x2="1806" y2="964.0" stroke="#FFF6EC" stroke-width="3" stroke-linecap="round" />
-    <circle cx="1767.68" cy="931.0" r="6" fill="#FFF6EC" />
-    <circle cx="1794.32" cy="948.16" r="6" fill="#FFF6EC" />
-    <circle cx="1769.16" cy="989.08" r="6" fill="#FFF6EC" />
-    <circle cx="1794.32" cy="1006.24" r="6" fill="#FFF6EC" />
+  <g id="dina-quote">
+    <rect x="70" y="520" width="790" height="220" fill="#FFF6EC" rx="28" stroke="#3D2645" stroke-width="4" />
+    <path d="M336,520 L325,352 L392,520 Z" fill="#FFF6EC" stroke="#3D2645" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="110" y="562" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="start" letter-spacing="1.2">
+      <tspan x="110" dy="0">DINA</tspan>
+    </text>
+    <text x="465" y="638" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="middle" letter-spacing="0">
+      <tspan x="465" dy="0">Aku cuma kasih masukan.</tspan>
+    </text>
+    <text x="465" y="686" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="middle" letter-spacing="0">
+      <tspan x="465" dy="0">Jangan baper terus, deh.</tspan>
+    </text>
+  </g>
+  <g id="domino-2-misjudgment" transform="rotate(-14 1689.0 872.0)">
+    <rect x="1650" y="800" width="78" height="144" fill="#E4572E" rx="16" stroke="#E4572E" stroke-width="3" />
+    <line x1="1662" y1="872.0" x2="1716" y2="872.0" stroke="#FFF6EC" stroke-width="3" stroke-linecap="round" />
+    <circle cx="1674.96" cy="836.0" r="6" fill="#FFF6EC" />
+    <circle cx="1703.04" cy="854.72" r="6" fill="#FFF6EC" />
+    <circle cx="1676.52" cy="899.36" r="6" fill="#FFF6EC" />
+    <circle cx="1703.04" cy="918.08" r="6" fill="#FFF6EC" />
+  </g>
+  <g id="domino-3-relationship-conflict" transform="rotate(10 1779.0 896.0)">
+    <rect x="1740" y="824" width="78" height="144" fill="#3D2645" rx="16" stroke="#3D2645" stroke-width="3" />
+    <line x1="1752" y1="896.0" x2="1806" y2="896.0" stroke="#FFF6EC" stroke-width="3" stroke-linecap="round" />
+    <circle cx="1764.96" cy="860.0" r="6" fill="#FFF6EC" />
+    <circle cx="1793.04" cy="878.72" r="6" fill="#FFF6EC" />
+    <circle cx="1766.52" cy="923.36" r="6" fill="#FFF6EC" />
+    <circle cx="1793.04" cy="942.08" r="6" fill="#FFF6EC" />
   </g>
 </svg>
