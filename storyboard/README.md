@@ -2,6 +2,8 @@
 
 This board contains seven scenes and 16 standalone, editable 16:9 animation frames. `Script Video Kode Etik.pdf` is the authority for dialogue and narration. Scene 1 presenter dialogue and the Scene 3–4 voice-over remain verbatim; Scene 3 stays as three independent cases.
 
+The separate [Scene 2 motion study](motion.html) is an editable 35-second player built from the storyboard SVG layers. It animates the room, shelves, flowers, character and hand, comment scroll, hashtag cloud, and closing statements with Anime.js 4.5.0. Its play, pause, restart, seek, and scene-jump controls remain available on mobile; the reduced-motion setting opens a static frame strip.
+
 ## Revised scenes
 
 ### Scene 1 · The Hook · 00:00–00:30

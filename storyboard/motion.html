@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="id" data-type="software">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="page-type" content="software">
+  <meta name="site-kind" content="software">
+  <meta name="description" content="Motion study editable untuk Scene 2 Therapy Speak Gone Wrong, dibuat dari layer SVG storyboard dengan Anime.js.">
+  <title>Scene 02 · Motion Study — Therapy Speak Gone Wrong</title>
+  <style>
+    @font-face {
+      font-family: Caveat;
+      src: url("assets/Caveat[wght].ttf") format("truetype");
+      font-display: swap;
+    }
+    :root {
+      color-scheme: dark;
+      --plum: #3d2645;
+      --sage: #7fb89a;
+      --terracotta: #e4572e;
+      --mustard: #f2b134;
+      --peach: #ffc4a3;
+      --cream: #fff6ec;
+      --espresso: #2a1f2d;
+      --line: rgb(255 246 236 / 16%);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--espresso);
+      color: var(--cream);
+    }
+    * { box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      background:
+        radial-gradient(circle at 88% 4%, rgb(127 184 154 / 14%), transparent 27rem),
+        var(--espresso);
+    }
+    a { color: inherit; }
+    .page { width: min(100% - 48px, 1480px); margin: 0 auto; }
+    .topbar {
+      display: flex;
+      min-height: 78px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      border-bottom: 1px solid var(--line);
+    }
+    .brand { display: flex; align-items: center; gap: 12px; font-size: 12px; font-weight: 800; letter-spacing: .13em; }
+    .brand-mark { display: grid; width: 32px; height: 32px; place-items: center; border-radius: 10px; background: var(--mustard); color: var(--espresso); font-size: 16px; letter-spacing: 0; }
+    .top-links { display: flex; align-items: center; gap: 18px; font-size: 13px; font-weight: 650; }
+    .top-links a { color: var(--cream); text-decoration-color: rgb(255 246 236 / 35%); text-underline-offset: 4px; }
+    .top-links a:hover { color: var(--mustard); text-decoration-color: currentColor; }
+    main { padding: 38px 0 30px; }
+    .intro { display: flex; align-items: end; justify-content: space-between; gap: 32px; margin-bottom: 22px; }
+    .kicker { margin: 0 0 9px; color: var(--sage); font-size: 11px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    h1 { max-width: 760px; margin: 0; font-size: clamp(32px, 5vw, 62px); line-height: .98; letter-spacing: -.055em; }
+    .intro-note { max-width: 285px; margin: 0 0 3px; color: rgb(255 246 236 / 68%); font-size: 14px; line-height: 1.5; }
+    .player {
+      overflow: hidden;
+      border: 1px solid rgb(255 246 236 / 21%);
+      border-radius: 22px;
+      background: #190f1e;
+      box-shadow: 0 28px 90px rgb(0 0 0 / 28%);
+    }
+    .stage {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+      background: var(--plum);
+      isolation: isolate;
+    }
+    .stage-fallback, .frame-slot, .art-frame { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .stage-fallback { display: block; object-fit: contain; background: var(--cream); }
+    .stage.is-live .stage-fallback { display: none; }
+    .frame-slot { z-index: 1; }
+    .art-frame { display: block; opacity: 0; pointer-events: none; }
+    #frame-02a #shelf-upper-flower, #frame-02a #shelf-lower-flower {
+      transform-box: fill-box;
+      transform-origin: 50% 100%;
+    }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+    .transport {
+      display: grid;
+      grid-template-columns: auto auto minmax(120px, 1fr) auto;
+      align-items: center;
+      gap: 12px;
+      padding: 15px 18px 13px;
+      background: #241729;
+    }
+    button { font: inherit; }
+    .control {
+      display: inline-flex;
+      min-height: 42px;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 0 16px;
+      border: 1px solid rgb(255 246 236 / 22%);
+      border-radius: 11px;
+      background: transparent;
+      color: var(--cream);
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 760;
+      transition: transform .18s ease, background-color .18s ease, border-color .18s ease;
+    }
+    .control:hover { transform: translateY(-2px); border-color: var(--peach); }
+    .control:active { transform: translateY(1px) scale(.98); }
+    .control:focus-visible, .beat:focus-visible, input:focus-visible, a:focus-visible { outline: 3px solid var(--mustard); outline-offset: 3px; }
+    .control.primary { border-color: var(--mustard); background: var(--mustard); color: var(--espresso); }
+    .control.primary:hover { background: #ffd06b; }
+    .control .icon { width: 14px; height: 14px; fill: currentColor; }
+    .scrub-wrap { display: flex; align-items: center; gap: 12px; }
+    input[type="range"] { width: 100%; height: 5px; accent-color: var(--mustard); cursor: pointer; }
+    .time-readout { min-width: 82px; color: rgb(255 246 236 / 76%); font-size: 12px; font-variant-numeric: tabular-nums; text-align: right; }
+    .beat-track { display: grid; grid-template-columns: 15fr 13fr 7fr; gap: 8px; padding: 0 18px 17px; background: #241729; }
+    .beat {
+      display: flex;
+      min-height: 66px;
+      align-items: center;
+      gap: 11px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgb(255 246 236 / 3%);
+      color: var(--cream);
+      cursor: pointer;
+      text-align: left;
+      transition: border-color .2s ease, background-color .2s ease;
+    }
+    .beat:hover, .beat[aria-current="step"] { border-color: var(--sage); background: rgb(127 184 154 / 12%); }
+    .beat-code { display: grid; width: 36px; height: 36px; flex: 0 0 auto; place-items: center; border-radius: 10px; background: var(--plum); color: var(--peach); font-size: 11px; font-weight: 850; }
+    .beat-copy { display: grid; gap: 3px; }
+    .beat-copy strong { font-size: 12px; }
+    .beat-copy small { color: rgb(255 246 236 / 52%); font-size: 10px; }
+    .load-error { display: none; margin: 12px 0 0; padding: 10px 13px; border-left: 3px solid var(--terracotta); background: rgb(228 87 46 / 10%); color: var(--cream); font-size: 13px; }
+    .load-error.is-visible { display: block; }
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: 18px;
+      padding: 15px 2px 0;
+      border-top: 1px solid var(--line);
+      color: rgb(255 246 236 / 54%);
+      font-size: 11px;
+      line-height: 1.5;
+    }
+    .footer a { color: var(--peach); text-underline-offset: 3px; }
+    .reduced-keyframes { display: none; gap: 8px; margin-top: 14px; }
+    .reduced-keyframes img { display: block; width: 100%; border-radius: 8px; }
+    .reduced-motion .reduced-keyframes { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); }
+    .reduced-motion .stage.is-live .stage-fallback { display: block; }
+    .reduced-motion .stage.is-live .art-frame { display: none; }
+    .time-readout { white-space: nowrap; }
+    @media (max-width: 760px) {
+      .page { width: min(100% - 24px, 1480px); }
+      .topbar { min-height: 64px; }
+      .brand { font-size: 10px; }
+      .top-links { gap: 12px; font-size: 11px; }
+      main { padding-top: 24px; }
+      .intro { display: block; margin-bottom: 15px; }
+      .intro-note { margin-top: 11px; font-size: 12px; }
+      .player { border-radius: 14px; }
+      .transport { grid-template-columns: auto auto 1fr; gap: 8px; padding: 11px 10px 9px; }
+      .scrub-wrap { grid-column: 1 / -1; grid-row: 2; }
+      .control { min-height: 39px; padding: 0 11px; font-size: 11px; }
+      .beat-track { gap: 5px; padding: 0 10px 11px; }
+      .beat { min-height: 58px; justify-content: center; padding: 7px 5px; }
+      .beat-code { width: 30px; height: 30px; font-size: 10px; }
+      .beat-copy strong { font-size: 10px; }
+      .beat-copy small { display: none; }
+      .footer { display: grid; gap: 8px; }
+    }
+    @media (max-width: 420px) {
+      .top-links a:first-child { display: none; }
+      h1 { font-size: 36px; }
+      .intro-note { max-width: 100%; }
+      .beat { gap: 5px; }
+      .beat-code { width: 27px; height: 27px; }
+      .beat-copy strong { font-size: 9px; }
+      .time-readout { min-width: 70px; font-size: 11px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">02</span><span>THERAPY SPEAK GONE WRONG · MOTION STUDY</span></div>
+      <nav class="top-links" aria-label="Navigasi"><a href="index.html">Storyboard</a><a href="scenes/scene-02a-comment-scroll.svg" target="_blank" rel="noreferrer">Buka SVG Scene 02A ↗</a></nav>
+    </header>
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <div><p class="kicker">Scene 02 · 00:30—01:05 · 35 detik</p><h1 id="page-title">Dari scroll ke label.</h1></div>
+        <p class="intro-note">Ruang hidup terbentuk, komentar bergerak, istilah memenuhi layar, lalu dua pesan penutup muncul sesuai urutan naskah.</p>
+      </section>
+      <section class="player" aria-label="Pemutar motion graphic Scene 2">
+        <div class="stage" id="motion-stage" aria-label="Animasi SVG layar penuh: ruang, ponsel, komentar, hashtag, dan teks penutup">
+          <img class="stage-fallback" src="previews/scene-02a-comment-scroll.png" alt="Ruang berwarna dengan TV di kiri, ponsel berisi komentar di tengah, dan seorang pria bersantai di sofa di kanan">
+          <div class="frame-slot" id="scene-canvas"></div>
+        </div>
+        <output class="sr-only" id="beat-status" aria-live="polite">02A · KOMENTAR</output>
+        <div class="transport" aria-label="Kontrol animasi">
+          <button class="control primary" id="play-toggle" type="button" aria-label="Putar animasi">Putar</button>
+          <button class="control" id="restart" type="button" aria-label="Ulangi dari awal">Ulangi</button>
+          <div class="scrub-wrap"><input id="scrubber" type="range" min="0" max="35000" step="50" value="0" aria-label="Posisi animasi"><output class="time-readout" id="time-readout" for="scrubber">00:00 / 00:35</output></div>
+        </div>
+        <div class="beat-track" aria-label="Lompat ke bagian scene">
+          <button class="beat" type="button" data-seek="0" aria-current="step"><span class="beat-code">02A</span><span class="beat-copy"><strong>Ruang + komentar</strong><small>00:30—00:45</small></span></button>
+          <button class="beat" type="button" data-seek="15000"><span class="beat-code">02B</span><span class="beat-copy"><strong>Cloud words</strong><small>00:45—00:58</small></span></button>
+          <button class="beat" type="button" data-seek="28000"><span class="beat-code">02C</span><span class="beat-copy"><strong>Pesan akhir</strong><small>00:58—01:05</small></span></button>
+        </div>
+      </section>
+      <p class="load-error" id="load-error" role="status">Motion belum bisa dimuat. Preview Scene 02A tetap tersedia; buka storyboard untuk frame lain.</p>
+      <div class="reduced-keyframes" aria-label="Tiga frame statis Scene 2 untuk preferensi gerak rendah">
+        <img src="scenes/scene-02a-comment-scroll.svg" alt="Frame 02A: ruang dengan ponsel dan komentar">
+        <img src="scenes/scene-02b-hashtag-cloud.svg" alt="Frame 02B: cloud words memenuhi layar">
+        <img src="scenes/scene-02c-on-screen-text.svg" alt="Frame 02C: dua pesan penutup di tengah">
+      </div>
+    </main>
+    <footer class="footer">
+      <span>Ilustrasi karakter dan sofa: <a href="https://storyset.com/illustration/feed/rafiki" target="_blank" rel="noreferrer">Feed · Rafiki</a>, digunakan dan diwarnai ulang sebagai SVG editable.</span>
+      <span>Animasi: <a href="https://animejs.com/documentation/" target="_blank" rel="noreferrer">Anime.js</a> · <a href="index.html">Kembali ke storyboard</a></span>
+    </footer>
+  </div>
+  <script type="module">
+    import { createTimeline, stagger } from 'https://cdn.jsdelivr.net/npm/animejs@4.5.0/+esm';
+
+    const DURATION = 35000;
+    const canvas = document.querySelector('#scene-canvas');
+    const stage = document.querySelector('#motion-stage');
+    const fallback = document.querySelector('.stage-fallback');
+    const playButton = document.querySelector('#play-toggle');
+    const restartButton = document.querySelector('#restart');
+    const scrubber = document.querySelector('#scrubber');
+    const timeReadout = document.querySelector('#time-readout');
+    const beatStatus = document.querySelector('#beat-status');
+    const loadError = document.querySelector('#load-error');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let timeline;
+    let lastBeat = '';
+
+    const frameFiles = [
+      ['frame-02a', 'scenes/scene-02a-comment-scroll.svg'],
+      ['frame-02b', 'scenes/scene-02b-hashtag-cloud.svg'],
+      ['frame-02c', 'scenes/scene-02c-on-screen-text.svg'],
+    ];
+
+    function isSvgTag(node, name) {
+      return node?.tagName?.toLowerCase() === name;
+    }
+
+    function removeMotionMarkup(svg) {
+      svg.querySelectorAll('animate, animateTransform, animateMotion, set').forEach(node => node.remove());
+      svg.querySelectorAll('title, desc, metadata').forEach(node => node.remove());
+      svg.setAttribute('role', 'presentation');
+      svg.setAttribute('aria-hidden', 'true');
+      svg.classList.add('art-frame');
+    }
+
+    async function loadFrame(id, url) {
+      const response = await fetch(url);
+      if (!response.ok) throw new Error(`Could not load ${url}`);
+      const documentSvg = new DOMParser().parseFromString(await response.text(), 'image/svg+xml');
+      const source = documentSvg.documentElement;
+      if (!isSvgTag(source, 'svg')) throw new Error(`Invalid SVG: ${url}`);
+      const svg = document.importNode(source, true);
+      svg.id = id;
+      svg.removeAttribute('width');
+      svg.removeAttribute('height');
+      svg.setAttribute('width', '100%');
+      svg.setAttribute('height', '100%');
+      removeMotionMarkup(svg);
+      canvas.append(svg);
+      return svg;
+    }
+
+    function formatTime(ms) {
+      const seconds = Math.floor(ms / 1000);
+      return `${String(Math.floor(seconds / 60)).padStart(2, '0')}:${String(seconds % 60).padStart(2, '0')}`;
+    }
+
+    function updateControls(instance) {
+      const current = Math.max(0, Math.min(DURATION, instance.currentTime));
+      scrubber.value = String(current);
+      timeReadout.value = `${formatTime(current)} / 00:35`;
+      timeReadout.textContent = `${formatTime(current)} / 00:35`;
+      const beat = current < 15000 ? '02A · KOMENTAR' : current < 28000 ? '02B · CLOUD WORDS' : '02C · PESAN AKHIR';
+      if (beat !== lastBeat) {
+        beatStatus.textContent = beat;
+        lastBeat = beat;
+        document.querySelectorAll('.beat').forEach(button => {
+          button.setAttribute('aria-current', Number(button.dataset.seek) === (current < 15000 ? 0 : current < 28000 ? 15000 : 28000) ? 'step' : 'false');
+        });
+      }
+      playButton.textContent = current >= DURATION - 30 ? 'Putar lagi' : instance.paused ? 'Putar' : 'Jeda';
+      playButton.setAttribute('aria-label', instance.paused ? 'Putar animasi' : 'Jeda animasi');
+    }
+
+    function placeExtraComments(feed, componentRoot) {
+      for (let number = 5; number <= 10; number += 1) {
+        const original = componentRoot.querySelector(`#comment-${String(number).padStart(2, '0')}`);
+        if (!original) continue;
+        const clone = document.importNode(original, true);
+        const row = number - 5;
+        clone.setAttribute('transform', `translate(666 ${859 + row * 166})`);
+        feed.append(clone);
+      }
+    }
+
+    function prepareMotion() {
+      const layer = id => document.querySelector(`#frame-02a #${id}`);
+      const frameA = document.querySelector('#frame-02a');
+      const frameB = document.querySelector('#frame-02b');
+      const frameC = document.querySelector('#frame-02c');
+      const feed = layer('comment-feed');
+
+      frameA.style.opacity = '1';
+      frameB.style.opacity = '0';
+      frameC.style.opacity = '0';
+      [
+        'room-background', 'room-ambient', 'room-floor', 'wall-art', 'television',
+        'media-console', 'shelf-upper-rail', 'shelf-lower-rail', 'shelf-upper-flower',
+        'shelf-lower-flower', 'sofa-shadow', 'reclining-sofa', 'phone-scroller',
+        'phone-shell', 'phone-header', 'comment-feed',
+      ].forEach(id => layer(id)?.setAttribute('opacity', '0'));
+      frameA.querySelectorAll('#console-books > g, #shelf-upper-books > g, #shelf-lower-books > g')
+        .forEach(node => node.setAttribute('opacity', '0'));
+      frameB.querySelectorAll('[id^="word-cloud-tag-"]').forEach(node => node.setAttribute('opacity', '0'));
+      frameC.querySelector('#understanding-statement')?.style.setProperty('opacity', '0');
+      frameC.querySelector('#misuse-statement')?.style.setProperty('opacity', '0');
+
+      const timeline = createTimeline({
+        autoplay: false,
+        defaults: { ease: 'outExpo' },
+        onUpdate: updateControls,
+        onComplete: updateControls,
+      });
+
+      timeline
+        .add('#room-background', { opacity: [0, 1], scale: [1.045, 1], duration: 1100, ease: 'outExpo' }, 0)
+        .add('#room-ambient', { opacity: [0, 1], scale: [.94, 1], duration: 950, ease: 'outCubic' }, 0)
+        .add('#room-floor', { opacity: [0, 1], translateY: [44, 0], duration: 750, ease: 'outExpo' }, 100)
+        .add('#wall-art', { opacity: [0, 1], translateX: [-82, 0], rotate: [-2, 0], duration: 900, ease: 'outBack' }, 170)
+        .add('#television', { opacity: [0, 1], translateX: [-105, 0], scale: [.97, 1], duration: 900, ease: 'outBack' }, 320)
+        .add('#media-console', { opacity: [0, 1], translateY: [42, 0], duration: 720, ease: 'outBack' }, 620)
+        .add('#console-plant', { scale: [.65, 1], rotate: [-9, 0], duration: 600, ease: 'outBack' }, 930)
+        .add('#console-books > g', { opacity: [0, 1], translateY: [26, 0], scale: [.8, 1], delay: stagger(90), duration: 520, ease: 'outBack' }, 1010)
+        .add('#shelf-upper-rail', { opacity: [0, 1], translateX: [110, 0], duration: 680, ease: 'outExpo' }, 740)
+        .add('#shelf-lower-rail', { opacity: [0, 1], translateX: [130, 0], duration: 680, ease: 'outExpo' }, 930)
+        .add('#shelf-upper-books > g, #shelf-lower-books > g', { opacity: [0, 1], translateY: [-42, 0], scale: [.72, 1], delay: stagger(66, { from: 'center' }), duration: 540, ease: 'outBack' }, 1120)
+        .add('#shelf-upper-flower, #shelf-lower-flower', { opacity: [0, 1], scale: [.2, 1], rotate: [-7, 0], delay: stagger(230), duration: 740, ease: 'outBack' }, 1450)
+        .add('#shelf-upper-petals', { scale: [.15, 1], rotate: [-38, 0], duration: 700, ease: 'outBack' }, 1780)
+        .add('#shelf-upper-flower', { rotate: [0, 2, -1, 0], duration: 1800, ease: 'inOutSine' }, 2250)
+        .add('#shelf-lower-flower', { rotate: [0, -1.5, 1, 0], duration: 1700, ease: 'inOutSine' }, 2550)
+        .add('#sofa-shadow', { opacity: [0, .15], scaleX: [.72, 1], duration: 800, ease: 'outSine' }, 1350)
+        .add('#reclining-sofa', { opacity: [0, 1], translateX: [125, 0], duration: 950, ease: 'outBack' }, 1570)
+        .add('#phone-scroller', { opacity: [0, 1], translateX: [74, 0], translateY: [16, 0], duration: 850, ease: 'outBack' }, 1930)
+        .add('#phone-shell', { opacity: [0, 1], translateY: [62, 0], scale: [.92, 1], duration: 950, ease: 'outBack' }, 2230)
+        .add('#phone-header', { opacity: [0, 1], translateY: [12, 0], duration: 500, ease: 'outCubic' }, 2800)
+        .add(feed, { opacity: [0, 1], duration: 500, ease: 'outSine' }, 3000)
+        .add('#phone-hand-motion', { rotate: [-5, 2, 0], duration: 460, ease: 'inOutSine' }, 3300)
+        .add('#phone-hand-motion', { rotate: [0, -3, 0], duration: 420, ease: 'inOutSine' }, 5800)
+        .add('#phone-scroll-thumb', { translateY: [0, 360], duration: 10000, ease: 'inOutSine' }, 4300)
+        .add(feed, { translateY: [0, -1160], duration: 10300, ease: 'inOutSine' }, 4300)
+        .add('#phone-hand-motion', { rotate: [0, 3, 0], duration: 420, ease: 'inOutSine' }, 9300)
+        .add('#phone-hand-motion', { rotate: [0, -2, 0], duration: 360, ease: 'inOutSine' }, 11900)
+        .add('#frame-02a', { opacity: [1, 0], duration: 620, ease: 'inOutSine' }, 14400)
+        .add('#frame-02b', { opacity: [0, 1], duration: 520, ease: 'outExpo' }, 14700);
+
+      const wordTags = [...frameB.querySelectorAll('[id^="word-cloud-tag-"]')];
+      const surrounding = wordTags.filter(tag => tag.dataset.scriptTerm !== 'true');
+      const scriptTerms = wordTags.filter(tag => tag.dataset.scriptTerm === 'true');
+      timeline
+        .add(surrounding, { opacity: [0, 1], scale: [.35, 1], duration: 420,
+          delay: (_target, index) => Math.round(300 * Math.pow(.91, index)), ease: 'outBack' }, 15050)
+        .add(scriptTerms, { opacity: [0, 1], scale: [.38, 1], duration: 640,
+          delay: stagger(100, { from: 'center' }), ease: 'outBack' }, 16600)
+        .add('#frame-02b', { opacity: [1, 0], duration: 650, ease: 'inOutSine' }, 27600)
+        .add('#frame-02c', { opacity: [0, 1], duration: 550, ease: 'outExpo' }, 27850)
+        .add('#understanding-statement', { opacity: [0, 1], translateY: [56, 0], scale: [.92, 1], duration: 850, ease: 'outBack' }, 28200)
+        .add('#misuse-statement', { opacity: [0, 1], translateY: [64, 0], scale: [.9, 1], duration: 6500, ease: 'outExpo' }, 28500);
+
+      return timeline;
+    }
+
+    async function start() {
+      try {
+        await Promise.all(frameFiles.map(([id, url]) => loadFrame(id, url)));
+        const componentsResponse = await fetch('scenes/scene-02-komponen.svg');
+        if (componentsResponse.ok) {
+          const componentsDocument = new DOMParser().parseFromString(await componentsResponse.text(), 'image/svg+xml');
+          placeExtraComments(document.querySelector('#frame-02a #comment-feed'), componentsDocument.documentElement);
+        }
+        timeline = prepareMotion();
+        stage.classList.add('is-live');
+        document.documentElement.classList.toggle('reduced-motion', reducedMotion);
+        if (reducedMotion) {
+          timeline.seek(0);
+          timeline.pause();
+          updateControls(timeline);
+        } else {
+          timeline.play();
+          updateControls(timeline);
+        }
+
+        playButton.addEventListener('click', () => {
+          if (timeline.currentTime >= DURATION - 30) timeline.restart().play();
+          else if (timeline.paused) timeline.play();
+          else timeline.pause();
+          updateControls(timeline);
+        });
+        restartButton.addEventListener('click', () => {
+          timeline.restart().play();
+          updateControls(timeline);
+        });
+        scrubber.addEventListener('input', () => {
+          timeline.pause();
+          timeline.seek(Number(scrubber.value));
+          updateControls(timeline);
+        });
+        document.querySelectorAll('.beat').forEach(button => button.addEventListener('click', () => {
+          timeline.pause();
+          timeline.seek(Number(button.dataset.seek));
+          updateControls(timeline);
+        }));
+      } catch (error) {
+        console.error(error);
+        loadError.classList.add('is-visible');
+        playButton.disabled = true;
+      }
+    }
+
+    start();
+  </script>
+</body>
+</html>

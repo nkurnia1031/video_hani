@@ -581,101 +581,151 @@ def build_scene_2(scene):
     tv_gradient = add(defs, "linearGradient", id="tv-screen", x1="0%", y1="0%", x2="100%", y2="100%")
     add(tv_gradient, "stop", offset="0%", stop_color=PLUM)
     add(tv_gradient, "stop", offset="100%", stop_color=ESPRESSO)
-    rect(root, 0, 0, W, H, CREAM)
-    rect(root, 0, 862, W, 218, PEACH, opacity=0.38)
-    line(root, 0, 862, W, 862, PEACH, 3, opacity=0.8)
-    circle(root, 175, 170, 185, MUSTARD, opacity=0.10)
-    circle(root, 1040, 845, 280, WHITE, opacity=0.34)
-    circle(root, 1860, 540, 205, SAGE, opacity=0.10)
+    feed_clip = add(defs, "clipPath", id="phone-feed-window", clipPathUnits="userSpaceOnUse")
+    rect(feed_clip, 678, 203, 560, 667, CREAM, rx=12)
+
+    backdrop = add(root, "g", id="room-background")
+    rect(backdrop, 0, 0, W, H, CREAM)
+    floor = add(root, "g", id="room-floor")
+    rect(floor, 0, 862, W, 218, PEACH, opacity=0.38)
+    line(floor, 0, 862, W, 862, PEACH, 3, opacity=0.8)
+    ambience = add(root, "g", id="room-ambient")
+    circle(ambience, 175, 170, 185, MUSTARD, opacity=0.10)
+    circle(ambience, 1040, 845, 280, WHITE, opacity=0.34)
+    circle(ambience, 1860, 540, 205, SAGE, opacity=0.10)
 
     # Left wall art and television form a simple, colored living-room setting.
-    rect(root, 115, 130, 358, 226, ESPRESSO, rx=17)
-    rect(root, 132, 147, 324, 192, PEACH, rx=8)
-    circle(root, 370, 196, 32, MUSTARD)
-    path(root, "M145,307 L242,218 L310,282 L365,238 L447,314 L447,339 L145,339 Z", fill=SAGE)
-    path(root, "M145,319 L225,270 L281,315 L350,266 L447,326 L447,339 L145,339 Z", fill=PLUM)
-    path(root, "M145,322 L216,293 L276,324 L345,291 L447,329 L447,339 L145,339 Z", fill=TERRACOTTA)
+    wall_art = add(root, "g", id="wall-art")
+    rect(wall_art, 115, 130, 358, 226, ESPRESSO, rx=17)
+    rect(wall_art, 132, 147, 324, 192, PEACH, rx=8)
+    circle(wall_art, 370, 196, 32, MUSTARD)
+    path(wall_art, "M145,307 L242,218 L310,282 L365,238 L447,314 L447,339 L145,339 Z", fill=SAGE)
+    path(wall_art, "M145,319 L225,270 L281,315 L350,266 L447,326 L447,339 L145,339 Z", fill=PLUM)
+    path(wall_art, "M145,322 L216,293 L276,324 L345,291 L447,329 L447,339 L145,339 Z", fill=TERRACOTTA)
 
-    rect(root, 67, 425, 460, 307, ESPRESSO, rx=24)
-    rect(root, 83, 441, 428, 270, "url(#tv-screen)", rx=13)
-    circle(root, 494, 454, 3, MUSTARD, opacity=0.8)
-    path(root, "M99,675 C215,591 284,614 371,527 C427,471 485,493 510,462 L510,711 L99,711 Z", fill=PLUM, opacity=0.55)
-    path(root, "M250,732 L385,732 L405,757 L230,757 Z", fill=ESPRESSO)
-    rect(root, 29, 758, 582, 91, PLUM, rx=13)
-    rect(root, 53, 778, 534, 9, PEACH, rx=4)
-    rect(root, 64, 796, 154, 39, MUSTARD, rx=7)
-    rect(root, 239, 796, 154, 39, SAGE, rx=7)
-    rect(root, 414, 796, 154, 39, TERRACOTTA, rx=7)
-    rect(root, 72, 849, 18, 26, ESPRESSO, rx=4)
-    rect(root, 548, 849, 18, 26, ESPRESSO, rx=4)
+    tv = add(root, "g", id="television")
+    rect(tv, 67, 425, 460, 307, ESPRESSO, rx=24)
+    rect(tv, 83, 441, 428, 270, "url(#tv-screen)", rx=13)
+    circle(tv, 494, 454, 3, MUSTARD, opacity=0.8)
+    path(tv, "M99,675 C215,591 284,614 371,527 C427,471 485,493 510,462 L510,711 L99,711 Z", fill=PLUM, opacity=0.55)
+    path(tv, "M250,732 L385,732 L405,757 L230,757 Z", fill=ESPRESSO)
+    console = add(root, "g", id="media-console")
+    rect(console, 29, 758, 582, 91, PLUM, rx=13)
+    rect(console, 53, 778, 534, 9, PEACH, rx=4)
+    for index, (x, color) in enumerate([(64, MUSTARD), (239, SAGE), (414, TERRACOTTA)], 1):
+        book = add(console, "g", id=f"console-book-{index}")
+        rect(book, x, 796, 154, 39, color, rx=7)
+    rect(console, 72, 849, 18, 26, ESPRESSO, rx=4)
+    rect(console, 548, 849, 18, 26, ESPRESSO, rx=4)
     # A small plant and a few colored books keep the console from reading as a UI panel.
-    rect(root, 540, 708, 60, 48, TERRACOTTA, rx=8)
-    path(root, "M570,709 C557,687 555,672 563,656 C577,674 579,690 570,709 Z", fill=SAGE)
-    path(root, "M568,708 C582,687 595,679 607,682 C600,700 587,710 568,708 Z", fill=SAGE)
-    path(root, "M570,707 C560,689 543,683 533,689 C541,704 553,711 570,707 Z", fill=SAGE)
-    rect(root, 229, 726, 20, 31, TERRACOTTA, rx=3)
-    rect(root, 253, 717, 23, 40, MUSTARD, rx=3)
-    rect(root, 280, 723, 22, 34, PLUM, rx=3)
+    console_plant = add(console, "g", id="console-plant")
+    rect(console_plant, 540, 708, 60, 48, TERRACOTTA, rx=8)
+    path(console_plant, "M570,709 C557,687 555,672 563,656 C577,674 579,690 570,709 Z", fill=SAGE)
+    path(console_plant, "M568,708 C582,687 595,679 607,682 C600,700 587,710 568,708 Z", fill=SAGE)
+    path(console_plant, "M570,707 C560,689 543,683 533,689 C541,704 553,711 570,707 Z", fill=SAGE)
+    console_books = add(console, "g", id="console-books")
+    for index, (x, y, width, height, color) in enumerate([
+        (229, 726, 20, 31, TERRACOTTA), (253, 717, 23, 40, MUSTARD), (280, 723, 22, 34, PLUM)
+    ], 1):
+        book = add(console_books, "g", id=f"console-book-small-{index}")
+        rect(book, x, y, width, height, color, rx=3)
 
     # Right-side shelves: colored books, a vase, and flowers sit above the original character.
-    rect(root, 1287, 250, 538, 20, PLUM, rx=7)
-    rect(root, 1314, 382, 500, 19, PLUM, rx=7)
-    rect(root, 1326, 213, 10, 38, ESPRESSO, rx=4)
-    rect(root, 1777, 213, 10, 38, ESPRESSO, rx=4)
-    rect(root, 1345, 168, 26, 81, TERRACOTTA, rx=5)
-    rect(root, 1376, 181, 23, 68, MUSTARD, rx=5)
-    rect(root, 1405, 157, 31, 92, SAGE, rx=5)
-    rect(root, 1442, 176, 22, 73, PEACH, rx=5)
-    rect(root, 1470, 189, 27, 60, ESPRESSO, rx=5)
-    rect(root, 1714, 207, 63, 42, MUSTARD, rx=8)
-    path(root, "M1745,207 C1736,183 1739,162 1751,144 C1765,166 1764,187 1745,207 Z", fill=SAGE)
-    path(root, "M1749,207 C1762,183 1780,174 1793,181 C1781,199 1767,207 1749,207 Z", fill=SAGE)
-    circle(root, 1753, 145, 9, TERRACOTTA)
-    circle(root, 1745, 151, 8, MUSTARD)
-    circle(root, 1761, 154, 8, PEACH)
-    circle(root, 1754, 158, 7, CREAM)
-    rect(root, 1342, 342, 20, 38, SAGE, rx=4)
-    rect(root, 1367, 324, 24, 56, TERRACOTTA, rx=4)
-    rect(root, 1396, 335, 28, 45, PEACH, rx=4)
-    rect(root, 1430, 314, 22, 66, MUSTARD, rx=4)
-    rect(root, 1460, 330, 24, 50, SAGE, rx=4)
-    rect(root, 1705, 336, 69, 43, PLUM, rx=9)
-    path(root, "M1739,336 C1729,316 1730,299 1740,282 C1756,304 1754,322 1739,336 Z", fill=SAGE)
-    path(root, "M1741,335 C1753,316 1770,310 1781,316 C1771,332 1759,338 1741,335 Z", fill=SAGE)
+    shelves = add(root, "g", id="shelf-set")
+    upper_shelf = add(shelves, "g", id="shelf-upper")
+    upper_rail = add(upper_shelf, "g", id="shelf-upper-rail")
+    rect(upper_rail, 1287, 250, 538, 20, PLUM, rx=7)
+    upper_books = add(upper_shelf, "g", id="shelf-upper-books")
+    for index, (x, y, width, height, color) in enumerate([
+        (1326, 213, 10, 38, ESPRESSO), (1345, 168, 26, 81, TERRACOTTA),
+        (1376, 181, 23, 68, MUSTARD), (1405, 157, 31, 92, SAGE),
+        (1442, 176, 22, 73, PEACH), (1470, 189, 27, 60, ESPRESSO),
+        (1777, 213, 10, 38, ESPRESSO)
+    ], 1):
+        book = add(upper_books, "g", id=f"shelf-upper-item-{index}")
+        rect(book, x, y, width, height, color, rx=5 if width > 15 else 4)
+    upper_flower = add(upper_shelf, "g", id="shelf-upper-flower")
+    rect(upper_flower, 1714, 207, 63, 42, MUSTARD, rx=8)
+    path(upper_flower, "M1745,207 C1736,183 1739,162 1751,144 C1765,166 1764,187 1745,207 Z", fill=SAGE)
+    path(upper_flower, "M1749,207 C1762,183 1780,174 1793,181 C1781,199 1767,207 1749,207 Z", fill=SAGE)
+    petals = add(upper_flower, "g", id="shelf-upper-petals")
+    circle(petals, 1753, 145, 9, TERRACOTTA)
+    circle(petals, 1745, 151, 8, MUSTARD)
+    circle(petals, 1761, 154, 8, PEACH)
+    circle(petals, 1754, 158, 7, CREAM)
+
+    lower_shelf = add(shelves, "g", id="shelf-lower")
+    lower_rail = add(lower_shelf, "g", id="shelf-lower-rail")
+    rect(lower_rail, 1314, 382, 500, 19, PLUM, rx=7)
+    lower_books = add(lower_shelf, "g", id="shelf-lower-books")
+    for index, (x, y, width, height, color) in enumerate([
+        (1342, 342, 20, 38, SAGE), (1367, 324, 24, 56, TERRACOTTA),
+        (1396, 335, 28, 45, PEACH), (1430, 314, 22, 66, MUSTARD),
+        (1460, 330, 24, 50, SAGE)
+    ], 1):
+        book = add(lower_books, "g", id=f"shelf-lower-item-{index}")
+        rect(book, x, y, width, height, color, rx=4)
+    lower_flower = add(lower_shelf, "g", id="shelf-lower-flower")
+    rect(lower_flower, 1705, 336, 69, 43, PLUM, rx=9)
+    path(lower_flower, "M1739,336 C1729,316 1730,299 1740,282 C1756,304 1754,322 1739,336 Z", fill=SAGE)
+    path(lower_flower, "M1741,335 C1753,316 1770,310 1781,316 C1771,332 1759,338 1741,335 Z", fill=SAGE)
 
     # Keep the Storyset man and sofa at the same display size; widen the room around them.
-    add(root, "ellipse", cx=1630, cy=866, rx=346, ry=47, fill=ESPRESSO, opacity=0.15)
+    sofa_shadow = add(root, "g", id="sofa-shadow")
+    add(sofa_shadow, "ellipse", cx=1630, cy=866, rx=346, ry=47, fill=ESPRESSO, opacity=0.15)
     shared_map = {"#263238": ESPRESSO, "#B97964": PEACH, "#A24E3F": TERRACOTTA,
                   "#E0E0E0": CREAM, "#E6E6E6": PEACH, "#EBEBEB": CREAM,
                   "#F0F0F0": CREAM, "#F5F5F5": CREAM}
-    embed_asset(root, "feed", 1080, 150, 850, 850,
+    sofa_scene = add(root, "g", id="reclining-sofa")
+    embed_asset(sofa_scene, "feed", 1080, 150, 850, 850,
                 include_ids={"freepik--Sofa--inject-2"}, color_map={**shared_map, "#407BFF": SAGE})
-    embed_asset(root, "feed", 1080, 150, 850, 850,
-                include_ids={"freepik--Character--inject-2"}, color_map={**shared_map, "#407BFF": PLUM})
+    character_scene = add(root, "g", id="phone-scroller")
+    character_svg = embed_asset(character_scene, "feed", 1080, 150, 850, 850,
+                                include_ids={"freepik--Character--inject-2"}, color_map={**shared_map, "#407BFF": PLUM})
+    character = next((node for node in character_svg.iter() if node.get("id") == "sfeed-freepik--Character--inject-2"), None)
+    source_pose = next(iter(character), None) if character is not None else None
+    if source_pose is not None:
+        source_parts = list(source_pose)
+        source_pose[:] = []
+        hand_group = None
+        for index, source_part in enumerate(source_parts):
+            if 4 <= index <= 8:
+                if hand_group is None:
+                    hand_group = add(source_pose, "g", id="phone-hand-motion", data_rig_part="scrolling-hand-and-phone")
+                hand_group.append(source_part)
+            else:
+                source_pose.append(source_part)
 
     # The centered phone is the only place where the scrollable social feed appears.
-    rect(root, 664, 79, 622, 934, ESPRESSO, rx=58, opacity=0.22)
-    rect(root, 646, 61, 622, 934, ESPRESSO, rx=58)
-    rect(root, 666, 81, 582, 894, CREAM, rx=42)
-    rect(root, 889, 94, 136, 11, PLUM, rx=6)
-    circle(root, 1172, 129, 5, PLUM)
-    circle(root, 1187, 129, 5, PLUM)
-    rect(root, 1201, 121, 23, 15, "none", rx=3, stroke=PLUM, sw=2)
-    rect(root, 1206, 125, 13, 7, SAGE, rx=2)
-    txt(root, 704, 179, "Beranda", 23, ESPRESSO, 700)
-    circle(root, 1200, 167, 9, "none", stroke=PLUM, sw=2)
-    path(root, "M1207,174 L1214,181", stroke=PLUM, sw=2)
-    line(root, 686, 193, 1228, 193, PEACH, 2)
+    phone = add(root, "g", id="phone-shell")
+    rect(phone, 664, 79, 622, 934, ESPRESSO, rx=58, opacity=0.22)
+    rect(phone, 646, 61, 622, 934, ESPRESSO, rx=58)
+    rect(phone, 666, 81, 582, 894, CREAM, rx=42)
+    phone_header = add(phone, "g", id="phone-header")
+    rect(phone_header, 889, 94, 136, 11, PLUM, rx=6)
+    circle(phone_header, 1172, 129, 5, PLUM)
+    circle(phone_header, 1187, 129, 5, PLUM)
+    rect(phone_header, 1201, 121, 23, 15, "none", rx=3, stroke=PLUM, sw=2)
+    rect(phone_header, 1206, 125, 13, 7, SAGE, rx=2)
+    txt(phone_header, 704, 179, "Beranda", 23, ESPRESSO, 700)
+    circle(phone_header, 1200, 167, 9, "none", stroke=PLUM, sw=2)
+    path(phone_header, "M1207,174 L1214,181", stroke=PLUM, sw=2)
+    line(phone_header, 686, 193, 1228, 193, PEACH, 2)
+    comment_viewport = add(phone, "g", id="comment-viewport", clip_path="url(#phone-feed-window)")
+    comment_feed = add(comment_viewport, "g", id="comment-feed")
     for i, comment in enumerate(SCENE2_COMMENTS[:4]):
-        draw_social_comment(root, 686, 209 + i * 166, 542, 153, comment["id"], comment["handle"], comment["lines"], comment["accent"], size=18)
+        draw_social_comment(comment_feed, 686, 209 + i * 166, 542, 153, comment["id"], comment["handle"], comment["lines"], comment["accent"], size=18)
     # A narrow track cues the scroll animation without adding a storyboard caption.
-    rect(root, 1236, 218, 4, 624, PEACH, rx=2)
-    rect(root, 1232, 310, 12, 154, PLUM, rx=6)
-    line(root, 686, 889, 1228, 889, PEACH, 2)
-    circle(root, 760, 926, 9, PLUM)
-    circle(root, 905, 926, 9, MUSTARD)
-    circle(root, 1050, 926, 9, MUSTARD)
-    circle(root, 1195, 926, 9, MUSTARD)
+    scroll_track = add(phone, "g", id="phone-scroll-track")
+    rect(scroll_track, 1236, 218, 4, 624, PEACH, rx=2)
+    scroll_thumb = add(scroll_track, "g", id="phone-scroll-thumb")
+    rect(scroll_thumb, 1232, 310, 12, 154, PLUM, rx=6)
+    phone_footer = add(phone, "g", id="phone-footer")
+    line(phone_footer, 686, 889, 1228, 889, PEACH, 2)
+    circle(phone_footer, 760, 926, 9, PLUM)
+    circle(phone_footer, 905, 926, 9, MUSTARD)
+    circle(phone_footer, 1050, 926, 9, MUSTARD)
+    circle(phone_footer, 1195, 926, 9, MUSTARD)
     return root
 
 
@@ -765,10 +815,12 @@ def build_scene_2c(scene):
         "Centered sage pill: Understanding psychology = Good! Centered terracotta pill: Misusing psychological terms = Problematic.",
         CREAM,
     )
-    rect(root, 385, 304, 1150, 148, SAGE, rx=30)
-    txt(root, 960, 398, "Understanding psychology = Good!", 48, ESPRESSO, 700, "middle")
-    rect(root, 270, 552, 1380, 176, TERRACOTTA, rx=30)
-    txt(root, 960, 660, "Misusing psychological terms = Problematic.", 46, WHITE, 700, "middle")
+    understanding = add(root, "g", id="understanding-statement")
+    rect(understanding, 385, 304, 1150, 148, SAGE, rx=30)
+    txt(understanding, 960, 398, "Understanding psychology = Good!", 48, ESPRESSO, 700, "middle")
+    misuse = add(root, "g", id="misuse-statement")
+    rect(misuse, 270, 552, 1380, 176, TERRACOTTA, rx=30)
+    txt(misuse, 960, 660, "Misusing psychological terms = Problematic.", 46, WHITE, 700, "middle")
     root.find(tag("metadata")).text = "Editable animation frame. Existing Storyset vector groups are recolored in SVG; all added elements are hand-edited vector shapes. No generated imagery."
     return root
 
@@ -1951,7 +2003,7 @@ def make_website():
 </style>
 </head>
 <body><main class="shell">
-<header class="hero"><div><div class="eyebrow">Editable production board · Layout C</div><h1>Therapy Speak Gone Wrong</h1><p>Seven scenes in sixteen animation keyframes. Scene 1 is one continuous presenter scene with four sourced, anonymized public comments. Scene 3 keeps three independent examples. Scene 4 follows one 40-second domino chain through five beats and ends with Dina alone. The narration stays verbatim from the script. Every frame is an editable SVG.</p></div><div class="hero-actions"><a class="action primary" href="Storyboard_Therapy_Speak_Gone_Wrong.docx" download>Download Word storyboard</a><a class="action" href="Storyboard_Editable_Source.zip" download>Download editable source bundle</a></div></header>
+<header class="hero"><div><div class="eyebrow">Editable production board · Layout C</div><h1>Therapy Speak Gone Wrong</h1><p>Seven scenes in sixteen animation keyframes. Scene 1 is one continuous presenter scene with four sourced, anonymized public comments. Scene 3 keeps three independent examples. Scene 4 follows one 40-second domino chain through five beats and ends with Dina alone. The narration stays verbatim from the script. Every frame is an editable SVG.</p></div><div class="hero-actions"><a class="action primary" href="Storyboard_Therapy_Speak_Gone_Wrong.docx" download>Download Word storyboard</a><a class="action" href="motion.html">Open Scene 2 motion study</a><a class="action" href="Storyboard_Editable_Source.zip" download>Download editable source bundle</a></div></header>
 <div class="style-strip"><strong>Opsi B · Warm Peach &amp; Mustard</strong><span class="swatch"><i style="background:#3d2645"></i>deep plum</span><span class="swatch"><i style="background:#7fb89a"></i>sage</span><span class="swatch"><i style="background:#e4572e"></i>terracotta</span><span class="swatch"><i style="background:#f2b134"></i>mustard</span><span class="swatch"><i style="background:#ffc4a3"></i>peach</span><span class="swatch"><i style="background:#fff6ec"></i>cream</span><span class="swatch"><i style="background:#2a1f2d"></i>espresso</span><span>· terracotta for mistaken labels; sage for corrections</span></div>
 <section class="board" aria-label="Seven scene production board">
 ''' + "\n".join(rows) + '''
@@ -1969,6 +2021,9 @@ def make_zip():
     out = ROOT / "Storyboard_Editable_Source.zip"
     with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as archive:
         archive.write(ROOT / "index.html", "index.html")
+        motion_page = ROOT / "motion.html"
+        if motion_page.exists():
+            archive.write(motion_page, "motion.html")
         archive.write(ROOT / "build_storyboard.py", "build_storyboard.py")
         archive.write(ROOT / "Storyboard_Therapy_Speak_Gone_Wrong.docx", "Storyboard_Therapy_Speak_Gone_Wrong.docx")
         readme = ROOT / "README.md"
