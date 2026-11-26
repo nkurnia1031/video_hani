@@ -50,7 +50,7 @@ PALETTE = [PLUM, SAGE, TERRACOTTA, MUSTARD, PEACH, CREAM, ESPRESSO]
 PALETTE_NAMES = ["deep plum", "sage", "terracotta", "mustard", "peach", "cream", "espresso"]
 
 ASSETS = {
-    "presenter": {"file": ASSETS_DIR / "Girl_pointing_OpenClipart.svg", "title": "Girl pointing · OpenClipart / FreeSVG", "url": "https://freesvg.org/girl-pointing", "license": "CC0 1.0"},
+    "presenter": {"file": ASSETS_DIR / "People-creating-robot_Rafiki.svg", "title": "People Creating Robot · Rafiki", "url": "https://storyset.com/illustration/people-creating-robot/rafiki", "license": "Storyset free with attribution"},
     "feed": {"file": REPO / "Feed-rafiki.svg", "title": "Feed", "url": "https://storyset.com/illustration/feed/rafiki"},
     "texting": {"file": REPO / "Texting-rafiki.svg", "title": "Texting", "url": "https://storyset.com/illustration/texting/rafiki"},
     "student_stress": {"file": ASSETS_DIR / "Student-stress_Rafiki.svg", "title": "Student Stress · Rafiki", "url": "https://storyset.com/illustration/student-stress/rafiki"},
@@ -69,24 +69,28 @@ SCENE1_COMMENT_SOURCES = [
     {
         "id": "avoidant", "quote": "pengalaman gue pacaran sama orang avoidant sih",
         "lines": ["pengalaman gue pacaran", "sama orang avoidant sih"], "sequence": 1,
+        "alias": "Naya",
         "platform": "Reddit · r/r4rindonesia", "url": "https://www.reddit.com/r/r4rindonesia/comments/1oi543a/dealing_with_avoidant_partner_with_possible_ptsd/",
         "posted": "2025-10-28", "accessed": "2026-11-26", "kind": "ASLI",
     },
     {
         "id": "toxic", "quote": "gua ngerasa lg “toxic” bgt.",
         "lines": ["gua ngerasa lg “toxic” bgt."], "sequence": 2,
+        "alias": "Bagas",
         "platform": "Reddit · r/indonesia", "url": "https://www.reddit.com/r/indonesia/comments/n73anm/",
         "posted": "2021-05-08", "accessed": "2026-11-26", "kind": "ASLI",
     },
     {
         "id": "depresi", "quote": "depresi dikira sedih dll",
         "lines": ["depresi dikira sedih dll"], "sequence": 3,
+        "alias": "Rani",
         "platform": "Reddit · r/indonesiabebas", "url": "https://www.reddit.com/r/indonesiabebas/comments/1wje4q0/jangan_sepelekan_stress/",
         "posted": "2026-09-18", "accessed": "2026-11-26", "kind": "ASLI",
     },
     {
         "id": "narcissistic", "quote": "Nggak sesuai ekspektasi dikit, langsung dibilang narcissistic.",
         "lines": ["Nggak sesuai ekspektasi dikit,", "langsung dibilang narcissistic."], "sequence": 4,
+        "alias": "Dito",
         "platform": "Tiruan · tidak berasal dari platform atau akun nyata", "url": "",
         "posted": "Tiruan, ditulis 2026-11-26", "accessed": "2026-11-26", "kind": "TIRUAN (bukan komentar asli)",
     },
@@ -258,13 +262,13 @@ SCENES = [
 
 # Revised visual scope from the attached script. Dialogue and voice-over stay verbatim.
 SCENES[0].update({
-    "visual": "Satu komposisi utuh: placeholder presenter perempuan baru dari OpenClipart/FreeSVG, setengah badan menghadap kamera, ber-outfit peach dengan framing tetap di latar plum polos. Empat potongan komentar publik anonim mengitari presenter; tanpa nama akun, foto profil, atau merek platform. Presenter menunjuk kamera; zoom menjadi smartphone pada akhir adegan.",
+    "visual": "Satu komposisi utuh berlatar plum: presenter perempuan memakai ilustrasi People Creating Robot · Rafiki sebagai sumber karakter. Empat kartu komentar publik tampil bergantian di sekelilingnya dengan nama samaran, ikon avatar generik, dan tanpa merek platform. Frame telepon di sekitar presenter dihapus; tablet yang dipegangnya menjadi titik zoom menuju Scene 2.",
     "screen": "Are we using psychology terms correctly?",
-    "motion": "Satu scene berlanjut tanpa pemotongan keyframe: empat screenshot komentar publik masuk berurutan mengitari presenter, mengikuti dialog ‘Dia avoidant!’ → ‘toxic’ → ‘depresi’ → ‘That's narcissistic!’. Nama dan avatar disamarkan; tak ada logo aplikasi. Presenter menunjuk kamera, zoom-in, dan berubah menjadi smartphone pada penutup. Kutipan dan tanggal akses tercatat pada audit sumber Scene 1.",
+    "motion": "Satu scene berlanjut tanpa pemotongan keyframe: empat screenshot komentar publik masuk berurutan mengitari presenter, mengikuti dialog ‘Dia avoidant!’ → ‘toxic’ → ‘depresi’ → ‘That's narcissistic!’. Nama pada kartu adalah pseudonim; avatar tetap generik dan tidak ada logo aplikasi. Gestur terbuka presenter menuntun zoom ke tablet di tangannya, lalu beralih ke scene smartphone. Kutipan dan tanggal akses tercatat pada audit sumber Scene 1.",
     "assets": ["presenter"],
-    "roles": ["Girl pointing · OpenClipart/FreeSVG: placeholder perempuan setengah badan menghadap kamera; sumber CC0 tetap menjadi ilustrasi dasar. Layer warna outfit berada di belakang gambar sumber dan tetap dapat diedit.", "Empat kartu komentar memakai potongan publik yang dianonimkan. Tiga berlabel ASLI dengan tautan sumber; satu komentar bertema narcissistic diberi label TIRUAN (bukan komentar asli) pada audit sumber. Tidak ada logo, nama akun, atau foto profil nyata.", "Pembungkus smartphone, pertanyaan layar, komentar, dan semua overlay adalah grup SVG editable. Komentar tampil bergantian di dalam satu scene."],
+    "roles": ["People Creating Robot · Rafiki: karakter perempuan dari ilustrasi sumber berperan sebagai presenter; karakter robot dan properti sumber tetap menjadi bagian komposisi. Frame di sekitar presenter dihapus. Warna biru sumber dialihkan ke Cream, Peach, dan Espresso sebagai layer fill pada path SVG yang sama.", "Empat kartu komentar memakai potongan publik yang dianonimkan. Kartu memakai nama samaran Naya, Bagas, Rani, dan Dito; nama akun sumber, foto profil, serta logo platform tidak ditampilkan. Tiga komentar berlabel ASLI dengan tautan; komentar narcissistic diberi label TIRUAN (bukan komentar asli) pada audit sumber.", "Pseudonim, avatar generik, tablet-to-phone transition outline, komentar, dan pertanyaan layar adalah grup SVG editable. Komentar tampil bergantian dalam satu scene."],
     "credits": ["presenter"],
-    "background": "Deep Plum #3D2645 polos; komentar memakai Cream #FFF6EC, tulisan Espresso #2A1F2D, dan aksen Terracotta #E4572E untuk label istilah.",
+    "background": "Deep Plum #3D2645; ilustrasi sumber memakai fill Cream #FFF6EC dan Peach #FFC4A3, line art Espresso, serta panel latar sumber yang ringan. Kartu komentar memakai Cream, Espresso, Peach, dan aksen Terracotta untuk label istilah.",
     "frames": [
         {"code": "01", "slug": "01-the-hook", "title": "The Hook · One Continuous Scene", "time": "00:00–00:30"},
     ],
@@ -397,11 +401,11 @@ def card(parent, x, y, w, h, fill=WHITE, border="#E3E8ED", radius=22):
 
 def embed_asset(parent, asset_key, x, y, w, h, omit_ids=(), include_ids=None, color_map=None,
                 view_box=None, sad_expression=False, raka_expression=False, color_map_policy=None,
-                child_omit_indices=None, student_typing_expression=False):
+                child_omit_indices=None, student_typing_expression=False, color_map_by_group=None):
     info = ASSETS[asset_key]
     source = ET.parse(info["file"]).getroot()
     vb = view_box or source.get("viewBox", "0 0 500 500")
-    source_label = "FreeSVG/OpenClipart CC0" if asset_key == "presenter" else "Storyset Rafiki"
+    source_label = "Storyset Rafiki · attribution required" if asset_key == "presenter" else "Storyset Rafiki"
     nested = add(parent, "svg", x=x, y=y, width=w, height=h, viewBox=vb, preserveAspectRatio="xMidYMid meet", overflow="hidden", aria_label=info["title"] + " illustration, " + source_label)
     copied = []
     child_omit_indices = child_omit_indices or {}
@@ -436,6 +440,8 @@ def embed_asset(parent, asset_key, x, y, w, h, omit_ids=(), include_ids=None, co
     for child in copied:
         source_group_id = child.get("id")
         group_color_index = 0
+        selected_color_map = dict(color_map or {})
+        selected_color_map.update((color_map_by_group or {}).get(source_group_id, {}))
         for elem in child.iter():
             if sad_expression:
                 d = elem.get("d", "")
@@ -456,7 +462,7 @@ def embed_asset(parent, asset_key, x, y, w, h, omit_ids=(), include_ids=None, co
                 start, count = color_map_policy.get(source_group_id, (0, 0))
                 has_mapped_color = any(
                     re.search(re.escape(old), value, flags=re.IGNORECASE)
-                    for old in (color_map or {})
+                    for old in selected_color_map
                     for value in elem.attrib.values()
                 )
                 apply_color_map = start <= group_color_index < start + count
@@ -467,7 +473,7 @@ def embed_asset(parent, asset_key, x, y, w, h, omit_ids=(), include_ids=None, co
                     value = value.replace("url(#" + old + ")", "url(#" + new + ")")
                     value = value.replace("#" + old, "#" + new)
                 if apply_color_map:
-                    for old, new in (color_map or {}).items():
+                    for old, new in selected_color_map.items():
                         value = re.sub(re.escape(old), new, value, flags=re.IGNORECASE)
                 elem.set(key, value)
             if elem.text:
@@ -516,7 +522,7 @@ def draw_public_comment(root, comment, x, y, width=432, height=174):
     circle(group, x + 31, y + 32, 18, PLUM)
     circle(group, x + 31, y + 25, 6, PEACH)
     path(group, f"M{x+19},{y+41} Q{x+31},{y+27} {x+43},{y+41} Z", fill=PEACH)
-    txt(group, x + 63, y + 38, "AKUN DISAMARKAN", 14, PLUM, 700, letter=1.0)
+    txt(group, x + 63, y + 38, comment["alias"].upper(), 15, PLUM, 700, letter=0.9)
     line(group, x + 22, y + 60, x + width - 22, y + 60, PEACH, 2)
     lines = comment["lines"]
     first_y = y + (110 if len(lines) == 2 else 125)
@@ -530,47 +536,39 @@ def draw_public_comment(root, comment, x, y, width=432, height=174):
 def build_scene_1(scene):
     root = clean_frame(
         "Scene 1 · The Hook",
-        "One continuous plum-background scene. Four anonymized public-comment cards surround a new front-facing female presenter placeholder; the presenter points at the camera before the composition zooms into a smartphone.",
+        "One continuous plum-background scene. Four public-comment cards with pseudonyms surround the Storyset Rafiki woman from People Creating Robot. The tablet she holds becomes the zoom target into Scene 2.",
         PLUM,
     )
     root.set("data-frame", "01")
     root.find(tag("metadata")).text = (
-        "Scene 1 is one continuous editable composition. Presenter source: Girl pointing, OpenClipart via FreeSVG, CC0 1.0. "
-        "The original line art is kept unchanged; peach/cream outfit underlays, comment cards, smartphone transition shell, and on-screen question are separate SVG layers. "
-        "Public quote sources and access dates are recorded outside this artwork in the storyboard source audit."
+        "Scene 1 is one continuous editable composition. Presenter: the woman in People Creating Robot · Rafiki (Storyset, free with attribution). "
+        "Eleven background drawables are omitted and 48 source drawables are recolored; 142/201 (70.6%) remain unchanged. "
+        "No phone frame or backdrop surrounds the presenter. A separate transition outline frames only the source tablet; comment cards use pseudonyms and generic avatars. "
+        "Public quote sources, access dates, and Storyset attribution are recorded outside this artwork in the storyboard source audit."
     )
-    # Smartphone frame is a separate transition layer and stays behind the fixed presenter crop.
-    phone = add(root, "g", id="smartphone-transition-shell", data_motion="zoom-in-on-presenter")
+    # The source woman already holds a tablet. Only that prop receives the transition outline.
+    phone = add(root, "g", id="tablet-zoom-outline", data_motion="zoom-in-on-held-tablet-to-scene-02")
     phone.set("opacity", "0")
-    rect(phone, 530, 42, 860, 958, "none", rx=88, stroke=CREAM, sw=5, opacity=0.55)
-    rect(phone, 552, 64, 816, 914, "none", rx=70, stroke=PEACH, sw=2, opacity=0.48)
-    rect(phone, 854, 82, 212, 15, CREAM, rx=8, opacity=0.58)
+    rect(phone, 1144, 463, 82, 132, "none", rx=15, stroke=CREAM, sw=4, opacity=0.92)
+    rect(phone, 1151, 470, 68, 118, "none", rx=10, stroke=PEACH, sw=2, opacity=0.8)
+    rect(phone, 1171, 472, 28, 3, CREAM, rx=2, opacity=0.8)
     add(phone, "animate", attributeName="opacity", values="0;1", begin="24.5s", dur="0.8s", fill="freeze")
 
-    # A restrained outfit tint sits underneath the OpenClipart line art; it is not a new character drawing.
-    presenter = embed_asset(root, "presenter", 480, 116, 960, 803,
-                            view_box="0 0 271.84 227.21")
-    for attr, end_value in (("x", 630), ("y", 205), ("width", 660), ("height", 552)):
-        add(presenter, "animate", attributeName=attr,
-            values=f"{presenter.get(attr)};{end_value}", begin="25s", dur="1.4s", fill="freeze")
-    outfit = ET.Element(tag("g"), {"id": "presenter-outfit-color-underlay"})
-    # Independent color layers sit behind the licensed source line art; source
-    # drawable paths stay intact. Keep hair transparent against plum and fill
-    # only the face and clothing so the head does not read as a large helmet.
-    garment = add(outfit, "path", d="M0,227.21 L0,183 Q32,165 72,153 L104,145 Q135,151 169,145 L201,153 Q244,165 271.84,183 L271.84,227.21 Z", fill=PEACH)
-    garment.set("data-role", "underlay-for-existing-presenter-outfit")
-    insert_at = 0
-    presenter.insert(insert_at, outfit)
-    shirt = add(outfit, "path", d="M103,146 Q135,155 169,146 L189,157 L161,190 L136,171 L111,190 L84,157 Z", fill=CREAM)
-    add(outfit, "path", d="M100,81 Q115,68 142,68 Q171,68 186,82 L183,111 Q177,132 160,144 Q143,155 126,144 Q108,132 102,110 Z", fill=PEACH)
+    embed_asset(
+        root, "presenter", 470, 50, 980, 980,
+        color_map={"#407BFF": CREAM, "#FFAF6B": PEACH, "#EF8535": PEACH, "#FD504E": PLUM},
+        color_map_by_group={"Character": {"#407BFF": PEACH}},
+        omit_ids=("background-simple",),
+        child_omit_indices={"background-complete": (0,)},
+    )
 
     positions = [(36, 228), (1452, 228), (36, 622), (1452, 622)]
     for comment, (x, y) in zip(SCENE1_COMMENT_SOURCES, positions):
         draw_public_comment(root, comment, x, y)
 
     pointer = add(root, "g", id="presenter-camera-pointing-transition", data_motion="point-zoom-transform")
-    circle(pointer, 548, 492, 38, "none", stroke=PEACH, sw=4, opacity=0.8)
-    circle(pointer, 548, 492, 7, TERRACOTTA)
+    circle(pointer, 1108, 456, 34, "none", stroke=PEACH, sw=4, opacity=0.82)
+    circle(pointer, 1108, 456, 7, TERRACOTTA)
     question = add(root, "g", id="closing-onscreen-question", data_motion="appears-before-phone-zoom")
     question.set("opacity", "0")
     rect(question, 566, 944, 788, 72, CREAM, rx=22)
@@ -1533,7 +1531,7 @@ def create_previews():
             preview_root = deepcopy(root)
             if scene["no"] == 1 or (scene["no"] == 2 and code == "02B"):
                 for node in preview_root.iter():
-                    if node.get("id", "").startswith(("public-comment-", "word-cloud-tag-")) or node.get("id") in ("smartphone-transition-shell", "closing-onscreen-question"):
+                    if node.get("id", "").startswith(("public-comment-", "word-cloud-tag-")) or node.get("id") == "closing-onscreen-question":
                         node.attrib.pop("opacity", None)
                     for child in list(node):
                         if child.tag == tag("animate"):
@@ -1664,7 +1662,7 @@ def make_docx(contact):
     r = heading.add_run("AUDIT VISUAL")
     set_run(r, 14, INK, True)
     audit = [
-        "Scene 1 kini satu komposisi berkelanjutan: presenter placeholder perempuan dari OpenClipart/FreeSVG, empat kartu komentar anonim, dan shell smartphone untuk transisi. Tiga kutipan memiliki URL publik; kartu ‘narcissistic’ ditandai tiruan di audit sumber Scene 1.",
+        "Scene 1 kini memakai perempuan dari People Creating Robot · Rafiki sebagai presenter. Sebelas elemen latar sumber dihilangkan dan 48/201 elemen sumber diwarnai ulang (59/201 = 29,4% berubah/dihilangkan; 142/201 = 70,6% tetap). Bidang oval sumber dan frame besar di sekeliling presenter dihapus sehingga latar scene tetap plum. Outline transisi hanya mengelilingi tablet. Kartu komentar memakai nama samaran Naya, Bagas, Rani, dan Dito; tiga kutipan bersumber publik dan satu bertanda tiruan.",
         "Scene 2B kini berupa word cloud Caveat 56 hashtag: enam istilah naskah dan lima puluh pemicu, dengan ukuran 26–208 px, rotasi acak, tumpang tindih, dan tiga hero term di tengah.",
         "Scene 3 memisahkan case avoidant, depresi, dan gaslighting. Label terracotta muncul lebih dulu; koreksi sage dikelompokkan terpisah untuk animasi saat VO mengatakan ‘Padahal...’. Latar case memakai peach, sage, dan mustard muda sesuai naskah.",
         "Scene 4 berlangsung 40 detik dalam urutan baru 4A, 4B, 4B2, 4C, 4D; VO tetap naskah. Ekor bubble 4B mengarah ke pembicara dan tidak menutup label nama. Di 4C Raka mengirim post melalui laptop, menyebut alasan ‘Biar yang lain aman’, mengeluarkan Dina dari grup, dan notifikasi mulai menyebar; 4D hanya menampilkan Dina dan teks ‘Don't reduce people to labels.’",
@@ -1687,9 +1685,9 @@ def make_docx(contact):
         set_run(r, 8, ESPRESSO, True)
     p = doc.add_paragraph()
     p.paragraph_format.space_before = Pt(4)
-    r = p.add_run("Girl pointing · OpenClipart/FreeSVG berada di domain publik CC0. Caveat menggunakan SIL Open Font License 1.1; salinan lisensi ikut dalam source bundle. Aset Storyset gratis dengan atribusi; tautan sumber per ilustrasi dicantumkan pada scene terkait. Periksa ketentuan Storyset sebelum penggunaan final.")
+    r = p.add_run("People Creating Robot · Rafiki dipakai dengan atribusi Storyset. Caveat menggunakan SIL Open Font License 1.1; salinan lisensi ikut dalam source bundle. Aset Storyset gratis dengan atribusi; tautan sumber per ilustrasi dicantumkan pada scene terkait. Periksa ketentuan Storyset sebelum penggunaan final.")
     set_run(r, 9, MUTED)
-    add_hyperlink(p, "Girl pointing · CC0", "https://freesvg.org/girl-pointing")
+    add_hyperlink(p, "People Creating Robot · Rafiki", "https://storyset.com/illustration/people-creating-robot/rafiki")
     p.add_run("  ·  ")
     add_hyperlink(p, "Caveat · SIL OFL", "https://github.com/google/fonts/blob/main/ofl/caveat/OFL.txt")
     p.add_run("  ·  ")
@@ -1832,7 +1830,7 @@ def make_docx(contact):
             info = ASSETS[asset_key]
             p = right.add_paragraph()
             p.paragraph_format.space_after = Pt(1)
-            asset_credit = " · CC0" if asset_key == "presenter" else " · Storyset Rafiki"
+            asset_credit = " · Storyset · free with attribution"
             add_hyperlink(p, "Sumber " + info["title"] + asset_credit, info["url"])
             for r in p.runs: set_run(r, 8, PLUM)
         p = right.add_paragraph()
@@ -1846,7 +1844,7 @@ def make_docx(contact):
     p = doc.add_paragraph()
     r = p.add_run("PUBLIC COMMENT SOURCE AUDIT · SCENE 1")
     set_run(r, 19, INK, True)
-    p = doc.add_paragraph("Tanggal akses semua tautan: 26 November 2026. Nama akun, foto profil, dan merek platform tidak ditampilkan di artwork. Kutipan dibatasi pada potongan pendek. Komentar bertema narcissistic adalah tiruan karena tidak ditemukan kutipan publik yang aman dan sesuai.")
+    p = doc.add_paragraph("Tanggal akses semua tautan: 26 November 2026. Nama di kartu adalah nama samaran, bukan nama akun sumber; foto profil dan merek platform tidak ditampilkan di artwork. Kutipan dibatasi pada potongan pendek. Komentar bertema narcissistic adalah tiruan karena tidak ditemukan kutipan publik yang aman dan sesuai.")
     for r in p.runs:
         set_run(r, 9, MUTED)
     source_table = doc.add_table(rows=1, cols=3)
@@ -1865,7 +1863,7 @@ def make_docx(contact):
             set_cell_margins(cell, 90, 110, 90, 110)
             shade(cell, CREAM)
             cell.vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.CENTER
-        cells[0].text = comment["id"].upper() + "\n" + comment["platform"]
+        cells[0].text = "Nama samaran: " + comment["alias"] + "\n" + comment["platform"]
         cells[1].text = "“" + comment["quote"] + "”"
         for run in cells[0].paragraphs[0].runs:
             set_run(run, 8, INK, True)
@@ -1901,7 +1899,7 @@ def make_website():
                 url_markup = (f'<a href="{escape(item["url"])}" target="_blank" rel="noreferrer">{escape(item["url"])}</a>'
                               if item["url"] else "Tidak ada URL publik")
                 audit_items.append(
-                    f'<li><b>{escape(item["id"].upper())} · {escape(item["platform"])}</b> · '
+                    f'<li><b>{escape(item["id"].upper())} · nama samaran: {escape(item["alias"])} · {escape(item["platform"])}</b> · '
                     f'“{escape(item["quote"])}”<br>{url_markup}<br>{escape(item["kind"])} · Tanggal akses: {escape(item["accessed"])}</li>'
                 )
             comment_source_markup = '<div><dt>Public comment source audit</dt><dd><ul class="comment-source-list">' + "".join(audit_items) + '</ul></dd></div>'
@@ -1954,8 +1952,8 @@ def make_website():
 <section class="board" aria-label="Seven scene production board">
 ''' + "\n".join(rows) + '''
 </section>
-<section class="audit"><div><h2>Visual audit</h2><p>Scene 3 remains three independent case frames and a centered closing frame. Scene 4 has five beats with its original narration and updated numbering: 4A, 4B, 4B2, 4C, 4D. Raka’s 4C post is visible on his laptop and expands into notifications; 4D contains Dina alone with no table or Raka. The Co-workers source changes 57/158 drawable elements in 4D (36.1%), leaving 101/158 unchanged. Scene 1 has one editable composition with sequential comment groups. Scene 2B contains 56 independently editable handwritten hashtags (six script terms plus fifty related terms) with accelerating appearance timings. All retained frames were rendered and inspected.</p></div><div><h2>Editing &amp; attribution</h2><p>Open or download each SVG to edit its vector layers and text. The source bundle contains the HTML board, all SVG frames, source illustration assets, and the Caveat font/license. The <a href="https://freesvg.org/girl-pointing" target="_blank" rel="noreferrer">Girl pointing · OpenClipart / FreeSVG</a> presenter is public domain CC0. <a href="https://github.com/google/fonts/tree/main/ofl/caveat" target="_blank" rel="noreferrer">Caveat</a> is distributed under SIL OFL 1.1. <a href="https://storyset.com/illustration/co-workers/rafiki" target="_blank" rel="noreferrer">Co-workers · Rafiki</a> and <a href="https://storyset.com/illustration/student-stress/rafiki" target="_blank" rel="noreferrer">Student Stress · Rafiki</a> are free with attribution; cite Storyset when publishing and review the <a href="https://storyset.com/terms" target="_blank" rel="noreferrer">Storyset terms</a>.</p></div></section>
-<footer class="footer">Scene 1 uses a CC0 placeholder presenter that can be replaced by live footage. Scene backgrounds, public-comment cards, cloud words, labels, cards, connectors, notifications, and text are editable SVG layers. No images were generated.</footer>
+<section class="audit"><div><h2>Visual audit</h2><p>Scene 3 remains three independent case frames and a centered closing frame. Scene 4 has five beats with its original narration and updated numbering: 4A, 4B, 4B2, 4C, 4D. Raka’s 4C post is visible on his laptop and expands into notifications; 4D contains Dina alone with no table or Raka. The Co-workers source changes 57/158 drawable elements in 4D (36.1%), leaving 101/158 unchanged. Scene 1 uses the woman from People Creating Robot · Rafiki; 11/201 background elements are omitted and 48/201 source elements recolored, leaving 142/201 unchanged. The presenter frame and source oval backdrop are removed; the transition outline sits around the tablet she holds. Four public-comment groups use pseudonyms. Scene 2B contains 56 independently editable handwritten hashtags (six script terms plus fifty related terms) with accelerating appearance timings. All retained frames were rendered and inspected.</p></div><div><h2>Editing &amp; attribution</h2><p>Open or download each SVG to edit its vector layers and text. The source bundle contains the HTML board, all SVG frames, source illustration assets, and the Caveat font/license. The <a href="https://storyset.com/illustration/people-creating-robot/rafiki" target="_blank" rel="noreferrer">People Creating Robot · Rafiki</a> presenter and <a href="https://storyset.com/illustration/co-workers/rafiki" target="_blank" rel="noreferrer">Co-workers · Rafiki</a> and <a href="https://storyset.com/illustration/student-stress/rafiki" target="_blank" rel="noreferrer">Student Stress · Rafiki</a> are free with attribution. <a href="https://github.com/google/fonts/tree/main/ofl/caveat" target="_blank" rel="noreferrer">Caveat</a> is distributed under SIL OFL 1.1; cite Storyset when publishing and review the <a href="https://storyset.com/terms" target="_blank" rel="noreferrer">Storyset terms</a>.</p></div></section>
+<footer class="footer">Scene 1 uses the woman from the credited Storyset illustration as its presenter; the transition outline highlights her tablet, not a frame around her. Scene backgrounds, public-comment cards, cloud words, labels, cards, connectors, notifications, and text are editable SVG layers. No images were generated.</footer>
 </main></body></html>'''
     output = ROOT / "index.html"
     output.write_text(html, encoding="utf-8")

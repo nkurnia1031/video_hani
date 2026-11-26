@@ -6,9 +6,9 @@ This board contains seven scenes and 16 standalone, editable 16:9 animation fram
 
 ### Scene 1 · The Hook · 00:00–00:30
 
-One continuous plum-background composition keeps the same front-facing, medium close-up placeholder presenter in a fixed position and scale. Four generic, brand-free comment cards appear in sequence with the spoken examples. Names, avatars, and platform marks are removed. The presenter points toward camera, the question `Are we using psychology terms correctly?` appears, and the end of the scene zooms into a smartphone.
+One continuous plum-background composition uses the woman from Storyset’s *People Creating Robot · Rafiki* illustration as the presenter. The surrounding phone frame is removed. Four generic, brand-free comment cards appear in sequence with the spoken examples; the cards use pseudonyms (Naya, Bagas, Rani, and Dito), generic avatars, and no platform marks. The source illustration’s held tablet is the end-of-scene zoom target, leading into Scene 2.
 
-The presenter is adapted from [Girl pointing · OpenClipart / FreeSVG](https://freesvg.org/girl-pointing), released under CC0 1.0. The original source paths remain unchanged; face and outfit colors are separate editable underlays. Three short safe excerpts come from public Reddit comments. The narcissistic example is marked `TIRUAN (bukan komentar asli)` in the source audit because a safe matching public excerpt was not found. Every source lists its platform, URL, and access date in the Word and web boards.
+The presenter source is [People Creating Robot · Storyset / Rafiki](https://storyset.com/illustration/people-creating-robot/rafiki), free with attribution. Eleven of 201 drawable source elements (5.5%) are omitted to remove background panels, and 48 are recolored; 142 of 201 (70.6%) remain unchanged. This keeps the adaptation below the 40% limit. Three short safe excerpts come from public Reddit comments. The narcissistic example is marked `TIRUAN (bukan komentar asli)` in the source audit because a safe matching public excerpt was not found. Every source lists its platform, URL, and access date in the Word and web boards. The names shown on the comment cards are pseudonyms, not the original account names.
 
 ### Scene 2B · Hashtag cloud
 
@@ -54,11 +54,11 @@ The source illustrations use SVG groups so an animator can move the existing hea
 
 ## Assets, attribution, and visual audit
 
-- [Girl pointing · OpenClipart / FreeSVG](https://freesvg.org/girl-pointing) is CC0 1.0. Its source line art is preserved; color underlays remain separate editable layers.
+- [People Creating Robot · Storyset / Rafiki](https://storyset.com/illustration/people-creating-robot/rafiki) supplies the Scene 1 presenter. It is free with attribution. Eleven of 201 drawable elements are omitted and 48 recolored; 142 remain unchanged.
 - [Student Stress · Storyset / Rafiki](https://storyset.com/illustration/student-stress/rafiki) supplies the source character used in Scene 4. The available application environment did not include a skeletal bone-rig editor; the SVG character remains divided into editable groups for parenting and transform animation.
 - [Co-workers · Storyset / Rafiki](https://storyset.com/illustration/co-workers/rafiki) supplies the isolated Dina composition in 4D. It changes or omits 57/158 drawable source elements (36.1%), leaving 101/158 unchanged.
 - Scene 3 illustration sources are credited in the scene artwork and on the web and Word boards. Storyset assets are free with attribution; review the [Storyset terms](https://storyset.com/terms) for publishing.
-- Scene 1 comment excerpts and their public URLs, platform, and access date appear in the web and Word source audit. Account names, profile photos, and platform brands do not appear in scene artwork; the fourth comment is explicitly marked as a synthetic example in the audit.
+- Scene 1 comment excerpts and their public URLs, platform, and access date appear in the web and Word source audit. Cards show pseudonyms rather than source account names; profile photos and platform brands do not appear. The fourth comment is explicitly marked as a synthetic example in the audit.
 - Each standalone scene frame contains only the animation composition, source illustration, props, overlays, and on-screen text. Board titles, timecodes, footers, legends, credits, and production notes stay outside scene artwork.
 - The Scene 3 SVG and PNG files were verified unchanged across the revision. All revised scenes were rendered and visually inspected.
 
