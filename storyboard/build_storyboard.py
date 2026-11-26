@@ -51,7 +51,6 @@ PALETTE_NAMES = ["deep plum", "sage", "terracotta", "mustard", "peach", "cream",
 ASSETS = {
     "feed": {"file": REPO / "Feed-rafiki.svg", "title": "Feed", "url": "https://storyset.com/illustration/feed/rafiki"},
     "texting": {"file": REPO / "Texting-rafiki.svg", "title": "Texting", "url": "https://storyset.com/illustration/texting/rafiki"},
-    "feeling": {"file": REPO / "Feeling Blue-rafiki.svg", "title": "Feeling Blue", "url": "https://storyset.com/illustration/feeling-blue/rafiki"},
     "couple": {"file": REPO / "Couple stress-rafiki.svg", "title": "Couple Stress", "url": "https://storyset.com/illustration/couple-stress/rafiki"},
     "problem": {"file": REPO / "Problem solving-rafiki.svg", "title": "Problem Solving", "url": "https://storyset.com/illustration/problem-solving/rafiki"},
     "document": {"file": REPO / "Online document-rafiki.svg", "title": "Online Document", "url": "https://storyset.com/illustration/online-document/rafiki"},
@@ -165,12 +164,12 @@ SCENES = [
     },
     {
         "no": 3, "slug": "normal-emotions-become-labels", "time": "01:05–01:55", "title": "When Normal Emotions Become Labels",
-        "visual": "Three separate full-screen examples: an unanswered message, sadness after a setback, and a disagreement. A final frame brings the examples together behind centered on-screen text.",
-        "screen": "They're avoidant! · I'm depressed! · You're gaslighting me!\nOne behavior ≠ A psychological diagnosis.",
-        "motion": "03A–03C: tiap contoh tampil sendiri; bubble terracotta muncul lebih dulu, lalu koreksi sage. 03D: ketiga contoh bertemu dan kalimat penutup tampil di tengah.",
+        "visual": "Three separate full-screen examples: an unanswered message, a student slumped over a failed exam with a crossed-out 100 and a red 45 remedial score, and a disagreement. A final frame brings the examples together behind centered on-screen text.",
+        "screen": "They're avoidant! · I'm depressed! (100 dicoret → 45 · REMEDI) · You're gaslighting me!\nOne behavior ≠ A psychological diagnosis.",
+        "motion": "03A–03C: tiap contoh tampil sendiri; bubble terracotta muncul lebih dulu, lalu koreksi sage. 03B: nilai 100 dicoret, nilai 45 dan tanda REMEDI muncul di atas siswa yang lesu memegang hasil ujian. 03D: ketiga contoh bertemu dan kalimat penutup tampil di tengah.",
         "voice": "Contoh pertama. Teman kita belum membalas chat selama beberapa jam. Lalu kita langsung menyimpulkan bahwa dia punya avoidant attachment. Padahal, mungkin dia sedang sibuk, kelelahan, atau memang belum sempat membalas. One situation doesn't define someone's entire personality. Contoh kedua. Kita merasa sedih setelah gagal mencapai target. Kemudian langsung menyebut diri sendiri mengalami depresi. Padahal, sedih merupakan emosi manusia yang normal. Kesedihan setelah mengalami kegagalan tidak otomatis menunjukkan adanya gangguan depresi. Contoh ketiga. Seseorang tidak setuju dengan pendapat kita, lalu langsung dituduh melakukan gaslighting. Padahal, disagreement atau perbedaan pendapat tidak otomatis termasuk gaslighting. Kita perlu melihat konteks, pola perilaku, dan bagaimana tindakan tersebut terjadi.",
-        "assets": ["texting", "feeling", "couple"], "roles": ["Texting-rafiki.svg: pesan belum dibalas.", "Feeling Blue-rafiki.svg: emosi sedih.", "Couple stress-rafiki.svg: konteks perbedaan pendapat."],
-        "credits": ["texting", "feeling", "couple"], "background": "Case 1 peach tint #FFE3D3, Case 2 sage tint #DCEFE4, and Case 3 mustard tint #FCE9C2; terracotta labels and sage corrections use the PDF's contrast rules.",
+        "assets": ["texting", "couple"], "roles": ["Texting-rafiki.svg: pesan belum dibalas di 03A.", "03B dan thumbnail 03D: siswa lesu serta hasil ujian digambar sebagai vektor SVG editable.", "Couple stress-rafiki.svg: konteks perbedaan pendapat."],
+        "credits": ["texting", "couple"], "background": "Case 1 peach tint #FFE3D3, Case 2 sage tint #DCEFE4, and Case 3 mustard tint #FCE9C2; terracotta labels and sage corrections use the PDF's contrast rules.",
         "frames": [
             {"code": "03A", "slug": "03a-case-01-avoidant", "title": "Case 1 · Unanswered Message", "time": "01:05–01:20"},
             {"code": "03B", "slug": "03b-case-02-depressed", "title": "Case 2 · Sadness After Failure", "time": "01:20–01:35"},
@@ -658,8 +657,6 @@ SCENE3_CASES = [
     {
         "key": "feeling", "background": CASE_TINTS[1], "quote": "I'm depressed!",
         "correction": ["Sedih setelah gagal itu", "emosi yang normal."],
-        "colors": {"#263238": ESPRESSO, "#407BFF": PLUM, "#ED893E": MUSTARD, "#FFB573": PEACH,
-                   "#EBEBEB": CREAM, "#F0F0F0": CREAM, "#F5F5F5": CASE_TINTS[1], "#FAFAFA": CASE_TINTS[1]},
     },
     {
         "key": "couple", "background": CASE_TINTS[2], "quote": "You're gaslighting me!",
@@ -674,12 +671,19 @@ SCENE3_CASES = [
 def draw_case_frame(case_index):
     case = SCENE3_CASES[case_index]
     number = case_index + 1
+    description = (
+        "A slumped student at a desk holds an exam paper. Above him, a dark 100 is crossed out in terracotta and replaced by a red 45 marked REMEDI. The terracotta label says: I'm depressed! The sage correction says: Sedih setelah gagal itu emosi yang normal."
+        if case["key"] == "feeling"
+        else f"{case['quote']} A terracotta assumption appears beside the illustration, then a sage correction reads: {' '.join(case['correction'])}"
+    )
     root = clean_frame(
         f"Scene 3 case {number}: {case['quote']}",
-        f"{case['quote']} A terracotta assumption appears beside the illustration, then a sage correction reads: {' '.join(case['correction'])}",
+        description,
         case["background"],
     )
-    color_map = case["colors"]
+    if case["key"] == "feeling":
+        root.find(tag("metadata")).text = "Hand-drawn, editable SVG vectors for the student, desk, and exam sheet. No generated imagery."
+    color_map = case.get("colors", {})
     omit_bg = {f"freepik--background-complete--inject-2"}
     if case["key"] == "texting":
         embed_asset(root, "texting", 58, 78, 900, 900,
@@ -697,14 +701,7 @@ def draw_case_frame(case_index):
         txt(root, 535, 400, "Balas dong :( ", 26, WHITE, 700, "middle")
         txt(root, 800, 468, "Dibaca · 3 jam", 18, ESPRESSO, 700, "end")
     elif case["key"] == "feeling":
-        # A simple target marks the failed goal behind the existing sad-character vector.
-        circle(root, 834, 245, 126, CREAM, opacity=0.70)
-        circle(root, 834, 245, 94, MUSTARD, opacity=0.85)
-        circle(root, 834, 245, 61, CREAM)
-        circle(root, 834, 245, 29, TERRACOTTA)
-        path(root, "M916,165 L854,226", stroke=ESPRESSO, sw=8)
-        path(root, "M908,158 L929,151 L921,172 Z", fill=ESPRESSO)
-        embed_asset(root, "feeling", 78, 78, 900, 900, omit_ids=omit_bg, color_map=color_map)
+        draw_student_failure(root)
     else:
         embed_asset(root, "couple", 70, 76, 910, 910, omit_ids=omit_bg, color_map=color_map)
 
@@ -716,6 +713,70 @@ def draw_case_frame(case_index):
     txt(root, 1439, 690, case["correction"][0], 30, ESPRESSO, 600, "middle")
     txt(root, 1439, 731, case["correction"][1], 30, ESPRESSO, 600, "middle")
     return root
+
+
+def draw_student_failure(root):
+    """Editable, hand-drawn exam-failure vignette for scene 03B."""
+    # A marked score card makes the setback readable before the emotional label appears.
+    card(root, 108, 112, 864, 292, CREAM, border=PEACH, radius=26)
+    txt(root, 158, 172, "HASIL ULANGAN", 22, ESPRESSO, 700, letter=1.3)
+    txt(root, 365, 328, "100", 112, ESPRESSO, 700, "middle")
+    path(root, "M292,245 L432,344", stroke=TERRACOTTA, sw=13)
+    path(root, "M304,344 L427,251", stroke=TERRACOTTA, sw=9)
+    path(root, "M495,292 C536,258 584,257 625,288", stroke=TERRACOTTA, sw=8)
+    path(root, "M610,272 L635,291 L603,299 Z", fill=TERRACOTTA)
+    txt(root, 770, 325, "45", 116, TERRACOTTA, 700, "middle")
+    txt(root, 770, 367, "REMEDI", 22, TERRACOTTA, 700, "middle", letter=1.5)
+
+    # Chair, legs, and desk establish a schoolwork setting rather than an abstract target.
+    add(root, "ellipse", cx=552, cy=917, rx=390, ry=30, fill=ESPRESSO, opacity=0.10)
+    rect(root, 650, 484, 205, 235, MUSTARD, rx=34, stroke=ESPRESSO, sw=8)
+    rect(root, 490, 686, 390, 38, ESPRESSO, rx=18)
+    path(root, "M533,720 L512,900 M835,720 L857,900", stroke=ESPRESSO, sw=18)
+    path(root, "M500,897 L545,897 M839,897 L881,897", stroke=ESPRESSO, sw=15)
+
+    # Bent legs and slumped torso: the shoulders tip forward and the head drops toward the test.
+    path(root, "M493,677 C510,729 477,783 416,826 L390,853 Q417,873 459,858 L552,803 Q585,784 598,749 L650,839 Q673,858 711,844 L676,740 L647,681 Z", fill=PLUM)
+    path(root, "M390,851 Q421,862 462,847 L476,864 Q464,879 424,884 L382,876 Z", fill=ESPRESSO)
+    path(root, "M674,837 Q695,850 714,833 L732,850 Q719,870 682,871 L659,859 Z", fill=ESPRESSO)
+    path(root, "M481,544 C506,500 576,488 640,529 Q672,552 676,631 L654,715 L475,715 Q453,648 458,592 Z", fill=PLUM)
+    path(root, "M509,563 Q556,590 608,557", stroke=PEACH, sw=7, opacity=0.65)
+
+    # One arm droops across the desk; the other reaches for the exam sheet.
+    path(root, "M493,563 C468,581 449,606 431,636", stroke=PLUM, sw=47)
+    path(root, "M431,636 Q410,650 396,665", stroke=PEACH, sw=27)
+    path(root, "M635,559 C670,587 685,620 699,660", stroke=PLUM, sw=47)
+    path(root, "M699,660 Q704,674 695,686", stroke=PEACH, sw=28)
+
+    # Drooped face with low, inward brows, downcast eyes, and a frown.
+    add(root, "ellipse", cx=589, cy=490, rx=61, ry=75, fill=PEACH, transform="rotate(-13 589 490)")
+    path(root, "M528,475 C512,431 538,404 565,405 C588,380 629,406 640,439 L633,477 Q612,452 591,451 Q559,447 541,481 Z", fill=ESPRESSO)
+    path(root, "M541,475 Q553,465 565,473 M601,468 Q613,460 625,467", stroke=ESPRESSO, sw=6)
+    path(root, "M545,487 Q554,494 563,489 M604,482 Q613,489 622,483", stroke=ESPRESSO, sw=4)
+    path(root, "M583,490 Q573,507 589,510", stroke=ESPRESSO, sw=4)
+    path(root, "M570,526 Q587,512 604,524", stroke=ESPRESSO, sw=5)
+    circle(root, 632, 495, 13, PEACH)
+    path(root, "M640,495 Q649,497 642,506", stroke=ESPRESSO, sw=3)
+
+    # Paper held up from the desk, with the actual low grade and a remedial mark.
+    sheet = add(root, "g", transform="rotate(-5 388 622)")
+    card(sheet, 280, 526, 230, 174, CREAM, border=PEACH, radius=12)
+    txt(sheet, 302, 557, "ULANGAN", 14, ESPRESSO, 700, letter=0.8)
+    line(sheet, 302, 570, 486, 570, PEACH, 3)
+    txt(sheet, 395, 631, "45", 62, TERRACOTTA, 700, "middle")
+    txt(sheet, 395, 663, "REMEDI", 14, TERRACOTTA, 700, "middle", letter=0.8)
+    line(sheet, 304, 682, 479, 682, "#E8DACF", 3)
+    # Hand wraps over the upper-right corner so the student is visibly holding the page.
+    hand = path(root, "M431,636 Q448,620 463,606 Q474,598 483,606 L489,617 Q485,630 470,641 L450,654", fill=PEACH)
+
+    # Desk is foregrounded to anchor the slumped figure and the marked exam.
+    rect(root, 132, 704, 828, 40, MUSTARD, rx=13, stroke=ESPRESSO, sw=7)
+    rect(root, 161, 744, 770, 28, PLUM, rx=7)
+    path(root, "M194,770 L183,904 M892,770 L906,904", stroke=ESPRESSO, sw=18)
+    path(root, "M166,903 L207,903 M886,903 L927,903", stroke=ESPRESSO, sw=15)
+    # The sheet sits in front of the desktop so its grade stays legible in the animation frame.
+    root.append(sheet)
+    root.append(hand)
 
 
 def build_scene_3_case_1(scene):
@@ -741,8 +802,13 @@ def build_scene_3_combined(scene):
     for i, (x, tint) in enumerate(case_positions):
         rect(root, x, 0, panel_w, H, tint)
         case = SCENE3_CASES[i]
-        omit_bg = {"freepik--background-complete--inject-2"}
-        embed_asset(root, case["key"], x + 70, 24, 500, 410, omit_ids=omit_bg, color_map=case["colors"])
+        if case["key"] == "feeling":
+            # Reuse the exam-failure vignette so the combined frame matches 03B.
+            miniature = add(root, "g", transform="translate(722 0) scale(0.44)")
+            draw_student_failure(miniature)
+        else:
+            omit_bg = {"freepik--background-complete--inject-2"}
+            embed_asset(root, case["key"], x + 70, 24, 500, 410, omit_ids=omit_bg, color_map=case["colors"])
     rect(root, 95, 433, 1730, 214, PLUM, rx=34)
     txt(root, 548, 564, "One behavior", 58, MUSTARD, 700, "middle")
     line(root, 925, 520, 987, 520, TERRACOTTA, 9)
