@@ -1,0 +1,259 @@
+<!-- Three storyboard layouts for seven scenes, switchable with ?variant=A|B|C; question: which layout is easiest to review? -->
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PROTOTYPE — Storyboard Therapy Speak Gone Wrong</title>
+  <style>
+    :root {
+      --ink: #17324d;
+      --blue: #2e63c9;
+      --blue-soft: #e7f0fd;
+      --paper: #f4f7fb;
+      --surface: #fff;
+      --line: #d8e1ed;
+      --muted: #627286;
+      --coral: #ed8067;
+      --green: #638d7c;
+      --shadow: 0 14px 34px rgba(24, 48, 78, .09);
+    }
+
+    * { box-sizing: border-box; }
+    html { background: var(--paper); color: var(--ink); font-family: Arial, Helvetica, sans-serif; }
+    body { margin: 0; padding: 32px 28px 112px; }
+    button { font: inherit; }
+    .prototype-shell { max-width: 1480px; margin: 0 auto; }
+    .masthead { display: flex; justify-content: space-between; align-items: end; gap: 32px; margin: 0 0 28px; }
+    .eyebrow { color: var(--blue); font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    h1 { margin: 7px 0 6px; font-size: clamp(30px, 4vw, 48px); line-height: 1.02; letter-spacing: -.04em; }
+    .masthead p { max-width: 620px; margin: 0; color: var(--muted); font-size: 15px; line-height: 1.5; }
+    .page-count { flex: 0 0 auto; color: var(--muted); font-size: 13px; text-align: right; }
+    .page-count strong { display: block; color: var(--ink); font-size: 23px; }
+
+    .variant-view { display: none; }
+    .variant-view.is-active { display: block; }
+    .variant-title { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; margin-bottom: 16px; }
+    .variant-title h2 { margin: 0; font-size: 22px; letter-spacing: -.025em; }
+    .variant-title p { margin: 0; color: var(--muted); font-size: 13px; }
+
+    /* A: all scenes at once, useful for a fast pacing and palette check. */
+    .contact-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .contact-card { min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); box-shadow: var(--shadow); }
+    .contact-card:nth-child(4n + 2) { background: #edf4fc; }
+    .contact-card:nth-child(4n + 3) { background: #f8f6f1; }
+    .card-head { display: flex; justify-content: space-between; gap: 12px; padding: 15px 17px 0; }
+    .time-chip { color: var(--blue); font-size: 11px; font-weight: 700; letter-spacing: .08em; }
+    .scene-no { color: #9aa9ba; font-size: 11px; font-weight: 700; }
+    .contact-card h3 { margin: 6px 17px 0; font-size: 17px; line-height: 1.15; }
+    .mini-frame { position: relative; display: flex; align-items: center; justify-content: center; min-height: 205px; margin: 10px 12px 0; overflow: hidden; border-radius: 12px; background: #f7f9fc; }
+    .mini-frame img { width: 72%; height: 190px; object-fit: contain; }
+    .mini-frame .slot { display: grid; place-content: center; width: 44%; height: 150px; padding: 12px; border: 2px dashed #9aacc0; border-radius: 12px; background: #eaf1fa; color: #54708f; text-align: center; font-size: 12px; font-weight: 700; }
+    .mini-frame .mini-tag { position: absolute; right: 10px; bottom: 10px; padding: 6px 9px; border-radius: 99px; background: var(--ink); color: white; font-size: 10px; }
+    .contact-card > p { min-height: 50px; margin: 10px 17px 16px; color: var(--muted); font-size: 12px; line-height: 1.4; }
+    .asset-pills { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 17px 16px; }
+    .asset-pills span { padding: 5px 8px; border: 1px solid #d6e0eb; border-radius: 99px; background: rgba(255,255,255,.75); color: #52677f; font-size: 10px; }
+
+    /* B: one cinematic frame at a time, useful for checking each composition at 16:9. */
+    .film-layout { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 18px; align-items: start; }
+    .scene-rail { display: grid; gap: 6px; padding: 8px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }
+    .scene-rail button { display: flex; justify-content: space-between; gap: 10px; padding: 12px; border: 0; border-radius: 10px; background: transparent; color: var(--ink); text-align: left; cursor: pointer; }
+    .scene-rail button[aria-current="true"] { background: var(--blue-soft); color: #1d4eaa; }
+    .scene-rail b { font-size: 12px; }
+    .scene-rail small { color: var(--muted); font-size: 10px; }
+    .film-stage-wrap { min-width: 0; }
+    .film-stage { position: relative; display: grid; grid-template-columns: .9fr 1.1fr; align-items: center; min-height: 490px; overflow: hidden; padding: 35px 44px; border-radius: 20px; background: #edf3fb; box-shadow: var(--shadow); }
+    .film-stage::before { position: absolute; top: -140px; right: -30px; width: 520px; height: 520px; border-radius: 50%; background: #dce9fb; content: ""; }
+    .film-copy, .film-assets { position: relative; z-index: 1; }
+    .film-copy .time-chip { display: inline-block; padding: 7px 10px; border-radius: 99px; background: white; }
+    .film-copy h3 { max-width: 420px; margin: 16px 0 12px; font-size: clamp(28px, 3vw, 44px); line-height: 1; letter-spacing: -.04em; }
+    .film-copy p { max-width: 430px; margin: 0; color: #52677f; font-size: 15px; line-height: 1.55; }
+    .film-copy .screen-line { margin-top: 24px; padding-left: 12px; border-left: 3px solid var(--coral); color: var(--ink); font-size: 13px; font-weight: 700; }
+    .film-assets { display: flex; justify-content: center; align-items: center; min-height: 365px; gap: 6px; }
+    .film-assets img { width: min(74%, 390px); max-height: 365px; object-fit: contain; }
+    .film-assets img + img { width: 43%; margin-left: -75px; }
+    .film-assets .slot { display: grid; place-content: center; width: 52%; height: 290px; padding: 20px; border: 2px dashed #93a8c0; border-radius: 18px; background: rgba(255,255,255,.64); color: #54708f; text-align: center; font-weight: 700; }
+    .film-controls { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 12px; }
+    .film-controls button { padding: 10px 14px; border: 1px solid var(--line); border-radius: 99px; background: white; color: var(--ink); cursor: pointer; }
+    .film-controls span { color: var(--muted); font-size: 12px; }
+
+    /* C: production board, with shot, on-screen text and asset roles together. */
+    .production-board { display: grid; gap: 12px; }
+    .production-row { display: grid; grid-template-columns: 160px minmax(300px, .95fr) minmax(340px, 1.05fr); gap: 16px; align-items: stretch; padding: 14px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }
+    .production-meta { display: flex; flex-direction: column; justify-content: space-between; padding: 5px 0; }
+    .production-meta .time-chip { margin-bottom: 8px; }
+    .production-meta h3 { margin: 0; font-size: 17px; line-height: 1.14; }
+    .production-meta .scene-no { margin-top: 10px; }
+    .production-frame { display: flex; justify-content: center; align-items: center; min-height: 180px; overflow: hidden; border-radius: 11px; background: #f0f5fb; }
+    .production-frame img { width: 48%; height: 174px; object-fit: contain; }
+    .production-frame img:first-child:last-child { width: 74%; }
+    .production-frame .slot { display: grid; place-content: center; width: 47%; height: 125px; padding: 10px; border: 2px dashed #9aacc0; border-radius: 10px; background: #e5eef8; color: #54708f; text-align: center; font-size: 11px; font-weight: 700; }
+    .production-notes { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 14px; align-content: center; padding: 3px 5px; }
+    .production-notes div { min-width: 0; }
+    .production-notes dt { margin-bottom: 3px; color: var(--blue); font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .production-notes dd { margin: 0; color: #506278; font-size: 11px; line-height: 1.35; }
+
+    .checklist-mock { display: grid; gap: 9px; width: min(78%, 340px); padding: 22px; border: 1px solid #d7e1ee; border-radius: 14px; background: white; box-shadow: 0 12px 24px rgba(24,48,78,.08); }
+    .checklist-mock span { display: flex; align-items: center; gap: 10px; color: #506278; font-size: 12px; line-height: 1.3; }
+    .checklist-mock i { display: grid; flex: 0 0 20px; place-items: center; width: 20px; height: 20px; border-radius: 6px; background: var(--blue); color: white; font-size: 13px; font-style: normal; font-weight: 700; }
+
+    .prototype-switcher { position: fixed; z-index: 10; left: 50%; bottom: 18px; display: flex; align-items: center; gap: 10px; padding: 8px; transform: translateX(-50%); border: 1px solid rgba(255,255,255,.12); border-radius: 99px; background: #17324d; box-shadow: 0 12px 36px rgba(20,38,60,.25); color: white; }
+    .prototype-switcher button { width: 36px; height: 36px; border: 0; border-radius: 50%; background: rgba(255,255,255,.12); color: white; font-size: 20px; cursor: pointer; }
+    .prototype-switcher button:hover { background: rgba(255,255,255,.23); }
+    .switcher-label { min-width: 190px; text-align: center; font-size: 12px; font-weight: 700; }
+    .switcher-label small { display: block; margin-top: 2px; color: #cfdbeb; font-size: 10px; font-weight: 400; }
+    .no-script { margin: 20px 0; padding: 12px; border: 1px solid #e7c39d; border-radius: 10px; background: #fff4e8; color: #7b5021; }
+
+    @media (max-width: 1050px) {
+      .contact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .production-row { grid-template-columns: 130px minmax(260px, .9fr) minmax(280px, 1.1fr); gap: 10px; }
+    }
+    @media (max-width: 760px) {
+      body { padding: 20px 14px 100px; }
+      .masthead { display: block; }
+      .page-count { margin-top: 12px; text-align: left; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .film-layout { grid-template-columns: 1fr; }
+      .scene-rail { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .film-stage { grid-template-columns: 1fr; min-height: 0; padding: 24px; }
+      .film-assets { min-height: 260px; }
+      .production-row { grid-template-columns: 1fr; }
+      .production-meta { display: grid; grid-template-columns: 1fr auto; align-items: center; }
+      .production-meta .scene-no { margin: 0; }
+      .production-frame { min-height: 210px; }
+      .production-notes { grid-template-columns: 1fr 1fr; }
+      .variant-title { display: block; }
+      .variant-title p { margin-top: 6px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="prototype-shell" id="storyboardPrototype">
+    <header class="masthead">
+      <div>
+        <div class="eyebrow">PROTOTYPE · storyboard review</div>
+        <h1>Therapy Speak Gone Wrong</h1>
+        <p>Bandingkan tiga cara membaca tujuh scene, aset Storyset Rafiki, teks layar, dan kebutuhan produksi. Semua gambar adalah SVG yang sudah ada di repo; gambar baru tidak dibuat.</p>
+      </div>
+      <div class="page-count"><strong>04:00</strong>7 scene · satu sistem visual</div>
+    </header>
+
+    <section class="variant-view" id="variantA" aria-label="Variant A contact sheet">
+      <div class="variant-title"><h2>A · Contact sheet</h2><p>Semua scene terlihat sekaligus untuk mengecek ritme dan warna.</p></div>
+      <div class="contact-grid" id="contactGrid"></div>
+    </section>
+
+    <section class="variant-view" id="variantB" aria-label="Variant B cinematic viewer">
+      <div class="variant-title"><h2>B · Cinematic frame</h2><p>Satu frame 16:9 menjadi fokus; pindah scene lewat daftar di kiri.</p></div>
+      <div class="film-layout">
+        <nav class="scene-rail" id="sceneRail" aria-label="Pilih scene"></nav>
+        <div class="film-stage-wrap">
+          <div class="film-stage" id="filmStage"></div>
+          <div class="film-controls"><button type="button" id="previousScene">← Scene sebelumnya</button><span id="filmPosition"></span><button type="button" id="nextScene">Scene berikutnya →</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="variant-view" id="variantC" aria-label="Variant C production board">
+      <div class="variant-title"><h2>C · Production board</h2><p>Gambar, teks layar, gerak, dan fungsi aset dibaca dalam satu baris per scene.</p></div>
+      <div class="production-board" id="productionBoard"></div>
+    </section>
+
+    <noscript><p class="no-script">Prototype ini membutuhkan JavaScript untuk mengganti layout.</p></noscript>
+  </main>
+
+  <nav class="prototype-switcher" aria-label="Ganti variasi layout">
+    <button type="button" id="previousVariant" aria-label="Layout sebelumnya">‹</button>
+    <div class="switcher-label"><span id="activeVariant"></span><small>Gunakan ← / → untuk membandingkan</small></div>
+    <button type="button" id="nextVariant" aria-label="Layout berikutnya">›</button>
+  </nav>
+
+  <script>
+    const scenes = [
+      { no: 1, time: '00:00–00:30', title: 'The Hook', image: 'Chat-rafiki.svg', assets: ['Chat'], visual: 'Footage presenter medium close-up; bubble komentar muncul mengitari presenter.', screen: '“avoidant” · “toxic” · “depressed?”', motion: 'Bubble masuk cepat, lalu kamera zoom-in ke smartphone.' },
+      { no: 2, time: '00:30–01:05', title: 'What Is Therapy Speak?', image: 'Feed-rafiki.svg', assets: ['Feed'], visual: 'Smartphone dan feed media sosial menjadi panggung istilah psikologi.', screen: 'Toxic · Narcissist · Gaslighting · Trauma · Avoidant · Depressed', motion: 'Istilah terangkat dari feed lalu tumbuh menjadi hashtag.' },
+      { no: 3, time: '01:05–01:55', title: 'When Normal Emotions Become Labels', images: ['Texting-rafiki.svg', 'Feeling Blue-rafiki.svg', 'Couple stress-rafiki.svg'], assets: ['Texting', 'Feeling Blue', 'Couple Stress'], visual: 'Triptych: pesan belum dibalas, sedih setelah gagal, dua orang berbeda pendapat.', screen: '“They’re avoidant!” · “I’m depressed!” · “You’re gaslighting me!”', motion: 'Tiap tuduhan muncul sebentar; konteks menyusul dan menurunkan label.' },
+      { no: 4, time: '01:55–02:35', title: 'Why Does It Matter?', image: 'Problem solving-rafiki.svg', assets: ['Problem Solving'], visual: 'Karakter dan labirin di kiri; efek domino empat dampak di kanan.', screen: 'Salah memahami diri · Salah menilai orang lain · Konflik · Stigma', motion: 'Satu kartu label menjatuhkan rangkaian kartu dampak.' },
+      { no: 5, time: '02:35–03:20', title: 'The Ethical Side of Psychology', images: ['Online document-rafiki.svg', 'Research paper-rafiki.svg'], assets: ['Online Document', 'Research Paper'], visual: 'Halaman dokumen digital dengan empat kartu pasal.', screen: 'Pasal 9 · 15 · 28 · 31', motion: 'Kartu pasal masuk satu per satu; dasar ilmiah menjadi pengikat.' },
+      { no: 6, time: '03:20–03:50', title: 'How to Use Therapy Speak Wisely', assets: ['Checklist teks & vektor rancangan'], visual: 'Checklist tiga langkah sebagai komposisi teks dan vektor sederhana.', screen: 'Understand before you label · Describe, don’t diagnose · Learn, don’t self-diagnose', motion: 'Centang dan vignette muncul satu per satu.' },
+      { no: 7, time: '03:50–04:00', title: 'Closing', images: ['Social interaction-rafiki.svg', 'Feeling Blue-rafiki.svg'], assets: ['Social Interaction', 'Feeling Blue'], visual: 'Kelompok manusia, beberapa kartu ekspresi, judul penutup.', screen: 'THINK BEFORE YOU LABEL.', motion: 'Istilah memudar; ekspresi muncul; identitas pembuat menutup.' }
+    ];
+    const variantNames = { A: 'Contact sheet', B: 'Cinematic frame', C: 'Production board' };
+    const variants = ['A', 'B', 'C'];
+    let activeVariant = new URL(location.href).searchParams.get('variant') || 'A';
+    if (!variants.includes(activeVariant)) activeVariant = 'A';
+    let activeScene = Number(new URL(location.href).searchParams.get('scene') || 1);
+    if (!Number.isInteger(activeScene) || activeScene < 1 || activeScene > scenes.length) activeScene = 1;
+
+    function assetList(scene) { return scene.images || [scene.image]; }
+    function imageMarkup(scene, mode = 'default') {
+      const list = assetList(scene);
+      if (scene.no === 1) {
+        return '<div class="slot">LIVE PRESENTER<br>medium close-up</div><img src="../Chat-rafiki.svg" alt="Ilustrasi Chat Rafiki sebagai acuan bubble komentar">';
+      }
+      if (scene.no === 6) {
+        return '<div class="checklist-mock" aria-label="Rancangan checklist tiga langkah"><span><i>✓</i>Understand before you label</span><span><i>✓</i>Describe, don’t diagnose</span><span><i>✓</i>Learn, don’t self-diagnose</span></div>';
+      }
+      return list.map((src, index) => `<img src="../${src}" alt="${scene.assets[index] || scene.assets[0]} illustration, Storyset Rafiki">`).join('');
+    }
+    function renderContactGrid() {
+      document.getElementById('contactGrid').innerHTML = scenes.map(scene => `
+        <article class="contact-card">
+          <div class="card-head"><span class="time-chip">${scene.time}</span><span class="scene-no">SCENE ${String(scene.no).padStart(2,'0')}</span></div>
+          <h3>${scene.title}</h3>
+          <div class="mini-frame">${imageMarkup(scene)}<span class="mini-tag">${scene.no === 6 ? 'Custom vector' : 'Rafiki · flat vector'}</span></div>
+          <p>${scene.visual}</p>
+          <div class="asset-pills">${scene.assets.map(asset => `<span>${asset}</span>`).join('')}</div>
+        </article>`).join('');
+    }
+    function renderRail() {
+      document.getElementById('sceneRail').innerHTML = scenes.map(scene => `
+        <button type="button" data-scene="${scene.no}" aria-current="${scene.no === activeScene}">
+          <span><b>${String(scene.no).padStart(2,'0')} · ${scene.title}</b><br><small>${scene.time}</small></span><span aria-hidden="true">›</span>
+        </button>`).join('');
+      document.querySelectorAll('#sceneRail button').forEach(button => button.addEventListener('click', () => showScene(Number(button.dataset.scene))));
+    }
+    function renderFilmStage() {
+      const scene = scenes[activeScene - 1];
+      document.getElementById('filmStage').innerHTML = `
+        <div class="film-copy"><span class="time-chip">${scene.time} · SCENE ${String(scene.no).padStart(2,'0')}</span><h3>${scene.title}</h3><p>${scene.visual}</p><div class="screen-line">TEKS LAYAR<br>${scene.screen}</div></div>
+        <div class="film-assets">${imageMarkup(scene, 'film')}</div>`;
+      document.getElementById('filmPosition').textContent = `${String(scene.no).padStart(2,'0')} / ${String(scenes.length).padStart(2,'0')} · ${scene.motion}`;
+      renderRail();
+    }
+    function renderProductionBoard() {
+      document.getElementById('productionBoard').innerHTML = scenes.map(scene => `
+        <article class="production-row">
+          <div class="production-meta"><div><div class="time-chip">${scene.time}</div><h3>${scene.title}</h3></div><span class="scene-no">SCENE ${String(scene.no).padStart(2,'0')}</span></div>
+          <div class="production-frame">${imageMarkup(scene, 'production')}</div>
+          <dl class="production-notes">
+            <div><dt>Visual</dt><dd>${scene.visual}</dd></div><div><dt>Teks layar</dt><dd>${scene.screen}</dd></div>
+            <div><dt>Gerak</dt><dd>${scene.motion}</dd></div><div><dt>Aset</dt><dd>${scene.assets.join(' · ')}${scene.no === 6 ? '' : ' · Storyset Rafiki'}</dd></div>
+          </dl>
+        </article>`).join('');
+    }
+    function selectVariant(next) {
+      const index = variants.indexOf(activeVariant);
+      activeVariant = variants[(index + next + variants.length) % variants.length];
+      const url = new URL(location.href); url.searchParams.set('variant', activeVariant); url.searchParams.set('scene', activeScene); location.href = url.toString();
+    }
+    function showScene(next) {
+      activeScene = Math.max(1, Math.min(scenes.length, next));
+      const url = new URL(location.href); url.searchParams.set('variant', activeVariant); url.searchParams.set('scene', activeScene); history.replaceState(null, '', url.toString());
+      renderFilmStage();
+    }
+    renderContactGrid(); renderFilmStage(); renderProductionBoard();
+    document.querySelectorAll('.variant-view').forEach(el => el.classList.toggle('is-active', el.id === `variant${activeVariant}`));
+    document.getElementById('activeVariant').innerHTML = `${activeVariant} · ${variantNames[activeVariant]}<small>Layout prototype · URL: ?variant=${activeVariant}</small>`;
+    document.getElementById('previousVariant').addEventListener('click', () => selectVariant(-1));
+    document.getElementById('nextVariant').addEventListener('click', () => selectVariant(1));
+    document.getElementById('previousScene').addEventListener('click', () => showScene(activeScene - 1));
+    document.getElementById('nextScene').addEventListener('click', () => showScene(activeScene + 1));
+    document.addEventListener('keydown', event => {
+      if (['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName) || document.activeElement.isContentEditable) return;
+      if (event.key === 'ArrowLeft') { event.preventDefault(); selectVariant(-1); }
+      if (event.key === 'ArrowRight') { event.preventDefault(); selectVariant(1); }
+    });
+  </script>
+</body>
+</html>
