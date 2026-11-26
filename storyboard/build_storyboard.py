@@ -5,6 +5,7 @@ from __future__ import annotations
 from copy import deepcopy
 from pathlib import Path
 import re
+from html import escape
 from xml.etree import ElementTree as ET
 
 import cairosvg
@@ -60,6 +61,7 @@ ASSETS = {
     "research": {"file": REPO / "Research paper-rafiki.svg", "title": "Research Paper", "url": "https://storyset.com/illustration/research-paper/rafiki"},
     "todo": {"file": ASSETS_DIR / "To-do-list-rafiki.svg", "title": "To do list", "url": "https://storyset.com/illustration/to-do-list/rafiki"},
     "social": {"file": REPO / "Social interaction-rafiki.svg", "title": "Social Interaction", "url": "https://storyset.com/illustration/social-interaction/rafiki"},
+    "coworkers": {"file": ASSETS_DIR / "Co-workers_Rafiki.svg", "title": "Co-workers · Rafiki", "url": "https://storyset.com/illustration/co-workers/rafiki"},
 }
 
 SCENE2_COMMENTS = [
@@ -226,9 +228,53 @@ SCENES = [
     },
 ]
 
+# Scene 3–4 is one five-beat narrative. Keep the five frame-level VO cues here
+# so the editable board and the Word script can expose each beat and duration.
+SCENES[2].update({
+    "slug": "normal-emotions-become-labels", "time": "01:05–01:52", "title": "One Label Starts a Chain",
+    "visual": "Satu kisah bersambung: Raka gagal mencapai target, melabeli kesedihannya sebagai depresi, mendengar masukan Dina sebagai serangan, lalu menyimpulkan Dina narsistik dari satu balasan defensif.",
+    "screen": "03A · TARGET 10 → HASIL 6 · ‘Aku depresi. Ada yang salah banget sama aku.’\n03B · Raka: ‘Kamu selalu bikin aku merasa salah!’ · Dina: ‘Aku cuma kasih masukan. Jangan baper terus, deh.’\n03C · ‘DIA NARSISTIK’ · Kesimpulan Raka dari satu balasan.",
+    "motion": "Satu ilustrasi kantor Rafiki menjaga Raka dan Dina tetap konsisten. Gelembung self-label menjadi awan gelap di atas Raka; awan berubah menjadi dua gelembung debat; gelembung terakhir mengerut menjadi cap NARSISTIK. Tiap frame bersih, hanya komposisi animasi tanpa elemen papan produksi.",
+    "voice": "Raka meleset dari target. Beberapa hari ia sedih, lalu mencari nama untuk rasanya: ‘Aku depresi. Ada yang salah banget sama aku.’ Padahal, missing one target does not by itself establish depression. Karena merasa rapuh, di rapat ia mendengar masukan Dina sebagai serangan. Raka: ‘Kamu selalu bikin aku merasa salah!’ Dina ikut defensif: ‘Aku cuma kasih masukan. Jangan baper terus, deh.’ Dari balasan itu, Raka merasa Dina tak empati dan tak mau disalahkan. ‘Dia narsistik,’ simpulnya—padahal one defensive reply belum membuktikan pola atau diagnosis.",
+    "assets": ["coworkers"],
+    "roles": ["Co-workers · Rafiki: satu ilustrasi kantor yang dipakai kembali di semua lima beat. Raka adalah tokoh duduk; Dina berdiri. Label nama hanya menetapkan peran dialog, tanpa menyimpulkan gender atau diagnosis.", "Gelembung self-label, awan, dialog rapat, cap NARSISTIK, kartu target, dan nama tokoh adalah lapisan SVG terpisah yang editable."],
+    "credits": ["coworkers"],
+    "background": "Cream dan plum mendominasi dengan terracotta hanya pada label keliru. Abu-abu dan warna kulit dari ilustrasi sumber dipertahankan; maksimal tiga warna dominan per adegan.",
+    "frames": [
+        {"code": "03A", "slug": "03a-raka-self-label", "title": "Raka Mislabels His Own Sadness", "time": "01:05–01:20", "voice": "Raka meleset dari target. Beberapa hari ia sedih, lalu mencari nama untuk rasanya: ‘Aku depresi. Ada yang salah banget sama aku.’ Padahal, missing one target does not by itself establish depression."},
+        {"code": "03B", "slug": "03b-raka-dina-conflict", "title": "A Work Meeting Turns Tense", "time": "01:20–01:38", "voice": "Karena merasa rapuh, di rapat ia mendengar masukan Dina sebagai serangan. Raka: ‘Kamu selalu bikin aku merasa salah!’ Dina ikut defensif: ‘Aku cuma kasih masukan. Jangan baper terus, deh.’"},
+        {"code": "03C", "slug": "03c-raka-labels-dina", "title": "One Defensive Reply Becomes a Label", "time": "01:38–01:52", "voice": "Dari balasan itu, Raka merasa Dina tak empati dan tak mau disalahkan. ‘Dia narsistik,’ simpulnya—padahal one defensive reply belum membuktikan pola atau diagnosis."},
+    ],
+})
+SCENES[3].update({
+    "slug": "why-it-matters", "time": "01:52–02:25", "title": "The Label Spreads",
+    "visual": "Cerita yang sama berlanjut: Raka membagikan label itu ke grup kantor, rekan-rekan mulai menjauhi Dina, lalu Raka mengirim peringatan dan mengeluarkan Dina dari grup. Dina tertinggal sendiri; Raka mulai ragu.",
+    "screen": "04A · Grup kantor: ‘Dina narsistik.’ · ‘Oh… pantes.’ · ‘Aku skip kalau Dina ikut.’\n04B · ‘Hati-hati sama Dina, dia narsistik.’ · ‘KELUARKAN DINA DARI GRUP’ · ‘SATU MOMEN BUKAN BUKTI’ · ‘Pahami konteks sebelum memberi label.’",
+    "motion": "Cap NARSISTIK berlipat menjadi notifikasi chat yang membuat rekan kerja menjauh. Notifikasi terakhir membuka kartu peringatan Raka dan tombol keluarkan Dina. Setelah Dina sendirian, pertanyaan Raka dan teks penutup muncul.",
+    "voice": "Raka menceritakan kesimpulannya ke teman kantor. Karena cerita itu beredar tanpa konteks, satu per satu orang mulai menjaga jarak dari Dina. The label becomes stigma. Akibatnya, Raka mengirim peringatan di grup: ‘Hati-hati sama Dina, dia narsistik,’ lalu mengeluarkannya. Ia merasa sedang melindungi orang lain. Dina tertinggal sendiri; Raka mulai ragu: did I know enough?",
+    "assets": ["coworkers"],
+    "roles": ["Co-workers · Rafiki: ilustrasi yang sama menjaga kontinuitas karakter. Raka duduk dan Dina berdiri di 03A–04A; pada 04B, Dina tampil sendiri di kantor dan potongan wajah Raka yang sama muncul sebagai inset keraguan.", "Notifikasi, percakapan grup, peringatan, tindakan keluarkan anggota, inset keraguan Raka, dan teks penutup adalah lapisan SVG terpisah."],
+    "credits": ["coworkers"],
+    "background": "Cream, plum, dan sage menjadi warna dominan; terracotta dibatasi untuk cap keliru dan tindakan pengeluaran. Teks penutup memakai sage sebagai arah pemahaman.",
+    "frames": [
+        {"code": "04A", "slug": "04a-label-becomes-stigma", "title": "The Label Starts to Spread", "time": "01:52–02:06", "voice": "Raka menceritakan kesimpulannya ke teman kantor. Karena cerita itu beredar tanpa konteks, satu per satu orang mulai menjaga jarak dari Dina. The label becomes stigma."},
+        {"code": "04B", "slug": "04b-warning-and-removal", "title": "A Warning, an Exclusion, and Doubt", "time": "02:06–02:25", "voice": "Akibatnya, Raka mengirim peringatan di grup: ‘Hati-hati sama Dina, dia narsistik,’ lalu mengeluarkannya. Ia merasa sedang melindungi orang lain. Dina tertinggal sendiri; Raka mulai ragu: did I know enough?"},
+    ],
+})
+SCENES[4]["time"] = "02:25–03:10"
+SCENES[5]["time"] = "03:10–03:40"
+SCENES[6]["time"] = "03:40–04:00"
+
 
 def tag(name: str) -> str:
     return f"{{{SVG_NS}}}{name}"
+
+
+def frame_duration(frame):
+    start, end = frame["time"].split("–")
+    start_min, start_sec = map(int, start.split(":"))
+    end_min, end_sec = map(int, end.split(":"))
+    return end_min * 60 + end_sec - (start_min * 60 + start_sec)
 
 
 def add(parent, name: str, **attrs):
@@ -314,7 +360,7 @@ def card(parent, x, y, w, h, fill=WHITE, border="#E3E8ED", radius=22):
 
 
 def embed_asset(parent, asset_key, x, y, w, h, omit_ids=(), include_ids=None, color_map=None,
-                view_box=None, sad_expression=False):
+                view_box=None, sad_expression=False, raka_expression=False, color_map_policy=None):
     info = ASSETS[asset_key]
     source = ET.parse(info["file"]).getroot()
     vb = view_box or source.get("viewBox", "0 0 500 500")
@@ -332,6 +378,8 @@ def embed_asset(parent, asset_key, x, y, w, h, omit_ids=(), include_ids=None, co
             if old:
                 mapping[old] = prefix + old
     for child in copied:
+        source_group_id = child.get("id")
+        group_color_index = 0
         for elem in child.iter():
             if sad_expression:
                 d = elem.get("d", "")
@@ -343,12 +391,28 @@ def embed_asset(parent, asset_key, x, y, w, h, omit_ids=(), include_ids=None, co
                     elem.set("d", "M257.36,282.9 Q259.2,280.8 261.1,282.3")
                 elif d.startswith("M251.2,283.29"):
                     elem.set("d", "M247.9,284.8 Q249.8,282.1 252.2,282.7")
+            if raka_expression and asset_key == "coworkers" and elem.get("d", "").startswith("M333.67,194.93"):
+                elem.set("d", "M333.5,195.6 Q335.8,192.8 338.2,195.5")
+                elem.set("style", "fill:none;stroke:#263238;stroke-width:1.5;stroke-linecap:round")
+            if color_map_policy is None:
+                apply_color_map = True
+            else:
+                start, count = color_map_policy.get(source_group_id, (0, 0))
+                has_mapped_color = any(
+                    re.search(re.escape(old), value, flags=re.IGNORECASE)
+                    for old in (color_map or {})
+                    for value in elem.attrib.values()
+                )
+                apply_color_map = start <= group_color_index < start + count
+                if has_mapped_color:
+                    group_color_index += 1
             for key, value in list(elem.attrib.items()):
                 for old, new in mapping.items():
                     value = value.replace("url(#" + old + ")", "url(#" + new + ")")
                     value = value.replace("#" + old, "#" + new)
-                for old, new in (color_map or {}).items():
-                    value = re.sub(re.escape(old), new, value, flags=re.IGNORECASE)
+                if apply_color_map:
+                    for old, new in (color_map or {}).items():
+                        value = re.sub(re.escape(old), new, value, flags=re.IGNORECASE)
                 elem.set(key, value)
             if elem.text:
                 for old, new in mapping.items():
@@ -897,6 +961,198 @@ def build_scene_4(scene):
     return build_scene_4d(scene)
 
 
+def continuous_office_base(title, description, frame_id, isolate_dina=False):
+    root = clean_frame(title, description, CREAM)
+    if isolate_dina:
+        root.find(tag("metadata")).text = (
+            "Storyset Co-workers Rafiki. Conservative audit: 63 of 158 original drawable elements changed or omitted (39.9%): "
+            "Raka's 54-element body group is counted as omitted from the office composition, eight blue elements in the "
+            "background, chat, desk, and Dina's clothing are recolored plum, and Raka's mouth is adjusted in the separate face inset. "
+            "At least 95 elements (60.1%) remain unchanged. Dina stands alone in the office; the Raka face inset and UI overlays are separate SVG layers."
+        )
+    else:
+        root.find(tag("metadata")).text = (
+            "Storyset Co-workers Rafiki. 36 of 158 original drawable elements changed or omitted (22.8%): "
+            "28 blue elements recolored plum, 7 placeholder-chat elements omitted, and Raka's mouth adjusted. "
+            "122 of 158 source elements (77.2%) remain unchanged. All dialogue and interface overlays are separate editable SVG groups."
+        )
+    root[3].set("id", "scene-background")
+    if isolate_dina:
+        embed_asset(
+            root, "coworkers", 0, 74, 1000, 1000,
+            omit_ids={"character-2"}, color_map={"#407BFF": PLUM},
+            color_map_policy={"background-simple": (0, 1), "Chat": (0, 1), "Desk": (1, 3), "character-1": (6, 3)},
+        )
+    else:
+        embed_asset(
+            root, "coworkers", 0, 74, 1000, 1000,
+            omit_ids={"Chat"}, color_map={"#407BFF": PLUM}, raka_expression=True,
+        )
+    tags = add(root, "g", id="dina-alone-name-tag" if isolate_dina else "recurring-character-name-tags")
+    if isolate_dina:
+        pill(tags, 206, 162, 150, 46, "DINA", CREAM, PLUM, 18, stroke=PLUM)
+    else:
+        pill(tags, 322, 920, 150, 46, "DINA", CREAM, PLUM, 18, stroke=PLUM)
+    if not isolate_dina:
+        pill(tags, 638, 920, 150, 46, "RAKA", CREAM, PLUM, 18, stroke=PLUM)
+    root.set("data-frame", frame_id)
+    return root
+
+
+def build_story_03a(scene):
+    root = continuous_office_base(
+        "03A · Raka mislabels his sadness",
+        "Raka misses a work target, feels sad for several days, and concludes he is depressed. The missed target card, days passing, and self-label remain visible in this full-screen frame.",
+        "03A",
+    )
+    target = add(root, "g", id="missed-target-card")
+    rect(target, 1090, 96, 730, 184, PLUM, rx=24)
+    txt(target, 1130, 143, "TARGET KERJA", 20, CREAM, 700, letter=1.1)
+    txt(target, 1150, 226, "10", 54, CREAM, 700)
+    txt(target, 1230, 223, "target", 18, CREAM, 500)
+    line(target, 1380, 162, 1380, 243, CREAM, 2, opacity=0.5)
+    txt(target, 1430, 226, "6", 54, TERRACOTTA, 700)
+    txt(target, 1505, 223, "tercapai", 18, CREAM, 500)
+    rect(target, 1130, 248, 620, 8, CREAM, rx=4, opacity=0.35)
+    rect(target, 1130, 248, 372, 8, TERRACOTTA, rx=4)
+
+    cloud = add(root, "g", id="emotion-cloud")
+    rect(cloud, 832, 400, 806, 238, PLUM, rx=72)
+    for cx, cy, r in [(900, 407, 64), (1000, 387, 78), (1120, 390, 76), (1235, 396, 82), (1360, 407, 68)]:
+        circle(cloud, cx, cy, r, PLUM)
+    path(cloud, "M892,615 L850,675 L978,632 Z", fill=PLUM)
+    txt(cloud, 1235, 489, "AKU DEPRESI.", 34, CREAM, 700, "middle")
+    txt(cloud, 1235, 549, "Ada yang salah banget sama aku.", 26, CREAM, 500, "middle")
+    pill(cloud, 1034, 589, 405, 41, "SEDIH BEBERAPA HARI", TERRACOTTA, CREAM, 16)
+    return root
+
+
+def build_story_03b(scene):
+    root = continuous_office_base(
+        "03B · Raka and Dina argue in a work meeting",
+        "At a work meeting, Raka hears Dina's feedback as a personal attack. Their two editable dialogue bubbles show both lines and keep the disagreement ambiguous.",
+        "03B",
+    )
+    header = add(root, "g", id="work-meeting-context")
+    pill(header, 1104, 116, 690, 52, "RAPAT · REVIEW HASIL KERJA", CREAM, PLUM, 19, stroke=PLUM)
+    raka = add(root, "g", id="raka-quote")
+    rect(raka, 1050, 224, 804, 226, PLUM, rx=28)
+    path(raka, "M1090,426 L1065,468 L1150,440 Z", fill=PLUM)
+    txt(raka, 1092, 269, "RAKA", 17, CREAM, 700, letter=1.2)
+    txt(raka, 1452, 337, "Kamu selalu bikin aku", 30, CREAM, 600, "middle")
+    txt(raka, 1452, 387, "merasa salah!", 30, CREAM, 600, "middle")
+    dina = add(root, "g", id="dina-quote")
+    rect(dina, 1050, 522, 804, 244, CREAM, rx=28, stroke=PLUM, sw=4)
+    path(dina, "M1792,743 L1830,786 L1735,756 Z", fill=CREAM, stroke=PLUM, sw=4)
+    txt(dina, 1092, 568, "DINA", 17, PLUM, 700, letter=1.2)
+    txt(dina, 1452, 638, "Aku cuma kasih masukan.", 27, PLUM, 600, "middle")
+    txt(dina, 1452, 687, "Jangan baper terus, deh.", 27, PLUM, 600, "middle")
+    return root
+
+
+def build_story_03c(scene):
+    root = continuous_office_base(
+        "03C · Raka labels Dina narcissistic",
+        "Raka turns Dina's one defensive reply into the stamp NARSISTIK. The frame marks this as Raka's conclusion, based on one reply rather than evidence of a pattern.",
+        "03C",
+    )
+    thought = add(root, "g", id="raka-conclusion")
+    pill(thought, 1100, 186, 700, 54, "KESIMPULAN RAKA · DARI SATU BALASAN", CREAM, PLUM, 18, stroke=PLUM)
+    stamp = add(thought, "g", id="narcissistic-stamp", transform="rotate(-3 1450 440)")
+    rect(stamp, 1094, 320, 716, 220, TERRACOTTA, rx=24)
+    rect(stamp, 1113, 339, 678, 182, "none", rx=16, stroke=CREAM, sw=3)
+    txt(stamp, 1452, 403, "DIA", 23, CREAM, 700, "middle", letter=1.4)
+    txt(stamp, 1452, 474, "NARSISTIK", 52, CREAM, 700, "middle", letter=1.3)
+    txt(thought, 1452, 622, "Satu balasan belum membuktikan pola.", 25, PLUM, 600, "middle")
+    return root
+
+
+def build_story_04a(scene):
+    root = continuous_office_base(
+        "04A · The label spreads through the office group chat",
+        "Raka shares his conclusion in the office group chat. Coworkers accept the label without context and begin to avoid Dina.",
+        "04A",
+    )
+    chat = add(root, "g", id="rumor-notifications")
+    rect(chat, 1034, 112, 826, 710, CREAM, rx=30, stroke=PLUM, sw=4)
+    rect(chat, 1034, 112, 826, 82, PLUM, rx=28)
+    rect(chat, 1034, 164, 826, 30, PLUM)
+    txt(chat, 1080, 163, "GRUP KANTOR", 22, CREAM, 700, letter=1.2)
+    circle(chat, 1796, 153, 10, TERRACOTTA)
+
+    g1 = add(chat, "g", id="label-rumor")
+    circle(g1, 1090, 246, 24, TERRACOTTA)
+    txt(g1, 1090, 253, "R", 16, CREAM, 700, "middle")
+    rect(g1, 1130, 214, 652, 104, CREAM, rx=20, stroke=PLUM, sw=2)
+    txt(g1, 1160, 249, "RAKA", 15, PLUM, 700, letter=1)
+    txt(g1, 1160, 286, "Dina narsistik.", 24, PLUM, 600)
+
+    g2 = add(chat, "g", id="first-avoidance-reply")
+    circle(g2, 1090, 386, 24, PLUM)
+    txt(g2, 1090, 393, "T", 16, CREAM, 700, "middle")
+    rect(g2, 1130, 354, 652, 104, CREAM, rx=20, stroke=PLUM, sw=2)
+    txt(g2, 1160, 389, "TEMAN", 15, PLUM, 700, letter=1)
+    txt(g2, 1160, 426, "Oh… pantes.", 24, PLUM, 600)
+
+    g3 = add(chat, "g", id="coworkers-avoid-dina")
+    circle(g3, 1090, 526, 24, PLUM)
+    txt(g3, 1090, 533, "T", 16, CREAM, 700, "middle")
+    rect(g3, 1130, 494, 652, 124, CREAM, rx=20, stroke=PLUM, sw=2)
+    txt(g3, 1160, 529, "TEMAN", 15, PLUM, 700, letter=1)
+    txt(g3, 1160, 568, "Aku skip kalau Dina ikut.", 23, TERRACOTTA, 700)
+
+    row = add(chat, "g", id="dina-isolated-from-group")
+    line(row, 1072, 646, 1822, 646, PLUM, 2, opacity=0.3)
+    circle(row, 1103, 716, 34, CREAM, stroke=TERRACOTTA, sw=3)
+    line(row, 1080, 693, 1126, 739, TERRACOTTA, 4)
+    txt(row, 1160, 710, "DINA", 19, PLUM, 700, letter=1)
+    txt(row, 1160, 750, "Tidak lagi diajak.", 22, PLUM, 500)
+    return root
+
+
+def build_story_04b(scene):
+    root = continuous_office_base(
+        "04B · Raka warns the group and removes Dina",
+        "Raka posts a warning naming Dina and removes her from the group, believing he is protecting coworkers. Dina is left socially alone; Raka begins to doubt whether he knew enough.",
+        "04B", isolate_dina=True,
+    )
+    post = add(root, "g", id="warning-post")
+    rect(post, 1038, 96, 824, 728, CREAM, rx=30, stroke=PLUM, sw=4)
+    rect(post, 1038, 96, 824, 82, PLUM, rx=28)
+    rect(post, 1038, 148, 824, 30, PLUM)
+    txt(post, 1080, 149, "GRUP KANTOR · RAKA", 21, CREAM, 700, letter=1.0)
+    circle(post, 1795, 137, 10, TERRACOTTA)
+    rect(post, 1080, 214, 740, 208, CREAM, rx=22, stroke=TERRACOTTA, sw=4)
+    txt(post, 1120, 260, "PERINGATAN", 16, TERRACOTTA, 700, letter=1.3)
+    txt(post, 1120, 316, "Hati-hati sama Dina,", 28, PLUM, 600)
+    txt(post, 1120, 364, "dia narsistik.", 28, PLUM, 700)
+
+    action = add(post, "g", id="remove-dina-action")
+    rect(action, 1080, 458, 740, 80, TERRACOTTA, rx=18)
+    txt(action, 1450, 510, "KELUARKAN DINA DARI GRUP", 20, CREAM, 700, "middle", letter=0.6)
+    removed = add(post, "g", id="dina-removed-notification")
+    circle(removed, 1120, 598, 16, TERRACOTTA)
+    txt(removed, 1120, 604, "!", 18, CREAM, 700, "middle")
+    txt(removed, 1160, 606, "Dina dikeluarkan dari grup.", 21, PLUM, 600)
+
+    doubt = add(root, "g", id="raka-doubt")
+    rect(doubt, 756, 284, 258, 344, CREAM, rx=26, stroke=PLUM, sw=3)
+    txt(doubt, 885, 322, "RAKA", 17, PLUM, 700, "middle", letter=1.1)
+    embed_asset(
+        doubt, "coworkers", 786, 348, 198, 176,
+        include_ids={"character-2"}, view_box="318 125 70 75",
+        color_map={"#407BFF": PLUM}, raka_expression=True,
+    )
+    txt(doubt, 885, 563, "Aku tahu cukup?", 18, PLUM, 700, "middle")
+    txt(doubt, 885, 592, "Apa aku yakin?", 16, PLUM, 500, "middle")
+
+    ending = add(root, "g", id="final-onscreen-text")
+    rect(ending, 370, 872, 1180, 112, PLUM, rx=26)
+    txt(ending, 960, 920, "SATU MOMEN BUKAN BUKTI", 30, CREAM, 700, "middle", letter=0.8)
+    txt(ending, 960, 958, "Pahami konteks sebelum memberi label.", 20, SAGE, 600, "middle")
+    return root
+
+
 def build_scene_5(scene):
     root = start_scene(scene, CREAM, PLUM)
     card(root, 72, 240, 680, 638, CREAM, PEACH, 26)
@@ -1021,6 +1277,22 @@ def create_previews():
         PREVIEW_DIR / "scene-03-normal-emotions-become-labels.png",
         SCENES_DIR / "scene-04-why-it-matters.svg",
         PREVIEW_DIR / "scene-04-why-it-matters.png",
+        SCENES_DIR / "scene-03a-case-01-avoidant.svg",
+        PREVIEW_DIR / "scene-03a-case-01-avoidant.png",
+        SCENES_DIR / "scene-03b-case-02-depressed.svg",
+        PREVIEW_DIR / "scene-03b-case-02-depressed.png",
+        SCENES_DIR / "scene-03c-case-03-gaslighting.svg",
+        PREVIEW_DIR / "scene-03c-case-03-gaslighting.png",
+        SCENES_DIR / "scene-03d-combined-on-screen-text.svg",
+        PREVIEW_DIR / "scene-03d-combined-on-screen-text.png",
+        SCENES_DIR / "scene-04a-emotions-misunderstood.svg",
+        PREVIEW_DIR / "scene-04a-emotions-misunderstood.png",
+        SCENES_DIR / "scene-04b-label-causes-conflict.svg",
+        PREVIEW_DIR / "scene-04b-label-causes-conflict.png",
+        SCENES_DIR / "scene-04c-one-label-becomes-stigma.svg",
+        PREVIEW_DIR / "scene-04c-one-label-becomes-stigma.png",
+        SCENES_DIR / "scene-04d-context-evidence-onscreen-text.svg",
+        PREVIEW_DIR / "scene-04d-context-evidence-onscreen-text.png",
     ]:
         if stale.exists():
             stale.unlink()
@@ -1034,17 +1306,14 @@ def create_previews():
             ]
         elif scene["no"] == 3:
             frames = [
-                ("03A", "03a-case-01-avoidant", "Case 1 · Unanswered Message", "01:05–01:20", build_scene_3_case_1),
-                ("03B", "03b-case-02-depressed", "Case 2 · Sadness After Failure", "01:20–01:35", build_scene_3_case_2),
-                ("03C", "03c-case-03-gaslighting", "Case 3 · Disagreement", "01:35–01:50", build_scene_3_case_3),
-                ("03D", "03d-combined-on-screen-text", "Combined Examples · On-Screen Text", "01:50–01:55", build_scene_3_combined),
+                ("03A", "03a-raka-self-label", "Raka Mislabels His Own Sadness", "01:05–01:20", build_story_03a),
+                ("03B", "03b-raka-dina-conflict", "A Work Meeting Turns Tense", "01:20–01:38", build_story_03b),
+                ("03C", "03c-raka-labels-dina", "One Defensive Reply Becomes a Label", "01:38–01:52", build_story_03c),
             ]
         elif scene["no"] == 4:
             frames = [
-                ("04A", "04a-emotions-misunderstood", "Normal Emotions Misread", "01:55–02:08", build_scene_4a),
-                ("04B", "04b-label-causes-conflict", "Label Turns Disagreement Into Conflict", "02:08–02:15", build_scene_4b),
-                ("04C", "04c-one-label-becomes-stigma", "One Label Hides a Complex Experience", "02:15–02:25", build_scene_4c),
-                ("04D", "04d-context-evidence-onscreen-text", "Context, Evidence · On-Screen Text", "02:25–02:35", build_scene_4d),
+                ("04A", "04a-label-becomes-stigma", "The Label Starts to Spread", "01:52–02:06", build_story_04a),
+                ("04B", "04b-warning-and-removal", "A Warning, an Exclusion, and Doubt", "02:06–02:25", build_story_04b),
             ]
         else:
             frames = [(f"{scene['no']:02d}", f"{scene['no']:02d}-{scene['slug']}", scene["title"], scene["time"], draw_scene)]
@@ -1167,9 +1436,9 @@ def make_docx(contact):
     set_run(r, 28, INK, True)
     p = doc.add_paragraph()
     p.paragraph_format.space_after = Pt(7)
-    r = p.add_run("Storyboard produksi · Layout C · 7 scene · 15 keyframe · 00:00–04:00")
+    r = p.add_run("Storyboard produksi · Layout C · 7 scene · 12 keyframe · 00:00–04:00")
     set_run(r, 15, PLUM, True)
-    p = doc.add_paragraph("Setiap frame tersedia sebagai SVG mandiri yang editable. Scene 2 memiliki tiga frame; Scene 3 memisahkan tiga case dan menutupnya dengan teks di tengah; Scene 4 menyambungkan empat akibat dari salah label dan menutupnya dengan teks tentang konteks serta bukti. Ilustrasi Storyset ditanam sebagai vektor dan diwarnai ulang sebagai SVG; komposisi tambahan juga digambar sebagai vektor. Tidak ada gambar generatif.")
+    p = doc.add_paragraph("Setiap frame tersedia sebagai SVG mandiri yang editable. Scene 3–4 kini satu cerita lima beat selama 80 detik: salah label diri → konflik dengan Dina → label narsistik → stigma → peringatan dan pengucilan yang diakhiri keraguan serta teks layar. Raka dan Dina memakai ilustrasi Storyset yang sama pada seluruh frame. Ilustrasi dan seluruh komposisi tambahan tetap editable sebagai SVG; tidak ada gambar generatif.")
     p.paragraph_format.space_after = Pt(10)
     for r in p.runs:
         set_run(r, 10, MUTED)
@@ -1180,9 +1449,10 @@ def make_docx(contact):
     set_run(r, 14, INK, True)
     audit = [
         "Scene 2 menggunakan cream, espresso, dan plum sebagai warna utama; istilah diberi chip terracotta, mustard, atau peach sesuai pedoman Opsi B.",
-        "Scene 3 memakai tint peach, sage, dan mustard per case. Label keliru memakai terracotta dengan teks putih; koreksi memakai sage dengan teks espresso.",
-        "Scene 4 memakai empat frame berantai: emosi disalahpahami → konflik karena label → stigma menutupi kompleksitas → konteks dan bukti menghentikan rantai.",
-        "Frame 02A–02C, 03A–03D, dan 04A–04D adalah komposisi animasi bersih tanpa judul board, waktu, footer, atau catatan produksi di dalam frame.",
+        "Scene 3–4 memakai maksimal tiga warna dominan per adegan. Terracotta hanya menandai label dan tindakan keliru; teks akhir memakai sage sebagai arah pemahaman.",
+        "Lima beat membentuk satu rantai sebab-akibat selama 80 detik: salah label diri → konflik → label pada Dina → rekan kerja menjauh → peringatan, pengeluaran dari grup, dan keraguan Raka.",
+        "Frame 02A–02C, 03A–03C, dan 04A–04B adalah komposisi animasi bersih tanpa judul board, waktu, footer, atau catatan produksi di dalam frame.",
+        "Co-workers · Rafiki memakai kembali 77,2% elemen sumber di beat 03A–04A. Frame akhir menempatkan Dina sendiri dan inset wajah Raka dari SVG yang sama; hitungan konservatif memasukkan 54 elemen tubuh yang tidak muncul di ruang kantor, delapan elemen warna, dan ekspresi wajah. Batas adaptasi 63/158 (39,9%); sekurangnya 60,1% tetap utuh.",
         "Ilustrasi Storyset tetap vektor dan diwarnai ulang lewat SVG. Frame presenter tetap slot footage; tidak ada gambar yang dihasilkan.",
     ]
     for item in audit:
@@ -1205,10 +1475,10 @@ def make_docx(contact):
 
     doc.add_page_break()
     p = doc.add_paragraph()
-    r = p.add_run("CONTACT SHEET · AUDIT 7 SCENE / 15 FRAME")
+    r = p.add_run("CONTACT SHEET · AUDIT 7 SCENE / 12 FRAME")
     set_run(r, 20, INK, True)
     doc.add_picture(str(contact), width=Inches(10.65))
-    p = doc.add_paragraph("Ritme visual bergerak dari presenter → feed → tiga contoh → empat dampak berantai → etika → checklist → closing. Scene 4 berakhir dengan teks layar; semua frame tetap memakai palet Opsi B.")
+    p = doc.add_paragraph("Ritme visual bergerak dari presenter → feed → kisah Raka dan Dina dalam lima beat → etika → checklist → closing. Scene 4 berakhir dengan Dina yang terisolasi, keraguan Raka, dan teks layar; seluruh frame mengikuti palet Opsi B.")
     for r in p.runs:
         set_run(r, 9, MUTED)
 
@@ -1256,20 +1526,19 @@ def make_docx(contact):
                 image_para = cell.add_paragraph()
                 image_para.alignment = 1
                 image_para.add_run().add_picture(str(PREVIEW_DIR / filename), width=Inches(1.96))
-        elif scene["no"] == 3:
+        elif scene["no"] in (3, 4):
             left.paragraphs[0].text = ""
-            inner = left.add_table(rows=2, cols=2)
-            inner.autofit = False
-            for column in inner.columns:
-                column.width = Inches(3.08)
             frame_data = [
-                ("03A · 01:05–01:20", "scene-03a-case-01-avoidant.png"),
-                ("03B · 01:20–01:35", "scene-03b-case-02-depressed.png"),
-                ("03C · 01:35–01:50", "scene-03c-case-03-gaslighting.png"),
-                ("03D · 01:50–01:55", "scene-03d-combined-on-screen-text.png"),
+                (f"{frame['code']} · {frame['time']}", f"scene-{frame['slug']}.png")
+                for frame in scene["frames"]
             ]
-            for cell, (label, filename) in zip([c for row in inner.rows for c in row.cells], frame_data):
-                cell.width = Inches(3.08)
+            inner = left.add_table(rows=1, cols=len(frame_data))
+            inner.autofit = False
+            column_width = 6.28 / len(frame_data)
+            for column in inner.columns:
+                column.width = Inches(column_width)
+            for cell, (label, filename) in zip(inner.rows[0].cells, frame_data):
+                cell.width = Inches(column_width)
                 cell.vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.CENTER
                 caption = cell.paragraphs[0]
                 caption.alignment = 1
@@ -1278,30 +1547,7 @@ def make_docx(contact):
                 set_run(run, 7, PLUM, True)
                 image_para = cell.add_paragraph()
                 image_para.alignment = 1
-                image_para.add_run().add_picture(str(PREVIEW_DIR / filename), width=Inches(2.94))
-        elif scene["no"] == 4:
-            left.paragraphs[0].text = ""
-            inner = left.add_table(rows=2, cols=2)
-            inner.autofit = False
-            for column in inner.columns:
-                column.width = Inches(3.08)
-            frame_data = [
-                ("04A · 01:55–02:08", "scene-04a-emotions-misunderstood.png"),
-                ("04B · 02:08–02:15", "scene-04b-label-causes-conflict.png"),
-                ("04C · 02:15–02:25", "scene-04c-one-label-becomes-stigma.png"),
-                ("04D · 02:25–02:35", "scene-04d-context-evidence-onscreen-text.png"),
-            ]
-            for cell, (label, filename) in zip([c for row in inner.rows for c in row.cells], frame_data):
-                cell.width = Inches(3.08)
-                cell.vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.CENTER
-                caption = cell.paragraphs[0]
-                caption.alignment = 1
-                caption.paragraph_format.space_after = Pt(3)
-                run = caption.add_run(label)
-                set_run(run, 7, PLUM, True)
-                image_para = cell.add_paragraph()
-                image_para.alignment = 1
-                image_para.add_run().add_picture(str(PREVIEW_DIR / filename), width=Inches(2.94))
+                image_para.add_run().add_picture(str(PREVIEW_DIR / filename), width=Inches(column_width - 0.12))
         else:
             image = PREVIEW_DIR / f"scene-{scene['no']:02d}-{scene['slug']}.png"
             p = left.paragraphs[0]
@@ -1330,11 +1576,23 @@ def make_docx(contact):
         for r in p.runs: set_run(r, 9, INK)
         p = right.add_paragraph()
         p.paragraph_format.space_after = Pt(2)
-        r = p.add_run("SCRIPT / VOICE-OVER")
+        r = p.add_run("SCRIPT / VOICE-OVER" + (" PER BEAT" if scene["no"] in (3, 4) else ""))
         set_run(r, 8, PLUM, True)
-        p = right.add_paragraph(scene["voice"])
-        p.paragraph_format.space_after = Pt(5)
-        for r in p.runs: set_run(r, 9, INK)
+        if scene["no"] in (3, 4):
+            for frame in scene["frames"]:
+                duration = frame_duration(frame)
+                p = right.add_paragraph()
+                p.paragraph_format.space_before = Pt(2)
+                p.paragraph_format.space_after = Pt(1)
+                r = p.add_run(f"{frame['code']} · {frame['time']} ({duration} detik)")
+                set_run(r, 8, PLUM, True)
+                p = right.add_paragraph(frame["voice"])
+                p.paragraph_format.space_after = Pt(3)
+                for r in p.runs: set_run(r, 8, INK)
+        else:
+            p = right.add_paragraph(scene["voice"])
+            p.paragraph_format.space_after = Pt(5)
+            for r in p.runs: set_run(r, 9, INK)
         p = right.add_paragraph()
         p.paragraph_format.space_after = Pt(2)
         r = p.add_run("ASET & PERAN")
@@ -1381,22 +1639,29 @@ def make_website():
             for frame in scene["frames"]:
                 svg_name = f"scene-{frame['slug']}.svg"
                 png_name = f"scene-{frame['slug']}.png"
-                frame_cards.append(f'''<section class="frame-card"><div class="frame-label"><b>{frame['code']} · {frame['title']}</b><span>{frame['time']}</span></div><a href="scenes/{svg_name}" target="_blank" aria-label="Open editable SVG for {frame['code']}"><img src="scenes/{svg_name}" alt="{frame['title']} animation frame"></a><div class="file-links"><a href="scenes/{svg_name}" download>Download editable SVG</a><a href="previews/{png_name}" download>Download PNG preview</a></div></section>''')
+                duration = frame_duration(frame)
+                frame_cards.append(f'''<section class="frame-card"><div class="frame-label"><b>{frame['code']} · {frame['title']}</b><span>{frame['time']} · {duration}s</span></div><a href="scenes/{svg_name}" target="_blank" aria-label="Open editable SVG for {frame['code']}"><img src="scenes/{svg_name}" alt="{frame['title']} animation frame"></a><div class="file-links"><a href="scenes/{svg_name}" download>Download editable SVG</a><a href="previews/{png_name}" download>Download PNG preview</a></div></section>''')
             frame_markup = '<div class="case-frame-grid">' + "".join(frame_cards) + '</div>'
         else:
             svg_name = f"scene-{scene['no']:02d}-{scene['slug']}.svg"
             png_name = f"scene-{scene['no']:02d}-{scene['slug']}.png"
             frame_markup = f'<a href="scenes/{svg_name}" target="_blank" aria-label="Open editable SVG for scene {scene["no"]}"><img src="scenes/{svg_name}" alt="Editable scene illustration, scene {scene["no"]}"></a><div class="file-links"><a href="scenes/{svg_name}" download>Download editable SVG</a><a href="previews/{png_name}" download>Download PNG preview</a></div>'
+        script_markup = escape(scene["voice"])
+        if scene["no"] in (3, 4):
+            script_markup = "<br>".join(
+                f"<strong>{frame['code']} · {frame['time']} · {frame_duration(frame)} detik</strong><br>{escape(frame['voice'])}"
+                for frame in scene["frames"]
+            )
         rows.append(f'''<article class="board-row">
           <header class="row-meta"><span class="scene-number">{scene['no']:02d}</span><span class="time">{scene['time']}</span><h2>{scene['title']}</h2><p>{scene['visual']}</p></header>
           <div class="row-frame">{frame_markup}</div>
-          <dl class="row-notes"><div><dt>On-screen text</dt><dd>{scene['screen'].replace(chr(10), '<br>')}</dd></div><div><dt>Motion / camera</dt><dd>{scene['motion']}</dd></div><div><dt>Script / voice-over</dt><dd>{scene['voice']}</dd></div><div><dt>Assets & roles</dt><dd>{role_text}</dd><p class="asset-sources">{' · '.join(asset_links) if asset_links else 'Custom editable SVG vectors; no external illustration.'}</p></div></dl>
+          <dl class="row-notes"><div><dt>On-screen text</dt><dd>{scene['screen'].replace(chr(10), '<br>')}</dd></div><div><dt>Motion / camera</dt><dd>{scene['motion']}</dd></div><div><dt>Script / voice-over</dt><dd>{script_markup}</dd></div><div><dt>Assets & roles</dt><dd>{role_text}</dd><p class="asset-sources">{' · '.join(asset_links) if asset_links else 'Custom editable SVG vectors; no external illustration.'}</p></div></dl>
         </article>''')
     html = '''<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Editable production board with fifteen SVG animation frames for Therapy Speak Gone Wrong.">
+<meta name="description" content="Editable production board with twelve SVG animation frames for Therapy Speak Gone Wrong.">
 <title>Therapy Speak Gone Wrong · Production Board</title>
 <style>
 :root{--ink:#2a1f2d;--plum:#3d2645;--sage:#7fb89a;--terracotta:#e4572e;--mustard:#f2b134;--peach:#ffc4a3;--cream:#fff6ec;--blue:#3d2645;--blue-dark:#3d2645;--paper:#fff6ec;--line:#e8dacf;--muted:#665967;--coral:#e4572e;--white:#fff;--shadow:0 12px 30px rgba(42,31,45,.09)}
@@ -1406,12 +1671,12 @@ def make_website():
 </style>
 </head>
 <body><main class="shell">
-<header class="hero"><div><div class="eyebrow">Editable production board · Layout C</div><h1>Therapy Speak Gone Wrong</h1><p>Seven scenes from the supplied script, arranged as fifteen animation keyframes. Scene 2 has three frames; Scene 3 separates each case before its combined closing frame; Scene 4 follows four linked consequences and ends with on-screen text. Every frame is an editable SVG.</p></div><div class="hero-actions"><a class="action primary" href="Storyboard_Therapy_Speak_Gone_Wrong.docx" download>Download Word storyboard</a><a class="action" href="Storyboard_Editable_Source.zip" download>Download editable source bundle</a></div></header>
+<header class="hero"><div><div class="eyebrow">Editable production board · Layout C</div><h1>Therapy Speak Gone Wrong</h1><p>Seven scenes in twelve animation keyframes. Scene 3–4 form one five-beat, 80-second story: Raka mislabels his sadness, clashes with Dina, labels her from one defensive reply, spreads stigma, then warns and removes her before beginning to doubt. Every frame is an editable SVG.</p></div><div class="hero-actions"><a class="action primary" href="Storyboard_Therapy_Speak_Gone_Wrong.docx" download>Download Word storyboard</a><a class="action" href="Storyboard_Editable_Source.zip" download>Download editable source bundle</a></div></header>
 <div class="style-strip"><strong>Opsi B · Warm Peach &amp; Mustard</strong><span class="swatch"><i style="background:#3d2645"></i>deep plum</span><span class="swatch"><i style="background:#7fb89a"></i>sage</span><span class="swatch"><i style="background:#e4572e"></i>terracotta</span><span class="swatch"><i style="background:#f2b134"></i>mustard</span><span class="swatch"><i style="background:#ffc4a3"></i>peach</span><span class="swatch"><i style="background:#fff6ec"></i>cream</span><span class="swatch"><i style="background:#2a1f2d"></i>espresso</span><span>· terracotta for mistaken labels; sage for corrections</span></div>
 <section class="board" aria-label="Seven scene production board">
 ''' + "\n".join(rows) + '''
 </section>
-<section class="audit"><div><h2>Visual audit</h2><p>Scene 2 follows Opsi B with cream, espresso, and plum as its dominant colors; hashtag cards use terracotta, mustard, and peach. Scene 3 uses the case tints peach #FFE3D3, sage #DCEFE4, and mustard #FCE9C2. Scene 4 chains self-misunderstanding → conflict → stigma → evidence, using peach, mustard, sage, and cream. Incorrect labels use terracotta; context and correction use sage. The animation frames were rendered and checked visually.</p></div><div><h2>Editing & attribution</h2><p>Open or download each SVG to edit its vector layers and text. The source bundle contains the HTML board and all scene SVGs. Storyset art is free with attribution; use the per-scene links and review <a href="https://storyset.com/terms" target="_blank" rel="noreferrer">Storyset terms</a> for final use.</p></div></section>
+<section class="audit"><div><h2>Visual audit</h2><p>Scene 2 follows Opsi B. Scene 3–4 use one consistent Co-workers illustration and cream, plum, and terracotta as the core colors; sage appears in the final corrective text. The five-beat chain reads without VO through Raka’s target card and frown, two attributed meeting quotes, a questioned NARSISTIK stamp, spreading group-chat messages, Dina’s removal, and a separate inset of Raka beginning to doubt. All five frames were rendered and checked at full size and on the contact sheet. Frames 03A–04A change or omit 36/158 drawable elements (22.8%); final 04B uses a conservative count of 63/158 (39.9%), leaving at least 60.1% unchanged.</p></div><div><h2>Editing & attribution</h2><p>Open or download each SVG to edit its vector layers and text. The source bundle contains the HTML board and all scene SVGs. <a href="https://storyset.com/illustration/co-workers/rafiki" target="_blank" rel="noreferrer">Co-workers · Rafiki</a> is free with attribution; cite Storyset when publishing and review the <a href="https://storyset.com/terms" target="_blank" rel="noreferrer">Storyset terms</a>.</p></div></section>
 <footer class="footer">The presenter frame is a footage slot. Scene backgrounds, chips, labels, cards, connectors, and simple non-character icons are editable SVG shapes. Characters and illustrated situations come from credited Storyset SVGs; no images were generated.</footer>
 </main></body></html>'''
     output = ROOT / "index.html"

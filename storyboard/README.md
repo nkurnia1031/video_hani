@@ -1,51 +1,51 @@
 # Therapy Speak Gone Wrong storyboard
 
-The selected **C production board** contains seven scenes and fifteen 16:9 keyframes as standalone, editable SVGs. Scene 02A uses the Opsi B cream room, espresso phone, plum UI details, and restrained warm accents. Scene 02B stacks hashtag cards in terracotta, mustard, and peach; 02C centers the two script statements in sage and terracotta. `scene-02-komponen.svg` contains six additional editable comment groups (`comment-05` through `comment-10`) for the scroll animation. Scene 03A–03C present each case separately with its assigned background tint, terracotta label, and sage correction. Scene 03D combines the three examples behind centered on-screen text. Scene 04A–04D link self-misunderstanding, conflict, stigma, and a final turn toward context and evidence; 04D ends with on-screen text. Animation frames contain only the on-screen composition, without board titles, timestamps, footers, or production notes. The website presents one production row per scene; the Word document keeps the same storyboard in a printable format.
+The selected **C production board** contains seven scenes and twelve standalone, editable 16:9 animation frames. Scenes 3–4 now form one five-beat story over **80 seconds**: Raka mislabels his sadness, clashes with Dina, labels her narcissistic from one defensive reply, spreads the label at work, then warns the group and removes her before he begins to doubt. The same Storyset Co-workers illustration is reused in every beat so Raka and Dina remain visually consistent.
+
+## Scene 3–4 timing and VO
+
+| Beat | Time | Duration | Story action |
+| --- | --- | ---: | --- |
+| 03A | 01:05–01:20 | 15 sec | Raka misses a target, feels sad for several days, and calls himself depressed. |
+| 03B | 01:20–01:38 | 18 sec | Raka hears Dina’s meeting feedback as an attack; both respond defensively. |
+| 03C | 01:38–01:52 | 14 sec | Raka labels Dina “narsistik” based on one reply. |
+| 04A | 01:52–02:06 | 14 sec | Raka shares the label; coworkers begin avoiding Dina. |
+| 04B | 02:06–02:25 | 19 sec | Raka posts a warning, removes Dina, then starts to doubt his conclusion. |
+
+The Indonesian-English voice-over appears beat by beat with each duration in the Word and web boards. Object transitions link the self-label cloud to the meeting bubbles, the “NARSISTIK” stamp, group notifications, and the final warning post. On-screen text makes each beat understandable without VO. Final copy: **“SATU MOMEN BUKAN BUKTI · Pahami konteks sebelum memberi label.”**
 
 ## Files
 
-- `index.html` — production board website with each scene's timing, visual description, on-screen copy, motion notes, voice-over cue, and asset links.
-- `scenes/scene-*.svg` — editable 1920 × 1080 scene compositions. Scene 2 has three frames; Scene 3 has three individual cases and a combined text frame; Scene 4 has four linked consequence frames ending with on-screen text. Storyset artwork is embedded as SVG groups; backgrounds, type, chips, cards, and icons are editable vector elements.
-- `scenes/scene-02-komponen.svg` — six separate editable comment groups for the Scene 2 phone scroll.
-- `previews/scene-*.png` — raster previews used in the website and Word document.
-- `previews/contact-sheet.png` — seven-scene/fifteen-frame visual audit sheet.
-- `Storyboard_Therapy_Speak_Gone_Wrong.docx` — landscape production board with contact sheet, per-scene layouts, source links, and visual audit notes.
-- `Storyboard_Editable_Source.zip` — self-contained website, SVGs, additional illustration, PNG previews, and Word file.
-- `build_storyboard.py` — rebuilds the scene SVGs, previews, contact sheet, Word document, website, and source bundle.
+- `index.html` — the production board with frame previews, timings, VO, motion notes, asset credits, and SVG/PNG downloads.
+- `scenes/scene-*.svg` — editable scene frames. Scene 2 has three frames; Scene 3 has three linked beats; Scene 4 has two linked beats. Frames contain the background, illustration, props, overlays, and on-screen text only.
+- `scenes/scene-02-komponen.svg` — six additional editable comment groups for the Scene 2 scroll animation.
+- `assets/Co-workers_Rafiki.svg` — the downloaded Storyset source illustration used across all five Scene 3–4 beats.
+- `previews/scene-*.png` — rendered frame previews used by the website and Word board.
+- `previews/contact-sheet.png` — the 7-scene/12-frame visual audit sheet.
+- `Storyboard_Therapy_Speak_Gone_Wrong.docx` — landscape production board with the contact sheet, per-scene frames, beat-level VO, and asset links.
+- `Storyboard_Editable_Source.zip` — the web board, Word file, scene/source SVGs, and previews.
+- `build_storyboard.py` — rebuilds the SVG frames, previews, Word document, website, and source bundle.
+
+## Visual system and asset audit
+
+Opsi B is **Warm Peach & Mustard**: deep plum `#3D2645`, sage `#7FB89A`, terracotta `#E4572E`, mustard `#F2B134`, peach `#FFC4A3`, cream `#FFF6EC`, and espresso `#2A1F2D`. Scenes 3–4 keep cream and plum dominant, with terracotta reserved for mistaken labels and harmful actions. Sage carries the final corrective message. Each frame uses no more than three dominant colors; muted colors already present in the licensed illustration remain as small supporting details.
+
+The Storyset source contains 158 drawable elements. In beats 03A–04A, 36 elements (22.8%) change or are omitted: 28 blue elements are recolored plum, seven placeholder-chat elements are omitted, and Raka’s mouth is adjusted to read as concerned. The remaining **122 elements (77.2%) stay unchanged**. In final frame 04B, Dina stands alone in the office and a close-up from the same Raka SVG group appears in a separate doubt inset. The conservative audit counts Raka’s 54-element body as omitted from the office, eight recolored elements, and the changed mouth: 63/158 (39.9%), leaving at least **60.1% unchanged**. Dialog, cloud, target card, stamp, notifications, warning post, and closing text are separate editable layers.
+
+The complete frames were rendered and reviewed at full size and in the contact sheet. The audit checked character continuity, readability of all five beats without narration, the transition-object chain, palette, and the <40% artwork-edit limit. No character art was generated or drawn from scratch.
 
 ## Editing
 
-Open any SVG in Inkscape, Illustrator, Figma, or another SVG editor. The scene background, headings, labels, cards, connectors, and custom icons are vector objects. Embedded Storyset illustrations remain vector groups and can be moved, resized, or edited separately.
+Open any SVG in Inkscape, Illustrator, Figma, or another SVG editor. Character artwork remains a grouped SVG; IDs identify the animation layers, including `emotion-cloud`, `raka-quote`, `dina-quote`, `narcissistic-stamp`, `rumor-notifications`, `warning-post`, `remove-dina-action`, `raka-doubt`, and `final-onscreen-text`.
 
-Edit `build_storyboard.py` to change the scene copy or visual composition, then run:
+Edit `build_storyboard.py` to change the scene copy or composition, then run:
 
 ```sh
 python storyboard/build_storyboard.py
 ```
 
-The build script uses Python packages `CairoSVG`, `Pillow`, and `python-docx`.
+The builder uses Python packages `CairoSVG`, `Pillow`, and `python-docx`.
 
-## Visual system and audit
+## Storyset credit and source
 
-Opsi B is **Warm Peach & Mustard**: deep plum `#3D2645`, sage `#7FB89A`, terracotta `#E4572E`, mustard `#F2B134`, peach `#FFC4A3`, cream `#FFF6EC`, and espresso `#2A1F2D`. Scene 2 keeps cream, espresso, and plum dominant; its terminology and hashtags use terracotta, mustard, and peach. Scene 3 uses peach `#FFE3D3`, sage `#DCEFE4`, and mustard `#FCE9C2` case tints. Scene 4 continues those tints in order—peach, mustard, sage, then cream—and uses a plum closing panel. Terracotta marks careless labels; sage carries context and correction. Scene 4 SVG metadata records the source-art changes; each adaptation keeps at least 60% of drawable elements unchanged. The contact sheet and full-size previews are the visual style audit.
-
-No images were generated. The presenter is a footage placeholder. Scene backgrounds, label chips, article cards, connectors, and simple non-character icons are editable SVG vectors; characters and illustrated situations come from credited Storyset assets.
-
-## Storyset attribution and download links
-
-Storyset lists the illustrations below as free with attribution and allows modifications and derivative works under its license summary. Add Storyset/Freepik attribution when publishing the final video, and check the current [Storyset terms](https://storyset.com/terms).
-
-| Scene | Illustration | Role | Download page |
-| --- | --- | --- | --- |
-| 2 | Feed | Social media context | [Feed · Rafiki](https://storyset.com/illustration/feed/rafiki) |
-| 3 | Texting | Unanswered message | [Texting · Rafiki](https://storyset.com/illustration/texting/rafiki) |
-| 3 | Feeling Blue | Sadness after a setback | [Feeling Blue · Rafiki](https://storyset.com/illustration/feeling-blue/rafiki) |
-| 3 | Couple Stress | Disagreement context | [Couple Stress · Rafiki](https://storyset.com/illustration/couple-stress/rafiki) |
-| 4 | Feeling Blue | Ordinary emotions misread as a personal problem | [Feeling Blue · Rafiki](https://storyset.com/illustration/feeling-blue/rafiki) |
-| 4 | Couple Stress | Disagreement labeled as a personality flaw | [Couple Stress · Rafiki](https://storyset.com/illustration/couple-stress/rafiki) |
-| 4 | Bullying | Social exclusion as a visual metaphor for stigma | [Bullying · Rafiki](https://storyset.com/illustration/bullying/rafiki) |
-| 4 | Research Paper | Evidence and context resolve the chain | [Research Paper · Rafiki](https://storyset.com/illustration/research-paper/rafiki) |
-| 5 | Online Document | Digital ethics page | [Online Document · Rafiki](https://storyset.com/illustration/online-document/rafiki) |
-| 5 | Research Paper | Scientific basis | [Research Paper · Rafiki](https://storyset.com/illustration/research-paper/rafiki) |
-| 6 | To do list | Checklist illustration | [To do list · Rafiki](https://storyset.com/illustration/to-do-list/rafiki) |
-| 7 | Social Interaction | Group with varied expressions | [Social Interaction · Rafiki](https://storyset.com/illustration/social-interaction/rafiki) |
+The [Co-workers · Rafiki illustration](https://storyset.com/illustration/co-workers/rafiki) is listed as free for personal and commercial use with attribution. Include Storyset credit when publishing and check the current [Storyset terms](https://storyset.com/terms). The editable original is included in `assets/Co-workers_Rafiki.svg`.
