@@ -6,9 +6,9 @@ This board contains seven scenes and 16 standalone, editable 16:9 animation fram
 
 ### Scene 1 · The Hook · 00:00–00:30
 
-One continuous plum-background composition uses the woman from Storyset’s *People Creating Robot · Rafiki* illustration as the presenter. The surrounding phone frame is removed. Four generic, brand-free comment cards appear in sequence with the spoken examples; the cards use pseudonyms (Naya, Bagas, Rani, and Dito), generic avatars, and no platform marks. The source illustration’s held tablet is the end-of-scene zoom target, leading into Scene 2.
+One continuous plum-background composition isolates the woman’s `Character` object from Storyset’s *People Creating Robot · Rafiki* illustration. She is centered in a half-body crop; the robot, panels, background, pointer, and presenter frame are removed. The small tablet integrated with her hand pose stays. Four generic, brand-free comment cards appear in sequence with the spoken examples; the cards use pseudonyms (Naya, Bagas, Rani, and Dito), generic avatars, and no platform marks.
 
-The presenter source is [People Creating Robot · Storyset / Rafiki](https://storyset.com/illustration/people-creating-robot/rafiki), free with attribution. Eleven of 201 drawable source elements (5.5%) are omitted to remove background panels, and 48 are recolored; 142 of 201 (70.6%) remain unchanged. This keeps the adaptation below the 40% limit. Three short safe excerpts come from public Reddit comments. The narcissistic example is marked `TIRUAN (bukan komentar asli)` in the source audit because a safe matching public excerpt was not found. Every source lists its platform, URL, and access date in the Word and web boards. The names shown on the comment cards are pseudonyms, not the original account names.
+The presenter source is [People Creating Robot · Storyset / Rafiki](https://storyset.com/illustration/people-creating-robot/rafiki), free with attribution. The 40% adaptation limit is audited per source object. Within the 41-drawable `Character` object, six lower-body paths are cropped and six outfit paths recolored (12/41 changed or cropped; 29/41, or 70.7%, remain intact). The tablet stays because it is integrated with her hand pose. Other illustration objects are excluded. Three short safe excerpts come from public Reddit comments. The narcissistic example is marked `TIRUAN (bukan komentar asli)` in the source audit because a safe matching public excerpt was not found. Every source lists its platform, URL, and access date in the Word and web boards. The names shown on the comment cards are pseudonyms, not the original account names.
 
 ### Scene 2B · Hashtag cloud
 
@@ -54,7 +54,7 @@ The source illustrations use SVG groups so an animator can move the existing hea
 
 ## Assets, attribution, and visual audit
 
-- [People Creating Robot · Storyset / Rafiki](https://storyset.com/illustration/people-creating-robot/rafiki) supplies the Scene 1 presenter. It is free with attribution. Eleven of 201 drawable elements are omitted and 48 recolored; 142 remain unchanged.
+- [People Creating Robot · Storyset / Rafiki](https://storyset.com/illustration/people-creating-robot/rafiki) supplies the Scene 1 presenter. It is free with attribution. The woman’s 41-element `Character` object has 12 elements changed or cropped (29.3%); 29 remain intact. Other source objects are not included in the scene.
 - [Student Stress · Storyset / Rafiki](https://storyset.com/illustration/student-stress/rafiki) supplies the source character used in Scene 4. The available application environment did not include a skeletal bone-rig editor; the SVG character remains divided into editable groups for parenting and transform animation.
 - [Co-workers · Storyset / Rafiki](https://storyset.com/illustration/co-workers/rafiki) supplies the isolated Dina composition in 4D. It changes or omits 57/158 drawable source elements (36.1%), leaving 101/158 unchanged.
 - Scene 3 illustration sources are credited in the scene artwork and on the web and Word boards. Storyset assets are free with attribution; review the [Storyset terms](https://storyset.com/terms) for publishing.

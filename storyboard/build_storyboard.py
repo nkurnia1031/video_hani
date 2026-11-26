@@ -262,13 +262,13 @@ SCENES = [
 
 # Revised visual scope from the attached script. Dialogue and voice-over stay verbatim.
 SCENES[0].update({
-    "visual": "Satu komposisi utuh berlatar plum: presenter perempuan memakai ilustrasi People Creating Robot · Rafiki sebagai sumber karakter. Empat kartu komentar publik tampil bergantian di sekelilingnya dengan nama samaran, ikon avatar generik, dan tanpa merek platform. Frame telepon di sekitar presenter dihapus; tablet yang dipegangnya menjadi titik zoom menuju Scene 2.",
+    "visual": "Satu komposisi utuh berlatar plum menampilkan perempuan dari grup Character pada ilustrasi People Creating Robot · Rafiki, diisolasi sebagai close-up setengah badan di tengah. Robot, latar, panel, dan properti luar dihilangkan. Empat kartu komentar publik tampil bergantian di sisi kiri dan kanan dengan nama samaran serta avatar generik.",
     "screen": "Are we using psychology terms correctly?",
-    "motion": "Satu scene berlanjut tanpa pemotongan keyframe: empat screenshot komentar publik masuk berurutan mengitari presenter, mengikuti dialog ‘Dia avoidant!’ → ‘toxic’ → ‘depresi’ → ‘That's narcissistic!’. Nama pada kartu adalah pseudonim; avatar tetap generik dan tidak ada logo aplikasi. Gestur terbuka presenter menuntun zoom ke tablet di tangannya, lalu beralih ke scene smartphone. Kutipan dan tanggal akses tercatat pada audit sumber Scene 1.",
+    "motion": "Satu scene berlanjut tanpa pemotongan keyframe: empat screenshot komentar publik masuk berurutan di kedua sisi presenter, mengikuti dialog ‘Dia avoidant!’ → ‘toxic’ → ‘depresi’ → ‘That's narcissistic!’. Presenter tetap stabil tanpa pointer atau frame. Nama pada kartu adalah pseudonim; avatar tetap generik dan tidak ada logo aplikasi. Pertanyaan penutup muncul sebelum transisi menuju scene smartphone. Kutipan dan tanggal akses tercatat pada audit sumber Scene 1.",
     "assets": ["presenter"],
-    "roles": ["People Creating Robot · Rafiki: karakter perempuan dari ilustrasi sumber berperan sebagai presenter; karakter robot dan properti sumber tetap menjadi bagian komposisi. Frame di sekitar presenter dihapus. Warna biru sumber dialihkan ke Cream, Peach, dan Espresso sebagai layer fill pada path SVG yang sama.", "Empat kartu komentar memakai potongan publik yang dianonimkan. Kartu memakai nama samaran Naya, Bagas, Rani, dan Dito; nama akun sumber, foto profil, serta logo platform tidak ditampilkan. Tiga komentar berlabel ASLI dengan tautan; komentar narcissistic diberi label TIRUAN (bukan komentar asli) pada audit sumber.", "Pseudonim, avatar generik, tablet-to-phone transition outline, komentar, dan pertanyaan layar adalah grup SVG editable. Komentar tampil bergantian dalam satu scene."],
+    "roles": ["People Creating Robot · Rafiki: hanya objek perempuan dari grup Character dipakai. Robot, panel, dan latar sumber tidak dimasukkan. Crop menampilkan setengah badan; enam path pakaian biru diwarnai Cream. Tablet kecil tetap di tangannya agar pose sumber tersambung alami. Dari 41 drawable dalam objek Character, enam terpotong oleh crop dan enam diwarnai ulang; 29/41 (70,7%) tetap utuh.", "Empat kartu komentar memakai potongan publik. Kartu memakai nama samaran Naya, Bagas, Rani, dan Dito; nama akun sumber, foto profil, serta logo platform tidak ditampilkan. Tiga komentar berlabel ASLI dengan tautan; komentar narcissistic diberi label TIRUAN (bukan komentar asli) pada audit sumber.", "Presenter, empat kartu komentar, dan pertanyaan penutup adalah grup SVG editable. Tidak ada pointer atau bingkai presenter."],
     "credits": ["presenter"],
-    "background": "Deep Plum #3D2645; ilustrasi sumber memakai fill Cream #FFF6EC dan Peach #FFC4A3, line art Espresso, serta panel latar sumber yang ringan. Kartu komentar memakai Cream, Espresso, Peach, dan aksen Terracotta untuk label istilah.",
+    "background": "Deep Plum #3D2645 polos. Pakaian presenter memakai Cream #FFF6EC, kulit mengikuti warna ilustrasi sumber, dan kartu komentar memakai Cream, Espresso, serta Peach.",
     "frames": [
         {"code": "01", "slug": "01-the-hook", "title": "The Hook · One Continuous Scene", "time": "00:00–00:30"},
     ],
@@ -399,9 +399,28 @@ def card(parent, x, y, w, h, fill=WHITE, border="#E3E8ED", radius=22):
     return rect(parent, x, y, w, h, fill, rx=radius, stroke=border, sw=2)
 
 
+def omit_source_drawables(group, indices):
+    drawable_tags = {"path", "rect", "circle", "ellipse", "polygon", "polyline", "line"}
+    omitted = set(indices)
+    drawable_index = 0
+
+    def visit(parent):
+        nonlocal drawable_index
+        for child in list(parent):
+            if child.tag.rsplit("}", 1)[-1] in drawable_tags:
+                if drawable_index in omitted:
+                    parent.remove(child)
+                drawable_index += 1
+            else:
+                visit(child)
+
+    visit(group)
+
+
 def embed_asset(parent, asset_key, x, y, w, h, omit_ids=(), include_ids=None, color_map=None,
                 view_box=None, sad_expression=False, raka_expression=False, color_map_policy=None,
-                child_omit_indices=None, student_typing_expression=False, color_map_by_group=None):
+                child_omit_indices=None, student_typing_expression=False, color_map_by_group=None,
+                drawable_omit_indices=None):
     info = ASSETS[asset_key]
     source = ET.parse(info["file"]).getroot()
     vb = view_box or source.get("viewBox", "0 0 500 500")
@@ -418,6 +437,8 @@ def embed_asset(parent, asset_key, x, y, w, h, omit_ids=(), include_ids=None, co
         omitted = set(child_omit_indices.get(child.get("id"), ()))
         if omitted:
             clone[:] = [element for index, element in enumerate(list(clone)) if index not in omitted]
+        if child.get("id") in (drawable_omit_indices or {}):
+            omit_source_drawables(clone, drawable_omit_indices[child.get("id")])
         if student_typing_expression and child.get("id") == "Character":
             source_parts = list(clone)
             if len(source_parts) > 23:
@@ -536,39 +557,28 @@ def draw_public_comment(root, comment, x, y, width=432, height=174):
 def build_scene_1(scene):
     root = clean_frame(
         "Scene 1 · The Hook",
-        "One continuous plum-background scene. Four public-comment cards with pseudonyms surround the Storyset Rafiki woman from People Creating Robot. The tablet she holds becomes the zoom target into Scene 2.",
+        "One continuous plum-background scene. The woman from the Character object in People Creating Robot · Rafiki is isolated in a centered half-body crop; its robot, props, panels, and background are omitted. Four public-comment cards with pseudonyms appear at the sides.",
         PLUM,
     )
     root.set("data-frame", "01")
     root.find(tag("metadata")).text = (
-        "Scene 1 is one continuous editable composition. Presenter: the woman in People Creating Robot · Rafiki (Storyset, free with attribution). "
-        "Eleven background drawables are omitted and 48 source drawables are recolored; 142/201 (70.6%) remain unchanged. "
-        "No phone frame or backdrop surrounds the presenter. A separate transition outline frames only the source tablet; comment cards use pseudonyms and generic avatars. "
+        "Scene 1 is one continuous editable composition. Presenter: the Character object from People Creating Robot · Rafiki (Storyset, free with attribution). "
+        "Within that 41-drawable object, six lower-body paths are cropped and six outfit paths recolored; 29/41 (70.7%) remain unchanged. "
+        "All other source objects are omitted. There is no presenter frame or pointer; comment cards use pseudonyms and generic avatars. "
         "Public quote sources, access dates, and Storyset attribution are recorded outside this artwork in the storyboard source audit."
     )
-    # The source woman already holds a tablet. Only that prop receives the transition outline.
-    phone = add(root, "g", id="tablet-zoom-outline", data_motion="zoom-in-on-held-tablet-to-scene-02")
-    phone.set("opacity", "0")
-    rect(phone, 1144, 463, 82, 132, "none", rx=15, stroke=CREAM, sw=4, opacity=0.92)
-    rect(phone, 1151, 470, 68, 118, "none", rx=10, stroke=PEACH, sw=2, opacity=0.8)
-    rect(phone, 1171, 472, 28, 3, CREAM, rx=2, opacity=0.8)
-    add(phone, "animate", attributeName="opacity", values="0;1", begin="24.5s", dur="0.8s", fill="freeze")
-
     embed_asset(
-        root, "presenter", 470, 50, 980, 980,
-        color_map={"#407BFF": CREAM, "#FFAF6B": PEACH, "#EF8535": PEACH, "#FD504E": PLUM},
-        color_map_by_group={"Character": {"#407BFF": PEACH}},
-        omit_ids=("background-simple",),
-        child_omit_indices={"background-complete": (0,)},
+        root, "presenter", 550, -80, 820, 1080,
+        include_ids=("Character",),
+        view_box="285 130 190 250",
+        color_map={"#407BFF": CREAM},
+        drawable_omit_indices={"Character": (4, 5, 6, 7, 8, 9)},
     )
 
     positions = [(36, 228), (1452, 228), (36, 622), (1452, 622)]
     for comment, (x, y) in zip(SCENE1_COMMENT_SOURCES, positions):
         draw_public_comment(root, comment, x, y)
 
-    pointer = add(root, "g", id="presenter-camera-pointing-transition", data_motion="point-zoom-transform")
-    circle(pointer, 1108, 456, 34, "none", stroke=PEACH, sw=4, opacity=0.82)
-    circle(pointer, 1108, 456, 7, TERRACOTTA)
     question = add(root, "g", id="closing-onscreen-question", data_motion="appears-before-phone-zoom")
     question.set("opacity", "0")
     rect(question, 566, 944, 788, 72, CREAM, rx=22)
@@ -1662,7 +1672,7 @@ def make_docx(contact):
     r = heading.add_run("AUDIT VISUAL")
     set_run(r, 14, INK, True)
     audit = [
-        "Scene 1 kini memakai perempuan dari People Creating Robot · Rafiki sebagai presenter. Sebelas elemen latar sumber dihilangkan dan 48/201 elemen sumber diwarnai ulang (59/201 = 29,4% berubah/dihilangkan; 142/201 = 70,6% tetap). Bidang oval sumber dan frame besar di sekeliling presenter dihapus sehingga latar scene tetap plum. Outline transisi hanya mengelilingi tablet. Kartu komentar memakai nama samaran Naya, Bagas, Rani, dan Dito; tiga kutipan bersumber publik dan satu bertanda tiruan.",
+        "Scene 1 memakai objek Character dari People Creating Robot · Rafiki dalam crop setengah badan di tengah. Robot, dekorasi, panel, dan latar dihilangkan; tablet kecil yang menjadi bagian pose perempuan dipertahankan. Tidak ada pointer atau bingkai presenter. Audit per objek: dari 41 drawable Character, enam terpotong crop dan enam path pakaian biru diwarnai Cream; 29/41 (70,7%) tetap utuh. Kartu komentar memakai nama samaran Naya, Bagas, Rani, dan Dito; tiga kutipan bersumber publik dan satu bertanda tiruan.",
         "Scene 2B kini berupa word cloud Caveat 56 hashtag: enam istilah naskah dan lima puluh pemicu, dengan ukuran 26–208 px, rotasi acak, tumpang tindih, dan tiga hero term di tengah.",
         "Scene 3 memisahkan case avoidant, depresi, dan gaslighting. Label terracotta muncul lebih dulu; koreksi sage dikelompokkan terpisah untuk animasi saat VO mengatakan ‘Padahal...’. Latar case memakai peach, sage, dan mustard muda sesuai naskah.",
         "Scene 4 berlangsung 40 detik dalam urutan baru 4A, 4B, 4B2, 4C, 4D; VO tetap naskah. Ekor bubble 4B mengarah ke pembicara dan tidak menutup label nama. Di 4C Raka mengirim post melalui laptop, menyebut alasan ‘Biar yang lain aman’, mengeluarkan Dina dari grup, dan notifikasi mulai menyebar; 4D hanya menampilkan Dina dan teks ‘Don't reduce people to labels.’",
@@ -1685,7 +1695,7 @@ def make_docx(contact):
         set_run(r, 8, ESPRESSO, True)
     p = doc.add_paragraph()
     p.paragraph_format.space_before = Pt(4)
-    r = p.add_run("People Creating Robot · Rafiki dipakai dengan atribusi Storyset. Caveat menggunakan SIL Open Font License 1.1; salinan lisensi ikut dalam source bundle. Aset Storyset gratis dengan atribusi; tautan sumber per ilustrasi dicantumkan pada scene terkait. Periksa ketentuan Storyset sebelum penggunaan final.")
+    r = p.add_run("Objek Character dari People Creating Robot · Rafiki dipakai dengan atribusi Storyset. Pada objek Character, enam path bawah terpotong oleh framing setengah badan dan enam path pakaian diwarnai ulang; 29/41 elemen tetap utuh. Tablet yang terhubung dengan pose tangan dipertahankan. Caveat menggunakan SIL Open Font License 1.1; salinan lisensi ikut dalam source bundle. Aset Storyset gratis dengan atribusi; tautan sumber per ilustrasi dicantumkan pada scene terkait. Periksa ketentuan Storyset sebelum penggunaan final.")
     set_run(r, 9, MUTED)
     add_hyperlink(p, "People Creating Robot · Rafiki", "https://storyset.com/illustration/people-creating-robot/rafiki")
     p.add_run("  ·  ")
@@ -1952,8 +1962,8 @@ def make_website():
 <section class="board" aria-label="Seven scene production board">
 ''' + "\n".join(rows) + '''
 </section>
-<section class="audit"><div><h2>Visual audit</h2><p>Scene 3 remains three independent case frames and a centered closing frame. Scene 4 has five beats with its original narration and updated numbering: 4A, 4B, 4B2, 4C, 4D. Raka’s 4C post is visible on his laptop and expands into notifications; 4D contains Dina alone with no table or Raka. The Co-workers source changes 57/158 drawable elements in 4D (36.1%), leaving 101/158 unchanged. Scene 1 uses the woman from People Creating Robot · Rafiki; 11/201 background elements are omitted and 48/201 source elements recolored, leaving 142/201 unchanged. The presenter frame and source oval backdrop are removed; the transition outline sits around the tablet she holds. Four public-comment groups use pseudonyms. Scene 2B contains 56 independently editable handwritten hashtags (six script terms plus fifty related terms) with accelerating appearance timings. All retained frames were rendered and inspected.</p></div><div><h2>Editing &amp; attribution</h2><p>Open or download each SVG to edit its vector layers and text. The source bundle contains the HTML board, all SVG frames, source illustration assets, and the Caveat font/license. The <a href="https://storyset.com/illustration/people-creating-robot/rafiki" target="_blank" rel="noreferrer">People Creating Robot · Rafiki</a> presenter and <a href="https://storyset.com/illustration/co-workers/rafiki" target="_blank" rel="noreferrer">Co-workers · Rafiki</a> and <a href="https://storyset.com/illustration/student-stress/rafiki" target="_blank" rel="noreferrer">Student Stress · Rafiki</a> are free with attribution. <a href="https://github.com/google/fonts/tree/main/ofl/caveat" target="_blank" rel="noreferrer">Caveat</a> is distributed under SIL OFL 1.1; cite Storyset when publishing and review the <a href="https://storyset.com/terms" target="_blank" rel="noreferrer">Storyset terms</a>.</p></div></section>
-<footer class="footer">Scene 1 uses the woman from the credited Storyset illustration as its presenter; the transition outline highlights her tablet, not a frame around her. Scene backgrounds, public-comment cards, cloud words, labels, cards, connectors, notifications, and text are editable SVG layers. No images were generated.</footer>
+<section class="audit"><div><h2>Visual audit</h2><p>Scene 3 remains three independent case frames and a centered closing frame. Scene 4 has five beats with its original narration and updated numbering: 4A, 4B, 4B2, 4C, 4D. Raka’s 4C post is visible on his laptop and expands into notifications; 4D contains Dina alone with no table or Raka. The Co-workers source changes 57/158 drawable elements in 4D (36.1%), leaving 101/158 unchanged. Scene 1 uses only the Character object from People Creating Robot · Rafiki. Of its 41 drawable elements, six are cropped and six clothing paths recolored; 29/41 (70.7%) remain unchanged. The robot, external props, panels, background, presenter frame, and pointer are removed; the small tablet integrated with the woman’s pose remains. Four public-comment groups use pseudonyms. Scene 2B contains 56 independently editable handwritten hashtags (six script terms plus fifty related terms) with accelerating appearance timings. All retained frames were rendered and inspected.</p></div><div><h2>Editing &amp; attribution</h2><p>Open or download each SVG to edit its vector layers and text. The source bundle contains the HTML board, all SVG frames, source illustration assets, and the Caveat font/license. The <a href="https://storyset.com/illustration/people-creating-robot/rafiki" target="_blank" rel="noreferrer">People Creating Robot · Rafiki</a> presenter and <a href="https://storyset.com/illustration/co-workers/rafiki" target="_blank" rel="noreferrer">Co-workers · Rafiki</a> and <a href="https://storyset.com/illustration/student-stress/rafiki" target="_blank" rel="noreferrer">Student Stress · Rafiki</a> are free with attribution. <a href="https://github.com/google/fonts/tree/main/ofl/caveat" target="_blank" rel="noreferrer">Caveat</a> is distributed under SIL OFL 1.1; cite Storyset when publishing and review the <a href="https://storyset.com/terms" target="_blank" rel="noreferrer">Storyset terms</a>.</p></div></section>
+<footer class="footer">Scene 1 isolates the woman Character object from the credited Storyset illustration in a centered half-body crop, without the robot, external props, pointer, or presenter frame. Her small held tablet stays as part of the source pose. Scene backgrounds, public-comment cards, cloud words, labels, cards, connectors, notifications, and text are editable SVG layers. No images were generated.</footer>
 </main></body></html>'''
     output = ROOT / "index.html"
     output.write_text(html, encoding="utf-8")
