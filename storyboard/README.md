@@ -1,51 +1,70 @@
-# Therapy Speak Gone Wrong storyboard
+# Therapy Speak Gone Wrong · Storyboard C
 
-The selected **C production board** contains seven scenes and twelve standalone, editable 16:9 animation frames. Scenes 3–4 now form one five-beat story over **80 seconds**: Raka mislabels his sadness, clashes with Dina, labels her narcissistic from one defensive reply, spreads the label at work, then warns the group and removes her before he begins to doubt. The same Storyset Co-workers illustration is reused in every beat so Raka and Dina remain visually consistent.
+This board contains seven scenes and 21 standalone, editable 16:9 animation frames. The attached `Script Video Kode Etik.pdf` is the authority for dialogue and narration; Scene 1 presenter dialogue and the Scene 3–4 voice-over are preserved verbatim. Scene 2 and Scenes 5–7 follow the existing script and board.
 
-## Scene 3–4 timing and VO
+## Revised scenes
 
-| Beat | Time | Duration | Story action |
-| --- | --- | ---: | --- |
-| 03A | 01:05–01:20 | 15 sec | Raka misses a target, feels sad for several days, and calls himself depressed. |
-| 03B | 01:20–01:38 | 18 sec | Raka hears Dina’s meeting feedback as an attack; both respond defensively. |
-| 03C | 01:38–01:52 | 14 sec | Raka labels Dina “narsistik” based on one reply. |
-| 04A | 01:52–02:06 | 14 sec | Raka shares the label; coworkers begin avoiding Dina. |
-| 04B | 02:06–02:25 | 19 sec | Raka posts a warning, removes Dina, then starts to doubt his conclusion. |
+### Scene 1 · The Hook · 00:00–00:30
 
-The Indonesian-English voice-over appears beat by beat with each duration in the Word and web boards. Object transitions link the self-label cloud to the meeting bubbles, the “NARSISTIK” stamp, group notifications, and the final warning post. On-screen text makes each beat understandable without VO. Final copy: **“SATU MOMEN BUKAN BUKTI · Pahami konteks sebelum memberi label.”**
+Six frames keep the same front-facing, medium close-up presenter placeholder on a plain deep-plum field. Four generic, brand-free chat screenshots appear in time with the spoken examples: read without reply, cancelled plan, sadness for several days, and an unmet expectation. Names and avatars are anonymized. The presenter points toward camera, the question `Are we using psychology terms correctly?` appears, and the last frame zooms into a smartphone.
 
-## Files
+| Frame | Time | Visual |
+|---|---|---|
+| 01A | 00:00–00:04 | Presenter placeholder, fixed composition |
+| 01B | 00:04–00:08 | Read without reply · “Dia avoidant!” |
+| 01C | 00:08–00:12 | Cancelled plan · “toxic” |
+| 01D | 00:12–00:16 | Sad for several days · “depresi” |
+| 01E | 00:16–00:24 | Expectation mismatch · on-screen question |
+| 01F | 00:24–00:30 | Presenter transforms into smartphone |
 
-- `index.html` — the production board with frame previews, timings, VO, motion notes, asset credits, and SVG/PNG downloads.
-- `scenes/scene-*.svg` — editable scene frames. Scene 2 has three frames; Scene 3 has three linked beats; Scene 4 has two linked beats. Frames contain the background, illustration, props, overlays, and on-screen text only.
-- `scenes/scene-02-komponen.svg` — six additional editable comment groups for the Scene 2 scroll animation.
-- `assets/Co-workers_Rafiki.svg` — the downloaded Storyset source illustration used across all five Scene 3–4 beats.
-- `previews/scene-*.png` — rendered frame previews used by the website and Word board.
-- `previews/contact-sheet.png` — the 7-scene/12-frame visual audit sheet.
-- `Storyboard_Therapy_Speak_Gone_Wrong.docx` — landscape production board with the contact sheet, per-scene frames, beat-level VO, and asset links.
-- `Storyboard_Editable_Source.zip` — the web board, Word file, scene/source SVGs, and previews.
-- `build_storyboard.py` — rebuilds the SVG frames, previews, Word document, website, and source bundle.
+### Scene 3 · When Normal Emotions Become Labels · 01:05–01:55
 
-## Visual system and asset audit
+Three independent cases return to the source script. Each has one source illustration, a terracotta mistaken-label group, and a separate sage correction group for the animator to reveal at “Padahal...”. There is no shared story between cases.
 
-Opsi B is **Warm Peach & Mustard**: deep plum `#3D2645`, sage `#7FB89A`, terracotta `#E4572E`, mustard `#F2B134`, peach `#FFC4A3`, cream `#FFF6EC`, and espresso `#2A1F2D`. Scenes 3–4 keep cream and plum dominant, with terracotta reserved for mistaken labels and harmful actions. Sage carries the final corrective message. Each frame uses no more than three dominant colors; muted colors already present in the licensed illustration remain as small supporting details.
+| Frame | Time | Visual |
+|---|---|---|
+| 03A | 01:05–01:20 | Message read without reply · `They're avoidant!` |
+| 03B | 01:20–01:35 | Person cries after missing a target · `I'm depressed!` |
+| 03C | 01:35–01:50 | Two people disagree · `You're gaslighting me!` |
+| 03D | 01:50–01:55 | Centered text: `One behavior ≠ A psychological diagnosis.` |
 
-The Storyset source contains 158 drawable elements. In beats 03A–04A, 36 elements (22.8%) change or are omitted: 28 blue elements are recolored plum, seven placeholder-chat elements are omitted, and Raka’s mouth is adjusted to read as concerned. The remaining **122 elements (77.2%) stay unchanged**. In final frame 04B, Dina stands alone in the office and a close-up from the same Raka SVG group appears in a separate doubt inset. The conservative audit counts Raka’s 54-element body as omitted from the office, eight recolored elements, and the changed mouth: 63/158 (39.9%), leaving at least **60.1% unchanged**. Dialog, cloud, target card, stamp, notifications, warning post, and closing text are separate editable layers.
+Case backgrounds use peach `#FFE3D3`, sage `#DCEFE4`, and mustard `#FCE9C2`. Corrections are sage with espresso text; incorrect labels are terracotta with white text. The target marker and tears in 03B are separate overlays. The former 100-to-45 grade card is removed.
 
-The complete frames were rendered and reviewed at full size and in the contact sheet. The audit checked character continuity, readability of all five beats without narration, the transition-object chain, palette, and the <40% artwork-edit limit. No character art was generated or drawn from scratch.
+### Scene 4 · Why Does It Matter? · 01:55–02:35
 
-## Editing
+Five consecutive beats show one domino chain: Raka misreads his own sadness; he misjudges Dina during a work disagreement; the disagreement turns into an unsupported `NARSISTIK` label; that label spreads through the group and Dina is excluded; Dina is left alone while Raka begins to doubt. The visual does not claim that Dina is narcissistic. No VO is added or rewritten.
 
-Open any SVG in Inkscape, Illustrator, Figma, or another SVG editor. Character artwork remains a grouped SVG; IDs identify the animation layers, including `emotion-cloud`, `raka-quote`, `dina-quote`, `narcissistic-stamp`, `rumor-notifications`, `warning-post`, `remove-dina-action`, `raka-doubt`, and `final-onscreen-text`.
+| Frame | Time | Duration | Visual / VO cue |
+|---|---|---:|---|
+| 04A | 01:55–02:07 | 12 sec | Self-misunderstanding · V0 + V1 |
+| 04B | 02:07–02:12 | 5 sec | Meeting conflict · V2 |
+| 04C | 02:12–02:17 | 5 sec | Raka labels Dina · V3 |
+| 04D | 02:17–02:27 | 10 sec | Group stigma and removal · V4 |
+| 04E | 02:27–02:35 | 8 sec | Dina alone; Raka doubts · V5 |
 
-Edit `build_storyboard.py` to change the scene copy or composition, then run:
+Editable object continuity is bubble → dark cloud → debate bubbles → `NARSISTIK` stamp → chat notifications → Dina alone. Dominoes fall in sequence using mustard, terracotta, plum, and espresso. The closing frame contains only the requested on-screen text: `Don't reduce people to labels.`
 
-```sh
-python storyboard/build_storyboard.py
-```
+## Existing scenes kept in place
 
-The builder uses Python packages `CairoSVG`, `Pillow`, and `python-docx`.
+| Scene | Time | Frames |
+|---|---|---|
+| 2 · What Is Therapy Speak? | 00:30–01:05 | 02A–02C, plus the six separate scroll comments in `scene-02-komponen.svg` |
+| 5 · The Ethical Side of Psychology | 02:35–03:20 | 05 |
+| 6 · How to Use Therapy Speak Wisely | 03:20–03:50 | 06 |
+| 7 · Closing | 03:50–04:00 | 07 |
 
-## Storyset credit and source
+## Assets, attribution, and visual audit
 
-The [Co-workers · Rafiki illustration](https://storyset.com/illustration/co-workers/rafiki) is listed as free for personal and commercial use with attribution. Include Storyset credit when publishing and check the current [Storyset terms](https://storyset.com/terms). The editable original is included in `assets/Co-workers_Rafiki.svg`.
+- `assets/OpenPeeps_peep-standing-16.svg` is the front-facing presenter source. Open Peeps by Pablo Stanley is public domain under CC0. The crop is a viewport operation; the 5 source drawable paths remain available unchanged in the embedded vector, with at most one path visually clipped for the medium close-up.
+- `assets/Co-workers_Rafiki.svg` keeps Raka and Dina visually consistent across Scene 4. In shared frames 04A–04D, 36/158 drawable elements are changed or omitted (22.8%), leaving 77.2% unchanged. In isolated closing frame 04E, the conservative count is 63/158 (39.9%), leaving at least 60.1% unchanged.
+- `assets/Student-stress_Rafiki.svg` is used in Scene 3B. The 34/254 source changes or omissions (13.4%) stay below the 40% limit; the target marker, tears, labels, and correction are separate vector layers.
+- Other Storyset illustrations used in Scene 3 are credited through their source links in the storyboard and on the web board. Storyset is free with attribution; check the current terms before publishing.
+- Each frame SVG includes only the animation composition, background, source illustration, props, overlays, and on-screen text. Board titles, timecodes, footers, legends, credits, and production notes stay outside scene artwork.
+
+Open the [editable web storyboard](index.html), download the [Word storyboard](Storyboard_Therapy_Speak_Gone_Wrong.docx), or inspect the [visual-audit contact sheet](previews/contact-sheet.png). All scene SVGs are editable; no character artwork was generated or drawn from zero.
+
+## Source links
+
+- [Open Peeps · CC0](https://openpeeps.com/)
+- [Co-workers · Rafiki](https://storyset.com/illustration/co-workers/rafiki)
+- [Storyset terms](https://storyset.com/terms)

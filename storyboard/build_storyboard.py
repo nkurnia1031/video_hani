@@ -50,6 +50,7 @@ PALETTE = [PLUM, SAGE, TERRACOTTA, MUSTARD, PEACH, CREAM, ESPRESSO]
 PALETTE_NAMES = ["deep plum", "sage", "terracotta", "mustard", "peach", "cream", "espresso"]
 
 ASSETS = {
+    "presenter": {"file": ASSETS_DIR / "OpenPeeps_peep-standing-16.svg", "title": "Open Peeps · Standing 16", "url": "https://openpeeps.com/", "license": "CC0 1.0"},
     "feed": {"file": REPO / "Feed-rafiki.svg", "title": "Feed", "url": "https://storyset.com/illustration/feed/rafiki"},
     "texting": {"file": REPO / "Texting-rafiki.svg", "title": "Texting", "url": "https://storyset.com/illustration/texting/rafiki"},
     "student_stress": {"file": ASSETS_DIR / "Student-stress_Rafiki.svg", "title": "Student Stress · Rafiki", "url": "https://storyset.com/illustration/student-stress/rafiki"},
@@ -149,7 +150,7 @@ SCENES = [
         "visual": "Live presenter in medium close-up, surrounded by fast social-comment bubbles; the frame then zooms toward a smartphone.",
         "screen": "Are we using psychology terms correctly?",
         "motion": "Komentar masuk cepat mengitari presenter. Presenter menunjuk kamera; garis zoom mengantar ke layar smartphone.",
-        "voice": "Guys, pernah nggak sih, cuma karena seseorang nggak membalas chat, kita langsung bilang, ‘Dia avoidant!’ Teman nggak jadi datang, kita sebut toxic. Lagi sedih beberapa hari, langsung merasa depresi. Atau ketika seseorang nggak sesuai ekspektasi, tiba-tiba kita bilang, ‘That's narcissistic!’ Wait. Are we actually understanding psychology, or are we just throwing psychological terms everywhere? Welcome to Therapy Speak Gone Wrong. Let's talk about it!",
+        "voice": "Guys, pernah nggak sih, cuma karena seseorang nggak membalas chat, kita langsung bilang, 'Dia avoidant!' Teman nggak jadi datang, kita sebut toxic. Lagi sedih beberapa hari, langsung merasa depresi. Atau ketika seseorang nggak sesuai ekspektasi, tiba-tiba kita bilang, 'That's narcissistic!' Wait. Are we actually understanding psychology, or are we just throwing psychological terms everywhere? Welcome to Therapy Speak Gone Wrong. Let's talk about it!",
         "assets": [], "roles": ["Frame presenter live dan antarmuka smartphone dibuat sebagai vektor SVG yang bisa diedit."],
         "credits": [], "background": "Warm paper, a blue footage frame, and small coral comment accents.",
     },
@@ -228,42 +229,55 @@ SCENES = [
     },
 ]
 
-# Scene 3–4 is one five-beat narrative. Keep the five frame-level VO cues here
-# so the editable board and the Word script can expose each beat and duration.
-SCENES[2].update({
-    "slug": "normal-emotions-become-labels", "time": "01:05–01:52", "title": "One Label Starts a Chain",
-    "visual": "Satu kisah bersambung: Raka gagal mencapai target, melabeli kesedihannya sebagai depresi, mendengar masukan Dina sebagai serangan, lalu menyimpulkan Dina narsistik dari satu balasan defensif.",
-    "screen": "03A · TARGET 10 → HASIL 6 · ‘Aku depresi. Ada yang salah banget sama aku.’\n03B · Raka: ‘Kamu selalu bikin aku merasa salah!’ · Dina: ‘Aku cuma kasih masukan. Jangan baper terus, deh.’\n03C · ‘DIA NARSISTIK’ · Kesimpulan Raka dari satu balasan.",
-    "motion": "Satu ilustrasi kantor Rafiki menjaga Raka dan Dina tetap konsisten. Gelembung self-label menjadi awan gelap di atas Raka; awan berubah menjadi dua gelembung debat; gelembung terakhir mengerut menjadi cap NARSISTIK. Tiap frame bersih, hanya komposisi animasi tanpa elemen papan produksi.",
-    "voice": "Raka meleset dari target. Beberapa hari ia sedih, lalu mencari nama untuk rasanya: ‘Aku depresi. Ada yang salah banget sama aku.’ Padahal, missing one target does not by itself establish depression. Karena merasa rapuh, di rapat ia mendengar masukan Dina sebagai serangan. Raka: ‘Kamu selalu bikin aku merasa salah!’ Dina ikut defensif: ‘Aku cuma kasih masukan. Jangan baper terus, deh.’ Dari balasan itu, Raka merasa Dina tak empati dan tak mau disalahkan. ‘Dia narsistik,’ simpulnya—padahal one defensive reply belum membuktikan pola atau diagnosis.",
-    "assets": ["coworkers"],
-    "roles": ["Co-workers · Rafiki: satu ilustrasi kantor yang dipakai kembali di semua lima beat. Raka adalah tokoh duduk; Dina berdiri. Label nama hanya menetapkan peran dialog, tanpa menyimpulkan gender atau diagnosis.", "Gelembung self-label, awan, dialog rapat, cap NARSISTIK, kartu target, dan nama tokoh adalah lapisan SVG terpisah yang editable."],
-    "credits": ["coworkers"],
-    "background": "Cream dan plum mendominasi dengan terracotta hanya pada label keliru. Abu-abu dan warna kulit dari ilustrasi sumber dipertahankan; maksimal tiga warna dominan per adegan.",
+# Revised visual scope from the attached script. Dialogue and voice-over stay verbatim.
+SCENES[0].update({
+    "visual": "Placeholder perempuan Open Peeps, medium close-up menghadap kamera, ukuran dan framing tetap pada latar plum polos. Empat screenshot chat generik muncul cepat di sekelilingnya; nama dan avatar disamarkan. Frame akhir menampilkan pertanyaan layar lalu presenter bertransisi menjadi smartphone.",
+    "screen": "Are we using psychology terms correctly?",
+    "motion": "Presenter tetap pada posisi dan ukuran yang sama. Screenshot generik masuk bergantian: pesan dibaca tanpa balasan → janji batal → curhat sedih beberapa hari → ekspektasi tidak terpenuhi. Presenter menunjuk ke kamera, zoom-in, lalu berubah menjadi smartphone.",
+    "assets": ["presenter"],
+    "roles": ["Open Peeps standing-16: placeholder presenter dari ilustrasi sumber CC0, dipotong lewat viewport menjadi medium close-up tanpa menggambar ulang karakter.", "Screenshot chat generik tanpa logo aplikasi; nama dan avatar anonim. Smartphone, label, dan on-screen text adalah lapisan SVG editable."],
+    "credits": ["presenter"],
+    "background": "Deep Plum #3D2645 polos; screenshot menggunakan cream, espresso, dan terracotta Opsi B.",
     "frames": [
-        {"code": "03A", "slug": "03a-raka-self-label", "title": "Raka Mislabels His Own Sadness", "time": "01:05–01:20", "voice": "Raka meleset dari target. Beberapa hari ia sedih, lalu mencari nama untuk rasanya: ‘Aku depresi. Ada yang salah banget sama aku.’ Padahal, missing one target does not by itself establish depression."},
-        {"code": "03B", "slug": "03b-raka-dina-conflict", "title": "A Work Meeting Turns Tense", "time": "01:20–01:38", "voice": "Karena merasa rapuh, di rapat ia mendengar masukan Dina sebagai serangan. Raka: ‘Kamu selalu bikin aku merasa salah!’ Dina ikut defensif: ‘Aku cuma kasih masukan. Jangan baper terus, deh.’"},
-        {"code": "03C", "slug": "03c-raka-labels-dina", "title": "One Defensive Reply Becomes a Label", "time": "01:38–01:52", "voice": "Dari balasan itu, Raka merasa Dina tak empati dan tak mau disalahkan. ‘Dia narsistik,’ simpulnya—padahal one defensive reply belum membuktikan pola atau diagnosis."},
+        {"code": "01A", "slug": "01a-presenter-placeholder", "title": "Presenter Placeholder", "time": "00:00–00:04"},
+        {"code": "01B", "slug": "01b-chat-unanswered", "title": "Read Without Reply · Avoidant", "time": "00:04–00:08"},
+        {"code": "01C", "slug": "01c-chat-cancelled-plan", "title": "Cancelled Plan · Toxic", "time": "00:08–00:12"},
+        {"code": "01D", "slug": "01d-chat-sad-days", "title": "Sad for Several Days · Depresi", "time": "00:12–00:16"},
+        {"code": "01E", "slug": "01e-chat-expectation-mismatch", "title": "Expectation Mismatch · On-Screen Question", "time": "00:16–00:24"},
+        {"code": "01F", "slug": "01f-smartphone-transition", "title": "Presenter Zooms Into Smartphone", "time": "00:24–00:30"},
+    ],
+})
+SCENES[2].update({
+    "visual": "Tiga case terpisah, masing-masing memakai satu ilustrasi dan satu latar warna sendiri: pesan belum dibalas; seseorang menangis setelah gagal mencapai target; dua orang berbeda pendapat. Koreksi sage muncul saat VO sampai ‘Padahal...’. Frame terakhir menampilkan kalimat penutup di tengah.",
+    "screen": "03A · They're avoidant! · Mungkin sibuk, kelelahan, atau belum sempat.\n03B · I'm depressed! · Sedih setelah gagal itu emosi yang normal.\n03C · You're gaslighting me! · Beda pendapat bukan otomatis gaslighting.\n03D · One behavior ≠ A psychological diagnosis.",
+    "motion": "Tiga case tampil sendiri-sendiri. Di tiap case, bubble label terracotta muncul dahulu; saat VO mencapai ‘Padahal...’, kotak koreksi sage masuk. Frame 03D menyatukan komposisi dan menampilkan teks penutup.",
+    "roles": ["Texting · Rafiki: teman mengirim pesan yang hanya dibaca, tanpa balasan.", "Student Stress · Rafiki: seseorang kecewa setelah gagal mencapai target; air mata dan penanda target adalah overlay terpisah, bukan perubahan karakter sumber.", "Couple Stress · Rafiki: dua orang tidak sependapat. Semua asset credit dan komposisi tetap berada di luar artwork frame."],
+    "background": "Case 1 peach muda #FFE3D3, Case 2 sage muda #DCEFE4, Case 3 mustard muda #FCE9C2. Label terracotta dengan teks putih; koreksi sage dengan teks espresso. Maksimal tiga warna dominan per case.",
+    "frames": [
+        {"code": "03A", "slug": "03a-case-01-avoidant", "title": "Case 1 · Unanswered Message", "time": "01:05–01:20", "voice": "Contoh pertama. Teman kita belum membalas chat selama beberapa jam. Lalu kita langsung menyimpulkan bahwa dia punya avoidant attachment. Padahal, mungkin dia sedang sibuk, kelelahan, atau memang belum sempat membalas. One situation doesn't define someone's entire personality."},
+        {"code": "03B", "slug": "03b-case-02-depressed", "title": "Case 2 · Sadness After Failure", "time": "01:20–01:35", "voice": "Contoh kedua. Kita merasa sedih setelah gagal mencapai target. Kemudian langsung menyebut diri sendiri mengalami depresi. Padahal, sedih merupakan emosi manusia yang normal. Kesedihan setelah mengalami kegagalan tidak otomatis menunjukkan adanya gangguan depresi."},
+        {"code": "03C", "slug": "03c-case-03-gaslighting", "title": "Case 3 · Disagreement", "time": "01:35–01:50", "voice": "Contoh ketiga. Seseorang tidak setuju dengan pendapat kita, lalu langsung dituduh melakukan gaslighting. Padahal, disagreement atau perbedaan pendapat tidak otomatis termasuk gaslighting. Kita perlu melihat konteks, pola perilaku, dan bagaimana tindakan tersebut terjadi."},
+        {"code": "03D", "slug": "03d-combined-on-screen-text", "title": "One Behavior · Closing On-Screen Text", "time": "01:50–01:55", "voice": ""},
     ],
 })
 SCENES[3].update({
-    "slug": "why-it-matters", "time": "01:52–02:25", "title": "The Label Spreads",
-    "visual": "Cerita yang sama berlanjut: Raka membagikan label itu ke grup kantor, rekan-rekan mulai menjauhi Dina, lalu Raka mengirim peringatan dan mengeluarkan Dina dari grup. Dina tertinggal sendiri; Raka mulai ragu.",
-    "screen": "04A · Grup kantor: ‘Dina narsistik.’ · ‘Oh… pantes.’ · ‘Aku skip kalau Dina ikut.’\n04B · ‘Hati-hati sama Dina, dia narsistik.’ · ‘KELUARKAN DINA DARI GRUP’ · ‘SATU MOMEN BUKAN BUKTI’ · ‘Pahami konteks sebelum memberi label.’",
-    "motion": "Cap NARSISTIK berlipat menjadi notifikasi chat yang membuat rekan kerja menjauh. Notifikasi terakhir membuka kartu peringatan Raka dan tombol keluarkan Dina. Setelah Dina sendirian, pertanyaan Raka dan teks penutup muncul.",
-    "voice": "Raka menceritakan kesimpulannya ke teman kantor. Karena cerita itu beredar tanpa konteks, satu per satu orang mulai menjaga jarak dari Dina. The label becomes stigma. Akibatnya, Raka mengirim peringatan di grup: ‘Hati-hati sama Dina, dia narsistik,’ lalu mengeluarkannya. Ia merasa sedang melindungi orang lain. Dina tertinggal sendiri; Raka mulai ragu: did I know enough?",
+    "time": "01:55–02:35",
+    "visual": "Satu cerita Raka dan Dina bergerak dalam lima beat: salah memahami emosi sendiri → salah menilai Dina → konflik rapat → label menyebar dan mengucilkan Dina → Dina sendirian sementara Raka mulai ragu. Label tidak membuktikan bahwa Dina narsistik.",
+    "screen": "04A · Aku depresi. Ada yang salah banget sama aku.\n04B · Raka: Kamu selalu bikin aku merasa salah! · Dina: Aku cuma kasih masukan. Jangan baper terus, deh.\n04C · Dia narsistik. · Cap: NARSISTIK.\n04D · Hati-hati sama Dina, dia narsistik. · Raka mengeluarkan Dina dari grup.\n04E · Don't reduce people to labels.",
+    "motion": "Transisi objek tanpa potong kasar: bubble ‘Aku depresi’ menjadi awan gelap di atas Raka → awan berubah menjadi bubble debat → bubble menjadi cap NARSISTIK → cap menyebar menjadi notifikasi chat → berakhir di Dina yang sendirian. Domino 1–4 jatuh berurutan: mustard, terracotta, plum, espresso.",
+    "voice": "Now, why should we care? First, misusing psychological terms can make us misunderstand our own emotions. Normal feelings like sadness, fear, or disappointment can feel like something is seriously wrong with us. Second, it can create unnecessary conflict. Imagine labeling someone as narcissistic just because they disagree with you. And third, it can reinforce stigma. Mental health conditions are complex experiences, not simply labels we can attach to someone based on one behavior. Remember, psychology is more than just a collection of viral terms. It is a scientific discipline that requires context, evidence, and careful understanding.",
     "assets": ["coworkers"],
-    "roles": ["Co-workers · Rafiki: ilustrasi yang sama menjaga kontinuitas karakter. Raka duduk dan Dina berdiri di 03A–04A; pada 04B, Dina tampil sendiri di kantor dan potongan wajah Raka yang sama muncul sebagai inset keraguan.", "Notifikasi, percakapan grup, peringatan, tindakan keluarkan anggota, inset keraguan Raka, dan teks penutup adalah lapisan SVG terpisah."],
+    "roles": ["Co-workers · Rafiki: satu ilustrasi yang dipakai berulang untuk Raka dan Dina; konteksnya rapat kantor. Label dan warna tidak menyatakan diagnosis Dina.", "Awan, bubble dialog, cap NARSISTIK, domino, notifikasi grup, post peringatan, tombol mengeluarkan anggota, serta teks penutup adalah layer SVG editable terpisah."],
     "credits": ["coworkers"],
-    "background": "Cream, plum, dan sage menjadi warna dominan; terracotta dibatasi untuk cap keliru dan tindakan pengeluaran. Teks penutup memakai sage sebagai arah pemahaman.",
+    "background": "Palet Opsi B. Terracotta menandai label/kesalahan; sage menandai koreksi. Domino berturut-turut memakai mustard, terracotta, plum, espresso; tiap frame menjaga maksimal tiga warna dominan.",
     "frames": [
-        {"code": "04A", "slug": "04a-label-becomes-stigma", "title": "The Label Starts to Spread", "time": "01:52–02:06", "voice": "Raka menceritakan kesimpulannya ke teman kantor. Karena cerita itu beredar tanpa konteks, satu per satu orang mulai menjaga jarak dari Dina. The label becomes stigma."},
-        {"code": "04B", "slug": "04b-warning-and-removal", "title": "A Warning, an Exclusion, and Doubt", "time": "02:06–02:25", "voice": "Akibatnya, Raka mengirim peringatan di grup: ‘Hati-hati sama Dina, dia narsistik,’ lalu mengeluarkannya. Ia merasa sedang melindungi orang lain. Dina tertinggal sendiri; Raka mulai ragu: did I know enough?"},
+        {"code": "04A", "slug": "04a-self-misunderstanding", "title": "Raka Mislabels His Own Sadness", "time": "01:55–02:07", "voice": "Now, why should we care? First, misusing psychological terms can make us misunderstand our own emotions. Normal feelings like sadness, fear, or disappointment can feel like something is seriously wrong with us."},
+        {"code": "04B", "slug": "04b-conflict-in-the-meeting", "title": "Misjudgment Becomes Conflict", "time": "02:07–02:12", "voice": "Second, it can create unnecessary conflict."},
+        {"code": "04C", "slug": "04c-narcissistic-label", "title": "One Disagreement Becomes a Label", "time": "02:12–02:17", "voice": "Imagine labeling someone as narcissistic just because they disagree with you."},
+        {"code": "04D", "slug": "04d-stigma-and-removal", "title": "Stigma Spreads Through the Group", "time": "02:17–02:27", "voice": "And third, it can reinforce stigma. Mental health conditions are complex experiences, not simply labels we can attach to someone based on one behavior."},
+        {"code": "04E", "slug": "04e-dina-alone-closing-text", "title": "Dina Alone · Closing On-Screen Text", "time": "02:27–02:35", "voice": "Remember, psychology is more than just a collection of viral terms. It is a scientific discipline that requires context, evidence, and careful understanding."},
     ],
 })
-SCENES[4]["time"] = "02:25–03:10"
-SCENES[5]["time"] = "03:10–03:40"
-SCENES[6]["time"] = "03:40–04:00"
 
 
 def tag(name: str) -> str:
@@ -364,7 +378,8 @@ def embed_asset(parent, asset_key, x, y, w, h, omit_ids=(), include_ids=None, co
     info = ASSETS[asset_key]
     source = ET.parse(info["file"]).getroot()
     vb = view_box or source.get("viewBox", "0 0 500 500")
-    nested = add(parent, "svg", x=x, y=y, width=w, height=h, viewBox=vb, preserveAspectRatio="xMidYMid meet", overflow="hidden", aria_label=info["title"] + " illustration, Storyset Rafiki")
+    source_label = "Open Peeps CC0" if asset_key == "presenter" else "Storyset Rafiki"
+    nested = add(parent, "svg", x=x, y=y, width=w, height=h, viewBox=vb, preserveAspectRatio="xMidYMid meet", overflow="hidden", aria_label=info["title"] + " illustration, " + source_label)
     copied = [
         deepcopy(child)
         for child in list(source)
@@ -453,50 +468,82 @@ def start_scene(scene, bg=CREAM, accent=PLUM, dark=False):
 
 
 def build_scene_1(scene):
-    root = start_scene(scene, PLUM, MUSTARD, dark=True)
-    # Presenter frame with a neutral editable stand-in, not a generated portrait.
-    card(root, 92, 230, 1062, 595, CREAM, PEACH, 24)
-    rect(root, 92, 230, 1062, 60, ESPRESSO, rx=24)
-    rect(root, 92, 267, 1062, 23, ESPRESSO)
-    circle(root, 125, 260, 9, TERRACOTTA)
-    circle(root, 155, 260, 9, MUSTARD)
-    circle(root, 185, 260, 9, SAGE)
-    txt(root, 220, 268, "LIVE FOOTAGE  ·  MEDIUM CLOSE-UP", 17, WHITE, 700, letter=1)
-    rect(root, 112, 306, 1022, 492, PEACH, rx=14)
-    # Camera frame marks and a simple placeholder silhouette.
-    for x, y, sx, sy in [(145, 336, 1, 1), (1100, 336, -1, 1), (145, 770, 1, -1), (1100, 770, -1, -1)]:
-        path(root, f"M{x},{y+32*sy} L{x},{y} L{x+32*sx},{y}", stroke=MUSTARD, sw=5)
-    circle(root, 620, 463, 69, PEACH)
-    path(root, "M551,451 C553,373 690,374 691,457 L678,440 C648,456 613,421 579,451 L562,479 Z", fill=ESPRESSO)
-    path(root, "M470,716 C486,614 530,555 620,555 C710,555 755,614 770,716 Z", fill=PLUM)
-    path(root, "M538,589 C574,612 667,612 702,589 L725,716 L516,716 Z", fill=PEACH, opacity=0.45)
-    rect(root, 130, 741, 986, 42, CREAM, rx=12, opacity=0.9)
-    txt(root, 623, 770, "PLACE PRESENTER VIDEO HERE", 17, ESPRESSO, 700, "middle", letter=1)
-    # Floating labels arrive from all sides; the words remain clearly framed as quoted reactions.
-    pill(root, 154, 201, 230, 54, "“avoidant?”", MUSTARD, ESPRESSO, 23, stroke=CREAM)
-    pill(root, 748, 210, 180, 54, "“toxic”", TERRACOTTA, WHITE, 23, stroke=CREAM)
-    pill(root, 234, 795, 235, 52, "“depressed?”", PEACH, ESPRESSO, 22, stroke=CREAM)
-    pill(root, 790, 794, 260, 52, "“narcissistic!”", CREAM, PLUM, 21, stroke=PEACH)
-    # Smartphone transition is a custom vector object.
-    path(root, "M1175,500 C1218,500 1217,500 1252,500", stroke=PEACH, sw=8)
-    path(root, "M1240,484 L1262,500 L1240,516 Z", fill=PEACH)
-    card(root, 1274, 276, 352, 500, ESPRESSO, ESPRESSO, 34)
-    rect(root, 1290, 302, 320, 438, CREAM, rx=22)
-    rect(root, 1412, 286, 76, 8, PLUM, rx=4)
-    txt(root, 1322, 346, "SOCIAL FEED", 16, PLUM, 700, letter=1)
-    for i, (word, col) in enumerate([("avoidant", PLUM), ("toxic", TERRACOTTA), ("sad?", MUSTARD)]):
-        y = 374 + i * 96
-        rect(root, 1318, y, 264, 76, CREAM, rx=16, stroke=PEACH)
-        circle(root, 1344, y + 28, 11, col)
-        rect(root, 1370, y + 19, 172, 12, PEACH, rx=6)
-        txt(root, 1370, y + 53, word, 18, ESPRESSO, 700)
-    txt(root, 1450, 812, "ZOOM → SMARTPHONE", 16, MUSTARD, 700, "middle", letter=0.8)
-    rect(root, 92, 876, 1736, 93, PLUM, rx=20, stroke=PEACH)
-    txt(root, 132, 932, "ON-SCREEN", 14, CREAM, 700, letter=1.2)
-    screen_text = add(root, "text", x=1320, y=936, fill=CREAM, font_family="Arial, Helvetica, sans-serif", font_size=27, font_weight=700, text_anchor="middle")
-    for value, color in [("Are we using psychology ", CREAM), ("terms correctly?", MUSTARD)]:
-        span = add(screen_text, "tspan", fill=color)
-        span.text = value
+    return build_scene_1_frame(scene, "01A")
+
+
+def draw_generic_chat(root, x, y, label, message_lines, status=None):
+    """Draw an anonymized, brand-free chat screenshot as an editable composition layer."""
+    group = add(root, "g", id="chat-screenshot-" + re.sub(r"[^a-z0-9]+", "-", label.lower()).strip("-"), role="group")
+    width, height = 470, 312
+    rect(group, x, y, width, height, CREAM, rx=24, stroke=PLUM, sw=3)
+    rect(group, x, y, width, 72, PLUM, rx=24)
+    rect(group, x, y + 50, width, 22, PLUM)
+    circle(group, x + 40, y + 36, 20, CREAM)
+    circle(group, x + 40, y + 30, 7, CREAM)
+    path(group, f"M{x+27},{y+48} Q{x+40},{y+34} {x+53},{y+48} Z", fill=PLUM)
+    txt(group, x + 76, y + 31, "Nama disamarkan", 18, CREAM, 700)
+    txt(group, x + 76, y + 54, "Percakapan pribadi", 13, CREAM, 500)
+    rect(group, x + 28, y + 100, width - 56, 112, CREAM, rx=17, stroke=PLUM, sw=2)
+    for index, line_text in enumerate(message_lines):
+        txt(group, x + 50, y + 140 + index * 34, line_text, 19, ESPRESSO, 500)
+    if status:
+        txt(group, x + width - 30, y + 240, status, 14, PLUM, 600, "end")
+    else:
+        txt(group, x + width - 30, y + 240, "10.14", 14, PLUM, 600, "end")
+    pill(group, x + 30, y + 250, width - 60, 48, label, TERRACOTTA, WHITE, 21)
+    return group
+
+
+def build_scene_1_frame(scene, code):
+    title_by_code = {
+        "01A": "Presenter placeholder · medium close-up",
+        "01B": "Read message · ‘Dia avoidant!’",
+        "01C": "Cancelled plan · ‘toxic’",
+        "01D": "Several sad days · ‘depresi’",
+        "01E": "Expectation mismatch · question to camera",
+        "01F": "Zoom into smartphone",
+    }
+    descriptions = {
+        "01A": "A front-facing Open Peeps presenter placeholder stays centered in a plain deep plum 16:9 frame, with clear negative space around the fixed medium close-up.",
+        "01B": "The same presenter remains fixed while an anonymized, brand-free read-without-reply chat screenshot appears beside them with the label Dia avoidant!.",
+        "01C": "The same presenter remains fixed while an anonymized cancelled-plan chat screenshot appears beside them with the label toxic.",
+        "01D": "The same presenter remains fixed while an anonymized sad-for-several-days chat screenshot appears beside them with the label depresi.",
+        "01E": "The same presenter remains fixed beside a generic expectation-mismatch chat. The presenter points toward the viewer and the on-screen question appears.",
+        "01F": "A clean, centered smartphone contains the same presenter illustration and the question Are we using psychology terms correctly? on its screen.",
+    }
+    root = clean_frame("Scene 1: " + title_by_code[code], descriptions[code], PLUM)
+    root.set("data-frame", code)
+    root.find(tag("metadata")).text = (
+        "Open Peeps standing-16 source illustration, CC0 1.0. The camera viewport crops the original five drawable groups to a medium close-up; "
+        "the illustration itself is not redrawn. Four anonymized chat screenshots, the smartphone shell, and text remain separate editable SVG groups."
+    )
+    if code == "01F":
+        phone = add(root, "g", id="smartphone-transition")
+        rect(phone, 674, 70, 572, 940, CREAM, rx=78, stroke=CREAM, sw=7)
+        rect(phone, 702, 108, 516, 864, PLUM, rx=50)
+        rect(phone, 877, 124, 166, 18, ESPRESSO, rx=9)
+        embed_asset(phone, "presenter", 760, 178, 400, 505, view_box="0 0 309 390")
+        line(phone, 770, 710, 1150, 710, CREAM, 3)
+        txt(phone, 960, 785, "Are we using psychology", 27, CREAM, 700, "middle")
+        txt(phone, 960, 826, "terms correctly?", 27, CREAM, 700, "middle")
+        circle(phone, 960, 915, 25, "none", stroke=CREAM, sw=4)
+        return root
+
+    # Fixed presenter crop and position across the opening beats.
+    embed_asset(root, "presenter", 645, 138, 630, 800, view_box="0 0 309 390")
+    if code == "01B":
+        draw_generic_chat(root, 93, 366, "Dia avoidant!", ["Hei, jadi ketemu hari ini?", "Aku tunggu kabarmu ya."], "Dibaca · 3 jam lalu")
+    elif code == "01C":
+        draw_generic_chat(root, 1357, 366, "toxic", ["Maaf, aku nggak jadi datang.", "Ada urusan mendadak hari ini."], "Pesan diterima · 10.14")
+    elif code == "01D":
+        draw_generic_chat(root, 93, 366, "depresi", ["Aku sedih terus akhir-akhir ini.", "Sudah beberapa hari begini."], "Pesan diterima · 22.08")
+    elif code == "01E":
+        draw_generic_chat(root, 93, 348, "That's narcissistic!", ["Aku kira kita bakal sepakat.", "Ternyata keinginanku nggak dituruti."], "Pesan diterima · 11.32")
+        camera_target = add(root, "g", id="presenter-points-toward-camera")
+        circle(camera_target, 1280, 440, 48, "none", stroke=CREAM, sw=5)
+        circle(camera_target, 1280, 440, 9, TERRACOTTA)
+        rect(root, 250, 930, 1420, 100, CREAM, rx=24)
+        txt(root, 960, 992, "Are we using psychology terms correctly?", 35, PLUM, 700, "middle")
     return root
 
 
@@ -707,6 +754,7 @@ def build_scene_2c(scene):
     txt(root, 960, 398, "Understanding psychology = Good!", 48, ESPRESSO, 700, "middle")
     rect(root, 270, 552, 1380, 176, TERRACOTTA, rx=30)
     txt(root, 960, 660, "Misusing psychological terms = Problematic.", 46, WHITE, 700, "middle")
+    root.find(tag("metadata")).text = "Editable animation frame. Existing Storyset vector groups are recolored in SVG; all added elements are hand-edited vector shapes. No generated imagery."
     return root
 
 
@@ -717,7 +765,7 @@ def clean_frame(title, description, background):
     desc_node = add(root, "desc", id="frame-desc")
     desc_node.text = description
     metadata = add(root, "metadata")
-    metadata.text = "Editable animation frame. Existing Storyset vector groups are recolored in SVG; all added elements are hand-edited vector shapes. No generated imagery."
+    metadata.text = "Editable animation frame. Characters come from credited, downloadable source SVGs; backgrounds and overlays are separate editable vector layers. No generated imagery."
     rect(root, 0, 0, W, H, background)
     return root
 
@@ -726,18 +774,18 @@ SCENE3_CASES = [
     {
         "key": "texting", "background": CASE_TINTS[0], "quote": "They're avoidant!",
         "correction": ["Mungkin sibuk, lelah, atau", "belum sempat."],
-        "colors": {"#2E353A": ESPRESSO, "#407BFF": PLUM, "#DE5753": TERRACOTTA, "#E4897B": PEACH,
+        "colors": {"#2E353A": ESPRESSO, "#407BFF": SAGE, "#DE5753": TERRACOTTA, "#E4897B": PEACH,
                    "#E0E0E0": CREAM, "#E9E9E9": CREAM, "#EBEBEB": PEACH, "#F4F4F4": CREAM, "#F5F5F5": CASE_TINTS[0]},
     },
     {
         "key": "student_stress", "background": CASE_TINTS[1], "quote": "I'm depressed!",
         "correction": ["Sedih setelah gagal itu", "emosi yang normal."],
-        "colors": {"#407BFF": PLUM},
+        "colors": {"#407BFF": PLUM, "#E6F0FC": CASE_TINTS[1], "#DCE3FB": CASE_TINTS[1]},
     },
     {
         "key": "couple", "background": CASE_TINTS[2], "quote": "You're gaslighting me!",
         "correction": ["Beda pendapat belum tentu", "gaslighting."],
-        "colors": {"#263238": ESPRESSO, "#407BFF": PLUM, "#D58745": MUSTARD, "#D9877C": PEACH,
+        "colors": {"#263238": ESPRESSO, "#407BFF": SAGE, "#D58745": MUSTARD, "#D9877C": PEACH,
                    "#DE5753": TERRACOTTA, "#EBB376": PEACH, "#E0E0E0": CREAM, "#EBEBEB": CREAM,
                    "#F0F0F0": CASE_TINTS[2], "#F5F5F5": CREAM, "#FAFAFA": CASE_TINTS[2]},
     },
@@ -748,7 +796,7 @@ def draw_case_frame(case_index):
     case = SCENE3_CASES[case_index]
     number = case_index + 1
     description = (
-        "A worried student studies at a desk, with books open and hands at their head. Above them, a dark 100 is crossed out in terracotta and replaced by a red 45 marked REMEDI. The terracotta label says: I'm depressed! The sage correction says: Sedih setelah gagal itu emosi yang normal."
+        "A person at a desk looks overwhelmed and cries after missing a target. Cream tears and a separate target-progress overlay clarify the moment without changing the source character. The terracotta label says I'm depressed!; a sage correction says sadness after failure is a normal emotion."
         if case["key"] == "student_stress"
         else f"{case['quote']} A terracotta assumption appears beside the illustration, then a sage correction reads: {' '.join(case['correction'])}"
     )
@@ -758,7 +806,7 @@ def draw_case_frame(case_index):
         case["background"],
     )
     if case["key"] == "student_stress":
-        root.find(tag("metadata")).text = "Storyset Student Stress Rafiki SVG; 35 of 254 original drawable elements changed or omitted (13.8%). The score card is a separate SVG overlay. No generated imagery."
+        root.find(tag("metadata")).text = "Storyset Student Stress Rafiki SVG; 34 of 254 original drawable elements changed or omitted (13.4%). The cream tears and missed-target marker are separate editable overlays; no grade or score card is present. No generated imagery."
     color_map = case.get("colors", {})
     omit_bg = {f"freepik--background-complete--inject-2"}
     if case["key"] == "texting":
@@ -779,26 +827,29 @@ def draw_case_frame(case_index):
     elif case["key"] == "student_stress":
         embed_asset(root, "student_stress", 58, 160, 920, 920,
                     omit_ids={"speech-bubble"}, color_map=color_map)
-        # Audience-facing grades stay in their own card; the student artwork remains unchanged.
-        card(root, 108, 104, 864, 292, CREAM, border=PEACH, radius=26)
-        txt(root, 158, 164, "NILAI UJIAN", 22, ESPRESSO, 700, letter=1.3)
-        txt(root, 365, 320, "100", 112, ESPRESSO, 700, "middle")
-        path(root, "M292,237 L432,336", stroke=TERRACOTTA, sw=13)
-        path(root, "M304,336 L427,243", stroke=TERRACOTTA, sw=9)
-        path(root, "M495,284 C536,250 584,249 625,280", stroke=TERRACOTTA, sw=8)
-        path(root, "M610,264 L635,283 L603,291 Z", fill=TERRACOTTA)
-        txt(root, 770, 317, "45", 116, TERRACOTTA, 700, "middle")
-        txt(root, 770, 359, "REMEDI", 22, TERRACOTTA, 700, "middle", letter=1.5)
+        # Tears and the missed-target marker are separate animation overlays, not edits to the character.
+        tears = add(root, "g", id="tears-after-missed-target")
+        path(tears, "M584,596 C575,612 576,621 585,625 C594,621 595,612 584,596 Z", fill=CREAM, stroke=ESPRESSO, sw=2)
+        path(tears, "M621,596 C612,612 613,621 622,625 C631,621 632,612 621,596 Z", fill=CREAM, stroke=ESPRESSO, sw=2)
+        target = add(root, "g", id="missed-target-prop")
+        rect(target, 116, 106, 390, 110, CREAM, rx=22, stroke=PEACH, sw=3)
+        txt(target, 148, 151, "TARGET", 20, ESPRESSO, 700, letter=1.2)
+        rect(target, 148, 172, 266, 15, CASE_TINTS[1], rx=8)
+        rect(target, 148, 172, 154, 15, PLUM, rx=8)
+        circle(target, 454, 161, 25, TERRACOTTA)
+        path(target, "M444,151 L464,171 M464,151 L444,171", stroke=CREAM, sw=5)
     else:
         embed_asset(root, "couple", 70, 76, 910, 910, omit_ids=omit_bg, color_map=color_map)
 
-    # Only the mistaken label and its explanatory correction remain as text on this frame.
-    rect(root, 1054, 298, 770, 146, TERRACOTTA, rx=28)
-    txt(root, 1439, 390, case["quote"], 50 if number < 3 else 43, WHITE, 700, "middle")
-    rect(root, 1054, 574, 770, 178, SAGE, rx=28)
-    txt(root, 1112, 635, "REALITANYA", 20, ESPRESSO, 700, letter=1.4)
-    txt(root, 1439, 690, case["correction"][0], 30, ESPRESSO, 600, "middle")
-    txt(root, 1439, 731, case["correction"][1], 30, ESPRESSO, 600, "middle")
+    # Separate groups let the animator reveal the correction when the VO reaches “Padahal...”.
+    mistaken_label = add(root, "g", id="wrong-label-bubble")
+    rect(mistaken_label, 1054, 298, 770, 146, TERRACOTTA, rx=28)
+    txt(mistaken_label, 1439, 390, case["quote"], 50 if number < 3 else 43, WHITE, 700, "middle")
+    correction = add(root, "g", id="sage-correction-card")
+    rect(correction, 1054, 574, 770, 178, SAGE, rx=28)
+    txt(correction, 1112, 635, "REALITANYA", 20, ESPRESSO, 700, letter=1.4)
+    txt(correction, 1439, 690, case["correction"][0], 30, ESPRESSO, 600, "middle")
+    txt(correction, 1439, 731, case["correction"][1], 30, ESPRESSO, 600, "middle")
     return root
 
 
@@ -961,7 +1012,7 @@ def build_scene_4(scene):
     return build_scene_4d(scene)
 
 
-def continuous_office_base(title, description, frame_id, isolate_dina=False):
+def continuous_office_base(title, description, frame_id, isolate_dina=False, character_color=PLUM):
     root = clean_frame(title, description, CREAM)
     if isolate_dina:
         root.find(tag("metadata")).text = (
@@ -986,24 +1037,28 @@ def continuous_office_base(title, description, frame_id, isolate_dina=False):
     else:
         embed_asset(
             root, "coworkers", 0, 74, 1000, 1000,
-            omit_ids={"Chat"}, color_map={"#407BFF": PLUM}, raka_expression=True,
+            omit_ids={"Chat"}, color_map={"#407BFF": character_color}, raka_expression=True,
         )
-    tags = add(root, "g", id="dina-alone-name-tag" if isolate_dina else "recurring-character-name-tags")
-    if isolate_dina:
-        pill(tags, 206, 162, 150, 46, "DINA", CREAM, PLUM, 18, stroke=PLUM)
-    else:
-        pill(tags, 322, 920, 150, 46, "DINA", CREAM, PLUM, 18, stroke=PLUM)
-    if not isolate_dina:
-        pill(tags, 638, 920, 150, 46, "RAKA", CREAM, PLUM, 18, stroke=PLUM)
     root.set("data-frame", frame_id)
     return root
 
 
+def draw_domino(parent, element_id, x, y, fill, angle=0, width=88, height=166):
+    group = add(parent, "g", id=element_id, transform=f"rotate({angle} {x+width/2} {y+height/2})")
+    pip = ESPRESSO if fill == MUSTARD else CREAM
+    rect(group, x, y, width, height, fill, rx=16, stroke=ESPRESSO if fill == MUSTARD else fill, sw=3)
+    line(group, x + 12, y + height / 2, x + width - 12, y + height / 2, pip, 3)
+    for px, py in [(x + width * .32, y + height * .25), (x + width * .68, y + height * .38),
+                   (x + width * .34, y + height * .69), (x + width * .68, y + height * .82)]:
+        circle(group, px, py, 6, pip)
+    return group
+
+
 def build_story_03a(scene):
     root = continuous_office_base(
-        "03A · Raka mislabels his sadness",
+        "04A · Raka mislabels his sadness",
         "Raka misses a work target, feels sad for several days, and concludes he is depressed. The missed target card, days passing, and self-label remain visible in this full-screen frame.",
-        "03A",
+        "04A",
     )
     target = add(root, "g", id="missed-target-card")
     rect(target, 1090, 96, 730, 184, PLUM, rx=24)
@@ -1021,20 +1076,19 @@ def build_story_03a(scene):
     for cx, cy, r in [(900, 407, 64), (1000, 387, 78), (1120, 390, 76), (1235, 396, 82), (1360, 407, 68)]:
         circle(cloud, cx, cy, r, PLUM)
     path(cloud, "M892,615 L850,675 L978,632 Z", fill=PLUM)
-    txt(cloud, 1235, 489, "AKU DEPRESI.", 34, CREAM, 700, "middle")
-    txt(cloud, 1235, 549, "Ada yang salah banget sama aku.", 26, CREAM, 500, "middle")
+    txt(cloud, 1235, 489, "Aku depresi. Ada yang", 31, CREAM, 700, "middle")
+    txt(cloud, 1235, 549, "salah banget sama aku.", 31, CREAM, 600, "middle")
     pill(cloud, 1034, 589, 405, 41, "SEDIH BEBERAPA HARI", TERRACOTTA, CREAM, 16)
+    draw_domino(root, "domino-1-self-misunderstanding", 1720, 810, MUSTARD, -16, 82, 150)
     return root
 
 
 def build_story_03b(scene):
     root = continuous_office_base(
-        "03B · Raka and Dina argue in a work meeting",
+        "04B · Raka and Dina argue in a work meeting",
         "At a work meeting, Raka hears Dina's feedback as a personal attack. Their two editable dialogue bubbles show both lines and keep the disagreement ambiguous.",
-        "03B",
+        "04B",
     )
-    header = add(root, "g", id="work-meeting-context")
-    pill(header, 1104, 116, 690, 52, "RAPAT · REVIEW HASIL KERJA", CREAM, PLUM, 19, stroke=PLUM)
     raka = add(root, "g", id="raka-quote")
     rect(raka, 1050, 224, 804, 226, PLUM, rx=28)
     path(raka, "M1090,426 L1065,468 L1150,440 Z", fill=PLUM)
@@ -1047,14 +1101,16 @@ def build_story_03b(scene):
     txt(dina, 1092, 568, "DINA", 17, PLUM, 700, letter=1.2)
     txt(dina, 1452, 638, "Aku cuma kasih masukan.", 27, PLUM, 600, "middle")
     txt(dina, 1452, 687, "Jangan baper terus, deh.", 27, PLUM, 600, "middle")
+    draw_domino(root, "domino-2-misjudgment", 1650, 800, TERRACOTTA, -14, 78, 144)
+    draw_domino(root, "domino-3-relationship-conflict", 1740, 824, PLUM, 10, 78, 144)
     return root
 
 
 def build_story_03c(scene):
     root = continuous_office_base(
-        "03C · Raka labels Dina narcissistic",
+        "04C · Raka labels Dina narcissistic",
         "Raka turns Dina's one defensive reply into the stamp NARSISTIK. The frame marks this as Raka's conclusion, based on one reply rather than evidence of a pattern.",
-        "03C",
+        "04C",
     )
     thought = add(root, "g", id="raka-conclusion")
     pill(thought, 1100, 186, 700, 54, "KESIMPULAN RAKA · DARI SATU BALASAN", CREAM, PLUM, 18, stroke=PLUM)
@@ -1069,87 +1125,57 @@ def build_story_03c(scene):
 
 def build_story_04a(scene):
     root = continuous_office_base(
-        "04A · The label spreads through the office group chat",
-        "Raka shares his conclusion in the office group chat. Coworkers accept the label without context and begin to avoid Dina.",
-        "04A",
+        "04D · Stigma spreads through the office group chat",
+        "Raka's unsupported label spreads through the group chat. Coworkers begin to avoid Dina; Raka posts a warning and removes her, believing he is protecting others.",
+        "04D",
+        character_color=PLUM,
     )
-    chat = add(root, "g", id="rumor-notifications")
-    rect(chat, 1034, 112, 826, 710, CREAM, rx=30, stroke=PLUM, sw=4)
-    rect(chat, 1034, 112, 826, 82, PLUM, rx=28)
-    rect(chat, 1034, 164, 826, 30, PLUM)
-    txt(chat, 1080, 163, "GRUP KANTOR", 22, CREAM, 700, letter=1.2)
-    circle(chat, 1796, 153, 10, TERRACOTTA)
-
-    g1 = add(chat, "g", id="label-rumor")
-    circle(g1, 1090, 246, 24, TERRACOTTA)
-    txt(g1, 1090, 253, "R", 16, CREAM, 700, "middle")
-    rect(g1, 1130, 214, 652, 104, CREAM, rx=20, stroke=PLUM, sw=2)
-    txt(g1, 1160, 249, "RAKA", 15, PLUM, 700, letter=1)
-    txt(g1, 1160, 286, "Dina narsistik.", 24, PLUM, 600)
-
-    g2 = add(chat, "g", id="first-avoidance-reply")
-    circle(g2, 1090, 386, 24, PLUM)
-    txt(g2, 1090, 393, "T", 16, CREAM, 700, "middle")
-    rect(g2, 1130, 354, 652, 104, CREAM, rx=20, stroke=PLUM, sw=2)
-    txt(g2, 1160, 389, "TEMAN", 15, PLUM, 700, letter=1)
-    txt(g2, 1160, 426, "Oh… pantes.", 24, PLUM, 600)
-
-    g3 = add(chat, "g", id="coworkers-avoid-dina")
-    circle(g3, 1090, 526, 24, PLUM)
-    txt(g3, 1090, 533, "T", 16, CREAM, 700, "middle")
-    rect(g3, 1130, 494, 652, 124, CREAM, rx=20, stroke=PLUM, sw=2)
-    txt(g3, 1160, 529, "TEMAN", 15, PLUM, 700, letter=1)
-    txt(g3, 1160, 568, "Aku skip kalau Dina ikut.", 23, TERRACOTTA, 700)
-
-    row = add(chat, "g", id="dina-isolated-from-group")
-    line(row, 1072, 646, 1822, 646, PLUM, 2, opacity=0.3)
-    circle(row, 1103, 716, 34, CREAM, stroke=TERRACOTTA, sw=3)
-    line(row, 1080, 693, 1126, 739, TERRACOTTA, 4)
-    txt(row, 1160, 710, "DINA", 19, PLUM, 700, letter=1)
-    txt(row, 1160, 750, "Tidak lagi diajak.", 22, PLUM, 500)
+    panel = add(root, "g", id="group-chat-stigma-and-removal")
+    rect(panel, 1048, 72, 816, 808, CREAM, rx=30, stroke=PLUM, sw=4)
+    rect(panel, 1048, 72, 816, 76, PLUM, rx=28)
+    rect(panel, 1048, 126, 816, 22, PLUM)
+    txt(panel, 1090, 123, "GRUP KANTOR", 21, CREAM, 700, letter=1.1)
+    circle(panel, 1808, 110, 10, TERRACOTTA)
+    rows = [
+        ("RAKA", "Dina narsistik."),
+        ("TEMAN", "Oh… pantes."),
+        ("TEMAN", "Aku skip kalau Dina ikut."),
+    ]
+    for i, (speaker, text) in enumerate(rows):
+        y = 172 + i * 100
+        rect(panel, 1084, y, 744, 82, CREAM, rx=17, stroke=PEACH, sw=2)
+        txt(panel, 1114, y + 28, speaker, 14, PLUM, 700, letter=1)
+        txt(panel, 1114, y + 62, text, 22, TERRACOTTA if i == 2 else ESPRESSO, 700 if i == 2 else 500)
+    line(panel, 1084, 483, 1828, 483, PEACH, 3)
+    rect(panel, 1084, 503, 744, 186, CREAM, rx=22, stroke=TERRACOTTA, sw=4)
+    txt(panel, 1122, 544, "PERINGATAN", 15, TERRACOTTA, 700, letter=1.3)
+    txt(panel, 1122, 590, "Hati-hati sama Dina,", 25, ESPRESSO, 600)
+    txt(panel, 1122, 628, "dia narsistik.", 25, ESPRESSO, 700)
+    rect(panel, 1084, 711, 744, 70, TERRACOTTA, rx=17)
+    txt(panel, 1456, 755, "KELUARKAN DINA DARI GRUP", 19, CREAM, 700, "middle", letter=0.5)
+    txt(panel, 1122, 829, "Dina dikeluarkan. · Raka merasa sedang melindungi yang lain.", 17, PLUM, 600)
+    draw_domino(root, "domino-4-stigma", 1744, 898, ESPRESSO, 13, 74, 132)
     return root
 
 
 def build_story_04b(scene):
     root = continuous_office_base(
-        "04B · Raka warns the group and removes Dina",
-        "Raka posts a warning naming Dina and removes her from the group, believing he is protecting coworkers. Dina is left socially alone; Raka begins to doubt whether he knew enough.",
-        "04B", isolate_dina=True,
+        "04E · Dina is left alone; Raka begins to doubt",
+        "Dina stands alone after being removed from the group. The same Raka illustration reappears as a separate close-up inset; his expression begins to turn uncertain.",
+        "04E", isolate_dina=True,
     )
-    post = add(root, "g", id="warning-post")
-    rect(post, 1038, 96, 824, 728, CREAM, rx=30, stroke=PLUM, sw=4)
-    rect(post, 1038, 96, 824, 82, PLUM, rx=28)
-    rect(post, 1038, 148, 824, 30, PLUM)
-    txt(post, 1080, 149, "GRUP KANTOR · RAKA", 21, CREAM, 700, letter=1.0)
-    circle(post, 1795, 137, 10, TERRACOTTA)
-    rect(post, 1080, 214, 740, 208, CREAM, rx=22, stroke=TERRACOTTA, sw=4)
-    txt(post, 1120, 260, "PERINGATAN", 16, TERRACOTTA, 700, letter=1.3)
-    txt(post, 1120, 316, "Hati-hati sama Dina,", 28, PLUM, 600)
-    txt(post, 1120, 364, "dia narsistik.", 28, PLUM, 700)
-
-    action = add(post, "g", id="remove-dina-action")
-    rect(action, 1080, 458, 740, 80, TERRACOTTA, rx=18)
-    txt(action, 1450, 510, "KELUARKAN DINA DARI GRUP", 20, CREAM, 700, "middle", letter=0.6)
-    removed = add(post, "g", id="dina-removed-notification")
-    circle(removed, 1120, 598, 16, TERRACOTTA)
-    txt(removed, 1120, 604, "!", 18, CREAM, 700, "middle")
-    txt(removed, 1160, 606, "Dina dikeluarkan dari grup.", 21, PLUM, 600)
-
     doubt = add(root, "g", id="raka-doubt")
     rect(doubt, 756, 284, 258, 344, CREAM, rx=26, stroke=PLUM, sw=3)
-    txt(doubt, 885, 322, "RAKA", 17, PLUM, 700, "middle", letter=1.1)
     embed_asset(
         doubt, "coworkers", 786, 348, 198, 176,
-        include_ids={"character-2"}, view_box="318 125 70 75",
+        include_ids={"character-2"}, view_box="326 156 50 50",
         color_map={"#407BFF": PLUM}, raka_expression=True,
     )
-    txt(doubt, 885, 563, "Aku tahu cukup?", 18, PLUM, 700, "middle")
-    txt(doubt, 885, 592, "Apa aku yakin?", 16, PLUM, 500, "middle")
+    txt(doubt, 985, 333, "?", 42, TERRACOTTA, 700, "middle")
 
     ending = add(root, "g", id="final-onscreen-text")
-    rect(ending, 370, 872, 1180, 112, PLUM, rx=26)
-    txt(ending, 960, 920, "SATU MOMEN BUKAN BUKTI", 30, CREAM, 700, "middle", letter=0.8)
-    txt(ending, 960, 958, "Pahami konteks sebelum memberi label.", 20, SAGE, 600, "middle")
+    rect(ending, 420, 888, 1080, 92, PLUM, rx=24)
+    txt(ending, 960, 947, "Don't reduce people to labels.", 34, CREAM, 700, "middle")
     return root
 
 
@@ -1271,6 +1297,8 @@ def create_previews():
     PREVIEW_DIR.mkdir(parents=True, exist_ok=True)
     SCENES_DIR.mkdir(parents=True, exist_ok=True)
     for stale in [
+        SCENES_DIR / "scene-01-the-hook.svg",
+        PREVIEW_DIR / "scene-01-the-hook.png",
         SCENES_DIR / "scene-02-what-is-therapy-speak.svg",
         PREVIEW_DIR / "scene-02-what-is-therapy-speak.png",
         SCENES_DIR / "scene-03-normal-emotions-become-labels.svg",
@@ -1279,10 +1307,16 @@ def create_previews():
         PREVIEW_DIR / "scene-04-why-it-matters.png",
         SCENES_DIR / "scene-03a-case-01-avoidant.svg",
         PREVIEW_DIR / "scene-03a-case-01-avoidant.png",
+        SCENES_DIR / "scene-03a-raka-self-label.svg",
+        PREVIEW_DIR / "scene-03a-raka-self-label.png",
         SCENES_DIR / "scene-03b-case-02-depressed.svg",
         PREVIEW_DIR / "scene-03b-case-02-depressed.png",
+        SCENES_DIR / "scene-03b-raka-dina-conflict.svg",
+        PREVIEW_DIR / "scene-03b-raka-dina-conflict.png",
         SCENES_DIR / "scene-03c-case-03-gaslighting.svg",
         PREVIEW_DIR / "scene-03c-case-03-gaslighting.png",
+        SCENES_DIR / "scene-03c-raka-labels-dina.svg",
+        PREVIEW_DIR / "scene-03c-raka-labels-dina.png",
         SCENES_DIR / "scene-03d-combined-on-screen-text.svg",
         PREVIEW_DIR / "scene-03d-combined-on-screen-text.png",
         SCENES_DIR / "scene-04a-emotions-misunderstood.svg",
@@ -1293,12 +1327,25 @@ def create_previews():
         PREVIEW_DIR / "scene-04c-one-label-becomes-stigma.png",
         SCENES_DIR / "scene-04d-context-evidence-onscreen-text.svg",
         PREVIEW_DIR / "scene-04d-context-evidence-onscreen-text.png",
+        SCENES_DIR / "scene-04a-label-becomes-stigma.svg",
+        PREVIEW_DIR / "scene-04a-label-becomes-stigma.png",
+        SCENES_DIR / "scene-04b-warning-and-removal.svg",
+        PREVIEW_DIR / "scene-04b-warning-and-removal.png",
     ]:
         if stale.exists():
             stale.unlink()
     thumbs = []
     for scene, draw_scene in zip(SCENES, DRAW):
-        if scene["no"] == 2:
+        if scene["no"] == 1:
+            frames = [
+                ("01A", "01a-presenter-placeholder", "Presenter Placeholder", "00:00–00:04", lambda s: build_scene_1_frame(s, "01A")),
+                ("01B", "01b-chat-unanswered", "Read Without Reply · Avoidant", "00:04–00:08", lambda s: build_scene_1_frame(s, "01B")),
+                ("01C", "01c-chat-cancelled-plan", "Cancelled Plan · Toxic", "00:08–00:12", lambda s: build_scene_1_frame(s, "01C")),
+                ("01D", "01d-chat-sad-days", "Sad for Several Days · Depresi", "00:12–00:16", lambda s: build_scene_1_frame(s, "01D")),
+                ("01E", "01e-chat-expectation-mismatch", "Expectation Mismatch · On-Screen Question", "00:16–00:24", lambda s: build_scene_1_frame(s, "01E")),
+                ("01F", "01f-smartphone-transition", "Presenter Zooms Into Smartphone", "00:24–00:30", lambda s: build_scene_1_frame(s, "01F")),
+            ]
+        elif scene["no"] == 2:
             frames = [
                 ("02A", "02a-comment-scroll", "Phone Zoom + Comment Scroll", "00:30–00:45", build_scene_2),
                 ("02B", "02b-hashtag-cloud", "Hashtag Cloud Transition", "00:45–00:58", build_scene_2b),
@@ -1306,14 +1353,18 @@ def create_previews():
             ]
         elif scene["no"] == 3:
             frames = [
-                ("03A", "03a-raka-self-label", "Raka Mislabels His Own Sadness", "01:05–01:20", build_story_03a),
-                ("03B", "03b-raka-dina-conflict", "A Work Meeting Turns Tense", "01:20–01:38", build_story_03b),
-                ("03C", "03c-raka-labels-dina", "One Defensive Reply Becomes a Label", "01:38–01:52", build_story_03c),
+                ("03A", "03a-case-01-avoidant", "Case 1 · Unanswered Message", "01:05–01:20", build_scene_3_case_1),
+                ("03B", "03b-case-02-depressed", "Case 2 · Sadness After Failure", "01:20–01:35", build_scene_3_case_2),
+                ("03C", "03c-case-03-gaslighting", "Case 3 · Disagreement", "01:35–01:50", build_scene_3_case_3),
+                ("03D", "03d-combined-on-screen-text", "One Behavior · Closing On-Screen Text", "01:50–01:55", build_scene_3_combined),
             ]
         elif scene["no"] == 4:
             frames = [
-                ("04A", "04a-label-becomes-stigma", "The Label Starts to Spread", "01:52–02:06", build_story_04a),
-                ("04B", "04b-warning-and-removal", "A Warning, an Exclusion, and Doubt", "02:06–02:25", build_story_04b),
+                ("04A", "04a-self-misunderstanding", "Raka Mislabels His Own Sadness", "01:55–02:07", build_story_03a),
+                ("04B", "04b-conflict-in-the-meeting", "Misjudgment Becomes Conflict", "02:07–02:12", build_story_03b),
+                ("04C", "04c-narcissistic-label", "One Disagreement Becomes a Label", "02:12–02:17", build_story_03c),
+                ("04D", "04d-stigma-and-removal", "Stigma Spreads Through the Group", "02:17–02:27", build_story_04a),
+                ("04E", "04e-dina-alone-closing-text", "Dina Alone · Closing On-Screen Text", "02:27–02:35", build_story_04b),
             ]
         else:
             frames = [(f"{scene['no']:02d}", f"{scene['no']:02d}-{scene['slug']}", scene["title"], scene["time"], draw_scene)]
@@ -1436,9 +1487,9 @@ def make_docx(contact):
     set_run(r, 28, INK, True)
     p = doc.add_paragraph()
     p.paragraph_format.space_after = Pt(7)
-    r = p.add_run("Storyboard produksi · Layout C · 7 scene · 12 keyframe · 00:00–04:00")
+    r = p.add_run("Storyboard produksi · Layout C · 7 scene · 21 keyframe · 00:00–04:00")
     set_run(r, 15, PLUM, True)
-    p = doc.add_paragraph("Setiap frame tersedia sebagai SVG mandiri yang editable. Scene 3–4 kini satu cerita lima beat selama 80 detik: salah label diri → konflik dengan Dina → label narsistik → stigma → peringatan dan pengucilan yang diakhiri keraguan serta teks layar. Raka dan Dina memakai ilustrasi Storyset yang sama pada seluruh frame. Ilustrasi dan seluruh komposisi tambahan tetap editable sebagai SVG; tidak ada gambar generatif.")
+    p = doc.add_paragraph("Setiap frame tersedia sebagai SVG mandiri yang editable. Scene 1 memakai placeholder presenter bersumber dan empat chat anonim. Scene 3 kembali menjadi tiga contoh terpisah sesuai naskah. Scene 4 menjadi satu cerita domino lima beat sepanjang 40 detik dengan VO asli: salah memahami emosi → konflik → label narsistik → stigma → Dina sendirian dan Raka ragu. Semua frame adalah komposisi animasi; tidak ada judul produksi di dalam artwork dan tidak ada gambar generatif.")
     p.paragraph_format.space_after = Pt(10)
     for r in p.runs:
         set_run(r, 10, MUTED)
@@ -1449,11 +1500,12 @@ def make_docx(contact):
     set_run(r, 14, INK, True)
     audit = [
         "Scene 2 menggunakan cream, espresso, dan plum sebagai warna utama; istilah diberi chip terracotta, mustard, atau peach sesuai pedoman Opsi B.",
-        "Scene 3–4 memakai maksimal tiga warna dominan per adegan. Terracotta hanya menandai label dan tindakan keliru; teks akhir memakai sage sebagai arah pemahaman.",
-        "Lima beat membentuk satu rantai sebab-akibat selama 80 detik: salah label diri → konflik → label pada Dina → rekan kerja menjauh → peringatan, pengeluaran dari grup, dan keraguan Raka.",
-        "Frame 02A–02C, 03A–03C, dan 04A–04B adalah komposisi animasi bersih tanpa judul board, waktu, footer, atau catatan produksi di dalam frame.",
-        "Co-workers · Rafiki memakai kembali 77,2% elemen sumber di beat 03A–04A. Frame akhir menempatkan Dina sendiri dan inset wajah Raka dari SVG yang sama; hitungan konservatif memasukkan 54 elemen tubuh yang tidak muncul di ruang kantor, delapan elemen warna, dan ekspresi wajah. Batas adaptasi 63/158 (39,9%); sekurangnya 60,1% tetap utuh.",
-        "Ilustrasi Storyset tetap vektor dan diwarnai ulang lewat SVG. Frame presenter tetap slot footage; tidak ada gambar yang dihasilkan.",
+        "Scene 3 memisahkan case avoidant, depresi, dan gaslighting. Label terracotta muncul lebih dulu; koreksi sage dikelompokkan terpisah untuk animasi saat VO mengatakan ‘Padahal...’. Latar case memakai peach, sage, dan mustard muda sesuai naskah.",
+        "Scene 4 berlangsung 40 detik dalam lima beat dan VO tetap naskah. Gelembung self-label berubah menjadi debat, cap NARSISTIK, notifikasi grup, lalu Dina sendiri; penutupnya ‘Don't reduce people to labels.’",
+        "Semua frame mandiri memuat hanya komposisi animasi, latar, source illustration, overlay, properti, dan teks layar. Judul board, waktu, footer, legenda, kredit aset, dan catatan produksi ditempatkan di luar artwork.",
+        "Co-workers · Rafiki mempertahankan 122/158 elemen (77,2%) di frame bersama; frame Dina sendiri mempertahankan sekurangnya 95/158 (60,1%) setelah hitungan konservatif. Open Peeps presenter memakai sumber utuh dengan crop viewport; empat dari lima drawable elements tetap tidak berubah.",
+        "Student Stress · Rafiki di Scene 3B mempertahankan 220/254 drawable elements (86,6%); 34 elemen (13,4%) berubah atau dihilangkan. Air mata, penanda target, label, dan koreksi adalah overlay terpisah.",
+        "Semua karakter berasal dari SVG sumber yang dapat diunduh; chat, label, background, domino, dan teks adalah layer vektor editable. Tidak ada gambar yang dihasilkan atau karakter yang digambar dari nol.",
     ]
     for item in audit:
         p = doc.add_paragraph(style="List Bullet")
@@ -1469,16 +1521,18 @@ def make_docx(contact):
         set_run(r, 8, ESPRESSO, True)
     p = doc.add_paragraph()
     p.paragraph_format.space_before = Pt(4)
-    r = p.add_run("Kredit Storyset: Freepik License, free with attribution. Tautan unduh per ilustrasi ada di scene terkait. Periksa ketentuan Storyset saat penggunaan final.")
+    r = p.add_run("Open Peeps standing-16 berada di domain publik CC0. Aset Storyset gratis dengan atribusi; tautan sumber per ilustrasi dicantumkan pada scene terkait. Periksa ketentuan Storyset sebelum penggunaan final.")
     set_run(r, 9, MUTED)
+    add_hyperlink(p, "Open Peeps · CC0", "https://openpeeps.com/")
+    p.add_run("  ·  ")
     add_hyperlink(p, "Storyset terms", "https://storyset.com/terms")
 
     doc.add_page_break()
     p = doc.add_paragraph()
-    r = p.add_run("CONTACT SHEET · AUDIT 7 SCENE / 12 FRAME")
+    r = p.add_run("CONTACT SHEET · AUDIT 7 SCENE / 21 FRAME")
     set_run(r, 20, INK, True)
     doc.add_picture(str(contact), width=Inches(10.65))
-    p = doc.add_paragraph("Ritme visual bergerak dari presenter → feed → kisah Raka dan Dina dalam lima beat → etika → checklist → closing. Scene 4 berakhir dengan Dina yang terisolasi, keraguan Raka, dan teks layar; seluruh frame mengikuti palet Opsi B.")
+    p = doc.add_paragraph("Ritme visual bergerak dari placeholder presenter → feed → tiga case terpisah pada Scene 3 → cerita domino Raka dan Dina dalam lima beat → etika → checklist → closing. Scene 4 berakhir dengan Dina sendiri, ekspresi Raka yang mulai ragu, dan teks layar; seluruh frame mengikuti palet Opsi B.")
     for r in p.runs:
         set_run(r, 9, MUTED)
 
@@ -1526,18 +1580,21 @@ def make_docx(contact):
                 image_para = cell.add_paragraph()
                 image_para.alignment = 1
                 image_para.add_run().add_picture(str(PREVIEW_DIR / filename), width=Inches(1.96))
-        elif scene["no"] in (3, 4):
+        elif scene["no"] in (1, 3, 4):
             left.paragraphs[0].text = ""
             frame_data = [
                 (f"{frame['code']} · {frame['time']}", f"scene-{frame['slug']}.png")
                 for frame in scene["frames"]
             ]
-            inner = left.add_table(rows=1, cols=len(frame_data))
+            grid_columns = 3 if scene["no"] == 1 else len(frame_data)
+            grid_rows = (len(frame_data) + grid_columns - 1) // grid_columns
+            inner = left.add_table(rows=grid_rows, cols=grid_columns)
             inner.autofit = False
-            column_width = 6.28 / len(frame_data)
+            column_width = 6.28 / grid_columns
             for column in inner.columns:
                 column.width = Inches(column_width)
-            for cell, (label, filename) in zip(inner.rows[0].cells, frame_data):
+            cells = [cell for row in inner.rows for cell in row.cells]
+            for cell, (label, filename) in zip(cells, frame_data):
                 cell.width = Inches(column_width)
                 cell.vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.CENTER
                 caption = cell.paragraphs[0]
@@ -1580,6 +1637,8 @@ def make_docx(contact):
         set_run(r, 8, PLUM, True)
         if scene["no"] in (3, 4):
             for frame in scene["frames"]:
+                if not frame["voice"]:
+                    continue
                 duration = frame_duration(frame)
                 p = right.add_paragraph()
                 p.paragraph_format.space_before = Pt(2)
@@ -1605,7 +1664,8 @@ def make_docx(contact):
             info = ASSETS[asset_key]
             p = right.add_paragraph()
             p.paragraph_format.space_after = Pt(1)
-            add_hyperlink(p, "Unduh " + info["title"] + " · Storyset Rafiki", info["url"])
+            asset_credit = " · CC0" if asset_key == "presenter" else " · Storyset Rafiki"
+            add_hyperlink(p, "Sumber " + info["title"] + asset_credit, info["url"])
             for r in p.runs: set_run(r, 8, PLUM)
         p = right.add_paragraph()
         p.paragraph_format.space_before = Pt(3)
@@ -1634,7 +1694,7 @@ def make_website():
               <section class="frame-card"><div class="frame-label"><b>02C · ON-SCREEN TEXT</b><span>00:58–01:05</span></div><a href="scenes/scene-02c-on-screen-text.svg" target="_blank" aria-label="Open editable SVG for Scene 2C"><img src="scenes/scene-02c-on-screen-text.svg" alt="Centered sage and terracotta statements on a cream background"></a><div class="file-links"><a href="scenes/scene-02c-on-screen-text.svg" download>Download editable SVG</a><a href="previews/scene-02c-on-screen-text.png" download>Download PNG preview</a></div></section>
               <section class="frame-card"><div class="frame-label"><b>02 · SCROLL COMPONENTS</b><span>6 extra comments</span></div><p class="component-copy">The six separate SVG groups use IDs comment-05 through comment-10, ready to animate inside the phone feed.</p><div class="file-links"><a href="scenes/scene-02-komponen.svg" target="_blank">Open SVG components</a><a href="scenes/scene-02-komponen.svg" download>Download SVG</a><a href="previews/scene-02-komponen.png" target="_blank">Preview sheet</a></div></section>
             </div>'''
-        elif scene["no"] in (3, 4):
+        elif scene["no"] in (1, 3, 4):
             frame_cards = []
             for frame in scene["frames"]:
                 svg_name = f"scene-{frame['slug']}.svg"
@@ -1650,7 +1710,7 @@ def make_website():
         if scene["no"] in (3, 4):
             script_markup = "<br>".join(
                 f"<strong>{frame['code']} · {frame['time']} · {frame_duration(frame)} detik</strong><br>{escape(frame['voice'])}"
-                for frame in scene["frames"]
+                for frame in scene["frames"] if frame["voice"]
             )
         rows.append(f'''<article class="board-row">
           <header class="row-meta"><span class="scene-number">{scene['no']:02d}</span><span class="time">{scene['time']}</span><h2>{scene['title']}</h2><p>{scene['visual']}</p></header>
@@ -1661,7 +1721,7 @@ def make_website():
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Editable production board with twelve SVG animation frames for Therapy Speak Gone Wrong.">
+<meta name="description" content="Editable production board with twenty-one SVG animation frames for Therapy Speak Gone Wrong.">
 <title>Therapy Speak Gone Wrong · Production Board</title>
 <style>
 :root{--ink:#2a1f2d;--plum:#3d2645;--sage:#7fb89a;--terracotta:#e4572e;--mustard:#f2b134;--peach:#ffc4a3;--cream:#fff6ec;--blue:#3d2645;--blue-dark:#3d2645;--paper:#fff6ec;--line:#e8dacf;--muted:#665967;--coral:#e4572e;--white:#fff;--shadow:0 12px 30px rgba(42,31,45,.09)}
@@ -1671,13 +1731,13 @@ def make_website():
 </style>
 </head>
 <body><main class="shell">
-<header class="hero"><div><div class="eyebrow">Editable production board · Layout C</div><h1>Therapy Speak Gone Wrong</h1><p>Seven scenes in twelve animation keyframes. Scene 3–4 form one five-beat, 80-second story: Raka mislabels his sadness, clashes with Dina, labels her from one defensive reply, spreads stigma, then warns and removes her before beginning to doubt. Every frame is an editable SVG.</p></div><div class="hero-actions"><a class="action primary" href="Storyboard_Therapy_Speak_Gone_Wrong.docx" download>Download Word storyboard</a><a class="action" href="Storyboard_Editable_Source.zip" download>Download editable source bundle</a></div></header>
+<header class="hero"><div><div class="eyebrow">Editable production board · Layout C</div><h1>Therapy Speak Gone Wrong</h1><p>Seven scenes in twenty-one animation keyframes. Scene 3 returns to three independent examples. Scene 4 follows one 40-second domino chain: misunderstanding an emotion, misjudging Dina, conflict, stigma, then Dina alone as Raka begins to doubt. The narration stays verbatim from the script. Every frame is an editable SVG.</p></div><div class="hero-actions"><a class="action primary" href="Storyboard_Therapy_Speak_Gone_Wrong.docx" download>Download Word storyboard</a><a class="action" href="Storyboard_Editable_Source.zip" download>Download editable source bundle</a></div></header>
 <div class="style-strip"><strong>Opsi B · Warm Peach &amp; Mustard</strong><span class="swatch"><i style="background:#3d2645"></i>deep plum</span><span class="swatch"><i style="background:#7fb89a"></i>sage</span><span class="swatch"><i style="background:#e4572e"></i>terracotta</span><span class="swatch"><i style="background:#f2b134"></i>mustard</span><span class="swatch"><i style="background:#ffc4a3"></i>peach</span><span class="swatch"><i style="background:#fff6ec"></i>cream</span><span class="swatch"><i style="background:#2a1f2d"></i>espresso</span><span>· terracotta for mistaken labels; sage for corrections</span></div>
 <section class="board" aria-label="Seven scene production board">
 ''' + "\n".join(rows) + '''
 </section>
-<section class="audit"><div><h2>Visual audit</h2><p>Scene 2 follows Opsi B. Scene 3–4 use one consistent Co-workers illustration and cream, plum, and terracotta as the core colors; sage appears in the final corrective text. The five-beat chain reads without VO through Raka’s target card and frown, two attributed meeting quotes, a questioned NARSISTIK stamp, spreading group-chat messages, Dina’s removal, and a separate inset of Raka beginning to doubt. All five frames were rendered and checked at full size and on the contact sheet. Frames 03A–04A change or omit 36/158 drawable elements (22.8%); final 04B uses a conservative count of 63/158 (39.9%), leaving at least 60.1% unchanged.</p></div><div><h2>Editing & attribution</h2><p>Open or download each SVG to edit its vector layers and text. The source bundle contains the HTML board and all scene SVGs. <a href="https://storyset.com/illustration/co-workers/rafiki" target="_blank" rel="noreferrer">Co-workers · Rafiki</a> is free with attribution; cite Storyset when publishing and review the <a href="https://storyset.com/terms" target="_blank" rel="noreferrer">Storyset terms</a>.</p></div></section>
-<footer class="footer">The presenter frame is a footage slot. Scene backgrounds, chips, labels, cards, connectors, and simple non-character icons are editable SVG shapes. Characters and illustrated situations come from credited Storyset SVGs; no images were generated.</footer>
+<section class="audit"><div><h2>Visual audit</h2><p>Scene 3 has three independent case frames and a centered closing frame. Case 2 uses the original Student Stress character with separate tear and missed-target overlays; the previous grade card is gone. Scene 4 contains five frames over 40 seconds with the original narration: domino 1 marks self-misunderstanding; dominoes 2–3 mark misjudgment and conflict; domino 4 marks stigma and exclusion. The label remains Raka’s unsupported conclusion, not a claim about Dina. All frames were rendered and checked at full size and on the contact sheet. Co-workers · Rafiki uses 36/158 changed or omitted drawable elements (22.8%) in the shared frames and a conservative 63/158 (39.9%) in the final isolation frame, preserving at least 60.1%.</p></div><div><h2>Editing & attribution</h2><p>Open or download each SVG to edit its vector layers and text. The source bundle contains the HTML board and all scene SVGs. <a href="https://openpeeps.com/" target="_blank" rel="noreferrer">Open Peeps standing-16</a> is from the public-domain CC0 library. <a href="https://storyset.com/illustration/co-workers/rafiki" target="_blank" rel="noreferrer">Co-workers · Rafiki</a> is free with attribution; cite Storyset when publishing and review the <a href="https://storyset.com/terms" target="_blank" rel="noreferrer">Storyset terms</a>.</p></div></section>
+<footer class="footer">Scene 1 uses an Open Peeps placeholder presenter that can be replaced by live footage. Scene backgrounds, chat screenshots, chips, labels, cards, connectors, dominoes, and text are editable SVG layers. No images were generated.</footer>
 </main></body></html>'''
     output = ROOT / "index.html"
     output.write_text(html, encoding="utf-8")

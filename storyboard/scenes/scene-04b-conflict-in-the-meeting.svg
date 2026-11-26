@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="frame-title frame-desc" data-frame="03B">
-  <title id="frame-title">03B · Raka and Dina argue in a work meeting</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="frame-title frame-desc" data-frame="04B">
+  <title id="frame-title">04B · Raka and Dina argue in a work meeting</title>
   <desc id="frame-desc">At a work meeting, Raka hears Dina's feedback as a personal attack. Their two editable dialogue bubbles show both lines and keep the disagreement ambiguous.</desc>
   <metadata>Storyset Co-workers Rafiki. 36 of 158 original drawable elements changed or omitted (22.8%): 28 blue elements recolored plum, 7 placeholder-chat elements omitted, and Raka's mouth adjusted. 122 of 158 source elements (77.2%) remain unchanged. All dialogue and interface overlays are separate editable SVG groups.</metadata>
   <rect x="0" y="0" width="1920" height="1080" fill="#FFF6EC" rx="0" id="scene-background" />
@@ -171,22 +171,6 @@
       <path d="M173.61,221h-.92c-.18,0-.32-.1-.31-.21l.43-4c0-.12.17-.21.36-.21h.92c.18,0,.32.09.31.21l-.43,4C174,220.88,173.8,221,173.61,221Z" style="fill:#263238" />
     </g>
   </svg>
-  <g id="recurring-character-name-tags">
-    <rect x="322" y="920" width="150" height="46" fill="#FFF6EC" rx="23.0" stroke="#3D2645" stroke-width="2" />
-    <text x="397.0" y="950.36" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="middle" letter-spacing="0">
-      <tspan x="397.0" dy="0">DINA</tspan>
-    </text>
-    <rect x="638" y="920" width="150" height="46" fill="#FFF6EC" rx="23.0" stroke="#3D2645" stroke-width="2" />
-    <text x="713.0" y="950.36" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="middle" letter-spacing="0">
-      <tspan x="713.0" dy="0">RAKA</tspan>
-    </text>
-  </g>
-  <g id="work-meeting-context">
-    <rect x="1104" y="116" width="690" height="52" fill="#FFF6EC" rx="26.0" stroke="#3D2645" stroke-width="2" />
-    <text x="1449.0" y="150.32" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" text-anchor="middle" letter-spacing="0">
-      <tspan x="1449.0" dy="0">RAPAT · REVIEW HASIL KERJA</tspan>
-    </text>
-  </g>
   <g id="raka-quote">
     <rect x="1050" y="224" width="804" height="226" fill="#3D2645" rx="28" />
     <path d="M1090,426 L1065,468 L1150,440 Z" fill="#3D2645" />
@@ -212,5 +196,21 @@
     <text x="1452" y="687" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="600" text-anchor="middle" letter-spacing="0">
       <tspan x="1452" dy="0">Jangan baper terus, deh.</tspan>
     </text>
+  </g>
+  <g id="domino-2-misjudgment" transform="rotate(-14 1689.0 872.0)">
+    <rect x="1650" y="800" width="78" height="144" fill="#E4572E" rx="16" stroke="#E4572E" stroke-width="3" />
+    <line x1="1662" y1="872.0" x2="1716" y2="872.0" stroke="#FFF6EC" stroke-width="3" stroke-linecap="round" />
+    <circle cx="1674.96" cy="836.0" r="6" fill="#FFF6EC" />
+    <circle cx="1703.04" cy="854.72" r="6" fill="#FFF6EC" />
+    <circle cx="1676.52" cy="899.36" r="6" fill="#FFF6EC" />
+    <circle cx="1703.04" cy="918.08" r="6" fill="#FFF6EC" />
+  </g>
+  <g id="domino-3-relationship-conflict" transform="rotate(10 1779.0 896.0)">
+    <rect x="1740" y="824" width="78" height="144" fill="#3D2645" rx="16" stroke="#3D2645" stroke-width="3" />
+    <line x1="1752" y1="896.0" x2="1806" y2="896.0" stroke="#FFF6EC" stroke-width="3" stroke-linecap="round" />
+    <circle cx="1764.96" cy="860.0" r="6" fill="#FFF6EC" />
+    <circle cx="1793.04" cy="878.72" r="6" fill="#FFF6EC" />
+    <circle cx="1766.52" cy="923.36" r="6" fill="#FFF6EC" />
+    <circle cx="1793.04" cy="942.08" r="6" fill="#FFF6EC" />
   </g>
 </svg>
