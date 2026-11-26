@@ -86,43 +86,46 @@ SCENE2_COMMENTS = [
     {
         "id": "comment-05", "handle": "@vanyaa", "accent": "#C2718C",
         "lines": [
-            [("Kak, dia nggak nurutin maunya sedikit,", INK, False)],
-            [("langsung dicap ", INK, False), ("toxic.", CORAL, True), (" Capek deh.", INK, False)],
+            [("Baru kenal seminggu udah dikirimin", INK, False)],
+            [("hadiah tiap hari. ", INK, False), ("Love bombing", CORAL, True), (" nggak sih?", INK, False)],
         ],
     },
     {
         "id": "comment-06", "handle": "@dindap", "accent": "#6389C7",
         "lines": [
-            [("Dia kalau ada masalah suka menghilang.", INK, False)],
-            [("Fix ", INK, False), ("avoidant", BLUE_DARK, True), (" sih, susah diajak ngobrol.", INK, False)],
+            [("Gue bilang butuh waktu sendiri, malah", INK, False)],
+            [("dibilang nggak punya ", INK, False), ("boundaries.", BLUE_DARK, True), (" Lah?", INK, False)],
         ],
     },
     {
         "id": "comment-07", "handle": "@mikaela", "accent": "#D28B62",
         "lines": [
-            [("Ih, beda pendapat aja kok dibilang", INK, False)],
-            [("gaslighting.", BLUE_DARK, True), (" Nggak semua hal begitu.", INK, False)],
+            [("Ih kak, dia cuma beda pendapat, kok", INK, False)],
+            [("langsung dibilang ", INK, False), ("narcissist?", BLUE_DARK, True)],
         ],
     },
     {
         "id": "comment-08", "handle": "@firaaja", "accent": "#7A9D78",
         "lines": [
-            [("Baru putus seminggu udah dibilang", INK, False)],
-            [("depresi.", CORAL, True), (" Netizen gercep banget.", INK, False)],
+            [("Nggak bales chat seharian dibilang", INK, False)],
+            [
+                ("ghosting.", CORAL, True),
+                (" Kadang emang lagi sibuk, bestie.", INK, False),
+            ],
         ],
     },
     {
         "id": "comment-09", "handle": "@rereaja", "accent": "#9A79BC",
         "lines": [
-            [("Semua keputusan harus sesuai maunya dia.", INK, False)],
-            [("Narsistik", BLUE_DARK, True), (" banget, asli.", INK, False)],
+            [("Baru putus seminggu, dibilang ", INK, False), ("trauma.", BLUE_DARK, True)],
+            [("Padahal gue cuma lagi sedih, wkwk.", INK, False)],
         ],
     },
     {
         "id": "comment-10", "handle": "@eka", "accent": "#D4A34B",
         "lines": [
-            [("Baru sekali gagal langsung bilang ", INK, False), ("trauma.", CORAL, True)],
-            [("Sekarang dikit-dikit trauma.", INK, False)],
+            [("Ih, liburan aja dibilang ", INK, False), ("healing.", CORAL, True)],
+            [("Istilahnya dipakai buat semua hal.", INK, False)],
         ],
     },
 ]
@@ -143,7 +146,7 @@ SCENES = [
         "screen": "Comment sentences stay intact; highlight only the term. Transition to #Toxic · #Narcissist · #Gaslighting · #Trauma · #Avoidant · #Depressed.",
         "motion": "02A · 00:30–00:48: hold the room wide while ten complete comments scroll through the centered phone; six additional editable comment groups are in scene-02-komponen.svg. 02B · 00:48–01:05: highlighted words lift from the feed and gather into the full-screen hashtag cloud.",
         "voice": "Di era social media, istilah psikologi semakin sering kita dengar. Mulai dari toxic relationship, gaslighting, trauma, sampai narcissistic behavior. Fenomena ini sering disebut sebagai therapy speak, yaitu penggunaan istilah yang berasal dari dunia psikologi atau terapi dalam percakapan sehari-hari. Actually, there's nothing wrong with learning psychological terms. Justru, memahami psikologi bisa membantu kita mengenali emosi, memahami perilaku, dan membangun hubungan yang lebih sehat. But here's the problem: ketika istilah-istilah tersebut digunakan tanpa memahami maknanya, kita bisa salah menilai diri sendiri maupun orang lain.",
-        "assets": ["feed"], "roles": ["Feed-rafiki.svg: karakter dan sofa dipakai pada ukuran aslinya; seluruh perangkat latar dihilangkan.", "Rak buku, bunga, TV, lukisan, dan latar ruang biru adalah vektor editable.", "Scene-02-komponen.svg: enam komentar tambahan sebagai grup SVG terpisah untuk animasi scroll."],
+        "assets": ["feed"], "roles": ["Feed-rafiki.svg: karakter dan sofa dipisahkan dari seluruh perangkat latar; ukurannya disesuaikan dengan komposisi ruang yang lebih lebar.", "Rak buku, bunga, TV, lukisan, dan latar ruang biru adalah vektor editable.", "Scene-02-komponen.svg: enam komentar tambahan sebagai grup SVG terpisah untuk animasi scroll."],
         "credits": ["feed"], "background": "02A: expanded blue living room, without storyboard titles or footer. 02B: separate pale-blue word-cloud transition with a soft cloud-shaped backdrop.",
         "frames": [
             {"code": "02A", "slug": "02a-comment-scroll", "title": "Phone Zoom + Comment Scroll", "time": "00:30–00:48"},
@@ -463,10 +466,10 @@ def build_scene_2(scene):
     path(root, "M1741,335 C1753,316 1770,310 1781,316 C1771,332 1759,338 1741,335 Z", fill="#77AD85")
 
     # Keep the Storyset man and sofa at the same display size; widen the room around them.
-    add(root, "ellipse", cx=1515, cy=875, rx=315, ry=43, fill="#8DADD0", opacity=0.28)
+    add(root, "ellipse", cx=1630, cy=866, rx=346, ry=47, fill="#8DADD0", opacity=0.30)
     embed_asset(
-        root, "feed", 1187, 320, 536, 548,
-        include_ids={"freepik--Shadow--inject-2", "freepik--Sofa--inject-2", "freepik--Character--inject-2"},
+        root, "feed", 1080, 150, 850, 850,
+        include_ids={"freepik--Sofa--inject-2", "freepik--Character--inject-2"},
     )
 
     # The centered phone is the only place where the scrollable social feed appears.
