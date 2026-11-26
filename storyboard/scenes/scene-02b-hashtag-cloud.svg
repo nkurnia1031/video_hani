@@ -1,361 +1,361 @@
 <?xml version='1.0' encoding='utf-8'?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="scene-title scene-desc">
   <title id="scene-title">Scene 2B: full-screen hashtag cloud</title>
-  <desc id="scene-desc">A loose stack of colorful hashtag word cards fills a pale-blue frame.</desc>
-  <rect x="0" y="0" width="1920" height="1080" fill="#EAF1FB" rx="0" />
-  <circle cx="140" cy="230" r="200" fill="#407BFF" opacity="0.07" />
-  <circle cx="1780" cy="870" r="245" fill="#ED8067" opacity="0.08" />
-  <text x="165" y="384" fill="#407BFF" font-family="Arial, Helvetica, sans-serif" font-size="88" font-weight="700" text-anchor="middle" letter-spacing="0" opacity="0.14">
+  <desc id="scene-desc">A loose stack of overlapping hashtag word cards in terracotta, mustard, and peach fills a cream frame.</desc>
+  <rect x="0" y="0" width="1920" height="1080" fill="#FFF6EC" rx="0" />
+  <circle cx="140" cy="230" r="200" fill="#F2B134" opacity="0.1" />
+  <circle cx="1780" cy="870" r="245" fill="#FFC4A3" opacity="0.2" />
+  <text x="165" y="384" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="88" font-weight="700" text-anchor="middle" letter-spacing="0" opacity="0.14">
     <tspan x="165" dy="0">#</tspan>
   </text>
-  <text x="1760" y="405" fill="#ED8067" font-family="Arial, Helvetica, sans-serif" font-size="92" font-weight="700" text-anchor="middle" letter-spacing="0" opacity="0.18">
+  <text x="1760" y="405" fill="#E4572E" font-family="Arial, Helvetica, sans-serif" font-size="92" font-weight="700" text-anchor="middle" letter-spacing="0" opacity="0.18">
     <tspan x="1760" dy="0">#</tspan>
   </text>
-  <text x="170" y="798" fill="#8878D2" font-family="Arial, Helvetica, sans-serif" font-size="78" font-weight="700" text-anchor="middle" letter-spacing="0" opacity="0.16">
+  <text x="170" y="798" fill="#F2B134" font-family="Arial, Helvetica, sans-serif" font-size="78" font-weight="700" text-anchor="middle" letter-spacing="0" opacity="0.24">
     <tspan x="170" dy="0">#</tspan>
   </text>
-  <text x="1752" y="788" fill="#2859BE" font-family="Arial, Helvetica, sans-serif" font-size="84" font-weight="700" text-anchor="middle" letter-spacing="0" opacity="0.15">
+  <text x="1752" y="788" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="84" font-weight="700" text-anchor="middle" letter-spacing="0" opacity="0.15">
     <tspan x="1752" dy="0">#</tspan>
   </text>
   <g transform="rotate(-3 222.5 106.4)">
-    <rect x="105" y="68.4" width="245" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="100" y="62.4" width="245" height="88" fill="#2859BE" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <rect x="105" y="68.4" width="245" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="100" y="62.4" width="245" height="88" fill="#E4572E" rx="17" stroke="#FFF6EC" stroke-width="2" />
     <text x="222.5" y="119.6" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="222.5" dy="0">#psychologytok</tspan>
     </text>
   </g>
   <g transform="rotate(3 522.5 117.6)">
-    <rect x="360" y="79.6" width="335" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="355" y="73.6" width="335" height="88" fill="#ED8067" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="522.5" y="130.8" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="360" y="79.6" width="335" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="355" y="73.6" width="335" height="88" fill="#F2B134" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="522.5" y="130.8" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="522.5" dy="0">#toxicrelationship</tspan>
     </text>
   </g>
   <g transform="rotate(-2 835.0 108.0)">
-    <rect x="705" y="70.0" width="270" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="700" y="64.0" width="270" height="88" fill="#407BFF" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="835.0" y="121.2" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="705" y="70.0" width="270" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="700" y="64.0" width="270" height="88" fill="#FFC4A3" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="835.0" y="121.2" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="835.0" dy="0">#gaslighting</tspan>
     </text>
   </g>
   <g transform="rotate(4 1070.0 119.2)">
-    <rect x="985" y="81.2" width="180" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="980" y="75.2" width="180" height="88" fill="#FFFFFF" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="1070.0" y="132.4" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="985" y="81.2" width="180" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="980" y="75.2" width="180" height="88" fill="#E4572E" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="1070.0" y="132.4" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="1070.0" dy="0">#trauma</tspan>
     </text>
   </g>
   <g transform="rotate(-3 1277.5 109.6)">
-    <rect x="1175" y="71.6" width="215" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="1170" y="65.6" width="215" height="88" fill="#DADFFC" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="1277.5" y="122.8" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="1175" y="71.6" width="215" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="1170" y="65.6" width="215" height="88" fill="#F2B134" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="1277.5" y="122.8" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="1277.5" dy="0">#avoidant</tspan>
     </text>
   </g>
   <g transform="rotate(3 1487.5 120.8)">
-    <rect x="1400" y="82.8" width="185" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="1395" y="76.8" width="185" height="88" fill="#263238" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="1487.5" y="134.0" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="1400" y="82.8" width="185" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="1395" y="76.8" width="185" height="88" fill="#FFC4A3" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="1487.5" y="134.0" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="1487.5" dy="0">#redflag</tspan>
     </text>
   </g>
   <g transform="rotate(-3 1700.0 111.2)">
-    <rect x="1595" y="73.2" width="220" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="1590" y="67.2" width="220" height="88" fill="#B9D8CA" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="1700.0" y="124.4" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="1595" y="73.2" width="220" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="1590" y="67.2" width="220" height="88" fill="#E4572E" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="1700.0" y="124.4" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="1700.0" dy="0">#depressed</tspan>
     </text>
   </g>
   <g transform="rotate(4 245.0 256.8)">
-    <rect x="125" y="218.8" width="250" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="120" y="212.8" width="250" height="88" fill="#2859BE" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="245.0" y="270.0" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="125" y="218.8" width="250" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="120" y="212.8" width="250" height="88" fill="#F2B134" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="245.0" y="270.0" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="245.0" dy="0">#narcissist</tspan>
     </text>
   </g>
   <g transform="rotate(-4 472.5 247.20000000000002)">
-    <rect x="385" y="209.20000000000002" width="185" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="380" y="203.20000000000002" width="185" height="88" fill="#B9D8CA" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="472.5" y="260.40000000000003" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="385" y="209.20000000000002" width="185" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="380" y="203.20000000000002" width="185" height="88" fill="#FFC4A3" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="472.5" y="260.40000000000003" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="472.5" dy="0">#healing</tspan>
     </text>
   </g>
   <g transform="rotate(3 665.0 258.4)">
-    <rect x="580" y="220.4" width="180" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="575" y="214.4" width="180" height="88" fill="#FFFFFF" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="665.0" y="271.6" fill="#2859BE" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="580" y="220.4" width="180" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="575" y="214.4" width="180" height="88" fill="#E4572E" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="665.0" y="271.6" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="665.0" dy="0">#therapy</tspan>
     </text>
   </g>
   <g transform="rotate(-4 865.0 248.8)">
-    <rect x="770" y="210.8" width="200" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="765" y="204.8" width="200" height="88" fill="#ED8067" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="865.0" y="262.0" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="770" y="210.8" width="200" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="765" y="204.8" width="200" height="88" fill="#F2B134" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="865.0" y="262.0" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="865.0" dy="0">#ghosting</tspan>
     </text>
   </g>
   <g transform="rotate(3 1085.0 260.0)">
-    <rect x="980" y="222.0" width="220" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="975" y="216.0" width="220" height="88" fill="#DADFFC" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="1085.0" y="273.2" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="980" y="222.0" width="220" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="975" y="216.0" width="220" height="88" fill="#FFC4A3" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="1085.0" y="273.2" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="1085.0" dy="0">#innerchild</tspan>
     </text>
   </g>
   <g transform="rotate(-2 1327.5 250.4)">
-    <rect x="1210" y="212.4" width="245" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="1205" y="206.4" width="245" height="88" fill="#407BFF" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <rect x="1210" y="212.4" width="245" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="1205" y="206.4" width="245" height="88" fill="#E4572E" rx="17" stroke="#FFF6EC" stroke-width="2" />
     <text x="1327.5" y="263.6" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="1327.5" dy="0">#boundaries</tspan>
     </text>
   </g>
   <g transform="rotate(4 1585.0 240.8)">
-    <rect x="1465" y="202.8" width="250" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="1460" y="196.8" width="250" height="88" fill="#FFFFFF" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="1585.0" y="254.0" fill="#2859BE" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="1465" y="202.8" width="250" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="1460" y="196.8" width="250" height="88" fill="#F2B134" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="1585.0" y="254.0" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="1585.0" dy="0">#selfdiagnose</tspan>
     </text>
   </g>
   <g transform="rotate(-3 1805.0 252.0)">
-    <rect x="1725" y="214.0" width="170" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="1720" y="208.0" width="170" height="88" fill="#ED8067" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="1805.0" y="265.2" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="1725" y="214.0" width="170" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="1720" y="208.0" width="170" height="88" fill="#FFC4A3" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="1805.0" y="265.2" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="1805.0" dy="0">#triggered</tspan>
     </text>
   </g>
   <g transform="rotate(-2 255.0 376.8)">
-    <rect x="110" y="338.8" width="300" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="105" y="332.8" width="300" height="88" fill="#DADFFC" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="255.0" y="390.0" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="110" y="338.8" width="300" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="105" y="332.8" width="300" height="88" fill="#E4572E" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="255.0" y="390.0" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="255.0" dy="0">#attachmentstyle</tspan>
     </text>
   </g>
   <g transform="rotate(3 537.5 388.0)">
-    <rect x="420" y="350.0" width="245" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="415" y="344.0" width="245" height="88" fill="#407BFF" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="537.5" y="401.2" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="420" y="350.0" width="245" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="415" y="344.0" width="245" height="88" fill="#F2B134" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="537.5" y="401.2" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="537.5" dy="0">#situationship</tspan>
     </text>
   </g>
   <g transform="rotate(-3 780.0 378.40000000000003)">
-    <rect x="675" y="340.40000000000003" width="220" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="670" y="334.40000000000003" width="220" height="88" fill="#FFFFFF" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="780.0" y="391.6" fill="#ED8067" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="675" y="340.40000000000003" width="220" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="670" y="334.40000000000003" width="220" height="88" fill="#FFC4A3" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="780.0" y="391.6" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="780.0" dy="0">#lovebombing</tspan>
     </text>
   </g>
   <g transform="rotate(3 1037.5 389.6)">
-    <rect x="905" y="351.6" width="275" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="900" y="345.6" width="275" height="88" fill="#ED8067" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <rect x="905" y="351.6" width="275" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="900" y="345.6" width="275" height="88" fill="#E4572E" rx="17" stroke="#FFF6EC" stroke-width="2" />
     <text x="1037.5" y="402.8" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="1037.5" dy="0">#emotionalabuse</tspan>
     </text>
   </g>
   <g transform="rotate(-3 1310.0 380.0)">
-    <rect x="1190" y="342.0" width="250" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="1185" y="336.0" width="250" height="88" fill="#2859BE" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="1310.0" y="393.2" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="1190" y="342.0" width="250" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="1185" y="336.0" width="250" height="88" fill="#F2B134" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="1310.0" y="393.2" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="1310.0" dy="0">#mentalhealth</tspan>
     </text>
   </g>
   <g transform="rotate(3 1620.0 391.2)">
-    <rect x="1450" y="353.2" width="350" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="1445" y="347.2" width="350" height="88" fill="#B9D8CA" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="1620.0" y="404.4" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="1450" y="353.2" width="350" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="1445" y="347.2" width="350" height="88" fill="#FFC4A3" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="1620.0" y="404.4" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="1620.0" dy="0">#relationshipgoals</tspan>
     </text>
   </g>
   <g transform="rotate(3 180.0 516.0)">
-    <rect x="100" y="478.0" width="170" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="95" y="472.0" width="170" height="88" fill="#ED8067" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <rect x="100" y="478.0" width="170" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="95" y="472.0" width="170" height="88" fill="#E4572E" rx="17" stroke="#FFF6EC" stroke-width="2" />
     <text x="180.0" y="529.2" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="180.0" dy="0">#toxic</tspan>
     </text>
   </g>
   <g transform="rotate(-3 397.5 527.2)">
-    <rect x="280" y="489.20000000000005" width="245" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="275" y="483.20000000000005" width="245" height="88" fill="#FFFFFF" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="397.5" y="540.4000000000001" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="280" y="489.20000000000005" width="245" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="275" y="483.20000000000005" width="245" height="88" fill="#F2B134" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="397.5" y="540.4000000000001" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="397.5" dy="0">#narcissistic</tspan>
     </text>
   </g>
   <g transform="rotate(3 670.0 517.6)">
-    <rect x="535" y="479.6" width="280" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="530" y="473.6" width="280" height="88" fill="#2859BE" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="670.0" y="530.8000000000001" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="535" y="479.6" width="280" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="530" y="473.6" width="280" height="88" fill="#FFC4A3" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="670.0" y="530.8000000000001" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="670.0" dy="0">#traumaresponse</tspan>
     </text>
   </g>
   <g transform="rotate(-2 915.0 528.8)">
-    <rect x="825" y="490.8" width="190" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="820" y="484.8" width="190" height="88" fill="#B9D8CA" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="915.0" y="542.0" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="825" y="490.8" width="190" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="820" y="484.8" width="190" height="88" fill="#E4572E" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="915.0" y="542.0" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="915.0" dy="0">#selflove</tspan>
     </text>
   </g>
   <g transform="rotate(3 1190.0 519.2)">
-    <rect x="1025" y="481.20000000000005" width="340" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="1020" y="475.20000000000005" width="340" height="88" fill="#DADFFC" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="1190.0" y="532.4000000000001" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="1025" y="481.20000000000005" width="340" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="1020" y="475.20000000000005" width="340" height="88" fill="#F2B134" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="1190.0" y="532.4000000000001" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="1190.0" dy="0">#healthyrelationships</tspan>
     </text>
   </g>
   <g transform="rotate(-3 1470.0 509.6)">
-    <rect x="1375" y="471.6" width="200" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="1370" y="465.6" width="200" height="88" fill="#407BFF" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="1470.0" y="522.8000000000001" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="1375" y="471.6" width="200" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="1370" y="465.6" width="200" height="88" fill="#FFC4A3" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="1470.0" y="522.8000000000001" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="1470.0" dy="0">#viralterms</tspan>
     </text>
   </g>
   <g transform="rotate(3 1682.5 520.8)">
-    <rect x="1585" y="482.8" width="205" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="1580" y="476.8" width="205" height="88" fill="#FFFFFF" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="1682.5" y="534.0" fill="#2859BE" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="1585" y="482.8" width="205" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="1580" y="476.8" width="205" height="88" fill="#E4572E" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="1682.5" y="534.0" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="1682.5" dy="0">#context</tspan>
     </text>
   </g>
   <g transform="rotate(-3 205.0 645.6)">
-    <rect x="115" y="607.6" width="190" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="110" y="601.6" width="190" height="88" fill="#263238" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="205.0" y="658.8000000000001" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="115" y="607.6" width="190" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="110" y="601.6" width="190" height="88" fill="#F2B134" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="205.0" y="658.8000000000001" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="205.0" dy="0">#redflag</tspan>
     </text>
   </g>
   <g transform="rotate(3 455.0 656.8000000000001)">
-    <rect x="315" y="618.8000000000001" width="290" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="310" y="612.8000000000001" width="290" height="88" fill="#FFFFFF" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="455.0" y="670.0000000000001" fill="#2859BE" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="315" y="618.8000000000001" width="290" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="310" y="612.8000000000001" width="290" height="88" fill="#FFC4A3" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="455.0" y="670.0000000000001" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="455.0" dy="0">#healingjourney</tspan>
     </text>
   </g>
   <g transform="rotate(-3 737.5 647.2)">
-    <rect x="615" y="609.2" width="255" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="610" y="603.2" width="255" height="88" fill="#407BFF" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <rect x="615" y="609.2" width="255" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="610" y="603.2" width="255" height="88" fill="#E4572E" rx="17" stroke="#FFF6EC" stroke-width="2" />
     <text x="737.5" y="660.4000000000001" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="737.5" dy="0">#mentalhealth</tspan>
     </text>
   </g>
   <g transform="rotate(4 980.0 658.4)">
-    <rect x="880" y="620.4" width="210" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="875" y="614.4" width="210" height="88" fill="#B9D8CA" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="980.0" y="671.6" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="880" y="620.4" width="210" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="875" y="614.4" width="210" height="88" fill="#F2B134" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="980.0" y="671.6" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="980.0" dy="0">#avoidant</tspan>
     </text>
   </g>
   <g transform="rotate(-3 1200.0 648.8000000000001)">
-    <rect x="1100" y="610.8000000000001" width="210" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="1095" y="604.8000000000001" width="210" height="88" fill="#ED8067" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="1200.0" y="662.0000000000001" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="1100" y="610.8000000000001" width="210" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="1095" y="604.8000000000001" width="210" height="88" fill="#FFC4A3" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="1200.0" y="662.0000000000001" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="1200.0" dy="0">#depressed</tspan>
     </text>
   </g>
   <g transform="rotate(3 1427.5 660.0)">
-    <rect x="1320" y="622.0" width="225" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="1315" y="616.0" width="225" height="88" fill="#DADFFC" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="1427.5" y="673.2" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="1320" y="622.0" width="225" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="1315" y="616.0" width="225" height="88" fill="#E4572E" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="1427.5" y="673.2" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="1427.5" dy="0">#innerchild</tspan>
     </text>
   </g>
   <g transform="rotate(-3 1675.0 650.4)">
-    <rect x="1555" y="612.4" width="250" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="1550" y="606.4" width="250" height="88" fill="#2859BE" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="1675.0" y="663.6" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="1555" y="612.4" width="250" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="1550" y="606.4" width="250" height="88" fill="#F2B134" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="1675.0" y="663.6" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="1675.0" dy="0">#selfdiagnose</tspan>
     </text>
   </g>
   <g transform="rotate(-3 197.5 796.0)">
-    <rect x="110" y="758.0" width="185" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="105" y="752.0" width="185" height="88" fill="#407BFF" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="197.5" y="809.2" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="110" y="758.0" width="185" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="105" y="752.0" width="185" height="88" fill="#FFC4A3" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="197.5" y="809.2" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="197.5" dy="0">#therapy</tspan>
     </text>
   </g>
   <g transform="rotate(3 420.0 786.4000000000001)">
-    <rect x="305" y="748.4000000000001" width="240" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="300" y="742.4000000000001" width="240" height="88" fill="#ED8067" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <rect x="305" y="748.4000000000001" width="240" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="300" y="742.4000000000001" width="240" height="88" fill="#E4572E" rx="17" stroke="#FFF6EC" stroke-width="2" />
     <text x="420.0" y="799.6000000000001" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="420.0" dy="0">#boundaries</tspan>
     </text>
   </g>
   <g transform="rotate(-3 652.5 797.6)">
-    <rect x="555" y="759.6" width="205" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="550" y="753.6" width="205" height="88" fill="#FFFFFF" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="652.5" y="810.8000000000001" fill="#2859BE" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="555" y="759.6" width="205" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="550" y="753.6" width="205" height="88" fill="#F2B134" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="652.5" y="810.8000000000001" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="652.5" dy="0">#ghosting</tspan>
     </text>
   </g>
   <g transform="rotate(3 915.0 788.0)">
-    <rect x="770" y="750.0" width="300" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="765" y="744.0" width="300" height="88" fill="#B9D8CA" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="915.0" y="801.2" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="770" y="750.0" width="300" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="765" y="744.0" width="300" height="88" fill="#FFC4A3" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="915.0" y="801.2" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="915.0" dy="0">#attachmentstyle</tspan>
     </text>
   </g>
   <g transform="rotate(-3 1210.0 778.4000000000001)">
-    <rect x="1080" y="740.4000000000001" width="270" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="1075" y="734.4000000000001" width="270" height="88" fill="#2859BE" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <rect x="1080" y="740.4000000000001" width="270" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="1075" y="734.4000000000001" width="270" height="88" fill="#E4572E" rx="17" stroke="#FFF6EC" stroke-width="2" />
     <text x="1210.0" y="791.6000000000001" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="1210.0" dy="0">#gaslighting</tspan>
     </text>
   </g>
   <g transform="rotate(3 1482.5 789.6)">
-    <rect x="1360" y="751.6" width="255" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="1355" y="745.6" width="255" height="88" fill="#263238" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="1482.5" y="802.8000000000001" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="1360" y="751.6" width="255" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="1355" y="745.6" width="255" height="88" fill="#F2B134" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="1482.5" y="802.8000000000001" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="1482.5" dy="0">#psychologytok</tspan>
     </text>
   </g>
   <g transform="rotate(-3 1725.0 780.0)">
-    <rect x="1625" y="742.0" width="210" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="1620" y="736.0" width="210" height="88" fill="#DADFFC" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="1725.0" y="793.2" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="1625" y="742.0" width="210" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="1620" y="736.0" width="210" height="88" fill="#FFC4A3" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="1725.0" y="793.2" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="1725.0" dy="0">#selflove</tspan>
     </text>
   </g>
   <g transform="rotate(3 285.0 925.6)">
-    <rect x="125" y="887.6" width="330" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="120" y="881.6" width="330" height="88" fill="#ED8067" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <rect x="125" y="887.6" width="330" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="120" y="881.6" width="330" height="88" fill="#E4572E" rx="17" stroke="#FFF6EC" stroke-width="2" />
     <text x="285.0" y="938.8000000000001" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="285.0" dy="0">#toxicrelationship</tspan>
     </text>
   </g>
   <g transform="rotate(-3 582.5 916.0)">
-    <rect x="465" y="878.0" width="245" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="460" y="872.0" width="245" height="88" fill="#407BFF" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="582.5" y="929.2" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="465" y="878.0" width="245" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="460" y="872.0" width="245" height="88" fill="#F2B134" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="582.5" y="929.2" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="582.5" dy="0">#situationship</tspan>
     </text>
   </g>
   <g transform="rotate(3 830.0 927.2)">
-    <rect x="720" y="889.2" width="230" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="715" y="883.2" width="230" height="88" fill="#FFFFFF" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="830.0" y="940.4000000000001" fill="#ED8067" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="720" y="889.2" width="230" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="715" y="883.2" width="230" height="88" fill="#FFC4A3" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="830.0" y="940.4000000000001" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="830.0" dy="0">#lovebombing</tspan>
     </text>
   </g>
   <g transform="rotate(-3 1080.0 917.6)">
-    <rect x="960" y="879.6" width="250" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="955" y="873.6" width="250" height="88" fill="#2859BE" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <rect x="960" y="879.6" width="250" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="955" y="873.6" width="250" height="88" fill="#E4572E" rx="17" stroke="#FFF6EC" stroke-width="2" />
     <text x="1080.0" y="930.8000000000001" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="1080.0" dy="0">#narcissist</tspan>
     </text>
   </g>
   <g transform="rotate(3 1307.5 928.8000000000001)">
-    <rect x="1220" y="890.8000000000001" width="185" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="1215" y="884.8000000000001" width="185" height="88" fill="#B9D8CA" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="1307.5" y="942.0000000000001" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="1220" y="890.8000000000001" width="185" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="1215" y="884.8000000000001" width="185" height="88" fill="#F2B134" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="1307.5" y="942.0000000000001" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="1307.5" dy="0">#redflag</tspan>
     </text>
   </g>
   <g transform="rotate(-3 1500.0 919.2)">
-    <rect x="1415" y="881.2" width="180" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="1410" y="875.2" width="180" height="88" fill="#FFFFFF" rx="17" stroke="#FFFFFF" stroke-width="2" />
-    <text x="1500.0" y="932.4000000000001" fill="#2859BE" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <rect x="1415" y="881.2" width="180" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="1410" y="875.2" width="180" height="88" fill="#FFC4A3" rx="17" stroke="#FFF6EC" stroke-width="2" />
+    <text x="1500.0" y="932.4000000000001" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="1500.0" dy="0">#healing</tspan>
     </text>
   </g>
   <g transform="rotate(3 1725.0 930.4000000000001)">
-    <rect x="1605" y="892.4000000000001" width="250" height="88" fill="#AEBFD1" rx="17" opacity="0.3" />
-    <rect x="1600" y="886.4000000000001" width="250" height="88" fill="#263238" rx="17" stroke="#FFFFFF" stroke-width="2" />
+    <rect x="1605" y="892.4000000000001" width="250" height="88" fill="#2A1F2D" rx="17" opacity="0.12" />
+    <rect x="1600" y="886.4000000000001" width="250" height="88" fill="#E4572E" rx="17" stroke="#FFF6EC" stroke-width="2" />
     <text x="1725.0" y="943.6000000000001" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="0">
       <tspan x="1725.0" dy="0">#mentalhealth</tspan>
     </text>
