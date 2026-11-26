@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="1080" viewBox="0 0 560 1080" role="img" aria-labelledby="components-title components-desc">
+  <title id="components-title">Scene 2 scroll components: six additional social comments</title>
+  <desc id="components-desc">Six separate editable comment groups, comment-05 through comment-10, ready to move through the phone during the scroll animation.</desc>
+  <g id="comment-05" role="group" aria-label="Comment by @vanyaa">
+    <rect x="20" y="14" width="520" height="153" fill="#F6FAFF" rx="17" stroke="#C8D9EE" stroke-width="2" />
+    <circle cx="47" cy="41" r="15" fill="#C2718C" />
+    <text x="47" y="46" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="47" dy="0">V</tspan>
+    </text>
+    <text x="72" y="44" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="start" letter-spacing="0">
+      <tspan x="72" dy="0">@vanyaa</tspan>
+    </text>
+    <text x="72" y="80" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" text-anchor="start">
+      <tspan fill="#263238" font-weight="500">Kak, dia nggak nurutin maunya sedikit,</tspan>
+    </text>
+    <text x="72" y="103" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" text-anchor="start">
+      <tspan fill="#263238" font-weight="500">langsung dicap </tspan>
+      <tspan fill="#ED8067" font-weight="700">toxic.</tspan>
+      <tspan fill="#263238" font-weight="500"> Capek deh.</tspan>
+    </text>
+  </g>
+  <g id="comment-06" role="group" aria-label="Comment by @dindap">
+    <rect x="20" y="190" width="520" height="153" fill="#F6FAFF" rx="17" stroke="#C8D9EE" stroke-width="2" />
+    <circle cx="47" cy="217" r="15" fill="#6389C7" />
+    <text x="47" y="222" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="47" dy="0">D</tspan>
+    </text>
+    <text x="72" y="220" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="start" letter-spacing="0">
+      <tspan x="72" dy="0">@dindap</tspan>
+    </text>
+    <text x="72" y="256" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" text-anchor="start">
+      <tspan fill="#263238" font-weight="500">Dia kalau ada masalah suka menghilang.</tspan>
+    </text>
+    <text x="72" y="279" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" text-anchor="start">
+      <tspan fill="#263238" font-weight="500">Fix </tspan>
+      <tspan fill="#2859BE" font-weight="700">avoidant</tspan>
+      <tspan fill="#263238" font-weight="500"> sih, susah diajak ngobrol.</tspan>
+    </text>
+  </g>
+  <g id="comment-07" role="group" aria-label="Comment by @mikaela">
+    <rect x="20" y="366" width="520" height="153" fill="#F6FAFF" rx="17" stroke="#C8D9EE" stroke-width="2" />
+    <circle cx="47" cy="393" r="15" fill="#D28B62" />
+    <text x="47" y="398" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="47" dy="0">M</tspan>
+    </text>
+    <text x="72" y="396" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="start" letter-spacing="0">
+      <tspan x="72" dy="0">@mikaela</tspan>
+    </text>
+    <text x="72" y="432" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" text-anchor="start">
+      <tspan fill="#263238" font-weight="500">Ih, beda pendapat aja kok dibilang</tspan>
+    </text>
+    <text x="72" y="455" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" text-anchor="start">
+      <tspan fill="#2859BE" font-weight="700">gaslighting.</tspan>
+      <tspan fill="#263238" font-weight="500"> Nggak semua hal begitu.</tspan>
+    </text>
+  </g>
+  <g id="comment-08" role="group" aria-label="Comment by @firaaja">
+    <rect x="20" y="542" width="520" height="153" fill="#F6FAFF" rx="17" stroke="#C8D9EE" stroke-width="2" />
+    <circle cx="47" cy="569" r="15" fill="#7A9D78" />
+    <text x="47" y="574" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="47" dy="0">F</tspan>
+    </text>
+    <text x="72" y="572" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="start" letter-spacing="0">
+      <tspan x="72" dy="0">@firaaja</tspan>
+    </text>
+    <text x="72" y="608" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" text-anchor="start">
+      <tspan fill="#263238" font-weight="500">Baru putus seminggu udah dibilang</tspan>
+    </text>
+    <text x="72" y="631" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" text-anchor="start">
+      <tspan fill="#ED8067" font-weight="700">depresi.</tspan>
+      <tspan fill="#263238" font-weight="500"> Netizen gercep banget.</tspan>
+    </text>
+  </g>
+  <g id="comment-09" role="group" aria-label="Comment by @rereaja">
+    <rect x="20" y="718" width="520" height="153" fill="#F6FAFF" rx="17" stroke="#C8D9EE" stroke-width="2" />
+    <circle cx="47" cy="745" r="15" fill="#9A79BC" />
+    <text x="47" y="750" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="47" dy="0">R</tspan>
+    </text>
+    <text x="72" y="748" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="start" letter-spacing="0">
+      <tspan x="72" dy="0">@rereaja</tspan>
+    </text>
+    <text x="72" y="784" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" text-anchor="start">
+      <tspan fill="#263238" font-weight="500">Semua keputusan harus sesuai maunya dia.</tspan>
+    </text>
+    <text x="72" y="807" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" text-anchor="start">
+      <tspan fill="#2859BE" font-weight="700">Narsistik</tspan>
+      <tspan fill="#263238" font-weight="500"> banget, asli.</tspan>
+    </text>
+  </g>
+  <g id="comment-10" role="group" aria-label="Comment by @eka">
+    <rect x="20" y="894" width="520" height="153" fill="#F6FAFF" rx="17" stroke="#C8D9EE" stroke-width="2" />
+    <circle cx="47" cy="921" r="15" fill="#D4A34B" />
+    <text x="47" y="926" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="47" dy="0">E</tspan>
+    </text>
+    <text x="72" y="924" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="start" letter-spacing="0">
+      <tspan x="72" dy="0">@eka</tspan>
+    </text>
+    <text x="72" y="960" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" text-anchor="start">
+      <tspan fill="#263238" font-weight="500">Baru sekali gagal langsung bilang </tspan>
+      <tspan fill="#ED8067" font-weight="700">trauma.</tspan>
+    </text>
+    <text x="72" y="983" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" text-anchor="start">
+      <tspan fill="#263238" font-weight="500">Sekarang dikit-dikit trauma.</tspan>
+    </text>
+  </g>
+</svg>

@@ -51,6 +51,82 @@ ASSETS = {
     "social": {"file": REPO / "Social interaction-rafiki.svg", "title": "Social Interaction", "url": "https://storyset.com/illustration/social-interaction/rafiki"},
 }
 
+SCENE2_COMMENTS = [
+    {
+        "id": "comment-01", "handle": "@raraa", "accent": BLUE,
+        "lines": [
+            [("Pacar gue tiap ada masalah suka ngilang.", INK, False)],
+            [("Gue chat malam, pagi baru dibales", INK, False)],
+            [("‘ketiduran’. Fix ", INK, False), ("avoidant", BLUE_DARK, True), (" sih.", INK, False)],
+        ],
+    },
+    {
+        "id": "comment-02", "handle": "@anakrantau", "accent": CORAL,
+        "lines": [
+            [("Gue kemarin dimarahin temen.", INK, False)],
+            [("Padahal dia yang salah, malah marah", INK, False)],
+            [("ke gue. ", INK, False), ("Toxic", CORAL, True), (" banget, asli.", INK, False)],
+        ],
+    },
+    {
+        "id": "comment-03", "handle": "@halokak", "accent": "#8878D2",
+        "lines": [
+            [("Ih kak, itu ", INK, False), ("gaslight", BLUE_DARK, True), (" dah kayaknya.", INK, False)],
+            [("Padahal kakaknya cuma cerita soal", INK, False)],
+            [("apa yang dia rasain.", INK, False)],
+        ],
+    },
+    {
+        "id": "comment-04", "handle": "@ncy", "accent": "#589681",
+        "lines": [
+            [("Kak, dia murung terus akhir-akhir ini.", INK, False)],
+            [("Kayaknya ", INK, False), ("depresi", CORAL, True), (" deh.", INK, False)],
+        ],
+    },
+    {
+        "id": "comment-05", "handle": "@vanyaa", "accent": "#C2718C",
+        "lines": [
+            [("Kak, dia nggak nurutin maunya sedikit,", INK, False)],
+            [("langsung dicap ", INK, False), ("toxic.", CORAL, True), (" Capek deh.", INK, False)],
+        ],
+    },
+    {
+        "id": "comment-06", "handle": "@dindap", "accent": "#6389C7",
+        "lines": [
+            [("Dia kalau ada masalah suka menghilang.", INK, False)],
+            [("Fix ", INK, False), ("avoidant", BLUE_DARK, True), (" sih, susah diajak ngobrol.", INK, False)],
+        ],
+    },
+    {
+        "id": "comment-07", "handle": "@mikaela", "accent": "#D28B62",
+        "lines": [
+            [("Ih, beda pendapat aja kok dibilang", INK, False)],
+            [("gaslighting.", BLUE_DARK, True), (" Nggak semua hal begitu.", INK, False)],
+        ],
+    },
+    {
+        "id": "comment-08", "handle": "@firaaja", "accent": "#7A9D78",
+        "lines": [
+            [("Baru putus seminggu udah dibilang", INK, False)],
+            [("depresi.", CORAL, True), (" Netizen gercep banget.", INK, False)],
+        ],
+    },
+    {
+        "id": "comment-09", "handle": "@rereaja", "accent": "#9A79BC",
+        "lines": [
+            [("Semua keputusan harus sesuai maunya dia.", INK, False)],
+            [("Narsistik", BLUE_DARK, True), (" banget, asli.", INK, False)],
+        ],
+    },
+    {
+        "id": "comment-10", "handle": "@eka", "accent": "#D4A34B",
+        "lines": [
+            [("Baru sekali gagal langsung bilang ", INK, False), ("trauma.", CORAL, True)],
+            [("Sekarang dikit-dikit trauma.", INK, False)],
+        ],
+    },
+]
+
 SCENES = [
     {
         "no": 1, "slug": "the-hook", "time": "00:00–00:30", "title": "The Hook",
@@ -63,12 +139,12 @@ SCENES = [
     },
     {
         "no": 2, "slug": "what-is-therapy-speak", "time": "00:30–01:05", "title": "What Is Therapy Speak?",
-        "visual": "A reclining person uses a handheld phone; comments then scroll inside a separate centered phone frame before the highlighted terms gather into a full-screen hashtag cloud.",
+        "visual": "Wide blue living-room frame: TV and wall art on the left, a comment feed on a centered phone, and the reclining man with his sofa and colored shelf on the right.",
         "screen": "Comment sentences stay intact; highlight only the term. Transition to #Toxic · #Narcissist · #Gaslighting · #Trauma · #Avoidant · #Depressed.",
-        "motion": "02A · 00:30–00:48: push the phone to center and scroll comment sentences, with only the psychology word highlighted. 02B · 00:48–01:05: words lift from the comments and gather into a centered hashtag cloud that fills the frame.",
+        "motion": "02A · 00:30–00:48: hold the room wide while ten complete comments scroll through the centered phone; six additional editable comment groups are in scene-02-komponen.svg. 02B · 00:48–01:05: highlighted words lift from the feed and gather into the full-screen hashtag cloud.",
         "voice": "Di era social media, istilah psikologi semakin sering kita dengar. Mulai dari toxic relationship, gaslighting, trauma, sampai narcissistic behavior. Fenomena ini sering disebut sebagai therapy speak, yaitu penggunaan istilah yang berasal dari dunia psikologi atau terapi dalam percakapan sehari-hari. Actually, there's nothing wrong with learning psychological terms. Justru, memahami psikologi bisa membantu kita mengenali emosi, memahami perilaku, dan membangun hubungan yang lebih sehat. But here's the problem: ketika istilah-istilah tersebut digunakan tanpa memahami maknanya, kita bisa salah menilai diri sendiri maupun orang lain.",
-        "assets": ["feed"], "roles": ["Feed-rafiki.svg: konteks orang bersandar sambil memakai ponsel; bingkai ponsel besar di belakangnya dihilangkan dari komposisi.", "Ponsel tengah, komentar lengkap, highlight kata, dan cloud hashtag adalah vektor editable."],
-        "credits": ["feed"], "background": "02A: pale blue social-feed canvas. 02B: separate pale-blue word-cloud transition with a soft cloud-shaped backdrop.",
+        "assets": ["feed"], "roles": ["Feed-rafiki.svg: karakter dan sofa dipakai pada ukuran aslinya; seluruh perangkat latar dihilangkan.", "Rak buku, bunga, TV, lukisan, dan latar ruang biru adalah vektor editable.", "Scene-02-komponen.svg: enam komentar tambahan sebagai grup SVG terpisah untuk animasi scroll."],
+        "credits": ["feed"], "background": "02A: expanded blue living room, without storyboard titles or footer. 02B: separate pale-blue word-cloud transition with a soft cloud-shaped backdrop.",
         "frames": [
             {"code": "02A", "slug": "02a-comment-scroll", "title": "Phone Zoom + Comment Scroll", "time": "00:30–00:48"},
             {"code": "02B", "slug": "02b-hashtag-cloud", "title": "Hashtag Cloud Transition", "time": "00:48–01:05"},
@@ -186,6 +262,17 @@ def inline_txt(parent, x, y, pieces, size=18, anchor="start"):
     return node
 
 
+def draw_social_comment(parent, x, y, w, h, comment_id, handle, lines, accent, size=17):
+    group = add(parent, "g", id=comment_id, role="group", aria_label=f"Comment by {handle}")
+    rect(group, x, y, w, h, "#F6FAFF", rx=17, stroke="#C8D9EE", sw=2)
+    circle(group, x + 27, y + 27, 15, accent)
+    txt(group, x + 27, y + 32, handle[1:2].upper(), 12, WHITE, 700, "middle")
+    txt(group, x + 52, y + 30, handle, 15, INK, 700)
+    for row, pieces in enumerate(lines):
+        inline_txt(group, x + 52, y + 66 + row * 23, pieces, size)
+    return group
+
+
 def pill(parent, x, y, w, h, label, fill=WHITE, color=INK, size=22, stroke=None, weight=700, opacity=None):
     rect(parent, x, y, w, h, fill, rx=h / 2, stroke=stroke, sw=2, opacity=opacity)
     txt(parent, x + w / 2, y + h * 0.66, label, size, color, weight, "middle", opacity=opacity)
@@ -196,12 +283,16 @@ def card(parent, x, y, w, h, fill=WHITE, border="#E3E8ED", radius=22):
     return rect(parent, x, y, w, h, fill, rx=radius, stroke=border, sw=2)
 
 
-def embed_asset(parent, asset_key, x, y, w, h, omit_ids=()):
+def embed_asset(parent, asset_key, x, y, w, h, omit_ids=(), include_ids=None):
     info = ASSETS[asset_key]
     source = ET.parse(info["file"]).getroot()
     vb = source.get("viewBox", "0 0 500 500")
     nested = add(parent, "svg", x=x, y=y, width=w, height=h, viewBox=vb, preserveAspectRatio="xMidYMid meet", overflow="hidden", aria_label=info["title"] + " illustration, Storyset Rafiki")
-    copied = [deepcopy(child) for child in list(source) if child.get("id") not in omit_ids]
+    copied = [
+        deepcopy(child)
+        for child in list(source)
+        if (child.get("id") in include_ids if include_ids is not None else child.get("id") not in omit_ids)
+    ]
     mapping = {}
     prefix = "s" + re.sub(r"[^a-z0-9]", "", asset_key.lower()) + "-"
     for child in copied:
@@ -297,70 +388,133 @@ def build_scene_1(scene):
 
 
 def build_scene_2(scene):
-    root = start_scene(scene, "#EDF4FC", BLUE)
-    txt(root, 118, 253, "ESTABLISHING  ·  SEATED SCROLL", 14, MUTED, 700, letter=1)
-    card(root, 82, 270, 560, 575, WHITE, "#D8E3EE", 22)
-    embed_asset(root, "feed", 94, 282, 536, 548, omit_ids={"freepik--Interface--inject-2"})
-    # The original small phone in the illustration leads into the center close-up.
-    path(root, "M625,565 C650,548 664,548 684,548", stroke=CORAL, sw=7)
-    path(root, "M671,534 L691,548 L671,562 Z", fill=CORAL)
+    root = ET.Element(tag("svg"), {"width": str(W), "height": str(H), "viewBox": f"0 0 {W} {H}", "role": "img", "aria-labelledby": "scene-title scene-desc"})
+    title_node = add(root, "title", id="scene-title")
+    title_node.text = "Scene 2A: room, phone, and scrolling comments"
+    desc_node = add(root, "desc", id="scene-desc")
+    desc_node.text = "A blue living room with a TV and framed art at left, a centered phone full of social comments, and a reclining man, sofa, and colored shelves at right."
+    defs = add(root, "defs")
+    wall_gradient = add(defs, "linearGradient", id="room-wall", x1="0%", y1="0%", x2="0%", y2="100%")
+    add(wall_gradient, "stop", offset="0%", stop_color="#DCEBFC")
+    add(wall_gradient, "stop", offset="100%", stop_color="#C8DDF5")
+    tv_gradient = add(defs, "linearGradient", id="tv-screen", x1="0%", y1="0%", x2="100%", y2="100%")
+    add(tv_gradient, "stop", offset="0%", stop_color="#214D96")
+    add(tv_gradient, "stop", offset="100%", stop_color="#407BFF")
+    rect(root, 0, 0, W, H, "url(#room-wall)")
+    rect(root, 0, 862, W, 218, "#BCD4EE")
+    line(root, 0, 862, W, 862, "#A8C5E4", 3)
+    circle(root, 175, 170, 185, "#78A7DF", opacity=0.10)
+    circle(root, 1040, 845, 280, "#FFFFFF", opacity=0.12)
+    circle(root, 1860, 540, 205, "#5F91CC", opacity=0.10)
 
-    # Phone is now centered; complete comments scroll inside the screen.
-    card(root, 685, 235, 570, 650, INK, INK, 38)
-    rect(root, 704, 266, 532, 586, "#F5F8FC", rx=25)
-    rect(root, 899, 246, 142, 8, "#89939B", rx=4)
-    txt(root, 740, 310, "KOMENTAR NETIZEN", 16, MUTED, 700, letter=1)
-    circle(root, 1195, 304, 5, CORAL)
-    comments = [
-        [
-            [("Pacar gue tiap ada masalah suka ngilang.", INK, False)],
-            [("Gue chat malam, pagi baru dibales", INK, False)],
-            [("“ketiduran”. Fix ", INK, False), ("avoidant", BLUE_DARK, True), (" sih.", INK, False)],
-        ],
-        [
-            [("Gue kemarin dimarahin temen.", INK, False)],
-            [("Padahal dia yang salah, malah marah", INK, False)],
-            [("ke gue. ", INK, False), ("Toxic", CORAL, True), (" banget, asli.", INK, False)],
-        ],
-        [
-            [("Ih kak, itu ", INK, False), ("gaslight", BLUE_DARK, True), (" dah kayaknya.", INK, False)],
-            [("Padahal kakaknya cuma cerita soal", INK, False)],
-            [("apa yang dia rasain.", INK, False)],
-        ],
-        [
-            [("Kak, dia murung terus akhir-akhir ini.", INK, False)],
-            [("Kayaknya ", INK, False), ("depresi", CORAL, True), (" deh.", INK, False)],
-        ],
-    ]
-    for i, lines in enumerate(comments):
-        y = 335 + i * 119
-        rect(root, 724, y, 490, 106, WHITE, rx=15, stroke="#E0E6ED")
-        circle(root, 751, y + 30, 11, [BLUE, CORAL, "#8878D2", "#589681"][i])
-        rect(root, 777, y + 22, 95, 8, "#CAD5E0", rx=4)
-        rect(root, 777, y + 36, 141, 6, "#E1E6EB", rx=3)
-        for line_no, pieces in enumerate(lines):
-            inline_txt(root, 746, y + 63 + line_no * 18, pieces, 16)
-    # Scroll track and handle make the movement legible in a still frame.
-    rect(root, 1221, 374, 5, 390, "#D9E1E9", rx=3)
-    rect(root, 1218, 466, 11, 122, BLUE, rx=5)
-    txt(root, 969, 838, "SCROLL", 12, MUTED, 700, "middle", letter=1.1)
+    # Left wall art and television form a simple, colored living-room setting.
+    rect(root, 115, 130, 358, 226, "#315B8A", rx=17)
+    rect(root, 132, 147, 324, 192, "#A8C9EE", rx=8)
+    circle(root, 370, 196, 32, "#F4C96B")
+    path(root, "M145,307 L242,218 L310,282 L365,238 L447,314 L447,339 L145,339 Z", fill="#507FBB")
+    path(root, "M145,319 L225,270 L281,315 L350,266 L447,326 L447,339 L145,339 Z", fill="#2E5E98")
+    path(root, "M145,322 L216,293 L276,324 L345,291 L447,329 L447,339 L145,339 Z", fill="#87B2E2")
 
-    card(root, 1304, 306, 510, 498, WHITE, "#D8E3EE", 22)
-    pill(root, 1340, 344, 300, 40, "KOMENTAR YANG TERASA NYATA", "#EAF1FF", BLUE_DARK, 13)
-    txt(root, 1340, 435, "Bahasanya terasa spontan.", 22, INK, 700)
-    txt(root, 1340, 473, "Highlight tetap di dalam kalimat.", 18, MUTED, 400)
-    rect(root, 1340, 516, 430, 142, "#F4F7FB", rx=15)
-    inline_txt(root, 1363, 578, [("Ih kak, itu ", INK, False), ("gaslight", BLUE_DARK, True), (" dah kayaknya.", INK, False)], 20)
-    line(root, 1364, 620, 1510, 620, BLUE, 4)
-    txt(root, 1340, 712, "Contoh komentar spontan,", 16, MUTED, 400)
-    txt(root, 1340, 739, "bukan kesimpulan atau diagnosis.", 16, MUTED, 400)
-    rect(root, 92, 919, 1736, 57, INK, rx=17)
-    txt(root, 960, 955, "02A  ·  PHONE PUSH-IN  +  FULL-SENTENCE COMMENT SCROLL", 18, WHITE, 700, "middle", letter=0.6)
+    rect(root, 67, 425, 460, 307, "#203246", rx=24)
+    rect(root, 83, 441, 428, 270, "url(#tv-screen)", rx=13)
+    circle(root, 494, 454, 3, "#91B9E7", opacity=0.8)
+    path(root, "M99,675 C215,591 284,614 371,527 C427,471 485,493 510,462 L510,711 L99,711 Z", fill="#193E76", opacity=0.35)
+    path(root, "M250,732 L385,732 L405,757 L230,757 Z", fill="#334E6D")
+    rect(root, 29, 758, 582, 91, "#527BA8", rx=13)
+    rect(root, 53, 778, 534, 9, "#86A7CC", rx=4)
+    rect(root, 64, 796, 154, 39, "#416B9A", rx=7)
+    rect(root, 239, 796, 154, 39, "#416B9A", rx=7)
+    rect(root, 414, 796, 154, 39, "#416B9A", rx=7)
+    rect(root, 72, 849, 18, 26, "#315B8A", rx=4)
+    rect(root, 548, 849, 18, 26, "#315B8A", rx=4)
+    # A small plant and a few colored books keep the console from reading as a UI panel.
+    rect(root, 540, 708, 60, 48, "#D88970", rx=8)
+    path(root, "M570,709 C557,687 555,672 563,656 C577,674 579,690 570,709 Z", fill="#4A8B70")
+    path(root, "M568,708 C582,687 595,679 607,682 C600,700 587,710 568,708 Z", fill="#68A57B")
+    path(root, "M570,707 C560,689 543,683 533,689 C541,704 553,711 570,707 Z", fill="#77B08C")
+    rect(root, 229, 726, 20, 31, "#ED8067", rx=3)
+    rect(root, 253, 717, 23, 40, "#D8B761", rx=3)
+    rect(root, 280, 723, 22, 34, "#6291C5", rx=3)
+
+    # Right-side shelves: colored books, a vase, and flowers sit above the original character.
+    rect(root, 1287, 250, 538, 20, "#416D9C", rx=7)
+    rect(root, 1314, 382, 500, 19, "#416D9C", rx=7)
+    rect(root, 1326, 213, 10, 38, "#315B8A", rx=4)
+    rect(root, 1777, 213, 10, 38, "#315B8A", rx=4)
+    rect(root, 1345, 168, 26, 81, "#ED8067", rx=5)
+    rect(root, 1376, 181, 23, 68, "#E4BD63", rx=5)
+    rect(root, 1405, 157, 31, 92, "#5286BB", rx=5)
+    rect(root, 1442, 176, 22, 73, "#8792C5", rx=5)
+    rect(root, 1470, 189, 27, 60, "#77A78C", rx=5)
+    rect(root, 1714, 207, 63, 42, "#E8B38D", rx=8)
+    path(root, "M1745,207 C1736,183 1739,162 1751,144 C1765,166 1764,187 1745,207 Z", fill="#4F9578")
+    path(root, "M1749,207 C1762,183 1780,174 1793,181 C1781,199 1767,207 1749,207 Z", fill="#6DAA84")
+    circle(root, 1753, 145, 9, "#ED8067")
+    circle(root, 1745, 151, 8, "#F1C45E")
+    circle(root, 1761, 154, 8, "#D48CB1")
+    circle(root, 1754, 158, 7, "#FFF0C7")
+    rect(root, 1342, 342, 20, 38, "#5E8DBB", rx=4)
+    rect(root, 1367, 324, 24, 56, "#D98B6C", rx=4)
+    rect(root, 1396, 335, 28, 45, "#8C9BCB", rx=4)
+    rect(root, 1430, 314, 22, 66, "#D7B55B", rx=4)
+    rect(root, 1460, 330, 24, 50, "#75A184", rx=4)
+    rect(root, 1705, 336, 69, 43, "#48769F", rx=9)
+    path(root, "M1739,336 C1729,316 1730,299 1740,282 C1756,304 1754,322 1739,336 Z", fill="#4B9275")
+    path(root, "M1741,335 C1753,316 1770,310 1781,316 C1771,332 1759,338 1741,335 Z", fill="#77AD85")
+
+    # Keep the Storyset man and sofa at the same display size; widen the room around them.
+    add(root, "ellipse", cx=1515, cy=875, rx=315, ry=43, fill="#8DADD0", opacity=0.28)
+    embed_asset(
+        root, "feed", 1187, 320, 536, 548,
+        include_ids={"freepik--Shadow--inject-2", "freepik--Sofa--inject-2", "freepik--Character--inject-2"},
+    )
+
+    # The centered phone is the only place where the scrollable social feed appears.
+    rect(root, 664, 79, 622, 934, "#7898BA", rx=58, opacity=0.42)
+    rect(root, 646, 61, 622, 934, "#1F2C39", rx=58)
+    rect(root, 666, 81, 582, 894, "#E6F0FC", rx=42)
+    rect(root, 889, 94, 136, 11, "#263238", rx=6)
+    circle(root, 1172, 129, 5, BLUE_DARK)
+    circle(root, 1187, 129, 5, BLUE_DARK)
+    rect(root, 1201, 121, 23, 15, "none", rx=3, stroke=BLUE_DARK, sw=2)
+    rect(root, 1206, 125, 13, 7, BLUE, rx=2)
+    txt(root, 704, 179, "Beranda", 23, INK, 700)
+    circle(root, 1200, 167, 9, "none", stroke=BLUE_DARK, sw=2)
+    path(root, "M1207,174 L1214,181", stroke=BLUE_DARK, sw=2)
+    line(root, 686, 193, 1228, 193, "#C8D8EA", 2)
+    for i, comment in enumerate(SCENE2_COMMENTS[:4]):
+        draw_social_comment(root, 686, 209 + i * 166, 542, 153, comment["id"], comment["handle"], comment["lines"], comment["accent"], size=18)
+    # A narrow track cues the scroll animation without adding a storyboard caption.
+    rect(root, 1236, 218, 4, 624, "#B5CBE3", rx=2)
+    rect(root, 1232, 310, 12, 154, BLUE, rx=6)
+    line(root, 686, 889, 1228, 889, "#C8D8EA", 2)
+    circle(root, 760, 926, 9, BLUE_DARK)
+    circle(root, 905, 926, 9, "#8BA6C5")
+    circle(root, 1050, 926, 9, "#8BA6C5")
+    circle(root, 1195, 926, 9, "#8BA6C5")
+    return root
+
+
+def build_scene_2_components():
+    root = ET.Element(tag("svg"), {"width": "560", "height": "1080", "viewBox": "0 0 560 1080", "role": "img", "aria-labelledby": "components-title components-desc"})
+    title_node = add(root, "title", id="components-title")
+    title_node.text = "Scene 2 scroll components: six additional social comments"
+    desc_node = add(root, "desc", id="components-desc")
+    desc_node.text = "Six separate editable comment groups, comment-05 through comment-10, ready to move through the phone during the scroll animation."
+    for i, comment in enumerate(SCENE2_COMMENTS[4:]):
+        draw_social_comment(root, 20, 14 + i * 176, 520, 153, comment["id"], comment["handle"], comment["lines"], comment["accent"], size=17)
     return root
 
 
 def build_scene_2b(scene):
-    root = start_scene(scene, "#EAF1FB", BLUE)
+    root = ET.Element(tag("svg"), {"width": str(W), "height": str(H), "viewBox": f"0 0 {W} {H}", "role": "img", "aria-labelledby": "scene-title scene-desc"})
+    title_node = add(root, "title", id="scene-title")
+    title_node.text = "Scene 2B: full-screen hashtag cloud"
+    desc_node = add(root, "desc", id="scene-desc")
+    desc_node.text = "A loose stack of colorful hashtag word cards fills a pale-blue frame."
+    rect(root, 0, 0, W, H, "#EAF1FB")
+    circle(root, 140, 230, 200, BLUE, opacity=0.07)
+    circle(root, 1780, 870, 245, CORAL, opacity=0.08)
     # Each hashtag has its own colored backing; offsets and slight rotations make a layered word cloud.
     txt(root, 165, 384, "#", 88, BLUE, 700, "middle", opacity=0.14)
     txt(root, 1760, 405, "#", 92, CORAL, 700, "middle", opacity=0.18)
@@ -419,12 +573,11 @@ def build_scene_2b(scene):
     ]
     for index, (word, x, y, w, h, fill, color, angle, size) in enumerate(tags):
         y += ((index * 7) % 13) - 6
+        y = 72 + (y - 258) * 1.6
         group = add(root, "g", transform=f"rotate({angle} {x + w / 2} {y + h / 2})")
         rect(group, x + 5, y + 6, w, h, "#AEBFD1", rx=17, opacity=0.3)
         rect(group, x, y, w, h, fill, rx=17, stroke="#FFFFFF", sw=2)
         txt(group, x + w / 2, y + h * 0.65, word, size, color, 700, "middle")
-    rect(root, 92, 919, 1736, 57, INK, rx=17)
-    txt(root, 960, 955, "02B  ·  SEPARATE TRANSITION  →  HASHTAGS GATHER AND FILL THE SCREEN", 18, WHITE, 700, "middle", letter=0.3)
     return root
 
 
@@ -608,6 +761,16 @@ def create_previews():
             png_path = PREVIEW_DIR / f"scene-{slug}.png"
             cairosvg.svg2png(url=str(svg_path), write_to=str(png_path), output_width=1440, output_height=810)
             thumbs.append((code, title, png_path))
+    components = build_scene_2_components()
+    ET.indent(components, space="  ")
+    component_svg = SCENES_DIR / "scene-02-komponen.svg"
+    component_svg.write_bytes(ET.tostring(components, encoding="utf-8", xml_declaration=True))
+    component_png = PREVIEW_DIR / "scene-02-komponen.png"
+    cairosvg.svg2png(url=str(component_svg), write_to=str(component_png), output_width=560, output_height=1080)
+    transparent_preview = Image.open(component_png).convert("RGBA")
+    preview_canvas = Image.new("RGB", transparent_preview.size, "#DCEBFC")
+    preview_canvas.paste(transparent_preview, (0, 0), transparent_preview.getchannel("A"))
+    preview_canvas.save(component_png)
     # Three columns make a compact visual audit sheet while retaining the 16:9 frames.
     card_w, card_h, gap, top = 420, 236, 26, 56
     cols, rows = 4, 2
@@ -864,8 +1027,9 @@ def make_website():
         role_text = "<br>".join(scene["roles"])
         if scene["no"] == 2:
             frame_markup = '''<div class="frame-stack">
-              <section class="frame-card"><div class="frame-label"><b>02A · PHONE + COMMENT SCROLL</b><span>00:30–00:48</span></div><a href="scenes/scene-02a-comment-scroll.svg" target="_blank" aria-label="Open editable SVG for Scene 2A"><img src="scenes/scene-02a-comment-scroll.svg" alt="Person scrolling complete social-media comments; highlighted psychology terms remain inside each sentence"></a><div class="file-links"><a href="scenes/scene-02a-comment-scroll.svg" download>Download editable SVG</a><a href="previews/scene-02a-comment-scroll.png" download>Download PNG preview</a></div></section>
+              <section class="frame-card"><div class="frame-label"><b>02A · PHONE + COMMENT SCROLL</b><span>00:30–00:48</span></div><a href="scenes/scene-02a-comment-scroll.svg" target="_blank" aria-label="Open editable SVG for Scene 2A"><img src="scenes/scene-02a-comment-scroll.svg" alt="Blue living room with TV and painting at left, a centered phone with social comments, and the reclining man and colored shelves at right"></a><div class="file-links"><a href="scenes/scene-02a-comment-scroll.svg" download>Download editable SVG</a><a href="previews/scene-02a-comment-scroll.png" download>Download PNG preview</a></div></section>
               <section class="frame-card"><div class="frame-label"><b>02B · HASHTAG CLOUD</b><span>00:48–01:05</span></div><a href="scenes/scene-02b-hashtag-cloud.svg" target="_blank" aria-label="Open editable SVG for Scene 2B"><img src="scenes/scene-02b-hashtag-cloud.svg" alt="Centered hashtag word cloud fills the transition frame"></a><div class="file-links"><a href="scenes/scene-02b-hashtag-cloud.svg" download>Download editable SVG</a><a href="previews/scene-02b-hashtag-cloud.png" download>Download PNG preview</a></div></section>
+              <section class="frame-card"><div class="frame-label"><b>02 · SCROLL COMPONENTS</b><span>6 extra comments</span></div><p class="component-copy">The six separate SVG groups use IDs comment-05 through comment-10, ready to animate inside the phone feed.</p><div class="file-links"><a href="scenes/scene-02-komponen.svg" target="_blank">Open SVG components</a><a href="scenes/scene-02-komponen.svg" download>Download SVG</a><a href="previews/scene-02-komponen.png" target="_blank">Preview sheet</a></div></section>
             </div>'''
         else:
             svg_name = f"scene-{scene['no']:02d}-{scene['slug']}.svg"
@@ -884,7 +1048,7 @@ def make_website():
 <title>Therapy Speak Gone Wrong · Production Board</title>
 <style>
 :root{--ink:#263238;--blue:#407bff;--blue-dark:#2859be;--paper:#f5f6f5;--line:#dce2e7;--muted:#687883;--coral:#ed8067;--white:#fff;--shadow:0 12px 30px rgba(30,47,63,.07)}
-*{box-sizing:border-box}html{background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}body{margin:0;padding:42px 28px 92px}.shell{max-width:1560px;margin:0 auto}.hero{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:end;margin:8px 0 32px}.eyebrow{color:var(--blue-dark);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}.hero h1{max-width:920px;margin:12px 0 12px;font-size:clamp(38px,5.5vw,76px);line-height:.98;letter-spacing:-.055em}.hero p{max-width:760px;margin:0;color:var(--muted);font-size:16px;line-height:1.55}.hero-actions{display:flex;flex-direction:column;gap:9px;align-items:stretch}.action{display:inline-block;padding:12px 16px;border:1px solid var(--line);border-radius:999px;background:var(--white);color:var(--ink);font-size:13px;font-weight:700;text-align:center;text-decoration:none}.action.primary{border-color:var(--blue);background:var(--blue);color:var(--white)}.style-strip{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:28px 0 18px;padding:15px 18px;border:1px solid var(--line);border-radius:14px;background:var(--white);color:var(--muted);font-size:12px}.swatch{display:inline-flex;align-items:center;gap:6px}.swatch i{width:15px;height:15px;border:1px solid #d5dce2;border-radius:50%}.board{display:grid;gap:13px}.board-row{display:grid;grid-template-columns:185px minmax(340px,.98fr) minmax(420px,1.08fr);gap:18px;align-items:stretch;padding:15px;border:1px solid var(--line);border-radius:17px;background:var(--white);box-shadow:var(--shadow)}.row-meta{display:flex;flex-direction:column;align-items:flex-start;padding:5px 0}.scene-number{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--ink);color:white;font-size:12px;font-weight:700}.time{margin:12px 0 9px;color:var(--blue-dark);font-size:11px;font-weight:700;letter-spacing:.08em}.row-meta h2{margin:0;font-size:19px;line-height:1.12;letter-spacing:-.02em}.row-meta p{margin:12px 0 0;color:var(--muted);font-size:12px;line-height:1.45}.row-frame{min-width:0;display:flex;flex-direction:column;justify-content:center}.row-frame img{display:block;width:100%;border-radius:10px;background:#edf1f6}.frame-stack{display:grid;gap:12px}.frame-card{padding:9px;border:1px solid var(--line);border-radius:12px;background:#f9fbfd}.frame-label{display:flex;justify-content:space-between;gap:8px;margin-bottom:7px;color:var(--blue-dark);font-size:10px;letter-spacing:.04em}.frame-label span{color:var(--muted);font-weight:400}.file-links{display:flex;justify-content:space-between;gap:10px;padding:9px 2px 0}.file-links a,.asset-sources a{color:var(--blue-dark);font-size:11px;font-weight:700;text-decoration:none}.file-links a:hover,.asset-sources a:hover{text-decoration:underline}.row-notes{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;align-content:center;margin:0;padding:2px 4px}.row-notes div{min-width:0}.row-notes dt{margin-bottom:4px;color:var(--blue-dark);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}.row-notes dd{margin:0;color:#50616d;font-size:11px;line-height:1.4}.asset-sources{margin:7px 0 0}.asset-sources a{margin-right:6px}.audit{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;padding:20px;border:1px solid var(--line);border-radius:16px;background:#edf2f8}.audit h2{margin:0 0 8px;font-size:16px}.audit p{margin:0;color:#566974;font-size:12px;line-height:1.5}.footer{margin-top:24px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:11px;line-height:1.5}.footer a{color:var(--blue-dark)}
+*{box-sizing:border-box}html{background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}body{margin:0;padding:42px 28px 92px}.shell{max-width:1560px;margin:0 auto}.hero{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:end;margin:8px 0 32px}.eyebrow{color:var(--blue-dark);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}.hero h1{max-width:920px;margin:12px 0 12px;font-size:clamp(38px,5.5vw,76px);line-height:.98;letter-spacing:-.055em}.hero p{max-width:760px;margin:0;color:var(--muted);font-size:16px;line-height:1.55}.hero-actions{display:flex;flex-direction:column;gap:9px;align-items:stretch}.action{display:inline-block;padding:12px 16px;border:1px solid var(--line);border-radius:999px;background:var(--white);color:var(--ink);font-size:13px;font-weight:700;text-align:center;text-decoration:none}.action.primary{border-color:var(--blue);background:var(--blue);color:var(--white)}.style-strip{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:28px 0 18px;padding:15px 18px;border:1px solid var(--line);border-radius:14px;background:var(--white);color:var(--muted);font-size:12px}.swatch{display:inline-flex;align-items:center;gap:6px}.swatch i{width:15px;height:15px;border:1px solid #d5dce2;border-radius:50%}.board{display:grid;gap:13px}.board-row{display:grid;grid-template-columns:185px minmax(340px,.98fr) minmax(420px,1.08fr);gap:18px;align-items:stretch;padding:15px;border:1px solid var(--line);border-radius:17px;background:var(--white);box-shadow:var(--shadow)}.row-meta{display:flex;flex-direction:column;align-items:flex-start;padding:5px 0}.scene-number{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--ink);color:white;font-size:12px;font-weight:700}.time{margin:12px 0 9px;color:var(--blue-dark);font-size:11px;font-weight:700;letter-spacing:.08em}.row-meta h2{margin:0;font-size:19px;line-height:1.12;letter-spacing:-.02em}.row-meta p{margin:12px 0 0;color:var(--muted);font-size:12px;line-height:1.45}.row-frame{min-width:0;display:flex;flex-direction:column;justify-content:center}.row-frame img{display:block;width:100%;border-radius:10px;background:#edf1f6}.frame-stack{display:grid;gap:12px}.frame-card{padding:9px;border:1px solid var(--line);border-radius:12px;background:#f9fbfd}.frame-label{display:flex;justify-content:space-between;gap:8px;margin-bottom:7px;color:var(--blue-dark);font-size:10px;letter-spacing:.04em}.frame-label span{color:var(--muted);font-weight:400}.component-copy{margin:0;color:var(--muted);font-size:11px;line-height:1.45}.file-links{display:flex;justify-content:space-between;gap:10px;padding:9px 2px 0}.file-links a,.asset-sources a{color:var(--blue-dark);font-size:11px;font-weight:700;text-decoration:none}.file-links a:hover,.asset-sources a:hover{text-decoration:underline}.row-notes{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;align-content:center;margin:0;padding:2px 4px}.row-notes div{min-width:0}.row-notes dt{margin-bottom:4px;color:var(--blue-dark);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}.row-notes dd{margin:0;color:#50616d;font-size:11px;line-height:1.4}.asset-sources{margin:7px 0 0}.asset-sources a{margin-right:6px}.audit{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;padding:20px;border:1px solid var(--line);border-radius:16px;background:#edf2f8}.audit h2{margin:0 0 8px;font-size:16px}.audit p{margin:0;color:#566974;font-size:12px;line-height:1.5}.footer{margin-top:24px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:11px;line-height:1.5}.footer a{color:var(--blue-dark)}
 @media(max-width:1100px){.board-row{grid-template-columns:145px minmax(300px,1fr)}.row-notes{grid-column:2;grid-template-columns:1fr 1fr}.hero{grid-template-columns:1fr}.hero-actions{flex-direction:row;justify-content:flex-start}.action{min-width:180px}}
 @media(max-width:700px){body{padding:24px 12px 60px}.hero h1{font-size:42px}.board-row{grid-template-columns:1fr;gap:12px;padding:13px}.row-meta{display:grid;grid-template-columns:40px 1fr;column-gap:8px;align-items:center}.scene-number{grid-row:span 2}.time{margin:0 0 4px}.row-meta h2{grid-column:2}.row-meta p{grid-column:1/-1;margin-top:10px}.row-notes{grid-column:auto;grid-template-columns:1fr 1fr}.hero-actions{flex-wrap:wrap}.action{min-width:0}.audit{grid-template-columns:1fr}}
 </style>
