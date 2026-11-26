@@ -52,6 +52,8 @@ ASSETS = {
     "feed": {"file": REPO / "Feed-rafiki.svg", "title": "Feed", "url": "https://storyset.com/illustration/feed/rafiki"},
     "texting": {"file": REPO / "Texting-rafiki.svg", "title": "Texting", "url": "https://storyset.com/illustration/texting/rafiki"},
     "student_stress": {"file": ASSETS_DIR / "Student-stress_Rafiki.svg", "title": "Student Stress · Rafiki", "url": "https://storyset.com/illustration/student-stress/rafiki"},
+    "feeling_blue": {"file": REPO / "Feeling Blue-rafiki.svg", "title": "Feeling Blue · Rafiki", "url": "https://storyset.com/illustration/feeling-blue/rafiki"},
+    "bullying": {"file": ASSETS_DIR / "Bullying_Rafiki.svg", "title": "Bullying · Rafiki", "url": "https://storyset.com/illustration/bullying/rafiki"},
     "couple": {"file": REPO / "Couple stress-rafiki.svg", "title": "Couple Stress", "url": "https://storyset.com/illustration/couple-stress/rafiki"},
     "problem": {"file": REPO / "Problem solving-rafiki.svg", "title": "Problem Solving", "url": "https://storyset.com/illustration/problem-solving/rafiki"},
     "document": {"file": REPO / "Online document-rafiki.svg", "title": "Online Document", "url": "https://storyset.com/illustration/online-document/rafiki"},
@@ -180,12 +182,20 @@ SCENES = [
     },
     {
         "no": 4, "slug": "why-it-matters", "time": "01:55–02:35", "title": "Why Does It Matter?",
-        "visual": "A person facing a maze anchors a four-step consequence chain.",
-        "screen": "Salah memahami diri · Salah menilai orang lain · Konflik hubungan · Stigma gangguan mental",
-        "motion": "Kartu label memicu rangkaian empat kartu dampak; urutannya dibaca kiri ke kanan.",
+        "visual": "Four full-screen scenes chain the consequences of careless labels: self-misunderstanding, conflict, stigma, then a turn toward evidence and context.",
+        "screen": "04D (akhir): Psychology is more than viral terms. It needs context, evidence, and careful understanding.",
+        "motion": "04A: emosi berubah menjadi self-label. 04B: label berpindah ke teman dan meretakkan hubungan. 04C: satu label membesar menjadi stigma; kartu konteks mengitari orangnya. 04D: label terurai menjadi konteks, bukti, dan pemahaman cermat; teks layar tampil di akhir.",
         "voice": "Now, why should we care? First, misusing psychological terms can make us misunderstand our own emotions. Normal feelings like sadness, fear, or disappointment can feel like something is seriously wrong with us. Second, it can create unnecessary conflict. Imagine labeling someone as narcissistic just because they disagree with you. And third, it can reinforce stigma. Mental health conditions are complex experiences, not simply labels we can attach to someone based on one behavior. Remember, psychology is more than just a collection of viral terms. It is a scientific discipline that requires context, evidence, and careful understanding.",
-        "assets": ["problem"], "roles": ["Problem solving-rafiki.svg: metafora mencari konteks; empat kartu dampak digambar sebagai vektor."],
-        "credits": ["problem"], "background": "Cool pale-blue field with coral domino accents.",
+        "assets": ["feeling_blue", "couple", "bullying", "research"],
+        "roles": ["04A · Feeling Blue: emosi sedih menjadi self-label.", "04B · Couple Stress: beda pendapat berubah menjadi label personal dan jarak.", "04C · Bullying: stigma divisualkan sebagai pelabelan yang mengucilkan seseorang; kartu konteks menjaga pengalaman tetap terlihat kompleks.", "04D · Research Paper: menutup rantai dengan bukti dan konteks; teks layar muncul terakhir."],
+        "credits": ["feeling_blue", "couple", "bullying", "research"],
+        "background": "04A peach, 04B mustard, 04C sage, and 04D cream; terracotta marks careless labels, sage carries context, and plum anchors the closing statement.",
+        "frames": [
+            {"code": "04A", "slug": "04a-emotions-misunderstood", "title": "Normal Emotions Misread", "time": "01:55–02:08"},
+            {"code": "04B", "slug": "04b-label-causes-conflict", "title": "A Label Turns Disagreement Into Conflict", "time": "02:08–02:15"},
+            {"code": "04C", "slug": "04c-one-label-becomes-stigma", "title": "One Label Hides a Complex Experience", "time": "02:15–02:25"},
+            {"code": "04D", "slug": "04d-context-evidence-onscreen-text", "title": "Context, Evidence · On-Screen Text", "time": "02:25–02:35"},
+        ],
     },
     {
         "no": 5, "slug": "ethics", "time": "02:35–03:20", "title": "The Ethical Side of Psychology",
@@ -770,38 +780,121 @@ def build_scene_3(scene):
     return build_scene_3_combined(scene)
 
 
-def build_scene_4(scene):
-    root = start_scene(scene, CREAM, PLUM)
-    card(root, 80, 250, 650, 620, CREAM, PEACH, 24)
-    problem_colors = {"#263238": ESPRESSO, "#407BFF": SAGE, "#FF5652": TERRACOTTA,
-                      "#FF8B7B": PEACH, "#E6E6E6": PEACH, "#EBEBEB": CREAM,
-                      "#F0F0F0": CREAM, "#F5F5F5": CREAM, "#FAFAFA": CREAM}
-    embed_asset(root, "problem", 100, 268, 610, 580, color_map=problem_colors)
-    txt(root, 405, 856, "MENCARI KONTEKS", 15, PLUM, 700, "middle", letter=1)
-    pill(root, 790, 244, 1020, 82, "LABEL TANPA KONTEKS", TERRACOTTA, WHITE, 26)
-    path(root, "M1300,328 C1300,365 1300,365 1300,390", stroke=PEACH, sw=7)
-    path(root, "M1287,377 L1300,398 L1313,377 Z", fill=PEACH)
-    outcomes = [
-        ("01", "Salah memahami\ndiri sendiri", MUSTARD),
-        ("02", "Salah menilai\norang lain", TERRACOTTA),
-        ("03", "Konflik dalam\nhubungan", PLUM),
-        ("04", "Stigma terhadap\ngangguan mental", ESPRESSO),
-    ]
-    x0, y, cw, ch, gap = 780, 430, 238, 320, 22
-    for i, (number, label, accent) in enumerate(outcomes):
-        x = x0 + i * (cw + gap)
-        rect(root, x + 7, y + 10, cw, ch, ESPRESSO, rx=20, opacity=0.10)
-        rect(root, x, y, cw, ch, accent, rx=20, stroke=accent, sw=2)
-        label_color = ESPRESSO if accent == MUSTARD else WHITE
-        circle(root, x + 46, y + 75, 25, accent)
-        txt(root, x + 46, y + 82, number, 15, label_color, 700, "middle")
-        for row, text_line in enumerate(label.split("\n")):
-            txt(root, x + 26, y + 151 + row * 34, text_line, 23, label_color, 700)
-        txt(root, x + 26, y + 270, "DAMPAK", 14, label_color, 700, letter=1)
-        if i < 3:
-            line(root, x + cw + 4, y + 170, x + cw + gap - 3, y + 170, ESPRESSO, 5)
-            path(root, f"M{x+cw+gap-11},{y+160} L{x+cw+gap-1},{y+170} L{x+cw+gap-11},{y+180} Z", fill=ESPRESSO)
+def build_scene_4a(scene):
+    root = clean_frame(
+        "Scene 4A: normal emotions are misunderstood",
+        "A sad person is surrounded by the ordinary feelings sadness, fear, and disappointment. Those feelings collapse into the self-label: Is something wrong with me?",
+        CASE_TINTS[0],
+    )
+    root.find(tag("metadata")).text = "Storyset Feeling Blue Rafiki SVG; 11 of 282 original drawable elements changed (3.9%). Emotion chips and the self-label are separate editable animation groups. No generated imagery."
+    root[3].set("id", "scene-background")
+    art = add(root, "g", id="feeling-blue-illustration")
+    embed_asset(art, "feeling_blue", 20, 12, 1060, 1056,
+                color_map={"#407BFF": PLUM})
+    emotions = add(root, "g", id="normal-emotions")
+    pill(emotions, 1090, 302, 202, 58, "SEDIH", MUSTARD, ESPRESSO, 23)
+    pill(emotions, 1310, 302, 202, 58, "TAKUT", PEACH, ESPRESSO, 23)
+    pill(emotions, 1530, 302, 270, 58, "KECEWA", SAGE, ESPRESSO, 23)
+    label = add(root, "g", id="self-misunderstanding-label")
+    rect(label, 1082, 438, 735, 314, CREAM, rx=30, stroke=PEACH, sw=4)
+    rect(label, 1082, 438, 18, 314, TERRACOTTA, rx=9)
+    txt(label, 1144, 520, "PERASAAN NORMAL", 21, PLUM, 700, letter=1.2)
+    txt(label, 1144, 610, "ADA YANG SALAH", 44, ESPRESSO, 700)
+    txt(label, 1144, 674, "DENGAN AKU?", 44, TERRACOTTA, 700)
     return root
+
+
+def build_scene_4b(scene):
+    root = clean_frame(
+        "Scene 4B: a label turns disagreement into conflict",
+        "A couple disagree. A terracotta narcissist label lands between them and breaks the connection, showing the unnecessary conflict caused by labeling someone for disagreeing.",
+        CASE_TINTS[2],
+    )
+    root.find(tag("metadata")).text = "Storyset Couple Stress Rafiki SVG; 43 of 242 original drawable elements recolored (17.8%). The label and broken connector are separate editable animation groups. No generated imagery."
+    root[3].set("id", "scene-background")
+    art = add(root, "g", id="couple-stress-illustration")
+    couple_colors = {
+        "#407BFF": PLUM,
+        "#D9877C": PEACH,
+        "#DE5753": TERRACOTTA,
+        "#EBB376": MUSTARD,
+        "#D58745": MUSTARD,
+    }
+    embed_asset(art, "couple", 0, 8, 1100, 1064, color_map=couple_colors)
+    conflict = add(root, "g", id="disagreement-and-label")
+    pill(conflict, 1162, 252, 592, 66, "BEDA PENDAPAT", SAGE, ESPRESSO, 25)
+    path(conflict, "M1000,524 L1040,488 L1080,560 L1120,488 L1160,524", fill="none", stroke=TERRACOTTA, sw=9)
+    rect(conflict, 1134, 378, 668, 208, TERRACOTTA, rx=30)
+    txt(conflict, 1468, 468, "LANGSUNG DIBILANG", 20, WHITE, 700, "middle", letter=1.2)
+    txt(conflict, 1468, 536, "NARCISSIST?", 47, WHITE, 700, "middle")
+    return root
+
+
+def build_scene_4c(scene):
+    root = clean_frame(
+        "Scene 4C: one label hides a complex experience",
+        "One person is singled out by a group; a single-behavior label turns into stigma, while duration, context, impact, and support remain visible as parts of a more complex experience.",
+        CASE_TINTS[1],
+    )
+    root.find(tag("metadata")).text = "Storyset Bullying Rafiki SVG; 48 of 165 original drawable elements changed or omitted (29.1%). Its profanity speech-bubble group is omitted; palette recoloring and context labels are separate composition layers. No generated imagery."
+    root[3].set("id", "scene-background")
+    art = add(root, "g", id="bullying-illustration")
+    bullying_colors = {
+        "#407BFF": PLUM,
+        "#FF5652": TERRACOTTA,
+        "#FF8B7B": PEACH,
+        "#B55B52": PEACH,
+        "#A02724": TERRACOTTA,
+    }
+    embed_asset(art, "bullying", 26, 48, 1200, 984,
+                omit_ids={"chat-bubble"}, color_map=bullying_colors)
+    label_flow = add(root, "g", id="single-behavior-to-stigma")
+    pill(label_flow, 1194, 202, 560, 62, "SATU PERILAKU", TERRACOTTA, WHITE, 23)
+    path(label_flow, "M1474,270 L1474,316", stroke=TERRACOTTA, sw=7)
+    path(label_flow, "M1463,305 L1474,321 L1485,305 Z", fill=TERRACOTTA)
+    rect(label_flow, 1194, 336, 560, 145, TERRACOTTA, rx=26)
+    txt(label_flow, 1474, 428, "STIGMA", 43, CREAM, 700, "middle", letter=1.5)
+    contexts = add(root, "g", id="context-pieces")
+    pill(contexts, 1190, 570, 265, 68, "DURASI", CREAM, ESPRESSO, 20, stroke=PEACH)
+    pill(contexts, 1480, 570, 285, 68, "KONTEKS", MUSTARD, ESPRESSO, 20)
+    pill(contexts, 1190, 664, 265, 68, "DAMPAK", MUSTARD, ESPRESSO, 20)
+    pill(contexts, 1480, 664, 285, 68, "DUKUNGAN", SAGE, ESPRESSO, 20)
+    return root
+
+
+def build_scene_4d(scene):
+    root = clean_frame(
+        "Scene 4D: context and evidence stop the label chain",
+        "A researcher reviews charts, notes, and evidence. The final on-screen text reads: Psychology is more than viral terms; it needs context, evidence, and careful understanding.",
+        CREAM,
+    )
+    root.find(tag("metadata")).text = "Storyset Research Paper Rafiki SVG; 75 of 238 original drawable elements recolored (31.5%). The final message is an independent editable overlay. No generated imagery."
+    root[3].set("id", "scene-background")
+    art = add(root, "g", id="research-paper-illustration")
+    research_colors = {
+        "#407BFF": PLUM,
+        "#577AFA": PLUM,
+        "#263238": ESPRESSO,
+        "#2E353A": ESPRESSO,
+    }
+    embed_asset(art, "research", 0, 18, 900, 1044, color_map=research_colors)
+    evidence = add(root, "g", id="evidence-terms")
+    pill(evidence, 980, 240, 270, 72, "KONTEKS", SAGE, ESPRESSO, 22)
+    pill(evidence, 1270, 240, 230, 72, "BUKTI", MUSTARD, ESPRESSO, 22)
+    pill(evidence, 1520, 240, 280, 72, "PEMAHAMAN", PEACH, ESPRESSO, 21)
+    closing = add(root, "g", id="final-onscreen-text")
+    rect(closing, 940, 390, 850, 380, PLUM, rx=34)
+    rect(closing, 940, 390, 18, 380, TERRACOTTA, rx=9)
+    txt(closing, 1030, 498, "PSIKOLOGI LEBIH DARI", 25, MUSTARD, 700, letter=1)
+    txt(closing, 1030, 557, "ISTILAH VIRAL", 42, CREAM, 700)
+    line(closing, 1030, 596, 1690, 596, SAGE, 4)
+    txt(closing, 1030, 650, "KONTEKS · BUKTI ·", 31, CREAM, 700)
+    txt(closing, 1030, 704, "PEMAHAMAN YANG CERMAT", 28, CREAM, 700)
+    return root
+
+
+def build_scene_4(scene):
+    return build_scene_4d(scene)
 
 
 def build_scene_5(scene):
@@ -926,6 +1019,8 @@ def create_previews():
         PREVIEW_DIR / "scene-02-what-is-therapy-speak.png",
         SCENES_DIR / "scene-03-normal-emotions-become-labels.svg",
         PREVIEW_DIR / "scene-03-normal-emotions-become-labels.png",
+        SCENES_DIR / "scene-04-why-it-matters.svg",
+        PREVIEW_DIR / "scene-04-why-it-matters.png",
     ]:
         if stale.exists():
             stale.unlink()
@@ -943,6 +1038,13 @@ def create_previews():
                 ("03B", "03b-case-02-depressed", "Case 2 · Sadness After Failure", "01:20–01:35", build_scene_3_case_2),
                 ("03C", "03c-case-03-gaslighting", "Case 3 · Disagreement", "01:35–01:50", build_scene_3_case_3),
                 ("03D", "03d-combined-on-screen-text", "Combined Examples · On-Screen Text", "01:50–01:55", build_scene_3_combined),
+            ]
+        elif scene["no"] == 4:
+            frames = [
+                ("04A", "04a-emotions-misunderstood", "Normal Emotions Misread", "01:55–02:08", build_scene_4a),
+                ("04B", "04b-label-causes-conflict", "Label Turns Disagreement Into Conflict", "02:08–02:15", build_scene_4b),
+                ("04C", "04c-one-label-becomes-stigma", "One Label Hides a Complex Experience", "02:15–02:25", build_scene_4c),
+                ("04D", "04d-context-evidence-onscreen-text", "Context, Evidence · On-Screen Text", "02:25–02:35", build_scene_4d),
             ]
         else:
             frames = [(f"{scene['no']:02d}", f"{scene['no']:02d}-{scene['slug']}", scene["title"], scene["time"], draw_scene)]
@@ -966,8 +1068,9 @@ def create_previews():
     preview_canvas.paste(transparent_preview, (0, 0), transparent_preview.getchannel("A"))
     preview_canvas.save(component_png)
     # Three columns make a compact visual audit sheet while retaining the 16:9 frames.
-    card_w, card_h, gap, top = 420, 236, 26, 56
-    cols, rows = 4, (len(thumbs) + 3) // 4
+    cols = 5 if len(thumbs) > 12 else 4
+    card_w, card_h, gap, top = (330, 186, 18, 50) if cols == 5 else (420, 236, 26, 56)
+    rows = (len(thumbs) + cols - 1) // cols
     sheet = Image.new("RGB", (cols * card_w + (cols + 1) * gap, rows * (card_h + 48) + (rows + 1) * gap + top), "#F1F4F8")
     draw = ImageDraw.Draw(sheet)
     title_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 22)
@@ -1064,9 +1167,9 @@ def make_docx(contact):
     set_run(r, 28, INK, True)
     p = doc.add_paragraph()
     p.paragraph_format.space_after = Pt(7)
-    r = p.add_run("Storyboard produksi · Layout C · 7 scene · 12 keyframe · 00:00–04:00")
+    r = p.add_run("Storyboard produksi · Layout C · 7 scene · 15 keyframe · 00:00–04:00")
     set_run(r, 15, PLUM, True)
-    p = doc.add_paragraph("Setiap frame tersedia sebagai SVG mandiri yang editable. Scene 2 memiliki tiga frame: guliran komentar, hashtag, lalu dua pernyataan di tengah. Scene 3 memiliki tiga case terpisah dan satu frame gabungan dengan teks penutup di tengah. Ilustrasi Storyset ditanam sebagai vektor dan diwarnai ulang sebagai SVG; komposisi tambahan juga digambar sebagai vektor. Tidak ada gambar generatif.")
+    p = doc.add_paragraph("Setiap frame tersedia sebagai SVG mandiri yang editable. Scene 2 memiliki tiga frame; Scene 3 memisahkan tiga case dan menutupnya dengan teks di tengah; Scene 4 menyambungkan empat akibat dari salah label dan menutupnya dengan teks tentang konteks serta bukti. Ilustrasi Storyset ditanam sebagai vektor dan diwarnai ulang sebagai SVG; komposisi tambahan juga digambar sebagai vektor. Tidak ada gambar generatif.")
     p.paragraph_format.space_after = Pt(10)
     for r in p.runs:
         set_run(r, 10, MUTED)
@@ -1078,7 +1181,8 @@ def make_docx(contact):
     audit = [
         "Scene 2 menggunakan cream, espresso, dan plum sebagai warna utama; istilah diberi chip terracotta, mustard, atau peach sesuai pedoman Opsi B.",
         "Scene 3 memakai tint peach, sage, dan mustard per case. Label keliru memakai terracotta dengan teks putih; koreksi memakai sage dengan teks espresso.",
-        "Frame 02A–02C dan 03A–03D adalah komposisi animasi bersih tanpa judul board, waktu, footer, atau catatan produksi di dalam frame.",
+        "Scene 4 memakai empat frame berantai: emosi disalahpahami → konflik karena label → stigma menutupi kompleksitas → konteks dan bukti menghentikan rantai.",
+        "Frame 02A–02C, 03A–03D, dan 04A–04D adalah komposisi animasi bersih tanpa judul board, waktu, footer, atau catatan produksi di dalam frame.",
         "Ilustrasi Storyset tetap vektor dan diwarnai ulang lewat SVG. Frame presenter tetap slot footage; tidak ada gambar yang dihasilkan.",
     ]
     for item in audit:
@@ -1101,10 +1205,10 @@ def make_docx(contact):
 
     doc.add_page_break()
     p = doc.add_paragraph()
-    r = p.add_run("CONTACT SHEET · AUDIT 7 SCENE / 12 FRAME")
+    r = p.add_run("CONTACT SHEET · AUDIT 7 SCENE / 15 FRAME")
     set_run(r, 20, INK, True)
     doc.add_picture(str(contact), width=Inches(10.65))
-    p = doc.add_paragraph("Ritme visual bergerak dari presenter → feed → tiga contoh → dampak → etika → checklist → closing. Semua frame memakai palet dan grid yang sama.")
+    p = doc.add_paragraph("Ritme visual bergerak dari presenter → feed → tiga contoh → empat dampak berantai → etika → checklist → closing. Scene 4 berakhir dengan teks layar; semua frame tetap memakai palet Opsi B.")
     for r in p.runs:
         set_run(r, 9, MUTED)
 
@@ -1163,6 +1267,29 @@ def make_docx(contact):
                 ("03B · 01:20–01:35", "scene-03b-case-02-depressed.png"),
                 ("03C · 01:35–01:50", "scene-03c-case-03-gaslighting.png"),
                 ("03D · 01:50–01:55", "scene-03d-combined-on-screen-text.png"),
+            ]
+            for cell, (label, filename) in zip([c for row in inner.rows for c in row.cells], frame_data):
+                cell.width = Inches(3.08)
+                cell.vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.CENTER
+                caption = cell.paragraphs[0]
+                caption.alignment = 1
+                caption.paragraph_format.space_after = Pt(3)
+                run = caption.add_run(label)
+                set_run(run, 7, PLUM, True)
+                image_para = cell.add_paragraph()
+                image_para.alignment = 1
+                image_para.add_run().add_picture(str(PREVIEW_DIR / filename), width=Inches(2.94))
+        elif scene["no"] == 4:
+            left.paragraphs[0].text = ""
+            inner = left.add_table(rows=2, cols=2)
+            inner.autofit = False
+            for column in inner.columns:
+                column.width = Inches(3.08)
+            frame_data = [
+                ("04A · 01:55–02:08", "scene-04a-emotions-misunderstood.png"),
+                ("04B · 02:08–02:15", "scene-04b-label-causes-conflict.png"),
+                ("04C · 02:15–02:25", "scene-04c-one-label-becomes-stigma.png"),
+                ("04D · 02:25–02:35", "scene-04d-context-evidence-onscreen-text.png"),
             ]
             for cell, (label, filename) in zip([c for row in inner.rows for c in row.cells], frame_data):
                 cell.width = Inches(3.08)
@@ -1249,7 +1376,7 @@ def make_website():
               <section class="frame-card"><div class="frame-label"><b>02C · ON-SCREEN TEXT</b><span>00:58–01:05</span></div><a href="scenes/scene-02c-on-screen-text.svg" target="_blank" aria-label="Open editable SVG for Scene 2C"><img src="scenes/scene-02c-on-screen-text.svg" alt="Centered sage and terracotta statements on a cream background"></a><div class="file-links"><a href="scenes/scene-02c-on-screen-text.svg" download>Download editable SVG</a><a href="previews/scene-02c-on-screen-text.png" download>Download PNG preview</a></div></section>
               <section class="frame-card"><div class="frame-label"><b>02 · SCROLL COMPONENTS</b><span>6 extra comments</span></div><p class="component-copy">The six separate SVG groups use IDs comment-05 through comment-10, ready to animate inside the phone feed.</p><div class="file-links"><a href="scenes/scene-02-komponen.svg" target="_blank">Open SVG components</a><a href="scenes/scene-02-komponen.svg" download>Download SVG</a><a href="previews/scene-02-komponen.png" target="_blank">Preview sheet</a></div></section>
             </div>'''
-        elif scene["no"] == 3:
+        elif scene["no"] in (3, 4):
             frame_cards = []
             for frame in scene["frames"]:
                 svg_name = f"scene-{frame['slug']}.svg"
@@ -1269,7 +1396,7 @@ def make_website():
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Editable production board with twelve SVG animation frames for Therapy Speak Gone Wrong.">
+<meta name="description" content="Editable production board with fifteen SVG animation frames for Therapy Speak Gone Wrong.">
 <title>Therapy Speak Gone Wrong · Production Board</title>
 <style>
 :root{--ink:#2a1f2d;--plum:#3d2645;--sage:#7fb89a;--terracotta:#e4572e;--mustard:#f2b134;--peach:#ffc4a3;--cream:#fff6ec;--blue:#3d2645;--blue-dark:#3d2645;--paper:#fff6ec;--line:#e8dacf;--muted:#665967;--coral:#e4572e;--white:#fff;--shadow:0 12px 30px rgba(42,31,45,.09)}
@@ -1279,13 +1406,13 @@ def make_website():
 </style>
 </head>
 <body><main class="shell">
-<header class="hero"><div><div class="eyebrow">Editable production board · Layout C</div><h1>Therapy Speak Gone Wrong</h1><p>Seven scenes from the supplied script, arranged as twelve animation keyframes. Scene 2 has three frames; Scene 3 separates each case before its combined closing frame. Every frame is an editable SVG.</p></div><div class="hero-actions"><a class="action primary" href="Storyboard_Therapy_Speak_Gone_Wrong.docx" download>Download Word storyboard</a><a class="action" href="Storyboard_Editable_Source.zip" download>Download editable source bundle</a></div></header>
+<header class="hero"><div><div class="eyebrow">Editable production board · Layout C</div><h1>Therapy Speak Gone Wrong</h1><p>Seven scenes from the supplied script, arranged as fifteen animation keyframes. Scene 2 has three frames; Scene 3 separates each case before its combined closing frame; Scene 4 follows four linked consequences and ends with on-screen text. Every frame is an editable SVG.</p></div><div class="hero-actions"><a class="action primary" href="Storyboard_Therapy_Speak_Gone_Wrong.docx" download>Download Word storyboard</a><a class="action" href="Storyboard_Editable_Source.zip" download>Download editable source bundle</a></div></header>
 <div class="style-strip"><strong>Opsi B · Warm Peach &amp; Mustard</strong><span class="swatch"><i style="background:#3d2645"></i>deep plum</span><span class="swatch"><i style="background:#7fb89a"></i>sage</span><span class="swatch"><i style="background:#e4572e"></i>terracotta</span><span class="swatch"><i style="background:#f2b134"></i>mustard</span><span class="swatch"><i style="background:#ffc4a3"></i>peach</span><span class="swatch"><i style="background:#fff6ec"></i>cream</span><span class="swatch"><i style="background:#2a1f2d"></i>espresso</span><span>· terracotta for mistaken labels; sage for corrections</span></div>
 <section class="board" aria-label="Seven scene production board">
 ''' + "\n".join(rows) + '''
 </section>
-<section class="audit"><div><h2>Visual audit</h2><p>Scene 2 follows Opsi B with cream, espresso, and plum as its dominant colors; hashtag cards use terracotta, mustard, and peach. Scene 3 uses the case tints peach #FFE3D3, sage #DCEFE4, and mustard #FCE9C2. Incorrect labels use terracotta; corrections use sage with espresso text. The animation frames were rendered and checked visually.</p></div><div><h2>Editing & attribution</h2><p>Open or download each SVG to edit its vector layers and text. The source bundle contains the HTML board and all scene SVGs. Storyset art is free with attribution; use the per-scene links and review <a href="https://storyset.com/terms" target="_blank" rel="noreferrer">Storyset terms</a> for final use.</p></div></section>
-<footer class="footer">The presenter frame is a footage slot. Custom scene backgrounds, chips, labels, article cards, faces, and icons are hand-built SVG shapes; no images were generated. Storyset illustrations are embedded as SVG groups and remain vector artwork.</footer>
+<section class="audit"><div><h2>Visual audit</h2><p>Scene 2 follows Opsi B with cream, espresso, and plum as its dominant colors; hashtag cards use terracotta, mustard, and peach. Scene 3 uses the case tints peach #FFE3D3, sage #DCEFE4, and mustard #FCE9C2. Scene 4 chains self-misunderstanding → conflict → stigma → evidence, using peach, mustard, sage, and cream. Incorrect labels use terracotta; context and correction use sage. The animation frames were rendered and checked visually.</p></div><div><h2>Editing & attribution</h2><p>Open or download each SVG to edit its vector layers and text. The source bundle contains the HTML board and all scene SVGs. Storyset art is free with attribution; use the per-scene links and review <a href="https://storyset.com/terms" target="_blank" rel="noreferrer">Storyset terms</a> for final use.</p></div></section>
+<footer class="footer">The presenter frame is a footage slot. Scene backgrounds, chips, labels, cards, connectors, and simple non-character icons are editable SVG shapes. Characters and illustrated situations come from credited Storyset SVGs; no images were generated.</footer>
 </main></body></html>'''
     output = ROOT / "index.html"
     output.write_text(html, encoding="utf-8")
@@ -1306,6 +1433,10 @@ def make_zip():
             archive.write(path, "scenes/" + path.name)
         for path in sorted(ASSETS_DIR.glob("*.svg")):
             archive.write(path, "assets/" + path.name)
+        for info in ASSETS.values():
+            source_asset = info["file"]
+            if source_asset.exists() and source_asset.parent != ASSETS_DIR:
+                archive.write(source_asset, source_asset.name)
         for path in sorted(PREVIEW_DIR.glob("*.png")):
             archive.write(path, "previews/" + path.name)
     return out
