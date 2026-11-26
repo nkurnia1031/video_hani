@@ -57,17 +57,17 @@ SCENES = [
         "visual": "Live presenter in medium close-up, surrounded by fast social-comment bubbles; the frame then zooms toward a smartphone.",
         "screen": "Are we using psychology terms correctly?",
         "motion": "Komentar masuk cepat mengitari presenter. Presenter menunjuk kamera; garis zoom mengantar ke layar smartphone.",
-        "voice": "Pembuka mempertanyakan kebiasaan memberi label dari satu momen sehari-hari.",
+        "voice": "Guys, pernah nggak sih, cuma karena seseorang nggak membalas chat, kita langsung bilang, ‘Dia avoidant!’ Teman nggak jadi datang, kita sebut toxic. Lagi sedih beberapa hari, langsung merasa depresi. Atau ketika seseorang nggak sesuai ekspektasi, tiba-tiba kita bilang, ‘That's narcissistic!’ Wait. Are we actually understanding psychology, or are we just throwing psychological terms everywhere? Welcome to Therapy Speak Gone Wrong. Let's talk about it!",
         "assets": [], "roles": ["Frame presenter live dan antarmuka smartphone dibuat sebagai vektor SVG yang bisa diedit."],
         "credits": [], "background": "Warm paper, a blue footage frame, and small coral comment accents.",
     },
     {
         "no": 2, "slug": "what-is-therapy-speak", "time": "00:30–01:05", "title": "What Is Therapy Speak?",
-        "visual": "Two keyframes: a seated person scrolls complete social-media comments as the phone moves to center; a separate transition gathers the highlighted terms into a full-screen hashtag cloud.",
+        "visual": "A reclining person uses a handheld phone; comments then scroll inside a separate centered phone frame before the highlighted terms gather into a full-screen hashtag cloud.",
         "screen": "Comment sentences stay intact; highlight only the term. Transition to #Toxic · #Narcissist · #Gaslighting · #Trauma · #Avoidant · #Depressed.",
         "motion": "02A · 00:30–00:48: push the phone to center and scroll comment sentences, with only the psychology word highlighted. 02B · 00:48–01:05: words lift from the comments and gather into a centered hashtag cloud that fills the frame.",
-        "voice": "Belajar istilah psikologi membantu; menggunakannya tanpa memahami makna dapat membuat kita salah menilai.",
-        "assets": ["feed"], "roles": ["Feed-rafiki.svg: konteks orang duduk menggunakan ponsel.", "Ponsel tengah, komentar lengkap, highlight kata, dan cloud hashtag adalah vektor editable."],
+        "voice": "Di era social media, istilah psikologi semakin sering kita dengar. Mulai dari toxic relationship, gaslighting, trauma, sampai narcissistic behavior. Fenomena ini sering disebut sebagai therapy speak, yaitu penggunaan istilah yang berasal dari dunia psikologi atau terapi dalam percakapan sehari-hari. Actually, there's nothing wrong with learning psychological terms. Justru, memahami psikologi bisa membantu kita mengenali emosi, memahami perilaku, dan membangun hubungan yang lebih sehat. But here's the problem: ketika istilah-istilah tersebut digunakan tanpa memahami maknanya, kita bisa salah menilai diri sendiri maupun orang lain.",
+        "assets": ["feed"], "roles": ["Feed-rafiki.svg: konteks orang bersandar sambil memakai ponsel; bingkai ponsel besar di belakangnya dihilangkan dari komposisi.", "Ponsel tengah, komentar lengkap, highlight kata, dan cloud hashtag adalah vektor editable."],
         "credits": ["feed"], "background": "02A: pale blue social-feed canvas. 02B: separate pale-blue word-cloud transition with a soft cloud-shaped backdrop.",
         "frames": [
             {"code": "02A", "slug": "02a-comment-scroll", "title": "Phone Zoom + Comment Scroll", "time": "00:30–00:48"},
@@ -79,7 +79,7 @@ SCENES = [
         "visual": "Three equal panels: an unanswered message, sadness after a setback, and a disagreement.",
         "screen": "They’re avoidant! · I’m depressed! · You’re gaslighting me!\nOne behavior ≠ a psychological diagnosis.",
         "motion": "Tiga konteks muncul bergantian. Label tampil sebagai kutipan asumsi, lalu banner konteks menutup triptych.",
-        "voice": "Satu situasi tidak menentukan kepribadian; sedih setelah gagal tidak otomatis depresi; beda pendapat tidak otomatis gaslighting.",
+        "voice": "Contoh pertama. Teman kita belum membalas chat selama beberapa jam. Lalu kita langsung menyimpulkan bahwa dia punya avoidant attachment. Padahal, mungkin dia sedang sibuk, kelelahan, atau memang belum sempat membalas. One situation doesn't define someone's entire personality. Contoh kedua. Kita merasa sedih setelah gagal mencapai target. Kemudian langsung menyebut diri sendiri mengalami depresi. Padahal, sedih merupakan emosi manusia yang normal. Kesedihan setelah mengalami kegagalan tidak otomatis menunjukkan adanya gangguan depresi. Contoh ketiga. Seseorang tidak setuju dengan pendapat kita, lalu langsung dituduh melakukan gaslighting. Padahal, disagreement atau perbedaan pendapat tidak otomatis termasuk gaslighting. Kita perlu melihat konteks, pola perilaku, dan bagaimana tindakan tersebut terjadi.",
         "assets": ["texting", "feeling", "couple"], "roles": ["Texting-rafiki.svg: pesan belum dibalas.", "Feeling Blue-rafiki.svg: emosi sedih.", "Couple stress-rafiki.svg: konteks perbedaan pendapat."],
         "credits": ["texting", "feeling", "couple"], "background": "Three softly tinted panels in the shared blue, cream, and coral palette.",
     },
@@ -88,7 +88,7 @@ SCENES = [
         "visual": "A person facing a maze anchors a four-step consequence chain.",
         "screen": "Salah memahami diri · Salah menilai orang lain · Konflik hubungan · Stigma gangguan mental",
         "motion": "Kartu label memicu rangkaian empat kartu dampak; urutannya dibaca kiri ke kanan.",
-        "voice": "Label yang keliru dapat mengaburkan emosi sendiri, memicu konflik, dan memperkuat stigma.",
+        "voice": "Now, why should we care? First, misusing psychological terms can make us misunderstand our own emotions. Normal feelings like sadness, fear, or disappointment can feel like something is seriously wrong with us. Second, it can create unnecessary conflict. Imagine labeling someone as narcissistic just because they disagree with you. And third, it can reinforce stigma. Mental health conditions are complex experiences, not simply labels we can attach to someone based on one behavior. Remember, psychology is more than just a collection of viral terms. It is a scientific discipline that requires context, evidence, and careful understanding.",
         "assets": ["problem"], "roles": ["Problem solving-rafiki.svg: metafora mencari konteks; empat kartu dampak digambar sebagai vektor."],
         "credits": ["problem"], "background": "Cool pale-blue field with coral domino accents.",
     },
@@ -97,7 +97,7 @@ SCENES = [
         "visual": "A digital-document composition supports four concise article cards.",
         "screen": "Pasal 9 · 15 · 28 · 31",
         "motion": "Kartu pasal masuk satu per satu. Pita dasar ilmiah dan kehati-hatian menyatukan keempatnya.",
-        "voice": "Pasal 9: dasar ilmiah dan profesional. Pasal 15: hindari dampak buruk. Pasal 28 dan 31: komunikasi publik dan media yang bertanggung jawab.",
+        "voice": "That's also why ethical responsibility matters when we talk about psychology. Dalam Kode Etik Psikologi Indonesia, ada beberapa prinsip yang relevan dengan fenomena ini. Pasal 9 menekankan bahwa keputusan psikolog dan ilmuwan psikologi harus didasarkan pada pengetahuan ilmiah dan sikap profesional yang telah teruji. Artinya, psychological claims should not be based on assumptions or viral trends alone. Pasal 15 membahas penghindaran dampak buruk. Jadi, informasi psikologi perlu disampaikan dengan mempertimbangkan kemungkinan dampaknya terhadap orang lain. Pasal 28 mengingatkan bahwa pernyataan publik harus disampaikan secara bijaksana, jujur, teliti, dan hati-hati, serta berpedoman pada dasar ilmiah. Sementara itu, Pasal 31 menekankan bahwa pernyataan melalui media harus konsisten dengan kode etik dan didasarkan pada pengetahuan serta praktik psikologi yang tepat. So, sharing psychology is not just about being relatable. It's also about being responsible.",
         "assets": ["document", "research"], "roles": ["Online document-rafiki.svg: halaman digital.", "Research paper-rafiki.svg: konteks dasar ilmiah.", "Empat kartu pasal dibuat sebagai vektor."],
         "credits": ["document", "research"], "background": "Warm white document page on a pale-lilac digital canvas.",
     },
@@ -106,7 +106,7 @@ SCENES = [
         "visual": "A checklist illustration sits beside three practical steps and short Indonesian explanations.",
         "screen": "Understand before you label · Describe, don’t diagnose · Learn, don’t self-diagnose",
         "motion": "Tiga baris checklist dan ikon sederhana muncul satu per satu.",
-        "voice": "Pahami istilah, jelaskan perilaku spesifik, dan ingat bahwa konten sosial bukan pengganti asesmen profesional.",
+        "voice": "So, how can we use psychological terms more wisely? Here's your three-step reminder. Number one, understand before you label. Cari tahu makna suatu istilah sebelum menggunakannya. Number two, describe behavior, not diagnose people. Daripada langsung menyebut seseorang narcissist, lebih baik jelaskan perilaku spesifik yang membuat kita merasa tidak nyaman. Number three, know your limits. Konten media sosial bisa menjadi sumber edukasi awal, but it cannot replace professional assessment. And most importantly, allow yourself and others to experience normal human emotions without immediately turning them into disorders.",
         "assets": ["todo"], "roles": ["To-do list-rafiki.svg: ilustrasi checklist; tiga langkah dan ikon pendamping disusun sebagai vektor."],
         "credits": ["todo"], "background": "Light mint backdrop with blue checklist rows.",
     },
@@ -115,7 +115,7 @@ SCENES = [
         "visual": "A group scene sits beside four everyday emotion icons and the closing title card.",
         "screen": "THINK BEFORE YOU LABEL.\nUnderstand psychology. Use it responsibly.",
         "motion": "Istilah memudar; ekspresi dan judul penutup muncul. Sisakan slot identitas pembuat.",
-        "voice": "Psychology should help us understand people, not reduce them to labels. Stay curious, stay kind.",
+        "voice": "Psychology should help us understand people, not reduce them to labels. So, before you say it, make sure you understand it. Because not every emotion is a disorder, and not every behavior needs a psychological label. Think before you label. Stay curious, stay kind!",
         "assets": ["social"], "roles": ["Social interaction-rafiki.svg: kelompok dengan ekspresi beragam.", "Empat ikon emosi dan end card dibuat sebagai vektor."],
         "credits": ["social"], "background": "Soft peach paper, muted fading labels, and a clear final card.",
     },
@@ -196,12 +196,12 @@ def card(parent, x, y, w, h, fill=WHITE, border="#E3E8ED", radius=22):
     return rect(parent, x, y, w, h, fill, rx=radius, stroke=border, sw=2)
 
 
-def embed_asset(parent, asset_key, x, y, w, h):
+def embed_asset(parent, asset_key, x, y, w, h, omit_ids=()):
     info = ASSETS[asset_key]
     source = ET.parse(info["file"]).getroot()
     vb = source.get("viewBox", "0 0 500 500")
     nested = add(parent, "svg", x=x, y=y, width=w, height=h, viewBox=vb, preserveAspectRatio="xMidYMid meet", overflow="hidden", aria_label=info["title"] + " illustration, Storyset Rafiki")
-    copied = [deepcopy(child) for child in list(source)]
+    copied = [deepcopy(child) for child in list(source) if child.get("id") not in omit_ids]
     mapping = {}
     prefix = "s" + re.sub(r"[^a-z0-9]", "", asset_key.lower()) + "-"
     for child in copied:
@@ -300,7 +300,7 @@ def build_scene_2(scene):
     root = start_scene(scene, "#EDF4FC", BLUE)
     txt(root, 118, 253, "ESTABLISHING  ·  SEATED SCROLL", 14, MUTED, 700, letter=1)
     card(root, 82, 270, 560, 575, WHITE, "#D8E3EE", 22)
-    embed_asset(root, "feed", 94, 282, 536, 548)
+    embed_asset(root, "feed", 94, 282, 536, 548, omit_ids={"freepik--Interface--inject-2"})
     # The original small phone in the illustration leads into the center close-up.
     path(root, "M625,565 C650,548 664,548 684,548", stroke=CORAL, sw=7)
     path(root, "M671,534 L691,548 L671,562 Z", fill=CORAL)
@@ -823,7 +823,7 @@ def make_docx(contact):
         for r in p.runs: set_run(r, 9, INK)
         p = right.add_paragraph()
         p.paragraph_format.space_after = Pt(2)
-        r = p.add_run("VOICE-OVER CUE")
+        r = p.add_run("SCRIPT / VOICE-OVER")
         set_run(r, 8, BLUE_DARK, True)
         p = right.add_paragraph(scene["voice"])
         p.paragraph_format.space_after = Pt(5)
@@ -874,7 +874,7 @@ def make_website():
         rows.append(f'''<article class="board-row">
           <header class="row-meta"><span class="scene-number">{scene['no']:02d}</span><span class="time">{scene['time']}</span><h2>{scene['title']}</h2><p>{scene['visual']}</p></header>
           <div class="row-frame">{frame_markup}</div>
-          <dl class="row-notes"><div><dt>On-screen text</dt><dd>{scene['screen'].replace(chr(10), '<br>')}</dd></div><div><dt>Motion / camera</dt><dd>{scene['motion']}</dd></div><div><dt>Voice-over cue</dt><dd>{scene['voice']}</dd></div><div><dt>Assets & roles</dt><dd>{role_text}</dd><p class="asset-sources">{' · '.join(asset_links) if asset_links else 'Custom editable SVG vectors; no external illustration.'}</p></div></dl>
+          <dl class="row-notes"><div><dt>On-screen text</dt><dd>{scene['screen'].replace(chr(10), '<br>')}</dd></div><div><dt>Motion / camera</dt><dd>{scene['motion']}</dd></div><div><dt>Script / voice-over</dt><dd>{scene['voice']}</dd></div><div><dt>Assets & roles</dt><dd>{role_text}</dd><p class="asset-sources">{' · '.join(asset_links) if asset_links else 'Custom editable SVG vectors; no external illustration.'}</p></div></dl>
         </article>''')
     html = '''<!doctype html>
 <html lang="en">

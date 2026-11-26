@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="scene-title scene-desc">
   <title id="scene-title">Scene 2: Hashtag Cloud Transition</title>
-  <desc id="scene-desc">Two keyframes: a seated person scrolls complete social-media comments as the phone moves to center; a separate transition gathers the highlighted terms into a full-screen hashtag cloud.</desc>
+  <desc id="scene-desc">A reclining person uses a handheld phone; comments then scroll inside a separate centered phone frame before the highlighted terms gather into a full-screen hashtag cloud.</desc>
   <metadata>Scene 2 | Hashtag Cloud Transition | Editable vector storyboard. Existing Storyset art is embedded as SVG; all other visuals are hand-edited vector shapes, not generated images.</metadata>
   <rect x="0" y="0" width="1920" height="1080" fill="#EAF1FB" rx="0" />
   <circle cx="1790" cy="165" r="165" fill="#407BFF" opacity="0.075" />
