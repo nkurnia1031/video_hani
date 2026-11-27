@@ -31,3 +31,14 @@ The `/brag` skill's `chaotic` tone and cue-planning guidance informed the rapid 
 - **02A · 00:30–00:45:** opening explanation and examples of the terms in social media comments.
 - **02B · 00:45–00:55:** learning terms can be useful; the cloud builds and holds through the healthier-relationships line.
 - **02C · 00:55–01:05:** the “But here's the problem” qualification and the final on-screen statements.
+
+## Scene 3 reuse
+
+Scene 3 reuses “Cylinder Five” by Chris Zabriskie for a 50-second reflective underscore. The same CC0 Kenney interface and impact cues from the table above are used for label pops, sage-card landings, color wipes, and the final on-screen statement. No voice recording is embedded.
+
+The animated word-by-word captions reproduce the voice-over exactly as written in `Script Video Kode Etik.pdf`. Their simulated reading pace is an editable timing guide, not a recorded performance.
+
+- **03A · 01:05–01:20:** unanswered message, assumption label, and the “Padahal…” correction.
+- **03B · 01:20–01:35:** sadness after a missed target, assumption label, and normal-emotion correction.
+- **03C · 01:35–01:50:** disagreement, gaslighting label, and context correction.
+- **03D · 01:50–01:55:** final statement, “One behavior ≠ A psychological diagnosis.”

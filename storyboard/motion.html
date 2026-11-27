@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Motion graphic Scene 2 Therapy Speak Gone Wrong, dibuat sebagai komposisi HyperFrames yang seekable dan editable.">
+  <meta name="description" content="Animasi storyboard Scene 2 dan Scene 3 Therapy Speak Gone Wrong, dibuat sebagai komposisi HyperFrames yang seekable dan editable.">
   <meta name="theme-color" content="#2A1F2D">
   <link rel="icon" href="data:,">
-  <title>Scene 02 · Motion — Therapy Speak Gone Wrong</title>
+  <title>Animasi Storyboard — Therapy Speak Gone Wrong</title>
   <style>
     :root {
       color-scheme: dark;
@@ -34,7 +34,7 @@
     .lede { max-width: 340px; margin: 0 0 5px; color: var(--muted); font-size: 14px; line-height: 1.65; }
     .player-shell { overflow: hidden; border: 1px solid rgb(255 246 236 / 19%); border-radius: 20px; background: #160F19; box-shadow: 0 30px 100px rgb(0 0 0 / 30%); }
     .stage { position: relative; overflow: hidden; aspect-ratio: 16 / 9; background: var(--plum); }
-    .poster { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: var(--cream); }
+    .poster { position: absolute; z-index: 2; inset: 0; width: 100%; height: 100%; object-fit: contain; background: var(--cream); }
     hyperframes-player { position: relative; z-index: 1; display: block; width: 100%; height: 100%; aspect-ratio: 16 / 9; }
     .stage[data-live="true"] .poster { display: none; }
     .status-row { display: flex; min-height: 42px; align-items: center; justify-content: space-between; gap: 12px; padding: 0 18px; color: var(--muted); font-size: 12px; background: #211725; }
@@ -53,6 +53,7 @@
     .error { display: none; color: #FFB7A3; }
     .error[data-visible="true"] { display: inline; }
     .beats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 9px; padding: 12px 16px 16px; background: #211725; }
+    .beats-four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
     .beat { display: grid; grid-template-columns: 42px 1fr; align-items: center; gap: 10px; min-height: 66px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 12px; background: rgb(255 246 236 / 3%); color: var(--cream); text-align: left; cursor: pointer; transition: border-color .18s ease, background-color .18s ease, transform .18s ease; }
     .beat:hover:not(:disabled) { transform: translateY(-2px); border-color: var(--peach); }
     .beat[aria-current="step"] { border-color: var(--mustard); background: rgb(242 177 52 / 9%); }
@@ -66,6 +67,8 @@
     .notes p { max-width: 720px; margin: 0; }
     .source-link { color: var(--cream); font-weight: 700; text-underline-offset: 4px; }
     .source-link:hover { color: var(--mustard); }
+    .scene-heading { max-width: 760px; margin: 0; font-size: clamp(30px, 4vw, 50px); line-height: 1.02; letter-spacing: -.045em; }
+    .scene-caption-note { margin: 12px 0 0; color: var(--muted); font-size: 11px; line-height: 1.6; }
     .footer { display: flex; justify-content: space-between; gap: 24px; padding: 18px 0 24px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; line-height: 1.6; }
     @media (max-width: 680px) {
       .page { width: min(100% - 28px, 1320px); }
@@ -78,6 +81,7 @@
       .lede { margin-top: 16px; font-size: 13px; }
       .player-shell { border-radius: 13px; }
       .beats { gap: 6px; padding: 9px 9px 12px; }
+      .beats-four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .beat { display: block; min-height: 74px; padding: 8px; }
       .beat-code { width: 29px; height: 27px; margin-bottom: 6px; border-radius: 7px; font-size: 9px; }
       .beat-copy strong { font-size: 10px; }
@@ -100,16 +104,16 @@
   <div class="page">
     <header class="topbar">
       <a class="brand" href="index.html" style="text-decoration:none">
-        <span class="mark" aria-hidden="true">02</span><span>THERAPY SPEAK GONE WRONG</span>
+        <span class="mark" aria-hidden="true">02+03</span><span>THERAPY SPEAK GONE WRONG</span>
       </a>
-      <nav class="nav" aria-label="Navigasi"><a href="index.html">Storyboard</a><a href="hyperframes/index.html">Komposisi</a></nav>
+      <nav class="nav" aria-label="Navigasi"><a href="index.html">Storyboard</a><a href="#scene-02">Scene 2</a><a href="#scene-03">Scene 3</a><a href="hyperframes/index.html">Komposisi</a></nav>
     </header>
     <main>
       <section class="intro" aria-labelledby="page-title">
         <div><p class="eyebrow">Motion graphic · Scene 02 · 00:30—01:05</p><h1 id="page-title">Dari scroll<br>ke label.</h1></div>
         <p class="lede">Komentar gaslighting membesar di sisi kiri saat disebut VO. Hashtag kemudian memenuhi layar, lalu dua kalimat penutup mengikuti alur VO dalam rangkaian tween 35 detik.</p>
       </section>
-      <section class="player-shell" aria-label="Pemutar animasi Scene 2">
+      <section class="player-shell" id="scene-02" aria-label="Pemutar animasi Scene 2">
         <div class="stage">
           <img class="poster" src="previews/scene-02a-comment-scroll.png" alt="">
           <hyperframes-player id="motion-player" src="hyperframes/index.html?v=hyperframes-20261127-static-head" width="1920" height="1080" aria-label="Animasi Scene 2: ruang dengan guliran komentar, cloud words, dan dua pesan penutup"></hyperframes-player>
@@ -134,99 +138,157 @@
         <p>Ilustrasi ruang, sofa, dan karakter berasal dari aset SVG Storyset Feed · Rafiki. Animasi dibangun dari layer SVG yang bisa diedit; tidak ada gambar baru yang dihasilkan.<br>Musik: “Cylinder Five” oleh Chris Zabriskie, ambient minimal berlisensi CC BY 4.0. Audio mengikuti aksinya: pop komentar, rekaman badai untuk cloud hashtag, dan soft hit untuk teks akhir.</p>
         <a class="source-link" href="https://github.com/nkurnia1031/video_hani/tree/main/storyboard/hyperframes">Buka source HyperFrames ↗</a>
       </div>
+      <section class="intro" id="scene-03" aria-labelledby="scene-03-title" style="margin-top:clamp(54px,8vw,100px)">
+        <div><p class="eyebrow">Motion graphic · Scene 03 · 01:05—01:55</p><h2 class="scene-heading" id="scene-03-title">When normal emotions become labels.</h2></div>
+        <p class="lede">Tiga contoh tetap berdiri sendiri: chat belum dibalas, sedih setelah gagal, lalu beda pendapat. Caption VO muncul kata demi kata sebagai simulasi tempo; label dan koreksi masuk pada kalimat yang tepat.</p>
+      </section>
+      <section class="player-shell" id="scene-03-player-shell" aria-label="Pemutar animasi Scene 3">
+        <div class="stage" id="scene-03-stage">
+          <img class="poster" src="previews/scene-03a-case-01-avoidant.png" alt="">
+          <hyperframes-player id="motion-player-scene-03" src="hyperframes/scene-03/index.html?v=scene3-word-captions-20261127" width="1920" height="1080" aria-label="Animasi Scene 3 dengan tiga case terpisah dan caption simulasi VO kata demi kata"></hyperframes-player>
+        </div>
+        <div class="status-row">
+          <span class="status" id="player-status-scene-03" data-state="loading" role="status" aria-live="polite">Memuat pemutar HyperFrames…</span>
+          <span class="error" id="player-error-scene-03" data-visible="false"></span>
+        </div>
+        <div class="transport" aria-label="Kontrol animasi Scene 3">
+          <button class="control primary" id="play-toggle-scene-03" type="button" disabled>Putar</button>
+          <button class="control" id="restart-scene-03" type="button" disabled>Ulangi</button>
+          <label class="scrub-wrap"><span class="sr-only">Posisi animasi Scene 3</span><input class="scrubber" id="scrubber-scene-03" type="range" min="0" max="50" step="0.05" value="0" aria-label="Posisi animasi Scene 3" disabled></label>
+          <output class="time-readout" id="time-readout-scene-03" for="scrubber-scene-03">00:00 / 00:50</output>
+        </div>
+        <nav class="beats beats-four" id="beats-scene-03" aria-label="Lompat ke bagian Scene 3">
+          <button class="beat" type="button" data-seek="0" aria-current="step" disabled><span class="beat-code">03A</span><span class="beat-copy"><strong>Chat belum dibalas</strong><small>01:05—01:20</small></span></button>
+          <button class="beat" type="button" data-seek="15" disabled><span class="beat-code">03B</span><span class="beat-copy"><strong>Sedih setelah gagal</strong><small>01:20—01:35</small></span></button>
+          <button class="beat" type="button" data-seek="30" disabled><span class="beat-code">03C</span><span class="beat-copy"><strong>Beda pendapat</strong><small>01:35—01:50</small></span></button>
+          <button class="beat" type="button" data-seek="45" disabled><span class="beat-code">03D</span><span class="beat-copy"><strong>Pesan akhir</strong><small>01:50—01:55</small></span></button>
+        </nav>
+      </section>
+      <div class="notes">
+        <p>Caption VO menyalin naskah “Script Video Kode Etik.pdf” kata demi kata. Waktu highlight adalah simulasi awal agar tempo VO dan perpindahan visual mudah ditinjau; tidak ada rekaman voice-over yang ditanamkan. Musik ambient dan SFX terpisah dari VO.<br>Visual memakai empat SVG Scene 3 yang sudah ada. Karakter tidak digambar atau digenerasi ulang; kartu dan caption bergerak sebagai layer komposisi.</p>
+        <a class="source-link" href="https://github.com/nkurnia1031/video_hani/tree/main/storyboard/hyperframes/scene-03">Buka source HyperFrames Scene 3 ↗</a>
+      </div>
     </main>
     <footer class="footer">
-      <span><a href="https://storyset.com/illustration/feed/rafiki" target="_blank" rel="noreferrer">Feed · Rafiki / Storyset</a> · ilustrasi sumber dengan atribusi.</span>
+      <span><a href="https://storyset.com/illustration/feed/rafiki" target="_blank" rel="noreferrer">Feed · Rafiki</a> · Scene 02; <a href="https://storyset.com/illustration/texting/rafiki" target="_blank" rel="noreferrer">Texting · Rafiki</a>, <a href="https://storyset.com/illustration/student-stress/rafiki" target="_blank" rel="noreferrer">Student Stress · Rafiki</a>, dan <a href="https://storyset.com/illustration/couple-stress/rafiki" target="_blank" rel="noreferrer">Couple Stress · Rafiki</a> · Scene 03. Aset ilustrasi dipakai dengan atribusi.</span>
       <span>Audio: <a href="https://chriszabriskie.com/cylinders/" target="_blank" rel="noreferrer">“Cylinder Five” · Chris Zabriskie</a> · <a href="https://chriszabriskie.com/use/" target="_blank" rel="noreferrer">CC BY 4.0</a> · <a href="https://freesound.org/people/szelestamas/sounds/638873/" target="_blank" rel="noreferrer">Storm 01 · Freesound/ szelestamas · CC0</a> · <a href="https://kenney.nl/support" target="_blank" rel="noreferrer">Kenney · CC0</a></span>
       <span>Player web oleh <a href="https://hyperframes.app/docs/5-packages/player" target="_blank" rel="noreferrer">HyperFrames</a> · <a href="index.html">Kembali ke storyboard</a></span>
     </footer>
   </div>
   <script>
-    const player = document.querySelector("#motion-player");
-    const stage = document.querySelector(".stage");
-    const poster = document.querySelector(".poster");
-    const status = document.querySelector("#player-status");
-    const error = document.querySelector("#player-error");
-    const beats = Array.from(document.querySelectorAll(".beat"));
-    const starts = [0, 15, 25];
-    const playButton = document.querySelector("#play-toggle");
-    const restartButton = document.querySelector("#restart");
-    const scrubber = document.querySelector("#scrubber");
-    const timeReadout = document.querySelector("#time-readout");
-    let duration = 35;
-    let activeBeat = -1;
+    const playerConfigs = [
+      {
+        player: document.querySelector("#motion-player"),
+        stage: document.querySelector("#scene-02 .stage"),
+        poster: document.querySelector("#scene-02 .poster"),
+        status: document.querySelector("#player-status"),
+        error: document.querySelector("#player-error"),
+        beats: Array.from(document.querySelectorAll("#scene-02 .beat")),
+        starts: [0, 15, 25],
+        duration: 35,
+        playButton: document.querySelector("#play-toggle"),
+        restartButton: document.querySelector("#restart"),
+        scrubber: document.querySelector("#scrubber"),
+        timeReadout: document.querySelector("#time-readout"),
+      },
+      {
+        player: document.querySelector("#motion-player-scene-03"),
+        stage: document.querySelector("#scene-03-stage"),
+        poster: document.querySelector("#scene-03-stage .poster"),
+        status: document.querySelector("#player-status-scene-03"),
+        error: document.querySelector("#player-error-scene-03"),
+        beats: Array.from(document.querySelectorAll("#beats-scene-03 .beat")),
+        starts: [0, 15, 30, 45],
+        duration: 50,
+        playButton: document.querySelector("#play-toggle-scene-03"),
+        restartButton: document.querySelector("#restart-scene-03"),
+        scrubber: document.querySelector("#scrubber-scene-03"),
+        timeReadout: document.querySelector("#time-readout-scene-03"),
+      },
+    ];
 
-    function setStatus(state, message) { status.dataset.state = state; status.textContent = message; }
     function formatTime(value) {
       const seconds = Math.max(0, Math.floor(value));
       return String(Math.floor(seconds / 60)).padStart(2, "0") + ":" + String(seconds % 60).padStart(2, "0");
     }
-    function updateBeat(time) {
-      const index = time < 15 ? 0 : time < 25 ? 1 : 2;
-      if (activeBeat === index) return;
-      activeBeat = index;
-      beats.forEach((button, i) => button.setAttribute("aria-current", i === index ? "step" : "false"));
-    }
-    function updateControls(time) {
-      const current = Math.min(duration, Math.max(0, Number(time) || 0));
-      scrubber.value = String(current);
-      timeReadout.value = formatTime(current) + " / " + formatTime(duration);
-      timeReadout.textContent = timeReadout.value;
-      updateBeat(current);
-    }
-    function beginAt(time) {
-      if (!player.ready) return;
-      if (player.paused) player.play();
-      player.seek(time);
-      updateControls(time);
+
+    function connectPlayer(config) {
+      const { player, stage, poster, status, error, beats, starts, playButton, restartButton, scrubber, timeReadout } = config;
+      let activeBeat = -1;
+
+      function setStatus(state, message) { status.dataset.state = state; status.textContent = message; }
+      function updateBeat(time) {
+        const index = starts.reduce((active, start, i) => time >= start ? i : active, 0);
+        if (activeBeat === index) return;
+        activeBeat = index;
+        beats.forEach((button, i) => button.setAttribute("aria-current", i === index ? "step" : "false"));
+      }
+      function updateControls(time) {
+        const current = Math.min(config.duration, Math.max(0, Number(time) || 0));
+        scrubber.value = String(current);
+        timeReadout.value = formatTime(current) + " / " + formatTime(config.duration);
+        timeReadout.textContent = timeReadout.value;
+        updateBeat(current);
+      }
+      function beginAt(time) {
+        if (!player.ready) return;
+        if (player.paused) player.play();
+        player.seek(time);
+        updateControls(time);
+      }
+
+      player.addEventListener("ready", event => {
+        config.duration = event.detail && event.detail.duration ? event.detail.duration : config.duration;
+        scrubber.max = String(config.duration);
+        playButton.disabled = false;
+        restartButton.disabled = false;
+        scrubber.disabled = false;
+        beats.forEach(button => { button.disabled = false; });
+        updateControls(player.currentTime);
+        setStatus("ready", "Siap diputar · " + Math.round(config.duration) + " detik");
+      });
+      player.addEventListener("timeupdate", event => {
+        const time = event.detail && typeof event.detail.currentTime === "number" ? event.detail.currentTime : player.currentTime;
+        updateControls(time);
+      });
+      player.addEventListener("play", () => {
+        playerConfigs.forEach(other => {
+          if (other.player !== player && other.player.ready && !other.player.paused) other.player.pause();
+        });
+        stage.dataset.live = "true";
+        poster.hidden = true;
+        playButton.textContent = "Jeda";
+        playButton.setAttribute("aria-label", "Jeda animasi");
+        setStatus("ready", "Animasi sedang berjalan");
+      });
+      player.addEventListener("pause", () => {
+        playButton.textContent = "Putar";
+        playButton.setAttribute("aria-label", "Putar animasi");
+        setStatus("ready", "Animasi dijeda");
+      });
+      player.addEventListener("ended", () => {
+        playButton.textContent = "Putar lagi";
+        playButton.setAttribute("aria-label", "Putar ulang animasi");
+        setStatus("ready", "Selesai · putar kembali atau pilih bagian");
+      });
+      player.addEventListener("error", event => {
+        const message = event.detail && event.detail.message ? event.detail.message : "Komposisi gagal dimuat.";
+        setStatus("error", "Pemutar tidak dapat dimuat");
+        error.textContent = message;
+        error.dataset.visible = "true";
+      });
+      playButton.addEventListener("click", () => {
+        if (player.paused) {
+          if (player.currentTime >= config.duration - 0.05) player.seek(0);
+          player.play();
+        } else player.pause();
+      });
+      restartButton.addEventListener("click", () => beginAt(0));
+      scrubber.addEventListener("input", () => beginAt(Number(scrubber.value)));
+      beats.forEach((button, index) => button.addEventListener("click", () => beginAt(starts[index])));
     }
 
-    player.addEventListener("ready", event => {
-      duration = event.detail && event.detail.duration ? event.detail.duration : 35;
-      scrubber.max = String(duration);
-      playButton.disabled = false;
-      restartButton.disabled = false;
-      scrubber.disabled = false;
-      beats.forEach(button => { button.disabled = false; });
-      updateControls(player.currentTime);
-      setStatus("ready", "Siap diputar · " + Math.round(duration) + " detik");
-    });
-    player.addEventListener("timeupdate", event => {
-      const time = event.detail && typeof event.detail.currentTime === "number" ? event.detail.currentTime : player.currentTime;
-      updateControls(time);
-    });
-    player.addEventListener("play", () => {
-      stage.dataset.live = "true";
-      poster.hidden = true;
-      playButton.textContent = "Jeda";
-      playButton.setAttribute("aria-label", "Jeda animasi");
-      setStatus("ready", "Animasi sedang berjalan");
-    });
-    player.addEventListener("pause", () => {
-      playButton.textContent = "Putar";
-      playButton.setAttribute("aria-label", "Putar animasi");
-      setStatus("ready", "Animasi dijeda");
-    });
-    player.addEventListener("ended", () => {
-      playButton.textContent = "Putar lagi";
-      playButton.setAttribute("aria-label", "Putar ulang animasi");
-      setStatus("ready", "Selesai · putar kembali atau pilih scene");
-    });
-    player.addEventListener("error", event => {
-      const message = event.detail && event.detail.message ? event.detail.message : "Komposisi gagal dimuat.";
-      setStatus("error", "Pemutar tidak dapat dimuat");
-      error.textContent = message;
-      error.dataset.visible = "true";
-    });
-    playButton.addEventListener("click", () => {
-      if (player.paused) {
-        if (player.currentTime >= duration - 0.05) player.seek(0);
-        player.play();
-      } else player.pause();
-    });
-    restartButton.addEventListener("click", () => beginAt(0));
-    scrubber.addEventListener("input", () => beginAt(Number(scrubber.value)));
-    beats.forEach((button, index) => button.addEventListener("click", () => beginAt(starts[index])));
+    playerConfigs.forEach(connectPlayer);
   </script>
 </body>
 </html>

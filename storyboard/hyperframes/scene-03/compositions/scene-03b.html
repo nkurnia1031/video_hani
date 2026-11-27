@@ -1,0 +1,97 @@
+<!doctype html>
+<template>
+  <style>
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; }
+    #root { position: relative; width: 1920px; height: 1080px; overflow: hidden; background: transparent; }
+    svg.scene-artwork { position: absolute; inset: 0; display: block; width: 1920px; height: 1080px; overflow: hidden; }
+    .source-image, .case-card, .focus-ring { transform-box: fill-box; transform-origin: center; }
+    .caption-box { position: absolute; z-index: 5; left: 7%; right: 7%; bottom: 58px; min-height: 136px; display: flex; align-items: center; justify-content: center; padding: 18px 30px; border: 2px solid rgb(255 246 236 / 24%); border-radius: 22px; background: rgb(42 31 45 / 94%); color: #FFF6EC; opacity: 0; overflow: hidden; }
+    .caption-group { position: absolute; inset: 15px 30px; display: flex; flex-direction: column; justify-content: center; width: auto; opacity: 0; }
+    .caption-line { display: flex; align-items: center; width: 100%; min-height: 43px; white-space: nowrap; overflow: visible; font: 700 36px/1.22 Arial, Helvetica, sans-serif; letter-spacing: -.015em; max-width: 1600px; }
+    .caption-word { display: inline-block; flex: 0 0 auto; width: 0; max-width: 1600px; margin: 0; overflow: hidden; white-space: nowrap; opacity: 0; }
+    .word-ink { display: inline-block; padding: 0 .035em; color: #FFF6EC; background: transparent; transform-origin: 50% 70%; }
+
+  </style>
+  <div id="root" data-composition-id="scene-03b" data-width="1920" data-height="1080">
+    <svg class="scene-artwork" xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-label="Case 2 · Sadness after failure animation">
+      <defs><clipPath id="scene-03b-art-clip" clipPathUnits="userSpaceOnUse"><rect x="0" y="0" width="1024" height="1080" /></clipPath></defs>
+      <rect x="0" y="0" width="1920" height="1080" fill="#DCEFE4" />
+      <g id="scene-03b-source-viewport" clip-path="url(#scene-03b-art-clip)" data-layout-allow-overflow="true">
+        <image id="scene-03b-source-image" class="source-image" href="assets/scenes/scene-03b-case-02-depressed.svg" x="0" y="0" width="1920" height="1080" preserveAspectRatio="none" />
+      </g>
+      <rect id="scene-03b-right-cover" x="1024" y="0" width="896" height="1080" fill="#DCEFE4" />
+      <circle id="scene03b-target-focus" class="focus-ring" cx="453" cy="160" r="48" fill="none" stroke="#E4572E" stroke-width="8" opacity="0" aria-hidden="true" />
+
+      <g id="scene-03b-wrong-label" class="case-card" opacity="0">
+        <rect x="1054" y="298" width="770" height="146" fill="#E4572E" rx="28" />
+        <text x="1439" y="390" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="50" font-weight="700" text-anchor="middle">I&#x27;m depressed!</text>
+      </g>
+      <g id="scene-03b-correction-card" class="case-card" opacity="0">
+        <rect x="1054" y="574" width="770" height="178" fill="#7FB89A" rx="28" />
+        <text x="1112" y="635" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" text-anchor="start" letter-spacing="1.4">REALITANYA</text>
+        <text x="1439" y="690" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="600" text-anchor="middle">Sedih setelah gagal itu</text>
+        <text x="1439" y="731" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="600" text-anchor="middle">emosi yang normal.</text>
+      </g>
+      <rect id="scene-03b-entry-wipe" x="0" y="0" width="1920" height="1080" fill="#DCEFE4" />
+      <rect id="scene-03b-exit-wipe" x="0" y="0" width="0" height="1080" fill="#FCE9C2" />
+    </svg>
+    <div class="caption-box" id="scene-03b-caption-box" aria-label="Caption simulasi, teks VO persis dari Script Video Kode Etik.pdf">
+    <div class="caption-group" data-layout-allow-overlap="true" id="scene-03b-caption-01" data-caption-start="0.38" data-caption-duration="3.48">
+      <div class="caption-line"><span class="caption-word" data-layout-allow-overflow="true" id="scene-03b-word-001" data-word="Contoh"><span class="word-ink">Contoh</span></span><span class="caption-word" data-layout-allow-overflow="true" id="scene-03b-word-002" data-word="kedua."><span class="word-ink">kedua.</span></span><span class="caption-word" data-layout-allow-overflow="true" id="scene-03b-word-003" data-word="Kita"><span class="word-ink">Kita</span></span><span class="caption-word" data-layout-allow-overflow="true" id="scene-03b-word-004" data-word="merasa"><span class="word-ink">merasa</span></span><span class="caption-word" data-layout-allow-overflow="true" id="scene-03b-word-005" data-word="sedih"><span class="word-ink">sedih</span></span><span class="caption-word" data-layout-allow-overflow="true" id="scene-03b-word-006" data-word="setelah"><span class="word-ink">setelah</span></span><span class="caption-word" data-layout-allow-overflow="true" id="scene-03b-word-007" data-word="gagal"><span class="word-ink">gagal</span></span></div>
+      <div class="caption-line"><span class="caption-word" data-layout-allow-overflow="true" id="scene-03b-word-008" data-word="mencapai"><span class="word-ink">mencapai</span></span><span class="caption-word" data-layout-allow-overflow="true" id="scene-03b-word-009" data-word="target."><span class="word-ink">target.</span></span></div>
+    </div>
+    <div class="caption-group" data-layout-allow-overlap="true" id="scene-03b-caption-02" data-caption-start="3.94" data-caption-duration="2.66">
+      <div class="caption-line"><span class="caption-word" data-layout-allow-overflow="true" id="scene-03b-word-010" data-word="Kemudian"><span class="word-ink">Kemudian</span></span><span class="caption-word" data-layout-allow-overflow="true" id="scene-03b-word-011" data-word="langsung"><span class="word-ink">langsung</span></span><span class="caption-word" data-layout-allow-overflow="true" id="scene-03b-word-012" data-word="menyebut"><span class="word-ink">menyebut</span></span><span class="caption-word" data-layout-allow-overflow="true" id="scene-03b-word-013" data-word="diri"><span class="word-ink">diri</span></span><span class="caption-word" data-layout-allow-overflow="true" id="scene-03b-word-014" data-word="sendiri"><span class="word-ink">sendiri</span></span><span class="caption-word" data-layout-allow-overflow="true" id="scene-03b-word-015" data-word="mengalami"><span class="word-ink">mengalami</span></span></div>
+      <div class="caption-line"><span class="caption-word" data-layout-allow-overflow="true" id="scene-03b-word-016" data-word="depresi."><span class="word-ink">depresi.</span></span></div>
+    </div>
+    <div class="caption-group" data-layout-allow-overlap="true" id="scene-03b-caption-03" data-caption-start="6.72" data-caption-duration="3.13">
+      <div class="caption-line"><span class="caption-word" data-layout-allow-overflow="true" id="scene-03b-word-017" data-word="Padahal,"><span class="word-ink">Padahal,</span></span><span class="caption-word" data-layout-allow-overflow="true" id="scene-03b-word-018" data-word="sedih"><span class="word-ink">sedih</span></span><span class="caption-word" data-layout-allow-overflow="true" id="scene-03b-word-019" data-word="merupakan"><span class="word-ink">merupakan</span></span><span class="caption-word" data-layout-allow-overflow="true" id="scene-03b-word-020" data-word="emosi"><span class="word-ink">emosi</span></span><span class="caption-word" data-layout-allow-overflow="true" id="scene-03b-word-021" data-word="manusia"><span class="word-ink">manusia</span></span><span class="caption-word" data-layout-allow-overflow="true" id="scene-03b-word-022" data-word="yang"><span class="word-ink">yang</span></span><span class="caption-word" data-layout-allow-overflow="true" id="scene-03b-word-023" data-word="normal."><span class="word-ink">normal.</span></span></div>
+    </div>
+    <div class="caption-group" data-layout-allow-overlap="true" id="scene-03b-caption-04" data-caption-start="10.02" data-caption-duration="4.72">
+      <div class="caption-line"><span class="caption-word" data-layout-allow-overflow="true" id="scene-03b-word-024" data-word="Kesedihan"><span class="word-ink">Kesedihan</span></span><span class="caption-word" data-layout-allow-overflow="true" id="scene-03b-word-025" data-word="setelah"><span class="word-ink">setelah</span></span><span class="caption-word" data-layout-allow-overflow="true" id="scene-03b-word-026" data-word="mengalami"><span class="word-ink">mengalami</span></span><span class="caption-word" data-layout-allow-overflow="true" id="scene-03b-word-027" data-word="kegagalan"><span class="word-ink">kegagalan</span></span><span class="caption-word" data-layout-allow-overflow="true" id="scene-03b-word-028" data-word="tidak"><span class="word-ink">tidak</span></span><span class="caption-word" data-layout-allow-overflow="true" id="scene-03b-word-029" data-word="otomatis"><span class="word-ink">otomatis</span></span></div>
+      <div class="caption-line"><span class="caption-word" data-layout-allow-overflow="true" id="scene-03b-word-030" data-word="menunjukkan"><span class="word-ink">menunjukkan</span></span><span class="caption-word" data-layout-allow-overflow="true" id="scene-03b-word-031" data-word="adanya"><span class="word-ink">adanya</span></span><span class="caption-word" data-layout-allow-overflow="true" id="scene-03b-word-032" data-word="gangguan"><span class="word-ink">gangguan</span></span><span class="caption-word" data-layout-allow-overflow="true" id="scene-03b-word-033" data-word="depresi."><span class="word-ink">depresi.</span></span></div>
+    </div>
+    </div>
+  </div>
+  <script>
+    window.__timelines = window.__timelines || {};
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#scene-03b-source-image", { x: -28, opacity: 0 }, { x: 0, opacity: 1, duration: 0.82, ease: "power3.out" }, 0)
+      .to("#scene-03b-source-image", { y: -7, duration: 12.8, ease: "sine.inOut" }, 1)
+      .to("#scene-03b-entry-wipe", { attr: { width: 0 }, duration: 0.68, ease: "power3.inOut" }, 0)
+      .fromTo("#scene-03b-caption-box", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.24, ease: "power3.out" }, 0.1)
+      .fromTo("#scene-03b-wrong-label", { opacity: 0, x: 105, y: -8, scale: 0.84, rotation: -2 }, { opacity: 1, x: 0, y: 0, scale: 1, rotation: 0, duration: 0.62, ease: "back.out(1.45)" }, 6.04)
+      .fromTo("#scene-03b-correction-card", { opacity: 0, y: 48, scale: 0.94 }, { opacity: 1, y: 0, scale: 1, duration: 0.58, ease: "back.out(1.25)" }, 7.12)
+      .to("#scene-03b-exit-wipe", { attr: { width: 1920 }, duration: 0.34, ease: "power3.inOut" }, 14.64);
+    tl.fromTo("#scene03b-target-focus", { opacity: 0, scale: 0.72 }, { opacity: 0.9, scale: 1, duration: 0.3, ease: "back.out(1.5)" }, 1.25)
+      .to("#scene03b-target-focus", { opacity: 0, scale: 1.22, duration: 0.42, ease: "power2.out" }, 2.12);
+    const captionGroups = Array.from(document.querySelectorAll("#scene-03b-caption-box .caption-group"));
+    captionGroups.forEach(group => {
+      const start = Number(group.dataset.captionStart);
+      const duration = Number(group.dataset.captionDuration);
+      const lines = Array.from(group.querySelectorAll(".caption-line"));
+      const words = Array.from(group.querySelectorAll(".caption-word"));
+      const widths = words.map(word => Math.ceil(word.querySelector(".word-ink").getBoundingClientRect().width) + 9);
+      lines.forEach(line => {
+        const lineWords = Array.from(line.querySelectorAll(".caption-word"));
+        const textWidth = lineWords.reduce((sum, word) => sum + Math.ceil(word.querySelector(".word-ink").getBoundingClientRect().width) + 9, 0) - 9;
+        line.style.paddingLeft = Math.max(0, (line.clientWidth - textWidth) / 2) + "px";
+      });
+      const step = duration / Math.max(words.length, 1);
+      tl.fromTo(group, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.18, ease: "power3.out" }, start);
+      words.forEach((word, index) => {
+        const at = start + step * index;
+        const ink = word.querySelector(".word-ink");
+        tl.to(word, { width: widths[index], opacity: 1, duration: Math.min(0.17, step * 0.78), ease: "power3.out" }, at);
+        tl.fromTo(ink, { color: "#F2B134", scale: 1.12 }, { color: "#FFF6EC", scale: 1, duration: 0.22, ease: "back.out(1.45)" }, at + 0.1);
+      });
+      tl.to(group, { opacity: 0, y: -8, duration: 0.16, ease: "power2.in" }, start + duration)
+        .set(group, { opacity: 0, visibility: "hidden" }, start + duration + 0.16);
+    });
+    tl.to("#scene-03b-caption-box", { opacity: 0, y: -10, duration: 0.2, ease: "power2.in" }, 14.76)
+      .set("#scene-03b-caption-box", { opacity: 0, visibility: "hidden" }, 14.98);
+    window.__timelines["scene-03b"] = tl;
+  </script>
+</template>
