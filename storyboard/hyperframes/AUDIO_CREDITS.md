@@ -2,11 +2,11 @@
 
 ## Music
 
-- **Track:** Happy Beats / Business Moves, Vol. 10
-- **Artist:** Sascha Ende
-- **Source:** [ende.app](https://ende.app/en)
-- **License:** [Creative Commons Attribution 4.0](https://ende.app/en/standard-license). The artist makes attribution optional; this project credits the track in the motion page.
-- **Use:** 35-second music bed, faded at the beginning and end. Set to 0.14 under the continuous Scene 2 narration; the voice recording itself is not embedded in this composition.
+- **Track:** “Cylinder Five,” from *Cylinders* (2014)
+- **Artist:** Chris Zabriskie
+- **Source:** [Artist's album page](https://chriszabriskie.com/cylinders/) · [downloaded audio file](https://commons.wikimedia.org/wiki/File:Chris_Zabriskie_-_05_-_Cylinder_Five.ogg)
+- **License:** [Creative Commons Attribution 4.0](https://chriszabriskie.com/use/). Credit: “Cylinder Five” by Chris Zabriskie, from *Cylinders*, licensed under CC BY 4.0.
+- **Use:** 35-second underscore, starting 1.3 seconds into the source and fading at the beginning and end. The slow, minimal ambient bed replaces the upbeat track. Volume is 0.14 beneath the continuous Scene 2 narration; the voice recording itself is not embedded in this composition.
 
 ## Sound effects
 
@@ -14,11 +14,15 @@ The sound effects are from [Kenney](https://kenney.nl/) and licensed CC0 / publi
 
 | File | Use |
 | --- | --- |
-| `assets/sfx/casino/card-slide-1.ogg` | The fast comment-feed flick in Scene 02A |
+| `assets/sfx/casino/card-slide-8.ogg` | Comment pop-out landing in Scene 02A; middle hashtag fill wave; first closing statement in 02C |
+| `assets/sfx/casino/card-slide-6.ogg` | Fast comment-feed scroll in Scene 02A; second closing statement in 02C |
+| `assets/sfx/casino/card-slide-2.ogg` | First swish as the hashtag cloud begins filling the screen |
+| `assets/sfx/casino/card-slide-4.ogg` | Final hero-word wave in the hashtag cloud |
 | `assets/sfx/impact/impactSoft_medium_001.ogg` | Plum iris transition into Scene 02B |
-| `assets/sfx/interface/glitch_002.ogg` | Tiny digital accent on the first hero hashtag |
-| `assets/sfx/impact/impactPunch_medium_001.ogg` | Impact as the final hero hashtag lands |
+| `assets/sfx/impact/impactPunch_medium_001.ogg` | Accent as the final hero hashtag lands |
 | `assets/sfx/impact/impactSoft_medium_004.ogg` | Mustard iris transition into Scene 02C |
+
+Swishes peak on or one frame after their matching tween moment. The hashtag build uses three spaced accents rather than a sound on every word, so the dense animation remains readable.
 
 ## Motion reference
 
