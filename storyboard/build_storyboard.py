@@ -295,7 +295,7 @@ SCENES[3].update({
     "motion": "Transisi objek tetap mengalir: bubble self-label menjadi awan pikiran dan debat → berubah menjadi cap NARSISTIK → cap menyebar sebagai post dan rantai notifikasi → berakhir pada Dina sendirian dengan bubble ‘...’ dan teks layar. Raka tidak muncul di frame 4D.",
     "voice": "Now, why should we care? First, misusing psychological terms can make us misunderstand our own emotions. Normal feelings like sadness, fear, or disappointment can feel like something is seriously wrong with us. Second, it can create unnecessary conflict. Imagine labeling someone as narcissistic just because they disagree with you. And third, it can reinforce stigma. Mental health conditions are complex experiences, not simply labels we can attach to someone based on one behavior. Remember, psychology is more than just a collection of viral terms. It is a scientific discipline that requires context, evidence, and careful understanding.",
     "assets": ["coworkers"],
-    "roles": ["4A memakai Raka_Rig.svg hasil rigging proyek, dipose duduk di kursi pada meja; tangan menempel di pelipis. Meja, kursi, target, dan bubble adalah layer SVG terpisah. 4B, 4B2, dan 4C tetap memakai ilustrasi dasar dengan Raka dan Dina bersama.", "4B dan 4B2 · Co-workers · Rafiki: karakter Raka dan Dina di rapat serta cap NARSISTIK. Bubble dialog 4B tanpa panah/garis penghubung; cap tetap kesimpulan Raka, bukan diagnosis.", "4C · Post peringatan dan rantai notifikasi dibuat sebagai layer SVG editable di sisi kanan komposisi.", "4D · Co-workers · Rafiki Dina tetap menjadi satu-satunya karakter; wash cream, area meja yang ditutup, bubble ‘...’, notifikasi tak terjawab, bayangan label memudar, dan teks penutup adalah layer komposisi terpisah."],
+    "roles": ["4A · Co-workers · Rafiki: Raka sendiri di ruang kantor setelah Dina dihilangkan dari komposisi. Kartu target dan label pikiran adalah overlay terpisah.", "4B dan 4B2 · Co-workers · Rafiki: karakter Raka dan Dina di rapat serta cap NARSISTIK. Bubble dialog 4B tanpa panah/garis penghubung; cap tetap kesimpulan Raka, bukan diagnosis.", "4C · Post peringatan dan rantai notifikasi dibuat sebagai layer SVG editable di sisi kanan komposisi.", "4D · Co-workers · Rafiki Dina tetap menjadi satu-satunya karakter; wash cream, area meja yang ditutup, bubble ‘...’, notifikasi tak terjawab, bayangan label memudar, dan teks penutup adalah layer komposisi terpisah."],
     "credits": ["coworkers"],
     "background": "Palet Opsi B. 4A dan 4C memakai cream, plum, dan terracotta; 4B dan 4B2 mempertahankan palette rapat; 4D memudarkan ruang menjadi cream dan plum. Terracotta hanya menandai label/kesalahan, sage dipakai untuk tanda pemahaman.",
     "frames": [
@@ -1195,98 +1195,32 @@ def embed_raka_puppet(parent, x, y, w, h, pose="hands-on-head", include_ids=None
     return character_art
 
 
-def embed_raka_rig(parent, x, y, w, h):
-    """Place the editable Raka rig in a scene pose without copying the source character art."""
-    rig_svg_path = ROOT / "rigs" / "Raka_Rig.svg"
-    rig_root = ET.parse(rig_svg_path).getroot()
-    rig_group = rig_root.find(f".//{tag('g')}[@id='raka-rig']")
-    if rig_group is None:
-        raise ValueError(f"Missing #raka-rig in {rig_svg_path}")
-
-    stage = add(
-        parent, "svg", id="raka-rigged-self-misunderstanding",
-        x=x, y=y, width=w, height=h, viewBox="170 140 280 290",
-        preserveAspectRatio="xMidYMid meet", overflow="hidden",
-        aria_label="Raka articulated from the editable Raka rig",
-    )
-    character = deepcopy(rig_group)
-    guides = next((node for node in character if node.get("id") == "rig-guides"), None)
-    if guides is not None:
-        character.remove(guides)
-
-    # Scene-specific articulation: hands meet the temples, while the legs keep
-    # their authored proportions and sit behind the desk foreground.
-    pose = {
-        "upper-body": "rotate(7 340 286)",
-        "head": "translate(0 12) rotate(-12 344 205)",
-        "left-shoulder": "rotate(110 316 238)",
-        "left-elbow": "rotate(120 302 269)",
-        "left-wrist": "rotate(45 300 304)",
-        "right-shoulder": "rotate(-95 365 238)",
-        "right-elbow": "rotate(-115 374 269)",
-        "right-wrist": "rotate(-45 382 302)",
-    }
-    for joint_id, transform in pose.items():
-        joint = character.find(f".//*[@id='{joint_id}']")
-        if joint is None:
-            raise ValueError(f"Missing rig joint #{joint_id}")
-        joint.set("transform", transform)
-
-    mouth = character.find(".//*[@id='source-head-48']")
-    if mouth is not None:
-        mouth.set("d", "M333.6,195.4 Q335.8,191.7 338.3,195.2")
-        mouth.set("style", "fill:none;stroke:#263238;stroke-width:1.5;stroke-linecap:round")
-    stage.append(character)
-    return stage
-
-
 def build_story_03a(scene):
-    root = clean_frame(
+    root = continuous_office_base(
         "4A · Raka mislabels his sadness",
-        "Raka sits at his desk with his head lowered and both hands at his temples after missing a work target. A compact thought bubble carries the mistaken self-label.",
-        CREAM,
+        "The same Co-workers office illustration as 4B shows Raka alone after Dina is removed from the composition. Separate target and thought-label overlays carry the 4A beat.",
+        "4A",
+        omit_dina=True,
     )
-    root.find(tag("metadata")).text = (
-        "The character is the editable Raka_Rig.svg developed for this project, derived from the credited Storyset Co-workers · Rafiki illustration. "
-        "The existing head, torso, shoulder, elbow, wrist, hip, knee, ankle, and foot parts remain separate; this frame applies joint transforms and a subtle frown. "
-        "The chair, desk, target card, and thought bubble are independent editable composition layers. No character art was generated."
-    )
-    root.set("data-frame", "4A")
-
-    chair = add(root, "g", id="raka-office-chair")
-    rect(chair, 625, 420, 180, 150, PLUM, rx=32)
-    rect(chair, 642, 438, 146, 110, ESPRESSO, rx=24, opacity=0.35)
-    rect(chair, 588, 548, 282, 25, PLUM, rx=10)
-    path(chair, "M615,573 L602,850 M842,573 L858,850", fill="none", stroke=PLUM, sw=15)
-
-    thought_tail = add(root, "g", id="raka-thought-tail", data_role="animatable-thought-tail")
-    # Keep the thought-cloud tail just left of Raka's hair so it reads as a
-    # connector, not as extra marks on the character's head or raised hands.
-    for cx, cy, radius in [(700, 263, 10), (690, 280, 7), (680, 297, 4)]:
-        circle(thought_tail, cx, cy, radius, PLUM)
-
-    embed_raka_rig(root, 250, 155, 750, 777)
-
-    desk = add(root, "g", id="raka-desk-foreground")
-    rect(desk, 405, 590, 980, 32, PLUM, rx=9)
-    rect(desk, 421, 622, 948, 82, PLUM, opacity=0.86)
-    rect(desk, 438, 622, 914, 13, SAGE)
-    path(desk, "M465,704 L465,950 M1320,704 L1320,950", fill="none", stroke=PLUM, sw=18)
 
     target = add(root, "g", id="missed-target-card")
-    rect(target, 1330, 105, 480, 140, PLUM, rx=22)
-    txt(target, 1365, 145, "TARGET KERJA", 19, CREAM, 700, letter=1.0)
-    txt(target, 1380, 210, "10", 44, CREAM, 700)
-    txt(target, 1435, 208, "target", 18, CREAM, 500)
-    line(target, 1525, 158, 1525, 217, CREAM, 2, opacity=0.45)
-    txt(target, 1552, 210, "6", 44, TERRACOTTA, 700)
-    txt(target, 1605, 208, "tercapai", 18, CREAM, 500)
+    rect(target, 1178, 114, 560, 142, PLUM, rx=22)
+    txt(target, 1210, 155, "TARGET KERJA", 17, CREAM, 700, letter=1.0)
+    txt(target, 1230, 222, "10", 41, CREAM, 700)
+    txt(target, 1294, 217, "target", 15, CREAM, 500)
+    txt(target, 1452, 222, "6", 41, TERRACOTTA, 700)
+    txt(target, 1507, 217, "tercapai", 15, CREAM, 500)
+    line(target, 1392, 172, 1392, 224, CREAM, 2, opacity=0.45)
 
     cloud = add(root, "g", id="raka-small-thought-cloud", data_role="animatable-thought-label")
-    rect(cloud, 720, 90, 560, 162, PLUM, rx=46)
-    txt(cloud, 1000, 146, "Aku depresi. Ada yang salah", 23, CREAM, 700, "middle")
-    txt(cloud, 1000, 179, "banget sama aku.", 23, CREAM, 700, "middle")
-    txt(cloud, 1000, 216, "SEDIH BEBERAPA HARI", 13, PEACH, 700, "middle", letter=0.8)
+    rect(cloud, 850, 324, 536, 154, PLUM, rx=56)
+    for cx, cy, r in [(904, 330, 40), (973, 319, 48), (1052, 318, 49), (1134, 322, 45), (1213, 328, 37), (1280, 337, 26)]:
+        circle(cloud, cx, cy, r, PLUM)
+    for cx, cy, r in [(824, 485, 15), (792, 500, 10), (760, 515, 6)]:
+        circle(cloud, cx, cy, r, PLUM)
+    txt(cloud, 1118, 391, "Aku depresi. Ada yang salah", 24, CREAM, 700, "middle")
+    txt(cloud, 1118, 426, "banget sama aku.", 24, CREAM, 700, "middle")
+    txt(cloud, 1118, 458, "SEDIH BEBERAPA HARI", 13, PEACH, 700, "middle", letter=0.8)
     return root
 
 
@@ -1766,10 +1700,9 @@ def make_docx(contact):
         "Scene 1 memakai objek Character dari People Creating Robot · Rafiki dalam crop setengah badan di tengah. Robot, dekorasi, panel, dan latar dihilangkan; tablet kecil yang menjadi bagian pose perempuan dipertahankan. Tidak ada pointer atau bingkai presenter. Audit per objek: dari 41 drawable Character, enam terpotong crop dan enam path pakaian biru diwarnai Cream; 29/41 (70,7%) tetap utuh. Kartu komentar memakai nama samaran Naya, Bagas, Rani, dan Dito; tiga kutipan bersumber publik dan satu bertanda tiruan.",
         "Scene 2B kini berupa word cloud Caveat 56 hashtag: enam istilah naskah dan lima puluh pemicu, dengan ukuran 26–208 px, rotasi acak, tumpang tindih, dan tiga hero term di tengah.",
         "Scene 3 memisahkan case avoidant, depresi, dan gaslighting. Label terracotta muncul lebih dulu; koreksi sage dikelompokkan terpisah untuk animasi saat VO mengatakan ‘Padahal...’. Latar case memakai peach, sage, dan mustard muda sesuai naskah.",
-        "Scene 4 berlangsung 40 detik dalam urutan baru 4A, 4B, 4B2, 4C, 4D; VO tetap naskah. 4A memakai hasil rig Raka_Rig.svg dalam pose duduk di meja; 4B, 4B2, dan 4C tetap memakai ilustrasi bersama Raka dan Dina. Panah/garis penghubung di 4B dihapus. Di 4C post peringatan menyebar sebagai notifikasi grup; 4D hanya menampilkan Dina dan teks ‘Don't reduce people to labels.’ Tidak ada objek domino di frame Scene 4.",
+        "Scene 4 berlangsung 40 detik dalam urutan baru 4A, 4B, 4B2, 4C, 4D; VO tetap naskah. 4A kembali memakai ilustrasi kantor Co-workers · Rafiki dengan Dina dihilangkan; 4B, 4B2, dan 4C tetap memakai ilustrasi bersama Raka dan Dina. Panah/garis penghubung di 4B dihapus. Di 4C post peringatan menyebar sebagai notifikasi grup; 4D hanya menampilkan Dina dan teks ‘Don't reduce people to labels.’ Tidak ada objek domino di frame Scene 4.",
         "Semua frame mandiri memuat hanya komposisi animasi, latar, source illustration, overlay, properti, dan teks layar. Judul board, waktu, footer, legenda, kredit aset, dan catatan produksi ditempatkan di luar artwork.",
-        "Raka Rig tersedia sebagai SVG terpisah, manifest JSON, dan halaman preview dengan kontrol joint, batas rotasi, serta transisi pose memakai tween: torso, kepala, bahu, siku, pergelangan, pinggul, lutut, dan pergelangan kaki. Sambungan lengan dan kaki memakai overlap bridge untuk mengurangi celah saat ditekuk. Manifest mencatat hierarki parent-child dan urutan layer. Rig hanya memakai Raka dari Co-workers · Rafiki; kursi dan gelas tidak disertakan. 14/42 drawable tubuh diadaptasi atau diwarnai ulang (33,3%); 28/42 tetap utuh.",
-        "4A memakai karakter hasil rig Raka_Rig.svg dari Co-workers · Rafiki; pose duduk, meja, kursi, target, dan bubble menjadi komposisi editable. 4B, 4B2, dan 4C memakai ilustrasi dasar utuh dengan Raka dan Dina bersama. Semua panah/garis penghubung dialog pada 4B dihapus. Tidak ada objek domino di Scene 4. Dina di 4D tetap sendiri; 57/158 elemen drawable berubah atau dihilangkan (36,1%), sehingga 101/158 tetap utuh.",
+        "4A memakai ilustrasi kantor Co-workers · Rafiki dengan Dina dihilangkan. Kartu target dan gelembung pikiran adalah overlay terpisah. 4B, 4B2, dan 4C memakai ilustrasi dasar utuh dengan Raka dan Dina bersama. Semua panah/garis penghubung dialog pada 4B dihapus. Tidak ada objek domino di Scene 4. Dina di 4D tetap sendiri; 57/158 elemen drawable berubah atau dihilangkan (36,1%), sehingga 101/158 tetap utuh.",
         "Student Stress · Rafiki di Scene 3B mempertahankan 220/254 drawable elements (86,6%); 34 elemen (13,4%) berubah atau dihilangkan. Air mata, penanda target, label, dan koreksi adalah overlay terpisah.",
         "Semua karakter berasal dari SVG sumber yang dapat diunduh; chat, label, background, post, dan teks adalah layer vektor editable. Tidak ada gambar yang dihasilkan atau karakter yang digambar dari nol.",
     ]
@@ -2049,12 +1982,12 @@ def make_website():
 </style>
 </head>
 <body><main class="shell">
-<header class="hero"><div><div class="eyebrow">Editable production board · Layout C</div><h1>Therapy Speak Gone Wrong</h1><p>Seven scenes in sixteen animation keyframes. Scene 1 is one continuous presenter scene with four sourced, anonymized public comments. Scene 3 keeps three independent examples. Scene 4 follows one 40-second cause-and-effect story through five beats and ends with Dina alone. The narration stays verbatim from the script. Every frame is an editable SVG.</p></div><div class="hero-actions"><a class="action primary" href="Storyboard_Therapy_Speak_Gone_Wrong.docx" download>Download Word storyboard</a><a class="action" href="motion.html">Open Scene 2 motion study</a><a class="action" href="rigs/index.html">Open Raka character rig</a><a class="action" href="Storyboard_Editable_Source.zip" download>Download editable source bundle</a></div></header>
+<header class="hero"><div><div class="eyebrow">Editable production board · Layout C</div><h1>Therapy Speak Gone Wrong</h1><p>Seven scenes in sixteen animation keyframes. Scene 1 is one continuous presenter scene with four sourced, anonymized public comments. Scene 3 keeps three independent examples. Scene 4 follows one 40-second cause-and-effect story through five beats and ends with Dina alone. The narration stays verbatim from the script. Every frame is an editable SVG.</p></div><div class="hero-actions"><a class="action primary" href="Storyboard_Therapy_Speak_Gone_Wrong.docx" download>Download Word storyboard</a><a class="action" href="motion.html">Open Scene 2 motion study</a><a class="action" href="Storyboard_Editable_Source.zip" download>Download editable source bundle</a></div></header>
 <div class="style-strip"><strong>Opsi B · Warm Peach &amp; Mustard</strong><span class="swatch"><i style="background:#3d2645"></i>deep plum</span><span class="swatch"><i style="background:#7fb89a"></i>sage</span><span class="swatch"><i style="background:#e4572e"></i>terracotta</span><span class="swatch"><i style="background:#f2b134"></i>mustard</span><span class="swatch"><i style="background:#ffc4a3"></i>peach</span><span class="swatch"><i style="background:#fff6ec"></i>cream</span><span class="swatch"><i style="background:#2a1f2d"></i>espresso</span><span>· terracotta for mistaken labels; sage for corrections</span></div>
 <section class="board" aria-label="Seven scene production board">
 ''' + "\n".join(rows) + '''
 </section>
-<section class="audit"><div><h2>Visual audit</h2><p>Scene 3 remains three independent case frames and a centered closing frame. Scene 4A uses the project Raka_Rig.svg character, posed seated at a desk with hands at his temples; 4B, 4B2, and 4C use the full Co-workers illustration with Raka and Dina together. Dialog connector arrows are removed from 4B. Beat-specific labels, the warning post, and notifications are separate overlays. Domino tiles have been removed from every Scene 4 frame. Frame 4D contains Dina alone. Dina's Co-workers source in 4D changes 57/158 drawable elements (36.1%), leaving 101/158 unchanged. Scene 1 uses only the Character object from People Creating Robot · Rafiki. Of its 41 drawable elements, six are cropped and six clothing paths recolored; 29/41 (70.7%) remain unchanged. The robot, external props, panels, background, presenter frame, and pointer are removed; the small tablet integrated with the woman’s pose remains. Four public-comment groups use pseudonyms. Scene 2B contains 56 independently editable handwritten hashtags (six script terms plus fifty related terms) with accelerating appearance timings. All retained frames were rendered and inspected.</p></div><div><h2>Editing &amp; attribution</h2><p>Open or download each SVG to edit its vector layers and text. The source bundle contains the HTML board, all SVG frames, source illustration assets, and the Caveat font/license. The <a href="https://storyset.com/illustration/people-creating-robot/rafiki" target="_blank" rel="noreferrer">People Creating Robot · Rafiki</a> presenter and <a href="https://storyset.com/illustration/co-workers/rafiki" target="_blank" rel="noreferrer">Co-workers · Rafiki</a> and <a href="https://storyset.com/illustration/student-stress/rafiki" target="_blank" rel="noreferrer">Student Stress · Rafiki</a> are free with attribution. <a href="https://github.com/google/fonts/tree/main/ofl/caveat" target="_blank" rel="noreferrer">Caveat</a> is distributed under SIL OFL 1.1; cite Storyset when publishing and review the <a href="https://storyset.com/terms" target="_blank" rel="noreferrer">Storyset terms</a>.</p></div></section>
+<section class="audit"><div><h2>Visual audit</h2><p>Scene 3 remains three independent case frames and a centered closing frame. Scene 4A uses the Co-workers office illustration with Dina omitted; 4B, 4B2, and 4C use the full Co-workers illustration with Raka and Dina together. Target and thought-label cards remain separate editable overlays. Dialog connector arrows are removed from 4B. The warning post and notifications are separate overlays. Domino tiles have been removed from every Scene 4 frame. Frame 4D contains Dina alone. Dina's Co-workers source in 4D changes 57/158 drawable elements (36.1%), leaving 101/158 unchanged. Scene 1 uses only the Character object from People Creating Robot · Rafiki. Of its 41 drawable elements, six are cropped and six clothing paths recolored; 29/41 (70.7%) remain unchanged. The robot, external props, panels, background, presenter frame, and pointer are removed; the small tablet integrated with the woman’s pose remains. Four public-comment groups use pseudonyms. Scene 2B contains 56 independently editable handwritten hashtags (six script terms plus fifty related terms) with accelerating appearance timings. All retained frames were rendered and inspected.</p></div><div><h2>Editing &amp; attribution</h2><p>Open or download each SVG to edit its vector layers and text. The source bundle contains the HTML board, all SVG frames, source illustration assets, and the Caveat font/license. The <a href="https://storyset.com/illustration/people-creating-robot/rafiki" target="_blank" rel="noreferrer">People Creating Robot · Rafiki</a> presenter and <a href="https://storyset.com/illustration/co-workers/rafiki" target="_blank" rel="noreferrer">Co-workers · Rafiki</a> and <a href="https://storyset.com/illustration/student-stress/rafiki" target="_blank" rel="noreferrer">Student Stress · Rafiki</a> are free with attribution. <a href="https://github.com/google/fonts/tree/main/ofl/caveat" target="_blank" rel="noreferrer">Caveat</a> is distributed under SIL OFL 1.1; cite Storyset when publishing and review the <a href="https://storyset.com/terms" target="_blank" rel="noreferrer">Storyset terms</a>.</p></div></section>
 <footer class="footer">Scene 1 isolates the woman Character object from the credited Storyset illustration in a centered half-body crop, without the robot, external props, pointer, or presenter frame. Her small held tablet stays as part of the source pose. Scene backgrounds, public-comment cards, cloud words, labels, cards, connectors, notifications, and text are editable SVG layers. No images were generated.</footer>
 </main></body></html>'''
     output = ROOT / "index.html"
@@ -2092,12 +2025,6 @@ def make_zip():
                 if not path.is_file() or ".hyperframes" in path.parts or "node_modules" in path.parts:
                     continue
                 archive.write(path, "hyperframes/" + path.relative_to(hyperframes).as_posix())
-        rigs = ROOT / "rigs"
-        if rigs.exists():
-            for path in sorted(rigs.rglob("*")):
-                if not path.is_file() or any(part in {"__pycache__", "node_modules", "evidence"} for part in path.parts):
-                    continue
-                archive.write(path, "rigs/" + path.relative_to(rigs).as_posix())
     return out
 
 
