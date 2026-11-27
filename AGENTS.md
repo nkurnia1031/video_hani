@@ -25,3 +25,7 @@ This is a single-context repo. See `docs/agents/domain.md`.
 - A standalone scene frame contains only the on-screen composition: its background, source illustration, props, overlays, and text that are part of the animation.
 - Keep production-board titles, section labels, timestamps, footers, legends, asset credits, and production notes outside the scene artwork, in the storyboard page or document.
 - Put the requested on-screen text in the final frame of a scene sequence unless the script calls for it earlier.
+
+### Storyboard animation
+
+- For any storyboard animation, read `docs/agents/story-animation.md` before planning transitions, object entrances, secondary object or body motion, music, or sound effects.
