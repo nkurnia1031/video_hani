@@ -33,19 +33,19 @@ Case backgrounds use peach `#FFE3D3`, sage `#DCEFE4`, and mustard `#FCE9C2`. Cor
 
 ### Scene 4 · Why Does It Matter? · 01:55–02:35
 
-Five consecutive beats show one domino chain. Raka misreads his own sadness; he misjudges Dina during a work disagreement; he applies an unsupported `NARSISTIK` label; the label spreads through the group; Dina ends alone. The visual does not claim that Dina is narcissistic. The original narration is unchanged.
+Five consecutive beats show one cause-and-effect story. Raka misreads his own sadness; he misjudges Dina during a work disagreement; he applies an unsupported `NARSISTIK` label; the label spreads through the group; Dina ends alone. The visual does not claim that Dina is narcissistic. The original narration is unchanged.
 
 | Frame | Time | Duration | Visual / VO cue |
 |---|---|---:|---|
-| 4A | 01:55–02:07 | 12 sec | Raka alone, self-misunderstanding · V0 + V1 |
+| 4A | 01:55–02:07 | 12 sec | Raka and Dina in the shared office illustration; self-label overlay · V0 + V1 |
 | 4B | 02:07–02:12 | 5 sec | Meeting conflict and two replies · V2 |
 | 4B2 | 02:12–02:17 | 5 sec | Raka labels Dina · V3 |
 | 4C | 02:17–02:27 | 10 sec | Raka posts about Dina and the warning spreads · V4 |
 | 4D | 02:27–02:35 | 8 sec | Dina alone with closing text · V5 |
 
-Editable object continuity is thought bubble → dark cloud → debate bubbles → `NARSISTIK` stamp → chat notifications → Dina alone. In 4C, Raka posts the warning, frames it as “Biar yang lain aman,” and removes Dina from the group as notifications spread. Dominoes fall in sequence using mustard, terracotta, plum, and espresso. The closing frame has no table or Raka and contains the requested on-screen text: `Don't reduce people to labels.`
+Frames 4A, 4B, 4B2, and 4C reuse the exact Co-workers · Rafiki office illustration from 4B, with Raka and Dina together in the same poses and setting. Beat-specific target, thought, label, post, and notification graphics remain editable overlays. 4C shows the warning post and group notifications; 4D keeps Dina alone with the requested on-screen text: `Don't reduce people to labels.` No domino tiles appear in any Scene 4 frame.
 
-Raka now uses the same Co-workers · Rafiki source character throughout 03B and Scene 4. The 4A hands-on-head and 4C typing poses adapt nine arm paths and omit the source phone; the same mouth adjustment as 4B is used. Each adapted character keeps 43/54 drawable elements (79.6%) unchanged. No local skeletal-rig tool was available; the editable SVG groups and transform layers are the practical alternative. In 4D, 57/158 drawable source elements change or are omitted (36.1%); 101/158 remain unchanged. Color overlays and the table mask are separate composition layers.
+Scene 4A–4C share the same complete Co-workers · Rafiki base illustration from 4B without changing its characters, poses, or setting. Scene 4D is a separate Dina-only composition; 57/158 drawable source elements change or are omitted (36.1%), leaving 101/158 unchanged.
 
 ## Existing scenes kept in place
 
@@ -59,8 +59,8 @@ Raka now uses the same Co-workers · Rafiki source character throughout 03B and 
 ## Assets, attribution, and visual audit
 
 - [People Creating Robot · Storyset / Rafiki](https://storyset.com/illustration/people-creating-robot/rafiki) supplies the Scene 1 presenter. It is free with attribution. The woman’s 41-element `Character` object has 12 elements changed or cropped (29.3%); 29 remain intact. Other source objects are not included in the scene.
-- [Co-workers · Storyset / Rafiki](https://storyset.com/illustration/co-workers/rafiki) supplies Raka for 03B and 4A, 4B, 4B2, and 4C, plus Dina in 4D. Raka's adapted poses preserve 43/54 source drawables (79.6%) unchanged. In 4D, 57/158 drawable source elements change or are omitted (36.1%), leaving 101/158 unchanged.
-- [Student Stress · Storyset / Rafiki](https://storyset.com/illustration/student-stress/rafiki) supplies the separate school/work setting and desk props in 03B, 4A, and 4C; it no longer supplies a character in Scene 4.
+- [Co-workers · Storyset / Rafiki](https://storyset.com/illustration/co-workers/rafiki) supplies the shared 4A–4C office illustration, including Raka and Dina together, as well as Dina's 4D composition. In 4D, 57/158 drawable source elements change or are omitted (36.1%), leaving 101/158 unchanged.
+- [Student Stress · Storyset / Rafiki](https://storyset.com/illustration/student-stress/rafiki) supplies the separate school setting and desk props in 03B only.
 - Scene 3 illustration sources are credited in the scene artwork and on the web and Word boards. Storyset assets are free with attribution; review the [Storyset terms](https://storyset.com/terms) for publishing.
 - Scene 1 comment excerpts and their public URLs, platform, and access date appear in the web and Word source audit. Cards show pseudonyms rather than source account names; profile photos and platform brands do not appear. The fourth comment is explicitly marked as a synthetic example in the audit.
 - Each standalone scene frame contains only the animation composition, source illustration, props, overlays, and on-screen text. Board titles, timecodes, footers, legends, credits, and production notes stay outside scene artwork.

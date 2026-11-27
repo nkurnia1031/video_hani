@@ -201,20 +201,4 @@
       <tspan x="1124" dy="0">Jangan baper terus, deh.</tspan>
     </text>
   </g>
-  <g id="domino-2-misjudgment" transform="rotate(-14 1689.0 872.0)">
-    <rect x="1650" y="800" width="78" height="144" fill="#E4572E" rx="16" stroke="#E4572E" stroke-width="3" />
-    <line x1="1662" y1="872.0" x2="1716" y2="872.0" stroke="#FFF6EC" stroke-width="3" stroke-linecap="round" />
-    <circle cx="1674.96" cy="836.0" r="6" fill="#FFF6EC" />
-    <circle cx="1703.04" cy="854.72" r="6" fill="#FFF6EC" />
-    <circle cx="1676.52" cy="899.36" r="6" fill="#FFF6EC" />
-    <circle cx="1703.04" cy="918.08" r="6" fill="#FFF6EC" />
-  </g>
-  <g id="domino-3-relationship-conflict" transform="rotate(10 1779.0 896.0)">
-    <rect x="1740" y="824" width="78" height="144" fill="#3D2645" rx="16" stroke="#3D2645" stroke-width="3" />
-    <line x1="1752" y1="896.0" x2="1806" y2="896.0" stroke="#FFF6EC" stroke-width="3" stroke-linecap="round" />
-    <circle cx="1764.96" cy="860.0" r="6" fill="#FFF6EC" />
-    <circle cx="1793.04" cy="878.72" r="6" fill="#FFF6EC" />
-    <circle cx="1766.52" cy="923.36" r="6" fill="#FFF6EC" />
-    <circle cx="1793.04" cy="942.08" r="6" fill="#FFF6EC" />
-  </g>
 </svg>
