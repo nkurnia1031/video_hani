@@ -18,10 +18,9 @@ Kenney effects are CC0 / public domain. Kenney confirms these assets are free fo
 | `assets/sfx/atmosphere/storm-01-building-rumble.ogg` | Recorded wind and thunder rising beneath the hashtag cloud in Scene 02B; the thunder peak lands with the hero-word fill at 18.463 s |
 | `assets/sfx/impact/impactSoft_medium_001.ogg` | Plum iris transition into Scene 02B |
 | `assets/sfx/impact/impactSoft_medium_004.ogg` | Mustard iris transition into Scene 02C |
-| `assets/sfx/interface/drop_002.ogg` | Gentle landing for the first closing statement in Scene 02C |
-| `assets/sfx/impact/impactSoft_medium_002.ogg` | Soft emphasis for the second closing statement in Scene 02C |
+| `assets/sfx/interface/drop_002.ogg` | Matching gentle landing for both closing statements in Scene 02C |
 
-Each sound has a distinct role: a pop for the highlighted comment, natural storm ambience for the dense word cloud, and soft impacts for the closing text. The feed scroll has no separate SFX because the available shuffle did not match the motion. The second closing hit is aligned with the start of its text tween and raised slightly so it reads clearly against the music.
+Each sound has a distinct role: a pop for the highlighted comment, natural storm ambience for the dense word cloud, and the same gentle landing sound for both closing statements. The feed scroll has no separate SFX because the available shuffle did not match the motion.
 
 ## Motion reference
 

@@ -3,14 +3,14 @@
 ## Creative calls
 
 - Replaced the upbeat bed with “Cylinder Five” by Chris Zabriskie, a minimal ambient track. It runs as a quiet bed under the continuous narration, with a 1.3-second source offset and fades at both ends.
-- Kept the short drop on the comment pop-out and the recorded wind-and-thunder excerpt under the hashtag hero words. Removed the feed-scroll shuffle because its texture did not match the motion. The ending uses two restrained soft impacts.
+- Kept the short drop on the comment pop-out and the recorded wind-and-thunder excerpt under the hashtag hero words. Removed the feed-scroll shuffle because its texture did not match the motion. Both closing statements now use the same gentle landing sound at the same level.
 - Kept the short transition impacts. The storm excerpt fades out exactly as the cloud exits, so it does not overlap the transition hit. The existing GSAP tweens are unchanged; cue peaks land on or one frame after their visible beat.
 - Scene 2 remains 35 seconds with the same 02A / 02B / 02C cut points. No voice-over is embedded in the player.
 
 ## What I checked
 
 - HyperFrames `check --json`: `ok: true`; zero errors and zero audio, runtime, layout, or motion warnings. One existing lint warning remains for the size of the 02A composition. Five contrast and six craft warnings remain in the existing dense hashtag artwork and end hold.
-- HyperFrames audio analysis found no clipping or missing media. Cue peaks: comment 5.043 s, recorded storm rumble 18.463 s, transitions 14.554 / 24.554 s, and closing statements 26.003 / 26.954 s. The second closing hit now starts with its text tween and is slightly louder for audibility.
+- HyperFrames audio analysis found no clipping or missing media. Cue peaks: comment 5.043 s, recorded storm rumble 18.463 s, transitions 14.554 / 24.554 s, and closing statements 26.003 / 27.699 s. Both closing cues use the same file, volume, and landing offset after their text tweens.
 - Visually inspected snapshots at the comment, scroll, cloud build, hero-word, and closing-text cues. The cloud begins with a sparse reveal after its iris transition, then fills into the dense hero state; the thunder peak lands as the largest terms fill.
 - Audio was measured, not listened to. No rendered video file was produced in this pass.
 
