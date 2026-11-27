@@ -1702,6 +1702,7 @@ def make_docx(contact):
         "Scene 3 memisahkan case avoidant, depresi, dan gaslighting. Label terracotta muncul lebih dulu; koreksi sage dikelompokkan terpisah untuk animasi saat VO mengatakan ‘Padahal...’. Latar case memakai peach, sage, dan mustard muda sesuai naskah.",
         "Scene 4 berlangsung 40 detik dalam urutan baru 4A, 4B, 4B2, 4C, 4D; VO tetap naskah. 4A memakai basis kantor Co-workers yang sama dengan karakter Dina dihilangkan; 4B, 4B2, dan 4C memakai ilustrasi utuh bersama Raka dan Dina. Panah/garis penghubung di 4B dihapus. Di 4C post peringatan menyebar sebagai notifikasi grup; 4D hanya menampilkan Dina dan teks ‘Don't reduce people to labels.’ Tidak ada objek domino di frame Scene 4.",
         "Semua frame mandiri memuat hanya komposisi animasi, latar, source illustration, overlay, properti, dan teks layar. Judul board, waktu, footer, legenda, kredit aset, dan catatan produksi ditempatkan di luar artwork.",
+        "Raka Rig tersedia sebagai SVG terpisah dan halaman preview dengan kontrol joint: torso, kepala, bahu, siku, pergelangan, pinggul, lutut, dan pergelangan kaki. Rig hanya memakai Raka dari Co-workers · Rafiki; kursi dan gelas tidak disertakan. 14/42 drawable tubuh diadaptasi atau diwarnai ulang (33,3%); 28/42 tetap utuh.",
         "4A memakai basis Co-workers · Rafiki yang sama dengan objek karakter Dina dihilangkan. 4B, 4B2, dan 4C memakai ilustrasi dasar utuh dengan Raka dan Dina bersama. Semua panah/garis penghubung dialog pada 4B dihapus. Tidak ada objek domino di Scene 4. Dina di 4D tetap sendiri; 57/158 elemen drawable berubah atau dihilangkan (36,1%), sehingga 101/158 tetap utuh.",
         "Student Stress · Rafiki di Scene 3B mempertahankan 220/254 drawable elements (86,6%); 34 elemen (13,4%) berubah atau dihilangkan. Air mata, penanda target, label, dan koreksi adalah overlay terpisah.",
         "Semua karakter berasal dari SVG sumber yang dapat diunduh; chat, label, background, post, dan teks adalah layer vektor editable. Tidak ada gambar yang dihasilkan atau karakter yang digambar dari nol.",
@@ -1982,7 +1983,7 @@ def make_website():
 </style>
 </head>
 <body><main class="shell">
-<header class="hero"><div><div class="eyebrow">Editable production board · Layout C</div><h1>Therapy Speak Gone Wrong</h1><p>Seven scenes in sixteen animation keyframes. Scene 1 is one continuous presenter scene with four sourced, anonymized public comments. Scene 3 keeps three independent examples. Scene 4 follows one 40-second cause-and-effect story through five beats and ends with Dina alone. The narration stays verbatim from the script. Every frame is an editable SVG.</p></div><div class="hero-actions"><a class="action primary" href="Storyboard_Therapy_Speak_Gone_Wrong.docx" download>Download Word storyboard</a><a class="action" href="motion.html">Open Scene 2 motion study</a><a class="action" href="Storyboard_Editable_Source.zip" download>Download editable source bundle</a></div></header>
+<header class="hero"><div><div class="eyebrow">Editable production board · Layout C</div><h1>Therapy Speak Gone Wrong</h1><p>Seven scenes in sixteen animation keyframes. Scene 1 is one continuous presenter scene with four sourced, anonymized public comments. Scene 3 keeps three independent examples. Scene 4 follows one 40-second cause-and-effect story through five beats and ends with Dina alone. The narration stays verbatim from the script. Every frame is an editable SVG.</p></div><div class="hero-actions"><a class="action primary" href="Storyboard_Therapy_Speak_Gone_Wrong.docx" download>Download Word storyboard</a><a class="action" href="motion.html">Open Scene 2 motion study</a><a class="action" href="rigs/index.html">Open Raka character rig</a><a class="action" href="Storyboard_Editable_Source.zip" download>Download editable source bundle</a></div></header>
 <div class="style-strip"><strong>Opsi B · Warm Peach &amp; Mustard</strong><span class="swatch"><i style="background:#3d2645"></i>deep plum</span><span class="swatch"><i style="background:#7fb89a"></i>sage</span><span class="swatch"><i style="background:#e4572e"></i>terracotta</span><span class="swatch"><i style="background:#f2b134"></i>mustard</span><span class="swatch"><i style="background:#ffc4a3"></i>peach</span><span class="swatch"><i style="background:#fff6ec"></i>cream</span><span class="swatch"><i style="background:#2a1f2d"></i>espresso</span><span>· terracotta for mistaken labels; sage for corrections</span></div>
 <section class="board" aria-label="Seven scene production board">
 ''' + "\n".join(rows) + '''
@@ -2025,6 +2026,12 @@ def make_zip():
                 if not path.is_file() or ".hyperframes" in path.parts or "node_modules" in path.parts:
                     continue
                 archive.write(path, "hyperframes/" + path.relative_to(hyperframes).as_posix())
+        rigs = ROOT / "rigs"
+        if rigs.exists():
+            for path in sorted(rigs.rglob("*")):
+                if not path.is_file() or "__pycache__" in path.parts:
+                    continue
+                archive.write(path, "rigs/" + path.relative_to(rigs).as_posix())
     return out
 
 

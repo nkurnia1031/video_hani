@@ -66,4 +66,8 @@ Scene 4A reuses the Co-workers · Rafiki base with Dina omitted. Frames 4B–4C 
 - Each standalone scene frame contains only the animation composition, source illustration, props, overlays, and on-screen text. Board titles, timecodes, footers, legends, credits, and production notes stay outside scene artwork.
 - The updated 03B and Scene 4 SVG/PNG frames were rendered and visually inspected for character continuity and composition.
 
+## Raka character rig
+
+[Open the interactive rig viewer](rigs/index.html) to pose Raka with joint sliders and presets, including a waving pose. The [editable SVG rig](rigs/Raka_Rig.svg) separates the head, torso, upper/lower arms, hands, thighs, calves, and feet; torso, shoulder, elbow, wrist, hip, knee, and ankle pivots have named IDs and coordinates. The source chair and cup are excluded. New limb bridges match the Co-workers · Rafiki style. Of 42 person drawables, 14 are adapted or recolored (33.3%) and 28 remain unchanged. The source is [Co-workers · Storyset / Rafiki](https://storyset.com/illustration/co-workers/rafiki), free with attribution.
+
 Open the [live editable web storyboard](https://nkurnia1031.github.io/video_hani/storyboard/), download the [Word storyboard](Storyboard_Therapy_Speak_Gone_Wrong.docx), or inspect the [visual-audit contact sheet](previews/contact-sheet.png). All scene SVGs and text groups are editable; no generated character art was used.
