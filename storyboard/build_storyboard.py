@@ -295,7 +295,7 @@ SCENES[3].update({
     "motion": "Transisi objek tetap mengalir: bubble self-label menjadi awan pikiran dan debat → berubah menjadi cap NARSISTIK → cap menyebar sebagai post dan rantai notifikasi → berakhir pada Dina sendirian dengan bubble ‘...’ dan teks layar. Raka tidak muncul di frame 4D.",
     "voice": "Now, why should we care? First, misusing psychological terms can make us misunderstand our own emotions. Normal feelings like sadness, fear, or disappointment can feel like something is seriously wrong with us. Second, it can create unnecessary conflict. Imagine labeling someone as narcissistic just because they disagree with you. And third, it can reinforce stigma. Mental health conditions are complex experiences, not simply labels we can attach to someone based on one behavior. Remember, psychology is more than just a collection of viral terms. It is a scientific discipline that requires context, evidence, and careful understanding.",
     "assets": ["coworkers"],
-    "roles": ["4A · Co-workers · Rafiki: Raka sendiri di ruang kantor setelah Dina dihilangkan dari komposisi. Kartu target dan label pikiran adalah overlay terpisah.", "4B dan 4B2 · Co-workers · Rafiki: karakter Raka dan Dina di rapat serta cap NARSISTIK. Bubble dialog 4B tanpa panah/garis penghubung; cap tetap kesimpulan Raka, bukan diagnosis.", "4C · Post peringatan dan rantai notifikasi dibuat sebagai layer SVG editable di sisi kanan komposisi.", "4D · Co-workers · Rafiki Dina tetap menjadi satu-satunya karakter; wash cream, area meja yang ditutup, bubble ‘...’, notifikasi tak terjawab, bayangan label memudar, dan teks penutup adalah layer komposisi terpisah."],
+    "roles": ["4A · Co-workers · Rafiki: Raka sendiri di meja, kepala menunduk dan kedua tangan memegang kepala. Ponsel dari pose sumber dihilangkan; pose baru mengubah 20/54 (37,0%) elemen karakter, 34 tetap utuh. Palet storyboard tetap dipakai. Pose akhir tetap berupa path SVG yang dapat diedit; referensi pose dibuat dengan Agy. Kartu target dan label pikiran adalah overlay terpisah.", "4B dan 4B2 · Co-workers · Rafiki: karakter Raka dan Dina di rapat serta cap NARSISTIK. Bubble dialog 4B tanpa panah/garis penghubung; cap tetap kesimpulan Raka, bukan diagnosis.", "4C · Post peringatan dan rantai notifikasi dibuat sebagai layer SVG editable di sisi kanan komposisi.", "4D · Co-workers · Rafiki Dina tetap menjadi satu-satunya karakter; wash cream, area meja yang ditutup, bubble ‘...’, notifikasi tak terjawab, bayangan label memudar, dan teks penutup adalah layer komposisi terpisah."],
     "credits": ["coworkers"],
     "background": "Palet Opsi B. 4A dan 4C memakai cream, plum, dan terracotta; 4B dan 4B2 mempertahankan palette rapat; 4D memudarkan ruang menjadi cream dan plum. Terracotta hanya menandai label/kesalahan, sage dipakai untuk tanda pemahaman.",
     "frames": [
@@ -1198,10 +1198,65 @@ def embed_raka_puppet(parent, x, y, w, h, pose="hands-on-head", include_ids=None
 def build_story_03a(scene):
     root = continuous_office_base(
         "4A · Raka mislabels his sadness",
-        "The same Co-workers office illustration as 4B shows Raka alone after Dina is removed from the composition. Separate target and thought-label overlays carry the 4A beat.",
+        "Raka sits alone at the office table, head bowed toward it and both hands on his head after missing his target. Dina is omitted from the composition. Separate target and thought-label overlays carry the 4A beat.",
         "4A",
         omit_dina=True,
     )
+
+    # Use Agy's pose edit as a visual guide, then adjust the original Storyset
+    # Raka vectors so this remains an editable SVG made from the source art.
+    # The existing storyboard base has 54 Raka drawables. This pose update
+    # rotates the complete head, replaces six arm/hand paths, and removes the
+    # handheld phone: 20/54 (37.0%) change or are omitted, while 34 remain
+    # intact from the palette-treated base.
+    raka = next((node for node in root.iter() if node.get("id") == "scoworkers-character-2"), None)
+    if raka is not None:
+        parts = list(raka)
+        for index in range(38, 51):
+            parts[index].set("transform", "rotate(-18 340 218)")
+        for index in (19, 20, 21, 33, 51, 52, 53):
+            raka.remove(parts[index])
+
+        # The source sleeves remain attached to Raka's torso. New forearm
+        # contours follow the Agy pose reference and sit behind those sleeves;
+        # simple palm shapes are placed above the hair so both hands read as
+        # holding his head instead of hovering behind it.
+        left_arm = add(
+            raka, "path",
+            d="M324 225 C314 235 303 251 294 264 Q291 269 287 267 Q283 264 287 259 L304 232 C309 224 313 209 316 198 Q317 192 322 193 Q326 194 325 199 C323 213 322 220 324 225 Z",
+            fill="#ffc3bd",
+        )
+        raka.remove(left_arm)
+        raka.insert(list(raka).index(parts[22]), left_arm)
+        right_arm = add(
+            raka, "path",
+            d="M364 224 C376 235 386 249 389 262 Q390 267 386 270 Q381 272 378 267 C372 257 365 245 358 229 C355 219 354 207 352 197 Q351 192 356 191 Q361 191 362 196 C364 207 365 217 367 222 Z",
+            fill="#ffc3bd",
+        )
+        raka.remove(right_arm)
+        raka.insert(list(raka).index(parts[34]), right_arm)
+        path(
+            raka,
+            "M319 193 Q315 191 316 187 Q316 182 320 180 Q324 178 327 182 L329 185 Q332 183 334 186 Q335 189 331 193 Q327 198 323 198 Z",
+            fill="#ffc3bd",
+        )
+        path(raka, "M320 184 Q323 187 323 191", fill="none", stroke="#d4827d", sw=0.9, opacity=0.7)
+        right_hand = path(
+            raka,
+            "M354 194 Q350 192 351 188 Q351 183 355 181 Q359 179 362 183 L364 186 Q367 184 369 187 Q370 190 366 194 Q362 199 358 199 Z",
+            fill="#ffc3bd",
+        )
+        right_hand.set("transform", "translate(-4 -1)")
+        right_finger_detail = path(raka, "M356 184 Q359 187 359 191", fill="none", stroke="#d4827d", sw=0.9, opacity=0.7)
+        right_finger_detail.set("transform", "translate(-4 -1)")
+
+        root.find(tag("metadata")).text = (
+            "Storyset Co-workers · Rafiki. Dina's separate source character object is omitted. "
+            "Agy-generated pose reference guided the editable vector adjustment of Raka: this pose update changes or omits 20 of 54 "
+            "Raka drawable elements (37.0%), leaving 34 unchanged from the established storyboard base. "
+            "The handheld device is removed; Raka's original face, body, clothing, and furniture remain source SVG paths. "
+            "Target card and thought-label cloud are separate composition layers."
+        )
 
     target = add(root, "g", id="missed-target-card")
     rect(target, 1178, 114, 560, 142, PLUM, rx=22)
@@ -1987,8 +2042,8 @@ def make_website():
 <section class="board" aria-label="Seven scene production board">
 ''' + "\n".join(rows) + '''
 </section>
-<section class="audit"><div><h2>Visual audit</h2><p>Scene 3 remains three independent case frames and a centered closing frame. Scene 4A uses the Co-workers office illustration with Dina omitted; 4B, 4B2, and 4C use the full Co-workers illustration with Raka and Dina together. Target and thought-label cards remain separate editable overlays. Dialog connector arrows are removed from 4B. The warning post and notifications are separate overlays. Domino tiles have been removed from every Scene 4 frame. Frame 4D contains Dina alone. Dina's Co-workers source in 4D changes 57/158 drawable elements (36.1%), leaving 101/158 unchanged. Scene 1 uses only the Character object from People Creating Robot · Rafiki. Of its 41 drawable elements, six are cropped and six clothing paths recolored; 29/41 (70.7%) remain unchanged. The robot, external props, panels, background, presenter frame, and pointer are removed; the small tablet integrated with the woman’s pose remains. Four public-comment groups use pseudonyms. Scene 2B contains 56 independently editable handwritten hashtags (six script terms plus fifty related terms) with accelerating appearance timings. All retained frames were rendered and inspected.</p></div><div><h2>Editing &amp; attribution</h2><p>Open or download each SVG to edit its vector layers and text. The source bundle contains the HTML board, all SVG frames, source illustration assets, and the Caveat font/license. The <a href="https://storyset.com/illustration/people-creating-robot/rafiki" target="_blank" rel="noreferrer">People Creating Robot · Rafiki</a> presenter and <a href="https://storyset.com/illustration/co-workers/rafiki" target="_blank" rel="noreferrer">Co-workers · Rafiki</a> and <a href="https://storyset.com/illustration/student-stress/rafiki" target="_blank" rel="noreferrer">Student Stress · Rafiki</a> are free with attribution. <a href="https://github.com/google/fonts/tree/main/ofl/caveat" target="_blank" rel="noreferrer">Caveat</a> is distributed under SIL OFL 1.1; cite Storyset when publishing and review the <a href="https://storyset.com/terms" target="_blank" rel="noreferrer">Storyset terms</a>.</p></div></section>
-<footer class="footer">Scene 1 isolates the woman Character object from the credited Storyset illustration in a centered half-body crop, without the robot, external props, pointer, or presenter frame. Her small held tablet stays as part of the source pose. Scene backgrounds, public-comment cards, cloud words, labels, cards, connectors, notifications, and text are editable SVG layers. No images were generated.</footer>
+<section class="audit"><div><h2>Visual audit</h2><p>Scene 3 remains three independent case frames and a centered closing frame. In Scene 4A, the Agy-generated pose reference guides a vector edit of Co-workers · Rafiki Raka: 20/54 Raka elements changed or omitted for the pose (37.0%); 34 remain unchanged from the storyboard base. Dina is omitted, the handheld device is removed, and the editable SVG shows Raka bowed toward the table with both hands on his head. Scene 4B, 4B2, and 4C use the full Co-workers illustration with Raka and Dina together. Target and thought-label cards remain separate editable overlays. Dialog connector arrows are removed from 4B. The warning post and notifications are separate overlays. Domino tiles have been removed from every Scene 4 frame. Frame 4D contains Dina alone. Dina's Co-workers source in 4D changes 57/158 drawable elements (36.1%), leaving 101/158 unchanged. Scene 1 uses only the Character object from People Creating Robot · Rafiki. Of its 41 drawable elements, six are cropped and six clothing paths recolored; 29/41 (70.7%) remain unchanged. The robot, external props, panels, background, presenter frame, and pointer are removed; the small tablet integrated with the woman’s pose remains. Four public-comment groups use pseudonyms. Scene 2B contains 56 independently editable handwritten hashtags (six script terms plus fifty related terms) with accelerating appearance timings. All retained frames were rendered and inspected.</p></div><div><h2>Editing &amp; attribution</h2><p>Open or download each SVG to edit its vector layers and text. The source bundle contains the HTML board, all SVG frames, source illustration assets, and the Caveat font/license. The <a href="https://storyset.com/illustration/people-creating-robot/rafiki" target="_blank" rel="noreferrer">People Creating Robot · Rafiki</a> presenter and <a href="https://storyset.com/illustration/co-workers/rafiki" target="_blank" rel="noreferrer">Co-workers · Rafiki</a> and <a href="https://storyset.com/illustration/student-stress/rafiki" target="_blank" rel="noreferrer">Student Stress · Rafiki</a> are free with attribution. <a href="https://github.com/google/fonts/tree/main/ofl/caveat" target="_blank" rel="noreferrer">Caveat</a> is distributed under SIL OFL 1.1; cite Storyset when publishing and review the <a href="https://storyset.com/terms" target="_blank" rel="noreferrer">Storyset terms</a>.</p></div></section>
+<footer class="footer">Scene 1 isolates the woman Character object from the credited Storyset illustration in a centered half-body crop, without the robot, external props, pointer, or presenter frame. Her small held tablet stays as part of the source pose. Scene backgrounds, public-comment cards, cloud words, labels, cards, connectors, notifications, and text are editable SVG layers. Agy provided a pose reference for Scene 4A; the final frame retains editable source-based SVG artwork.</footer>
 </main></body></html>'''
     output = ROOT / "index.html"
     output.write_text(html, encoding="utf-8")
