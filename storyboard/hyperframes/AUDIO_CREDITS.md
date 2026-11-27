@@ -10,19 +10,19 @@
 
 ## Sound effects
 
-The sound effects are from [Kenney](https://kenney.nl/) and licensed CC0 / public domain. Kenney confirms these assets are free for commercial use and do not require attribution at [Kenney Support](https://kenney.nl/support).
+Kenney effects are CC0 / public domain. Kenney confirms these assets are free for commercial use and do not require attribution at [Kenney Support](https://kenney.nl/support). The storm is an excerpt of “Storm 01.wav” by szelestamas, a field recording shared under [CC0](https://creativecommons.org/publicdomain/zero/1.0/) on [Freesound](https://freesound.org/people/szelestamas/sounds/638873/). The project copy is a 9.45-second Vorbis excerpt from approximately 190.0–199.45 seconds of the recording; the timeline uses its first 8.847 seconds and fades it out during the cloud exit.
 
 | File | Use |
 | --- | --- |
-| `assets/sfx/casino/card-slide-8.ogg` | Comment pop-out landing in Scene 02A; middle hashtag fill wave; first closing statement in 02C |
-| `assets/sfx/casino/card-slide-6.ogg` | Fast comment-feed scroll in Scene 02A; second closing statement in 02C |
-| `assets/sfx/casino/card-slide-2.ogg` | First swish as the hashtag cloud begins filling the screen |
-| `assets/sfx/casino/card-slide-4.ogg` | Final hero-word wave in the hashtag cloud |
+| `assets/sfx/interface/drop_001.ogg` | Short pop when the highlighted comment lands in Scene 02A |
+| `assets/sfx/casino/card-shuffle.ogg` | Textured shuffle through the fast comment-feed scroll in Scene 02A |
+| `assets/sfx/atmosphere/storm-01-building-rumble.ogg` | Recorded wind and thunder rising beneath the hashtag cloud in Scene 02B; the thunder peak lands with the hero-word fill at 18.463 s |
 | `assets/sfx/impact/impactSoft_medium_001.ogg` | Plum iris transition into Scene 02B |
-| `assets/sfx/impact/impactPunch_medium_001.ogg` | Accent as the final hero hashtag lands |
 | `assets/sfx/impact/impactSoft_medium_004.ogg` | Mustard iris transition into Scene 02C |
+| `assets/sfx/interface/drop_002.ogg` | Gentle landing for the first closing statement in Scene 02C |
+| `assets/sfx/impact/impactSoft_medium_002.ogg` | Soft emphasis for the second closing statement in Scene 02C |
 
-Swishes peak on or one frame after their matching tween moment. The hashtag build uses three spaced accents rather than a sound on every word, so the dense animation remains readable.
+Each sound now has a distinct role: pop for the comment, shuffle for scrolling, natural storm ambience for the dense word cloud, and soft impacts for the closing text. SFX peaks are aligned to the related tween moments; no effect is repeated on every hashtag.
 
 ## Motion reference
 
