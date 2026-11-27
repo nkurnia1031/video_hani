@@ -23,17 +23,20 @@ ESPRESSO = "#2A1F2D"
 RIG_PACKAGE = {
     "character_id": "raka",
     "rig_type": "svg_rig",
+    "version": 1,
     "coordinate_space": {"viewBox": "170 140 280 290", "units": "svg-user-units"},
+    "side_convention": "left/right mean viewer-left/viewer-right in the neutral SVG; SVG x increases toward viewer-right.",
     "source": "https://storyset.com/illustration/co-workers/rafiki",
     "parts": [
-        {"id": "rig-legs", "kind": "group", "parent": "raka-rig", "layer": 10},
+        {"id": "pelvis", "kind": "skeleton-root", "parent": "raka-rig", "layer": 5},
+        {"id": "rig-legs", "kind": "group", "parent": "pelvis", "layer": 10},
         {"id": "left-hip", "kind": "thigh", "parent": "rig-legs", "layer": 11, "joint": "leftHip"},
         {"id": "left-knee", "kind": "calf", "parent": "left-hip", "layer": 12, "joint": "leftKnee"},
         {"id": "left-ankle", "kind": "foot", "parent": "left-knee", "layer": 13, "joint": "leftAnkle"},
         {"id": "right-hip", "kind": "thigh", "parent": "rig-legs", "layer": 14, "joint": "rightHip"},
         {"id": "right-knee", "kind": "calf", "parent": "right-hip", "layer": 15, "joint": "rightKnee"},
         {"id": "right-ankle", "kind": "foot", "parent": "right-knee", "layer": 16, "joint": "rightAnkle"},
-        {"id": "upper-body", "kind": "torso-root", "parent": "raka-rig", "layer": 20, "joint": "torso"},
+        {"id": "upper-body", "kind": "torso-root", "parent": "pelvis", "layer": 20, "joint": "torso"},
         {"id": "torso", "kind": "shirt", "parent": "upper-body", "layer": 21},
         {"id": "left-shoulder", "kind": "upper-arm", "parent": "upper-body", "layer": 30, "joint": "leftShoulder"},
         {"id": "left-elbow", "kind": "forearm", "parent": "left-shoulder", "layer": 31, "joint": "leftElbow"},
@@ -42,11 +45,11 @@ RIG_PACKAGE = {
         {"id": "right-elbow", "kind": "forearm", "parent": "right-shoulder", "layer": 34, "joint": "rightElbow"},
         {"id": "right-wrist", "kind": "hand", "parent": "right-elbow", "layer": 35, "joint": "rightWrist"},
         {"id": "source-sleeves", "kind": "shirt-sleeves", "parent": "upper-body", "layer": 40},
-        {"id": "neck", "kind": "neck", "parent": "upper-body", "layer": 50},
         {"id": "head", "kind": "head", "parent": "upper-body", "layer": 60, "joint": "head"},
+        {"id": "neck", "kind": "neck", "parent": "head", "layer": 50},
     ],
     "joints": {
-        "torso": {"id": "upper-body", "parent": "raka-rig", "pivot": [340, 286], "rotation": [-12, 12], "label": "Torso"},
+        "torso": {"id": "upper-body", "parent": "pelvis", "pivot": [340, 286], "rotation": [-12, 12], "label": "Torso"},
         "head": {"id": "head", "parent": "upper-body", "pivot": [344, 205], "rotation": [-25, 25], "label": "Kepala"},
         "leftShoulder": {"id": "left-shoulder", "parent": "upper-body", "pivot": [316, 238], "rotation": [-90, 115], "label": "Bahu kiri"},
         "leftElbow": {"id": "left-elbow", "parent": "left-shoulder", "pivot": [302, 269], "rotation": [-115, 120], "label": "Siku kiri"},
@@ -55,10 +58,10 @@ RIG_PACKAGE = {
         "rightElbow": {"id": "right-elbow", "parent": "right-shoulder", "pivot": [374, 269], "rotation": [-115, 120], "label": "Siku kanan"},
         "rightWrist": {"id": "right-wrist", "parent": "right-elbow", "pivot": [382, 302], "rotation": [-45, 45], "label": "Pergelangan kanan"},
         "leftHip": {"id": "left-hip", "parent": "rig-legs", "pivot": [316, 286], "rotation": [-25, 25], "label": "Pinggul kiri"},
-        "leftKnee": {"id": "left-knee", "parent": "left-hip", "pivot": [311, 350], "rotation": [-95, 95], "label": "Lutut kiri"},
+        "leftKnee": {"id": "left-knee", "parent": "left-hip", "pivot": [311, 350], "rotation": [0, 70], "label": "Lutut kiri"},
         "leftAnkle": {"id": "left-ankle", "parent": "left-knee", "pivot": [307, 391], "rotation": [-25, 25], "label": "Pergelangan kaki kiri"},
         "rightHip": {"id": "right-hip", "parent": "rig-legs", "pivot": [349, 286], "rotation": [-25, 25], "label": "Pinggul kanan"},
-        "rightKnee": {"id": "right-knee", "parent": "right-hip", "pivot": [349, 350], "rotation": [-95, 95], "label": "Lutut kanan"},
+        "rightKnee": {"id": "right-knee", "parent": "right-hip", "pivot": [349, 350], "rotation": [-70, 0], "label": "Lutut kanan"},
         "rightAnkle": {"id": "right-ankle", "parent": "right-knee", "pivot": [359, 390], "rotation": [-25, 25], "label": "Pergelangan kaki kanan"},
     },
     "presets": {
@@ -152,8 +155,10 @@ def build_svg():
         parent.append(source_part)
         return source_part
 
+    pelvis = add(rig, "g", id="pelvis", data_rig_part="pelvis", data_layer=5)
+
     # Legs are behind the shirt. Each thigh, calf and foot has its own pivot.
-    legs = add(rig, "g", id="rig-legs", data_layer=10)
+    legs = add(pelvis, "g", id="rig-legs", data_layer=10)
 
     left_hip = add_joint_group(legs, "left-hip", (316, 286), "hip-left")
     left_hip.set("data-layer", "11")
@@ -191,7 +196,7 @@ def build_svg():
 
     # Everything above the hips follows one torso pivot; arms and head keep
     # their own child pivots for independent posing.
-    upper_body = add_joint_group(rig, "upper-body", (340, 286), "torso")
+    upper_body = add_joint_group(pelvis, "upper-body", (340, 286), "torso")
     upper_body.set("data-layer", "20")
 
     # Original shirt silhouette and its source collar remain intact.
@@ -238,13 +243,14 @@ def build_svg():
     part(23, "source-left-sleeve-shade", sleeves)
     part(34, "source-right-sleeve", sleeves)
 
-    # Neck and original face/hair stay grouped separately so the head can turn.
-    neck = add(upper_body, "g", id="neck", data_rig_part="neck")
+    # The neck is a child of the head pivot: both rotate together from the base
+    # of the neck while the shoulder and collar remain on the torso.
+    head = add_joint_group(upper_body, "head", (344, 205), "neck-head")
+    head.set("data-layer", "60")
+    neck = add(head, "g", id="neck", data_rig_part="neck")
     neck.set("data-layer", "50")
     part(36, "source-neck", neck)
     part(37, "source-neck-shade", neck)
-    head = add_joint_group(upper_body, "head", (344, 205), "neck-head")
-    head.set("data-layer", "60")
     for index in range(38, 51):
         part(index, f"source-head-{index}", head)
 
@@ -280,19 +286,22 @@ def write_viewer():
 *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.45 Inter,Arial,sans-serif}
 .shell{width:min(1180px,calc(100% - 36px));margin:36px auto 64px}.top{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:24px}.eyebrow{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--plum)}h1{font-size:clamp(34px,5vw,58px);line-height:1;margin:9px 0;letter-spacing:-.045em}.lead{max-width:690px;color:var(--muted);margin:0}.download{border-radius:999px;padding:12px 16px;background:var(--plum);color:white;text-decoration:none;font-weight:700;white-space:nowrap}
 .layout{display:grid;grid-template-columns:minmax(360px,1fr) minmax(410px,1fr);gap:18px;align-items:stretch}.stage,.panel{border:1px solid var(--line);border-radius:20px;background:var(--white);box-shadow:0 16px 40px #2a1f2d12}.stage{display:grid;place-items:center;min-height:680px;background:radial-gradient(circle at 50% 42%,#f4e7da,white 66%);overflow:hidden}.stage object{width:100%;height:680px;border:0}.panel{padding:22px}.panel-head{display:flex;justify-content:space-between;align-items:center;gap:10px}.panel h2{font-size:19px;margin:0}.status{font-size:11px;background:#e6f1e9;color:#365d47;border-radius:999px;padding:5px 9px;font-weight:700}.presets{display:flex;flex-wrap:wrap;gap:7px;margin:17px 0 20px}.presets button,.tools button{border:1px solid var(--line);border-radius:999px;background:white;color:var(--ink);padding:9px 12px;font:inherit;font-size:12px;font-weight:700;cursor:pointer}.presets button:hover,.tools button:hover{border-color:var(--plum);color:var(--plum)}.control-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px 18px}.control{display:grid;grid-template-columns:1fr auto;gap:3px 8px;align-items:center}.control label{font-size:12px;font-weight:700}.control output{font-variant-numeric:tabular-nums;color:var(--muted);font-size:11px}.control input{grid-column:1/-1;width:100%;accent-color:var(--plum)}.tools{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;padding-top:16px;border-top:1px solid var(--line)}.help{margin:17px 0 0;color:var(--muted);font-size:12px}.credit{margin-top:21px;padding-top:14px;border-top:1px solid var(--line);font-size:11px;color:var(--muted)}.credit a{color:var(--plum);font-weight:700}.joint-toggle{display:flex;align-items:center;gap:7px;color:var(--muted);font-size:12px}.joint-toggle input{accent-color:var(--plum)}.downloads{display:grid;gap:8px;min-width:146px}.download.secondary{background:#fff;color:var(--plum);border:1px solid var(--line);text-align:center}
+.side-note{margin:14px 0 0;padding:9px 11px;border-radius:10px;background:#f7f0e8;color:#64576a;font-size:11px}.notice{min-height:18px;margin:10px 0 0;color:var(--muted);font-size:12px}.notice[data-state="error"]{color:#a53e26;font-weight:700}.notice[data-state="success"]{color:#365d47;font-weight:700}
 @media(max-width:860px){.top{align-items:start;flex-direction:column}.layout{grid-template-columns:1fr}.stage{min-height:570px}.stage object{height:570px}}
 @media(max-width:520px){.shell{width:calc(100% - 22px);margin:18px auto 38px}.panel{padding:16px}.stage{min-height:500px}.stage object{height:500px}.control-grid{grid-template-columns:1fr}.download{white-space:normal}}
 </style></head>
 <body><main class="shell"><header class="top"><div><div class="eyebrow">Editable vector character · Co-workers / Rafiki</div><h1>Raka, siap di-rig.</h1><p class="lead">Pose dasar berdiri. Torso, kepala, bahu, siku, pergelangan, pinggul, lutut, dan mata kaki punya pivot serta batas gerak. Sambungan dilapisi bentuk pengisi agar tetap menyatu saat ditekuk.</p></div><div class="downloads"><a class="download" href="Raka_Rig.svg" download>Unduh SVG rig</a><a class="download secondary" href="Raka_Rig.json" download>Unduh manifest JSON</a></div></header>
 <section class="layout"><div class="stage"><object id="rakaObject" type="image/svg+xml" data="Raka_Rig.svg" aria-label="Raka standing rig preview"></object></div><div class="panel"><div class="panel-head"><h2>Atur pose</h2><span class="status" id="status">Neutral</span></div>
+<p class="side-note" id="sideConvention">Kiri layar dan kanan layar mengacu pada sudut pandang penonton dalam pose netral.</p>
 <div class="presets"><button data-preset="neutral">Berdiri</button><button data-preset="wave">Melambai</button><button data-preset="arms-up">Angkat kedua tangan</button><button data-preset="open">Gesture terbuka</button></div>
 <div class="control-grid" id="controls"></div>
-<div class="tools"><button id="waveMotion">▶ Gerakan lambaian</button><button id="guides">Tampilkan sambungan</button><button id="reset">Reset pose</button><button id="downloadPose">Unduh pose aktif</button></div>
+<div class="tools"><button id="waveMotion">▶ Gerakan lambaian</button><button id="guides">Tampilkan sambungan</button><button id="reset">Reset pose</button><button id="downloadPose">Unduh pose SVG</button><button id="exportPoseJson">Unduh pose JSON</button><button id="loadPoseButton">Impor pose JSON</button><input id="poseFile" type="file" accept="application/json,.json" hidden></div>
+<p class="notice" id="poseNotice" aria-live="polite"></p>
 <p class="help">Viewer membaca pivot dan batas rotasi dari manifest JSON. SVG menyimpan nama group, parent, urutan layer, koordinat pivot, dan batas geraknya agar rig mudah dipindahkan ke Adobe Animate, After Effects, HyperFrames, Anime.js, atau editor SVG lain.</p>
 <div class="credit">Karakter dasar dari <a href="https://storyset.com/illustration/co-workers/rafiki" target="_blank" rel="noreferrer">Co-workers · Rafiki</a>. Kursi dan gelas sumber tidak disertakan; sambungan lengan dan kaki yang tidak tersedia digambar dengan warna dan bentuk yang mengikuti ilustrasi sumber.</div>
 </div></section></main>
 <script>
-const rigPackage=__RIG_PACKAGE__;
+const rigPackage=window.rigPackage=__RIG_PACKAGE__;
 const joints=rigPackage.joints;
 const initial=Object.fromEntries(Object.keys(joints).map(key=>[key,0]));
 const presets=Object.fromEntries(Object.entries(rigPackage.presets).map(([key,pose])=>[key,{...initial,...pose}]));
@@ -310,6 +319,11 @@ document.getElementById('guides').addEventListener('click',()=>{const guide=svgD
 function stopWave(){waveOn=false;if(waveFrame)cancelAnimationFrame(waveFrame);waveFrame=0;document.getElementById('waveMotion').textContent='▶ Gerakan lambaian'}
 document.getElementById('waveMotion').addEventListener('click',()=>{if(waveOn){stopWave();return}applyPose(presets.wave,'Melambai',()=>{waveOn=true;document.getElementById('waveMotion').textContent='■ Hentikan lambaian';const start=performance.now();const tick=now=>{if(!waveOn)return;const swing=Math.sin((now-start)/240)*18;setAngle('rightWrist',swing);waveFrame=requestAnimationFrame(tick)};waveFrame=requestAnimationFrame(tick)})});
 document.getElementById('downloadPose').addEventListener('click',()=>{if(!svgDoc)return;const xml=new XMLSerializer().serializeToString(svgDoc.documentElement);const blob=new Blob([xml],{type:'image/svg+xml;charset=utf-8'});const link=document.createElement('a');link.href=URL.createObjectURL(blob);link.download='Raka_Pose.svg';link.click();setTimeout(()=>URL.revokeObjectURL(link.href),1000)});
+function downloadBlob(blob,name){const link=document.createElement('a');link.href=URL.createObjectURL(blob);link.download=name;link.click();setTimeout(()=>URL.revokeObjectURL(link.href),1000)}
+document.getElementById('exportPoseJson').addEventListener('click',()=>{const pose={character_id:rigPackage.character_id,rig_type:'raka-svg-pose',manifest_version:rigPackage.version,angles:{...angles}};downloadBlob(new Blob([JSON.stringify(pose,null,2)],{type:'application/json;charset=utf-8'}),'Raka_Pose.json')});
+const poseFile=document.getElementById('poseFile'),poseNotice=document.getElementById('poseNotice');
+document.getElementById('loadPoseButton').addEventListener('click',()=>poseFile.click());
+poseFile.addEventListener('change',async event=>{const file=event.target.files?.[0];if(!file)return;try{const pose=JSON.parse(await file.text());if(pose.character_id!==rigPackage.character_id||pose.rig_type!=='raka-svg-pose'||pose.manifest_version!==rigPackage.version)throw new Error('Karakter atau versi manifest tidak cocok.');const keys=Object.keys(joints),provided=Object.keys(pose.angles||{});const missing=keys.filter(key=>!Object.prototype.hasOwnProperty.call(pose.angles||{},key)),extra=provided.filter(key=>!Object.prototype.hasOwnProperty.call(joints,key));if(missing.length||extra.length)throw new Error(`Daftar sendi tidak lengkap. Kurang: ${missing.join(', ')||'—'}; asing: ${extra.join(', ')||'—'}.`);for(const [key,value] of Object.entries(pose.angles)){const [min,max]=joints[key].rotation;if(!Number.isFinite(value)||value<min||value>max)throw new Error(`${joints[key].label} harus berada antara ${min}° dan ${max}°.`)}applyPose(pose.angles,'Pose dimuat',()=>{poseNotice.dataset.state='success';poseNotice.textContent=`Pose “${file.name}” berhasil dimuat.`})}catch(error){poseNotice.dataset.state='error';poseNotice.textContent=`Gagal memuat pose: ${error.message}`}finally{poseFile.value=''}});
 </script></body></html>'''
     html = html.replace("__RIG_PACKAGE__", json.dumps(RIG_PACKAGE, ensure_ascii=False, separators=(",", ":")))
     (ROOT / "index.html").write_text(html, encoding="utf-8")

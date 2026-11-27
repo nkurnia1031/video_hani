@@ -1,16 +1,24 @@
 {
   "character_id": "raka",
   "rig_type": "svg_rig",
+  "version": 1,
   "coordinate_space": {
     "viewBox": "170 140 280 290",
     "units": "svg-user-units"
   },
+  "side_convention": "left/right mean viewer-left/viewer-right in the neutral SVG; SVG x increases toward viewer-right.",
   "source": "https://storyset.com/illustration/co-workers/rafiki",
   "parts": [
     {
+      "id": "pelvis",
+      "kind": "skeleton-root",
+      "parent": "raka-rig",
+      "layer": 5
+    },
+    {
       "id": "rig-legs",
       "kind": "group",
-      "parent": "raka-rig",
+      "parent": "pelvis",
       "layer": 10
     },
     {
@@ -58,7 +66,7 @@
     {
       "id": "upper-body",
       "kind": "torso-root",
-      "parent": "raka-rig",
+      "parent": "pelvis",
       "layer": 20,
       "joint": "torso"
     },
@@ -117,23 +125,23 @@
       "layer": 40
     },
     {
-      "id": "neck",
-      "kind": "neck",
-      "parent": "upper-body",
-      "layer": 50
-    },
-    {
       "id": "head",
       "kind": "head",
       "parent": "upper-body",
       "layer": 60,
       "joint": "head"
+    },
+    {
+      "id": "neck",
+      "kind": "neck",
+      "parent": "head",
+      "layer": 50
     }
   ],
   "joints": {
     "torso": {
       "id": "upper-body",
-      "parent": "raka-rig",
+      "parent": "pelvis",
       "pivot": [
         340,
         286
@@ -256,8 +264,8 @@
         350
       ],
       "rotation": [
-        -95,
-        95
+        0,
+        70
       ],
       "label": "Lutut kiri"
     },
@@ -295,8 +303,8 @@
         350
       ],
       "rotation": [
-        -95,
-        95
+        -70,
+        0
       ],
       "label": "Lutut kanan"
     },

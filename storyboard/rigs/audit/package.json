@@ -1,0 +1,11 @@
+{
+  "name": "raka-svg-rig-audit",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "audit": "node audit.cjs && python3 compose_evidence.py"
+  },
+  "devDependencies": {
+    "playwright": "1.65.1"
+  }
+}
