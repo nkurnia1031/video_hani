@@ -201,7 +201,7 @@
           <path d="M349.51,295.68s5.74,13.65,15.37,14.24,24.18-11.76,26-20.62-11.31-.68-11.31-.68-16.86,9.77-17.19,9.8S349.51,295.68,349.51,295.68Z" style="opacity:0.2;isolation:isolate" />
           <path d="M387.37,277.89c-4.06-.17-16.88,14.78-22.49,16.56s-17.24-12.84-17.24-12.84l-6,5.05s9,14.15,18.64,17.32,26.49-7.89,29.66-12.84S392.32,278.1,387.37,277.89Z" style="fill:#3D2645" />
           <path d="M387.37,277.89c-4.06-.17-16.88,14.78-22.49,16.56s-17.24-12.84-17.24-12.84l-6,5.05s9,14.15,18.64,17.32,26.49-7.89,29.66-12.84S392.32,278.1,387.37,277.89Z" style="fill:#fff;opacity:0.2;isolation:isolate" />
-          <g id="scene02a-head-rig" transform="translate(0 0) rotate(0 376 275)" data-rig-part="head-follow-pivot-at-neck">
+          <g id="scene02a-head-rig" transform="rotate(0 373 278)" data-rig-part="head-follow-pivot-at-neck">
           <path d="M362.38,270.67s9.16-3.22,17.55-1a2.3,2.3,0,0,1,.54,2.61,28.28,28.28,0,0,0-18.09,2Z" />
           <path d="M361,273.58c0,2.53-1.59,4.58-3.55,4.58s-3.54-2.05-3.54-4.58,1.59-4.59,3.54-4.59S361,271.05,361,273.58Z" style="fill:#2A1F2D" />
           <path d="M361,273.58c0,2.53-1.59,4.58-3.55,4.58s-3.54-2.05-3.54-4.58,1.59-4.59,3.54-4.59S361,271.05,361,273.58Z" style="fill:#fff;opacity:0.2;isolation:isolate" />
@@ -535,15 +535,15 @@
       .to(hand, { rotation: -2, duration: 0.16, ease: "sine.inOut" }, 11.9)
       .to(hand, { rotation: 0, duration: 0.14, ease: "sine.inOut" }, 12.06);
     const characterHead = document.querySelector("#scene02a-head-rig");
-    const headRig = { x: 0, y: 0, rotation: 0 };
-    const updateHeadRig = () => characterHead.setAttribute("transform", `translate(${headRig.x} ${headRig.y}) rotate(${headRig.rotation} 376 275)`);
-    tl.to(headRig, { x: -3, y: 1.2, rotation: -1.4, duration: 1.3, ease: "sine.inOut", onUpdate: updateHeadRig }, 4.3)
-      .to(headRig, { x: -7, y: 3, rotation: -3.2, duration: 0.46, ease: "power2.in", onUpdate: updateHeadRig }, 8.7)
-      .to(headRig, { x: -4.8, y: 2, rotation: -1.8, duration: 0.22, ease: "power3.out", onUpdate: updateHeadRig }, 10)
-      .to(headRig, { x: -6, y: 2.8, rotation: -2.8, duration: 0.36, ease: "sine.inOut", onUpdate: updateHeadRig }, 10.36)
-      .to(headRig, { x: -7, y: 3.2, rotation: -3.4, duration: 0.28, ease: "power1.in", onUpdate: updateHeadRig }, 11.2)
-      .to(headRig, { x: -3.5, y: 1.4, rotation: -1, duration: 0.5, ease: "back.out(1.15)", onUpdate: updateHeadRig }, 11.82)
-      .to(headRig, { x: 0, y: 0, rotation: 0, duration: 0.65, ease: "sine.out", onUpdate: updateHeadRig }, 12.5);
+    const headRig = { rotation: 0 };
+    const updateHeadRig = () => characterHead.setAttribute("transform", `rotate(${headRig.rotation} 373 278)`);
+    tl.to(headRig, { rotation: -2.2, duration: 1.5, ease: "sine.inOut", onUpdate: updateHeadRig }, 4.3)
+      .to(headRig, { rotation: -4.2, duration: 0.5, ease: "power2.in", onUpdate: updateHeadRig }, 8.7)
+      .to(headRig, { rotation: -2.5, duration: 0.24, ease: "power3.out", onUpdate: updateHeadRig }, 10)
+      .to(headRig, { rotation: -3.1, duration: 0.36, ease: "sine.inOut", onUpdate: updateHeadRig }, 10.36)
+      .to(headRig, { rotation: -4.2, duration: 0.28, ease: "power1.in", onUpdate: updateHeadRig }, 11.2)
+      .to(headRig, { rotation: 0.3, duration: 0.52, ease: "sine.out", onUpdate: updateHeadRig }, 11.82)
+      .to(headRig, { rotation: 0, duration: 0.45, ease: "sine.out", onUpdate: updateHeadRig }, 12.5);
     window.__timelines["scene-02a"] = tl;
   </script>
 </template>
