@@ -2,7 +2,7 @@
 
 **Local browser result:** 328 checks passed, 0 failed.
 
-**GitHub Actions:** pending the first pushed run.
+**GitHub Actions:** 328 checks passed, 0 failed on `ubuntu-latest` in [run 46004678457](https://github.com/nkurnia1031/video_hani/actions/runs/46004678457). The workflow uploaded a 14.2 MB evidence artifact with a 14-day retention period.
 **Tested:** 2026-11-27 with Playwright 1.65.1, Chromium 159.0.8154.6, Node v22.23.3.
 
 The audit opened the editable viewer in Chromium and manipulated its actual controls. It tested all 14 sliders at five angles each, all four presets, one combined pose, pose interpolation, 48 samples across the wrist wave, stop/reset, SVG and JSON export/import, invalid import rejection, and 1440×1000, 820×1100, and 390×844 viewports. The tested angle values are printed in the contact sheets. Screenshot evidence comes from that browser run.
