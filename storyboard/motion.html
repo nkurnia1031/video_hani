@@ -107,12 +107,12 @@
     <main>
       <section class="intro" aria-labelledby="page-title">
         <div><p class="eyebrow">Motion graphic · Scene 02 · 00:30—01:05</p><h1 id="page-title">Dari scroll<br>ke label.</h1></div>
-        <p class="lede">Ruang terbentuk di sekitar komentar yang terus bergerak. Istilah memenuhi layar, lalu dua kalimat penutup muncul sebagai satu rangkaian animasi 35 detik.</p>
+        <p class="lede">Komentar gaslighting membesar di sisi kiri saat disebut VO. Hashtag kemudian memenuhi layar, lalu dua kalimat penutup mengikuti alur VO dalam rangkaian tween 35 detik.</p>
       </section>
       <section class="player-shell" aria-label="Pemutar animasi Scene 2">
         <div class="stage">
           <img class="poster" src="previews/scene-02a-comment-scroll.png" alt="">
-          <hyperframes-player id="motion-player" src="hyperframes/index.html?v=hyperframes-20261127-scene2-audio" width="1920" height="1080" aria-label="Animasi Scene 2: ruang dengan guliran komentar, cloud words, dan dua pesan penutup"></hyperframes-player>
+          <hyperframes-player id="motion-player" src="hyperframes/index.html?v=hyperframes-20261127-vo-timing" width="1920" height="1080" aria-label="Animasi Scene 2: ruang dengan guliran komentar, cloud words, dan dua pesan penutup"></hyperframes-player>
         </div>
         <div class="status-row">
           <span class="status" id="player-status" data-state="loading" role="status" aria-live="polite">Memuat pemutar HyperFrames…</span>
@@ -126,8 +126,8 @@
         </div>
         <nav class="beats" aria-label="Lompat ke bagian scene">
           <button class="beat" type="button" data-seek="0" aria-current="step" disabled><span class="beat-code">02A</span><span class="beat-copy"><strong>Ruang + komentar</strong><small>00:30—00:45</small></span></button>
-          <button class="beat" type="button" data-seek="15" disabled><span class="beat-code">02B</span><span class="beat-copy"><strong>Cloud words</strong><small>00:45—00:58</small></span></button>
-          <button class="beat" type="button" data-seek="28" disabled><span class="beat-code">02C</span><span class="beat-copy"><strong>Pesan akhir</strong><small>00:58—01:05</small></span></button>
+          <button class="beat" type="button" data-seek="15" disabled><span class="beat-code">02B</span><span class="beat-copy"><strong>Cloud words</strong><small>00:45—00:55</small></span></button>
+          <button class="beat" type="button" data-seek="25" disabled><span class="beat-code">02C</span><span class="beat-copy"><strong>Pesan akhir</strong><small>00:55—01:05</small></span></button>
         </nav>
       </section>
       <div class="notes">
@@ -148,7 +148,7 @@
     const status = document.querySelector("#player-status");
     const error = document.querySelector("#player-error");
     const beats = Array.from(document.querySelectorAll(".beat"));
-    const starts = [0, 15, 28];
+    const starts = [0, 15, 25];
     const playButton = document.querySelector("#play-toggle");
     const restartButton = document.querySelector("#restart");
     const scrubber = document.querySelector("#scrubber");
@@ -162,7 +162,7 @@
       return String(Math.floor(seconds / 60)).padStart(2, "0") + ":" + String(seconds % 60).padStart(2, "0");
     }
     function updateBeat(time) {
-      const index = time < 15 ? 0 : time < 28 ? 1 : 2;
+      const index = time < 15 ? 0 : time < 25 ? 1 : 2;
       if (activeBeat === index) return;
       activeBeat = index;
       beats.forEach((button, i) => button.setAttribute("aria-current", i === index ? "step" : "false"));

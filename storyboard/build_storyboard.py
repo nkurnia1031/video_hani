@@ -189,14 +189,14 @@ SCENES = [
         "no": 2, "slug": "what-is-therapy-speak", "time": "00:30–01:05", "title": "What Is Therapy Speak?",
         "visual": "Wide cream living-room frame: TV and wall art on the left, a comment feed on an espresso phone at center, and the reclining man on a sage sofa with colored shelves at right.",
         "screen": "02A: intact comments with only the term highlighted. 02B: #Toxic · #Narcissist · #Gaslighting · #Trauma · #Avoidant · #Depressed. 02C: Understanding psychology = Good! · Misusing psychological terms = Problematic.",
-        "motion": "02A · 00:30–00:45: comments scroll through the centered phone. 02B · 00:45–00:58: selected terms lift from the feed into a loose, full-screen hashtag stack. 02C · 00:58–01:05: show the two centered on-screen statements.",
+        "motion": "02A · 00:30–00:45: comments scroll; the gaslighting comment pops out and zooms on the left as the VO names the term. 02B · 00:45–00:55: selected terms lift into a full-screen hashtag stack during the benefits of learning psychology. 02C · 00:55–01:05: the final problem statement arrives on the VO's ‘But here's the problem’ and holds.",
         "voice": "Di era social media, istilah psikologi semakin sering kita dengar. Mulai dari toxic relationship, gaslighting, trauma, sampai narcissistic behavior. Fenomena ini sering disebut sebagai therapy speak, yaitu penggunaan istilah yang berasal dari dunia psikologi atau terapi dalam percakapan sehari-hari. Actually, there's nothing wrong with learning psychological terms. Justru, memahami psikologi bisa membantu kita mengenali emosi, memahami perilaku, dan membangun hubungan yang lebih sehat. But here's the problem: ketika istilah-istilah tersebut digunakan tanpa memahami maknanya, kita bisa salah menilai diri sendiri maupun orang lain.",
         "assets": ["feed"], "roles": ["Feed-rafiki.svg: karakter dan sofa dipisahkan dari seluruh perangkat latar; ukurannya disesuaikan dengan komposisi ruang yang lebih lebar.", "Rak buku, bunga, TV, lukisan, dan latar ruang biru adalah vektor editable.", "Scene-02-komponen.svg: enam komentar tambahan sebagai grup SVG terpisah untuk animasi scroll."],
         "credits": ["feed"], "background": "02A: cream room, espresso phone, plum UI details, and restrained warm accents. 02B: deep plum full-screen word cloud in Caveat handwritten font, with cream base text and selected terracotta, mustard, and peach terms. 02C: centered sage and terracotta statements.",
         "frames": [
             {"code": "02A", "slug": "02a-comment-scroll", "title": "Phone Zoom + Comment Scroll", "time": "00:30–00:45"},
-            {"code": "02B", "slug": "02b-hashtag-cloud", "title": "Hashtag Cloud Transition", "time": "00:45–00:58"},
-            {"code": "02C", "slug": "02c-on-screen-text", "title": "Understanding Psychology · On-Screen Text", "time": "00:58–01:05"},
+            {"code": "02B", "slug": "02b-hashtag-cloud", "title": "Hashtag Cloud Transition", "time": "00:45–00:55"},
+            {"code": "02C", "slug": "02c-on-screen-text", "title": "Understanding Psychology · On-Screen Text", "time": "00:55–01:05"},
         ],
     },
     {
@@ -1557,8 +1557,8 @@ def create_previews():
         elif scene["no"] == 2:
             frames = [
                 ("02A", "02a-comment-scroll", "Phone Zoom + Comment Scroll", "00:30–00:45", build_scene_2),
-                ("02B", "02b-hashtag-cloud", "Hashtag Cloud Transition", "00:45–00:58", build_scene_2b),
-                ("02C", "02c-on-screen-text", "Understanding Psychology · On-Screen Text", "00:58–01:05", build_scene_2c),
+                ("02B", "02b-hashtag-cloud", "Hashtag Cloud Transition", "00:45–00:55", build_scene_2b),
+                ("02C", "02c-on-screen-text", "Understanding Psychology · On-Screen Text", "00:55–01:05", build_scene_2c),
             ]
         elif scene["no"] == 3:
             frames = [
@@ -1788,8 +1788,8 @@ def make_docx(contact):
                 column.width = Inches(2.05)
             frame_data = [
                 ("02A · 00:30–00:45", "scene-02a-comment-scroll.png"),
-                ("02B · 00:45–00:58", "scene-02b-hashtag-cloud.png"),
-                ("02C · 00:58–01:05", "scene-02c-on-screen-text.png"),
+                ("02B · 00:45–00:55", "scene-02b-hashtag-cloud.png"),
+                ("02C · 00:55–01:05", "scene-02c-on-screen-text.png"),
             ]
             for cell, (label, filename) in zip(inner.rows[0].cells, frame_data):
                 cell.width = Inches(2.05)
@@ -1962,8 +1962,8 @@ def make_website():
         if scene["no"] == 2:
             frame_markup = '''<div class="frame-stack">
               <section class="frame-card"><div class="frame-label"><b>02A · PHONE + COMMENT SCROLL</b><span>00:30–00:45</span></div><a href="scenes/scene-02a-comment-scroll.svg" target="_blank" aria-label="Open editable SVG for Scene 2A"><img src="scenes/scene-02a-comment-scroll.svg" alt="Cream living room with TV and art at left, an espresso phone in the center, and the reclining man on a sage sofa at right"></a><div class="file-links"><a href="scenes/scene-02a-comment-scroll.svg" download>Download editable SVG</a><a href="previews/scene-02a-comment-scroll.png" download>Download PNG preview</a></div></section>
-              <section class="frame-card"><div class="frame-label"><b>02B · HASHTAG CLOUD</b><span>00:45–00:58</span></div><a href="scenes/scene-02b-hashtag-cloud.svg" target="_blank" aria-label="Open editable SVG for Scene 2B"><img src="scenes/scene-02b-hashtag-cloud.svg" alt="Dense cream handwritten hashtags overlap across a deep plum frame"></a><div class="file-links"><a href="scenes/scene-02b-hashtag-cloud.svg" download>Download editable SVG</a><a href="previews/scene-02b-hashtag-cloud.png" download>Download PNG preview</a></div></section>
-              <section class="frame-card"><div class="frame-label"><b>02C · ON-SCREEN TEXT</b><span>00:58–01:05</span></div><a href="scenes/scene-02c-on-screen-text.svg" target="_blank" aria-label="Open editable SVG for Scene 2C"><img src="scenes/scene-02c-on-screen-text.svg" alt="Centered sage and terracotta statements on a cream background"></a><div class="file-links"><a href="scenes/scene-02c-on-screen-text.svg" download>Download editable SVG</a><a href="previews/scene-02c-on-screen-text.png" download>Download PNG preview</a></div></section>
+              <section class="frame-card"><div class="frame-label"><b>02B · HASHTAG CLOUD</b><span>00:45–00:55</span></div><a href="scenes/scene-02b-hashtag-cloud.svg" target="_blank" aria-label="Open editable SVG for Scene 2B"><img src="scenes/scene-02b-hashtag-cloud.svg" alt="Dense cream handwritten hashtags overlap across a deep plum frame"></a><div class="file-links"><a href="scenes/scene-02b-hashtag-cloud.svg" download>Download editable SVG</a><a href="previews/scene-02b-hashtag-cloud.png" download>Download PNG preview</a></div></section>
+              <section class="frame-card"><div class="frame-label"><b>02C · ON-SCREEN TEXT</b><span>00:55–01:05</span></div><a href="scenes/scene-02c-on-screen-text.svg" target="_blank" aria-label="Open editable SVG for Scene 2C"><img src="scenes/scene-02c-on-screen-text.svg" alt="Centered sage and terracotta statements on a cream background"></a><div class="file-links"><a href="scenes/scene-02c-on-screen-text.svg" download>Download editable SVG</a><a href="previews/scene-02c-on-screen-text.png" download>Download PNG preview</a></div></section>
               <section class="frame-card"><div class="frame-label"><b>02 · SCROLL COMPONENTS</b><span>6 extra comments</span></div><p class="component-copy">The six separate SVG groups use IDs comment-05 through comment-10, ready to animate inside the phone feed.</p><div class="file-links"><a href="scenes/scene-02-komponen.svg" target="_blank">Open SVG components</a><a href="scenes/scene-02-komponen.svg" download>Download SVG</a><a href="previews/scene-02-komponen.png" target="_blank">Preview sheet</a></div></section>
             </div>'''
         elif scene["no"] in (1, 3, 4):

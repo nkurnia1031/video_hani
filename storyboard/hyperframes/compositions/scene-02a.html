@@ -5,6 +5,7 @@
     #scene02a-artwork { display: block; width: 100%; height: 100%; overflow: hidden; }
     #scene02a-shelf-upper-flower, #scene02a-shelf-lower-flower { transform-box: fill-box; transform-origin: 50% 100%; }
     #scene02a-artwork { transform-box: fill-box; transform-origin: 50% 50%; }
+    #scene02a-comment-spotlight { transform-box: fill-box; transform-origin: center; }
   </style>
   <div id="root" data-composition-id="scene-02a" data-width="1920" data-height="1080">
 <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1920 1080" role="img" aria-labelledby="scene02a-scene-title scene02a-scene-desc" id="scene02a-artwork">
@@ -449,6 +450,19 @@
       <circle cx="1195" cy="926" r="9" fill="#F2B134" />
     </g>
   </g>
+  <g id="scene02a-comment-spotlight" opacity="0" data-layout-allow-overflow="true" data-layout-allow-overlap="true" role="group" aria-label="Spotlight on the existing gaslight comment">
+    <rect x="157" y="430" width="505" height="196" fill="#FFC4A3" opacity="0.4" rx="24" />
+    <path d="M640 490 L677 512 L640 534 Z" fill="#FFF6EC" stroke="#E4572E" stroke-width="3" stroke-linejoin="round" />
+    <rect x="145" y="418" width="505" height="196" fill="#FFF6EC" rx="24" stroke="#E4572E" stroke-width="4" />
+    <circle cx="184" cy="456" r="18" fill="#FFC4A3" />
+    <text x="184" y="462" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" text-anchor="middle">H</text>
+    <text x="214" y="461" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">@halokak</text>
+    <text x="180" y="506" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="600">
+      <tspan>Ih kak, itu </tspan><tspan fill="#E4572E" font-weight="800">gaslight</tspan><tspan> dah kayaknya.</tspan>
+    </text>
+    <text x="180" y="541" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="500">Padahal kakaknya cuma cerita soal</text>
+    <text x="180" y="571" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="500">apa yang dia rasain.</text>
+  </g>
   <circle id="scene02a-transition-iris" cx="960" cy="540" r="0" fill="#3D2645" aria-hidden="true" />
 </svg>
   </div>
@@ -482,6 +496,9 @@
       .to("#scene02a-comment-feed", { y: -850, duration: 0.24, ease: "power2.out" }, 11.2)
       .to("#scene02a-phone-scroll-thumb", { y: 360, duration: 0.38, ease: "power4.in" }, 11.44)
       .to("#scene02a-comment-feed", { y: -900, duration: 0.38, ease: "power4.in" }, 11.44)
+      .fromTo("#scene02a-comment-spotlight", { opacity: 0, x: 590, y: 18, scale: 0.48 }, { opacity: 1, x: 0, y: 0, scale: 1.12, duration: 0.46, ease: "back.out(1.5)" }, 4.55)
+      .to("#scene02a-comment-spotlight", { scale: 1, duration: 0.2, ease: "expo.out" }, 5.01)
+      .to("#scene02a-comment-spotlight", { opacity: 0, x: 590, y: 18, scale: 0.7, duration: 0.34, ease: "power3.in" }, 6.85)
       .fromTo("#scene02a-transition-iris", { attr: { r: 0 } }, { attr: { r: 1300 }, duration: 0.45, ease: "power3.in" }, 14.55);
     const books = gsap.utils.toArray("#scene02a-console-books > g");
     books.forEach((book, i) => tl.fromTo(book, { opacity: 0, y: 26, scale: 0.8 }, { opacity: 1, y: 0, scale: 1, duration: 0.52, ease: "back.out(1.4)" }, 1.01 + i * 0.09));

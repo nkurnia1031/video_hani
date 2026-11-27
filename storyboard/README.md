@@ -4,6 +4,8 @@ This board contains seven scenes and 16 standalone, editable 16:9 animation fram
 
 The separate [Scene 2 motion study](motion.html) is a 35-second HyperFrames project built from the storyboard SVG layers and GSAP timelines. It animates the room, shelves, flowers, character and hand, comment scroll, hashtag cloud, and closing statements. The public page has HyperFrames playback and seek controls plus scene jumps; the project in `hyperframes/` keeps the root timeline and three editable scene compositions.
 
+Its cuts now follow the Scene 2 voice-over: 02A · 00:30–00:45 carries the opening explanation and comments, 02B · 00:45–00:55 carries the benefit of learning psychology, and 02C · 00:55–01:05 carries “But here's the problem” and the closing statements. A gaslighting comment pops out and zooms on the left as that term is spoken.
+
 ## Revised scenes
 
 ### Scene 1 · The Hook · 00:00–00:30
