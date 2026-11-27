@@ -295,7 +295,7 @@ SCENES[3].update({
     "motion": "Transisi objek tetap mengalir: bubble self-label menjadi awan pikiran dan debat → berubah menjadi cap NARSISTIK → cap menyebar sebagai post dan rantai notifikasi → berakhir pada Dina sendirian dengan bubble ‘...’ dan teks layar. Raka tidak muncul di frame 4D.",
     "voice": "Now, why should we care? First, misusing psychological terms can make us misunderstand our own emotions. Normal feelings like sadness, fear, or disappointment can feel like something is seriously wrong with us. Second, it can create unnecessary conflict. Imagine labeling someone as narcissistic just because they disagree with you. And third, it can reinforce stigma. Mental health conditions are complex experiences, not simply labels we can attach to someone based on one behavior. Remember, psychology is more than just a collection of viral terms. It is a scientific discipline that requires context, evidence, and careful understanding.",
     "assets": ["coworkers"],
-    "roles": ["4A, 4B, 4B2, dan 4C memakai ilustrasi dasar Co-workers · Rafiki yang sama dari 4B, termasuk Raka dan Dina bersama di ruang rapat. Label, kartu target, post, notifikasi, dan teks tetap overlay terpisah.", "4B dan 4B2 · Co-workers · Rafiki: karakter Raka dan Dina di rapat serta cap NARSISTIK. Ekor bubble tiap pembicara mengarah ke mulut; cap tetap kesimpulan Raka, bukan diagnosis.", "4C · Post peringatan dan rantai notifikasi dibuat sebagai layer SVG editable di sisi kanan komposisi.", "4D · Co-workers · Rafiki Dina tetap menjadi satu-satunya karakter; wash cream, area meja yang ditutup, bubble ‘...’, notifikasi tak terjawab, bayangan label memudar, dan teks penutup adalah layer komposisi terpisah."],
+    "roles": ["4A memakai basis kantor Co-workers · Rafiki dari 4B dengan objek Dina dihilangkan; Raka dan latar tetap dari ilustrasi yang sama. 4B, 4B2, dan 4C memakai ilustrasi dasar utuh dengan Raka dan Dina bersama. Label, kartu target, post, notifikasi, dan teks menjadi overlay terpisah.", "4B dan 4B2 · Co-workers · Rafiki: karakter Raka dan Dina di rapat serta cap NARSISTIK. Bubble dialog 4B tanpa panah/garis penghubung; cap tetap kesimpulan Raka, bukan diagnosis.", "4C · Post peringatan dan rantai notifikasi dibuat sebagai layer SVG editable di sisi kanan komposisi.", "4D · Co-workers · Rafiki Dina tetap menjadi satu-satunya karakter; wash cream, area meja yang ditutup, bubble ‘...’, notifikasi tak terjawab, bayangan label memudar, dan teks penutup adalah layer komposisi terpisah."],
     "credits": ["coworkers"],
     "background": "Palet Opsi B. 4A dan 4C memakai cream, plum, dan terracotta; 4B dan 4B2 mempertahankan palette rapat; 4D memudarkan ruang menjadi cream dan plum. Terracotta hanya menandai label/kesalahan, sage dipakai untuk tanda pemahaman.",
     "frames": [
@@ -1081,7 +1081,7 @@ def build_scene_4(scene):
     return build_scene_4d(scene)
 
 
-def continuous_office_base(title, description, frame_id, isolate_dina=False, character_color=PLUM):
+def continuous_office_base(title, description, frame_id, isolate_dina=False, character_color=PLUM, omit_dina=False):
     root = clean_frame(title, description, CREAM)
     if isolate_dina:
         root.find(tag("metadata")).text = (
@@ -1089,6 +1089,11 @@ def continuous_office_base(title, description, frame_id, isolate_dina=False, cha
             "Raka's 54-element body group is counted as omitted from the office composition, eight blue elements in the "
             "background, chat, desk, and Dina's clothing are recolored plum, and Raka's mouth is adjusted in the separate face inset. "
             "At least 95 elements (60.1%) remain unchanged. Dina stands alone in the office; the Raka face inset and UI overlays are separate SVG layers."
+        )
+    elif omit_dina:
+        root.find(tag("metadata")).text = (
+            "Storyset Co-workers · Rafiki. The shared office base and Raka character match 4B; Dina's separate source character object is omitted in this frame. "
+            "The target card and thought-label cloud are independent overlays. No character paths were redrawn."
         )
     else:
         root.find(tag("metadata")).text = (
@@ -1102,6 +1107,11 @@ def continuous_office_base(title, description, frame_id, isolate_dina=False, cha
             root, "coworkers", 0, 74, 1000, 1000,
             omit_ids={"character-2"}, color_map={"#407BFF": PLUM},
             color_map_policy={"background-simple": (0, 1), "Chat": (0, 1), "Desk": (1, 3), "character-1": (6, 3)},
+        )
+    elif omit_dina:
+        embed_asset(
+            root, "coworkers", 0, 74, 1000, 1000,
+            omit_ids={"Chat", "character-1"}, color_map={"#407BFF": character_color}, raka_expression=True,
         )
     else:
         embed_asset(
@@ -1188,12 +1198,9 @@ def embed_raka_puppet(parent, x, y, w, h, pose="hands-on-head", include_ids=None
 def build_story_03a(scene):
     root = continuous_office_base(
         "4A · Raka mislabels his sadness",
-        "The same Co-workers office illustration as 4B shows Raka and Dina together. Separate target and thought-label overlays carry the 4A beat.",
+        "The same Co-workers office illustration as 4B shows Raka alone after Dina is removed from the composition. Separate target and thought-label overlays carry the 4A beat.",
         "4A",
-    )
-    root.find(tag("metadata")).text = (
-        "The full Co-workers · Rafiki office illustration from 4B is reused unchanged, including Raka and Dina together. "
-        "The target card and thought-label cloud are separate editable overlays; no source character pose was changed."
+        omit_dina=True,
     )
 
     target = add(root, "g", id="missed-target-card")
@@ -1223,16 +1230,6 @@ def build_story_03b(scene):
         "At a work meeting, Raka hears Dina's feedback as a personal attack. Their two editable dialogue bubbles show both lines and keep the disagreement ambiguous.",
         "04B",
     )
-    # Slim connector tails run through the open wall to each speaker so the
-    # larger conversation cards can stay together on the right without
-    # covering either person or their name label.
-    path(root, "M1110,188 C964,223 835,329 700,424", fill="none", stroke=PLUM, sw=8)
-    path(root, "M700,424 L729,405 L733,438 Z", fill=PLUM)
-    path(root, "M1110,488 C982,432 838,345 690,345 C560,345 466,351 365,356", fill="none", stroke=CREAM, sw=12)
-    path(root, "M365,356 L399,343 L398,373 Z", fill=CREAM)
-    path(root, "M1110,488 C982,432 838,345 690,345 C560,345 466,351 365,356", fill="none", stroke=PLUM, sw=4)
-    path(root, "M365,356 L399,343 L398,373 Z", fill=CREAM, stroke=PLUM, sw=4)
-
     raka = add(root, "g", id="raka-quote")
     rect(raka, 1080, 70, 790, 232, PLUM, rx=28)
     txt(raka, 1124, 116, "RAKA", 17, CREAM, 700, letter=1.2)
@@ -1703,9 +1700,9 @@ def make_docx(contact):
         "Scene 1 memakai objek Character dari People Creating Robot · Rafiki dalam crop setengah badan di tengah. Robot, dekorasi, panel, dan latar dihilangkan; tablet kecil yang menjadi bagian pose perempuan dipertahankan. Tidak ada pointer atau bingkai presenter. Audit per objek: dari 41 drawable Character, enam terpotong crop dan enam path pakaian biru diwarnai Cream; 29/41 (70,7%) tetap utuh. Kartu komentar memakai nama samaran Naya, Bagas, Rani, dan Dito; tiga kutipan bersumber publik dan satu bertanda tiruan.",
         "Scene 2B kini berupa word cloud Caveat 56 hashtag: enam istilah naskah dan lima puluh pemicu, dengan ukuran 26–208 px, rotasi acak, tumpang tindih, dan tiga hero term di tengah.",
         "Scene 3 memisahkan case avoidant, depresi, dan gaslighting. Label terracotta muncul lebih dulu; koreksi sage dikelompokkan terpisah untuk animasi saat VO mengatakan ‘Padahal...’. Latar case memakai peach, sage, dan mustard muda sesuai naskah.",
-        "Scene 4 berlangsung 40 detik dalam urutan baru 4A, 4B, 4B2, 4C, 4D; VO tetap naskah. Ilustrasi dasar 4A–4C sama persis dengan 4B, termasuk Raka dan Dina bersama dalam pose serta latar yang sama. Di 4C post peringatan menyebar sebagai notifikasi grup; 4D hanya menampilkan Dina dan teks ‘Don't reduce people to labels.’ Tidak ada objek domino di frame Scene 4.",
+        "Scene 4 berlangsung 40 detik dalam urutan baru 4A, 4B, 4B2, 4C, 4D; VO tetap naskah. 4A memakai basis kantor Co-workers yang sama dengan karakter Dina dihilangkan; 4B, 4B2, dan 4C memakai ilustrasi utuh bersama Raka dan Dina. Panah/garis penghubung di 4B dihapus. Di 4C post peringatan menyebar sebagai notifikasi grup; 4D hanya menampilkan Dina dan teks ‘Don't reduce people to labels.’ Tidak ada objek domino di frame Scene 4.",
         "Semua frame mandiri memuat hanya komposisi animasi, latar, source illustration, overlay, properti, dan teks layar. Judul board, waktu, footer, legenda, kredit aset, dan catatan produksi ditempatkan di luar artwork.",
-        "Ilustrasi dasar 4A, 4B, 4B2, dan 4C memakai komposisi Co-workers · Rafiki yang sama tanpa perubahan karakter, pose, atau latar; Raka dan Dina selalu hadir bersama. Beat 4A, 4B2, dan 4C hanya menambah overlay teks dan grafis. Tidak ada objek domino di Scene 4. Raka 03B memakai sumber karakter yang sama dalam komposisi terpisah. Dina di 4D tetap sendiri; 57/158 elemen drawable berubah atau dihilangkan (36,1%), sehingga 101/158 tetap utuh.",
+        "4A memakai basis Co-workers · Rafiki yang sama dengan objek karakter Dina dihilangkan. 4B, 4B2, dan 4C memakai ilustrasi dasar utuh dengan Raka dan Dina bersama. Semua panah/garis penghubung dialog pada 4B dihapus. Tidak ada objek domino di Scene 4. Dina di 4D tetap sendiri; 57/158 elemen drawable berubah atau dihilangkan (36,1%), sehingga 101/158 tetap utuh.",
         "Student Stress · Rafiki di Scene 3B mempertahankan 220/254 drawable elements (86,6%); 34 elemen (13,4%) berubah atau dihilangkan. Air mata, penanda target, label, dan koreksi adalah overlay terpisah.",
         "Semua karakter berasal dari SVG sumber yang dapat diunduh; chat, label, background, post, dan teks adalah layer vektor editable. Tidak ada gambar yang dihasilkan atau karakter yang digambar dari nol.",
     ]
@@ -1990,7 +1987,7 @@ def make_website():
 <section class="board" aria-label="Seven scene production board">
 ''' + "\n".join(rows) + '''
 </section>
-<section class="audit"><div><h2>Visual audit</h2><p>Scene 3 remains three independent case frames and a centered closing frame. Scene 4 frames 4A, 4B, 4B2, and 4C reuse the exact Co-workers · Rafiki office illustration from 4B, with Raka and Dina together in the same poses and setting. Beat-specific labels, the warning post, and notifications are separate overlays. Domino tiles have been removed from every Scene 4 frame. Frame 4D contains Dina alone. Dina's Co-workers source in 4D changes 57/158 drawable elements (36.1%), leaving 101/158 unchanged. Scene 1 uses only the Character object from People Creating Robot · Rafiki. Of its 41 drawable elements, six are cropped and six clothing paths recolored; 29/41 (70.7%) remain unchanged. The robot, external props, panels, background, presenter frame, and pointer are removed; the small tablet integrated with the woman’s pose remains. Four public-comment groups use pseudonyms. Scene 2B contains 56 independently editable handwritten hashtags (six script terms plus fifty related terms) with accelerating appearance timings. All retained frames were rendered and inspected.</p></div><div><h2>Editing &amp; attribution</h2><p>Open or download each SVG to edit its vector layers and text. The source bundle contains the HTML board, all SVG frames, source illustration assets, and the Caveat font/license. The <a href="https://storyset.com/illustration/people-creating-robot/rafiki" target="_blank" rel="noreferrer">People Creating Robot · Rafiki</a> presenter and <a href="https://storyset.com/illustration/co-workers/rafiki" target="_blank" rel="noreferrer">Co-workers · Rafiki</a> and <a href="https://storyset.com/illustration/student-stress/rafiki" target="_blank" rel="noreferrer">Student Stress · Rafiki</a> are free with attribution. <a href="https://github.com/google/fonts/tree/main/ofl/caveat" target="_blank" rel="noreferrer">Caveat</a> is distributed under SIL OFL 1.1; cite Storyset when publishing and review the <a href="https://storyset.com/terms" target="_blank" rel="noreferrer">Storyset terms</a>.</p></div></section>
+<section class="audit"><div><h2>Visual audit</h2><p>Scene 3 remains three independent case frames and a centered closing frame. Scene 4A uses the Co-workers · Rafiki office base with Dina's character omitted; 4B, 4B2, and 4C use the full illustration with Raka and Dina together. Dialog connector arrows are removed from 4B. Beat-specific labels, the warning post, and notifications are separate overlays. Domino tiles have been removed from every Scene 4 frame. Frame 4D contains Dina alone. Dina's Co-workers source in 4D changes 57/158 drawable elements (36.1%), leaving 101/158 unchanged. Scene 1 uses only the Character object from People Creating Robot · Rafiki. Of its 41 drawable elements, six are cropped and six clothing paths recolored; 29/41 (70.7%) remain unchanged. The robot, external props, panels, background, presenter frame, and pointer are removed; the small tablet integrated with the woman’s pose remains. Four public-comment groups use pseudonyms. Scene 2B contains 56 independently editable handwritten hashtags (six script terms plus fifty related terms) with accelerating appearance timings. All retained frames were rendered and inspected.</p></div><div><h2>Editing &amp; attribution</h2><p>Open or download each SVG to edit its vector layers and text. The source bundle contains the HTML board, all SVG frames, source illustration assets, and the Caveat font/license. The <a href="https://storyset.com/illustration/people-creating-robot/rafiki" target="_blank" rel="noreferrer">People Creating Robot · Rafiki</a> presenter and <a href="https://storyset.com/illustration/co-workers/rafiki" target="_blank" rel="noreferrer">Co-workers · Rafiki</a> and <a href="https://storyset.com/illustration/student-stress/rafiki" target="_blank" rel="noreferrer">Student Stress · Rafiki</a> are free with attribution. <a href="https://github.com/google/fonts/tree/main/ofl/caveat" target="_blank" rel="noreferrer">Caveat</a> is distributed under SIL OFL 1.1; cite Storyset when publishing and review the <a href="https://storyset.com/terms" target="_blank" rel="noreferrer">Storyset terms</a>.</p></div></section>
 <footer class="footer">Scene 1 isolates the woman Character object from the credited Storyset illustration in a centered half-body crop, without the robot, external props, pointer, or presenter frame. Her small held tablet stays as part of the source pose. Scene backgrounds, public-comment cards, cloud words, labels, cards, connectors, notifications, and text are editable SVG layers. No images were generated.</footer>
 </main></body></html>'''
     output = ROOT / "index.html"

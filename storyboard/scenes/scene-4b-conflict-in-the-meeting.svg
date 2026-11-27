@@ -171,12 +171,6 @@
       <path d="M173.61,221h-.92c-.18,0-.32-.1-.31-.21l.43-4c0-.12.17-.21.36-.21h.92c.18,0,.32.09.31.21l-.43,4C174,220.88,173.8,221,173.61,221Z" style="fill:#263238" />
     </g>
   </svg>
-  <path d="M1110,188 C964,223 835,329 700,424" fill="none" stroke="#3D2645" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M700,424 L729,405 L733,438 Z" fill="#3D2645" />
-  <path d="M1110,488 C982,432 838,345 690,345 C560,345 466,351 365,356" fill="none" stroke="#FFF6EC" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M365,356 L399,343 L398,373 Z" fill="#FFF6EC" />
-  <path d="M1110,488 C982,432 838,345 690,345 C560,345 466,351 365,356" fill="none" stroke="#3D2645" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M365,356 L399,343 L398,373 Z" fill="#FFF6EC" stroke="#3D2645" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
   <g id="raka-quote">
     <rect x="1080" y="70" width="790" height="232" fill="#3D2645" rx="28" />
     <text x="1124" y="116" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="start" letter-spacing="1.2">
