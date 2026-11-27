@@ -5,6 +5,7 @@
     #scene02b-artwork { display: block; width: 100%; height: 100%; overflow: hidden; }
     #scene02b-shelf-upper-flower, #scene02b-shelf-lower-flower { transform-box: fill-box; transform-origin: 50% 100%; }
     #scene02b-artwork { transform-box: fill-box; transform-origin: 50% 50%; }
+    #scene02b-artwork [id^="scene02b-word-cloud-tag-"] { transform-box: fill-box; transform-origin: center; }
   </style>
   <div id="root" data-composition-id="scene-02b" data-width="1920" data-height="1080">
 <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1920 1080" role="img" aria-labelledby="scene02b-scene-title scene02b-scene-desc" id="scene02b-artwork">
@@ -196,14 +197,69 @@
     const tags = gsap.utils.toArray("[id^='scene02b-word-cloud-tag-']");
     const helpers = tags.filter(tag => tag.dataset.scriptTerm !== "true");
     const terms = tags.filter(tag => tag.dataset.scriptTerm === "true");
+    const flightPaths = [
+      [-680, -370], [650, -430], [740, 180], [-720, 130],
+      [260, 430], [-250, -410], [760, -170], [-760, 35],
+      [480, 330], [-520, 310], [120, -480], [80, 480],
+    ];
+    const flightEases = ["back.out(1.8)", "power4.out", "back.out(2.2)", "expo.out"];
+    const overshoots = [1.13, 1.08, 1.19, 1.1, 1.16];
+    function launchTag(tag, index, at, finalScale) {
+      tag.dataset.settleScale = String(finalScale);
+      const [x, y] = flightPaths[index % flightPaths.length];
+      const duration = [0.28, 0.36, 0.31, 0.42, 0.25][index % 5];
+      const landingScale = finalScale * overshoots[index % overshoots.length];
+      tl.fromTo(tag,
+        { opacity: 0, x, y, scale: 0.08, transformOrigin: "50% 50%" },
+        { opacity: 1, x: 0, y: 0, scale: landingScale, duration, ease: flightEases[index % flightEases.length] },
+        at,
+      ).to(tag, { scale: finalScale, duration: 0.14, ease: "power4.out" }, at + duration);
+    }
     helpers.forEach((tag, i) => {
-      const at = 0.06 + 3.7 * (1 - Math.pow(0.88, i)) / (1 - Math.pow(0.88, helpers.length - 1));
-      tl.fromTo(tag, { opacity: 0, scale: 0.32 }, { opacity: 1, scale: 1, duration: 0.44, ease: "back.out(1.4)" }, at);
+      const progress = i / Math.max(1, helpers.length - 1);
+      const at = 0.43 + 2.42 * Math.pow(progress, 0.58);
+      launchTag(tag, i, at, 1.08 + (i % 4) * 0.025);
     });
     const supportingTerms = terms.filter(tag => !["#toxic", "#gaslighting", "#avoidant"].includes(tag.dataset.word));
     const heroes = terms.filter(tag => ["#toxic", "#gaslighting", "#avoidant"].includes(tag.dataset.word));
-    supportingTerms.forEach((tag, i) => tl.fromTo(tag, { opacity: 0, scale: 0.36 }, { opacity: 1, scale: 1, duration: 0.56, ease: "back.out(1.35)" }, 2.2 + i * 0.12));
-    heroes.forEach((tag, i) => tl.fromTo(tag, { opacity: 0, scale: 0.3 }, { opacity: 1, scale: 1, duration: 0.72, ease: "back.out(1.5)" }, 2.65 + i * 0.22));
+    supportingTerms.forEach((tag, i) => launchTag(tag, i + 50, 1.78 + i * 0.2, 1.06));
+    [3.01, 3.28, 3.55].forEach((at, i) => launchTag(heroes[i], i + 53, at, 1.09));
+
+    // Keep the completed cloud alive: short, offset shoves make the pile feel
+    // unstable and crowded while each word remains legible enough to recognize.
+    tags.forEach((tag, index) => {
+      const settleScale = Number(tag.dataset.settleScale || 1.08);
+      const firstAt = 4.12 + (index % 13) * 0.045;
+      for (let burst = 0; burst < 4; burst += 1) {
+        const at = firstAt + burst * 1.92;
+        const seed = index * 17 + burst * 29;
+        const dx = ((seed * 37) % 61) - 30;
+        const dy = ((seed * 23) % 47) - 23;
+        const durationA = 0.34 + (index % 4) * 0.045;
+        const durationB = 0.43 + (burst % 3) * 0.06;
+        tl.to(tag, {
+          x: dx,
+          y: dy,
+          scale: settleScale * 1.025,
+          duration: durationA,
+          ease: "power2.inOut",
+        }, at)
+          .to(tag, {
+            x: -dx * 0.72,
+            y: -dy * 0.72,
+            scale: settleScale * 0.985,
+            duration: durationB,
+            ease: "power2.inOut",
+          }, at + durationA)
+          .to(tag, {
+            x: 0,
+            y: 0,
+            scale: settleScale,
+            duration: 0.38,
+            ease: "back.out(1.6)",
+          }, at + durationA + durationB);
+      }
+    });
     window.__timelines["scene-02b"] = tl;
   </script>
 </template>

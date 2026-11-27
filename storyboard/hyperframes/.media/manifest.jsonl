@@ -1,0 +1,6 @@
+{"id":"bgm_001","type":"bgm","path":"assets/music/happy-beats-business-moves-vol-10-by-ende-dot-app.mp3","source":"existing","description":"happy beats business moves vol 10 by ende dot app","duration":60,"provenance":{"provider":"local","adopted":true}}
+{"id":"sfx_001","type":"sfx","path":"assets/sfx/casino/card-slide-1.ogg","source":"existing","description":"card slide 1","duration":0.6,"provenance":{"provider":"local","adopted":true}}
+{"id":"sfx_002","type":"sfx","path":"assets/sfx/impact/impactPunch_medium_001.ogg","source":"existing","description":"impactPunch medium 001","duration":0.4,"provenance":{"provider":"local","adopted":true}}
+{"id":"sfx_003","type":"sfx","path":"assets/sfx/impact/impactSoft_medium_001.ogg","source":"existing","description":"impactSoft medium 001","duration":0.2,"provenance":{"provider":"local","adopted":true}}
+{"id":"sfx_004","type":"sfx","path":"assets/sfx/impact/impactSoft_medium_004.ogg","source":"existing","description":"impactSoft medium 004","duration":0.1,"provenance":{"provider":"local","adopted":true}}
+{"id":"sfx_005","type":"sfx","path":"assets/sfx/interface/glitch_002.ogg","source":"existing","description":"glitch 002","duration":0,"provenance":{"provider":"local","adopted":true}}
