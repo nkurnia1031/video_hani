@@ -17,7 +17,7 @@ No critical bugs remain in the tested build. The browser reported no JavaScript 
 - **Knees — fixed.** The former −95° to +95° limits allowed the knee to bend backwards and caused the trouser and calf shapes to overlap heavily. The left knee now flexes from 0° to 70° and the right from −70° to 0°, matching their screen-side bend direction. The five-angle leg sheet shows the corrected range.
 - **Sampled connections — no visible gap found.** I inspected the current joint sweeps and the combined stress pose for exposed gaps, clipping, disconnected limbs, and obvious joint intersections. None were visible within the tested limits. These are discrete angle samples plus selected combined poses, not a pixel-level proof for every possible combination.
 
-Evidence: [baseline head pose](evidence/baseline-head-negative.png), [head and torso sweep](evidence/joint-sweep-head-torso.png), [arm sweep](evidence/joint-sweep-arms.png), [leg sweep](evidence/joint-sweep-legs.png), [combined stress pose](evidence/pose-combined-stress.png).
+Evidence: [baseline head pose](evidence/baseline-head-negative.png), [baseline knee extremes](evidence/baseline-joint-extremes-legs.png), [head and torso sweep](evidence/joint-sweep-head-torso.png), [arm sweep](evidence/joint-sweep-arms.png), [leg sweep](evidence/joint-sweep-legs.png), [combined stress pose](evidence/pose-combined-stress.png).
 
 ## C. Minor Visual Issues
 
