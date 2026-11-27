@@ -183,12 +183,16 @@
   <g id="scene02b-word-cloud-tag-56" transform="rotate(-19 885 735)" data-word="#avoidant" data-order="56" data-script-term="true" opacity="0" data-layout-allow-overflow="true">
     <text x="885" y="735" fill="#E4572E" font-family="Caveat, cursive" font-size="166" font-weight="700" text-anchor="middle" letter-spacing="-0.035em" data-layout-allow-overlap="true">#avoidant</text>
     </g>
+  <circle id="scene02b-transition-iris" cx="960" cy="540" r="1300" fill="#3D2645" aria-hidden="true" />
+  <circle id="scene02b-transition-exit" cx="960" cy="540" r="0" fill="#F2B134" aria-hidden="true" />
 </svg>
   </div>
   <script>
     window.__timelines = window.__timelines || {};
     const tl = gsap.timeline({ paused: true });
-    tl.fromTo("#scene02b-artwork", { scale: 1.035 }, { scale: 1, duration: 0.55, ease: "power3.out" }, 0);
+    tl.fromTo("#scene02b-artwork", { scale: 1.035 }, { scale: 1, duration: 0.55, ease: "power3.out" }, 0)
+      .fromTo("#scene02b-transition-iris", { attr: { r: 1300 } }, { attr: { r: 0 }, duration: 0.55, ease: "power2.inOut" }, 0)
+      .fromTo("#scene02b-transition-exit", { attr: { r: 0 } }, { attr: { r: 1300 }, duration: 0.45, ease: "power3.in" }, 12.55);
     const tags = gsap.utils.toArray("[id^='scene02b-word-cloud-tag-']");
     const helpers = tags.filter(tag => tag.dataset.scriptTerm !== "true");
     const terms = tags.filter(tag => tag.dataset.scriptTerm === "true");

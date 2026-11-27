@@ -24,12 +24,13 @@
       <tspan x="960" dy="0">Misusing psychological terms = Problematic.</tspan>
     </text>
   </g>
+  <circle id="scene02c-transition-iris" cx="960" cy="540" r="1300" fill="#F2B134" aria-hidden="true" />
 </svg>
   </div>
   <script>
     window.__timelines = window.__timelines || {};
     const tl = gsap.timeline({ paused: true });
-    tl.fromTo("#scene02c-artwork", { opacity: 0 }, { opacity: 1, duration: 0.35, ease: "power2.out" }, 0)
+    tl.fromTo("#scene02c-transition-iris", { attr: { r: 1300 } }, { attr: { r: 0 }, duration: 0.45, ease: "power2.inOut" }, 0)
       .fromTo("#scene02c-understanding-statement", { opacity: 0, y: 56, scale: 0.92 }, { opacity: 1, y: 0, scale: 1, duration: 0.85, ease: "back.out(1.25)" }, 0.2)
       .fromTo("#scene02c-misuse-statement", { opacity: 0, y: 64, scale: 0.9 }, { opacity: 1, y: 0, scale: 1, duration: 1.05, ease: "back.out(1.25)" }, 0.62);
     window.__timelines["scene-02c"] = tl;
