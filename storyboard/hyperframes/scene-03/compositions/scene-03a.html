@@ -205,18 +205,18 @@
       .to("#scene-03a-exit-wipe", { attr: { width: 1920 }, duration: 0.34, ease: "power3.inOut" }, 14.64);
     tl.fromTo("#scene03a-read-focus", { opacity: 0, scale: 0.8 }, { opacity: 0.92, scale: 1, duration: 0.32, ease: "back.out(1.4)" }, 1.45)
       .to("#scene03a-read-focus", { opacity: 0, scale: 1.14, duration: 0.38, ease: "power2.out" }, 2.35);
-    tl.to("#scene03a-phone-hold-rig", { rotation: 1.6, y: -1.2, svgOrigin: "235 325", duration: 0.42, ease: "power2.out" }, 1.82)
-      .to("#scene03a-phone-hold-rig", { rotation: 0.35, y: -0.35, duration: 0.52, ease: "sine.inOut" }, 2.24)
-      .to("#scene03a-phone-hold-rig", { rotation: 0, y: 0, duration: 0.42, ease: "power2.out" }, 2.76)
-      .to("#scene03a-phone-hold-rig", { rotation: 1.1, y: -0.8, duration: 0.34, ease: "power2.out" }, 8.05)
-      .to("#scene03a-phone-hold-rig", { rotation: 0, y: 0, duration: 0.5, ease: "sine.inOut" }, 8.39);
-    tl.to("#scene03a-flower-leaves", { rotation: 1.5, svgOrigin: "341 304", duration: 0.8, ease: "sine.inOut" }, 2.65)
-      .to("#scene03a-flower-leaves", { rotation: -1.1, duration: 1.05, ease: "sine.inOut" }, 3.45)
-      .to("#scene03a-flower-leaves", { rotation: 0.8, duration: 0.9, ease: "sine.inOut" }, 4.5)
-      .to("#scene03a-flower-leaves", { rotation: 0, duration: 0.8, ease: "sine.inOut" }, 5.4)
-      .to("#scene03a-flower-leaves", { rotation: -1.2, duration: 0.9, ease: "sine.inOut" }, 8.2)
-      .to("#scene03a-flower-leaves", { rotation: 0.6, duration: 1.0, ease: "sine.inOut" }, 9.1)
-      .to("#scene03a-flower-leaves", { rotation: 0, duration: 0.8, ease: "sine.inOut" }, 10.1);
+    tl.to("#scene03a-phone-hold-rig", { rotation: 9, y: -12, svgOrigin: "235 325", duration: 0.34, ease: "power2.out" }, 1.82)
+      .to("#scene03a-phone-hold-rig", { rotation: 3.5, y: -5, duration: 0.4, ease: "sine.inOut" }, 2.16)
+      .to("#scene03a-phone-hold-rig", { rotation: 0, y: 0, duration: 0.45, ease: "power2.out" }, 2.56)
+      .to("#scene03a-phone-hold-rig", { rotation: 7.5, y: -10, duration: 0.3, ease: "power2.out" }, 8.05)
+      .to("#scene03a-phone-hold-rig", { rotation: 0, y: 0, duration: 0.48, ease: "sine.inOut" }, 8.35);
+    tl.to("#scene03a-flower-leaves", { rotation: 9, svgOrigin: "341 304", duration: 0.55, ease: "sine.inOut" }, 2.65)
+      .to("#scene03a-flower-leaves", { rotation: -7.5, duration: 0.68, ease: "sine.inOut" }, 3.2)
+      .to("#scene03a-flower-leaves", { rotation: 6, duration: 0.62, ease: "sine.inOut" }, 3.88)
+      .to("#scene03a-flower-leaves", { rotation: 0, duration: 0.62, ease: "sine.inOut" }, 4.75)
+      .to("#scene03a-flower-leaves", { rotation: -7, duration: 0.62, ease: "sine.inOut" }, 8.2)
+      .to("#scene03a-flower-leaves", { rotation: 5, duration: 0.68, ease: "sine.inOut" }, 8.82)
+      .to("#scene03a-flower-leaves", { rotation: 0, duration: 0.62, ease: "sine.inOut" }, 9.7);
     const captionGroups = Array.from(document.querySelectorAll("#scene-03a-caption-box .caption-group"));
     captionGroups.forEach(group => {
       const start = Number(group.dataset.captionStart);

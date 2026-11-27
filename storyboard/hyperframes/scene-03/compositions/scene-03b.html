@@ -438,28 +438,35 @@
       .to("#scene-03b-exit-wipe", { attr: { width: 1920 }, duration: 0.34, ease: "power3.inOut" }, 14.64);
     tl.fromTo("#scene03b-target-focus", { opacity: 0, scale: 0.72 }, { opacity: 0.9, scale: 1, duration: 0.3, ease: "back.out(1.5)" }, 1.25)
       .to("#scene03b-target-focus", { opacity: 0, scale: 1.22, duration: 0.42, ease: "power2.out" }, 2.12);
-    tl.to("#raka-rig-head-face, #raka-rig-head-hair", { rotation: 7.2, svgOrigin: "317 280", duration: 0.55, ease: "sine.inOut" }, 2.05)
-      .to("#raka-rig-head-face, #raka-rig-head-hair", { rotation: 5.3, duration: 0.9, ease: "sine.inOut" }, 4.55)
-      .to("#raka-rig-head-face, #raka-rig-head-hair", { rotation: 6.8, duration: 0.72, ease: "sine.inOut" }, 7.9)
-      .to("#raka-rig-head-face, #raka-rig-head-hair", { rotation: 6, duration: 0.65, ease: "sine.inOut" }, 11.85);
-    tl.to("#raka-rig-left-arm-upper", { rotation: 1.1, svgOrigin: "286 314", duration: 0.4, ease: "sine.inOut" }, 2.4)
-      .to("#raka-rig-left-arm-upper", { rotation: 0, duration: 0.45, ease: "sine.inOut" }, 2.8)
-      .to("#raka-rig-left-arm-lower", { rotation: -1.5, svgOrigin: "280 222", duration: 0.32, ease: "sine.inOut" }, 2.55)
-      .to("#raka-rig-left-arm-lower", { rotation: 0, duration: 0.42, ease: "sine.inOut" }, 2.87)
-      .to("#raka-rig-right-arm", { rotation: 1, svgOrigin: "356 278", duration: 0.38, ease: "sine.inOut" }, 2.65)
-      .to("#raka-rig-right-arm", { rotation: 0, duration: 0.43, ease: "sine.inOut" }, 3.03)
-      .to("#raka-rig-left-arm-upper", { y: 1.1, duration: 0.35, ease: "sine.inOut" }, 8.1)
-      .to("#raka-rig-left-arm-upper", { y: 0, duration: 0.42, ease: "sine.inOut" }, 8.45)
-      .to("#raka-rig-right-arm", { y: 0.9, duration: 0.36, ease: "sine.inOut" }, 8.24)
-      .to("#raka-rig-right-arm", { y: 0, duration: 0.42, ease: "sine.inOut" }, 8.6);
-    const blinkAt = (time, closeDuration = 0.075) => {
-      tl.to("#raka-eye-left, #raka-eye-right", { opacity: 0.04, duration: closeDuration, ease: "power2.in" }, time)
+    tl.to("#raka-rig-head-face, #raka-rig-head-hair", { rotation: 13.5, x: -5, y: 3, svgOrigin: "317 280", duration: 0.36, ease: "sine.inOut" }, 2.05)
+      .to("#raka-rig-head-face, #raka-rig-head-hair", { rotation: 5, x: 3, y: 0, duration: 0.66, ease: "sine.inOut" }, 2.41)
+      .to("#raka-rig-head-face, #raka-rig-head-hair", { rotation: 12.5, x: -4, y: 3, duration: 0.42, ease: "sine.inOut" }, 4.55)
+      .to("#raka-rig-head-face, #raka-rig-head-hair", { rotation: 5.5, x: 2, y: 0, duration: 0.64, ease: "sine.inOut" }, 4.97)
+      .to("#raka-rig-head-face, #raka-rig-head-hair", { rotation: 13, x: -5, y: 3, duration: 0.36, ease: "sine.inOut" }, 7.9)
+      .to("#raka-rig-head-face, #raka-rig-head-hair", { rotation: 6, x: 2, y: 0, duration: 0.66, ease: "sine.inOut" }, 8.26)
+      .to("#raka-rig-head-face, #raka-rig-head-hair", { rotation: 11.5, x: -4, y: 2, duration: 0.4, ease: "sine.inOut" }, 11.85)
+      .to("#raka-rig-head-face, #raka-rig-head-hair", { rotation: 5.5, x: 0, y: 0, duration: 0.62, ease: "sine.inOut" }, 12.25);
+    tl.to("#raka-rig-left-arm-upper", { rotation: 8, svgOrigin: "286 314", duration: 0.3, ease: "sine.inOut" }, 2.4)
+      .to("#raka-rig-left-arm-upper", { rotation: 0, duration: 0.36, ease: "sine.inOut" }, 2.7)
+      .to("#raka-rig-left-arm-lower", { rotation: -10, svgOrigin: "280 222", duration: 0.24, ease: "sine.inOut" }, 2.55)
+      .to("#raka-rig-left-arm-lower", { rotation: 0, duration: 0.34, ease: "sine.inOut" }, 2.79)
+      .to("#raka-rig-right-arm", { rotation: 7, svgOrigin: "356 278", duration: 0.28, ease: "sine.inOut" }, 2.65)
+      .to("#raka-rig-right-arm", { rotation: 0, duration: 0.36, ease: "sine.inOut" }, 2.93)
+      .to("#raka-rig-left-arm-upper", { y: 5, duration: 0.28, ease: "sine.inOut" }, 8.1)
+      .to("#raka-rig-left-arm-upper", { y: 0, duration: 0.36, ease: "sine.inOut" }, 8.38)
+      .to("#raka-rig-right-arm", { y: 4, duration: 0.28, ease: "sine.inOut" }, 8.24)
+      .to("#raka-rig-right-arm", { y: 0, duration: 0.36, ease: "sine.inOut" }, 8.52)
+      .to("#sstudentstress-Character", { x: -8, y: 3, duration: 0.36, ease: "sine.inOut" }, 9.5)
+      .to("#sstudentstress-Character", { x: 5, y: 0, duration: 0.52, ease: "sine.inOut" }, 9.86)
+      .to("#sstudentstress-Character", { x: 0, y: 0, duration: 0.36, ease: "sine.inOut" }, 10.38);
+    const blinkAt = (time, closeDuration = 0.12) => {
+      tl.to("#raka-eye-left, #raka-eye-right", { opacity: 0, duration: closeDuration, ease: "power2.in" }, time)
         .to("#raka-eye-left, #raka-eye-right", { opacity: 1, duration: 0.13, ease: "power2.out" }, time + closeDuration);
     };
-    [2.8, 5.75, 9.4, 12.55].forEach((time, index) => blinkAt(time, index === 2 ? 0.1 : 0.075));
+    [2.8, 5.75, 9.4, 12.55].forEach((time, index) => blinkAt(time, index === 2 ? 0.16 : 0.12));
     const sighAt = (time) => {
-      tl.to("#raka-mouth", { fill: "#2A1F2D", duration: 0.16, ease: "power2.out" }, time)
-        .to("#raka-mouth", { fill: "#FFF6EC", duration: 0.24, ease: "sine.inOut" }, time + 0.2);
+      tl.to("#raka-mouth", { fill: "#2A1F2D", duration: 0.26, ease: "power2.out" }, time)
+        .to("#raka-mouth", { fill: "#FFF6EC", duration: 0.28, ease: "sine.inOut" }, time + 0.34);
     };
     [3.7, 8.65, 12.1].forEach(sighAt);
     const captionGroups = Array.from(document.querySelectorAll("#scene-03b-caption-box .caption-group"));
