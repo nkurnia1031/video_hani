@@ -252,14 +252,20 @@
         .to("#scene03c-scratch-arm", { rotation: 0, duration: 0.2, ease: "power2.out" }, time + 0.37);
     };
     [1.8, 5.15, 9.35].forEach(scratchAt);
-    tl.to("#scene03c-plant-left-foliage", { rotation: 9, svgOrigin: "102 383", duration: 0.5, ease: "sine.inOut" }, 0.85)
-      .to("#scene03c-plant-left-foliage", { rotation: -7.5, duration: 0.6, ease: "sine.inOut" }, 1.35)
-      .to("#scene03c-plant-left-foliage", { rotation: 6, duration: 0.56, ease: "sine.inOut" }, 1.95)
-      .to("#scene03c-plant-left-foliage", { rotation: 0, duration: 0.62, ease: "sine.inOut" }, 2.87)
-      .to("#scene03c-plant-right-foliage", { rotation: -8, svgOrigin: "406 383", duration: 0.52, ease: "sine.inOut" }, 1.15)
-      .to("#scene03c-plant-right-foliage", { rotation: 6.5, duration: 0.6, ease: "sine.inOut" }, 1.67)
-      .to("#scene03c-plant-right-foliage", { rotation: -5, duration: 0.55, ease: "sine.inOut" }, 2.27)
-      .to("#scene03c-plant-right-foliage", { rotation: 0, duration: 0.62, ease: "sine.inOut" }, 3.21);
+    const swayPlant = (selector, origin, angles, durations, start = 0) => {
+      let at = start;
+      angles.forEach((rotation, index) => {
+        const duration = durations[index % durations.length];
+        tl.to(selector, { rotation, svgOrigin: origin, duration, ease: "sine.inOut" }, at);
+        at += duration;
+      });
+    };
+    swayPlant("#scene03c-plant-left-foliage", "102 383",
+      [10, -9, 8, -11, 9, -8, 11, -9, 7, -10, 9, -8, 11, -9, 6],
+      [0.96, 1.02, 0.98, 1.04, 0.90], 0.02);
+    swayPlant("#scene03c-plant-right-foliage", "406 383",
+      [-9, 8, -11, 9, -8, 11, -9, 7, -10, 9, -8, 11, -9, 6, -8],
+      [1.04, 0.90, 1.02, 0.92, 1.02], 0.22);
     tl.set("#scouple-freepik--Lines--inject-2", { opacity: 0 }, 0)
       .fromTo("#scouple-freepik--Lines--inject-2", { opacity: 0 }, { opacity: 1, duration: 0.55, ease: "power2.out" }, 3.72)
       .to("#scene03c-heart-fill-recede", { attr: { y: 184, height: 22 }, duration: 1.08, ease: "power2.inOut" }, 3.58)
