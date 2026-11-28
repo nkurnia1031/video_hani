@@ -1112,11 +1112,13 @@ def continuous_office_base(title, description, frame_id, isolate_dina=False, cha
         embed_asset(
             root, "coworkers", 0, 74, 1000, 1000,
             omit_ids={"Chat", "character-1"}, color_map={"#407BFF": character_color}, raka_expression=True,
+            child_omit_indices={"character-2": (52,)},
         )
     else:
         embed_asset(
             root, "coworkers", 0, 74, 1000, 1000,
             omit_ids={"Chat"}, color_map={"#407BFF": character_color}, raka_expression=True,
+            child_omit_indices={"character-2": (52,)},
         )
     root.set("data-frame", frame_id)
     return root
@@ -1594,11 +1596,12 @@ def create_previews():
     title_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 22)
     label_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 13)
     draw.text((gap, 15), f"STORYBOARD C · VISUAL AUDIT · 7 SCENES / {len(thumbs)} FRAMES", font=title_font, fill=ESPRESSO)
+    resampling = getattr(Image, "Resampling", Image)
     for i, (code, title, png_path) in enumerate(thumbs):
         col, row = i % cols, i // cols
         x = gap + col * (card_w + gap)
         y = top + gap + row * (card_h + 48 + gap)
-        im = Image.open(png_path).convert("RGB").resize((card_w, card_h), Image.Resampling.LANCZOS)
+        im = Image.open(png_path).convert("RGB").resize((card_w, card_h), resampling.LANCZOS)
         sheet.paste(im, (x, y))
         draw.text((x, y + card_h + 9), f"{code}  ·  {title}", font=label_font, fill=ESPRESSO)
     contact = PREVIEW_DIR / "contact-sheet.png"
