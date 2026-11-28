@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920" role="img" aria-labelledby="scene-title scene-desc" data-format="portrait-9x16">
   <title id="scene-title">Scene 2A: room, phone, and scrolling comments</title>
-  <desc id="scene-desc">A cream living room with a TV and framed art at left, an espresso phone with a scrolling comment feed in the center, and a reclining man on a sage sofa beneath colored shelves at right.</desc>
-  <metadata>Editable 9:16 scene. Foreground props and characters are staged inside the conservative UI-safe area; upper and lower bands are background only. Important objects and text stay inside the conservative short-video UI-safe area; top and bottom bands remain background-only.</metadata>
+  <desc id="scene-desc">A cream living room with an enlarged espresso phone centered on the frame and a reclining man on a sage sofa lower-left beneath colored shelves.</desc>
+  <metadata>Editable 9:16 scene. Important text stays above y=1248. The reclining person, sofa, and their shadow use the lower illustration-only band; the bottom 20% remains background-only. The lower 15% may contain only the person, furniture, and other non-text illustration; the last 20% stays empty except for background.</metadata>
   <defs>
     <linearGradient id="tv-screen" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#3D2645" />
@@ -20,7 +20,7 @@
     <circle cx="120" cy="580" r="150" fill="#F2B134" opacity="0.1" />
     <circle cx="940" cy="950" r="150" fill="#7FB89A" opacity="0.1" />
   </g>
-  <g id="short-video-safe-composition" transform="translate(136.46 106.35) scale(0.90076)">
+  <g id="short-video-safe-composition" transform="translate(-14.00 -9.50) scale(1.00000)">
     <g id="wall-art" transform="translate(640 280) scale(0.70)">
       <rect x="115" y="130" width="358" height="226" fill="#2A1F2D" rx="17" />
       <rect x="132" y="147" width="324" height="192" fill="#FFC4A3" rx="8" />
@@ -136,203 +136,211 @@
         </g>
       </g>
     </g>
-    <g id="sofa-shadow" transform="translate(-1100 400) scale(0.80)">
-      <ellipse cx="1630" cy="866" rx="346" ry="47" fill="#2A1F2D" opacity="0.15" />
+    <g transform="translate(35 370)" data-role="non-text lower-band illustration">
+      <g id="sofa-shadow" transform="translate(-500 400) scale(0.46)" data-safe-zone="lower-illustration">
+        <ellipse cx="1630" cy="866" rx="346" ry="47" fill="#2A1F2D" opacity="0.15" />
+      </g>
     </g>
-    <g id="reclining-sofa" transform="translate(-930 400) scale(0.74)">
-      <svg x="1080" y="150" width="850" height="850" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet" overflow="hidden" aria-label="Feed illustration, Storyset Rafiki">
-        <g id="sfeed-freepik--Sofa--inject-2">
-          <rect x="245.02" y="398.49" width="168.49" height="17.74" style="fill:#7FB89A" />
-          <rect x="245.02" y="398.49" width="168.49" height="17.74" style="fill:#fff;opacity:0.4;isolation:isolate" />
-          <rect x="245.02" y="398.49" width="102.46" height="17.74" style="fill:#fff;opacity:0.2;isolation:isolate" />
-          <rect x="165.02" y="398.49" width="168.49" height="17.74" style="fill:#7FB89A" />
-          <rect x="165.02" y="398.49" width="168.49" height="17.74" style="fill:#fff;opacity:0.4;isolation:isolate" />
-          <rect x="165.02" y="398.49" width="102.46" height="17.74" style="fill:#fff;opacity:0.2;isolation:isolate" />
-          <path d="M307.41,355.68H419.93l17.15-88.56a15.68,15.68,0,0,0-15.4-18.67H341.11a15.69,15.69,0,0,0-15.4,12.71Z" style="fill:#7FB89A" />
-          <path d="M388,355.68h31.95l17.15-88.56a15.68,15.68,0,0,0-15.4-18.67h0a15.69,15.69,0,0,0-15.4,12.71Z" style="fill:#7FB89A" />
-          <g style="opacity:0.6000000000000001;isolation:isolate">
-            <path d="M437.08,267.12l-17.15,88.56H307.41l18.3-94.52a15.69,15.69,0,0,1,15.4-12.71h80.57A15.68,15.68,0,0,1,437.08,267.12Z" style="fill:#fff" />
-          </g>
-          <g style="opacity:0.6000000000000001;isolation:isolate">
-            <path d="M412.08,267.12l-17.15,88.56H307.41l18.3-94.52a15.69,15.69,0,0,1,15.4-12.71h55.57A15.68,15.68,0,0,1,412.08,267.12Z" style="fill:#fff" />
-          </g>
-          <rect x="232.97" y="354.59" width="191.23" height="46.66" rx="7.91" style="fill:#7FB89A" />
-          <rect x="232.97" y="354.59" width="118.03" height="46.66" rx="7.91" style="fill:#fff;opacity:0.6000000000000001;isolation:isolate" />
-          <rect x="232.97" y="354.59" width="191.23" height="46.66" rx="7.91" style="fill:#fff;opacity:0.6000000000000001;isolation:isolate" />
-          <rect x="156.11" y="354.59" width="191.23" height="46.66" rx="7.91" style="fill:#7FB89A" />
-          <rect x="156.11" y="354.59" width="118.03" height="46.66" rx="7.91" style="fill:#fff;opacity:0.6000000000000001;isolation:isolate" />
-          <rect x="156.11" y="354.59" width="191.23" height="46.66" rx="7.91" style="fill:#fff;opacity:0.6000000000000001;isolation:isolate" />
-        </g>
-      </svg>
-    </g>
-    <g id="phone-scroller" transform="translate(-930 400) scale(0.74)">
-      <svg x="1080" y="150" width="850" height="850" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet" overflow="hidden" aria-label="Feed illustration, Storyset Rafiki">
-        <g id="sfeed-freepik--Character--inject-2">
-          <g id="sfeed-freepik--group--inject-2">
-            <polygon points="180.82 353.28 181.8 346.15 198.75 345.18 197.76 352.3 180.82 353.28" style="fill:#FFC4A3" />
-            <polygon points="197.76 352.3 198.74 345.18 189.06 345.73 188.42 352.84 197.76 352.3" style="opacity:0.2;isolation:isolate" />
-            <path d="M182.19,346.2h0l-.37-.37a6.09,6.09,0,0,0,2.55-1.29,1.43,1.43,0,0,0,0-1,.85.85,0,0,0-.62-.67,2.58,2.58,0,0,0-1.64.73,3,3,0,0,0,.27-2,.67.67,0,0,0-.52-.35.88.88,0,0,0-.91.29,2,2,0,0,0-.22,1.38,9.06,9.06,0,0,0,.44,1.85s0,0,0,.06,0,0,.05,0,.07.29.1.3.43.65.43.65Zm1.49-3.07c.1,0,.22.05.27.29l0,.08a.5.5,0,0,1-.12.37c-.36.47-1.49.64-2.17.69,0-.05,0-.09.08-.15A3.37,3.37,0,0,1,183.68,343.13Zm-2.43-1.38a.64.64,0,0,1,.59-.18.32.32,0,0,1,.25.17c.23.45-.25,1.7-.69,2.58C181,343.07,181,342.12,181.25,341.75Z" style="fill:#3D2645" />
-            <path d="M182.25,345.34l.82,8a.52.52,0,0,1-.43.58h0l-6.32,1a1.27,1.27,0,0,1-1.39-1.12c-.24-2.81-.21-4.16-.54-7.69a65.08,65.08,0,0,1-.67-9.45c.17-3,3.15-2.76,3.34-1.47a19.81,19.81,0,0,0,4.67,8.9A2,2,0,0,1,182.25,345.34Z" style="fill:#2A1F2D" />
-            <g id="phone-hand-motion" data-rig-part="scrolling-hand-and-phone">
-              <path d="M332.07,269.32s-4.39-.08-4.54.69.13,7.19.71,8.1a13.9,13.9,0,0,0,2.19,2.2l-3.23,9.56,5.41,2.75L335,282.19s2.69-2.62,1.91-6S332.07,269.32,332.07,269.32Z" style="fill:#FFC4A3" />
-              <path d="M332.07,269.32s-4.39-.08-4.54.69.13,7.19.71,8.1a13.9,13.9,0,0,0,2.19,2.2l-3.23,9.56,5.41,2.75L335,282.19s2.69-2.62,1.91-6S332.07,269.32,332.07,269.32Z" style="opacity:0.2;isolation:isolate" />
-              <path d="M347.06,273.82c-4.39,1.88-9.14,16.58-11.11,18.43s-1.19-4.61-1.19-4.61l-7.56-2.05s-3,8.71,0,16,12.18,4.39,19-4.79S347.06,273.82,347.06,273.82Z" style="fill:#3D2645" />
-              <path d="M327.2,301.62a6.54,6.54,0,0,0,2.88,3.43c4.15,2.24,10.85-1.11,16.15-8.22a16.64,16.64,0,0,0,3-7.49c1.18-7.75-2.2-15.52-2.2-15.52-4.39,1.88-9.14,16.58-11.12,18.43s-1.18-4.61-1.18-4.61l-7.56-2.05S324.19,294.3,327.2,301.62Z" style="fill:#fff;opacity:0.2;isolation:isolate" />
-              <path d="M330.08,305.05c4.15,2.24,10.85-1.11,16.15-8.22a16.64,16.64,0,0,0,3-7.49c-.82-1.72-1.45-2.76-1.45-2.76S339,302.57,330.08,305.05Z" style="opacity:0.2;isolation:isolate" />
+    <g transform="translate(35 370)" data-role="non-text lower-band illustration">
+      <g id="reclining-sofa" transform="translate(-930 400) scale(0.74)" data-safe-zone="lower-illustration">
+        <svg x="1080" y="150" width="850" height="850" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet" overflow="hidden" aria-label="Feed illustration, Storyset Rafiki">
+          <g id="sfeed-freepik--Sofa--inject-2">
+            <rect x="245.02" y="398.49" width="168.49" height="17.74" style="fill:#7FB89A" />
+            <rect x="245.02" y="398.49" width="168.49" height="17.74" style="fill:#fff;opacity:0.4;isolation:isolate" />
+            <rect x="245.02" y="398.49" width="102.46" height="17.74" style="fill:#fff;opacity:0.2;isolation:isolate" />
+            <rect x="165.02" y="398.49" width="168.49" height="17.74" style="fill:#7FB89A" />
+            <rect x="165.02" y="398.49" width="168.49" height="17.74" style="fill:#fff;opacity:0.4;isolation:isolate" />
+            <rect x="165.02" y="398.49" width="102.46" height="17.74" style="fill:#fff;opacity:0.2;isolation:isolate" />
+            <path d="M307.41,355.68H419.93l17.15-88.56a15.68,15.68,0,0,0-15.4-18.67H341.11a15.69,15.69,0,0,0-15.4,12.71Z" style="fill:#7FB89A" />
+            <path d="M388,355.68h31.95l17.15-88.56a15.68,15.68,0,0,0-15.4-18.67h0a15.69,15.69,0,0,0-15.4,12.71Z" style="fill:#7FB89A" />
+            <g style="opacity:0.6000000000000001;isolation:isolate">
+              <path d="M437.08,267.12l-17.15,88.56H307.41l18.3-94.52a15.69,15.69,0,0,1,15.4-12.71h80.57A15.68,15.68,0,0,1,437.08,267.12Z" style="fill:#fff" />
             </g>
-            <path d="M325.66,326a55.64,55.64,0,0,0,12.9-20.21c4.25-12.16,8.5-32,8.5-32s20.36-4.47,40.05,1.94-5.39,59.38-23.5,65.3Z" style="fill:#3D2645" />
-            <path d="M339.52,274.92a.67.67,0,0,1-.74.7l-7.46-.58a.87.87,0,0,1-.79-.81L330,259.36a.75.75,0,0,1,.74-.8l7.46.58a1,1,0,0,1,.78.92Z" style="fill:#2A1F2D" />
-            <path d="M338.17,259.9l.54,15a.58.58,0,0,1-.65.66l-6.33-.49c-.42,0-1.18-.33-1.2-.75L330,259.27c0-.43.74-.71,1.16-.67l6.33.49A.77.77,0,0,1,338.17,259.9Z" style="fill:#fff;opacity:0.5" />
-            <path d="M349.8,285.27l-5.54-5.67s-.92-8.89-1.37-9.84-7.67-.59-8.45-.65-.64,8.81.12,9.74,3.7,1.68,3.7,1.68l5.93,8.09Z" style="fill:#FFC4A3" />
-            <path d="M349.51,295.68s5.74,13.65,15.37,14.24,24.18-11.76,26-20.62-11.31-.68-11.31-.68-16.86,9.77-17.19,9.8S349.51,295.68,349.51,295.68Z" style="opacity:0.2;isolation:isolate" />
-            <path d="M387.37,277.89c-4.06-.17-16.88,14.78-22.49,16.56s-17.24-12.84-17.24-12.84l-6,5.05s9,14.15,18.64,17.32,26.49-7.89,29.66-12.84S392.32,278.1,387.37,277.89Z" style="fill:#3D2645" />
-            <path d="M387.37,277.89c-4.06-.17-16.88,14.78-22.49,16.56s-17.24-12.84-17.24-12.84l-6,5.05s9,14.15,18.64,17.32,26.49-7.89,29.66-12.84S392.32,278.1,387.37,277.89Z" style="fill:#fff;opacity:0.2;isolation:isolate" />
-            <path d="M362.38,270.67s9.16-3.22,17.55-1a2.3,2.3,0,0,1,.54,2.61,28.28,28.28,0,0,0-18.09,2Z" />
-            <path d="M361,273.58c0,2.53-1.59,4.58-3.55,4.58s-3.54-2.05-3.54-4.58,1.59-4.59,3.54-4.59S361,271.05,361,273.58Z" style="fill:#2A1F2D" />
-            <path d="M361,273.58c0,2.53-1.59,4.58-3.55,4.58s-3.54-2.05-3.54-4.58,1.59-4.59,3.54-4.59S361,271.05,361,273.58Z" style="fill:#fff;opacity:0.2;isolation:isolate" />
-            <path d="M364,273.58c0,3.21-2,5.82-4.51,5.82s-4.5-2.61-4.5-5.82,2-5.82,4.5-5.82S364,270.36,364,273.58Z" style="fill:#2A1F2D" />
-            <path d="M363.09,273.58c0,1.84-1.16,3.33-2.58,3.33s-2.57-1.49-2.57-3.33,1.15-3.33,2.57-3.33S363.09,271.74,363.09,273.58Z" style="opacity:0.5;isolation:isolate" />
-            <path d="M377.81,255.51c-1.08,5.57-2.14,15.76,1.76,19.46,0,0-4.52,6.81-12.64,5.46-6.17-1-2.05-6.61-2.05-6.61,2.79-1.17,3.43-4.9,2.34-9.22Z" style="fill:#FFC4A3" />
-            <path d="M373.49,259.22l-6.26,5.38a17.62,17.62,0,0,1,.54,3.07c2.37-.35,5.61-3,5.86-5.44A8.23,8.23,0,0,0,373.49,259.22Z" style="opacity:0.2;isolation:isolate" />
-            <path d="M364.55,240.81c3.05,2.15,1.57,5.67-5.51,11.09-2.76-3.73-3.1-10.87-.81-12.63S361.89,239,364.55,240.81Z" style="fill:#2A1F2D" />
-            <path d="M377.71,246.81c-.35,5.54-.39,9.41-1.9,12.6a11.72,11.72,0,0,1-2.28,3.23c-5.73,5.8-15,2.33-16.81-5.19-.06-.23-.11-.48-.15-.73-1.37-6.81-.16-17.33,7-20.21a10.3,10.3,0,0,1,14.17,10.3Z" style="fill:#FFC4A3" />
-            <path d="M366.46,248.85c0,.62-.33,1.11-.73,1.11s-.72-.49-.72-1.11.32-1.1.72-1.11S366.42,248.25,366.46,248.85Z" style="fill:#2A1F2D" />
-            <path d="M359.48,248.85c0,.61-.33,1.11-.73,1.11s-.72-.49-.72-1.11.33-1.11.73-1.11S359.49,248.24,359.48,248.85Z" style="fill:#2A1F2D" />
-            <path d="M361.76,249.14a22.37,22.37,0,0,1-2.94,5.25,3.55,3.55,0,0,0,2.93.55Z" style="fill:#E4572E" />
-            <path d="M368.36,246.66a.37.37,0,0,0,.23,0,.37.37,0,0,0,.08-.51,3.57,3.57,0,0,0-2.93-1.49.36.36,0,0,0-.34.36v0a.37.37,0,0,0,.39.33h0a2.85,2.85,0,0,1,2.3,1.2A.37.37,0,0,0,368.36,246.66Z" style="fill:#2A1F2D" />
-            <path d="M356.31,246.5a.36.36,0,0,0,.33-.21,2.88,2.88,0,0,1,2-1.62.38.38,0,0,0,.32-.41.37.37,0,0,0-.4-.31,3.58,3.58,0,0,0-2.59,2,.36.36,0,0,0,.16.48h0Z" style="fill:#2A1F2D" />
-            <path d="M374.72,240.12c-3.52,1.21-3.1,5,2.18,12.19,3.7-2.8,6-9.57,4.32-11.89S377.8,239.08,374.72,240.12Z" style="fill:#2A1F2D" />
-            <path d="M381.29,252.84a7.19,7.19,0,0,1-3.42,4.29c-2.21,1.19-3.87-.65-3.72-3,.13-2.14,1.45-5.35,3.89-5.56A3.2,3.2,0,0,1,381.29,252.84Z" style="fill:#FFC4A3" />
-            <path d="M367.38,256.29a5.26,5.26,0,0,1-5,2.26" style="fill:none;stroke:#2A1F2D;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.526291px" />
-            <path d="M374.69,242.67s.52-4.08-4.68-5-8.15,4.43-8.15,4.43a4.5,4.5,0,0,1,.52-3.66,7.54,7.54,0,0,0-2.9,4.19s-.85-1-.49-3.88l-1.85,3.09s-1.67-5,5.24-8.84,22.6,1.19,17.81,7.65Z" style="fill:#2A1F2D" />
-            <path d="M375.93,274.34s5.06-2.41,4-4.65c0,0,1.19,0,1.58,1.73s-.92,4.2-4.35,5.82Z" style="fill:#2A1F2D" />
-            <ellipse cx="373.36" cy="277.24" rx="4.5" ry="5.82" style="fill:#2A1F2D" />
-            <path d="M378.42,277.24c0,2.53-1.59,4.58-3.55,4.58s-3.55-2.05-3.55-4.58,1.59-4.59,3.55-4.59S378.42,274.7,378.42,277.24Z" style="fill:#2A1F2D" />
-            <path d="M378.42,277.24c0,2.53-1.59,4.58-3.55,4.58s-3.55-2.05-3.55-4.58,1.59-4.59,3.55-4.59S378.42,274.7,378.42,277.24Z" style="fill:#fff;opacity:0.2;isolation:isolate" />
-            <path d="M334.36,314.77l-5.88,4.32s-36.6-51.59-46.43-51c-14.85.84-41.8,81.23-41.8,81.23l14.69-1.53s24.46-49.41,27.11-45.69c7.3,10.26,24,42.71,24,42.71l26.44-3.6Z" style="fill:#2A1F2D" />
-            <path d="M334.36,314.77l-1,14.31v.06l-.83,12-26.44,3.6-.32-.62c-2.34-4.51-17-32.67-23.72-42.1-2.65-3.71-27.11,45.7-27.11,45.7l-14.69,1.53s2.56-7.64,6.54-18.23c8.92-23.77,25-62.42,35.26-63,9.83-.56,46.43,51,46.43,51Z" style="fill:#fff;opacity:0.2;isolation:isolate" />
-            <path d="M333.46,329.09l-.1.05c-1.17.72-12.64,7.63-27.59,15-2.34-4.51-17-32.67-23.72-42.1-2.65-3.71-27.11,45.7-27.11,45.7l-14.69,1.53s2.56-7.64,6.54-18.23l13.21-2.6s18.19-36.81,23.94-32.3c5.21,4.09,22.31,31.35,22.31,31.35l27.12,1.57Z" style="opacity:0.30000000000000004;isolation:isolate" />
-            <path d="M346.87,355.68c-19.46,0-153.25-1.45-153.25-1.45V343.92L331.29,328.2l3.07-13.43,39.9,18.54S366.34,355.68,346.87,355.68Z" style="fill:#2A1F2D" />
-            <path d="M346.87,355.68c-19.46,0-153.25-1.45-153.25-1.45V343.92L331.29,328.2l3.07-13.43,39.9,18.54S366.34,355.68,346.87,355.68Z" style="fill:#fff;opacity:0.2;isolation:isolate" />
-            <polygon points="192.49 356.68 192.08 341.62 198.88 340.62 199 357.15 192.49 356.68" style="fill:#2A1F2D" />
+            <g style="opacity:0.6000000000000001;isolation:isolate">
+              <path d="M412.08,267.12l-17.15,88.56H307.41l18.3-94.52a15.69,15.69,0,0,1,15.4-12.71h55.57A15.68,15.68,0,0,1,412.08,267.12Z" style="fill:#fff" />
+            </g>
+            <rect x="232.97" y="354.59" width="191.23" height="46.66" rx="7.91" style="fill:#7FB89A" />
+            <rect x="232.97" y="354.59" width="118.03" height="46.66" rx="7.91" style="fill:#fff;opacity:0.6000000000000001;isolation:isolate" />
+            <rect x="232.97" y="354.59" width="191.23" height="46.66" rx="7.91" style="fill:#fff;opacity:0.6000000000000001;isolation:isolate" />
+            <rect x="156.11" y="354.59" width="191.23" height="46.66" rx="7.91" style="fill:#7FB89A" />
+            <rect x="156.11" y="354.59" width="118.03" height="46.66" rx="7.91" style="fill:#fff;opacity:0.6000000000000001;isolation:isolate" />
+            <rect x="156.11" y="354.59" width="191.23" height="46.66" rx="7.91" style="fill:#fff;opacity:0.6000000000000001;isolation:isolate" />
           </g>
-        </g>
-      </svg>
+        </svg>
+      </g>
     </g>
-    <g id="phone-shell" transform="translate(-90 270) scale(0.80)">
-      <rect x="664" y="79" width="622" height="934" fill="#2A1F2D" rx="58" opacity="0.22" />
-      <rect x="646" y="61" width="622" height="934" fill="#2A1F2D" rx="58" />
-      <rect x="666" y="81" width="582" height="894" fill="#FFF6EC" rx="42" />
-      <g id="phone-header">
-        <rect x="889" y="94" width="136" height="11" fill="#3D2645" rx="6" />
-        <circle cx="1172" cy="129" r="5" fill="#3D2645" />
-        <circle cx="1187" cy="129" r="5" fill="#3D2645" />
-        <rect x="1201" y="121" width="23" height="15" fill="none" rx="3" stroke="#3D2645" stroke-width="2" />
-        <rect x="1206" y="125" width="13" height="7" fill="#7FB89A" rx="2" />
-        <text x="704" y="179" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" letter-spacing="0">
-          <tspan x="704" dy="0">Beranda</tspan>
-        </text>
-        <circle cx="1200" cy="167" r="9" fill="none" stroke="#3D2645" stroke-width="2" />
-        <path d="M1207,174 L1214,181" fill="none" stroke="#3D2645" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        <line x1="686" y1="193" x2="1228" y2="193" stroke="#FFC4A3" stroke-width="2" stroke-linecap="round" />
+    <g transform="translate(35 370)" data-role="non-text lower-band illustration">
+      <g id="phone-scroller" transform="translate(-930 400) scale(0.74)" data-safe-zone="lower-illustration">
+        <svg x="1080" y="150" width="850" height="850" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet" overflow="hidden" aria-label="Feed illustration, Storyset Rafiki">
+          <g id="sfeed-freepik--Character--inject-2">
+            <g id="sfeed-freepik--group--inject-2">
+              <polygon points="180.82 353.28 181.8 346.15 198.75 345.18 197.76 352.3 180.82 353.28" style="fill:#FFC4A3" />
+              <polygon points="197.76 352.3 198.74 345.18 189.06 345.73 188.42 352.84 197.76 352.3" style="opacity:0.2;isolation:isolate" />
+              <path d="M182.19,346.2h0l-.37-.37a6.09,6.09,0,0,0,2.55-1.29,1.43,1.43,0,0,0,0-1,.85.85,0,0,0-.62-.67,2.58,2.58,0,0,0-1.64.73,3,3,0,0,0,.27-2,.67.67,0,0,0-.52-.35.88.88,0,0,0-.91.29,2,2,0,0,0-.22,1.38,9.06,9.06,0,0,0,.44,1.85s0,0,0,.06,0,0,.05,0,.07.29.1.3.43.65.43.65Zm1.49-3.07c.1,0,.22.05.27.29l0,.08a.5.5,0,0,1-.12.37c-.36.47-1.49.64-2.17.69,0-.05,0-.09.08-.15A3.37,3.37,0,0,1,183.68,343.13Zm-2.43-1.38a.64.64,0,0,1,.59-.18.32.32,0,0,1,.25.17c.23.45-.25,1.7-.69,2.58C181,343.07,181,342.12,181.25,341.75Z" style="fill:#3D2645" />
+              <path d="M182.25,345.34l.82,8a.52.52,0,0,1-.43.58h0l-6.32,1a1.27,1.27,0,0,1-1.39-1.12c-.24-2.81-.21-4.16-.54-7.69a65.08,65.08,0,0,1-.67-9.45c.17-3,3.15-2.76,3.34-1.47a19.81,19.81,0,0,0,4.67,8.9A2,2,0,0,1,182.25,345.34Z" style="fill:#2A1F2D" />
+              <g id="phone-hand-motion" data-rig-part="scrolling-hand-and-phone">
+                <path d="M332.07,269.32s-4.39-.08-4.54.69.13,7.19.71,8.1a13.9,13.9,0,0,0,2.19,2.2l-3.23,9.56,5.41,2.75L335,282.19s2.69-2.62,1.91-6S332.07,269.32,332.07,269.32Z" style="fill:#FFC4A3" />
+                <path d="M332.07,269.32s-4.39-.08-4.54.69.13,7.19.71,8.1a13.9,13.9,0,0,0,2.19,2.2l-3.23,9.56,5.41,2.75L335,282.19s2.69-2.62,1.91-6S332.07,269.32,332.07,269.32Z" style="opacity:0.2;isolation:isolate" />
+                <path d="M347.06,273.82c-4.39,1.88-9.14,16.58-11.11,18.43s-1.19-4.61-1.19-4.61l-7.56-2.05s-3,8.71,0,16,12.18,4.39,19-4.79S347.06,273.82,347.06,273.82Z" style="fill:#3D2645" />
+                <path d="M327.2,301.62a6.54,6.54,0,0,0,2.88,3.43c4.15,2.24,10.85-1.11,16.15-8.22a16.64,16.64,0,0,0,3-7.49c1.18-7.75-2.2-15.52-2.2-15.52-4.39,1.88-9.14,16.58-11.12,18.43s-1.18-4.61-1.18-4.61l-7.56-2.05S324.19,294.3,327.2,301.62Z" style="fill:#fff;opacity:0.2;isolation:isolate" />
+                <path d="M330.08,305.05c4.15,2.24,10.85-1.11,16.15-8.22a16.64,16.64,0,0,0,3-7.49c-.82-1.72-1.45-2.76-1.45-2.76S339,302.57,330.08,305.05Z" style="opacity:0.2;isolation:isolate" />
+              </g>
+              <path d="M325.66,326a55.64,55.64,0,0,0,12.9-20.21c4.25-12.16,8.5-32,8.5-32s20.36-4.47,40.05,1.94-5.39,59.38-23.5,65.3Z" style="fill:#3D2645" />
+              <path d="M339.52,274.92a.67.67,0,0,1-.74.7l-7.46-.58a.87.87,0,0,1-.79-.81L330,259.36a.75.75,0,0,1,.74-.8l7.46.58a1,1,0,0,1,.78.92Z" style="fill:#2A1F2D" />
+              <path d="M338.17,259.9l.54,15a.58.58,0,0,1-.65.66l-6.33-.49c-.42,0-1.18-.33-1.2-.75L330,259.27c0-.43.74-.71,1.16-.67l6.33.49A.77.77,0,0,1,338.17,259.9Z" style="fill:#fff;opacity:0.5" />
+              <path d="M349.8,285.27l-5.54-5.67s-.92-8.89-1.37-9.84-7.67-.59-8.45-.65-.64,8.81.12,9.74,3.7,1.68,3.7,1.68l5.93,8.09Z" style="fill:#FFC4A3" />
+              <path d="M349.51,295.68s5.74,13.65,15.37,14.24,24.18-11.76,26-20.62-11.31-.68-11.31-.68-16.86,9.77-17.19,9.8S349.51,295.68,349.51,295.68Z" style="opacity:0.2;isolation:isolate" />
+              <path d="M387.37,277.89c-4.06-.17-16.88,14.78-22.49,16.56s-17.24-12.84-17.24-12.84l-6,5.05s9,14.15,18.64,17.32,26.49-7.89,29.66-12.84S392.32,278.1,387.37,277.89Z" style="fill:#3D2645" />
+              <path d="M387.37,277.89c-4.06-.17-16.88,14.78-22.49,16.56s-17.24-12.84-17.24-12.84l-6,5.05s9,14.15,18.64,17.32,26.49-7.89,29.66-12.84S392.32,278.1,387.37,277.89Z" style="fill:#fff;opacity:0.2;isolation:isolate" />
+              <path d="M362.38,270.67s9.16-3.22,17.55-1a2.3,2.3,0,0,1,.54,2.61,28.28,28.28,0,0,0-18.09,2Z" />
+              <path d="M361,273.58c0,2.53-1.59,4.58-3.55,4.58s-3.54-2.05-3.54-4.58,1.59-4.59,3.54-4.59S361,271.05,361,273.58Z" style="fill:#2A1F2D" />
+              <path d="M361,273.58c0,2.53-1.59,4.58-3.55,4.58s-3.54-2.05-3.54-4.58,1.59-4.59,3.54-4.59S361,271.05,361,273.58Z" style="fill:#fff;opacity:0.2;isolation:isolate" />
+              <path d="M364,273.58c0,3.21-2,5.82-4.51,5.82s-4.5-2.61-4.5-5.82,2-5.82,4.5-5.82S364,270.36,364,273.58Z" style="fill:#2A1F2D" />
+              <path d="M363.09,273.58c0,1.84-1.16,3.33-2.58,3.33s-2.57-1.49-2.57-3.33,1.15-3.33,2.57-3.33S363.09,271.74,363.09,273.58Z" style="opacity:0.5;isolation:isolate" />
+              <path d="M377.81,255.51c-1.08,5.57-2.14,15.76,1.76,19.46,0,0-4.52,6.81-12.64,5.46-6.17-1-2.05-6.61-2.05-6.61,2.79-1.17,3.43-4.9,2.34-9.22Z" style="fill:#FFC4A3" />
+              <path d="M373.49,259.22l-6.26,5.38a17.62,17.62,0,0,1,.54,3.07c2.37-.35,5.61-3,5.86-5.44A8.23,8.23,0,0,0,373.49,259.22Z" style="opacity:0.2;isolation:isolate" />
+              <path d="M364.55,240.81c3.05,2.15,1.57,5.67-5.51,11.09-2.76-3.73-3.1-10.87-.81-12.63S361.89,239,364.55,240.81Z" style="fill:#2A1F2D" />
+              <path d="M377.71,246.81c-.35,5.54-.39,9.41-1.9,12.6a11.72,11.72,0,0,1-2.28,3.23c-5.73,5.8-15,2.33-16.81-5.19-.06-.23-.11-.48-.15-.73-1.37-6.81-.16-17.33,7-20.21a10.3,10.3,0,0,1,14.17,10.3Z" style="fill:#FFC4A3" />
+              <path d="M366.46,248.85c0,.62-.33,1.11-.73,1.11s-.72-.49-.72-1.11.32-1.1.72-1.11S366.42,248.25,366.46,248.85Z" style="fill:#2A1F2D" />
+              <path d="M359.48,248.85c0,.61-.33,1.11-.73,1.11s-.72-.49-.72-1.11.33-1.11.73-1.11S359.49,248.24,359.48,248.85Z" style="fill:#2A1F2D" />
+              <path d="M361.76,249.14a22.37,22.37,0,0,1-2.94,5.25,3.55,3.55,0,0,0,2.93.55Z" style="fill:#E4572E" />
+              <path d="M368.36,246.66a.37.37,0,0,0,.23,0,.37.37,0,0,0,.08-.51,3.57,3.57,0,0,0-2.93-1.49.36.36,0,0,0-.34.36v0a.37.37,0,0,0,.39.33h0a2.85,2.85,0,0,1,2.3,1.2A.37.37,0,0,0,368.36,246.66Z" style="fill:#2A1F2D" />
+              <path d="M356.31,246.5a.36.36,0,0,0,.33-.21,2.88,2.88,0,0,1,2-1.62.38.38,0,0,0,.32-.41.37.37,0,0,0-.4-.31,3.58,3.58,0,0,0-2.59,2,.36.36,0,0,0,.16.48h0Z" style="fill:#2A1F2D" />
+              <path d="M374.72,240.12c-3.52,1.21-3.1,5,2.18,12.19,3.7-2.8,6-9.57,4.32-11.89S377.8,239.08,374.72,240.12Z" style="fill:#2A1F2D" />
+              <path d="M381.29,252.84a7.19,7.19,0,0,1-3.42,4.29c-2.21,1.19-3.87-.65-3.72-3,.13-2.14,1.45-5.35,3.89-5.56A3.2,3.2,0,0,1,381.29,252.84Z" style="fill:#FFC4A3" />
+              <path d="M367.38,256.29a5.26,5.26,0,0,1-5,2.26" style="fill:none;stroke:#2A1F2D;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.526291px" />
+              <path d="M374.69,242.67s.52-4.08-4.68-5-8.15,4.43-8.15,4.43a4.5,4.5,0,0,1,.52-3.66,7.54,7.54,0,0,0-2.9,4.19s-.85-1-.49-3.88l-1.85,3.09s-1.67-5,5.24-8.84,22.6,1.19,17.81,7.65Z" style="fill:#2A1F2D" />
+              <path d="M375.93,274.34s5.06-2.41,4-4.65c0,0,1.19,0,1.58,1.73s-.92,4.2-4.35,5.82Z" style="fill:#2A1F2D" />
+              <ellipse cx="373.36" cy="277.24" rx="4.5" ry="5.82" style="fill:#2A1F2D" />
+              <path d="M378.42,277.24c0,2.53-1.59,4.58-3.55,4.58s-3.55-2.05-3.55-4.58,1.59-4.59,3.55-4.59S378.42,274.7,378.42,277.24Z" style="fill:#2A1F2D" />
+              <path d="M378.42,277.24c0,2.53-1.59,4.58-3.55,4.58s-3.55-2.05-3.55-4.58,1.59-4.59,3.55-4.59S378.42,274.7,378.42,277.24Z" style="fill:#fff;opacity:0.2;isolation:isolate" />
+              <path d="M334.36,314.77l-5.88,4.32s-36.6-51.59-46.43-51c-14.85.84-41.8,81.23-41.8,81.23l14.69-1.53s24.46-49.41,27.11-45.69c7.3,10.26,24,42.71,24,42.71l26.44-3.6Z" style="fill:#2A1F2D" />
+              <path d="M334.36,314.77l-1,14.31v.06l-.83,12-26.44,3.6-.32-.62c-2.34-4.51-17-32.67-23.72-42.1-2.65-3.71-27.11,45.7-27.11,45.7l-14.69,1.53s2.56-7.64,6.54-18.23c8.92-23.77,25-62.42,35.26-63,9.83-.56,46.43,51,46.43,51Z" style="fill:#fff;opacity:0.2;isolation:isolate" />
+              <path d="M333.46,329.09l-.1.05c-1.17.72-12.64,7.63-27.59,15-2.34-4.51-17-32.67-23.72-42.1-2.65-3.71-27.11,45.7-27.11,45.7l-14.69,1.53s2.56-7.64,6.54-18.23l13.21-2.6s18.19-36.81,23.94-32.3c5.21,4.09,22.31,31.35,22.31,31.35l27.12,1.57Z" style="opacity:0.30000000000000004;isolation:isolate" />
+              <path d="M346.87,355.68c-19.46,0-153.25-1.45-153.25-1.45V343.92L331.29,328.2l3.07-13.43,39.9,18.54S366.34,355.68,346.87,355.68Z" style="fill:#2A1F2D" />
+              <path d="M346.87,355.68c-19.46,0-153.25-1.45-153.25-1.45V343.92L331.29,328.2l3.07-13.43,39.9,18.54S366.34,355.68,346.87,355.68Z" style="fill:#fff;opacity:0.2;isolation:isolate" />
+              <polygon points="192.49 356.68 192.08 341.62 198.88 340.62 199 357.15 192.49 356.68" style="fill:#2A1F2D" />
+            </g>
+          </g>
+        </svg>
       </g>
-      <g id="comment-viewport" clip-path="url(#phone-feed-window)">
-        <g id="comment-feed">
-          <g id="comment-01" role="group" aria-label="Comment by @raraa">
-            <rect x="686" y="209" width="542" height="153" fill="#FFF6EC" rx="17" stroke="#FFC4A3" stroke-width="2" />
-            <circle cx="713" cy="236" r="15" fill="#3D2645" />
-            <text x="713" y="241" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0">
-              <tspan x="713" dy="0">R</tspan>
-            </text>
-            <text x="738" y="239" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="start" letter-spacing="0">
-              <tspan x="738" dy="0">@raraa</tspan>
-            </text>
-            <text x="738" y="275" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="500" text-anchor="start">
-              <tspan fill="#2A1F2D" font-weight="500">Pacar gue tiap ada masalah suka ngilang.</tspan>
-            </text>
-            <text x="738" y="298" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="500" text-anchor="start">
-              <tspan fill="#2A1F2D" font-weight="500">Gue chat malam, pagi baru dibales</tspan>
-            </text>
-            <text x="738" y="321" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="500" text-anchor="start">
-              <tspan fill="#2A1F2D" font-weight="500">‘ketiduran’. Fix </tspan>
-              <tspan fill="#E4572E" font-weight="700">avoidant</tspan>
-              <tspan fill="#2A1F2D" font-weight="500"> sih.</tspan>
-            </text>
-          </g>
-          <g id="comment-02" role="group" aria-label="Comment by @anakrantau">
-            <rect x="686" y="375" width="542" height="153" fill="#FFF6EC" rx="17" stroke="#FFC4A3" stroke-width="2" />
-            <circle cx="713" cy="402" r="15" fill="#F2B134" />
-            <text x="713" y="407" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0">
-              <tspan x="713" dy="0">A</tspan>
-            </text>
-            <text x="738" y="405" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="start" letter-spacing="0">
-              <tspan x="738" dy="0">@anakrantau</tspan>
-            </text>
-            <text x="738" y="441" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="500" text-anchor="start">
-              <tspan fill="#2A1F2D" font-weight="500">Gue kemarin dimarahin temen.</tspan>
-            </text>
-            <text x="738" y="464" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="500" text-anchor="start">
-              <tspan fill="#2A1F2D" font-weight="500">Padahal dia yang salah, malah marah</tspan>
-            </text>
-            <text x="738" y="487" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="500" text-anchor="start">
-              <tspan fill="#2A1F2D" font-weight="500">ke gue. </tspan>
-              <tspan fill="#E4572E" font-weight="700">Toxic</tspan>
-              <tspan fill="#2A1F2D" font-weight="500"> banget, asli.</tspan>
-            </text>
-          </g>
-          <g id="comment-03" role="group" aria-label="Comment by @halokak">
-            <rect x="686" y="541" width="542" height="153" fill="#FFF6EC" rx="17" stroke="#FFC4A3" stroke-width="2" />
-            <circle cx="713" cy="568" r="15" fill="#FFC4A3" />
-            <text x="713" y="573" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0">
-              <tspan x="713" dy="0">H</tspan>
-            </text>
-            <text x="738" y="571" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="start" letter-spacing="0">
-              <tspan x="738" dy="0">@halokak</tspan>
-            </text>
-            <text x="738" y="607" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="500" text-anchor="start">
-              <tspan fill="#2A1F2D" font-weight="500">Ih kak, itu </tspan>
-              <tspan fill="#E4572E" font-weight="700">gaslight</tspan>
-              <tspan fill="#2A1F2D" font-weight="500"> dah kayaknya.</tspan>
-            </text>
-            <text x="738" y="630" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="500" text-anchor="start">
-              <tspan fill="#2A1F2D" font-weight="500">Padahal kakaknya cuma cerita soal</tspan>
-            </text>
-            <text x="738" y="653" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="500" text-anchor="start">
-              <tspan fill="#2A1F2D" font-weight="500">apa yang dia rasain.</tspan>
-            </text>
-          </g>
-          <g id="comment-04" role="group" aria-label="Comment by @ncy">
-            <rect x="686" y="707" width="542" height="153" fill="#FFF6EC" rx="17" stroke="#FFC4A3" stroke-width="2" />
-            <circle cx="713" cy="734" r="15" fill="#3D2645" />
-            <text x="713" y="739" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0">
-              <tspan x="713" dy="0">N</tspan>
-            </text>
-            <text x="738" y="737" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="start" letter-spacing="0">
-              <tspan x="738" dy="0">@ncy</tspan>
-            </text>
-            <text x="738" y="773" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="500" text-anchor="start">
-              <tspan fill="#2A1F2D" font-weight="500">Kak, dia murung terus akhir-akhir ini.</tspan>
-            </text>
-            <text x="738" y="796" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="500" text-anchor="start">
-              <tspan fill="#2A1F2D" font-weight="500">Kayaknya </tspan>
-              <tspan fill="#E4572E" font-weight="700">depresi</tspan>
-              <tspan fill="#2A1F2D" font-weight="500"> deh.</tspan>
-            </text>
+    </g>
+    <g transform="translate(0 -40)" data-role="phone remains within central text-safe area">
+      <g id="phone-shell" transform="translate(-340 274) scale(0.92)" data-safe-shift-y="-40">
+        <rect x="664" y="79" width="622" height="934" fill="#2A1F2D" rx="58" opacity="0.22" />
+        <rect x="646" y="61" width="622" height="934" fill="#2A1F2D" rx="58" />
+        <rect x="666" y="81" width="582" height="894" fill="#FFF6EC" rx="42" />
+        <g id="phone-header">
+          <rect x="889" y="94" width="136" height="11" fill="#3D2645" rx="6" />
+          <circle cx="1172" cy="129" r="5" fill="#3D2645" />
+          <circle cx="1187" cy="129" r="5" fill="#3D2645" />
+          <rect x="1201" y="121" width="23" height="15" fill="none" rx="3" stroke="#3D2645" stroke-width="2" />
+          <rect x="1206" y="125" width="13" height="7" fill="#7FB89A" rx="2" />
+          <text x="704" y="179" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" letter-spacing="0">
+            <tspan x="704" dy="0">Beranda</tspan>
+          </text>
+          <circle cx="1200" cy="167" r="9" fill="none" stroke="#3D2645" stroke-width="2" />
+          <path d="M1207,174 L1214,181" fill="none" stroke="#3D2645" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <line x1="686" y1="193" x2="1228" y2="193" stroke="#FFC4A3" stroke-width="2" stroke-linecap="round" />
+        </g>
+        <g id="comment-viewport" clip-path="url(#phone-feed-window)">
+          <g id="comment-feed">
+            <g id="comment-01" role="group" aria-label="Comment by @raraa">
+              <rect x="686" y="209" width="542" height="153" fill="#FFF6EC" rx="17" stroke="#FFC4A3" stroke-width="2" />
+              <circle cx="713" cy="236" r="15" fill="#3D2645" />
+              <text x="713" y="241" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0">
+                <tspan x="713" dy="0">R</tspan>
+              </text>
+              <text x="738" y="239" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="start" letter-spacing="0">
+                <tspan x="738" dy="0">@raraa</tspan>
+              </text>
+              <text x="738" y="275" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="500" text-anchor="start">
+                <tspan fill="#2A1F2D" font-weight="500">Pacar gue tiap ada masalah suka ngilang.</tspan>
+              </text>
+              <text x="738" y="298" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="500" text-anchor="start">
+                <tspan fill="#2A1F2D" font-weight="500">Gue chat malam, pagi baru dibales</tspan>
+              </text>
+              <text x="738" y="321" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="500" text-anchor="start">
+                <tspan fill="#2A1F2D" font-weight="500">‘ketiduran’. Fix </tspan>
+                <tspan fill="#E4572E" font-weight="700">avoidant</tspan>
+                <tspan fill="#2A1F2D" font-weight="500"> sih.</tspan>
+              </text>
+            </g>
+            <g id="comment-02" role="group" aria-label="Comment by @anakrantau">
+              <rect x="686" y="375" width="542" height="153" fill="#FFF6EC" rx="17" stroke="#FFC4A3" stroke-width="2" />
+              <circle cx="713" cy="402" r="15" fill="#F2B134" />
+              <text x="713" y="407" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0">
+                <tspan x="713" dy="0">A</tspan>
+              </text>
+              <text x="738" y="405" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="start" letter-spacing="0">
+                <tspan x="738" dy="0">@anakrantau</tspan>
+              </text>
+              <text x="738" y="441" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="500" text-anchor="start">
+                <tspan fill="#2A1F2D" font-weight="500">Gue kemarin dimarahin temen.</tspan>
+              </text>
+              <text x="738" y="464" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="500" text-anchor="start">
+                <tspan fill="#2A1F2D" font-weight="500">Padahal dia yang salah, malah marah</tspan>
+              </text>
+              <text x="738" y="487" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="500" text-anchor="start">
+                <tspan fill="#2A1F2D" font-weight="500">ke gue. </tspan>
+                <tspan fill="#E4572E" font-weight="700">Toxic</tspan>
+                <tspan fill="#2A1F2D" font-weight="500"> banget, asli.</tspan>
+              </text>
+            </g>
+            <g id="comment-03" role="group" aria-label="Comment by @halokak">
+              <rect x="686" y="541" width="542" height="153" fill="#FFF6EC" rx="17" stroke="#FFC4A3" stroke-width="2" />
+              <circle cx="713" cy="568" r="15" fill="#FFC4A3" />
+              <text x="713" y="573" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0">
+                <tspan x="713" dy="0">H</tspan>
+              </text>
+              <text x="738" y="571" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="start" letter-spacing="0">
+                <tspan x="738" dy="0">@halokak</tspan>
+              </text>
+              <text x="738" y="607" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="500" text-anchor="start">
+                <tspan fill="#2A1F2D" font-weight="500">Ih kak, itu </tspan>
+                <tspan fill="#E4572E" font-weight="700">gaslight</tspan>
+                <tspan fill="#2A1F2D" font-weight="500"> dah kayaknya.</tspan>
+              </text>
+              <text x="738" y="630" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="500" text-anchor="start">
+                <tspan fill="#2A1F2D" font-weight="500">Padahal kakaknya cuma cerita soal</tspan>
+              </text>
+              <text x="738" y="653" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="500" text-anchor="start">
+                <tspan fill="#2A1F2D" font-weight="500">apa yang dia rasain.</tspan>
+              </text>
+            </g>
+            <g id="comment-04" role="group" aria-label="Comment by @ncy">
+              <rect x="686" y="707" width="542" height="153" fill="#FFF6EC" rx="17" stroke="#FFC4A3" stroke-width="2" />
+              <circle cx="713" cy="734" r="15" fill="#3D2645" />
+              <text x="713" y="739" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0">
+                <tspan x="713" dy="0">N</tspan>
+              </text>
+              <text x="738" y="737" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="start" letter-spacing="0">
+                <tspan x="738" dy="0">@ncy</tspan>
+              </text>
+              <text x="738" y="773" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="500" text-anchor="start">
+                <tspan fill="#2A1F2D" font-weight="500">Kak, dia murung terus akhir-akhir ini.</tspan>
+              </text>
+              <text x="738" y="796" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="500" text-anchor="start">
+                <tspan fill="#2A1F2D" font-weight="500">Kayaknya </tspan>
+                <tspan fill="#E4572E" font-weight="700">depresi</tspan>
+                <tspan fill="#2A1F2D" font-weight="500"> deh.</tspan>
+              </text>
+            </g>
           </g>
         </g>
-      </g>
-      <g id="phone-scroll-track">
-        <rect x="1236" y="218" width="4" height="624" fill="#FFC4A3" rx="2" />
-        <g id="phone-scroll-thumb">
-          <rect x="1232" y="310" width="12" height="154" fill="#3D2645" rx="6" />
+        <g id="phone-scroll-track">
+          <rect x="1236" y="218" width="4" height="624" fill="#FFC4A3" rx="2" />
+          <g id="phone-scroll-thumb">
+            <rect x="1232" y="310" width="12" height="154" fill="#3D2645" rx="6" />
+          </g>
         </g>
-      </g>
-      <g id="phone-footer">
-        <line x1="686" y1="889" x2="1228" y2="889" stroke="#FFC4A3" stroke-width="2" stroke-linecap="round" />
-        <circle cx="760" cy="926" r="9" fill="#3D2645" />
-        <circle cx="905" cy="926" r="9" fill="#F2B134" />
-        <circle cx="1050" cy="926" r="9" fill="#F2B134" />
-        <circle cx="1195" cy="926" r="9" fill="#F2B134" />
+        <g id="phone-footer">
+          <line x1="686" y1="889" x2="1228" y2="889" stroke="#FFC4A3" stroke-width="2" stroke-linecap="round" />
+          <circle cx="760" cy="926" r="9" fill="#3D2645" />
+          <circle cx="905" cy="926" r="9" fill="#F2B134" />
+          <circle cx="1050" cy="926" r="9" fill="#F2B134" />
+          <circle cx="1195" cy="926" r="9" fill="#F2B134" />
+        </g>
       </g>
     </g>
   </g>

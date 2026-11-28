@@ -2,7 +2,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920" role="img" aria-labelledby="frame-title frame-desc" data-format="portrait-9x16" data-frame="07">
   <title id="frame-title">Closing</title>
   <desc id="frame-desc">Komposisi penutup portrait: kelompok berada di bagian atas, istilah viral memudar, empat ekspresi emosi memenuhi area tengah, lalu pesan penutup hadir di bagian bawah.</desc>
-  <metadata>Editable 9:16 animation frame. Keep important content inside the conservative 950 × 979 px UI-safe area (x=65–1015, y=269–1248); top and bottom bands contain only background. Characters use credited downloadable source SVGs; labels and text are separate layers.</metadata>
+  <metadata>Editable 9:16 animation frame. Keep important text and props inside x=65–1015, y=269–1248. Keep y=1248–1536 free of text and important messages; this band may contain secondary illustration only. The top 14% and bottom 20% contain only background. Characters use credited downloadable source SVGs; labels and text are separate layers.</metadata>
   <rect x="0" y="0" width="1080" height="1920" fill="#3D2645" rx="0" id="scene-background" />
   <g id="short-video-safe-composition" transform="translate(17.70 15.68) scale(0.96721)">
     <svg x="120" y="270" width="840" height="420" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet" overflow="hidden" aria-label="Social Interaction illustration, Storyset Rafiki">

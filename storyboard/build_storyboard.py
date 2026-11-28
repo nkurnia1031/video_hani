@@ -33,6 +33,9 @@ PORTRAIT_W, PORTRAIT_H = 1080, 1920
 # Meta's Reels ad guide; applying them to organic posts is a design precaution.
 SAFE_LEFT, SAFE_RIGHT = 65, 1015
 SAFE_TOP, SAFE_BOTTOM = 269, 1248
+DECORATIVE_BOTTOM = 1536  # y=1536–1920 (bottom 20%) stays background-only.
+LOWER_ILLUSTRATION_SHIFT = 370
+LOWER_ILLUSTRATION_SHIFT_X = 35
 
 INK = "#263238"
 BLUE = "#407BFF"
@@ -193,7 +196,7 @@ SCENES = [
     },
     {
         "no": 2, "slug": "what-is-therapy-speak", "time": "00:30–01:05", "title": "What Is Therapy Speak?",
-        "visual": "Portrait 9:16 living-room composition: the TV and wall art sit in the upper-left area, the enlarged comment phone occupies center, and the reclining man, sage sofa, colored shelves, books, and flowers anchor the lower-right.",
+        "visual": "Portrait 9:16 living room: the enlarged comment phone anchors the center; the reclining man and sage sofa sit lower-left as illustration only, while the TV, wall art, shelves, books, and flowers frame the sides.",
         "screen": "02A: intact comments with only the term highlighted. 02B: #Toxic · #Narcissist · #Gaslighting · #Trauma · #Avoidant · #Depressed. 02C: Understanding psychology = Good! · Misusing psychological terms = Problematic.",
         "motion": "02A · 00:30–00:45: comments scroll; the gaslighting comment pops out and zooms on the left as the VO names the term. 02B · 00:45–00:55: selected terms lift into a full-screen hashtag stack during the benefits of learning psychology. 02C · 00:55–01:05: the final problem statement arrives on the VO's ‘But here's the problem’ and holds.",
         "voice": "Di era social media, istilah psikologi semakin sering kita dengar. Mulai dari toxic relationship, gaslighting, trauma, sampai narcissistic behavior. Fenomena ini sering disebut sebagai therapy speak, yaitu penggunaan istilah yang berasal dari dunia psikologi atau terapi dalam percakapan sehari-hari. Actually, there's nothing wrong with learning psychological terms. Justru, memahami psikologi bisa membantu kita mengenali emosi, memahami perilaku, dan membangun hubungan yang lebih sehat. But here's the problem: ketika istilah-istilah tersebut digunakan tanpa memahami maknanya, kita bisa salah menilai diri sendiri maupun orang lain.",
@@ -557,7 +560,7 @@ def build_scene_1(scene):
         "Scene 1 is one continuous editable composition. Presenter: the Character object from People Creating Robot · Rafiki (Storyset, free with attribution). "
         "Within that 41-drawable object, six lower-body paths are cropped and six outfit paths recolored; 29/41 (70.7%) remain unchanged. "
         "All other source objects are omitted. There is no presenter frame or pointer; comment cards use pseudonyms and generic avatars. "
-        "Important content stays inside x=65–1015 and y=269–1248; top and bottom bands remain background-only. "
+        "Important text stays inside x=65–1015 and y=269–1248. The top 14% and bottom 20% are background-only; y=1248–1536 may contain secondary non-text illustration only. "
         "Public quote sources, access dates, and Storyset attribution are recorded outside this artwork in the storyboard source audit."
     )
     embed_asset(
@@ -585,8 +588,8 @@ def build_scene_2(scene):
     title_node = add(root, "title", id="scene-title")
     title_node.text = "Scene 2A: room, phone, and scrolling comments"
     desc_node = add(root, "desc", id="scene-desc")
-    desc_node.text = "A cream living room with a TV and framed art at left, an espresso phone with a scrolling comment feed in the center, and a reclining man on a sage sofa beneath colored shelves at right."
-    add(root, "metadata").text = "Editable 9:16 scene. Foreground props and characters are staged inside the conservative UI-safe area; upper and lower bands are background only."
+    desc_node.text = "A cream living room with an enlarged espresso phone centered on the frame and a reclining man on a sage sofa lower-left beneath colored shelves."
+    add(root, "metadata").text = "Editable 9:16 scene. Important text stays above y=1248. The reclining person, sofa, and their shadow use the lower illustration-only band; the bottom 20% remains background-only."
     defs = add(root, "defs")
     tv_gradient = add(defs, "linearGradient", id="tv-screen", x1="0%", y1="0%", x2="100%", y2="100%")
     add(tv_gradient, "stop", offset="0%", stop_color=PLUM)
@@ -755,14 +758,19 @@ def build_scene_2(scene):
         "television": "translate(175 30) scale(0.80)",
         "media-console": "translate(120 540) scale(0.60)",
         "shelf-set": "translate(-616 300) scale(0.60)",
-        "sofa-shadow": "translate(-1100 400) scale(0.80)",
+        "sofa-shadow": "translate(-500 400) scale(0.46)",
         "reclining-sofa": "translate(-930 400) scale(0.74)",
         "phone-scroller": "translate(-930 400) scale(0.74)",
-        "phone-shell": "translate(-90 270) scale(0.80)",
+        # The enlarged phone is centered; the person and sofa are moved into
+        # the lower illustration-only band without placing text there.
+        "phone-shell": "translate(-340 274) scale(0.92)",
     }
     for layer_id, transform in transforms.items():
         root.find(f".//*[@id='{layer_id}']").set("transform", transform)
-    root.find(tag("metadata")).text += " Important objects and text stay inside the conservative short-video UI-safe area; top and bottom bands remain background-only."
+    root.find(".//*[@id='phone-shell']").set("data-safe-shift-y", "-40")
+    for layer_id in ("sofa-shadow", "reclining-sofa", "phone-scroller"):
+        root.find(f".//*[@id='{layer_id}']").set("data-safe-zone", "lower-illustration")
+    root.find(tag("metadata")).text += " The lower 15% may contain only the person, furniture, and other non-text illustration; the last 20% stays empty except for background."
     return root
 
 
@@ -892,8 +900,9 @@ def portrait_frame(title, description, background, frame_id=None):
     add(root, "title", id="frame-title").text = title
     add(root, "desc", id="frame-desc").text = description
     metadata = add(root, "metadata")
-    metadata.text = ("Editable 9:16 animation frame. Keep important content inside the conservative 950 × 979 px UI-safe area "
-                     "(x=65–1015, y=269–1248); top and bottom bands contain only background. "
+    metadata.text = ("Editable 9:16 animation frame. Keep important text and props inside x=65–1015, y=269–1248. "
+                     "Keep y=1248–1536 free of text and important messages; this band may contain secondary illustration only. "
+                     "The top 14% and bottom 20% contain only background. "
                      "Characters use credited downloadable source SVGs; labels and text are separate layers.")
     background_rect = rect(root, 0, 0, PORTRAIT_W, PORTRAIT_H, background)
     background_rect.set("id", "scene-background")
@@ -944,11 +953,18 @@ def draw_case_frame(case_index):
         embed_asset(root, "texting", 150, 270, 780, 650,
                     omit_ids=omit_bg | {"freepik--Chat--inject-2", "freepik--character-1--inject-2"},
                     color_map=color_map, sad_expression=True)
-        # The outgoing message and read receipt are independent scene overlays.
-        rect(root, 68, 835, 570, 74, CREAM, rx=22, stroke=PEACH, sw=3)
-        txt(root, 98, 881, "Teman · Hei, ada waktu?", 22, ESPRESSO, 600)
-        rect(root, 442, 922, 570, 74, PLUM, rx=22)
-        txt(root, 727, 968, "Balas dong :( · Dibaca 3 jam", 21, CREAM, 700, "middle")
+        # Both sent bubbles come from the same sender; the read status is separate.
+        for index, (y, message) in enumerate([
+            (828, "Hai, kamu lagi sibuk?"),
+            (916, "Kalau sempat, kabari aku ya."),
+        ], 1):
+            sent = add(root, "g", id=f"naya-sent-message-{index}", data_sender="Naya")
+            rect(sent, 442, y, 570, 78, PLUM, rx=22)
+            circle(sent, 469, y + 23, 14, PEACH)
+            txt(sent, 469, y + 28, "N", 12, PLUM, 700, "middle")
+            txt(sent, 493, y + 22, "NAYA", 12, PEACH, 700, letter=0.8)
+            txt(sent, 493, y + 56, message, 20, CREAM, 600)
+        txt(root, 1008, 1023, "Dibaca 3 jam lalu · belum dibalas", 14, ESPRESSO, 500, "end")
     elif case["key"] == "student_stress":
         # Reuse Raka's source illustration without redrawing his character.
         embed_asset(root, "coworkers", 190, 455, 700, 700,
@@ -1525,7 +1541,7 @@ def fit_scene_to_ui_safe_area(root):
     probe = deepcopy(root)
     background_ids = {"scene-background", "room-background", "room-floor", "room-ambient"}
     for child in list(probe):
-        if child.get("id") in background_ids:
+        if child.get("id") in background_ids or child.get("data-safe-zone") == "lower-illustration":
             probe.remove(child)
         elif child.tag == tag("rect") and child.get("width") == str(PORTRAIT_W) and child.get("height") == str(PORTRAIT_H):
             probe.remove(child)
@@ -1557,7 +1573,9 @@ def fit_scene_to_ui_safe_area(root):
     center_y = (safe_top + safe_bottom) / 2
     translate_x = center_x - ((x1 + x2) / 2) * scale
     translate_y = center_y - ((y1 + y2) / 2) * scale
-    if abs(scale - 1) < 0.0001 and abs(translate_x) < 1 and abs(translate_y) < 1:
+    has_lower_illustration = any(child.get("data-safe-zone") == "lower-illustration" for child in list(root))
+    if (not has_lower_illustration and abs(scale - 1) < 0.0001
+            and abs(translate_x) < 1 and abs(translate_y) < 1):
         return root
 
     safe_group = ET.Element(tag("g"), {
@@ -1575,7 +1593,20 @@ def fit_scene_to_ui_safe_area(root):
         foreground.append(child)
     for child in foreground:
         root.remove(child)
-        safe_group.append(child)
+        if child.get("data-safe-zone") == "lower-illustration":
+            lower_group = ET.SubElement(safe_group, tag("g"), {
+                "transform": f"translate({LOWER_ILLUSTRATION_SHIFT_X} {LOWER_ILLUSTRATION_SHIFT})",
+                "data-role": "non-text lower-band illustration",
+            })
+            lower_group.append(child)
+        elif child.get("data-safe-shift-y"):
+            shifted_group = ET.SubElement(safe_group, tag("g"), {
+                "transform": f"translate(0 {child.get('data-safe-shift-y')})",
+                "data-role": "phone remains within central text-safe area",
+            })
+            shifted_group.append(child)
+        else:
+            safe_group.append(child)
     root.append(safe_group)
     return root
 
@@ -1831,7 +1862,7 @@ def make_docx(contact):
         "Frame portrait berukuran 1080 × 1920 (9:16); preview Word dan contact sheet hanya mengecilkan tampilan, tidak memotong komposisi. 4A memakai ilustrasi kantor Co-workers · Rafiki dengan Dina dihilangkan. Kartu target dan gelembung pikiran terpisah. 4B dan 4B2 menampilkan keduanya; 4C hanya Raka; 4D hanya Dina. Objek genggam Raka dihilangkan dari semua frame Scene 4. Semua frame Scene 4 bebas objek domino.",
         "Student Stress · Rafiki di Scene 3B mempertahankan 220/254 drawable elements (86,6%); 34 elemen (13,4%) berubah atau dihilangkan. Air mata, penanda target, label, dan koreksi adalah overlay terpisah.",
         "Semua frame storyboard menggunakan format Instagram portrait 9:16. Karakter berasal dari SVG sumber yang dapat diunduh; chat, label, background, post, dan teks adalah layer vektor editable. Tidak ada gambar yang dihasilkan atau karakter yang digambar dari nol.",
-        "UI-safe area konservatif: x=65–1015, y=269–1248. Area top 14%, bottom 35%, dan 6% sisi hanya berisi latar. Persentase Meta berasal dari panduan iklan Reels; TikTok dan YouTube harus dicek dengan preview/template aktual. Satu scene per halaman Word, semua keyframe scene tetap pada halaman yang sama.",
+        "Zona komposisi portrait: teks penting di x=65–1015, y=269–1248; y=1248–1536 hanya untuk ilustrasi sekunder tanpa teks; top 14% dan bottom 20% latar saja. Tujuh scene masing-masing menempati satu halaman A4 portrait di Word, seluruh keyframe scene tetap bersama.",
     ]
     for item in audit:
         p = doc.add_paragraph(style="List Bullet")
@@ -2063,7 +2094,7 @@ def make_website():
             comment_source_markup = '<div><dt>Public comment source audit</dt><dd><ul class="comment-source-list">' + "".join(audit_items) + '</ul></dd></div>'
         if scene["no"] == 2:
             frame_markup = '''<div class="frame-stack">
-              <section class="frame-card"><div class="frame-label"><b>02A · PHONE + COMMENT SCROLL</b><span>00:30–00:45</span></div><a href="scenes/scene-02a-comment-scroll.svg" target="_blank" aria-label="Open editable SVG for Scene 2A"><img src="scenes/scene-02a-comment-scroll.svg" alt="Cream living room with TV and art at left, an espresso phone in the center, and the reclining man on a sage sofa at right"></a><div class="file-links"><a href="scenes/scene-02a-comment-scroll.svg" download>Download editable SVG</a><a href="previews/scene-02a-comment-scroll.png" download>Download PNG preview</a></div></section>
+              <section class="frame-card"><div class="frame-label"><b>02A · PHONE + COMMENT SCROLL</b><span>00:30–00:45</span></div><a href="scenes/scene-02a-comment-scroll.svg" target="_blank" aria-label="Open editable SVG for Scene 2A"><img src="scenes/scene-02a-comment-scroll.svg" alt="Enlarged espresso comment phone centered in a cream room, with a reclining man and sage sofa at lower left"></a><div class="file-links"><a href="scenes/scene-02a-comment-scroll.svg" download>Download editable SVG</a><a href="previews/scene-02a-comment-scroll.png" download>Download PNG preview</a></div></section>
               <section class="frame-card"><div class="frame-label"><b>02B · HASHTAG CLOUD</b><span>00:45–00:55</span></div><a href="scenes/scene-02b-hashtag-cloud.svg" target="_blank" aria-label="Open editable SVG for Scene 2B"><img src="scenes/scene-02b-hashtag-cloud.svg" alt="Dense cream handwritten hashtags overlap across a deep plum frame"></a><div class="file-links"><a href="scenes/scene-02b-hashtag-cloud.svg" download>Download editable SVG</a><a href="previews/scene-02b-hashtag-cloud.png" download>Download PNG preview</a></div></section>
               <section class="frame-card"><div class="frame-label"><b>02C · ON-SCREEN TEXT</b><span>00:55–01:05</span></div><a href="scenes/scene-02c-on-screen-text.svg" target="_blank" aria-label="Open editable SVG for Scene 2C"><img src="scenes/scene-02c-on-screen-text.svg" alt="Centered sage and terracotta statements on a cream background"></a><div class="file-links"><a href="scenes/scene-02c-on-screen-text.svg" download>Download editable SVG</a><a href="previews/scene-02c-on-screen-text.png" download>Download PNG preview</a></div></section>
               <section class="frame-card"><div class="frame-label"><b>02 · SCROLL COMPONENTS</b><span>6 extra comments</span></div><p class="component-copy">The six separate SVG groups use IDs comment-05 through comment-10, ready to animate inside the phone feed.</p><div class="file-links"><a href="scenes/scene-02-komponen.svg" target="_blank">Open SVG components</a><a href="scenes/scene-02-komponen.svg" download>Download SVG</a><a href="previews/scene-02-komponen.png" target="_blank">Preview sheet</a></div></section>
@@ -2107,10 +2138,10 @@ def make_website():
 <body><main class="shell">
 <header class="hero"><div><div class="eyebrow">Editable production board · Instagram portrait · 9:16 · 1080 × 1920</div><h1>Therapy Speak Gone Wrong</h1><p>Tujuh scene, enam belas keyframe, semua memakai kanvas portrait 9:16 berukuran 1080 × 1920 untuk Instagram Reels. Scene 1 adalah satu scene presenter dengan empat komentar publik tersamarkan. Scene 3 tetap tiga contoh terpisah. Scene 4 mengikuti satu cerita sebab-akibat lima beat. VO tetap mengikuti naskah, dan setiap frame adalah SVG yang bisa diedit. Dokumen Word memakai halaman A4 portrait, satu scene utuh per halaman.</p></div><div class="hero-actions"><a class="action primary" href="Storyboard_Therapy_Speak_Gone_Wrong.docx" download>Download Word · A4 portrait · 1 scene/page</a><a class="action" href="motion.html">Open Scene 2 motion study</a><a class="action" href="Storyboard_Editable_Source.zip" download>Download editable source bundle</a></div></header>
 <div class="style-strip"><strong>Opsi B · Warm Peach &amp; Mustard</strong><span class="swatch"><i style="background:#3d2645"></i>deep plum</span><span class="swatch"><i style="background:#7fb89a"></i>sage</span><span class="swatch"><i style="background:#e4572e"></i>terracotta</span><span class="swatch"><i style="background:#f2b134"></i>mustard</span><span class="swatch"><i style="background:#ffc4a3"></i>peach</span><span class="swatch"><i style="background:#fff6ec"></i>cream</span><span class="swatch"><i style="background:#2a1f2d"></i>espresso</span><span>· terracotta for mistaken labels; sage for corrections</span></div>
-<section class="safe-guide"><h2>UI-safe area · short video</h2><p>Important content stays in the central 950 × 979 px area (x=65–1015, y=269–1248). Top 14%, bottom 35%, and side 6% remain background-only. This uses Meta Reels ad guidance conservatively; organic UI can vary. <a href="../docs/research/short-video-portrait-safe-zones.md">Read platform-source research</a>.</p></section><section class="board" aria-label="Seven scene production board">
+<section class="safe-guide"><h2>UI-safe composition · short video</h2><p>Important text stays in x=65–1015, y=269–1248. The next 15% (y=1248–1536) may contain secondary illustration or props, without text or key messages. Keep the top 14% and bottom 20% background-only; reserve 6% on the sides. The 20% bottom reserve is this storyboard's layout choice; Meta's Reels ad guide recommends 35%, and organic UI can vary. <a href="../docs/research/short-video-portrait-safe-zones.md">Read platform-source research</a>.</p></section><section class="board" aria-label="Seven scene production board">
 ''' + "\n".join(rows) + '''
 </section>
-<section class="audit"><div><h2>Visual audit</h2><p>Seluruh frame memakai kanvas 1080 × 1920. Konten penting berada di x=65–1015 dan y=269–1248; area atas 14%, bawah 35%, serta sisi 6% hanya berisi latar. Ini acuan konservatif dari panduan iklan Reels Meta, bukan standar universal untuk post organik. Scene 3 tetap tiga case mandiri. Scene 4 berurutan 4A, 4B, 4B2, 4C, 4D; 4C hanya menampilkan Raka saat membuat post, sedangkan 4D hanya Dina. Objek genggam Raka dihilangkan dari semua frame Scene 4. Scene 1 memakai objek Character dari People Creating Robot · Rafiki; 29/41 drawable (70,7%) tetap utuh setelah crop dan recolor. Empat komentar memakai nama samaran. Scene 2B memuat 56 hashtag editable. Contact sheet memperlihatkan semua 16 frame portrait.</p></div><div><h2>Editing &amp; attribution</h2><p>Open or download each SVG to edit its vector layers and text. The source bundle contains the HTML board, all SVG frames, source illustration assets, and the Caveat font/license. The <a href="https://storyset.com/illustration/people-creating-robot/rafiki" target="_blank" rel="noreferrer">People Creating Robot · Rafiki</a> presenter and <a href="https://storyset.com/illustration/co-workers/rafiki" target="_blank" rel="noreferrer">Co-workers · Rafiki</a> and <a href="https://storyset.com/illustration/student-stress/rafiki" target="_blank" rel="noreferrer">Student Stress · Rafiki</a> are free with attribution. <a href="https://github.com/google/fonts/tree/main/ofl/caveat" target="_blank" rel="noreferrer">Caveat</a> is distributed under SIL OFL 1.1; cite Storyset when publishing and review the <a href="https://storyset.com/terms" target="_blank" rel="noreferrer">Storyset terms</a>.</p></div></section>
+<section class="audit"><div><h2>Visual audit</h2><p>Seluruh frame memakai kanvas 1080 × 1920. Teks penting berada di x=65–1015 dan y=269–1248; y=1248–1536 hanya untuk ilustrasi sekunder tanpa teks; top 14% dan bottom 20% hanya berisi latar. Acuan 20% bawah adalah pilihan komposisi board ini; panduan iklan Reels Meta menyarankan 35%, dan UI post organik dapat berubah. Scene 3 tetap tiga case mandiri. Scene 4 berurutan 4A, 4B, 4B2, 4C, 4D; 4C hanya menampilkan Raka saat membuat post, sedangkan 4D hanya Dina. Objek genggam Raka dihilangkan dari semua frame Scene 4. Scene 1 memakai objek Character dari People Creating Robot · Rafiki; 29/41 drawable (70,7%) tetap utuh setelah crop dan recolor. Empat komentar memakai nama samaran. Scene 2B memuat 56 hashtag editable. Contact sheet memperlihatkan semua 16 frame portrait.</p></div><div><h2>Editing &amp; attribution</h2><p>Open or download each SVG to edit its vector layers and text. The source bundle contains the HTML board, all SVG frames, source illustration assets, and the Caveat font/license. The <a href="https://storyset.com/illustration/people-creating-robot/rafiki" target="_blank" rel="noreferrer">People Creating Robot · Rafiki</a> presenter and <a href="https://storyset.com/illustration/co-workers/rafiki" target="_blank" rel="noreferrer">Co-workers · Rafiki</a> and <a href="https://storyset.com/illustration/student-stress/rafiki" target="_blank" rel="noreferrer">Student Stress · Rafiki</a> are free with attribution. <a href="https://github.com/google/fonts/tree/main/ofl/caveat" target="_blank" rel="noreferrer">Caveat</a> is distributed under SIL OFL 1.1; cite Storyset when publishing and review the <a href="https://storyset.com/terms" target="_blank" rel="noreferrer">Storyset terms</a>.</p></div></section>
 <footer class="footer">Semua SVG scene menggunakan viewBox portrait 1080 × 1920, siap disusun sebagai video Instagram Reels 9:16. Scene 1 memakai objek Character dari ilustrasi Storyset yang dikreditkan, tanpa robot, properti luar, pointer, atau bingkai presenter. Tablet kecil yang menyatu dengan pose sumber dipertahankan. Latar, kartu komentar, word cloud, label, kartu, notifikasi, dan teks adalah layer SVG editable. Tidak ada gambar generatif.</footer>
 </main></body></html>'''
     output = ROOT / "index.html"

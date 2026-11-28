@@ -2,7 +2,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920" role="img" aria-labelledby="frame-title frame-desc" data-format="portrait-9x16" data-frame="03D">
   <title id="frame-title">Scene 3 combined examples: one behavior does not define a diagnosis</title>
   <desc id="frame-desc">The unanswered message, sadness, and disagreement examples meet behind the centered on-screen statement: One behavior does not equal a psychological diagnosis.</desc>
-  <metadata>Editable 9:16 animation frame. Keep important content inside the conservative 950 × 979 px UI-safe area (x=65–1015, y=269–1248); top and bottom bands contain only background. Characters use credited downloadable source SVGs; labels and text are separate layers.</metadata>
+  <metadata>Editable 9:16 animation frame. Keep important text and props inside x=65–1015, y=269–1248. Keep y=1248–1536 free of text and important messages; this band may contain secondary illustration only. The top 14% and bottom 20% contain only background. Characters use credited downloadable source SVGs; labels and text are separate layers.</metadata>
   <rect x="0" y="0" width="1080" height="1920" fill="#FFF6EC" rx="0" id="scene-background" />
   <g id="short-video-safe-composition" transform="translate(0.00 6.50) scale(1.00000)">
     <rect x="72" y="286" width="936" height="104" fill="#FFE3D3" rx="24" />
