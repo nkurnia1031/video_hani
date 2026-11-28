@@ -2,43 +2,45 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920" role="img" aria-labelledby="frame-title frame-desc" data-format="portrait-9x16" data-frame="03D">
   <title id="frame-title">Scene 3 combined examples: one behavior does not define a diagnosis</title>
   <desc id="frame-desc">The unanswered message, sadness, and disagreement examples meet behind the centered on-screen statement: One behavior does not equal a psychological diagnosis.</desc>
-  <metadata>Editable 9:16 animation frame. Characters use credited, downloadable source SVGs; backgrounds, labels, and text are separate composition layers.</metadata>
+  <metadata>Editable 9:16 animation frame. Keep important content inside the conservative 950 × 979 px UI-safe area (x=65–1015, y=269–1248); top and bottom bands contain only background. Characters use credited downloadable source SVGs; labels and text are separate layers.</metadata>
   <rect x="0" y="0" width="1080" height="1920" fill="#FFF6EC" rx="0" id="scene-background" />
-  <rect x="72" y="130" width="936" height="190" fill="#FFE3D3" rx="28" />
-  <circle cx="152" cy="225" r="42" fill="#3D2645" />
-  <text x="152" y="234" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="152" dy="0">1</tspan>
-  </text>
-  <text x="222" y="237" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="33" font-weight="700" text-anchor="start" letter-spacing="0">
-    <tspan x="222" dy="0">They're avoidant!</tspan>
-  </text>
-  <rect x="72" y="365" width="936" height="190" fill="#DCEFE4" rx="28" />
-  <circle cx="152" cy="460" r="42" fill="#3D2645" />
-  <text x="152" y="469" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="152" dy="0">2</tspan>
-  </text>
-  <text x="222" y="472" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="33" font-weight="700" text-anchor="start" letter-spacing="0">
-    <tspan x="222" dy="0">I'm depressed!</tspan>
-  </text>
-  <rect x="72" y="600" width="936" height="190" fill="#FCE9C2" rx="28" />
-  <circle cx="152" cy="695" r="42" fill="#3D2645" />
-  <text x="152" y="704" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="152" dy="0">3</tspan>
-  </text>
-  <text x="222" y="707" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="33" font-weight="700" text-anchor="start" letter-spacing="0">
-    <tspan x="222" dy="0">You're gaslighting me!</tspan>
-  </text>
-  <rect x="56" y="910" width="968" height="690" fill="#3D2645" rx="38" />
-  <text x="540" y="1090" fill="#F2B134" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="540" dy="0">One behavior</tspan>
-  </text>
-  <line x1="470" y1="1162" x2="610" y2="1162" stroke="#E4572E" stroke-width="8" stroke-linecap="round" />
-  <line x1="470" y1="1190" x2="610" y2="1190" stroke="#E4572E" stroke-width="8" stroke-linecap="round" />
-  <path d="M510,1215 L570,1140" fill="none" stroke="#E4572E" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
-  <text x="540" y="1330" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="50" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="540" dy="0">A psychological</tspan>
-  </text>
-  <text x="540" y="1402" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="540" dy="0">diagnosis.</tspan>
-  </text>
+  <g id="short-video-safe-composition" transform="translate(0.00 6.50) scale(1.00000)">
+    <rect x="72" y="286" width="936" height="104" fill="#FFE3D3" rx="24" />
+    <circle cx="128" cy="338" r="30" fill="#3D2645" />
+    <text x="128" y="346" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="128" dy="0">1</tspan>
+    </text>
+    <text x="184" y="349" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" text-anchor="start" letter-spacing="0">
+      <tspan x="184" dy="0">They're avoidant!</tspan>
+    </text>
+    <rect x="72" y="410" width="936" height="104" fill="#DCEFE4" rx="24" />
+    <circle cx="128" cy="462" r="30" fill="#3D2645" />
+    <text x="128" y="470" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="128" dy="0">2</tspan>
+    </text>
+    <text x="184" y="473" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" text-anchor="start" letter-spacing="0">
+      <tspan x="184" dy="0">I'm depressed!</tspan>
+    </text>
+    <rect x="72" y="534" width="936" height="104" fill="#FCE9C2" rx="24" />
+    <circle cx="128" cy="586" r="30" fill="#3D2645" />
+    <text x="128" y="594" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="128" dy="0">3</tspan>
+    </text>
+    <text x="184" y="597" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" text-anchor="start" letter-spacing="0">
+      <tspan x="184" dy="0">You're gaslighting me!</tspan>
+    </text>
+    <rect x="72" y="690" width="936" height="528" fill="#3D2645" rx="34" />
+    <text x="540" y="820" fill="#F2B134" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="540" dy="0">One behavior</tspan>
+    </text>
+    <line x1="470" y1="875" x2="610" y2="875" stroke="#E4572E" stroke-width="7" stroke-linecap="round" />
+    <line x1="470" y1="898" x2="610" y2="898" stroke="#E4572E" stroke-width="7" stroke-linecap="round" />
+    <path d="M510,920 L570,850" fill="none" stroke="#E4572E" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="540" y="1015" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="540" dy="0">A psychological</tspan>
+    </text>
+    <text x="540" y="1076" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="540" dy="0">diagnosis.</tspan>
+    </text>
+  </g>
 </svg>

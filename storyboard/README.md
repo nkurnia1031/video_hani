@@ -1,6 +1,10 @@
 # Therapy Speak Gone Wrong · Instagram Portrait Storyboard
 
-This board contains seven scenes and 16 standalone, editable **9:16 portrait animation frames at 1080 × 1920**, composed for Instagram Reels. `Script Video Kode Etik.pdf` is the authority for dialogue and narration. Scene 1 presenter dialogue and the Scene 3–4 voice-over remain verbatim; Scene 3 stays as three independent cases. SVG frames and PNG previews keep the same portrait canvas; the web and Word storyboard may arrange several frames as smaller previews.
+This board contains seven scenes and 16 standalone, editable **9:16 portrait animation frames at 1080 × 1920**, composed for Instagram Reels. The Word board uses A4 portrait pages and keeps exactly one complete scene per page; a scene's keyframes stay together on that page. `Script Video Kode Etik.pdf` is the authority for dialogue and narration. Scene 1 presenter dialogue and the Scene 3–4 voice-over remain verbatim; Scene 3 stays as three independent cases. SVG frames and PNG previews keep the same portrait canvas; the web and Word storyboard may arrange several frames as smaller previews.
+
+## Short-video UI safe area
+
+Important content stays inside the central area **x=65–1015, y=269–1248** on the 1080 × 1920 canvas. The top 14%, bottom 35%, and 6% on each side contain only the scene background. Scene SVGs are fitted to this area and checked after animation objects are revealed. These percentages come from Meta's Reels video-ad guidance and are used here conservatively; Meta does not define them as a universal organic-Reels rule. TikTok safe zones vary with caption length and add-ons, while YouTube Shorts uses editor guides instead of a published fixed percentage. Read the [platform-source research note](../docs/research/short-video-portrait-safe-zones.md) before adapting exports to another placement.
 
 The separate [Scene 2 motion study](motion.html) is a 35-second HyperFrames project built from the storyboard SVG layers and GSAP timelines. It animates the room, shelves, flowers, character and hand, comment scroll, hashtag cloud, and closing statements. The public page has HyperFrames playback and seek controls plus scene jumps; the project in `hyperframes/` keeps the root timeline and three editable scene compositions.
 

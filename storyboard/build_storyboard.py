@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from copy import deepcopy
 from pathlib import Path
+from io import BytesIO
 import re
 from html import escape
 from xml.etree import ElementTree as ET
@@ -28,6 +29,10 @@ SVG_NS = "http://www.w3.org/2000/svg"
 ET.register_namespace("", SVG_NS)
 W, H = 1920, 1080
 PORTRAIT_W, PORTRAIT_H = 1080, 1920
+# Conservative UI-safe area for short-form video. The percentages come from
+# Meta's Reels ad guide; applying them to organic posts is a design precaution.
+SAFE_LEFT, SAFE_RIGHT = 65, 1015
+SAFE_TOP, SAFE_BOTTOM = 269, 1248
 
 INK = "#263238"
 BLUE = "#407BFF"
@@ -535,7 +540,7 @@ def draw_public_comment(root, comment, x, y, width=432, height=174):
     lines = comment["lines"]
     first_y = y + (110 if len(lines) == 2 else 125)
     for index, line_text in enumerate(lines):
-        txt(group, x + width / 2, first_y + index * 36, line_text, 25, ESPRESSO, 600, "middle")
+        txt(group, x + width / 2, first_y + index * 36, line_text, 23, ESPRESSO, 600, "middle")
     delay = [3.0, 8.0, 13.0, 18.0][comment["sequence"] - 1]
     add(group, "animate", attributeName="opacity", values="0;1", begin=f"{delay}s", dur="0.25s", fill="freeze")
     return group
@@ -552,24 +557,25 @@ def build_scene_1(scene):
         "Scene 1 is one continuous editable composition. Presenter: the Character object from People Creating Robot · Rafiki (Storyset, free with attribution). "
         "Within that 41-drawable object, six lower-body paths are cropped and six outfit paths recolored; 29/41 (70.7%) remain unchanged. "
         "All other source objects are omitted. There is no presenter frame or pointer; comment cards use pseudonyms and generic avatars. "
+        "Important content stays inside x=65–1015 and y=269–1248; top and bottom bands remain background-only. "
         "Public quote sources, access dates, and Storyset attribution are recorded outside this artwork in the storyboard source audit."
     )
     embed_asset(
-        root, "presenter", 200, 620, 680, 608,
+        root, "presenter", 260, 390, 560, 500,
         include_ids=("Character",),
         view_box="285 130 190 170",
         color_map={"#407BFF": CREAM},
         drawable_omit_indices={"Character": (4, 5, 6, 7, 8, 9)},
     )
 
-    positions = [(35, 140), (595, 320), (35, 1430), (595, 1605)]
+    positions = [(65, 290), (625, 290), (65, 870), (625, 870)]
     for comment, (x, y) in zip(SCENE1_COMMENT_SOURCES, positions):
-        draw_public_comment(root, comment, x, y, width=450, height=170)
+        draw_public_comment(root, comment, x, y, width=390, height=170)
 
     question = add(root, "g", id="closing-onscreen-question", data_motion="appears-before-phone-zoom")
     question.set("opacity", "0")
-    rect(question, 106, 1816, 868, 72, CREAM, rx=22)
-    txt(question, 540, 1863, "Are we using psychology terms correctly?", 27, PLUM, 700, "middle")
+    rect(question, 106, 1090, 868, 72, CREAM, rx=22)
+    txt(question, 540, 1137, "Are we using psychology terms correctly?", 27, PLUM, 700, "middle")
     add(question, "animate", attributeName="opacity", values="0;1", begin="22.5s", dur="0.6s", fill="freeze")
     return root
 
@@ -580,6 +586,7 @@ def build_scene_2(scene):
     title_node.text = "Scene 2A: room, phone, and scrolling comments"
     desc_node = add(root, "desc", id="scene-desc")
     desc_node.text = "A cream living room with a TV and framed art at left, an espresso phone with a scrolling comment feed in the center, and a reclining man on a sage sofa beneath colored shelves at right."
+    add(root, "metadata").text = "Editable 9:16 scene. Foreground props and characters are staged inside the conservative UI-safe area; upper and lower bands are background only."
     defs = add(root, "defs")
     tv_gradient = add(defs, "linearGradient", id="tv-screen", x1="0%", y1="0%", x2="100%", y2="100%")
     add(tv_gradient, "stop", offset="0%", stop_color=PLUM)
@@ -739,24 +746,23 @@ def build_scene_2(scene):
     rect(root.find(".//*[@id='room-background']"), 0, 0, PORTRAIT_W, PORTRAIT_H, CREAM)
     floor = root.find(".//*[@id='room-floor']")
     floor[:] = []
-    rect(floor, 0, 1685, PORTRAIT_W, 235, PEACH, opacity=0.38)
-    line(floor, 0, 1685, PORTRAIT_W, 1685, PEACH, 3, opacity=0.8)
     ambience = root.find(".//*[@id='room-ambient']")
     ambience[:] = []
-    circle(ambience, 80, 360, 220, MUSTARD, opacity=0.10)
-    circle(ambience, 950, 1180, 270, SAGE, opacity=0.10)
+    circle(ambience, 120, 580, 150, MUSTARD, opacity=0.10)
+    circle(ambience, 940, 950, 150, SAGE, opacity=0.10)
     transforms = {
-        "wall-art": "translate(640 70) scale(0.70)",
-        "television": "translate(175 -200) scale(0.80)",
-        "media-console": "translate(120 1120) scale(0.60)",
-        "shelf-set": "translate(-616 100) scale(0.65)",
-        "sofa-shadow": "translate(-1100 1020) scale(0.95)",
-        "reclining-sofa": "translate(-1000 1020) scale(0.95)",
-        "phone-scroller": "translate(-1000 1020) scale(0.95)",
-        "phone-shell": "translate(-280 450) scale(0.88)",
+        "wall-art": "translate(640 280) scale(0.70)",
+        "television": "translate(175 30) scale(0.80)",
+        "media-console": "translate(120 540) scale(0.60)",
+        "shelf-set": "translate(-616 300) scale(0.60)",
+        "sofa-shadow": "translate(-1100 400) scale(0.80)",
+        "reclining-sofa": "translate(-930 400) scale(0.74)",
+        "phone-scroller": "translate(-930 400) scale(0.74)",
+        "phone-shell": "translate(-90 270) scale(0.80)",
     }
     for layer_id, transform in transforms.items():
         root.find(f".//*[@id='{layer_id}']").set("transform", transform)
+    root.find(tag("metadata")).text += " Important objects and text stay inside the conservative short-video UI-safe area; top and bottom bands remain background-only."
     return root
 
 
@@ -781,11 +787,12 @@ def build_scene_2b(scene):
     title_node = add(root, "title", id="scene-title")
     title_node.text = "Scene 2B · chaotic hashtag word cloud"
     desc_node = add(root, "desc", id="scene-desc")
-    desc_node.text = "A dense, overlapping field of handwritten hashtags in varied sizes and rotations fills a deep-plum frame."
+    desc_node.text = "A dense, overlapping handwritten hashtag cloud fills the central safe area of a deep-plum 9:16 frame, with quiet background bands above and below."
     metadata = add(root, "metadata")
-    metadata.text = "56 editable Caveat hashtag texts, including six script terms and fifty social-media trigger terms. The bundled Caveat variable font is licensed under SIL OFL 1.1. Tags appear one by one with shrinking intervals and pile into this final full-screen state."
+    metadata.text = "56 editable Caveat hashtag texts, including six script terms and fifty social-media trigger terms. The bundled Caveat variable font is licensed under SIL OFL 1.1. Tags appear one by one with shrinking intervals and pile into a dense central cloud inside the UI-safe area; top and bottom bands remain background-only."
     root.set("data-format", "portrait-9x16")
-    rect(root, 0, 0, PORTRAIT_W, PORTRAIT_H, PLUM)
+    cloud_background = rect(root, 0, 0, PORTRAIT_W, PORTRAIT_H, PLUM)
+    cloud_background.set("id", "scene-background")
     defs = add(root, "defs")
     font_data = base64.b64encode((ASSETS_DIR / "Caveat[wght].ttf").read_bytes()).decode("ascii")
     style = add(defs, "style", type="text/css")
@@ -808,25 +815,25 @@ def build_scene_2b(scene):
     for word in everyday_tags:
         # Most tags carry enough visual weight to close gaps. A few stay small,
         # so the largest script terms remain about 6–8x their size.
-        size = rng.choices([22, 27, 34, 42, 50, 58], weights=[1, 2, 2, 3, 3, 2])[0]
+        size = rng.choices([18, 22, 26, 32, 38, 44], weights=[1, 2, 2, 3, 3, 2])[0]
         estimated_half = min(440, len(word) * size * 0.28)
-        x = rng.randint(int(estimated_half + 16), int(PORTRAIT_W - estimated_half - 16))
-        y = rng.randint(76, PORTRAIT_H - 38)
+        x = rng.randint(int(SAFE_LEFT + estimated_half), int(SAFE_RIGHT - estimated_half))
+        y = rng.randint(int(SAFE_TOP + size), int(SAFE_BOTTOM - size * 0.4))
         angle = rng.randint(-30, 30)
         color = rng.choices([CREAM, MUSTARD, PEACH], weights=[8, 1, 1])[0]
         tags.append((word, x, y, size, angle, color, False))
     script_terms = [
-        ("#narcissist", 330, 485, 104, -18),
-        ("#trauma", 790, 840, 92, 17),
-        ("#depressed", 730, 1518, 100, -11),
+        ("#narcissist", 310, 435, 98, -18),
+        ("#trauma", 790, 510, 84, 17),
+        ("#depressed", 740, 1170, 94, -11),
     ]
     for word, x, y, size, angle in script_terms:
         tags.append((word, x, y, size, angle, TERRACOTTA, True))
     # Three oversized center words form the cloud's 6–8x visual hierarchy.
     tags.extend([
-        ("#toxic", 500, 685, 170, -12, TERRACOTTA, True),
-        ("#gaslighting", 575, 1055, 144, 9, TERRACOTTA, True),
-        ("#avoidant", 455, 1370, 140, -19, TERRACOTTA, True),
+        ("#toxic", 510, 690, 150, -12, TERRACOTTA, True),
+        ("#gaslighting", 550, 930, 132, 9, TERRACOTTA, True),
+        ("#avoidant", 450, 1110, 120, -19, TERRACOTTA, True),
     ])
     for index, (word, x, y, size, angle, color, is_script) in enumerate(tags):
         group = add(root, "g", id=f"word-cloud-tag-{index + 1:02d}",
@@ -850,14 +857,14 @@ def build_scene_2c(scene):
         "02C",
     )
     understanding = add(root, "g", id="understanding-statement")
-    rect(understanding, 54, 450, 972, 260, SAGE, rx=40)
-    txt(understanding, 540, 560, "Understanding psychology", 44, ESPRESSO, 700, "middle")
-    txt(understanding, 540, 625, "= Good!", 50, ESPRESSO, 700, "middle")
+    rect(understanding, 54, 330, 972, 225, SAGE, rx=40)
+    txt(understanding, 540, 420, "Understanding psychology", 40, ESPRESSO, 700, "middle")
+    txt(understanding, 540, 488, "= Good!", 46, ESPRESSO, 700, "middle")
     misuse = add(root, "g", id="misuse-statement")
-    rect(misuse, 54, 965, 972, 340, TERRACOTTA, rx=40)
-    txt(misuse, 540, 1085, "Misusing psychological", 44, WHITE, 700, "middle")
-    txt(misuse, 540, 1150, "terms =", 48, WHITE, 700, "middle")
-    txt(misuse, 540, 1220, "Problematic.", 54, WHITE, 700, "middle")
+    rect(misuse, 54, 760, 972, 340, TERRACOTTA, rx=40)
+    txt(misuse, 540, 855, "Misusing psychological", 40, WHITE, 700, "middle")
+    txt(misuse, 540, 925, "terms =", 44, WHITE, 700, "middle")
+    txt(misuse, 540, 995, "Problematic.", 48, WHITE, 700, "middle")
     root.find(tag("metadata")).text = "Editable animation frame. Existing Storyset vector groups are recolored in SVG; all added elements are hand-edited vector shapes. No generated imagery."
     return root
 
@@ -885,7 +892,9 @@ def portrait_frame(title, description, background, frame_id=None):
     add(root, "title", id="frame-title").text = title
     add(root, "desc", id="frame-desc").text = description
     metadata = add(root, "metadata")
-    metadata.text = "Editable 9:16 animation frame. Characters use credited, downloadable source SVGs; backgrounds, labels, and text are separate composition layers."
+    metadata.text = ("Editable 9:16 animation frame. Keep important content inside the conservative 950 × 979 px UI-safe area "
+                     "(x=65–1015, y=269–1248); top and bottom bands contain only background. "
+                     "Characters use credited downloadable source SVGs; labels and text are separate layers.")
     background_rect = rect(root, 0, 0, PORTRAIT_W, PORTRAIT_H, background)
     background_rect.set("id", "scene-background")
     if frame_id:
@@ -932,38 +941,38 @@ def draw_case_frame(case_index):
     color_map = case.get("colors", {})
     omit_bg = {f"freepik--background-complete--inject-2"}
     if case["key"] == "texting":
-        embed_asset(root, "texting", -110, 100, 1300, 1150,
+        embed_asset(root, "texting", 150, 270, 780, 650,
                     omit_ids=omit_bg | {"freepik--Chat--inject-2", "freepik--character-1--inject-2"},
                     color_map=color_map, sad_expression=True)
         # The outgoing message and read receipt are independent scene overlays.
-        rect(root, 116, 1150, 630, 94, CREAM, rx=25, stroke=PEACH, sw=3)
-        txt(root, 160, 1208, "Teman · Hei, ada waktu?", 25, ESPRESSO, 600)
-        rect(root, 336, 1260, 628, 94, PLUM, rx=25)
-        txt(root, 650, 1318, "Balas dong :( · Dibaca 3 jam", 24, CREAM, 700, "middle")
+        rect(root, 68, 835, 570, 74, CREAM, rx=22, stroke=PEACH, sw=3)
+        txt(root, 98, 881, "Teman · Hei, ada waktu?", 22, ESPRESSO, 600)
+        rect(root, 442, 922, 570, 74, PLUM, rx=22)
+        txt(root, 727, 968, "Balas dong :( · Dibaca 3 jam", 21, CREAM, 700, "middle")
     elif case["key"] == "student_stress":
         # Reuse Raka's source illustration without redrawing his character.
-        embed_asset(root, "coworkers", 0, 430, 1080, 1030,
+        embed_asset(root, "coworkers", 190, 455, 700, 700,
                     include_ids={"background-complete", "Desk", "character-2"},
                     color_map={"#407BFF": PLUM}, raka_expression=True,
                     child_omit_indices={"character-2": (52,)})
         target = add(root, "g", id="missed-target-prop")
-        rect(target, 690, 306, 320, 104, CREAM, rx=20, stroke=PEACH, sw=3)
-        txt(target, 716, 344, "TARGET", 16, ESPRESSO, 700, letter=1.0)
-        rect(target, 716, 366, 258, 13, CASE_TINTS[1], rx=7)
-        rect(target, 716, 366, 155, 13, PLUM, rx=7)
-        txt(target, 976, 349, "6/10", 17, TERRACOTTA, 700, "end")
+        rect(target, 682, 405, 320, 82, CREAM, rx=18, stroke=PEACH, sw=3)
+        txt(target, 706, 436, "TARGET", 15, ESPRESSO, 700, letter=1.0)
+        rect(target, 706, 455, 250, 11, CASE_TINTS[1], rx=6)
+        rect(target, 706, 455, 150, 11, PLUM, rx=6)
+        txt(target, 970, 440, "6/10", 15, TERRACOTTA, 700, "end")
     else:
-        embed_asset(root, "couple", 20, 350, 1040, 960, omit_ids=omit_bg, color_map=color_map)
+        embed_asset(root, "couple", 150, 395, 780, 700, omit_ids=omit_bg, color_map=color_map)
 
     # Separate groups let the animator reveal the correction when the VO reaches “Padahal...”.
     mistaken_label = add(root, "g", id="wrong-label-bubble")
-    rect(mistaken_label, 56, 104, 968, 190, TERRACOTTA, rx=32)
-    txt(mistaken_label, 540, 220, case["quote"], 47 if number < 3 else 43, WHITE, 700, "middle")
+    rect(mistaken_label, 68, 282, 944, 112, TERRACOTTA, rx=28)
+    txt(mistaken_label, 540, 352, case["quote"], 39 if number < 3 else 36, WHITE, 700, "middle")
     correction = add(root, "g", id="sage-correction-card")
-    rect(correction, 56, 1510, 968, 270, SAGE, rx=34)
-    txt(correction, 104, 1570, "REALITANYA", 19, ESPRESSO, 700, letter=1.4)
-    txt(correction, 540, 1660, case["correction"][0], 31, ESPRESSO, 600, "middle")
-    txt(correction, 540, 1708, case["correction"][1], 31, ESPRESSO, 600, "middle")
+    rect(correction, 68, 1035, 944, 178, SAGE, rx=30)
+    txt(correction, 108, 1080, "REALITANYA", 17, ESPRESSO, 700, letter=1.4)
+    txt(correction, 540, 1141, case["correction"][0], 26, ESPRESSO, 600, "middle")
+    txt(correction, 540, 1182, case["correction"][1], 26, ESPRESSO, 600, "middle")
     return root
 
 
@@ -987,21 +996,21 @@ def build_scene_3_combined(scene):
         "03D",
     )
     for i, (y, tint, label) in enumerate([
-        (130, CASE_TINTS[0], "They're avoidant!"),
-        (365, CASE_TINTS[1], "I'm depressed!"),
-        (600, CASE_TINTS[2], "You're gaslighting me!"),
+        (286, CASE_TINTS[0], "They're avoidant!"),
+        (410, CASE_TINTS[1], "I'm depressed!"),
+        (534, CASE_TINTS[2], "You're gaslighting me!"),
     ]):
-        rect(root, 72, y, 936, 190, tint, rx=28)
-        circle(root, 152, y + 95, 42, PLUM)
-        txt(root, 152, y + 104, str(i + 1), 27, CREAM, 700, "middle")
-        txt(root, 222, y + 107, label, 33, ESPRESSO, 700)
-    rect(root, 56, 910, 968, 690, PLUM, rx=38)
-    txt(root, 540, 1090, "One behavior", 64, MUSTARD, 700, "middle")
-    line(root, 470, 1162, 610, 1162, TERRACOTTA, 8)
-    line(root, 470, 1190, 610, 1190, TERRACOTTA, 8)
-    path(root, "M510,1215 L570,1140", stroke=TERRACOTTA, sw=8)
-    txt(root, 540, 1330, "A psychological", 50, CREAM, 700, "middle")
-    txt(root, 540, 1402, "diagnosis.", 54, CREAM, 700, "middle")
+        rect(root, 72, y, 936, 104, tint, rx=24)
+        circle(root, 128, y + 52, 30, PLUM)
+        txt(root, 128, y + 60, str(i + 1), 21, CREAM, 700, "middle")
+        txt(root, 184, y + 63, label, 27, ESPRESSO, 700)
+    rect(root, 72, 690, 936, 528, PLUM, rx=34)
+    txt(root, 540, 820, "One behavior", 58, MUSTARD, 700, "middle")
+    line(root, 470, 875, 610, 875, TERRACOTTA, 7)
+    line(root, 470, 898, 610, 898, TERRACOTTA, 7)
+    path(root, "M510,920 L570,850", stroke=TERRACOTTA, sw=7)
+    txt(root, 540, 1015, "A psychological", 44, CREAM, 700, "middle")
+    txt(root, 540, 1076, "diagnosis.", 48, CREAM, 700, "middle")
     return root
 
 
@@ -1126,7 +1135,8 @@ def build_scene_4(scene):
     return build_scene_4d(scene)
 
 
-def continuous_office_base(title, description, frame_id, isolate_dina=False, character_color=PLUM, omit_dina=False, art_y=620):
+def continuous_office_base(title, description, frame_id, isolate_dina=False, character_color=PLUM,
+                           omit_dina=False, art_y=620, art_x=0, art_size=1080):
     root = portrait_frame(title, description, CREAM, frame_id)
     if isolate_dina:
         root.find(tag("metadata")).text = (
@@ -1149,19 +1159,19 @@ def continuous_office_base(title, description, frame_id, isolate_dina=False, cha
     root[3].set("id", "scene-background")
     if isolate_dina:
         embed_asset(
-            root, "coworkers", 0, 500, 1080, 1080,
+            root, "coworkers", art_x, art_y, art_size, art_size,
             omit_ids={"character-2"}, color_map={"#407BFF": PLUM},
             color_map_policy={"background-simple": (0, 1), "Chat": (0, 1), "Desk": (1, 3), "character-1": (6, 3)},
         )
     elif omit_dina:
         embed_asset(
-            root, "coworkers", 0, art_y, 1080, 1080,
+            root, "coworkers", art_x, art_y, art_size, art_size,
             omit_ids={"Chat", "background-simple", "character-1"}, color_map={"#407BFF": character_color}, raka_expression=True,
             child_omit_indices={"character-2": (52,)},
         )
     else:
         embed_asset(
-            root, "coworkers", 0, art_y, 1080, 1080,
+            root, "coworkers", art_x, art_y, art_size, art_size,
             omit_ids={"Chat", "background-simple"}, color_map={"#407BFF": character_color}, raka_expression=True,
             child_omit_indices={"character-2": (52,)},
         )
@@ -1247,28 +1257,31 @@ def build_story_03a(scene):
         "The same Co-workers office illustration as 4B shows Raka alone after Dina is removed from the composition. Separate target and thought-label overlays carry the 4A beat.",
         "4A",
         omit_dina=True,
+        art_y=320,
+        art_x=90,
+        art_size=900,
     )
 
     target = add(root, "g", id="missed-target-card")
-    rect(target, 70, 84, 450, 130, PLUM, rx=24)
-    txt(target, 102, 124, "TARGET KERJA", 17, CREAM, 700, letter=1.0)
-    txt(target, 116, 188, "10", 38, CREAM, 700)
-    txt(target, 176, 183, "target", 15, CREAM, 500)
-    line(target, 260, 148, 260, 198, CREAM, 2, opacity=0.45)
-    txt(target, 292, 188, "6", 38, TERRACOTTA, 700)
-    txt(target, 334, 183, "tercapai", 15, CREAM, 500)
+    rect(target, 65, 285, 430, 112, PLUM, rx=22)
+    txt(target, 92, 315, "TARGET KERJA", 15, CREAM, 700, letter=1.0)
+    txt(target, 104, 374, "10", 32, CREAM, 700)
+    txt(target, 154, 370, "target", 13, CREAM, 500)
+    line(target, 222, 338, 222, 378, CREAM, 2, opacity=0.45)
+    txt(target, 247, 374, "6", 32, TERRACOTTA, 700)
+    txt(target, 284, 370, "tercapai", 13, CREAM, 500)
 
     cloud = add(root, "g", id="raka-small-thought-cloud", data_role="animatable-thought-label")
     # The thought bubble stays compact and close to Raka's head in the portrait frame.
-    rect(cloud, 682, 648, 324, 232, PLUM, rx=38)
-    for cx, cy, r in [(710, 658, 25), (754, 644, 32), (810, 644, 32), (866, 648, 28), (917, 654, 23)]:
+    rect(cloud, 610, 392, 400, 210, PLUM, rx=34)
+    for cx, cy, r in [(641, 402, 20), (680, 388, 25), (724, 388, 25), (768, 394, 23), (806, 400, 18)]:
         circle(cloud, cx, cy, r, PLUM)
-    for cx, cy, r in [(676, 896, 12), (655, 918, 8), (641, 937, 5)]:
+    for cx, cy, r in [(604, 617, 11), (584, 633, 7), (568, 649, 5)]:
         circle(cloud, cx, cy, r, PLUM)
-    txt(cloud, 844, 708, "Aku depresi.", 19, CREAM, 700, "middle")
-    txt(cloud, 844, 740, "Ada yang salah", 19, CREAM, 700, "middle")
-    txt(cloud, 844, 772, "banget sama aku.", 19, CREAM, 700, "middle")
-    txt(cloud, 844, 834, "SEDIH BEBERAPA HARI", 12, PEACH, 700, "middle", letter=0.5)
+    txt(cloud, 810, 454, "Aku depresi.", 18, CREAM, 700, "middle")
+    txt(cloud, 810, 484, "Ada yang salah", 18, CREAM, 700, "middle")
+    txt(cloud, 810, 514, "banget sama aku.", 18, CREAM, 700, "middle")
+    txt(cloud, 810, 564, "SEDIH BEBERAPA HARI", 11, PEACH, 700, "middle", letter=0.5)
     return root
 
 
@@ -1277,19 +1290,22 @@ def build_story_03b(scene):
         "04B · Raka and Dina argue in a work meeting",
         "At a work meeting, Raka hears Dina's feedback as a personal attack. Their two editable dialogue bubbles show both lines and keep the disagreement ambiguous.",
         "04B",
+        art_y=540,
+        art_x=100,
+        art_size=840,
     )
     raka = add(root, "g", id="raka-quote")
-    rect(raka, 52, 76, 976, 208, PLUM, rx=30)
-    path(raka, "M700,282 L778,282 L748,336 Z", fill=PLUM)
-    txt(raka, 92, 120, "RAKA", 17, CREAM, 700, letter=1.2)
-    txt(raka, 92, 186, "Kamu selalu bikin aku merasa salah!", 31, CREAM, 600)
+    rect(raka, 68, 282, 944, 128, PLUM, rx=26)
+    path(raka, "M700,408 L778,408 L748,452 Z", fill=PLUM)
+    txt(raka, 96, 315, "RAKA", 15, CREAM, 700, letter=1.2)
+    txt(raka, 96, 372, "Kamu selalu bikin aku merasa salah!", 27, CREAM, 600)
 
     dina = add(root, "g", id="dina-quote")
-    rect(dina, 52, 330, 976, 208, CREAM, rx=30, stroke=PLUM, sw=4)
-    path(dina, "M300,538 L370,538 L334,590 Z", fill=CREAM, stroke=PLUM, sw=3)
-    txt(dina, 92, 374, "DINA", 17, PLUM, 700, letter=1.2)
-    txt(dina, 92, 440, "Aku cuma kasih masukan.", 30, PLUM, 600)
-    txt(dina, 92, 484, "Jangan baper terus, deh.", 30, PLUM, 600)
+    rect(dina, 68, 432, 944, 138, CREAM, rx=26, stroke=PLUM, sw=4)
+    path(dina, "M300,568 L370,568 L334,610 Z", fill=CREAM, stroke=PLUM, sw=3)
+    txt(dina, 96, 464, "DINA", 15, PLUM, 700, letter=1.2)
+    txt(dina, 96, 515, "Aku cuma kasih masukan.", 26, PLUM, 600)
+    txt(dina, 96, 552, "Jangan baper terus, deh.", 26, PLUM, 600)
     return root
 
 
@@ -1298,54 +1314,58 @@ def build_story_03c(scene):
         "4B2 · Raka labels Dina narcissistic",
         "Raka turns Dina's one defensive reply into the stamp NARSISTIK. The frame marks this as Raka's conclusion, based on one reply rather than evidence of a pattern.",
         "4B2",
+        art_y=620,
+        art_x=230,
+        art_size=620,
     )
     thought = add(root, "g", id="raka-conclusion")
-    pill(thought, 70, 78, 940, 72, "KESIMPULAN RAKA · DARI SATU BALASAN", CREAM, PLUM, 20, stroke=PLUM)
-    stamp = add(thought, "g", id="narcissistic-stamp", transform="rotate(-3 540 337)")
-    rect(stamp, 90, 200, 900, 265, TERRACOTTA, rx=30)
-    rect(stamp, 110, 220, 860, 225, "none", rx=20, stroke=CREAM, sw=3)
-    txt(stamp, 540, 294, "DIA", 23, CREAM, 700, "middle", letter=1.4)
-    txt(stamp, 540, 380, "NARSISTIK", 58, CREAM, 700, "middle", letter=1.3)
-    txt(thought, 540, 535, "Satu balasan belum membuktikan pola.", 25, PLUM, 600, "middle")
+    pill(thought, 68, 282, 944, 52, "KESIMPULAN RAKA · DARI SATU BALASAN", CREAM, PLUM, 17, stroke=PLUM)
+    stamp = add(thought, "g", id="narcissistic-stamp", transform="rotate(-3 540 440)")
+    rect(stamp, 95, 356, 890, 176, TERRACOTTA, rx=26)
+    rect(stamp, 112, 373, 856, 142, "none", rx=18, stroke=CREAM, sw=3)
+    txt(stamp, 540, 420, "DIA", 18, CREAM, 700, "middle", letter=1.4)
+    txt(stamp, 540, 488, "NARSISTIK", 48, CREAM, 700, "middle", letter=1.3)
+    txt(thought, 540, 578, "Satu balasan belum membuktikan pola.", 21, PLUM, 600, "middle")
     return root
 
 
 def build_story_04a(scene):
     root = continuous_office_base(
         "4C · Stigma spreads through a post",
-        "The same Co-workers office illustration as 4B shows Raka and Dina together. A warning post and group notifications appear as separate layers and begin to spread.",
+        "The Co-workers office illustration shows Raka alone at his desk while he posts a warning about Dina. The post and group notifications appear as separate layers and begin to spread.",
         "4C",
         omit_dina=True,
-        art_y=880,
+        art_y=660,
+        art_x=-20,
+        art_size=620,
     )
     root.find(tag("metadata")).text = (
-        "The full Co-workers · Rafiki office illustration from 4B is reused unchanged, including Raka and Dina together. "
-        "The warning post and notification chain are separate editable SVG overlays; no source character pose was changed."
+        "The Co-workers · Rafiki office illustration from 4B is reused with Dina's separate source character omitted, leaving Raka alone. "
+        "The handheld object is omitted; the warning post and notification chain are separate editable SVG overlays."
     )
     zoom = add(root, "g", id="stigma-warning-post", data_motion="post-expands-into-notifications")
-    rect(zoom, 54, 70, 972, 350, PLUM, rx=30)
-    rect(zoom, 76, 92, 928, 306, ESPRESSO, rx=24)
-    txt(zoom, 112, 138, "POSTINGAN", 17, PEACH, 700, letter=1.2)
-    circle(zoom, 962, 118, 8, TERRACOTTA)
-    txt(zoom, 112, 234, "Hati-hati sama Dina,", 34, CREAM, 700)
-    txt(zoom, 112, 282, "dia narsistik", 34, CREAM, 700)
-    txt(zoom, 112, 348, "Biar yang lain aman.", 20, PEACH, 600)
+    rect(zoom, 68, 282, 944, 224, PLUM, rx=26)
+    rect(zoom, 84, 298, 912, 192, ESPRESSO, rx=20)
+    txt(zoom, 112, 334, "POSTINGAN", 15, PEACH, 700, letter=1.2)
+    circle(zoom, 962, 321, 7, TERRACOTTA)
+    txt(zoom, 112, 391, "Hati-hati sama Dina, dia narsistik", 28, CREAM, 700)
+    txt(zoom, 112, 455, "Biar yang lain aman.", 18, PEACH, 600)
 
     notifications = add(root, "g", id="notification-chain", data_motion="notifications-spread-outward")
     notification_connector = path(notifications, "M540,440 C550,480 540,510 540,548 M540,690 C550,725 540,760 540,796", fill="none", stroke=PEACH, sw=5)
     notification_connector.set("stroke-dasharray", "7 12")
     for index, (x, y, number, heading, message) in enumerate([
-        (100, 450, "1", "GRUP KERJA", "Postingan dibagikan"),
-        (100, 600, "2", "GRUP KERJA", "Dina dikeluarkan dari grup"),
-        (100, 750, "3", "GRUP KERJA", "Post dilihat 4 orang"),
+        (520, 530, "1", "GRUP KERJA", "Postingan dibagikan"),
+        (520, 642, "2", "GRUP KERJA", "Dina dikeluarkan dari grup"),
+        (520, 754, "3", "GRUP KERJA", "Post dilihat 4 orang"),
     ]):
         card_group = add(notifications, "g", id=f"notification-{index + 1}")
-        rect(card_group, x, y, 880, 124, CREAM, rx=20, stroke=PEACH, sw=3)
+        rect(card_group, x, y, 492, 96, CREAM, rx=18, stroke=PEACH, sw=3)
         circle(card_group, x + 36, y + 38, 17, PLUM)
-        txt(card_group, x + 72, y + 44, heading, 15, PLUM, 700, letter=0.6)
-        txt(card_group, x + 72, y + 87, message, 21, ESPRESSO, 700)
-        circle(card_group, x + 836, y + 24, 13, TERRACOTTA)
-        txt(card_group, x + 836, y + 29, number, 14, CREAM, 700, "middle")
+        txt(card_group, x + 68, y + 36, heading, 13, PLUM, 700, letter=0.6)
+        txt(card_group, x + 68, y + 72, message, 18, ESPRESSO, 700)
+        circle(card_group, x + 458, y + 20, 11, TERRACOTTA)
+        txt(card_group, x + 458, y + 25, number, 12, CREAM, 700, "middle")
     return root
 
 
@@ -1360,34 +1380,35 @@ def build_story_04b(scene):
         "Storyset Co-workers · Rafiki Dina source. Dina's existing character group is reused; no table or Raka is included. Isolation elements and the closing statement are separate editable layers."
     )
     shadow = add(root, "g", id="dina-isolation-shadow")
-    add(shadow, "ellipse", cx=340, cy=1552, rx=245, ry=38, fill=ESPRESSO, opacity=0.12)
-    fading_label = add(root, "g", id="fading-narcissistic-stamp", transform="rotate(-8 700 900)")
-    rect(fading_label, 500, 828, 500, 142, TERRACOTTA, rx=20, opacity=0.08)
-    txt(fading_label, 750, 920, "NARSISTIK", 47, PLUM, 700, "middle", letter=1.4, opacity=0.12)
+    add(shadow, "ellipse", cx=420, cy=1138, rx=160, ry=24, fill=ESPRESSO, opacity=0.12)
+    fading_label = add(root, "g", id="fading-narcissistic-stamp", transform="rotate(-8 740 950)")
+    rect(fading_label, 525, 900, 430, 105, TERRACOTTA, rx=18, opacity=0.08)
+    txt(fading_label, 740, 966, "NARSISTIK", 34, PLUM, 700, "middle", letter=1.4, opacity=0.12)
 
     bubble = add(root, "g", id="dina-empty-speech-bubble")
-    rect(bubble, 90, 250, 320, 144, CREAM, rx=38, stroke=PLUM, sw=3)
-    path(bubble, "M212,394 L172,472 L284,395 Z", fill=CREAM, stroke=PLUM, sw=3)
-    txt(bubble, 250, 345, "...", 58, PLUM, 700, "middle")
+    rect(bubble, 68, 292, 320, 122, CREAM, rx=32, stroke=PLUM, sw=3)
+    path(bubble, "M245,414 L290,456 L303,414 Z", fill=CREAM, stroke=PLUM, sw=3)
+    txt(bubble, 228, 374, "...", 48, PLUM, 700, "middle")
 
     notifications = add(root, "g", id="unanswered-group-notifications")
-    for index, (x, y) in enumerate([(580, 430), (580, 590), (580, 750)]):
+    for index, (x, y) in enumerate([(560, 430), (560, 550), (560, 670)]):
         card_group = add(notifications, "g", id=f"unanswered-notification-{index + 1}", opacity=0.56 - index * 0.1)
-        rect(card_group, x, y, 430, 116, CREAM, rx=20, stroke=PEACH, sw=2)
+        rect(card_group, x, y, 452, 92, CREAM, rx=18, stroke=PEACH, sw=2)
         circle(card_group, x + 35, y + 38, 12, SAGE)
-        line(card_group, x + 65, y + 35, x + 370, y + 35, PLUM, 3, opacity=0.58)
-        line(card_group, x + 28, y + 73, x + 355, y + 73, PLUM, 3, opacity=0.30)
-        line(card_group, x + 28, y + 89, x + 228, y + 89, PLUM, 3, opacity=0.23)
-        circle(card_group, x + 398, y + 22, 7, TERRACOTTA)
+        line(card_group, x + 65, y + 30, x + 390, y + 30, PLUM, 3, opacity=0.58)
+        line(card_group, x + 28, y + 58, x + 365, y + 58, PLUM, 3, opacity=0.30)
+        line(card_group, x + 28, y + 74, x + 220, y + 74, PLUM, 3, opacity=0.23)
+        circle(card_group, x + 420, y + 20, 7, TERRACOTTA)
 
     embed_asset(
-        root, "coworkers", 0, 670, 1080, 1080,
+        root, "coworkers", 130, 540, 760, 760,
         include_ids={"character-1"}, color_map={"#407BFF": PLUM},
         color_map_policy={"character-1": (6, 3)},
     )
     ending = add(root, "g", id="final-onscreen-text")
-    rect(ending, 64, 1720, 952, 126, PLUM, rx=28)
-    txt(ending, 540, 1798, "Don't reduce people to labels.", 34, CREAM, 700, "middle")
+    rect(ending, 540, 1082, 472, 126, PLUM, rx=24)
+    txt(ending, 776, 1133, "Don't reduce people", 22, CREAM, 700, "middle")
+    txt(ending, 776, 1168, "to labels.", 22, CREAM, 700, "middle")
     return root
 
 def build_scene_5(scene):
@@ -1397,9 +1418,9 @@ def build_scene_5(scene):
                   "#F5F5F5": CREAM, "#FAFAFA": CREAM}
     research_colors = {**doc_colors, "#2E353A": ESPRESSO, "#577AFA": PLUM, "#D4827D": TERRACOTTA,
                        "#EBC0BB": PEACH, "#EEC1BB": PEACH}
-    embed_asset(root, "document", 48, 30, 510, 610, color_map=doc_colors)
-    embed_asset(root, "research", 530, 30, 510, 610, color_map=research_colors)
-    pill(root, 122, 625, 836, 50, "KODE ETIK PSIKOLOGI INDONESIA", PLUM, MUSTARD, 16, stroke=PEACH)
+    embed_asset(root, "document", 80, 280, 440, 260, color_map=doc_colors)
+    embed_asset(root, "research", 560, 280, 440, 260, color_map=research_colors)
+    pill(root, 122, 548, 836, 44, "KODE ETIK PSIKOLOGI INDONESIA", PLUM, MUSTARD, 15, stroke=PEACH)
     articles = [
         ("9", "Dasar ilmiah & profesional", "Keputusan psikologi berlandaskan pengetahuan yang teruji."),
         ("15", "Menghindari dampak buruk", "Sampaikan informasi dengan mempertimbangkan dampaknya."),
@@ -1407,15 +1428,15 @@ def build_scene_5(scene):
         ("31", "Komunikasi media bertanggung jawab", "Selaras dengan kode etik dan praktik psikologi yang tepat."),
     ]
     for i, (num, title, desc) in enumerate(articles):
-        y = 700 + i * 194
-        rect(root, 66, y + 7, 948, 176, ESPRESSO, rx=22, opacity=0.10)
-        rect(root, 56, y, 948, 176, PLUM, rx=22, stroke=PEACH, sw=2)
-        circle(root, 132, y + 88, 40, MUSTARD)
-        txt(root, 132, y + 98, num, 27, ESPRESSO, 700, "middle")
-        txt(root, 204, y + 45, "PASAL " + num, 14, MUSTARD, 700, letter=1)
-        txt(root, 204, y + 82, title, 24, CREAM, 700)
-        txt(root, 204, y + 125, desc, 18, CREAM, 400)
-    pill(root, 56, 1510, 948, 122, "SCIENTIFIC BASIS  +  PROFESSIONAL CARE", PLUM, CREAM, 25, stroke=PEACH)
+        y = 610 + i * 142
+        rect(root, 66, y + 5, 948, 124, ESPRESSO, rx=19, opacity=0.10)
+        rect(root, 56, y, 948, 124, PLUM, rx=19, stroke=PEACH, sw=2)
+        circle(root, 126, y + 62, 29, MUSTARD)
+        txt(root, 126, y + 70, num, 20, ESPRESSO, 700, "middle")
+        txt(root, 180, y + 34, "PASAL " + num, 12, MUSTARD, 700, letter=1)
+        txt(root, 180, y + 66, title, 19, CREAM, 700)
+        txt(root, 180, y + 99, desc, 14, CREAM, 400)
+    pill(root, 56, 1184, 948, 58, "SCIENTIFIC BASIS  +  PROFESSIONAL CARE", PLUM, CREAM, 20, stroke=PEACH)
     return root
 
 
@@ -1424,7 +1445,7 @@ def build_scene_6(scene):
     todo_colors = {"#263238": ESPRESSO, "#407BFF": SAGE, "#E6E6E6": CREAM, "#EBEBEB": CREAM,
                    "#F0F0F0": CREAM, "#F5F5F5": CREAM, "#FAFAFA": CREAM,
                    "#ED847E": PEACH, "#FFC3BD": PEACH}
-    embed_asset(root, "todo", 175, 35, 730, 650,
+    embed_asset(root, "todo", 150, 270, 780, 430,
                 omit_ids={"background-complete"}, color_map=todo_colors)
     steps = [
         ("1", "Understand before you label", "Cari tahu makna istilah sebelum memakainya."),
@@ -1432,27 +1453,27 @@ def build_scene_6(scene):
         ("3", "Learn, don’t self-diagnose", "Konten edukasi bukan pengganti asesmen profesional."),
     ]
     for i, (num, title, desc) in enumerate(steps):
-        y = 720 + i * 250
-        card(root, 56, y, 968, 224, CREAM, PEACH, 24)
-        circle(root, 128, y + 72, 37, MUSTARD)
-        txt(root, 128, y + 82, num, 26, ESPRESSO, 700, "middle")
-        title_node = add(root, "text", x=190, y=y + 75, fill=PLUM, font_family="Arial, Helvetica, sans-serif", font_size=27, font_weight=700)
+        y = 620 + i * 158
+        card(root, 56, y, 968, 132, CREAM, PEACH, 22)
+        circle(root, 128, y + 66, 31, MUSTARD)
+        txt(root, 128, y + 74, num, 22, ESPRESSO, 700, "middle")
+        title_node = add(root, "text", x=182, y=y + 56, fill=PLUM, font_family="Arial, Helvetica, sans-serif", font_size=23, font_weight=700)
         split = [("Understand before you ", "label"), ("Describe, don’t ", "diagnose"), ("Learn, don’t ", "self-diagnose")][i]
         for value, color in [(split[0], PLUM), (split[1], TERRACOTTA)]:
             span = add(title_node, "tspan", fill=color)
             span.text = value
-        txt(root, 190, y + 137, desc, 20, ESPRESSO, 400)
+        txt(root, 182, y + 98, desc, 16, ESPRESSO, 400)
         # Small, editable line icons: learn, describe, and know the limit.
         if i == 0:
-            circle(root, 930, y + 79, 25, "none", stroke=SAGE, sw=5)
-            line(root, 948, y + 97, 969, y + 118, SAGE, 6)
+            circle(root, 940, y + 65, 21, "none", stroke=SAGE, sw=4)
+            line(root, 955, y + 80, 971, y + 96, SAGE, 5)
         elif i == 1:
-            rect(root, 885, y + 48, 93, 58, PEACH, rx=12, stroke=SAGE, sw=3)
-            path(root, f"M905,{y+76} L919,{y+90} L954,{y+62}", stroke=SAGE, sw=5)
+            rect(root, 900, y + 38, 78, 52, PEACH, rx=11, stroke=SAGE, sw=3)
+            path(root, f"M917,{y+64} L929,{y+76} L959,{y+51}", stroke=SAGE, sw=4)
         else:
-            circle(root, 930, y + 81, 29, CREAM, stroke=SAGE, sw=3)
-            path(root, f"M914,{y+82} L926,{y+94} L948,{y+67}", stroke=SAGE, sw=5)
-    pill(root, 56, 1510, 968, 130, "Allow normal human emotions.", SAGE, ESPRESSO, 28)
+            circle(root, 940, y + 66, 23, CREAM, stroke=SAGE, sw=3)
+            path(root, f"M927,{y+66} L937,{y+77} L955,{y+55}", stroke=SAGE, sw=4)
+    pill(root, 56, 1105, 968, 112, "Allow normal human emotions.", SAGE, ESPRESSO, 26)
     return root
 
 
@@ -1478,24 +1499,84 @@ def build_scene_7(scene):
                      "#E0E0E0": PLUM, "#E6E6E6": PLUM, "#EBEBEB": PLUM,
                      "#F0F0F0": PLUM, "#F5F5F5": PLUM, "#FAFAFA": PLUM,
                      "#ED847E": PEACH, "#FFC3BD": PEACH}
-    embed_asset(root, "social", 0, 30, 1080, 860,
+    embed_asset(root, "social", 120, 270, 840, 420,
                 omit_ids={"freepik--background-complete--inject-2"}, color_map=social_colors)
     # Viral labels fade before the normal-emotions cards arrive.
-    pill(root, 78, 840, 220, 54, "toxic", TERRACOTTA, WHITE, 20, opacity=0.58)
-    pill(root, 320, 840, 220, 54, "trauma", TERRACOTTA, WHITE, 20, opacity=0.42)
-    pill(root, 562, 840, 280, 54, "avoidant", TERRACOTTA, WHITE, 20, opacity=0.28)
-    txt(root, 540, 980, "NORMAL HUMAN EMOTIONS", 21, CREAM, 700, "middle", letter=1.2)
+    pill(root, 130, 685, 220, 48, "toxic", TERRACOTTA, WHITE, 17, opacity=0.58)
+    pill(root, 430, 685, 220, 48, "trauma", TERRACOTTA, WHITE, 17, opacity=0.42)
+    pill(root, 730, 685, 220, 48, "avoidant", TERRACOTTA, WHITE, 17, opacity=0.28)
+    txt(root, 540, 768, "NORMAL HUMAN EMOTIONS", 18, CREAM, 700, "middle", letter=1.2)
     emotions = [("joy", "Gembira", PEACH), ("sadness", "Sedih", SAGE), ("fear", "Takut", MUSTARD), ("calm", "Tenang", CREAM)]
-    positions = [(55, 1030), (565, 1030), (55, 1230), (565, 1230)]
+    positions = [(55, 790), (565, 790), (55, 900), (565, 900)]
     for (kind, label, color), (x, y) in zip(emotions, positions):
-        rect(root, x, y, 460, 176, ESPRESSO, rx=24, stroke=PLUM, sw=2)
-        face(root, x + 84, y + 88, kind, color)
-        txt(root, x + 166, y + 99, label, 26, CREAM, 700)
-    txt(root, 540, 1535, "THINK BEFORE YOU", 54, CREAM, 700, "middle", letter=0.6)
-    txt(root, 540, 1610, "LABEL.", 67, MUSTARD, 700, "middle", letter=0.6)
-    txt(root, 540, 1680, "Understand psychology. Use it responsibly.", 20, CREAM, 400, "middle")
-    rect(root, 86, 1740, 908, 120, MUSTARD, rx=28)
-    txt(root, 540, 1816, "Stay curious. Stay kind.", 32, ESPRESSO, 700, "middle")
+        rect(root, x, y, 460, 96, ESPRESSO, rx=20, stroke=PLUM, sw=2)
+        face(root, x + 72, y + 48, kind, color)
+        txt(root, x + 138, y + 58, label, 22, CREAM, 700)
+    txt(root, 540, 1052, "THINK BEFORE YOU", 43, CREAM, 700, "middle", letter=0.6)
+    txt(root, 540, 1106, "LABEL.", 54, MUSTARD, 700, "middle", letter=0.6)
+    txt(root, 540, 1144, "Understand psychology. Use it responsibly.", 15, CREAM, 400, "middle")
+    rect(root, 130, 1170, 820, 64, MUSTARD, rx=22)
+    txt(root, 540, 1211, "Stay curious. Stay kind.", 24, ESPRESSO, 700, "middle")
+    return root
+
+
+def fit_scene_to_ui_safe_area(root):
+    """Center and, only when needed, scale scene artwork into the portrait UI-safe area."""
+    probe = deepcopy(root)
+    background_ids = {"scene-background", "room-background", "room-floor", "room-ambient"}
+    for child in list(probe):
+        if child.get("id") in background_ids:
+            probe.remove(child)
+        elif child.tag == tag("rect") and child.get("width") == str(PORTRAIT_W) and child.get("height") == str(PORTRAIT_H):
+            probe.remove(child)
+    # Measure the fully revealed composition, including objects that animate in.
+    for node in probe.iter():
+        if node.get("opacity") == "0":
+            node.attrib.pop("opacity", None)
+        for child in list(node):
+            if child.tag in {tag("animate"), tag("animateTransform")}:
+                node.remove(child)
+    # Overscan the canvas so objects that are already clipped at x=0 or y=0
+    # still contribute their true bounds to the fit calculation.
+    probe.set("viewBox", "-200 -300 1480 2520")
+    png = cairosvg.svg2png(bytestring=ET.tostring(probe), output_width=370, output_height=630)
+    alpha = Image.open(BytesIO(png)).convert("RGBA").getchannel("A")
+    bounds = alpha.getbbox()
+    if not bounds:
+        return root
+
+    # The overscanned probe is one quarter scale; restore scene coordinates and
+    # reserve a small antialiasing cushion.
+    x1, y1, x2, y2 = (bounds[0] * 4 - 200, bounds[1] * 4 - 300,
+                      bounds[2] * 4 - 200, bounds[3] * 4 - 300)
+    safe_left, safe_top = SAFE_LEFT + 3, SAFE_TOP + 3
+    safe_right, safe_bottom = SAFE_RIGHT - 3, SAFE_BOTTOM - 3
+    width, height = x2 - x1, y2 - y1
+    scale = min(1.0, (safe_right - safe_left) / width, (safe_bottom - safe_top) / height)
+    center_x = (safe_left + safe_right) / 2
+    center_y = (safe_top + safe_bottom) / 2
+    translate_x = center_x - ((x1 + x2) / 2) * scale
+    translate_y = center_y - ((y1 + y2) / 2) * scale
+    if abs(scale - 1) < 0.0001 and abs(translate_x) < 1 and abs(translate_y) < 1:
+        return root
+
+    safe_group = ET.Element(tag("g"), {
+        "id": "short-video-safe-composition",
+        "transform": f"translate({translate_x:.2f} {translate_y:.2f}) scale({scale:.5f})",
+    })
+    foreground = []
+    for child in list(root):
+        if child.tag in {tag("title"), tag("desc"), tag("metadata"), tag("defs")}:
+            continue
+        if child.get("id") in background_ids:
+            continue
+        if child.tag == tag("rect") and child.get("width") == str(PORTRAIT_W) and child.get("height") == str(PORTRAIT_H):
+            continue
+        foreground.append(child)
+    for child in foreground:
+        root.remove(child)
+        safe_group.append(child)
+    root.append(safe_group)
     return root
 
 
@@ -1596,7 +1677,7 @@ def create_previews():
             frames = [(f"{scene['no']:02d}", f"{scene['no']:02d}-{scene['slug']}", scene["title"], scene["time"], draw_scene)]
         for code, slug, title, time, renderer in frames:
             frame_scene = dict(scene, title=title, time=time)
-            root = renderer(frame_scene)
+            root = fit_scene_to_ui_safe_area(renderer(frame_scene))
             ET.indent(root, space="  ")
             svg_path = SCENES_DIR / f"scene-{slug}.svg"
             svg_path.write_bytes(ET.tostring(root, encoding="utf-8", xml_declaration=True))
@@ -1712,12 +1793,12 @@ def add_field(cell, label, content, size=10):
 def make_docx(contact):
     doc = Document()
     sec = doc.sections[0]
-    sec.orientation = WD_ORIENT.LANDSCAPE
-    sec.page_width, sec.page_height = Inches(11.7), Inches(8.3)
-    sec.top_margin = Inches(0.45)
-    sec.bottom_margin = Inches(0.45)
-    sec.left_margin = Inches(0.5)
-    sec.right_margin = Inches(0.5)
+    sec.orientation = WD_ORIENT.PORTRAIT
+    sec.page_width, sec.page_height = Inches(8.27), Inches(11.69)
+    sec.top_margin = Inches(0.30)
+    sec.bottom_margin = Inches(0.30)
+    sec.left_margin = Inches(0.40)
+    sec.right_margin = Inches(0.40)
     normal = doc.styles["Normal"]
     normal.font.name = "Arial"
     normal.font.size = Pt(10)
@@ -1730,7 +1811,7 @@ def make_docx(contact):
     set_run(r, 28, INK, True)
     p = doc.add_paragraph()
     p.paragraph_format.space_after = Pt(7)
-    r = p.add_run("Storyboard produksi · Instagram portrait 9:16 · 1080 × 1920 · 7 scene · 16 keyframe")
+    r = p.add_run("Storyboard produksi · A4 portrait · satu scene per halaman · video Instagram 9:16 · 16 keyframe")
     set_run(r, 15, PLUM, True)
     p = doc.add_paragraph("Setiap frame memakai kanvas 9:16 berukuran 1080 × 1920 dan tersedia sebagai SVG mandiri yang editable. Scene 1 adalah satu scene presenter dengan empat komentar publik anonim. Scene 3 tetap tiga contoh terpisah sesuai naskah. Scene 4 adalah satu cerita sebab-akibat lima beat sepanjang 40 detik dengan VO asli: salah memahami emosi → konflik → label narsistik → stigma → Dina sendirian. Semua frame adalah komposisi animasi; tidak ada judul produksi di dalam artwork dan tidak ada gambar generatif.")
     p.paragraph_format.space_after = Pt(10)
@@ -1750,6 +1831,7 @@ def make_docx(contact):
         "Frame portrait berukuran 1080 × 1920 (9:16); preview Word dan contact sheet hanya mengecilkan tampilan, tidak memotong komposisi. 4A memakai ilustrasi kantor Co-workers · Rafiki dengan Dina dihilangkan. Kartu target dan gelembung pikiran terpisah. 4B dan 4B2 menampilkan keduanya; 4C hanya Raka; 4D hanya Dina. Objek genggam Raka dihilangkan dari semua frame Scene 4. Semua frame Scene 4 bebas objek domino.",
         "Student Stress · Rafiki di Scene 3B mempertahankan 220/254 drawable elements (86,6%); 34 elemen (13,4%) berubah atau dihilangkan. Air mata, penanda target, label, dan koreksi adalah overlay terpisah.",
         "Semua frame storyboard menggunakan format Instagram portrait 9:16. Karakter berasal dari SVG sumber yang dapat diunduh; chat, label, background, post, dan teks adalah layer vektor editable. Tidak ada gambar yang dihasilkan atau karakter yang digambar dari nol.",
+        "UI-safe area konservatif: x=65–1015, y=269–1248. Area top 14%, bottom 35%, dan 6% sisi hanya berisi latar. Persentase Meta berasal dari panduan iklan Reels; TikTok dan YouTube harus dicek dengan preview/template aktual. Satu scene per halaman Word, semua keyframe scene tetap pada halaman yang sama.",
     ]
     for item in audit:
         p = doc.add_paragraph(style="List Bullet")
@@ -1772,154 +1854,149 @@ def make_docx(contact):
     add_hyperlink(p, "Caveat · SIL OFL", "https://github.com/google/fonts/blob/main/ofl/caveat/OFL.txt")
     p.add_run("  ·  ")
     add_hyperlink(p, "Storyset terms", "https://storyset.com/terms")
+    p = doc.add_paragraph()
+    p.paragraph_format.space_before = Pt(2)
+    r = p.add_run("Riset safe zone video pendek: ")
+    set_run(r, 8, MUTED)
+    add_hyperlink(p, "Meta Reels · TikTok · YouTube", "https://nkurnia1031.github.io/video_hani/docs/research/short-video-portrait-safe-zones.md")
 
     doc.add_page_break()
     p = doc.add_paragraph()
     r = p.add_run("CONTACT SHEET · AUDIT 7 SCENE / 16 FRAME")
     set_run(r, 20, INK, True)
-    doc.add_picture(str(contact), width=Inches(10.65))
+    doc.add_picture(str(contact), width=Inches(7.40))
     p = doc.add_paragraph("Ritme visual bergerak dari presenter dan komentar publik → feed → tiga case terpisah pada Scene 3 → cerita sebab-akibat Raka dan Dina dalam lima beat → etika → checklist → closing. Scene 4 berakhir dengan Dina sendiri dan teks layar; seluruh frame mengikuti palet Opsi B.")
     for r in p.runs:
         set_run(r, 9, MUTED)
 
     for scene in SCENES:
         doc.add_page_break()
-        p = doc.add_paragraph()
-        p.paragraph_format.space_after = Pt(1)
+        page = doc.add_table(rows=1, cols=1)
+        page.autofit = False
+        page.columns[0].width = Inches(7.47)
+        page.rows[0]._tr.get_or_add_trPr().append(OxmlElement("w:cantSplit"))
+        shell = page.cell(0, 0)
+        shell.width = Inches(7.47)
+        shell.vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.TOP
+        set_cell_margins(shell, 0, 0, 0, 0)
+        shell.paragraphs[0].text = ""
+
+        p = shell.add_paragraph()
+        p.paragraph_format.space_after = Pt(0)
+        p.paragraph_format.keep_with_next = True
         r = p.add_run(f"SCENE {scene['no']:02d}  ·  {scene['time']}")
-        set_run(r, 11, PLUM, True)
-        p = doc.add_paragraph()
-        p.paragraph_format.space_after = Pt(6)
+        set_run(r, 9, PLUM, True)
+        p = shell.add_paragraph()
+        p.paragraph_format.space_after = Pt(4)
+        p.paragraph_format.keep_with_next = True
         r = p.add_run(scene["title"])
-        set_run(r, 21, INK, True)
-        table = doc.add_table(rows=1, cols=2)
-        table.autofit = False
-        table.columns[0].width = Inches(6.5)
-        table.columns[1].width = Inches(4.05)
-        left, right = table.rows[0].cells
-        left.width, right.width = Inches(6.5), Inches(4.05)
-        left.vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.CENTER
-        right.vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.TOP
-        shade(left, CREAM)
-        shade(right, CREAM)
-        set_cell_margins(left, 100, 100, 100, 100)
-        set_cell_margins(right, 100, 140, 100, 140)
+        set_run(r, 18, INK, True)
+
         if scene["no"] == 2:
-            left.paragraphs[0].text = ""
-            inner = left.add_table(rows=1, cols=3)
-            inner.autofit = False
-            for column in inner.columns:
-                column.width = Inches(2.05)
             frame_data = [
                 ("02A · 00:30–00:45", "scene-02a-comment-scroll.png"),
                 ("02B · 00:45–00:55", "scene-02b-hashtag-cloud.png"),
                 ("02C · 00:55–01:05", "scene-02c-on-screen-text.png"),
             ]
-            for cell, (label, filename) in zip(inner.rows[0].cells, frame_data):
-                cell.width = Inches(2.05)
-                cell.vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.CENTER
-                caption = cell.paragraphs[0]
-                caption.alignment = 1
-                caption.paragraph_format.space_after = Pt(5)
-                run = caption.add_run(label)
-                set_run(run, 7, PLUM, True)
-                image_para = cell.add_paragraph()
-                image_para.alignment = 1
-                image_para.add_run().add_picture(str(PREVIEW_DIR / filename), width=Inches(1.96))
-        elif scene["no"] in (1, 3, 4):
-            left.paragraphs[0].text = ""
+        elif scene.get("frames"):
             frame_data = [
                 (f"{frame['code']} · {frame['time']}", f"scene-{frame['slug']}.png")
                 for frame in scene["frames"]
             ]
-            grid_columns = 1 if scene["no"] == 1 else len(frame_data)
-            grid_rows = (len(frame_data) + grid_columns - 1) // grid_columns
-            inner = left.add_table(rows=grid_rows, cols=grid_columns)
-            inner.autofit = False
-            column_width = 6.28 / grid_columns
-            for column in inner.columns:
-                column.width = Inches(column_width)
-            cells = [cell for row in inner.rows for cell in row.cells]
-            for cell, (label, filename) in zip(cells, frame_data):
-                cell.width = Inches(column_width)
-                cell.vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.CENTER
-                caption = cell.paragraphs[0]
-                caption.alignment = 1
-                caption.paragraph_format.space_after = Pt(3)
-                run = caption.add_run(label)
-                set_run(run, 7, PLUM, True)
-                image_para = cell.add_paragraph()
-                image_para.alignment = 1
-                preview_width = min(column_width - 0.12, 3.7) if scene["no"] == 1 else column_width - 0.12
-                image_para.add_run().add_picture(str(PREVIEW_DIR / filename), width=Inches(preview_width))
         else:
-            image = PREVIEW_DIR / f"scene-{scene['no']:02d}-{scene['slug']}.png"
-            p = left.paragraphs[0]
-            p.alignment = 1
-            p.add_run().add_picture(str(image), width=Inches(3.55))
-        p = right.paragraphs[0]
-        p.paragraph_format.space_after = Pt(2)
-        r = p.add_run("VISUAL")
-        set_run(r, 8, PLUM, True)
-        p = right.add_paragraph(scene["visual"])
-        p.paragraph_format.space_after = Pt(5)
-        for r in p.runs: set_run(r, 9, INK)
+            frame_data = [
+                (f"SCENE {scene['no']:02d} · {scene['time']}",
+                 f"scene-{scene['no']:02d}-{scene['slug']}.png")
+            ]
+
+        p = shell.add_paragraph()
+        p.paragraph_format.space_after = Pt(1)
+        r = p.add_run("KEYFRAME SCENE · URUTAN KIRI KE KANAN")
+        set_run(r, 7, MUTED, True)
+        frame_count = len(frame_data)
+        strip = shell.add_table(rows=1, cols=frame_count)
+        strip.autofit = False
+        gap = 0.06
+        frame_width = min(3.30, (7.39 - gap * (frame_count - 1)) / frame_count)
+        for column in strip.columns:
+            column.width = Inches(frame_width)
+        for index, (cell, (label, filename)) in enumerate(zip(strip.rows[0].cells, frame_data)):
+            cell.width = Inches(frame_width)
+            cell.vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.TOP
+            set_cell_margins(cell, 35, 25, 40, 25)
+            caption = cell.paragraphs[0]
+            caption.alignment = 1
+            caption.paragraph_format.space_after = Pt(2)
+            run = caption.add_run(label)
+            set_run(run, 6.5, PLUM, True)
+            image_para = cell.add_paragraph()
+            image_para.alignment = 1
+            image_para.paragraph_format.space_after = Pt(0)
+            image_para.add_run().add_picture(str(PREVIEW_DIR / filename), width=Inches(frame_width - 0.05))
+        strip.rows[0]._tr.get_or_add_trPr().append(OxmlElement("w:cantSplit"))
+
+        notes = shell.add_table(rows=1, cols=2)
+        notes.autofit = False
+        notes.columns[0].width = Inches(3.67)
+        notes.columns[1].width = Inches(3.67)
+        notes.rows[0]._tr.get_or_add_trPr().append(OxmlElement("w:cantSplit"))
+        left, right = notes.rows[0].cells
+        left.width, right.width = Inches(3.67), Inches(3.67)
+        left.vertical_alignment = right.vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.TOP
+        shade(left, CREAM)
+        shade(right, CREAM)
+        set_cell_margins(left, 55, 100, 55, 100)
+        set_cell_margins(right, 55, 100, 55, 100)
+
+        def add_note(cell, heading, content, size=7.5, bold=False):
+            p = cell.add_paragraph()
+            p.paragraph_format.space_before = Pt(1)
+            p.paragraph_format.space_after = Pt(1)
+            r = p.add_run(heading.upper())
+            set_run(r, 7, PLUM, True)
+            p = cell.add_paragraph(content)
+            p.paragraph_format.space_after = Pt(2)
+            for r in p.runs:
+                set_run(r, size, INK, bold)
+            return p
+
+        add_note(left, "Visual", scene["visual"], 7.5)
+        add_note(left, "On-screen text", scene["screen"], 7.5, True)
+        add_note(left, "Gerak / kamera", scene["motion"], 7.5)
+        add_note(left, "Background", scene["background"], 7.2)
+        if scene["no"] == 2:
+            add_note(left, "Komponen scroll tambahan", "Enam grup komentar terpisah (comment-05–comment-10) tersedia sebagai SVG editable untuk animasi scroll.", 7.2)
+
         p = right.add_paragraph()
-        p.paragraph_format.space_after = Pt(2)
-        r = p.add_run("ON-SCREEN TEXT")
-        set_run(r, 8, PLUM, True)
-        p = right.add_paragraph(scene["screen"])
-        p.paragraph_format.space_after = Pt(5)
-        for r in p.runs: set_run(r, 9, INK, True)
-        p = right.add_paragraph()
-        p.paragraph_format.space_after = Pt(2)
-        r = p.add_run("GERAK / KAMERA")
-        set_run(r, 8, PLUM, True)
-        p = right.add_paragraph(scene["motion"])
-        p.paragraph_format.space_after = Pt(5)
-        for r in p.runs: set_run(r, 9, INK)
-        p = right.add_paragraph()
-        p.paragraph_format.space_after = Pt(2)
+        p.paragraph_format.space_after = Pt(1)
         r = p.add_run("SCRIPT / VOICE-OVER" + (" PER BEAT" if scene["no"] in (3, 4) else ""))
-        set_run(r, 8, PLUM, True)
+        set_run(r, 7, PLUM, True)
         if scene["no"] in (3, 4):
             for frame in scene["frames"]:
                 if not frame["voice"]:
                     continue
-                duration = frame_duration(frame)
                 p = right.add_paragraph()
-                p.paragraph_format.space_before = Pt(2)
-                p.paragraph_format.space_after = Pt(1)
-                r = p.add_run(f"{frame['code']} · {frame['time']} ({duration} detik)")
-                set_run(r, 8, PLUM, True)
+                p.paragraph_format.space_before = Pt(1)
+                p.paragraph_format.space_after = Pt(0)
+                r = p.add_run(f"{frame['code']} · {frame['time']} ({frame_duration(frame)} detik)")
+                set_run(r, 6.7, PLUM, True)
                 p = right.add_paragraph(frame["voice"])
-                p.paragraph_format.space_after = Pt(3)
-                for r in p.runs: set_run(r, 8, INK)
+                p.paragraph_format.space_after = Pt(1)
+                for r in p.runs:
+                    set_run(r, 7.0, INK)
         else:
             p = right.add_paragraph(scene["voice"])
-            p.paragraph_format.space_after = Pt(5)
-            for r in p.runs: set_run(r, 9, INK)
-        p = right.add_paragraph()
-        p.paragraph_format.space_after = Pt(2)
-        r = p.add_run("ASET & PERAN")
-        set_run(r, 8, PLUM, True)
-        for role in scene["roles"]:
-            p = right.add_paragraph(role, style="List Bullet")
-            p.paragraph_format.space_after = Pt(1)
-            for r in p.runs: set_run(r, 8, INK)
+            p.paragraph_format.space_after = Pt(2)
+            for r in p.runs:
+                set_run(r, 7.1, INK)
+        add_note(right, "Aset & peran", "\n".join("• " + role for role in scene["roles"]), 7.0)
         for asset_key in scene["credits"]:
             info = ASSETS[asset_key]
             p = right.add_paragraph()
-            p.paragraph_format.space_after = Pt(1)
-            asset_credit = " · Storyset · free with attribution"
-            add_hyperlink(p, "Sumber " + info["title"] + asset_credit, info["url"])
-            for r in p.runs: set_run(r, 8, PLUM)
-        p = right.add_paragraph()
-        p.paragraph_format.space_before = Pt(3)
-        r = p.add_run("BACKGROUND: ")
-        set_run(r, 8, PLUM, True)
-        r = p.add_run(scene["background"])
-        set_run(r, 8, MUTED)
+            p.paragraph_format.space_after = Pt(0)
+            add_hyperlink(p, "Sumber " + info["title"] + " · Storyset · free with attribution", info["url"])
+            for run in p.runs:
+                set_run(run, 6.5, PLUM)
 
     doc.add_page_break()
     p = doc.add_paragraph()
@@ -1930,7 +2007,7 @@ def make_docx(contact):
         set_run(r, 9, MUTED)
     source_table = doc.add_table(rows=1, cols=3)
     source_table.autofit = False
-    for column, width in zip(source_table.columns, (Inches(2.15), Inches(3.7), Inches(4.6))):
+    for column, width in zip(source_table.columns, (Inches(1.35), Inches(2.35), Inches(3.75))):
         column.width = width
     for cell, heading_text in zip(source_table.rows[0].cells, ("KATA / PLATFORM", "POTONGAN KOMENTAR", "URL / STATUS / AKSES")):
         shade(cell, PLUM)
@@ -1951,7 +2028,7 @@ def make_docx(contact):
         for run in cells[1].paragraphs[0].runs:
             set_run(run, 9, ESPRESSO)
         if comment["url"]:
-            add_hyperlink(cells[2].paragraphs[0], comment["url"], comment["url"])
+            add_hyperlink(cells[2].paragraphs[0], "Buka komentar publik", comment["url"])
             status_line = comment["kind"] + " · Tanggal akses: " + comment["accessed"]
         else:
             cells[2].paragraphs[0].add_run("Tidak ada URL publik · ")
@@ -2022,18 +2099,18 @@ def make_website():
 <title>Therapy Speak Gone Wrong · Production Board</title>
 <style>
 :root{--ink:#2a1f2d;--plum:#3d2645;--sage:#7fb89a;--terracotta:#e4572e;--mustard:#f2b134;--peach:#ffc4a3;--cream:#fff6ec;--blue:#3d2645;--blue-dark:#3d2645;--paper:#fff6ec;--line:#e8dacf;--muted:#665967;--coral:#e4572e;--white:#fff;--shadow:0 12px 30px rgba(42,31,45,.09)}
-*{box-sizing:border-box}html{background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}body{margin:0;padding:42px 28px 92px}.shell{max-width:1560px;margin:0 auto}.hero{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:end;margin:8px 0 32px}.eyebrow{color:var(--blue-dark);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}.hero h1{max-width:920px;margin:12px 0 12px;font-size:clamp(38px,5.5vw,76px);line-height:.98;letter-spacing:-.055em}.hero p{max-width:760px;margin:0;color:var(--muted);font-size:16px;line-height:1.55}.hero-actions{display:flex;flex-direction:column;gap:9px;align-items:stretch}.action{display:inline-block;padding:12px 16px;border:1px solid var(--line);border-radius:999px;background:var(--white);color:var(--ink);font-size:13px;font-weight:700;text-align:center;text-decoration:none}.action.primary{border-color:var(--blue);background:var(--blue);color:var(--white)}.style-strip{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:28px 0 18px;padding:15px 18px;border:1px solid var(--line);border-radius:14px;background:var(--white);color:var(--muted);font-size:12px}.swatch{display:inline-flex;align-items:center;gap:6px}.swatch i{width:15px;height:15px;border:1px solid #d5dce2;border-radius:50%}.board{display:grid;gap:13px}.board-row{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;align-items:stretch;padding:15px;border:1px solid var(--line);border-radius:17px;background:var(--white);box-shadow:var(--shadow)}.row-meta{display:flex;flex-direction:column;align-items:flex-start;padding:5px 0}.scene-number{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--ink);color:white;font-size:12px;font-weight:700}.time{margin:12px 0 9px;color:var(--blue-dark);font-size:11px;font-weight:700;letter-spacing:.08em}.row-meta h2{margin:0;font-size:19px;line-height:1.12;letter-spacing:-.02em}.row-meta p{margin:12px 0 0;color:var(--muted);font-size:12px;line-height:1.45}.row-frame{min-width:0;display:flex;flex-direction:column;justify-content:center}.row-frame img{display:block;width:min(100%,380px);aspect-ratio:9/16;height:auto;object-fit:contain;object-position:center;margin:0 auto;border-radius:10px;background:#fff6ec}.frame-stack,.case-frame-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),380px));justify-content:center;gap:18px}.frame-card{padding:9px;border:1px solid var(--line);border-radius:12px;background:#fffaf5}.frame-label{display:flex;justify-content:space-between;gap:8px;margin-bottom:7px;color:var(--blue-dark);font-size:10px;letter-spacing:.04em}.frame-label span{color:var(--muted);font-weight:400}.component-copy{margin:0;color:var(--muted);font-size:11px;line-height:1.45}.file-links{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;padding:9px 2px 0}.file-links a,.asset-sources a{color:var(--blue-dark);font-size:11px;font-weight:700;text-decoration:none}.file-links a:hover,.asset-sources a:hover{text-decoration:underline}.row-notes{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;align-content:center;margin:0;padding:2px 4px}.row-notes div{min-width:0}.row-notes dt{margin-bottom:4px;color:var(--blue-dark);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}.row-notes dd{margin:0;color:#50616d;font-size:11px;line-height:1.4}.asset-sources{margin:7px 0 0}.asset-sources a{margin-right:6px}.comment-source-list{margin:4px 0 0;padding-left:17px}.comment-source-list li{margin:0 0 8px;color:#50616d;font-size:10px;line-height:1.45;overflow-wrap:anywhere}.comment-source-list a{color:var(--blue-dark);font-weight:700}.audit{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;padding:20px;border:1px solid var(--line);border-radius:16px;background:#fff0e6}.audit h2{margin:0 0 8px;font-size:16px}.audit p{margin:0;color:#566974;font-size:12px;line-height:1.5}.footer{margin-top:24px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:11px;line-height:1.5}.footer a{color:var(--blue-dark)}
+*{box-sizing:border-box}html{background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}body{margin:0;padding:42px 28px 92px}.shell{max-width:1560px;margin:0 auto}.hero{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:end;margin:8px 0 32px}.eyebrow{color:var(--blue-dark);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}.hero h1{max-width:920px;margin:12px 0 12px;font-size:clamp(38px,5.5vw,76px);line-height:.98;letter-spacing:-.055em}.hero p{max-width:760px;margin:0;color:var(--muted);font-size:16px;line-height:1.55}.hero-actions{display:flex;flex-direction:column;gap:9px;align-items:stretch}.action{display:inline-block;padding:12px 16px;border:1px solid var(--line);border-radius:999px;background:var(--white);color:var(--ink);font-size:13px;font-weight:700;text-align:center;text-decoration:none}.action.primary{border-color:var(--blue);background:var(--blue);color:var(--white)}.style-strip{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:28px 0 18px;padding:15px 18px;border:1px solid var(--line);border-radius:14px;background:var(--white);color:var(--muted);font-size:12px}.swatch{display:inline-flex;align-items:center;gap:6px}.swatch i{width:15px;height:15px;border:1px solid #d5dce2;border-radius:50%}.safe-guide{margin:12px 0 22px;padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:#fff0e6}.safe-guide h2{margin:0 0 6px;font-size:15px}.safe-guide p{margin:0;color:var(--muted);font-size:12px;line-height:1.5}.safe-guide a{color:var(--blue-dark);font-weight:700}.board{display:grid;gap:13px}.board-row{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;align-items:stretch;padding:15px;border:1px solid var(--line);border-radius:17px;background:var(--white);box-shadow:var(--shadow)}.row-meta{display:flex;flex-direction:column;align-items:flex-start;padding:5px 0}.scene-number{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--ink);color:white;font-size:12px;font-weight:700}.time{margin:12px 0 9px;color:var(--blue-dark);font-size:11px;font-weight:700;letter-spacing:.08em}.row-meta h2{margin:0;font-size:19px;line-height:1.12;letter-spacing:-.02em}.row-meta p{margin:12px 0 0;color:var(--muted);font-size:12px;line-height:1.45}.row-frame{min-width:0;display:flex;flex-direction:column;justify-content:center}.row-frame img{display:block;width:min(100%,380px);aspect-ratio:9/16;height:auto;object-fit:contain;object-position:center;margin:0 auto;border-radius:10px;background:#fff6ec}.frame-stack,.case-frame-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),380px));justify-content:center;gap:18px}.frame-card{padding:9px;border:1px solid var(--line);border-radius:12px;background:#fffaf5}.frame-label{display:flex;justify-content:space-between;gap:8px;margin-bottom:7px;color:var(--blue-dark);font-size:10px;letter-spacing:.04em}.frame-label span{color:var(--muted);font-weight:400}.component-copy{margin:0;color:var(--muted);font-size:11px;line-height:1.45}.file-links{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;padding:9px 2px 0}.file-links a,.asset-sources a{color:var(--blue-dark);font-size:11px;font-weight:700;text-decoration:none}.file-links a:hover,.asset-sources a:hover{text-decoration:underline}.row-notes{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;align-content:center;margin:0;padding:2px 4px}.row-notes div{min-width:0}.row-notes dt{margin-bottom:4px;color:var(--blue-dark);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}.row-notes dd{margin:0;color:#50616d;font-size:11px;line-height:1.4}.asset-sources{margin:7px 0 0}.asset-sources a{margin-right:6px}.comment-source-list{margin:4px 0 0;padding-left:17px}.comment-source-list li{margin:0 0 8px;color:#50616d;font-size:10px;line-height:1.45;overflow-wrap:anywhere}.comment-source-list a{color:var(--blue-dark);font-weight:700}.audit{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;padding:20px;border:1px solid var(--line);border-radius:16px;background:#fff0e6}.audit h2{margin:0 0 8px;font-size:16px}.audit p{margin:0;color:#566974;font-size:12px;line-height:1.5}.footer{margin-top:24px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:11px;line-height:1.5}.footer a{color:var(--blue-dark)}
 @media(max-width:1100px){.board-row{grid-template-columns:minmax(0,1fr)}.row-notes{grid-column:auto;grid-template-columns:1fr 1fr}.hero{grid-template-columns:1fr}.hero-actions{flex-direction:row;justify-content:flex-start}.action{min-width:180px}}
 @media(max-width:700px){body{padding:24px 12px 60px}.hero h1{font-size:42px}.board-row{grid-template-columns:1fr;gap:12px;padding:13px}.row-meta{display:grid;grid-template-columns:40px 1fr;column-gap:8px;align-items:center}.scene-number{grid-row:span 2}.time{margin:0 0 4px}.row-meta h2{grid-column:2}.row-meta p{grid-column:1/-1;margin-top:10px}.row-notes{grid-column:auto;grid-template-columns:1fr}.hero-actions{flex-wrap:wrap}.action{min-width:0}.audit{grid-template-columns:1fr}}
 </style>
 </head>
 <body><main class="shell">
-<header class="hero"><div><div class="eyebrow">Editable production board · Instagram portrait · 9:16 · 1080 × 1920</div><h1>Therapy Speak Gone Wrong</h1><p>Tujuh scene, enam belas keyframe, semua memakai kanvas portrait 9:16 berukuran 1080 × 1920 untuk Instagram Reels. Scene 1 adalah satu scene presenter dengan empat komentar publik tersamarkan. Scene 3 tetap tiga contoh terpisah. Scene 4 mengikuti satu cerita sebab-akibat lima beat. VO tetap mengikuti naskah, dan setiap frame adalah SVG yang bisa diedit.</p></div><div class="hero-actions"><a class="action primary" href="Storyboard_Therapy_Speak_Gone_Wrong.docx" download>Download Word storyboard</a><a class="action" href="motion.html">Open Scene 2 motion study</a><a class="action" href="Storyboard_Editable_Source.zip" download>Download editable source bundle</a></div></header>
+<header class="hero"><div><div class="eyebrow">Editable production board · Instagram portrait · 9:16 · 1080 × 1920</div><h1>Therapy Speak Gone Wrong</h1><p>Tujuh scene, enam belas keyframe, semua memakai kanvas portrait 9:16 berukuran 1080 × 1920 untuk Instagram Reels. Scene 1 adalah satu scene presenter dengan empat komentar publik tersamarkan. Scene 3 tetap tiga contoh terpisah. Scene 4 mengikuti satu cerita sebab-akibat lima beat. VO tetap mengikuti naskah, dan setiap frame adalah SVG yang bisa diedit. Dokumen Word memakai halaman A4 portrait, satu scene utuh per halaman.</p></div><div class="hero-actions"><a class="action primary" href="Storyboard_Therapy_Speak_Gone_Wrong.docx" download>Download Word · A4 portrait · 1 scene/page</a><a class="action" href="motion.html">Open Scene 2 motion study</a><a class="action" href="Storyboard_Editable_Source.zip" download>Download editable source bundle</a></div></header>
 <div class="style-strip"><strong>Opsi B · Warm Peach &amp; Mustard</strong><span class="swatch"><i style="background:#3d2645"></i>deep plum</span><span class="swatch"><i style="background:#7fb89a"></i>sage</span><span class="swatch"><i style="background:#e4572e"></i>terracotta</span><span class="swatch"><i style="background:#f2b134"></i>mustard</span><span class="swatch"><i style="background:#ffc4a3"></i>peach</span><span class="swatch"><i style="background:#fff6ec"></i>cream</span><span class="swatch"><i style="background:#2a1f2d"></i>espresso</span><span>· terracotta for mistaken labels; sage for corrections</span></div>
-<section class="board" aria-label="Seven scene production board">
+<section class="safe-guide"><h2>UI-safe area · short video</h2><p>Important content stays in the central 950 × 979 px area (x=65–1015, y=269–1248). Top 14%, bottom 35%, and side 6% remain background-only. This uses Meta Reels ad guidance conservatively; organic UI can vary. <a href="../docs/research/short-video-portrait-safe-zones.md">Read platform-source research</a>.</p></section><section class="board" aria-label="Seven scene production board">
 ''' + "\n".join(rows) + '''
 </section>
-<section class="audit"><div><h2>Visual audit</h2><p>Semua frame berukuran 1080 × 1920 (9:16); preview mengecilkan tampilannya tanpa memotong komposisi. Scene 3 tetap tiga case mandiri dan satu frame penutup. Scene 4 mengikuti urutan 4A, 4B, 4B2, 4C, 4D: Raka sendiri di 4A, bersama Dina di 4B dan 4B2, sendiri di 4C saat membuat post, lalu Dina sendiri di 4D. Objek genggam Raka dihilangkan dari semua frame Scene 4. Dialog 4B tidak memakai panah. Post peringatan dan notifikasi adalah overlay terpisah; tidak ada domino. Scene 1 memakai objek Character dari People Creating Robot · Rafiki; 29/41 drawable (70,7%) tetap utuh setelah crop dan recolor. Robot, properti luar, panel, latar, bingkai, dan pointer sumber dihilangkan; tablet kecil pada pose tangannya dipertahankan. Empat komentar memakai nama samaran. Scene 2B memuat 56 hashtag editable. Semua frame dirender untuk audit visual portrait.</p></div><div><h2>Editing &amp; attribution</h2><p>Open or download each SVG to edit its vector layers and text. The source bundle contains the HTML board, all SVG frames, source illustration assets, and the Caveat font/license. The <a href="https://storyset.com/illustration/people-creating-robot/rafiki" target="_blank" rel="noreferrer">People Creating Robot · Rafiki</a> presenter and <a href="https://storyset.com/illustration/co-workers/rafiki" target="_blank" rel="noreferrer">Co-workers · Rafiki</a> and <a href="https://storyset.com/illustration/student-stress/rafiki" target="_blank" rel="noreferrer">Student Stress · Rafiki</a> are free with attribution. <a href="https://github.com/google/fonts/tree/main/ofl/caveat" target="_blank" rel="noreferrer">Caveat</a> is distributed under SIL OFL 1.1; cite Storyset when publishing and review the <a href="https://storyset.com/terms" target="_blank" rel="noreferrer">Storyset terms</a>.</p></div></section>
+<section class="audit"><div><h2>Visual audit</h2><p>Seluruh frame memakai kanvas 1080 × 1920. Konten penting berada di x=65–1015 dan y=269–1248; area atas 14%, bawah 35%, serta sisi 6% hanya berisi latar. Ini acuan konservatif dari panduan iklan Reels Meta, bukan standar universal untuk post organik. Scene 3 tetap tiga case mandiri. Scene 4 berurutan 4A, 4B, 4B2, 4C, 4D; 4C hanya menampilkan Raka saat membuat post, sedangkan 4D hanya Dina. Objek genggam Raka dihilangkan dari semua frame Scene 4. Scene 1 memakai objek Character dari People Creating Robot · Rafiki; 29/41 drawable (70,7%) tetap utuh setelah crop dan recolor. Empat komentar memakai nama samaran. Scene 2B memuat 56 hashtag editable. Contact sheet memperlihatkan semua 16 frame portrait.</p></div><div><h2>Editing &amp; attribution</h2><p>Open or download each SVG to edit its vector layers and text. The source bundle contains the HTML board, all SVG frames, source illustration assets, and the Caveat font/license. The <a href="https://storyset.com/illustration/people-creating-robot/rafiki" target="_blank" rel="noreferrer">People Creating Robot · Rafiki</a> presenter and <a href="https://storyset.com/illustration/co-workers/rafiki" target="_blank" rel="noreferrer">Co-workers · Rafiki</a> and <a href="https://storyset.com/illustration/student-stress/rafiki" target="_blank" rel="noreferrer">Student Stress · Rafiki</a> are free with attribution. <a href="https://github.com/google/fonts/tree/main/ofl/caveat" target="_blank" rel="noreferrer">Caveat</a> is distributed under SIL OFL 1.1; cite Storyset when publishing and review the <a href="https://storyset.com/terms" target="_blank" rel="noreferrer">Storyset terms</a>.</p></div></section>
 <footer class="footer">Semua SVG scene menggunakan viewBox portrait 1080 × 1920, siap disusun sebagai video Instagram Reels 9:16. Scene 1 memakai objek Character dari ilustrasi Storyset yang dikreditkan, tanpa robot, properti luar, pointer, atau bingkai presenter. Tablet kecil yang menyatu dengan pose sumber dipertahankan. Latar, kartu komentar, word cloud, label, kartu, notifikasi, dan teks adalah layer SVG editable. Tidak ada gambar generatif.</footer>
 </main></body></html>'''
     output = ROOT / "index.html"
@@ -2054,6 +2131,9 @@ def make_zip():
         readme = ROOT / "README.md"
         if readme.exists():
             archive.write(readme, "README.md")
+        research_note = REPO / "docs/research/short-video-portrait-safe-zones.md"
+        if research_note.exists():
+            archive.write(research_note, "docs/research/short-video-portrait-safe-zones.md")
         for path in sorted(SCENES_DIR.glob("*.svg")):
             archive.write(path, "scenes/" + path.name)
         for pattern in ("*.svg", "*.ttf", "*.txt"):
