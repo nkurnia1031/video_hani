@@ -27,6 +27,7 @@ ASSETS_DIR = ROOT / "assets"
 SVG_NS = "http://www.w3.org/2000/svg"
 ET.register_namespace("", SVG_NS)
 W, H = 1920, 1080
+PORTRAIT_W, PORTRAIT_H = 1080, 1920
 
 INK = "#263238"
 BLUE = "#407BFF"
@@ -187,7 +188,7 @@ SCENES = [
     },
     {
         "no": 2, "slug": "what-is-therapy-speak", "time": "00:30–01:05", "title": "What Is Therapy Speak?",
-        "visual": "Wide cream living-room frame: TV and wall art on the left, a comment feed on an espresso phone at center, and the reclining man on a sage sofa with colored shelves at right.",
+        "visual": "Portrait 9:16 living-room composition: the TV and wall art sit in the upper-left area, the enlarged comment phone occupies center, and the reclining man, sage sofa, colored shelves, books, and flowers anchor the lower-right.",
         "screen": "02A: intact comments with only the term highlighted. 02B: #Toxic · #Narcissist · #Gaslighting · #Trauma · #Avoidant · #Depressed. 02C: Understanding psychology = Good! · Misusing psychological terms = Problematic.",
         "motion": "02A · 00:30–00:45: comments scroll; the gaslighting comment pops out and zooms on the left as the VO names the term. 02B · 00:45–00:55: selected terms lift into a full-screen hashtag stack during the benefits of learning psychology. 02C · 00:55–01:05: the final problem statement arrives on the VO's ‘But here's the problem’ and holds.",
         "voice": "Di era social media, istilah psikologi semakin sering kita dengar. Mulai dari toxic relationship, gaslighting, trauma, sampai narcissistic behavior. Fenomena ini sering disebut sebagai therapy speak, yaitu penggunaan istilah yang berasal dari dunia psikologi atau terapi dalam percakapan sehari-hari. Actually, there's nothing wrong with learning psychological terms. Justru, memahami psikologi bisa membantu kita mengenali emosi, memahami perilaku, dan membangun hubungan yang lebih sehat. But here's the problem: ketika istilah-istilah tersebut digunakan tanpa memahami maknanya, kita bisa salah menilai diri sendiri maupun orang lain.",
@@ -233,7 +234,7 @@ SCENES = [
     },
     {
         "no": 5, "slug": "ethics", "time": "02:35–03:20", "title": "The Ethical Side of Psychology",
-        "visual": "Satu komposisi animasi layar penuh: dokumen digital dan riset di kiri, empat kartu pasal berurutan di kanan, lalu pita dasar ilmiah dan kehati-hatian menutup komposisi.",
+        "visual": "Satu komposisi portrait layar penuh: dokumen dan riset membentuk ilustrasi pembuka di bagian atas, empat kartu pasal tersusun vertikal, lalu pita dasar ilmiah menutup komposisi.",
         "screen": "Pasal 9 · 15 · 28 · 31 · Scientific basis + professional care",
         "motion": "Dokumen terbuka dengan gerak lembaran, empat kartu pasal masuk bertahap dengan aksen penanda, lalu pita dasar ilmiah menyapu sebagai penutup. Tidak ada judul produksi, timestamp, atau footer di dalam frame.",
         "voice": "That's also why ethical responsibility matters when we talk about psychology. Dalam Kode Etik Psikologi Indonesia, ada beberapa prinsip yang relevan dengan fenomena ini. Pasal 9 menekankan bahwa keputusan psikolog dan ilmuwan psikologi harus didasarkan pada pengetahuan ilmiah dan sikap profesional yang telah teruji. Artinya, psychological claims should not be based on assumptions or viral trends alone. Pasal 15 membahas penghindaran dampak buruk. Jadi, informasi psikologi perlu disampaikan dengan mempertimbangkan kemungkinan dampaknya terhadap orang lain. Pasal 28 mengingatkan bahwa pernyataan publik harus disampaikan secara bijaksana, jujur, teliti, dan hati-hati, serta berpedoman pada dasar ilmiah. Sementara itu, Pasal 31 menekankan bahwa pernyataan melalui media harus konsisten dengan kode etik dan didasarkan pada pengetahuan serta praktik psikologi yang tepat. So, sharing psychology is not just about being relatable. It's also about being responsible.",
@@ -242,7 +243,7 @@ SCENES = [
     },
     {
         "no": 6, "slug": "use-therapy-speak-wisely", "time": "03:20–03:50", "title": "How to Use Therapy Speak Wisely",
-        "visual": "Satu komposisi animasi layar penuh: ilustrasi checklist di kiri dan tiga langkah praktis di kanan, diakhiri ajakan membiarkan emosi manusia hadir.",
+        "visual": "Satu komposisi portrait layar penuh: ilustrasi checklist berada di bagian atas, tiga langkah praktis tersusun vertikal, lalu ajakan membiarkan emosi manusia hadir menutup frame.",
         "screen": "Understand before you label · Describe, don’t diagnose · Learn, don’t self-diagnose · Allow normal human emotions.",
         "motion": "Checklist bergerak masuk dan tiga langkah tersusun berurutan. Frasa ‘Allow normal human emotions.’ menjadi teks terakhir di layar. Frame hanya berisi ilustrasi, langkah, ikon, dan teks animasi.",
         "voice": "So, how can we use psychological terms more wisely? Here's your three-step reminder. Number one, understand before you label. Cari tahu makna suatu istilah sebelum menggunakannya. Number two, describe behavior, not diagnose people. Daripada langsung menyebut seseorang narcissist, lebih baik jelaskan perilaku spesifik yang membuat kita merasa tidak nyaman. Number three, know your limits. Konten media sosial bisa menjadi sumber edukasi awal, but it cannot replace professional assessment. And most importantly, allow yourself and others to experience normal human emotions without immediately turning them into disorders.",
@@ -251,7 +252,7 @@ SCENES = [
     },
     {
         "no": 7, "slug": "closing", "time": "03:50–04:00", "title": "Closing",
-        "visual": "Komposisi penutup layar penuh: istilah viral memudar di dekat kelompok, empat ekspresi emosi tetap berwarna, lalu pesan penutup memenuhi sisi kanan.",
+        "visual": "Komposisi penutup portrait: kelompok berada di bagian atas, istilah viral memudar, empat ekspresi emosi memenuhi area tengah, lalu pesan penutup hadir di bagian bawah.",
         "screen": "THINK BEFORE YOU LABEL.\nStay curious. Stay kind!",
         "motion": "Istilah viral meredup, empat ekspresi menyala bergantian, kemudian ‘THINK BEFORE YOU LABEL.’ dan ‘Stay curious. Stay kind!’ masuk sebagai teks akhir. Tidak ada slot produksi atau identitas pembuat di artwork.",
         "voice": "Psychology should help us understand people, not reduce them to labels. So, before you say it, make sure you understand it. Because not every emotion is a disorder, and not every behavior needs a psychological label. Think before you label. Stay curious, stay kind!",
@@ -541,12 +542,12 @@ def draw_public_comment(root, comment, x, y, width=432, height=174):
 
 
 def build_scene_1(scene):
-    root = clean_frame(
+    root = portrait_frame(
         "Scene 1 · The Hook",
         "One continuous plum-background scene. The woman from the Character object in People Creating Robot · Rafiki is isolated in a centered half-body crop; its robot, props, panels, and background are omitted. Four public-comment cards with pseudonyms appear at the sides.",
         PLUM,
+        "01",
     )
-    root.set("data-frame", "01")
     root.find(tag("metadata")).text = (
         "Scene 1 is one continuous editable composition. Presenter: the Character object from People Creating Robot · Rafiki (Storyset, free with attribution). "
         "Within that 41-drawable object, six lower-body paths are cropped and six outfit paths recolored; 29/41 (70.7%) remain unchanged. "
@@ -554,21 +555,21 @@ def build_scene_1(scene):
         "Public quote sources, access dates, and Storyset attribution are recorded outside this artwork in the storyboard source audit."
     )
     embed_asset(
-        root, "presenter", 550, -80, 820, 1080,
+        root, "presenter", 200, 620, 680, 608,
         include_ids=("Character",),
-        view_box="285 130 190 250",
+        view_box="285 130 190 170",
         color_map={"#407BFF": CREAM},
         drawable_omit_indices={"Character": (4, 5, 6, 7, 8, 9)},
     )
 
-    positions = [(36, 228), (1452, 228), (36, 622), (1452, 622)]
+    positions = [(35, 140), (595, 320), (35, 1430), (595, 1605)]
     for comment, (x, y) in zip(SCENE1_COMMENT_SOURCES, positions):
-        draw_public_comment(root, comment, x, y)
+        draw_public_comment(root, comment, x, y, width=450, height=170)
 
     question = add(root, "g", id="closing-onscreen-question", data_motion="appears-before-phone-zoom")
     question.set("opacity", "0")
-    rect(question, 566, 944, 788, 72, CREAM, rx=22)
-    txt(question, 960, 991, "Are we using psychology terms correctly?", 27, PLUM, 700, "middle")
+    rect(question, 106, 1816, 868, 72, CREAM, rx=22)
+    txt(question, 540, 1863, "Are we using psychology terms correctly?", 27, PLUM, 700, "middle")
     add(question, "animate", attributeName="opacity", values="0;1", begin="22.5s", dur="0.6s", fill="freeze")
     return root
 
@@ -728,6 +729,34 @@ def build_scene_2(scene):
     circle(phone_footer, 905, 926, 9, MUSTARD)
     circle(phone_footer, 1050, 926, 9, MUSTARD)
     circle(phone_footer, 1195, 926, 9, MUSTARD)
+    # Recompose the room for a vertical video canvas while keeping every room prop
+    # and the comment feed as independent editable groups.
+    root.set("width", str(PORTRAIT_W))
+    root.set("height", str(PORTRAIT_H))
+    root.set("viewBox", f"0 0 {PORTRAIT_W} {PORTRAIT_H}")
+    root.set("data-format", "portrait-9x16")
+    root.find(".//*[@id='room-background']")[:] = []
+    rect(root.find(".//*[@id='room-background']"), 0, 0, PORTRAIT_W, PORTRAIT_H, CREAM)
+    floor = root.find(".//*[@id='room-floor']")
+    floor[:] = []
+    rect(floor, 0, 1685, PORTRAIT_W, 235, PEACH, opacity=0.38)
+    line(floor, 0, 1685, PORTRAIT_W, 1685, PEACH, 3, opacity=0.8)
+    ambience = root.find(".//*[@id='room-ambient']")
+    ambience[:] = []
+    circle(ambience, 80, 360, 220, MUSTARD, opacity=0.10)
+    circle(ambience, 950, 1180, 270, SAGE, opacity=0.10)
+    transforms = {
+        "wall-art": "translate(640 70) scale(0.70)",
+        "television": "translate(175 -200) scale(0.80)",
+        "media-console": "translate(120 1120) scale(0.60)",
+        "shelf-set": "translate(-616 100) scale(0.65)",
+        "sofa-shadow": "translate(-1100 1020) scale(0.95)",
+        "reclining-sofa": "translate(-1000 1020) scale(0.95)",
+        "phone-scroller": "translate(-1000 1020) scale(0.95)",
+        "phone-shell": "translate(-280 450) scale(0.88)",
+    }
+    for layer_id, transform in transforms.items():
+        root.find(f".//*[@id='{layer_id}']").set("transform", transform)
     return root
 
 
@@ -746,7 +775,7 @@ def build_scene_2b(scene):
     import base64
     import random
 
-    root = ET.Element(tag("svg"), {"width": str(W), "height": str(H), "viewBox": f"0 0 {W} {H}",
+    root = ET.Element(tag("svg"), {"width": str(PORTRAIT_W), "height": str(PORTRAIT_H), "viewBox": f"0 0 {PORTRAIT_W} {PORTRAIT_H}",
                                     "role": "img", "aria-labelledby": "scene-title scene-desc",
                                     "data-frame": "02B"})
     title_node = add(root, "title", id="scene-title")
@@ -755,7 +784,8 @@ def build_scene_2b(scene):
     desc_node.text = "A dense, overlapping field of handwritten hashtags in varied sizes and rotations fills a deep-plum frame."
     metadata = add(root, "metadata")
     metadata.text = "56 editable Caveat hashtag texts, including six script terms and fifty social-media trigger terms. The bundled Caveat variable font is licensed under SIL OFL 1.1. Tags appear one by one with shrinking intervals and pile into this final full-screen state."
-    rect(root, 0, 0, W, H, PLUM)
+    root.set("data-format", "portrait-9x16")
+    rect(root, 0, 0, PORTRAIT_W, PORTRAIT_H, PLUM)
     defs = add(root, "defs")
     font_data = base64.b64encode((ASSETS_DIR / "Caveat[wght].ttf").read_bytes()).decode("ascii")
     style = add(defs, "style", type="text/css")
@@ -778,24 +808,25 @@ def build_scene_2b(scene):
     for word in everyday_tags:
         # Most tags carry enough visual weight to close gaps. A few stay small,
         # so the largest script terms remain about 6–8x their size.
-        size = rng.choices([26, 34, 44, 54, 64, 74], weights=[1, 2, 2, 3, 3, 2])[0]
-        x = rng.randint(10, W - 10)
-        y = rng.randint(58, H - 24)
+        size = rng.choices([22, 27, 34, 42, 50, 58], weights=[1, 2, 2, 3, 3, 2])[0]
+        estimated_half = min(440, len(word) * size * 0.28)
+        x = rng.randint(int(estimated_half + 16), int(PORTRAIT_W - estimated_half - 16))
+        y = rng.randint(76, PORTRAIT_H - 38)
         angle = rng.randint(-30, 30)
         color = rng.choices([CREAM, MUSTARD, PEACH], weights=[8, 1, 1])[0]
         tags.append((word, x, y, size, angle, color, False))
     script_terms = [
-        ("#narcissist", 330, 760, 132, -18),
-        ("#trauma", 1520, 392, 126, 17),
-        ("#depressed", 1510, 872, 122, -11),
+        ("#narcissist", 330, 485, 104, -18),
+        ("#trauma", 790, 840, 92, 17),
+        ("#depressed", 730, 1518, 100, -11),
     ]
     for word, x, y, size, angle in script_terms:
         tags.append((word, x, y, size, angle, TERRACOTTA, True))
     # Three oversized center words form the cloud's 6–8x visual hierarchy.
     tags.extend([
-        ("#toxic", 640, 493, 208, -12, TERRACOTTA, True),
-        ("#gaslighting", 1195, 552, 176, 9, TERRACOTTA, True),
-        ("#avoidant", 885, 735, 166, -19, TERRACOTTA, True),
+        ("#toxic", 500, 685, 170, -12, TERRACOTTA, True),
+        ("#gaslighting", 575, 1055, 144, 9, TERRACOTTA, True),
+        ("#avoidant", 455, 1370, 140, -19, TERRACOTTA, True),
     ])
     for index, (word, x, y, size, angle, color, is_script) in enumerate(tags):
         group = add(root, "g", id=f"word-cloud-tag-{index + 1:02d}",
@@ -812,17 +843,21 @@ def build_scene_2b(scene):
     return root
 
 def build_scene_2c(scene):
-    root = clean_frame(
+    root = portrait_frame(
         "Scene 2C: understanding psychology and misusing terms",
         "Centered sage pill: Understanding psychology = Good! Centered terracotta pill: Misusing psychological terms = Problematic.",
         CREAM,
+        "02C",
     )
     understanding = add(root, "g", id="understanding-statement")
-    rect(understanding, 385, 304, 1150, 148, SAGE, rx=30)
-    txt(understanding, 960, 398, "Understanding psychology = Good!", 48, ESPRESSO, 700, "middle")
+    rect(understanding, 54, 450, 972, 260, SAGE, rx=40)
+    txt(understanding, 540, 560, "Understanding psychology", 44, ESPRESSO, 700, "middle")
+    txt(understanding, 540, 625, "= Good!", 50, ESPRESSO, 700, "middle")
     misuse = add(root, "g", id="misuse-statement")
-    rect(misuse, 270, 552, 1380, 176, TERRACOTTA, rx=30)
-    txt(misuse, 960, 660, "Misusing psychological terms = Problematic.", 46, WHITE, 700, "middle")
+    rect(misuse, 54, 965, 972, 340, TERRACOTTA, rx=40)
+    txt(misuse, 540, 1085, "Misusing psychological", 44, WHITE, 700, "middle")
+    txt(misuse, 540, 1150, "terms =", 48, WHITE, 700, "middle")
+    txt(misuse, 540, 1220, "Problematic.", 54, WHITE, 700, "middle")
     root.find(tag("metadata")).text = "Editable animation frame. Existing Storyset vector groups are recolored in SVG; all added elements are hand-edited vector shapes. No generated imagery."
     return root
 
@@ -836,6 +871,25 @@ def clean_frame(title, description, background):
     metadata = add(root, "metadata")
     metadata.text = "Editable animation frame. Characters come from credited, downloadable source SVGs; backgrounds and overlays are separate editable vector layers. No generated imagery."
     rect(root, 0, 0, W, H, background)
+    return root
+
+
+def portrait_frame(title, description, background, frame_id=None):
+    """Create an editable 9:16 scene canvas; production notes stay outside artwork."""
+    root = ET.Element(tag("svg"), {
+        "width": str(PORTRAIT_W), "height": str(PORTRAIT_H),
+        "viewBox": f"0 0 {PORTRAIT_W} {PORTRAIT_H}",
+        "role": "img", "aria-labelledby": "frame-title frame-desc",
+        "data-format": "portrait-9x16",
+    })
+    add(root, "title", id="frame-title").text = title
+    add(root, "desc", id="frame-desc").text = description
+    metadata = add(root, "metadata")
+    metadata.text = "Editable 9:16 animation frame. Characters use credited, downloadable source SVGs; backgrounds, labels, and text are separate composition layers."
+    background_rect = rect(root, 0, 0, PORTRAIT_W, PORTRAIT_H, background)
+    background_rect.set("id", "scene-background")
+    if frame_id:
+        root.set("data-frame", frame_id)
     return root
 
 
@@ -869,56 +923,47 @@ def draw_case_frame(case_index):
         if case["key"] == "student_stress"
         else f"{case['quote']} A terracotta assumption appears beside the illustration, then a sage correction reads: {' '.join(case['correction'])}"
     )
-    root = clean_frame(
-        f"Scene 3 case {number}: {case['quote']}",
-        description,
-        case["background"],
-    )
+    root = portrait_frame(f"Scene 3 case {number}: {case['quote']}", description,
+                          case["background"], f"03{chr(65 + case_index)}")
     if case["key"] == "student_stress":
         root.find(tag("metadata")).text = (
-            "Student Stress · Rafiki supplies the study setting; Co-workers · Rafiki supplies the same Raka as Scene 4B and 4A. "
-            "The target progress marker, mistaken label, and sage correction are independent editable overlays; no generated imagery."
+            "Co-workers · Rafiki supplies the same Raka used in Scene 4; the missed-target marker, mistaken label, and sage correction are separate editable overlays."
         )
     color_map = case.get("colors", {})
     omit_bg = {f"freepik--background-complete--inject-2"}
     if case["key"] == "texting":
-        embed_asset(root, "texting", 58, 78, 900, 900,
+        embed_asset(root, "texting", -110, 100, 1300, 1150,
                     omit_ids=omit_bg | {"freepik--Chat--inject-2", "freepik--character-1--inject-2"},
                     color_map=color_map, sad_expression=True)
-        # The recipient avatar belongs in the chat header; both outgoing messages share one side.
-        rect(root, 245, 142, 570, 82, CREAM, rx=24, stroke=PEACH, sw=3)
-        embed_asset(root, "texting", 260, 153, 58, 58,
-                    include_ids={"freepik--character-1--inject-2"}, color_map=color_map,
-                    view_box="75 111 58 64")
-        txt(root, 338, 193, "Teman", 23, ESPRESSO, 700)
-        rect(root, 335, 244, 480, 82, PLUM, rx=24)
-        txt(root, 575, 296, "Hei, ada waktu?", 26, WHITE, 700, "middle")
-        rect(root, 255, 344, 560, 88, PLUM, rx=24)
-        txt(root, 535, 400, "Balas dong :( ", 26, WHITE, 700, "middle")
-        txt(root, 800, 468, "Dibaca · 3 jam", 18, ESPRESSO, 700, "end")
+        # The outgoing message and read receipt are independent scene overlays.
+        rect(root, 116, 1150, 630, 94, CREAM, rx=25, stroke=PEACH, sw=3)
+        txt(root, 160, 1208, "Teman · Hei, ada waktu?", 25, ESPRESSO, 600)
+        rect(root, 336, 1260, 628, 94, PLUM, rx=25)
+        txt(root, 650, 1318, "Balas dong :( · Dibaca 3 jam", 24, CREAM, 700, "middle")
     elif case["key"] == "student_stress":
-        # Reuse the cleaner Raka source pose from 4A, keeping the target card and
-        # case text as separate composition layers for animation.
-        embed_raka_puppet(root, 0, 0, 1080, 1080, pose="hands-on-head")
+        # Reuse Raka's source illustration without redrawing his character.
+        embed_asset(root, "coworkers", 0, 430, 1080, 1030,
+                    include_ids={"background-complete", "Desk", "character-2"},
+                    color_map={"#407BFF": PLUM}, raka_expression=True,
+                    child_omit_indices={"character-2": (52,)})
         target = add(root, "g", id="missed-target-prop")
-        rect(target, 116, 106, 390, 110, CREAM, rx=22, stroke=PEACH, sw=3)
-        txt(target, 148, 151, "TARGET", 20, ESPRESSO, 700, letter=1.2)
-        rect(target, 148, 172, 266, 15, CASE_TINTS[1], rx=8)
-        rect(target, 148, 172, 154, 15, PLUM, rx=8)
-        circle(target, 454, 161, 25, TERRACOTTA)
-        path(target, "M444,151 L464,171 M464,151 L444,171", stroke=CREAM, sw=5)
+        rect(target, 690, 306, 320, 104, CREAM, rx=20, stroke=PEACH, sw=3)
+        txt(target, 716, 344, "TARGET", 16, ESPRESSO, 700, letter=1.0)
+        rect(target, 716, 366, 258, 13, CASE_TINTS[1], rx=7)
+        rect(target, 716, 366, 155, 13, PLUM, rx=7)
+        txt(target, 976, 349, "6/10", 17, TERRACOTTA, 700, "end")
     else:
-        embed_asset(root, "couple", 70, 76, 910, 910, omit_ids=omit_bg, color_map=color_map)
+        embed_asset(root, "couple", 20, 350, 1040, 960, omit_ids=omit_bg, color_map=color_map)
 
     # Separate groups let the animator reveal the correction when the VO reaches “Padahal...”.
     mistaken_label = add(root, "g", id="wrong-label-bubble")
-    rect(mistaken_label, 1054, 298, 770, 146, TERRACOTTA, rx=28)
-    txt(mistaken_label, 1439, 390, case["quote"], 50 if number < 3 else 43, WHITE, 700, "middle")
+    rect(mistaken_label, 56, 104, 968, 190, TERRACOTTA, rx=32)
+    txt(mistaken_label, 540, 220, case["quote"], 47 if number < 3 else 43, WHITE, 700, "middle")
     correction = add(root, "g", id="sage-correction-card")
-    rect(correction, 1054, 574, 770, 178, SAGE, rx=28)
-    txt(correction, 1112, 635, "REALITANYA", 20, ESPRESSO, 700, letter=1.4)
-    txt(correction, 1439, 690, case["correction"][0], 30, ESPRESSO, 600, "middle")
-    txt(correction, 1439, 731, case["correction"][1], 30, ESPRESSO, 600, "middle")
+    rect(correction, 56, 1510, 968, 270, SAGE, rx=34)
+    txt(correction, 104, 1570, "REALITANYA", 19, ESPRESSO, 700, letter=1.4)
+    txt(correction, 540, 1660, case["correction"][0], 31, ESPRESSO, 600, "middle")
+    txt(correction, 540, 1708, case["correction"][1], 31, ESPRESSO, 600, "middle")
     return root
 
 
@@ -935,28 +980,28 @@ def build_scene_3_case_3(scene):
 
 
 def build_scene_3_combined(scene):
-    root = clean_frame(
+    root = portrait_frame(
         "Scene 3 combined examples: one behavior does not define a diagnosis",
         "The unanswered message, sadness, and disagreement examples meet behind the centered on-screen statement: One behavior does not equal a psychological diagnosis.",
         CREAM,
+        "03D",
     )
-    panel_w = 640
-    case_positions = [(0, CASE_TINTS[0]), (640, CASE_TINTS[1]), (1280, CASE_TINTS[2])]
-    for i, (x, tint) in enumerate(case_positions):
-        rect(root, x, 0, panel_w, H, tint)
-        case = SCENE3_CASES[i]
-        if case["key"] == "student_stress":
-            embed_asset(root, "student_stress", x + 115, 12, 410, 410,
-                        omit_ids={"speech-bubble"}, color_map=case["colors"])
-        else:
-            omit_bg = {"freepik--background-complete--inject-2"}
-            embed_asset(root, case["key"], x + 70, 24, 500, 410, omit_ids=omit_bg, color_map=case["colors"])
-    rect(root, 95, 433, 1730, 214, PLUM, rx=34)
-    txt(root, 548, 564, "One behavior", 58, MUSTARD, 700, "middle")
-    line(root, 925, 520, 987, 520, TERRACOTTA, 9)
-    line(root, 925, 552, 987, 552, TERRACOTTA, 9)
-    path(root, "M940,573 L972,501", stroke=TERRACOTTA, sw=9)
-    txt(root, 1346, 562, "A psychological diagnosis.", 48, WHITE, 700, "middle")
+    for i, (y, tint, label) in enumerate([
+        (130, CASE_TINTS[0], "They're avoidant!"),
+        (365, CASE_TINTS[1], "I'm depressed!"),
+        (600, CASE_TINTS[2], "You're gaslighting me!"),
+    ]):
+        rect(root, 72, y, 936, 190, tint, rx=28)
+        circle(root, 152, y + 95, 42, PLUM)
+        txt(root, 152, y + 104, str(i + 1), 27, CREAM, 700, "middle")
+        txt(root, 222, y + 107, label, 33, ESPRESSO, 700)
+    rect(root, 56, 910, 968, 690, PLUM, rx=38)
+    txt(root, 540, 1090, "One behavior", 64, MUSTARD, 700, "middle")
+    line(root, 470, 1162, 610, 1162, TERRACOTTA, 8)
+    line(root, 470, 1190, 610, 1190, TERRACOTTA, 8)
+    path(root, "M510,1215 L570,1140", stroke=TERRACOTTA, sw=8)
+    txt(root, 540, 1330, "A psychological", 50, CREAM, 700, "middle")
+    txt(root, 540, 1402, "diagnosis.", 54, CREAM, 700, "middle")
     return root
 
 
@@ -1081,8 +1126,8 @@ def build_scene_4(scene):
     return build_scene_4d(scene)
 
 
-def continuous_office_base(title, description, frame_id, isolate_dina=False, character_color=PLUM, omit_dina=False):
-    root = clean_frame(title, description, CREAM)
+def continuous_office_base(title, description, frame_id, isolate_dina=False, character_color=PLUM, omit_dina=False, art_y=620):
+    root = portrait_frame(title, description, CREAM, frame_id)
     if isolate_dina:
         root.find(tag("metadata")).text = (
             "Storyset Co-workers Rafiki. Conservative audit: 63 of 158 original drawable elements changed or omitted (39.9%): "
@@ -1104,23 +1149,22 @@ def continuous_office_base(title, description, frame_id, isolate_dina=False, cha
     root[3].set("id", "scene-background")
     if isolate_dina:
         embed_asset(
-            root, "coworkers", 0, 74, 1000, 1000,
+            root, "coworkers", 0, 500, 1080, 1080,
             omit_ids={"character-2"}, color_map={"#407BFF": PLUM},
             color_map_policy={"background-simple": (0, 1), "Chat": (0, 1), "Desk": (1, 3), "character-1": (6, 3)},
         )
     elif omit_dina:
         embed_asset(
-            root, "coworkers", 0, 74, 1000, 1000,
-            omit_ids={"Chat", "character-1"}, color_map={"#407BFF": character_color}, raka_expression=True,
+            root, "coworkers", 0, art_y, 1080, 1080,
+            omit_ids={"Chat", "background-simple", "character-1"}, color_map={"#407BFF": character_color}, raka_expression=True,
             child_omit_indices={"character-2": (52,)},
         )
     else:
         embed_asset(
-            root, "coworkers", 0, 74, 1000, 1000,
-            omit_ids={"Chat"}, color_map={"#407BFF": character_color}, raka_expression=True,
+            root, "coworkers", 0, art_y, 1080, 1080,
+            omit_ids={"Chat", "background-simple"}, color_map={"#407BFF": character_color}, raka_expression=True,
             child_omit_indices={"character-2": (52,)},
         )
-    root.set("data-frame", frame_id)
     return root
 
 
@@ -1206,23 +1250,25 @@ def build_story_03a(scene):
     )
 
     target = add(root, "g", id="missed-target-card")
-    rect(target, 1178, 114, 560, 142, PLUM, rx=22)
-    txt(target, 1210, 155, "TARGET KERJA", 17, CREAM, 700, letter=1.0)
-    txt(target, 1230, 222, "10", 41, CREAM, 700)
-    txt(target, 1294, 217, "target", 15, CREAM, 500)
-    txt(target, 1452, 222, "6", 41, TERRACOTTA, 700)
-    txt(target, 1507, 217, "tercapai", 15, CREAM, 500)
-    line(target, 1392, 172, 1392, 224, CREAM, 2, opacity=0.45)
+    rect(target, 70, 84, 450, 130, PLUM, rx=24)
+    txt(target, 102, 124, "TARGET KERJA", 17, CREAM, 700, letter=1.0)
+    txt(target, 116, 188, "10", 38, CREAM, 700)
+    txt(target, 176, 183, "target", 15, CREAM, 500)
+    line(target, 260, 148, 260, 198, CREAM, 2, opacity=0.45)
+    txt(target, 292, 188, "6", 38, TERRACOTTA, 700)
+    txt(target, 334, 183, "tercapai", 15, CREAM, 500)
 
     cloud = add(root, "g", id="raka-small-thought-cloud", data_role="animatable-thought-label")
-    rect(cloud, 850, 324, 536, 154, PLUM, rx=56)
-    for cx, cy, r in [(904, 330, 40), (973, 319, 48), (1052, 318, 49), (1134, 322, 45), (1213, 328, 37), (1280, 337, 26)]:
+    # The thought bubble stays compact and close to Raka's head in the portrait frame.
+    rect(cloud, 682, 648, 324, 232, PLUM, rx=38)
+    for cx, cy, r in [(710, 658, 25), (754, 644, 32), (810, 644, 32), (866, 648, 28), (917, 654, 23)]:
         circle(cloud, cx, cy, r, PLUM)
-    for cx, cy, r in [(824, 485, 15), (792, 500, 10), (760, 515, 6)]:
+    for cx, cy, r in [(676, 896, 12), (655, 918, 8), (641, 937, 5)]:
         circle(cloud, cx, cy, r, PLUM)
-    txt(cloud, 1118, 391, "Aku depresi. Ada yang salah", 24, CREAM, 700, "middle")
-    txt(cloud, 1118, 426, "banget sama aku.", 24, CREAM, 700, "middle")
-    txt(cloud, 1118, 458, "SEDIH BEBERAPA HARI", 13, PEACH, 700, "middle", letter=0.8)
+    txt(cloud, 844, 708, "Aku depresi.", 19, CREAM, 700, "middle")
+    txt(cloud, 844, 740, "Ada yang salah", 19, CREAM, 700, "middle")
+    txt(cloud, 844, 772, "banget sama aku.", 19, CREAM, 700, "middle")
+    txt(cloud, 844, 834, "SEDIH BEBERAPA HARI", 12, PEACH, 700, "middle", letter=0.5)
     return root
 
 
@@ -1233,16 +1279,17 @@ def build_story_03b(scene):
         "04B",
     )
     raka = add(root, "g", id="raka-quote")
-    rect(raka, 1080, 70, 790, 232, PLUM, rx=28)
-    txt(raka, 1124, 116, "RAKA", 17, CREAM, 700, letter=1.2)
-    txt(raka, 1124, 185, "Kamu selalu bikin aku", 29, CREAM, 600)
-    txt(raka, 1124, 229, "merasa salah!", 29, CREAM, 600)
+    rect(raka, 52, 76, 976, 208, PLUM, rx=30)
+    path(raka, "M700,282 L778,282 L748,336 Z", fill=PLUM)
+    txt(raka, 92, 120, "RAKA", 17, CREAM, 700, letter=1.2)
+    txt(raka, 92, 186, "Kamu selalu bikin aku merasa salah!", 31, CREAM, 600)
 
     dina = add(root, "g", id="dina-quote")
-    rect(dina, 1080, 394, 790, 242, CREAM, rx=28, stroke=PLUM, sw=4)
-    txt(dina, 1124, 442, "DINA", 17, PLUM, 700, letter=1.2)
-    txt(dina, 1124, 512, "Aku cuma kasih masukan.", 27, PLUM, 600)
-    txt(dina, 1124, 558, "Jangan baper terus, deh.", 27, PLUM, 600)
+    rect(dina, 52, 330, 976, 208, CREAM, rx=30, stroke=PLUM, sw=4)
+    path(dina, "M300,538 L370,538 L334,590 Z", fill=CREAM, stroke=PLUM, sw=3)
+    txt(dina, 92, 374, "DINA", 17, PLUM, 700, letter=1.2)
+    txt(dina, 92, 440, "Aku cuma kasih masukan.", 30, PLUM, 600)
+    txt(dina, 92, 484, "Jangan baper terus, deh.", 30, PLUM, 600)
     return root
 
 
@@ -1253,14 +1300,13 @@ def build_story_03c(scene):
         "4B2",
     )
     thought = add(root, "g", id="raka-conclusion")
-    pill(thought, 1100, 186, 700, 54, "KESIMPULAN RAKA · DARI SATU BALASAN", CREAM, PLUM, 18, stroke=PLUM)
-    stamp = add(thought, "g", id="narcissistic-stamp", transform="rotate(-3 1450 440)")
-    rect(stamp, 1094, 320, 716, 220, TERRACOTTA, rx=24)
-    rect(stamp, 1113, 339, 678, 182, "none", rx=16, stroke=CREAM, sw=3)
-    txt(stamp, 1452, 403, "DIA", 23, CREAM, 700, "middle", letter=1.4)
-    txt(stamp, 1452, 474, "NARSISTIK", 52, CREAM, 700, "middle", letter=1.3)
-    txt(thought, 1452, 622, "Satu balasan belum membuktikan pola.", 25, PLUM, 600, "middle")
-    root.set("data-frame", "4B2")
+    pill(thought, 70, 78, 940, 72, "KESIMPULAN RAKA · DARI SATU BALASAN", CREAM, PLUM, 20, stroke=PLUM)
+    stamp = add(thought, "g", id="narcissistic-stamp", transform="rotate(-3 540 337)")
+    rect(stamp, 90, 200, 900, 265, TERRACOTTA, rx=30)
+    rect(stamp, 110, 220, 860, 225, "none", rx=20, stroke=CREAM, sw=3)
+    txt(stamp, 540, 294, "DIA", 23, CREAM, 700, "middle", letter=1.4)
+    txt(stamp, 540, 380, "NARSISTIK", 58, CREAM, 700, "middle", letter=1.3)
+    txt(thought, 540, 535, "Satu balasan belum membuktikan pola.", 25, PLUM, 600, "middle")
     return root
 
 
@@ -1269,101 +1315,91 @@ def build_story_04a(scene):
         "4C · Stigma spreads through a post",
         "The same Co-workers office illustration as 4B shows Raka and Dina together. A warning post and group notifications appear as separate layers and begin to spread.",
         "4C",
+        omit_dina=True,
+        art_y=880,
     )
     root.find(tag("metadata")).text = (
         "The full Co-workers · Rafiki office illustration from 4B is reused unchanged, including Raka and Dina together. "
         "The warning post and notification chain are separate editable SVG overlays; no source character pose was changed."
     )
     zoom = add(root, "g", id="stigma-warning-post", data_motion="post-expands-into-notifications")
-    rect(zoom, 1082, 132, 690, 356, PLUM, rx=28)
-    rect(zoom, 1104, 154, 646, 312, ESPRESSO, rx=19)
-    rect(zoom, 1104, 154, 646, 54, ESPRESSO, rx=19)
-    txt(zoom, 1140, 190, "POSTINGAN", 16, PEACH, 700, letter=1.2)
-    circle(zoom, 1708, 181, 7, TERRACOTTA)
-    txt(zoom, 1140, 292, "Hati-hati sama Dina,", 34, CREAM, 700)
-    txt(zoom, 1140, 341, "dia narsistik", 34, CREAM, 700)
-    txt(zoom, 1140, 407, "Biar yang lain aman.", 19, PEACH, 600)
+    rect(zoom, 54, 70, 972, 350, PLUM, rx=30)
+    rect(zoom, 76, 92, 928, 306, ESPRESSO, rx=24)
+    txt(zoom, 112, 138, "POSTINGAN", 17, PEACH, 700, letter=1.2)
+    circle(zoom, 962, 118, 8, TERRACOTTA)
+    txt(zoom, 112, 234, "Hati-hati sama Dina,", 34, CREAM, 700)
+    txt(zoom, 112, 282, "dia narsistik", 34, CREAM, 700)
+    txt(zoom, 112, 348, "Biar yang lain aman.", 20, PEACH, 600)
 
     notifications = add(root, "g", id="notification-chain", data_motion="notifications-spread-outward")
-    notification_connector = path(notifications, "M1160,624 C1240,575 1305,575 1360,624 S1510,680 1590,624", fill="none", stroke=PEACH, sw=5)
+    notification_connector = path(notifications, "M540,440 C550,480 540,510 540,548 M540,690 C550,725 540,760 540,796", fill="none", stroke=PEACH, sw=5)
     notification_connector.set("stroke-dasharray", "7 12")
     for index, (x, y, number, heading, message) in enumerate([
-        (1045, 555, "1", "GRUP KERJA", "Postingan dibagikan"),
-        (1300, 555, "2", "GRUP KERJA", "Dina dikeluarkan\ndari grup"),
-        (1555, 555, "3", "GRUP KERJA", "Post dilihat 4 orang"),
+        (100, 450, "1", "GRUP KERJA", "Postingan dibagikan"),
+        (100, 600, "2", "GRUP KERJA", "Dina dikeluarkan dari grup"),
+        (100, 750, "3", "GRUP KERJA", "Post dilihat 4 orang"),
     ]):
         card_group = add(notifications, "g", id=f"notification-{index + 1}")
-        rect(card_group, x, y, 230, 142, CREAM, rx=18, stroke=PEACH, sw=3)
-        circle(card_group, x + 28, y + 31, 13, PLUM)
-        txt(card_group, x + 53, y + 37, heading, 14, PLUM, 700, letter=0.6)
-        txt(card_group, x + 19, y + 83, message, 18, ESPRESSO, 700)
-        circle(card_group, x + 207, y + 22, 11, TERRACOTTA)
-        txt(card_group, x + 207, y + 27, number, 13, CREAM, 700, "middle")
+        rect(card_group, x, y, 880, 124, CREAM, rx=20, stroke=PEACH, sw=3)
+        circle(card_group, x + 36, y + 38, 17, PLUM)
+        txt(card_group, x + 72, y + 44, heading, 15, PLUM, 700, letter=0.6)
+        txt(card_group, x + 72, y + 87, message, 21, ESPRESSO, 700)
+        circle(card_group, x + 836, y + 24, 13, TERRACOTTA)
+        txt(card_group, x + 836, y + 29, number, 14, CREAM, 700, "middle")
     return root
 
 
 def build_story_04b(scene):
-    root = clean_frame(
+    root = portrait_frame(
         "4D · Dina alone · closing text",
-        "Dina stands alone in a wide, faded field with a small empty speech bubble and unanswered group notifications. A fading NARSISTIK shadow sits behind her; the final on-screen text occupies the open space to her right.",
+        "Dina stands alone in a tall, quiet field. A small empty speech bubble, unanswered group notifications, and a fading NARSISTIK shadow show her isolation; the final on-screen text appears at the bottom.",
         CREAM,
+        "4D",
     )
-    root.set("data-frame", "4D")
     root.find(tag("metadata")).text = (
-        "Storyset Co-workers · Rafiki Dina source. Raka's 54 source paths are omitted and three of 158 source elements are recolored (57/158 = 36.1% changed or omitted; 63.9% remain unchanged). "
-        "The source room is washed with a cream overlay and the desk area is masked as separate editable composition layers. Dina is the only person; there is no table or Raka."
+        "Storyset Co-workers · Rafiki Dina source. Dina's existing character group is reused; no table or Raka is included. Isolation elements and the closing statement are separate editable layers."
     )
-    background = embed_asset(
-        root, "coworkers", 0, 74, 1000, 1000,
-        include_ids={"background-complete", "background-simple", "Shadow", "Chat", "Desk"},
-    )
-    background.set("opacity", "0.24")
-    rect(root, 0, 74, 1000, 1000, CREAM, opacity=0.88)
-    # Mask the inherited table zone, then place the source character back over it.
-    rect(root, 200, 548, 790, 440, CREAM, rx=12)
-
     shadow = add(root, "g", id="dina-isolation-shadow")
-    add(shadow, "ellipse", cx=394, cy=824, rx=200, ry=28, fill=ESPRESSO, opacity=0.12)
-    fading_label = add(root, "g", id="fading-narcissistic-stamp", transform="rotate(-7 1000 390)")
-    rect(fading_label, 810, 331, 470, 124, TERRACOTTA, rx=17, opacity=0.09)
-    txt(fading_label, 1045, 411, "NARSISTIK", 48, PLUM, 700, "middle", letter=1.4, opacity=0.12)
+    add(shadow, "ellipse", cx=340, cy=1552, rx=245, ry=38, fill=ESPRESSO, opacity=0.12)
+    fading_label = add(root, "g", id="fading-narcissistic-stamp", transform="rotate(-8 700 900)")
+    rect(fading_label, 500, 828, 500, 142, TERRACOTTA, rx=20, opacity=0.08)
+    txt(fading_label, 750, 920, "NARSISTIK", 47, PLUM, 700, "middle", letter=1.4, opacity=0.12)
 
     bubble = add(root, "g", id="dina-empty-speech-bubble")
-    rect(bubble, 360, 144, 286, 134, CREAM, rx=36, stroke=PLUM, sw=3)
-    path(bubble, "M407,276 L326,351 L501,278 Z", fill=CREAM, stroke=PLUM, sw=3)
-    txt(bubble, 503, 229, "...", 58, PLUM, 700, "middle")
+    rect(bubble, 90, 250, 320, 144, CREAM, rx=38, stroke=PLUM, sw=3)
+    path(bubble, "M212,394 L172,472 L284,395 Z", fill=CREAM, stroke=PLUM, sw=3)
+    txt(bubble, 250, 345, "...", 58, PLUM, 700, "middle")
 
     notifications = add(root, "g", id="unanswered-group-notifications")
-    for index, (x, y) in enumerate([(974, 208), (1210, 376), (970, 552)]):
+    for index, (x, y) in enumerate([(580, 430), (580, 590), (580, 750)]):
         card_group = add(notifications, "g", id=f"unanswered-notification-{index + 1}", opacity=0.56 - index * 0.1)
-        rect(card_group, x, y, 264, 92, CREAM, rx=18, stroke=PEACH, sw=2)
-        circle(card_group, x + 30, y + 31, 11, SAGE)
-        line(card_group, x + 54, y + 29, x + 205, y + 29, PLUM, 3, opacity=0.58)
-        line(card_group, x + 24, y + 57, x + 201, y + 57, PLUM, 3, opacity=0.30)
-        line(card_group, x + 24, y + 69, x + 132, y + 69, PLUM, 3, opacity=0.23)
-        circle(card_group, x + 238, y + 21, 6, TERRACOTTA)
+        rect(card_group, x, y, 430, 116, CREAM, rx=20, stroke=PEACH, sw=2)
+        circle(card_group, x + 35, y + 38, 12, SAGE)
+        line(card_group, x + 65, y + 35, x + 370, y + 35, PLUM, 3, opacity=0.58)
+        line(card_group, x + 28, y + 73, x + 355, y + 73, PLUM, 3, opacity=0.30)
+        line(card_group, x + 28, y + 89, x + 228, y + 89, PLUM, 3, opacity=0.23)
+        circle(card_group, x + 398, y + 22, 7, TERRACOTTA)
 
     embed_asset(
-        root, "coworkers", 0, 74, 1000, 1000,
+        root, "coworkers", 0, 670, 1080, 1080,
         include_ids={"character-1"}, color_map={"#407BFF": PLUM},
         color_map_policy={"character-1": (6, 3)},
     )
     ending = add(root, "g", id="final-onscreen-text")
-    rect(ending, 710, 848, 988, 96, PLUM, rx=24)
-    txt(ending, 1204, 909, "Don't reduce people to labels.", 34, CREAM, 700, "middle")
+    rect(ending, 64, 1720, 952, 126, PLUM, rx=28)
+    txt(ending, 540, 1798, "Don't reduce people to labels.", 34, CREAM, 700, "middle")
     return root
 
 def build_scene_5(scene):
-    root = start_scene(scene, CREAM, PLUM)
-    card(root, 72, 106, 680, 854, CREAM, PEACH, 26)
+    root = portrait_frame(scene["title"], scene["visual"], CREAM, "05")
     doc_colors = {"#263238": ESPRESSO, "#407BFF": PLUM, "#D58745": MUSTARD, "#EBB376": PEACH,
                   "#E0E0E0": PEACH, "#E6E6E6": CREAM, "#EBEBEB": CREAM, "#F0F0F0": CREAM,
                   "#F5F5F5": CREAM, "#FAFAFA": CREAM}
     research_colors = {**doc_colors, "#2E353A": ESPRESSO, "#577AFA": PLUM, "#D4827D": TERRACOTTA,
                        "#EBC0BB": PEACH, "#EEC1BB": PEACH}
-    embed_asset(root, "document", 92, 122, 595, 650, color_map=doc_colors)
-    embed_asset(root, "research", 390, 430, 326, 365, color_map=research_colors)
-    pill(root, 125, 866, 555, 46, "KODE ETIK PSIKOLOGI INDONESIA", PLUM, MUSTARD, 15, stroke=PEACH)
+    embed_asset(root, "document", 48, 30, 510, 610, color_map=doc_colors)
+    embed_asset(root, "research", 530, 30, 510, 610, color_map=research_colors)
+    pill(root, 122, 625, 836, 50, "KODE ETIK PSIKOLOGI INDONESIA", PLUM, MUSTARD, 16, stroke=PEACH)
     articles = [
         ("9", "Dasar ilmiah & profesional", "Keputusan psikologi berlandaskan pengetahuan yang teruji."),
         ("15", "Menghindari dampak buruk", "Sampaikan informasi dengan mempertimbangkan dampaknya."),
@@ -1371,52 +1407,52 @@ def build_scene_5(scene):
         ("31", "Komunikasi media bertanggung jawab", "Selaras dengan kode etik dan praktik psikologi yang tepat."),
     ]
     for i, (num, title, desc) in enumerate(articles):
-        y = 112 + i * 174
-        rect(root, 799, y + 8, 1032, 153, ESPRESSO, rx=18, opacity=0.10)
-        rect(root, 792, y, 1032, 153, PLUM, rx=18, stroke=PEACH, sw=2)
-        circle(root, 858, y + 76, 39, MUSTARD)
-        txt(root, 858, y + 86, num, 27, ESPRESSO, 700, "middle")
-        txt(root, 924, y + 58, "PASAL " + num, 14, MUSTARD, 700, letter=1)
-        txt(root, 924, y + 92, title, 24, CREAM, 700)
-        txt(root, 924, y + 124, desc, 17, CREAM, 400)
-    pill(root, 792, 846, 1032, 62, "SCIENTIFIC BASIS  +  PROFESSIONAL CARE", PLUM, CREAM, 19, stroke=PEACH)
+        y = 700 + i * 194
+        rect(root, 66, y + 7, 948, 176, ESPRESSO, rx=22, opacity=0.10)
+        rect(root, 56, y, 948, 176, PLUM, rx=22, stroke=PEACH, sw=2)
+        circle(root, 132, y + 88, 40, MUSTARD)
+        txt(root, 132, y + 98, num, 27, ESPRESSO, 700, "middle")
+        txt(root, 204, y + 45, "PASAL " + num, 14, MUSTARD, 700, letter=1)
+        txt(root, 204, y + 82, title, 24, CREAM, 700)
+        txt(root, 204, y + 125, desc, 18, CREAM, 400)
+    pill(root, 56, 1510, 948, 122, "SCIENTIFIC BASIS  +  PROFESSIONAL CARE", PLUM, CREAM, 25, stroke=PEACH)
     return root
 
 
 def build_scene_6(scene):
-    root = start_scene(scene, CREAM, SAGE)
-    card(root, 72, 130, 660, 760, CREAM, PEACH, 24)
+    root = portrait_frame(scene["title"], scene["visual"], CREAM, "06")
     todo_colors = {"#263238": ESPRESSO, "#407BFF": SAGE, "#E6E6E6": CREAM, "#EBEBEB": CREAM,
                    "#F0F0F0": CREAM, "#F5F5F5": CREAM, "#FAFAFA": CREAM,
                    "#ED847E": PEACH, "#FFC3BD": PEACH}
-    embed_asset(root, "todo", 90, 145, 620, 720, color_map=todo_colors)
+    embed_asset(root, "todo", 175, 35, 730, 650,
+                omit_ids={"background-complete"}, color_map=todo_colors)
     steps = [
         ("1", "Understand before you label", "Cari tahu makna istilah sebelum memakainya."),
         ("2", "Describe, don’t diagnose", "Jelaskan perilaku spesifik yang membuat tidak nyaman."),
         ("3", "Learn, don’t self-diagnose", "Konten edukasi bukan pengganti asesmen profesional."),
     ]
     for i, (num, title, desc) in enumerate(steps):
-        y = 128 + i * 242
-        card(root, 770, y, 1070, 206, CREAM, PEACH, 20)
-        circle(root, 844, y + 81, 37, MUSTARD)
-        txt(root, 844, y + 91, num, 26, ESPRESSO, 700, "middle")
-        title_node = add(root, "text", x=910, y=y + 73, fill=PLUM, font_family="Arial, Helvetica, sans-serif", font_size=27, font_weight=700)
+        y = 720 + i * 250
+        card(root, 56, y, 968, 224, CREAM, PEACH, 24)
+        circle(root, 128, y + 72, 37, MUSTARD)
+        txt(root, 128, y + 82, num, 26, ESPRESSO, 700, "middle")
+        title_node = add(root, "text", x=190, y=y + 75, fill=PLUM, font_family="Arial, Helvetica, sans-serif", font_size=27, font_weight=700)
         split = [("Understand before you ", "label"), ("Describe, don’t ", "diagnose"), ("Learn, don’t ", "self-diagnose")][i]
         for value, color in [(split[0], PLUM), (split[1], TERRACOTTA)]:
             span = add(title_node, "tspan", fill=color)
             span.text = value
-        txt(root, 910, y + 121, desc, 20, ESPRESSO, 400)
+        txt(root, 190, y + 137, desc, 20, ESPRESSO, 400)
         # Small, editable line icons: learn, describe, and know the limit.
         if i == 0:
-            circle(root, 1740, y + 79, 25, "none", stroke=SAGE, sw=5)
-            line(root, 1758, y + 97, 1779, y + 118, SAGE, 6)
+            circle(root, 930, y + 79, 25, "none", stroke=SAGE, sw=5)
+            line(root, 948, y + 97, 969, y + 118, SAGE, 6)
         elif i == 1:
-            rect(root, 1700, y + 51, 93, 58, PEACH, rx=12, stroke=SAGE, sw=3)
-            path(root, f"M1720,{y+78} L1734,{y+92} L1769,{y+64}", stroke=SAGE, sw=5)
+            rect(root, 885, y + 48, 93, 58, PEACH, rx=12, stroke=SAGE, sw=3)
+            path(root, f"M905,{y+76} L919,{y+90} L954,{y+62}", stroke=SAGE, sw=5)
         else:
-            circle(root, 1744, y + 81, 29, CREAM, stroke=SAGE, sw=3)
-            path(root, f"M1728,{y+82} L1740,{y+94} L1762,{y+67}", stroke=SAGE, sw=5)
-    pill(root, 770, 895, 1070, 66, "Allow normal human emotions.", SAGE, ESPRESSO, 25)
+            circle(root, 930, y + 81, 29, CREAM, stroke=SAGE, sw=3)
+            path(root, f"M914,{y+82} L926,{y+94} L948,{y+67}", stroke=SAGE, sw=5)
+    pill(root, 56, 1510, 968, 130, "Allow normal human emotions.", SAGE, ESPRESSO, 28)
     return root
 
 
@@ -1436,30 +1472,30 @@ def face(parent, cx, cy, emotion, color):
 
 
 def build_scene_7(scene):
-    root = start_scene(scene, PLUM, TERRACOTTA, dark=True)
+    root = portrait_frame(scene["title"], scene["visual"], PLUM, "07")
     social_colors = {"#263238": ESPRESSO, "#407BFF": SAGE, "#630F0F": ESPRESSO,
                      "#7F3E3B": PEACH, "#A02724": PEACH, "#B55B52": PEACH,
                      "#E0E0E0": PLUM, "#E6E6E6": PLUM, "#EBEBEB": PLUM,
                      "#F0F0F0": PLUM, "#F5F5F5": PLUM, "#FAFAFA": PLUM,
                      "#ED847E": PEACH, "#FFC3BD": PEACH}
-    embed_asset(root, "social", 52, 148, 870, 760,
+    embed_asset(root, "social", 0, 30, 1080, 860,
                 omit_ids={"freepik--background-complete--inject-2"}, color_map=social_colors)
-    # Viral labels fade from terracotta toward the plum closing field.
-    pill(root, 82, 118, 180, 40, "toxic", TERRACOTTA, WHITE, 15, opacity=0.58)
-    pill(root, 268, 118, 204, 40, "trauma", TERRACOTTA, WHITE, 15, opacity=0.42)
-    pill(root, 478, 118, 190, 40, "avoidant", TERRACOTTA, WHITE, 15, opacity=0.28)
-    txt(root, 1370, 136, "NORMAL HUMAN EMOTIONS", 17, CREAM, 700, "middle", letter=1.2)
+    # Viral labels fade before the normal-emotions cards arrive.
+    pill(root, 78, 840, 220, 54, "toxic", TERRACOTTA, WHITE, 20, opacity=0.58)
+    pill(root, 320, 840, 220, 54, "trauma", TERRACOTTA, WHITE, 20, opacity=0.42)
+    pill(root, 562, 840, 280, 54, "avoidant", TERRACOTTA, WHITE, 20, opacity=0.28)
+    txt(root, 540, 980, "NORMAL HUMAN EMOTIONS", 21, CREAM, 700, "middle", letter=1.2)
     emotions = [("joy", "Gembira", PEACH), ("sadness", "Sedih", SAGE), ("fear", "Takut", MUSTARD), ("calm", "Tenang", CREAM)]
-    for i, (kind, label, color) in enumerate(emotions):
-        x = 960 + i * 210
-        face(root, x + 95, 230, kind, color)
-        txt(root, x + 95, 304, label, 17, CREAM, 700, "middle")
-    line(root, 980, 354, 1764, 354, ESPRESSO, 2)
-    txt(root, 1250, 514, "THINK BEFORE YOU", 43, CREAM, 700, "middle", letter=0.6)
-    txt(root, 1594, 514, "LABEL.", 43, MUSTARD, 700, "middle", letter=0.6)
-    txt(root, 1373, 582, "Understand psychology. Use it responsibly.", 20, CREAM, 400, "middle")
-    rect(root, 1020, 682, 710, 82, MUSTARD, rx=22)
-    txt(root, 1375, 735, "Stay curious. Stay kind.", 30, ESPRESSO, 700, "middle")
+    positions = [(55, 1030), (565, 1030), (55, 1230), (565, 1230)]
+    for (kind, label, color), (x, y) in zip(emotions, positions):
+        rect(root, x, y, 460, 176, ESPRESSO, rx=24, stroke=PLUM, sw=2)
+        face(root, x + 84, y + 88, kind, color)
+        txt(root, x + 166, y + 99, label, 26, CREAM, 700)
+    txt(root, 540, 1535, "THINK BEFORE YOU", 54, CREAM, 700, "middle", letter=0.6)
+    txt(root, 540, 1610, "LABEL.", 67, MUSTARD, 700, "middle", letter=0.6)
+    txt(root, 540, 1680, "Understand psychology. Use it responsibly.", 20, CREAM, 400, "middle")
+    rect(root, 86, 1740, 908, 120, MUSTARD, rx=28)
+    txt(root, 540, 1816, "Stay curious. Stay kind.", 32, ESPRESSO, 700, "middle")
     return root
 
 
@@ -1573,9 +1609,9 @@ def create_previews():
                     for child in list(node):
                         if child.tag == tag("animate"):
                             node.remove(child)
-                cairosvg.svg2png(bytestring=ET.tostring(preview_root), write_to=str(png_path), output_width=1440, output_height=810)
+                cairosvg.svg2png(bytestring=ET.tostring(preview_root), write_to=str(png_path), output_width=540, output_height=960)
             else:
-                cairosvg.svg2png(url=str(svg_path), write_to=str(png_path), output_width=1440, output_height=810)
+                cairosvg.svg2png(url=str(svg_path), write_to=str(png_path), output_width=540, output_height=960)
             thumbs.append((code, title, png_path))
     components = build_scene_2_components()
     ET.indent(components, space="  ")
@@ -1587,15 +1623,21 @@ def create_previews():
     preview_canvas = Image.new("RGB", transparent_preview.size, CREAM)
     preview_canvas.paste(transparent_preview, (0, 0), transparent_preview.getchannel("A"))
     preview_canvas.save(component_png)
-    # Three columns make a compact visual audit sheet while retaining the 16:9 frames.
-    cols = 5 if len(thumbs) > 12 else 4
-    card_w, card_h, gap, top = (330, 186, 18, 50) if cols == 5 else (420, 236, 26, 56)
+    # Keep every 9:16 frame legible in a compact two-row audit sheet.
+    cols = 8 if len(thumbs) > 12 else 4
+    card_w, card_h, gap, top = (126, 224, 10, 42) if cols == 8 else (180, 320, 16, 46)
     rows = (len(thumbs) + cols - 1) // cols
     sheet = Image.new("RGB", (cols * card_w + (cols + 1) * gap, rows * (card_h + 48) + (rows + 1) * gap + top), "#F1F4F8")
     draw = ImageDraw.Draw(sheet)
-    title_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 22)
-    label_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 13)
-    draw.text((gap, 15), f"STORYBOARD C · VISUAL AUDIT · 7 SCENES / {len(thumbs)} FRAMES", font=title_font, fill=ESPRESSO)
+    title_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 18)
+    label_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 10)
+    draw.text((gap, 15), f"INSTAGRAM PORTRAIT · 9:16 · 1080 × 1920 · {len(thumbs)} FRAMES", font=title_font, fill=ESPRESSO)
+    contact_labels = {
+        "01": "01 · HOOK", "02A": "02A · PHONE", "02B": "02B · CLOUD", "02C": "02C · TEXT",
+        "03A": "03A · AVOIDANT", "03B": "03B · SADNESS", "03C": "03C · DISAGREE", "03D": "03D · CLOSE",
+        "4A": "4A · SELF", "4B": "4B · CONFLICT", "4B2": "4B2 · LABEL", "4C": "4C · STIGMA",
+        "4D": "4D · DINA", "05": "05 · ETHICS", "06": "06 · TIPS", "07": "07 · CLOSE",
+    }
     resampling = getattr(Image, "Resampling", Image)
     for i, (code, title, png_path) in enumerate(thumbs):
         col, row = i % cols, i // cols
@@ -1603,7 +1645,7 @@ def create_previews():
         y = top + gap + row * (card_h + 48 + gap)
         im = Image.open(png_path).convert("RGB").resize((card_w, card_h), resampling.LANCZOS)
         sheet.paste(im, (x, y))
-        draw.text((x, y + card_h + 9), f"{code}  ·  {title}", font=label_font, fill=ESPRESSO)
+        draw.text((x, y + card_h + 9), contact_labels.get(code, code), font=label_font, fill=ESPRESSO)
     contact = PREVIEW_DIR / "contact-sheet.png"
     sheet.save(contact, quality=94)
     return contact
@@ -1688,9 +1730,9 @@ def make_docx(contact):
     set_run(r, 28, INK, True)
     p = doc.add_paragraph()
     p.paragraph_format.space_after = Pt(7)
-    r = p.add_run("Storyboard produksi · Layout C · 7 scene · 16 keyframe · 00:00–04:00")
+    r = p.add_run("Storyboard produksi · Instagram portrait 9:16 · 1080 × 1920 · 7 scene · 16 keyframe")
     set_run(r, 15, PLUM, True)
-    p = doc.add_paragraph("Setiap frame tersedia sebagai SVG mandiri yang editable. Scene 1 adalah satu scene presenter dengan empat komentar publik anonim. Scene 3 tetap tiga contoh terpisah sesuai naskah. Scene 4 adalah satu cerita sebab-akibat lima beat sepanjang 40 detik dengan VO asli: salah memahami emosi → konflik → label narsistik → stigma → Dina sendirian. Semua frame adalah komposisi animasi; tidak ada judul produksi di dalam artwork dan tidak ada gambar generatif.")
+    p = doc.add_paragraph("Setiap frame memakai kanvas 9:16 berukuran 1080 × 1920 dan tersedia sebagai SVG mandiri yang editable. Scene 1 adalah satu scene presenter dengan empat komentar publik anonim. Scene 3 tetap tiga contoh terpisah sesuai naskah. Scene 4 adalah satu cerita sebab-akibat lima beat sepanjang 40 detik dengan VO asli: salah memahami emosi → konflik → label narsistik → stigma → Dina sendirian. Semua frame adalah komposisi animasi; tidak ada judul produksi di dalam artwork dan tidak ada gambar generatif.")
     p.paragraph_format.space_after = Pt(10)
     for r in p.runs:
         set_run(r, 10, MUTED)
@@ -1703,11 +1745,11 @@ def make_docx(contact):
         "Scene 1 memakai objek Character dari People Creating Robot · Rafiki dalam crop setengah badan di tengah. Robot, dekorasi, panel, dan latar dihilangkan; tablet kecil yang menjadi bagian pose perempuan dipertahankan. Tidak ada pointer atau bingkai presenter. Audit per objek: dari 41 drawable Character, enam terpotong crop dan enam path pakaian biru diwarnai Cream; 29/41 (70,7%) tetap utuh. Kartu komentar memakai nama samaran Naya, Bagas, Rani, dan Dito; tiga kutipan bersumber publik dan satu bertanda tiruan.",
         "Scene 2B kini berupa word cloud Caveat 56 hashtag: enam istilah naskah dan lima puluh pemicu, dengan ukuran 26–208 px, rotasi acak, tumpang tindih, dan tiga hero term di tengah.",
         "Scene 3 memisahkan case avoidant, depresi, dan gaslighting. Label terracotta muncul lebih dulu; koreksi sage dikelompokkan terpisah untuk animasi saat VO mengatakan ‘Padahal...’. Latar case memakai peach, sage, dan mustard muda sesuai naskah.",
-        "Scene 4 berlangsung 40 detik dalam urutan baru 4A, 4B, 4B2, 4C, 4D; VO tetap naskah. 4A kembali memakai ilustrasi kantor Co-workers · Rafiki dengan Dina dihilangkan; 4B, 4B2, dan 4C tetap memakai ilustrasi bersama Raka dan Dina. Panah/garis penghubung di 4B dihapus. Di 4C post peringatan menyebar sebagai notifikasi grup; 4D hanya menampilkan Dina dan teks ‘Don't reduce people to labels.’ Tidak ada objek domino di frame Scene 4.",
+        "Scene 4 memakai urutan 4A, 4B, 4B2, 4C, 4D; VO tetap naskah. 4A memakai Raka sendiri; 4B dan 4B2 menampilkan Raka bersama Dina; 4C hanya Raka saat membuat post; 4D hanya Dina. Objek genggam Raka dihilangkan dari semua frame Scene 4. Dialog 4B tetap berupa dua kutipan tanpa panah. Di 4C post peringatan menyebar sebagai notifikasi grup; 4D berakhir dengan teks ‘Don't reduce people to labels.’ Tidak ada objek domino.",
         "Semua frame mandiri memuat hanya komposisi animasi, latar, source illustration, overlay, properti, dan teks layar. Judul board, waktu, footer, legenda, kredit aset, dan catatan produksi ditempatkan di luar artwork.",
-        "4A memakai ilustrasi kantor Co-workers · Rafiki dengan Dina dihilangkan. Kartu target dan gelembung pikiran adalah overlay terpisah. 4B, 4B2, dan 4C memakai ilustrasi dasar utuh dengan Raka dan Dina bersama. Semua panah/garis penghubung dialog pada 4B dihapus. Tidak ada objek domino di Scene 4. Dina di 4D tetap sendiri; 57/158 elemen drawable berubah atau dihilangkan (36,1%), sehingga 101/158 tetap utuh.",
+        "Frame portrait berukuran 1080 × 1920 (9:16); preview Word dan contact sheet hanya mengecilkan tampilan, tidak memotong komposisi. 4A memakai ilustrasi kantor Co-workers · Rafiki dengan Dina dihilangkan. Kartu target dan gelembung pikiran terpisah. 4B dan 4B2 menampilkan keduanya; 4C hanya Raka; 4D hanya Dina. Objek genggam Raka dihilangkan dari semua frame Scene 4. Semua frame Scene 4 bebas objek domino.",
         "Student Stress · Rafiki di Scene 3B mempertahankan 220/254 drawable elements (86,6%); 34 elemen (13,4%) berubah atau dihilangkan. Air mata, penanda target, label, dan koreksi adalah overlay terpisah.",
-        "Semua karakter berasal dari SVG sumber yang dapat diunduh; chat, label, background, post, dan teks adalah layer vektor editable. Tidak ada gambar yang dihasilkan atau karakter yang digambar dari nol.",
+        "Semua frame storyboard menggunakan format Instagram portrait 9:16. Karakter berasal dari SVG sumber yang dapat diunduh; chat, label, background, post, dan teks adalah layer vektor editable. Tidak ada gambar yang dihasilkan atau karakter yang digambar dari nol.",
     ]
     for item in audit:
         p = doc.add_paragraph(style="List Bullet")
@@ -1808,12 +1850,13 @@ def make_docx(contact):
                 set_run(run, 7, PLUM, True)
                 image_para = cell.add_paragraph()
                 image_para.alignment = 1
-                image_para.add_run().add_picture(str(PREVIEW_DIR / filename), width=Inches(column_width - 0.12))
+                preview_width = min(column_width - 0.12, 3.7) if scene["no"] == 1 else column_width - 0.12
+                image_para.add_run().add_picture(str(PREVIEW_DIR / filename), width=Inches(preview_width))
         else:
             image = PREVIEW_DIR / f"scene-{scene['no']:02d}-{scene['slug']}.png"
             p = left.paragraphs[0]
             p.alignment = 1
-            p.add_run().add_picture(str(image), width=Inches(6.2))
+            p.add_run().add_picture(str(image), width=Inches(3.55))
         p = right.paragraphs[0]
         p.paragraph_format.space_after = Pt(2)
         r = p.add_run("VISUAL")
@@ -1972,26 +2015,26 @@ def make_website():
           <dl class="row-notes"><div><dt>On-screen text</dt><dd>{scene['screen'].replace(chr(10), '<br>')}</dd></div><div><dt>Motion / camera</dt><dd>{scene['motion']}</dd></div><div><dt>Script / voice-over</dt><dd>{script_markup}</dd></div><div><dt>Assets & roles</dt><dd>{role_text}</dd><p class="asset-sources">{' · '.join(asset_links) if asset_links else 'Custom editable SVG vectors; no external illustration.'}</p></div>{comment_source_markup}</dl>
         </article>''')
     html = '''<!doctype html>
-<html lang="en">
+<html lang="id">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Editable production board with sixteen SVG animation frames for Therapy Speak Gone Wrong.">
+<meta name="description" content="Editable Instagram portrait storyboard with sixteen 9:16 SVG animation frames for Therapy Speak Gone Wrong.">
 <title>Therapy Speak Gone Wrong · Production Board</title>
 <style>
 :root{--ink:#2a1f2d;--plum:#3d2645;--sage:#7fb89a;--terracotta:#e4572e;--mustard:#f2b134;--peach:#ffc4a3;--cream:#fff6ec;--blue:#3d2645;--blue-dark:#3d2645;--paper:#fff6ec;--line:#e8dacf;--muted:#665967;--coral:#e4572e;--white:#fff;--shadow:0 12px 30px rgba(42,31,45,.09)}
-*{box-sizing:border-box}html{background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}body{margin:0;padding:42px 28px 92px}.shell{max-width:1560px;margin:0 auto}.hero{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:end;margin:8px 0 32px}.eyebrow{color:var(--blue-dark);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}.hero h1{max-width:920px;margin:12px 0 12px;font-size:clamp(38px,5.5vw,76px);line-height:.98;letter-spacing:-.055em}.hero p{max-width:760px;margin:0;color:var(--muted);font-size:16px;line-height:1.55}.hero-actions{display:flex;flex-direction:column;gap:9px;align-items:stretch}.action{display:inline-block;padding:12px 16px;border:1px solid var(--line);border-radius:999px;background:var(--white);color:var(--ink);font-size:13px;font-weight:700;text-align:center;text-decoration:none}.action.primary{border-color:var(--blue);background:var(--blue);color:var(--white)}.style-strip{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:28px 0 18px;padding:15px 18px;border:1px solid var(--line);border-radius:14px;background:var(--white);color:var(--muted);font-size:12px}.swatch{display:inline-flex;align-items:center;gap:6px}.swatch i{width:15px;height:15px;border:1px solid #d5dce2;border-radius:50%}.board{display:grid;gap:13px}.board-row{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;align-items:stretch;padding:15px;border:1px solid var(--line);border-radius:17px;background:var(--white);box-shadow:var(--shadow)}.row-meta{display:flex;flex-direction:column;align-items:flex-start;padding:5px 0}.scene-number{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--ink);color:white;font-size:12px;font-weight:700}.time{margin:12px 0 9px;color:var(--blue-dark);font-size:11px;font-weight:700;letter-spacing:.08em}.row-meta h2{margin:0;font-size:19px;line-height:1.12;letter-spacing:-.02em}.row-meta p{margin:12px 0 0;color:var(--muted);font-size:12px;line-height:1.45}.row-frame{min-width:0;display:flex;flex-direction:column;justify-content:center}.row-frame img{display:block;width:100%;aspect-ratio:16/9;height:auto;object-fit:contain;object-position:center;border-radius:10px;background:#fff6ec}.frame-stack,.case-frame-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:22px}.frame-card{padding:9px;border:1px solid var(--line);border-radius:12px;background:#fffaf5}.frame-label{display:flex;justify-content:space-between;gap:8px;margin-bottom:7px;color:var(--blue-dark);font-size:10px;letter-spacing:.04em}.frame-label span{color:var(--muted);font-weight:400}.component-copy{margin:0;color:var(--muted);font-size:11px;line-height:1.45}.file-links{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;padding:9px 2px 0}.file-links a,.asset-sources a{color:var(--blue-dark);font-size:11px;font-weight:700;text-decoration:none}.file-links a:hover,.asset-sources a:hover{text-decoration:underline}.row-notes{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;align-content:center;margin:0;padding:2px 4px}.row-notes div{min-width:0}.row-notes dt{margin-bottom:4px;color:var(--blue-dark);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}.row-notes dd{margin:0;color:#50616d;font-size:11px;line-height:1.4}.asset-sources{margin:7px 0 0}.asset-sources a{margin-right:6px}.comment-source-list{margin:4px 0 0;padding-left:17px}.comment-source-list li{margin:0 0 8px;color:#50616d;font-size:10px;line-height:1.45;overflow-wrap:anywhere}.comment-source-list a{color:var(--blue-dark);font-weight:700}.audit{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;padding:20px;border:1px solid var(--line);border-radius:16px;background:#fff0e6}.audit h2{margin:0 0 8px;font-size:16px}.audit p{margin:0;color:#566974;font-size:12px;line-height:1.5}.footer{margin-top:24px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:11px;line-height:1.5}.footer a{color:var(--blue-dark)}
+*{box-sizing:border-box}html{background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}body{margin:0;padding:42px 28px 92px}.shell{max-width:1560px;margin:0 auto}.hero{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:end;margin:8px 0 32px}.eyebrow{color:var(--blue-dark);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}.hero h1{max-width:920px;margin:12px 0 12px;font-size:clamp(38px,5.5vw,76px);line-height:.98;letter-spacing:-.055em}.hero p{max-width:760px;margin:0;color:var(--muted);font-size:16px;line-height:1.55}.hero-actions{display:flex;flex-direction:column;gap:9px;align-items:stretch}.action{display:inline-block;padding:12px 16px;border:1px solid var(--line);border-radius:999px;background:var(--white);color:var(--ink);font-size:13px;font-weight:700;text-align:center;text-decoration:none}.action.primary{border-color:var(--blue);background:var(--blue);color:var(--white)}.style-strip{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:28px 0 18px;padding:15px 18px;border:1px solid var(--line);border-radius:14px;background:var(--white);color:var(--muted);font-size:12px}.swatch{display:inline-flex;align-items:center;gap:6px}.swatch i{width:15px;height:15px;border:1px solid #d5dce2;border-radius:50%}.board{display:grid;gap:13px}.board-row{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;align-items:stretch;padding:15px;border:1px solid var(--line);border-radius:17px;background:var(--white);box-shadow:var(--shadow)}.row-meta{display:flex;flex-direction:column;align-items:flex-start;padding:5px 0}.scene-number{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--ink);color:white;font-size:12px;font-weight:700}.time{margin:12px 0 9px;color:var(--blue-dark);font-size:11px;font-weight:700;letter-spacing:.08em}.row-meta h2{margin:0;font-size:19px;line-height:1.12;letter-spacing:-.02em}.row-meta p{margin:12px 0 0;color:var(--muted);font-size:12px;line-height:1.45}.row-frame{min-width:0;display:flex;flex-direction:column;justify-content:center}.row-frame img{display:block;width:min(100%,380px);aspect-ratio:9/16;height:auto;object-fit:contain;object-position:center;margin:0 auto;border-radius:10px;background:#fff6ec}.frame-stack,.case-frame-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),380px));justify-content:center;gap:18px}.frame-card{padding:9px;border:1px solid var(--line);border-radius:12px;background:#fffaf5}.frame-label{display:flex;justify-content:space-between;gap:8px;margin-bottom:7px;color:var(--blue-dark);font-size:10px;letter-spacing:.04em}.frame-label span{color:var(--muted);font-weight:400}.component-copy{margin:0;color:var(--muted);font-size:11px;line-height:1.45}.file-links{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;padding:9px 2px 0}.file-links a,.asset-sources a{color:var(--blue-dark);font-size:11px;font-weight:700;text-decoration:none}.file-links a:hover,.asset-sources a:hover{text-decoration:underline}.row-notes{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;align-content:center;margin:0;padding:2px 4px}.row-notes div{min-width:0}.row-notes dt{margin-bottom:4px;color:var(--blue-dark);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}.row-notes dd{margin:0;color:#50616d;font-size:11px;line-height:1.4}.asset-sources{margin:7px 0 0}.asset-sources a{margin-right:6px}.comment-source-list{margin:4px 0 0;padding-left:17px}.comment-source-list li{margin:0 0 8px;color:#50616d;font-size:10px;line-height:1.45;overflow-wrap:anywhere}.comment-source-list a{color:var(--blue-dark);font-weight:700}.audit{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;padding:20px;border:1px solid var(--line);border-radius:16px;background:#fff0e6}.audit h2{margin:0 0 8px;font-size:16px}.audit p{margin:0;color:#566974;font-size:12px;line-height:1.5}.footer{margin-top:24px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:11px;line-height:1.5}.footer a{color:var(--blue-dark)}
 @media(max-width:1100px){.board-row{grid-template-columns:minmax(0,1fr)}.row-notes{grid-column:auto;grid-template-columns:1fr 1fr}.hero{grid-template-columns:1fr}.hero-actions{flex-direction:row;justify-content:flex-start}.action{min-width:180px}}
 @media(max-width:700px){body{padding:24px 12px 60px}.hero h1{font-size:42px}.board-row{grid-template-columns:1fr;gap:12px;padding:13px}.row-meta{display:grid;grid-template-columns:40px 1fr;column-gap:8px;align-items:center}.scene-number{grid-row:span 2}.time{margin:0 0 4px}.row-meta h2{grid-column:2}.row-meta p{grid-column:1/-1;margin-top:10px}.row-notes{grid-column:auto;grid-template-columns:1fr}.hero-actions{flex-wrap:wrap}.action{min-width:0}.audit{grid-template-columns:1fr}}
 </style>
 </head>
 <body><main class="shell">
-<header class="hero"><div><div class="eyebrow">Editable production board · Layout C</div><h1>Therapy Speak Gone Wrong</h1><p>Seven scenes in sixteen animation keyframes. Scene 1 is one continuous presenter scene with four sourced, anonymized public comments. Scene 3 keeps three independent examples. Scene 4 follows one 40-second cause-and-effect story through five beats and ends with Dina alone. The narration stays verbatim from the script. Every frame is an editable SVG.</p></div><div class="hero-actions"><a class="action primary" href="Storyboard_Therapy_Speak_Gone_Wrong.docx" download>Download Word storyboard</a><a class="action" href="motion.html">Open Scene 2 motion study</a><a class="action" href="Storyboard_Editable_Source.zip" download>Download editable source bundle</a></div></header>
+<header class="hero"><div><div class="eyebrow">Editable production board · Instagram portrait · 9:16 · 1080 × 1920</div><h1>Therapy Speak Gone Wrong</h1><p>Tujuh scene, enam belas keyframe, semua memakai kanvas portrait 9:16 berukuran 1080 × 1920 untuk Instagram Reels. Scene 1 adalah satu scene presenter dengan empat komentar publik tersamarkan. Scene 3 tetap tiga contoh terpisah. Scene 4 mengikuti satu cerita sebab-akibat lima beat. VO tetap mengikuti naskah, dan setiap frame adalah SVG yang bisa diedit.</p></div><div class="hero-actions"><a class="action primary" href="Storyboard_Therapy_Speak_Gone_Wrong.docx" download>Download Word storyboard</a><a class="action" href="motion.html">Open Scene 2 motion study</a><a class="action" href="Storyboard_Editable_Source.zip" download>Download editable source bundle</a></div></header>
 <div class="style-strip"><strong>Opsi B · Warm Peach &amp; Mustard</strong><span class="swatch"><i style="background:#3d2645"></i>deep plum</span><span class="swatch"><i style="background:#7fb89a"></i>sage</span><span class="swatch"><i style="background:#e4572e"></i>terracotta</span><span class="swatch"><i style="background:#f2b134"></i>mustard</span><span class="swatch"><i style="background:#ffc4a3"></i>peach</span><span class="swatch"><i style="background:#fff6ec"></i>cream</span><span class="swatch"><i style="background:#2a1f2d"></i>espresso</span><span>· terracotta for mistaken labels; sage for corrections</span></div>
 <section class="board" aria-label="Seven scene production board">
 ''' + "\n".join(rows) + '''
 </section>
-<section class="audit"><div><h2>Visual audit</h2><p>Scene 3 remains three independent case frames and a centered closing frame. Scene 4A uses the Co-workers office illustration with Dina omitted; 4B, 4B2, and 4C use the full Co-workers illustration with Raka and Dina together. Target and thought-label cards remain separate editable overlays. Dialog connector arrows are removed from 4B. The warning post and notifications are separate overlays. Domino tiles have been removed from every Scene 4 frame. Frame 4D contains Dina alone. Dina's Co-workers source in 4D changes 57/158 drawable elements (36.1%), leaving 101/158 unchanged. Scene 1 uses only the Character object from People Creating Robot · Rafiki. Of its 41 drawable elements, six are cropped and six clothing paths recolored; 29/41 (70.7%) remain unchanged. The robot, external props, panels, background, presenter frame, and pointer are removed; the small tablet integrated with the woman’s pose remains. Four public-comment groups use pseudonyms. Scene 2B contains 56 independently editable handwritten hashtags (six script terms plus fifty related terms) with accelerating appearance timings. All retained frames were rendered and inspected.</p></div><div><h2>Editing &amp; attribution</h2><p>Open or download each SVG to edit its vector layers and text. The source bundle contains the HTML board, all SVG frames, source illustration assets, and the Caveat font/license. The <a href="https://storyset.com/illustration/people-creating-robot/rafiki" target="_blank" rel="noreferrer">People Creating Robot · Rafiki</a> presenter and <a href="https://storyset.com/illustration/co-workers/rafiki" target="_blank" rel="noreferrer">Co-workers · Rafiki</a> and <a href="https://storyset.com/illustration/student-stress/rafiki" target="_blank" rel="noreferrer">Student Stress · Rafiki</a> are free with attribution. <a href="https://github.com/google/fonts/tree/main/ofl/caveat" target="_blank" rel="noreferrer">Caveat</a> is distributed under SIL OFL 1.1; cite Storyset when publishing and review the <a href="https://storyset.com/terms" target="_blank" rel="noreferrer">Storyset terms</a>.</p></div></section>
-<footer class="footer">Scene 1 isolates the woman Character object from the credited Storyset illustration in a centered half-body crop, without the robot, external props, pointer, or presenter frame. Her small held tablet stays as part of the source pose. Scene backgrounds, public-comment cards, cloud words, labels, cards, connectors, notifications, and text are editable SVG layers. No images were generated.</footer>
+<section class="audit"><div><h2>Visual audit</h2><p>Semua frame berukuran 1080 × 1920 (9:16); preview mengecilkan tampilannya tanpa memotong komposisi. Scene 3 tetap tiga case mandiri dan satu frame penutup. Scene 4 mengikuti urutan 4A, 4B, 4B2, 4C, 4D: Raka sendiri di 4A, bersama Dina di 4B dan 4B2, sendiri di 4C saat membuat post, lalu Dina sendiri di 4D. Objek genggam Raka dihilangkan dari semua frame Scene 4. Dialog 4B tidak memakai panah. Post peringatan dan notifikasi adalah overlay terpisah; tidak ada domino. Scene 1 memakai objek Character dari People Creating Robot · Rafiki; 29/41 drawable (70,7%) tetap utuh setelah crop dan recolor. Robot, properti luar, panel, latar, bingkai, dan pointer sumber dihilangkan; tablet kecil pada pose tangannya dipertahankan. Empat komentar memakai nama samaran. Scene 2B memuat 56 hashtag editable. Semua frame dirender untuk audit visual portrait.</p></div><div><h2>Editing &amp; attribution</h2><p>Open or download each SVG to edit its vector layers and text. The source bundle contains the HTML board, all SVG frames, source illustration assets, and the Caveat font/license. The <a href="https://storyset.com/illustration/people-creating-robot/rafiki" target="_blank" rel="noreferrer">People Creating Robot · Rafiki</a> presenter and <a href="https://storyset.com/illustration/co-workers/rafiki" target="_blank" rel="noreferrer">Co-workers · Rafiki</a> and <a href="https://storyset.com/illustration/student-stress/rafiki" target="_blank" rel="noreferrer">Student Stress · Rafiki</a> are free with attribution. <a href="https://github.com/google/fonts/tree/main/ofl/caveat" target="_blank" rel="noreferrer">Caveat</a> is distributed under SIL OFL 1.1; cite Storyset when publishing and review the <a href="https://storyset.com/terms" target="_blank" rel="noreferrer">Storyset terms</a>.</p></div></section>
+<footer class="footer">Semua SVG scene menggunakan viewBox portrait 1080 × 1920, siap disusun sebagai video Instagram Reels 9:16. Scene 1 memakai objek Character dari ilustrasi Storyset yang dikreditkan, tanpa robot, properti luar, pointer, atau bingkai presenter. Tablet kecil yang menyatu dengan pose sumber dipertahankan. Latar, kartu komentar, word cloud, label, kartu, notifikasi, dan teks adalah layer SVG editable. Tidak ada gambar generatif.</footer>
 </main></body></html>'''
     output = ROOT / "index.html"
     output.write_text(html, encoding="utf-8")

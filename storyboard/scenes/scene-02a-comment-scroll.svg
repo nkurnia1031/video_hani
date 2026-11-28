@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="scene-title scene-desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920" role="img" aria-labelledby="scene-title scene-desc" data-format="portrait-9x16">
   <title id="scene-title">Scene 2A: room, phone, and scrolling comments</title>
   <desc id="scene-desc">A cream living room with a TV and framed art at left, an espresso phone with a scrolling comment feed in the center, and a reclining man on a sage sofa beneath colored shelves at right.</desc>
   <defs>
@@ -12,18 +12,17 @@
     </clipPath>
   </defs>
   <g id="room-background">
-    <rect x="0" y="0" width="1920" height="1080" fill="#FFF6EC" rx="0" />
+    <rect x="0" y="0" width="1080" height="1920" fill="#FFF6EC" rx="0" />
   </g>
   <g id="room-floor">
-    <rect x="0" y="862" width="1920" height="218" fill="#FFC4A3" rx="0" opacity="0.38" />
-    <line x1="0" y1="862" x2="1920" y2="862" stroke="#FFC4A3" stroke-width="3" stroke-linecap="round" opacity="0.8" />
+    <rect x="0" y="1685" width="1080" height="235" fill="#FFC4A3" rx="0" opacity="0.38" />
+    <line x1="0" y1="1685" x2="1080" y2="1685" stroke="#FFC4A3" stroke-width="3" stroke-linecap="round" opacity="0.8" />
   </g>
   <g id="room-ambient">
-    <circle cx="175" cy="170" r="185" fill="#F2B134" opacity="0.1" />
-    <circle cx="1040" cy="845" r="280" fill="#FFFFFF" opacity="0.34" />
-    <circle cx="1860" cy="540" r="205" fill="#7FB89A" opacity="0.1" />
+    <circle cx="80" cy="360" r="220" fill="#F2B134" opacity="0.1" />
+    <circle cx="950" cy="1180" r="270" fill="#7FB89A" opacity="0.1" />
   </g>
-  <g id="wall-art">
+  <g id="wall-art" transform="translate(640 70) scale(0.70)">
     <rect x="115" y="130" width="358" height="226" fill="#2A1F2D" rx="17" />
     <rect x="132" y="147" width="324" height="192" fill="#FFC4A3" rx="8" />
     <circle cx="370" cy="196" r="32" fill="#F2B134" />
@@ -31,14 +30,14 @@
     <path d="M145,319 L225,270 L281,315 L350,266 L447,326 L447,339 L145,339 Z" fill="#3D2645" />
     <path d="M145,322 L216,293 L276,324 L345,291 L447,329 L447,339 L145,339 Z" fill="#E4572E" />
   </g>
-  <g id="television">
+  <g id="television" transform="translate(175 -200) scale(0.80)">
     <rect x="67" y="425" width="460" height="307" fill="#2A1F2D" rx="24" />
     <rect x="83" y="441" width="428" height="270" fill="url(#tv-screen)" rx="13" />
     <circle cx="494" cy="454" r="3" fill="#F2B134" opacity="0.8" />
     <path d="M99,675 C215,591 284,614 371,527 C427,471 485,493 510,462 L510,711 L99,711 Z" fill="#3D2645" opacity="0.55" />
     <path d="M250,732 L385,732 L405,757 L230,757 Z" fill="#2A1F2D" />
   </g>
-  <g id="media-console">
+  <g id="media-console" transform="translate(120 1120) scale(0.60)">
     <rect x="29" y="758" width="582" height="91" fill="#3D2645" rx="13" />
     <rect x="53" y="778" width="534" height="9" fill="#FFC4A3" rx="4" />
     <g id="console-book-1">
@@ -70,7 +69,7 @@
       </g>
     </g>
   </g>
-  <g id="shelf-set">
+  <g id="shelf-set" transform="translate(-616 100) scale(0.65)">
     <g id="shelf-upper">
       <g id="shelf-upper-rail">
         <rect x="1287" y="250" width="538" height="20" fill="#3D2645" rx="7" />
@@ -138,10 +137,10 @@
       </g>
     </g>
   </g>
-  <g id="sofa-shadow">
+  <g id="sofa-shadow" transform="translate(-1100 1020) scale(0.95)">
     <ellipse cx="1630" cy="866" rx="346" ry="47" fill="#2A1F2D" opacity="0.15" />
   </g>
-  <g id="reclining-sofa">
+  <g id="reclining-sofa" transform="translate(-1000 1020) scale(0.95)">
     <svg x="1080" y="150" width="850" height="850" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet" overflow="hidden" aria-label="Feed illustration, Storyset Rafiki">
       <g id="sfeed-freepik--Sofa--inject-2">
         <rect x="245.02" y="398.49" width="168.49" height="17.74" style="fill:#7FB89A" />
@@ -167,7 +166,7 @@
       </g>
     </svg>
   </g>
-  <g id="phone-scroller">
+  <g id="phone-scroller" transform="translate(-1000 1020) scale(0.95)">
     <svg x="1080" y="150" width="850" height="850" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet" overflow="hidden" aria-label="Feed illustration, Storyset Rafiki">
       <g id="sfeed-freepik--Character--inject-2">
         <g id="sfeed-freepik--group--inject-2">
@@ -221,7 +220,7 @@
       </g>
     </svg>
   </g>
-  <g id="phone-shell">
+  <g id="phone-shell" transform="translate(-280 450) scale(0.88)">
     <rect x="664" y="79" width="622" height="934" fill="#2A1F2D" rx="58" opacity="0.22" />
     <rect x="646" y="61" width="622" height="934" fill="#2A1F2D" rx="58" />
     <rect x="666" y="81" width="582" height="894" fill="#FFF6EC" rx="42" />

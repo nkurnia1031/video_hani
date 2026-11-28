@@ -1,6 +1,6 @@
-# Therapy Speak Gone Wrong · Storyboard C
+# Therapy Speak Gone Wrong · Instagram Portrait Storyboard
 
-This board contains seven scenes and 16 standalone, editable 16:9 animation frames. `Script Video Kode Etik.pdf` is the authority for dialogue and narration. Scene 1 presenter dialogue and the Scene 3–4 voice-over remain verbatim; Scene 3 stays as three independent cases.
+This board contains seven scenes and 16 standalone, editable **9:16 portrait animation frames at 1080 × 1920**, composed for Instagram Reels. `Script Video Kode Etik.pdf` is the authority for dialogue and narration. Scene 1 presenter dialogue and the Scene 3–4 voice-over remain verbatim; Scene 3 stays as three independent cases. SVG frames and PNG previews keep the same portrait canvas; the web and Word storyboard may arrange several frames as smaller previews.
 
 The separate [Scene 2 motion study](motion.html) is a 35-second HyperFrames project built from the storyboard SVG layers and GSAP timelines. It animates the room, shelves, flowers, character and hand, comment scroll, hashtag cloud, and closing statements. The public page has HyperFrames playback and seek controls plus scene jumps; the project in `hyperframes/` keeps the root timeline and three editable scene compositions.
 
@@ -43,7 +43,7 @@ Five consecutive beats show one cause-and-effect story. Raka misreads his own sa
 | 4C | 02:17–02:27 | 10 sec | Raka posts about Dina and the warning spreads · V4 |
 | 4D | 02:27–02:35 | 8 sec | Dina alone with closing text · V5 |
 
-Frame 4A uses the Co-workers · Rafiki office base with Dina's character removed. Frames 4B, 4B2, and 4C use the full illustration from 4B, with Raka and Dina together in the same poses and setting. Beat-specific target, thought, label, post, and notification graphics remain editable overlays. The dialogue connector arrows are removed from 4B. Frame 4C shows the warning post and group notifications; 4D keeps Dina alone with the requested on-screen text: `Don't reduce people to labels.` No domino tiles appear in any Scene 4 frame.
+Frame 4A uses the Co-workers · Rafiki office base with Dina's character removed. Frames 4B and 4B2 show Raka and Dina together; 4C shows Raka alone composing the warning post and group notifications; 4D keeps Dina alone with the requested on-screen text: `Don't reduce people to labels.` The small handheld object in Raka's hand is omitted from every Scene 4 frame. Beat-specific target, thought, label, post, and notification graphics remain editable overlays. Dialogue in 4B has no connector arrows. No domino tiles appear in any Scene 4 frame.
 
 Scene 4A reuses the Co-workers · Rafiki base with Dina omitted. Frames 4B–4C reuse the complete illustration with both characters. Scene 4D is a separate Dina-only composition; 57/158 drawable source elements change or are omitted (36.1%), leaving 101/158 unchanged.
 
@@ -59,11 +59,11 @@ Scene 4A reuses the Co-workers · Rafiki base with Dina omitted. Frames 4B–4C 
 ## Assets, attribution, and visual audit
 
 - [People Creating Robot · Storyset / Rafiki](https://storyset.com/illustration/people-creating-robot/rafiki) supplies the Scene 1 presenter. It is free with attribution. The woman’s 41-element `Character` object has 12 elements changed or cropped (29.3%); 29 remain intact. Other source objects are not included in the scene.
-- [Co-workers · Storyset / Rafiki](https://storyset.com/illustration/co-workers/rafiki) supplies the office illustration for 4A–4C; Dina's character object is omitted in 4A and both characters appear in 4B–4C. It also supplies Dina's 4D composition. In 4D, 57/158 drawable source elements change or are omitted (36.1%), leaving 101/158 unchanged.
-- [Student Stress · Storyset / Rafiki](https://storyset.com/illustration/student-stress/rafiki) supplies the separate school setting and desk props in 03B only.
+- [Co-workers · Storyset / Rafiki](https://storyset.com/illustration/co-workers/rafiki) supplies the office illustration for 4A–4C; Dina's character object is omitted in 4A and 4C, and both characters appear in 4B–4B2. It also supplies Dina's 4D composition. In 4D, 57/158 drawable source elements change or are omitted (36.1%), leaving 101/158 unchanged.
+- [Co-workers · Storyset / Rafiki](https://storyset.com/illustration/co-workers/rafiki) supplies the Raka character used in 03B; the missed-target marker and correction are separate overlays.
 - Scene 3 illustration sources are credited in the scene artwork and on the web and Word boards. Storyset assets are free with attribution; review the [Storyset terms](https://storyset.com/terms) for publishing.
 - Scene 1 comment excerpts and their public URLs, platform, and access date appear in the web and Word source audit. Cards show pseudonyms rather than source account names; profile photos and platform brands do not appear. The fourth comment is explicitly marked as a synthetic example in the audit.
 - Each standalone scene frame contains only the animation composition, source illustration, props, overlays, and on-screen text. Board titles, timecodes, footers, legends, credits, and production notes stay outside scene artwork.
 - The updated 03B and Scene 4 SVG/PNG frames were rendered and visually inspected for character continuity and composition.
 
-Open the [live editable web storyboard](https://nkurnia1031.github.io/video_hani/storyboard/), download the [Word storyboard](Storyboard_Therapy_Speak_Gone_Wrong.docx), or inspect the [visual-audit contact sheet](previews/contact-sheet.png). All scene SVGs and text groups are editable; no generated character art was used.
+Open the [live editable web storyboard](https://nkurnia1031.github.io/video_hani/storyboard/), download the [Word storyboard](Storyboard_Therapy_Speak_Gone_Wrong.docx), or inspect the [portrait visual-audit contact sheet](previews/contact-sheet.png). All scene SVGs and text groups are editable; no generated character art was used.

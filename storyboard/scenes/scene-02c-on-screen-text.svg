@@ -1,19 +1,28 @@
 <?xml version='1.0' encoding='utf-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="frame-title frame-desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920" role="img" aria-labelledby="frame-title frame-desc" data-format="portrait-9x16" data-frame="02C">
   <title id="frame-title">Scene 2C: understanding psychology and misusing terms</title>
   <desc id="frame-desc">Centered sage pill: Understanding psychology = Good! Centered terracotta pill: Misusing psychological terms = Problematic.</desc>
   <metadata>Editable animation frame. Existing Storyset vector groups are recolored in SVG; all added elements are hand-edited vector shapes. No generated imagery.</metadata>
-  <rect x="0" y="0" width="1920" height="1080" fill="#FFF6EC" rx="0" />
+  <rect x="0" y="0" width="1080" height="1920" fill="#FFF6EC" rx="0" id="scene-background" />
   <g id="understanding-statement">
-    <rect x="385" y="304" width="1150" height="148" fill="#7FB89A" rx="30" />
-    <text x="960" y="398" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700" text-anchor="middle" letter-spacing="0">
-      <tspan x="960" dy="0">Understanding psychology = Good!</tspan>
+    <rect x="54" y="450" width="972" height="260" fill="#7FB89A" rx="40" />
+    <text x="540" y="560" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="540" dy="0">Understanding psychology</tspan>
+    </text>
+    <text x="540" y="625" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="50" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="540" dy="0">= Good!</tspan>
     </text>
   </g>
   <g id="misuse-statement">
-    <rect x="270" y="552" width="1380" height="176" fill="#E4572E" rx="30" />
-    <text x="960" y="660" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="700" text-anchor="middle" letter-spacing="0">
-      <tspan x="960" dy="0">Misusing psychological terms = Problematic.</tspan>
+    <rect x="54" y="965" width="972" height="340" fill="#E4572E" rx="40" />
+    <text x="540" y="1085" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="540" dy="0">Misusing psychological</tspan>
+    </text>
+    <text x="540" y="1150" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="540" dy="0">terms =</tspan>
+    </text>
+    <text x="540" y="1220" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="540" dy="0">Problematic.</tspan>
     </text>
   </g>
 </svg>

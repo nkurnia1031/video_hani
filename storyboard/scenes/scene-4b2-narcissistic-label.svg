@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="frame-title frame-desc" data-frame="4B2">
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920" role="img" aria-labelledby="frame-title frame-desc" data-format="portrait-9x16" data-frame="4B2">
   <title id="frame-title">4B2 · Raka labels Dina narcissistic</title>
   <desc id="frame-desc">Raka turns Dina's one defensive reply into the stamp NARSISTIK. The frame marks this as Raka's conclusion, based on one reply rather than evidence of a pattern.</desc>
   <metadata>Storyset Co-workers Rafiki. 36 of 158 original drawable elements changed or omitted (22.8%): 28 blue elements recolored plum, 7 placeholder-chat elements omitted, and Raka's mouth adjusted. 122 of 158 source elements (77.2%) remain unchanged. All dialogue and interface overlays are separate editable SVG groups.</metadata>
-  <rect x="0" y="0" width="1920" height="1080" fill="#FFF6EC" rx="0" id="scene-background" />
-  <svg x="0" y="74" width="1000" height="1000" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet" overflow="hidden" aria-label="Co-workers · Rafiki illustration, Storyset Rafiki">
+  <rect x="0" y="0" width="1080" height="1920" fill="#FFF6EC" rx="0" id="scene-background" />
+  <svg x="0" y="620" width="1080" height="1080" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet" overflow="hidden" aria-label="Co-workers · Rafiki illustration, Storyset Rafiki">
     <g id="scoworkers-background-complete">
       <rect y="382.4" width="500" height="0.25" style="fill:#ebebeb" />
       <rect x="416.78" y="398.49" width="33.12" height="0.25" style="fill:#ebebeb" />
@@ -50,10 +50,6 @@
       <rect x="91.43" y="86.47" width="85.69" height="166.2" transform="translate(268.55 339.13) rotate(180)" style="fill:#e6e6e6" />
       <rect x="85.82" y="86.47" width="89.79" height="166.2" transform="translate(261.43 339.13) rotate(180)" style="fill:#f5f5f5" />
       <polygon points="161.41 249.23 168.29 89.91 100.02 89.91 93.15 249.23 161.41 249.23" style="fill:#fff" />
-    </g>
-    <g id="scoworkers-background-simple">
-      <path d="M289.46,166.76c-31.4-19-43.22-60-77-75.85-29.7-14-80.39-13.67-107.18,7.51-29.87,23.63-29.22,65.48-7.59,95.14,23.8,32.64,64.46,33.05,98.71,46.47,60,23.51,187.36,111.68,233.12,14.79,14.2-30.07,7.73-91.08-32.58-96C358.18,154.06,333.66,193.5,289.46,166.76Z" style="fill:#3D2645" />
-      <path d="M289.46,166.76c-31.4-19-43.22-60-77-75.85-29.7-14-80.39-13.67-107.18,7.51-29.87,23.63-29.22,65.48-7.59,95.14,23.8,32.64,64.46,33.05,98.71,46.47,60,23.51,187.36,111.68,233.12,14.79,14.2-30.07,7.73-91.08-32.58-96C358.18,154.06,333.66,193.5,289.46,166.76Z" style="fill:#fff;opacity:0.9" />
     </g>
     <g id="scoworkers-Shadow">
       <ellipse id="scoworkers-path" cx="250" cy="416.24" rx="193.89" ry="11.32" style="fill:#f5f5f5" />
@@ -171,22 +167,22 @@
     </g>
   </svg>
   <g id="raka-conclusion">
-    <rect x="1100" y="186" width="700" height="54" fill="#FFF6EC" rx="27.0" stroke="#3D2645" stroke-width="2" />
-    <text x="1450.0" y="221.64" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="middle" letter-spacing="0">
-      <tspan x="1450.0" dy="0">KESIMPULAN RAKA · DARI SATU BALASAN</tspan>
+    <rect x="70" y="78" width="940" height="72" fill="#FFF6EC" rx="36.0" stroke="#3D2645" stroke-width="2" />
+    <text x="540.0" y="125.52000000000001" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="540.0" dy="0">KESIMPULAN RAKA · DARI SATU BALASAN</tspan>
     </text>
-    <g id="narcissistic-stamp" transform="rotate(-3 1450 440)">
-      <rect x="1094" y="320" width="716" height="220" fill="#E4572E" rx="24" />
-      <rect x="1113" y="339" width="678" height="182" fill="none" rx="16" stroke="#FFF6EC" stroke-width="3" />
-      <text x="1452" y="403" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="1.4">
-        <tspan x="1452" dy="0">DIA</tspan>
+    <g id="narcissistic-stamp" transform="rotate(-3 540 337)">
+      <rect x="90" y="200" width="900" height="265" fill="#E4572E" rx="30" />
+      <rect x="110" y="220" width="860" height="225" fill="none" rx="20" stroke="#FFF6EC" stroke-width="3" />
+      <text x="540" y="294" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="1.4">
+        <tspan x="540" dy="0">DIA</tspan>
       </text>
-      <text x="1452" y="474" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="700" text-anchor="middle" letter-spacing="1.3">
-        <tspan x="1452" dy="0">NARSISTIK</tspan>
+      <text x="540" y="380" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="700" text-anchor="middle" letter-spacing="1.3">
+        <tspan x="540" dy="0">NARSISTIK</tspan>
       </text>
     </g>
-    <text x="1452" y="622" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="600" text-anchor="middle" letter-spacing="0">
-      <tspan x="1452" dy="0">Satu balasan belum membuktikan pola.</tspan>
+    <text x="540" y="535" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="600" text-anchor="middle" letter-spacing="0">
+      <tspan x="540" dy="0">Satu balasan belum membuktikan pola.</tspan>
     </text>
   </g>
 </svg>

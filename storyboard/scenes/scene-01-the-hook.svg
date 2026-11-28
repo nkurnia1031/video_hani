@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="frame-title frame-desc" data-frame="01">
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920" role="img" aria-labelledby="frame-title frame-desc" data-format="portrait-9x16" data-frame="01">
   <title id="frame-title">Scene 1 · The Hook</title>
   <desc id="frame-desc">One continuous plum-background scene. The woman from the Character object in People Creating Robot · Rafiki is isolated in a centered half-body crop; its robot, props, panels, and background are omitted. Four public-comment cards with pseudonyms appear at the sides.</desc>
   <metadata>Scene 1 is one continuous editable composition. Presenter: the Character object from People Creating Robot · Rafiki (Storyset, free with attribution). Within that 41-drawable object, six lower-body paths are cropped and six outfit paths recolored; 29/41 (70.7%) remain unchanged. All other source objects are omitted. There is no presenter frame or pointer; comment cards use pseudonyms and generic avatars. Public quote sources, access dates, and Storyset attribution are recorded outside this artwork in the storyboard source audit.</metadata>
-  <rect x="0" y="0" width="1920" height="1080" fill="#3D2645" rx="0" />
-  <svg x="550" y="-80" width="820" height="1080" viewBox="285 130 190 250" preserveAspectRatio="xMidYMid meet" overflow="hidden" aria-label="People Creating Robot · Rafiki illustration, Storyset Rafiki · attribution required">
+  <rect x="0" y="0" width="1080" height="1920" fill="#3D2645" rx="0" id="scene-background" />
+  <svg x="200" y="620" width="680" height="608" viewBox="285 130 190 170" preserveAspectRatio="xMidYMid meet" overflow="hidden" aria-label="People Creating Robot · Rafiki illustration, Storyset Rafiki · attribution required">
     <g id="spresenter-Character">
       <g>
         <g>
@@ -66,75 +66,75 @@
     </g>
   </svg>
   <g id="public-comment-avoidant" role="group" data-sequence="1" data-source-type="ASLI" opacity="0">
-    <rect x="43" y="237" width="432" height="174" fill="#2A1F2D" rx="20" opacity="0.32" />
-    <rect x="36" y="228" width="432" height="174" fill="#FFF6EC" rx="20" stroke="#FFC4A3" stroke-width="3" />
-    <circle cx="67" cy="260" r="18" fill="#3D2645" />
-    <circle cx="67" cy="253" r="6" fill="#FFC4A3" />
-    <path d="M55,269 Q67,255 79,269 Z" fill="#FFC4A3" />
-    <text x="99" y="266" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="start" letter-spacing="0.9">
-      <tspan x="99" dy="0">NAYA</tspan>
+    <rect x="42" y="149" width="450" height="170" fill="#2A1F2D" rx="20" opacity="0.32" />
+    <rect x="35" y="140" width="450" height="170" fill="#FFF6EC" rx="20" stroke="#FFC4A3" stroke-width="3" />
+    <circle cx="66" cy="172" r="18" fill="#3D2645" />
+    <circle cx="66" cy="165" r="6" fill="#FFC4A3" />
+    <path d="M54,181 Q66,167 78,181 Z" fill="#FFC4A3" />
+    <text x="98" y="178" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="start" letter-spacing="0.9">
+      <tspan x="98" dy="0">NAYA</tspan>
     </text>
-    <line x1="58" y1="288" x2="446" y2="288" stroke="#FFC4A3" stroke-width="2" stroke-linecap="round" />
-    <text x="252.0" y="338" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="600" text-anchor="middle" letter-spacing="0">
-      <tspan x="252.0" dy="0">pengalaman gue pacaran</tspan>
+    <line x1="57" y1="200" x2="463" y2="200" stroke="#FFC4A3" stroke-width="2" stroke-linecap="round" />
+    <text x="260.0" y="250" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="600" text-anchor="middle" letter-spacing="0">
+      <tspan x="260.0" dy="0">pengalaman gue pacaran</tspan>
     </text>
-    <text x="252.0" y="374" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="600" text-anchor="middle" letter-spacing="0">
-      <tspan x="252.0" dy="0">sama orang avoidant sih</tspan>
+    <text x="260.0" y="286" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="600" text-anchor="middle" letter-spacing="0">
+      <tspan x="260.0" dy="0">sama orang avoidant sih</tspan>
     </text>
     <animate attributeName="opacity" values="0;1" begin="3.0s" dur="0.25s" fill="freeze" />
   </g>
   <g id="public-comment-toxic" role="group" data-sequence="2" data-source-type="ASLI" opacity="0">
-    <rect x="1459" y="237" width="432" height="174" fill="#2A1F2D" rx="20" opacity="0.32" />
-    <rect x="1452" y="228" width="432" height="174" fill="#FFF6EC" rx="20" stroke="#FFC4A3" stroke-width="3" />
-    <circle cx="1483" cy="260" r="18" fill="#3D2645" />
-    <circle cx="1483" cy="253" r="6" fill="#FFC4A3" />
-    <path d="M1471,269 Q1483,255 1495,269 Z" fill="#FFC4A3" />
-    <text x="1515" y="266" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="start" letter-spacing="0.9">
-      <tspan x="1515" dy="0">BAGAS</tspan>
+    <rect x="602" y="329" width="450" height="170" fill="#2A1F2D" rx="20" opacity="0.32" />
+    <rect x="595" y="320" width="450" height="170" fill="#FFF6EC" rx="20" stroke="#FFC4A3" stroke-width="3" />
+    <circle cx="626" cy="352" r="18" fill="#3D2645" />
+    <circle cx="626" cy="345" r="6" fill="#FFC4A3" />
+    <path d="M614,361 Q626,347 638,361 Z" fill="#FFC4A3" />
+    <text x="658" y="358" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="start" letter-spacing="0.9">
+      <tspan x="658" dy="0">BAGAS</tspan>
     </text>
-    <line x1="1474" y1="288" x2="1862" y2="288" stroke="#FFC4A3" stroke-width="2" stroke-linecap="round" />
-    <text x="1668.0" y="353" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="600" text-anchor="middle" letter-spacing="0">
-      <tspan x="1668.0" dy="0">gua ngerasa lg “toxic” bgt.</tspan>
+    <line x1="617" y1="380" x2="1023" y2="380" stroke="#FFC4A3" stroke-width="2" stroke-linecap="round" />
+    <text x="820.0" y="445" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="600" text-anchor="middle" letter-spacing="0">
+      <tspan x="820.0" dy="0">gua ngerasa lg “toxic” bgt.</tspan>
     </text>
     <animate attributeName="opacity" values="0;1" begin="8.0s" dur="0.25s" fill="freeze" />
   </g>
   <g id="public-comment-depresi" role="group" data-sequence="3" data-source-type="ASLI" opacity="0">
-    <rect x="43" y="631" width="432" height="174" fill="#2A1F2D" rx="20" opacity="0.32" />
-    <rect x="36" y="622" width="432" height="174" fill="#FFF6EC" rx="20" stroke="#FFC4A3" stroke-width="3" />
-    <circle cx="67" cy="654" r="18" fill="#3D2645" />
-    <circle cx="67" cy="647" r="6" fill="#FFC4A3" />
-    <path d="M55,663 Q67,649 79,663 Z" fill="#FFC4A3" />
-    <text x="99" y="660" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="start" letter-spacing="0.9">
-      <tspan x="99" dy="0">RANI</tspan>
+    <rect x="42" y="1439" width="450" height="170" fill="#2A1F2D" rx="20" opacity="0.32" />
+    <rect x="35" y="1430" width="450" height="170" fill="#FFF6EC" rx="20" stroke="#FFC4A3" stroke-width="3" />
+    <circle cx="66" cy="1462" r="18" fill="#3D2645" />
+    <circle cx="66" cy="1455" r="6" fill="#FFC4A3" />
+    <path d="M54,1471 Q66,1457 78,1471 Z" fill="#FFC4A3" />
+    <text x="98" y="1468" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="start" letter-spacing="0.9">
+      <tspan x="98" dy="0">RANI</tspan>
     </text>
-    <line x1="58" y1="682" x2="446" y2="682" stroke="#FFC4A3" stroke-width="2" stroke-linecap="round" />
-    <text x="252.0" y="747" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="600" text-anchor="middle" letter-spacing="0">
-      <tspan x="252.0" dy="0">depresi dikira sedih dll</tspan>
+    <line x1="57" y1="1490" x2="463" y2="1490" stroke="#FFC4A3" stroke-width="2" stroke-linecap="round" />
+    <text x="260.0" y="1555" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="600" text-anchor="middle" letter-spacing="0">
+      <tspan x="260.0" dy="0">depresi dikira sedih dll</tspan>
     </text>
     <animate attributeName="opacity" values="0;1" begin="13.0s" dur="0.25s" fill="freeze" />
   </g>
   <g id="public-comment-narcissistic" role="group" data-sequence="4" data-source-type="TIRUAN (bukan komentar asli)" opacity="0">
-    <rect x="1459" y="631" width="432" height="174" fill="#2A1F2D" rx="20" opacity="0.32" />
-    <rect x="1452" y="622" width="432" height="174" fill="#FFF6EC" rx="20" stroke="#FFC4A3" stroke-width="3" />
-    <circle cx="1483" cy="654" r="18" fill="#3D2645" />
-    <circle cx="1483" cy="647" r="6" fill="#FFC4A3" />
-    <path d="M1471,663 Q1483,649 1495,663 Z" fill="#FFC4A3" />
-    <text x="1515" y="660" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="start" letter-spacing="0.9">
-      <tspan x="1515" dy="0">DITO</tspan>
+    <rect x="602" y="1614" width="450" height="170" fill="#2A1F2D" rx="20" opacity="0.32" />
+    <rect x="595" y="1605" width="450" height="170" fill="#FFF6EC" rx="20" stroke="#FFC4A3" stroke-width="3" />
+    <circle cx="626" cy="1637" r="18" fill="#3D2645" />
+    <circle cx="626" cy="1630" r="6" fill="#FFC4A3" />
+    <path d="M614,1646 Q626,1632 638,1646 Z" fill="#FFC4A3" />
+    <text x="658" y="1643" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="start" letter-spacing="0.9">
+      <tspan x="658" dy="0">DITO</tspan>
     </text>
-    <line x1="1474" y1="682" x2="1862" y2="682" stroke="#FFC4A3" stroke-width="2" stroke-linecap="round" />
-    <text x="1668.0" y="732" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="600" text-anchor="middle" letter-spacing="0">
-      <tspan x="1668.0" dy="0">Nggak sesuai ekspektasi dikit,</tspan>
+    <line x1="617" y1="1665" x2="1023" y2="1665" stroke="#FFC4A3" stroke-width="2" stroke-linecap="round" />
+    <text x="820.0" y="1715" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="600" text-anchor="middle" letter-spacing="0">
+      <tspan x="820.0" dy="0">Nggak sesuai ekspektasi dikit,</tspan>
     </text>
-    <text x="1668.0" y="768" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="600" text-anchor="middle" letter-spacing="0">
-      <tspan x="1668.0" dy="0">langsung dibilang narcissistic.</tspan>
+    <text x="820.0" y="1751" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="600" text-anchor="middle" letter-spacing="0">
+      <tspan x="820.0" dy="0">langsung dibilang narcissistic.</tspan>
     </text>
     <animate attributeName="opacity" values="0;1" begin="18.0s" dur="0.25s" fill="freeze" />
   </g>
   <g id="closing-onscreen-question" data-motion="appears-before-phone-zoom" opacity="0">
-    <rect x="566" y="944" width="788" height="72" fill="#FFF6EC" rx="22" />
-    <text x="960" y="991" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" text-anchor="middle" letter-spacing="0">
-      <tspan x="960" dy="0">Are we using psychology terms correctly?</tspan>
+    <rect x="106" y="1816" width="868" height="72" fill="#FFF6EC" rx="22" />
+    <text x="540" y="1863" fill="#3D2645" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="540" dy="0">Are we using psychology terms correctly?</tspan>
     </text>
     <animate attributeName="opacity" values="0;1" begin="22.5s" dur="0.6s" fill="freeze" />
   </g>

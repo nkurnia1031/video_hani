@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="frame-title frame-desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920" role="img" aria-labelledby="frame-title frame-desc" data-format="portrait-9x16" data-frame="03C">
   <title id="frame-title">Scene 3 case 3: You're gaslighting me!</title>
   <desc id="frame-desc">You're gaslighting me! A terracotta assumption appears beside the illustration, then a sage correction reads: Beda pendapat belum tentu gaslighting.</desc>
-  <metadata>Editable animation frame. Characters come from credited, downloadable source SVGs; backgrounds and overlays are separate editable vector layers. No generated imagery.</metadata>
-  <rect x="0" y="0" width="1920" height="1080" fill="#FCE9C2" rx="0" />
-  <svg x="70" y="76" width="910" height="910" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet" overflow="hidden" aria-label="Couple Stress illustration, Storyset Rafiki">
+  <metadata>Editable 9:16 animation frame. Characters use credited, downloadable source SVGs; backgrounds, labels, and text are separate composition layers.</metadata>
+  <rect x="0" y="0" width="1080" height="1920" fill="#FCE9C2" rx="0" id="scene-background" />
+  <svg x="20" y="350" width="1040" height="960" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet" overflow="hidden" aria-label="Couple Stress illustration, Storyset Rafiki">
     <g id="scouple-freepik--Shadow--inject-2">
       <ellipse id="scouple-freepik--path--inject-2" cx="250" cy="416.24" rx="193.89" ry="11.32" style="fill:#FFF6EC" />
     </g>
@@ -149,21 +149,21 @@
     </g>
   </svg>
   <g id="wrong-label-bubble">
-    <rect x="1054" y="298" width="770" height="146" fill="#E4572E" rx="28" />
-    <text x="1439" y="390" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="43" font-weight="700" text-anchor="middle" letter-spacing="0">
-      <tspan x="1439" dy="0">You're gaslighting me!</tspan>
+    <rect x="56" y="104" width="968" height="190" fill="#E4572E" rx="32" />
+    <text x="540" y="220" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="43" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="540" dy="0">You're gaslighting me!</tspan>
     </text>
   </g>
   <g id="sage-correction-card">
-    <rect x="1054" y="574" width="770" height="178" fill="#7FB89A" rx="28" />
-    <text x="1112" y="635" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start" letter-spacing="1.4">
-      <tspan x="1112" dy="0">REALITANYA</tspan>
+    <rect x="56" y="1510" width="968" height="270" fill="#7FB89A" rx="34" />
+    <text x="104" y="1570" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" text-anchor="start" letter-spacing="1.4">
+      <tspan x="104" dy="0">REALITANYA</tspan>
     </text>
-    <text x="1439" y="690" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="600" text-anchor="middle" letter-spacing="0">
-      <tspan x="1439" dy="0">Beda pendapat belum tentu</tspan>
+    <text x="540" y="1660" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="600" text-anchor="middle" letter-spacing="0">
+      <tspan x="540" dy="0">Beda pendapat belum tentu</tspan>
     </text>
-    <text x="1439" y="731" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="600" text-anchor="middle" letter-spacing="0">
-      <tspan x="1439" dy="0">gaslighting.</tspan>
+    <text x="540" y="1708" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="600" text-anchor="middle" letter-spacing="0">
+      <tspan x="540" dy="0">gaslighting.</tspan>
     </text>
   </g>
 </svg>

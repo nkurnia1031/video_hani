@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="frame-title frame-desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920" role="img" aria-labelledby="frame-title frame-desc" data-format="portrait-9x16" data-frame="03A">
   <title id="frame-title">Scene 3 case 1: They're avoidant!</title>
   <desc id="frame-desc">They're avoidant! A terracotta assumption appears beside the illustration, then a sage correction reads: Mungkin sibuk, lelah, atau belum sempat.</desc>
-  <metadata>Editable animation frame. Characters come from credited, downloadable source SVGs; backgrounds and overlays are separate editable vector layers. No generated imagery.</metadata>
-  <rect x="0" y="0" width="1920" height="1080" fill="#FFE3D3" rx="0" />
-  <svg x="58" y="78" width="900" height="900" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet" overflow="hidden" aria-label="Texting illustration, Storyset Rafiki">
+  <metadata>Editable 9:16 animation frame. Characters use credited, downloadable source SVGs; backgrounds, labels, and text are separate composition layers.</metadata>
+  <rect x="0" y="0" width="1080" height="1920" fill="#FFE3D3" rx="0" id="scene-background" />
+  <svg x="-110" y="100" width="1300" height="1150" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet" overflow="hidden" aria-label="Texting illustration, Storyset Rafiki">
     <g id="stexting-freepik--Shadow--inject-2">
       <ellipse id="stexting-freepik--path--inject-2" cx="250" cy="416.24" rx="193.89" ry="11.32" style="fill:#FFE3D3" />
     </g>
@@ -78,57 +78,30 @@
       <rect x="268.07" y="389.08" width="23.25" height="5.77" style="fill:#7FB89A" />
     </g>
   </svg>
-  <rect x="245" y="142" width="570" height="82" fill="#FFF6EC" rx="24" stroke="#FFC4A3" stroke-width="3" />
-  <svg x="260" y="153" width="58" height="58" viewBox="75 111 58 64" preserveAspectRatio="xMidYMid meet" overflow="hidden" aria-label="Texting illustration, Storyset Rafiki">
-    <g id="stexting-freepik--character-1--inject-2">
-      <path d="M127.41,146a25,25,0,1,1-25-25A24.84,24.84,0,0,1,127.41,146Z" style="fill:#7FB89A" />
-      <path d="M127.41,146a25,25,0,1,1-25-25A24.84,24.84,0,0,1,127.41,146Z" style="fill:#fff;opacity:0.5;isolation:isolate" />
-      <path d="M120.6,163.12a24.95,24.95,0,0,1-36,.31c1.17-.22,2.44-.45,3.74-.65,1.1-.18,2.24-.35,3.36-.48a154.22,154.22,0,0,1,17.84-1.24c.73,0,1.45.08,2.17.08,1.86.11,3.63.3,5.16.49A7.88,7.88,0,0,1,120.6,163.12Z" style="fill:#2A1F2D" />
-      <path d="M115.05,127.42s1.33,8.91-4.42,13.08-5.75-16-5.75-16Z" style="fill:#2A1F2D" />
-      <path d="M91.67,162.25c3.83,3.48,13.21,2.19,13.21,2.19s5.86-1.6,4.63-3.43c-3.45-.57-5.12-2.18-5.81-4.24a10,10,0,0,1-.35-3.94,20.71,20.71,0,0,1,.29-2.2L92,142C93.56,147.71,95.42,158.14,91.67,162.25Z" style="fill:#FFC4A3" />
-      <path d="M94.72,147.5c.46,7,6.18,8.88,9,9.27a10,10,0,0,1-.35-3.94Z" style="opacity:0.2;isolation:isolate" />
-      <path d="M93.94,149.11a9.83,9.83,0,0,0,11.29,3.81,11,11,0,0,0,6.25-5.09,11.2,11.2,0,0,0,.52-1c2.83-6.62,3.73-18.2-3.27-22.54a10.66,10.66,0,0,0-16.28,8C91.59,140,90.72,144.53,93.94,149.11Z" style="fill:#FFC4A3" />
-      <path d="M103.73,136.42c-.15.61.14,1.18.55,1.25s.83-.38.94-1-.15-1.18-.55-1.25S103.85,135.78,103.73,136.42Z" style="fill:#2A1F2D" />
-      <path d="M110.8,137.62c-.15.61.14,1.19.55,1.26s.82-.39.93-1-.14-1.19-.55-1.26S110.9,137,110.8,137.62Z" style="fill:#2A1F2D" />
-      <path d="M108.5,137.55a22.9,22.9,0,0,0,2.07,5.85,3.65,3.65,0,0,1-3.1,0Z" style="fill:#E4572E" />
-      <path d="M101.93,133.75a.38.38,0,0,0,.38-.08,3,3,0,0,1,2.56-.83.37.37,0,1,0,.18-.72h0a3.69,3.69,0,0,0-3.24,1,.37.37,0,0,0,0,.52h0A.44.44,0,0,0,101.93,133.75Z" style="fill:#2A1F2D" />
-      <path d="M105.91,146.51h0a5.67,5.67,0,0,1-4.63-2.52.19.19,0,0,1,.07-.27.19.19,0,0,1,.26.06h0a5.45,5.45,0,0,0,4.31,2.32.2.2,0,0,1,.19.19v0a.19.19,0,0,1-.19.19Z" style="fill:#2A1F2D" />
-      <path d="M114.25,135.7a.39.39,0,0,0,.21.06.37.37,0,0,0,.26-.46h0a3.69,3.69,0,0,0-2.29-2.51.36.36,0,0,0-.46.25h0a.37.37,0,0,0,.25.46h0a3,3,0,0,1,1.78,2A.35.35,0,0,0,114.25,135.7Z" style="fill:#2A1F2D" />
-      <path d="M93.38,157.83l11.09,5,.65-4,4.07,1.43a3.33,3.33,0,0,1,2.22,3.51l-.46,4.4-5.62-3.08-2.8,4-13.32-6.41Z" style="fill:#7FB89A" />
-      <path d="M102.44,126.5a21.6,21.6,0,0,0,6.58,4l-2.14-4s5,4.4,10.12,6.26c0,0,2.25-11.13-10.88-15.51C95,113.55,93,121,93,121c-7-2.12-14.9,17.88.32,27.18,0,0-1.22-7.79.65-9.3S103.12,132.63,102.44,126.5Z" style="fill:#2A1F2D" />
-      <path d="M88,138a7.45,7.45,0,0,0,3.56,4.41c2.29,1.23,4-.69,3.84-3.14-.16-2.19-1.51-5.53-4-5.72S87.37,135.68,88,138Z" style="fill:#FFC4A3" />
-    </g>
-  </svg>
-  <text x="338" y="193" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start" letter-spacing="0">
-    <tspan x="338" dy="0">Teman</tspan>
+  <rect x="116" y="1150" width="630" height="94" fill="#FFF6EC" rx="25" stroke="#FFC4A3" stroke-width="3" />
+  <text x="160" y="1208" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="600" text-anchor="start" letter-spacing="0">
+    <tspan x="160" dy="0">Teman · Hei, ada waktu?</tspan>
   </text>
-  <rect x="335" y="244" width="480" height="82" fill="#3D2645" rx="24" />
-  <text x="575" y="296" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="575" dy="0">Hei, ada waktu?</tspan>
-  </text>
-  <rect x="255" y="344" width="560" height="88" fill="#3D2645" rx="24" />
-  <text x="535" y="400" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" text-anchor="middle" letter-spacing="0">
-    <tspan x="535" dy="0">Balas dong :( </tspan>
-  </text>
-  <text x="800" y="468" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="end" letter-spacing="0">
-    <tspan x="800" dy="0">Dibaca · 3 jam</tspan>
+  <rect x="336" y="1260" width="628" height="94" fill="#3D2645" rx="25" />
+  <text x="650" y="1318" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
+    <tspan x="650" dy="0">Balas dong :( · Dibaca 3 jam</tspan>
   </text>
   <g id="wrong-label-bubble">
-    <rect x="1054" y="298" width="770" height="146" fill="#E4572E" rx="28" />
-    <text x="1439" y="390" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="50" font-weight="700" text-anchor="middle" letter-spacing="0">
-      <tspan x="1439" dy="0">They're avoidant!</tspan>
+    <rect x="56" y="104" width="968" height="190" fill="#E4572E" rx="32" />
+    <text x="540" y="220" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="47" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="540" dy="0">They're avoidant!</tspan>
     </text>
   </g>
   <g id="sage-correction-card">
-    <rect x="1054" y="574" width="770" height="178" fill="#7FB89A" rx="28" />
-    <text x="1112" y="635" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start" letter-spacing="1.4">
-      <tspan x="1112" dy="0">REALITANYA</tspan>
+    <rect x="56" y="1510" width="968" height="270" fill="#7FB89A" rx="34" />
+    <text x="104" y="1570" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" text-anchor="start" letter-spacing="1.4">
+      <tspan x="104" dy="0">REALITANYA</tspan>
     </text>
-    <text x="1439" y="690" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="600" text-anchor="middle" letter-spacing="0">
-      <tspan x="1439" dy="0">Mungkin sibuk, lelah, atau</tspan>
+    <text x="540" y="1660" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="600" text-anchor="middle" letter-spacing="0">
+      <tspan x="540" dy="0">Mungkin sibuk, lelah, atau</tspan>
     </text>
-    <text x="1439" y="731" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="600" text-anchor="middle" letter-spacing="0">
-      <tspan x="1439" dy="0">belum sempat.</tspan>
+    <text x="540" y="1708" fill="#2A1F2D" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="600" text-anchor="middle" letter-spacing="0">
+      <tspan x="540" dy="0">belum sempat.</tspan>
     </text>
   </g>
 </svg>

@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="frame-title frame-desc" data-frame="4A">
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920" role="img" aria-labelledby="frame-title frame-desc" data-format="portrait-9x16" data-frame="4A">
   <title id="frame-title">4A · Raka mislabels his sadness</title>
   <desc id="frame-desc">The same Co-workers office illustration as 4B shows Raka alone after Dina is removed from the composition. Separate target and thought-label overlays carry the 4A beat.</desc>
   <metadata>Storyset Co-workers · Rafiki. The shared office base and Raka character match 4B; Dina's separate source character object is omitted in this frame. The target card and thought-label cloud are independent overlays. No character paths were redrawn.</metadata>
-  <rect x="0" y="0" width="1920" height="1080" fill="#FFF6EC" rx="0" id="scene-background" />
-  <svg x="0" y="74" width="1000" height="1000" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet" overflow="hidden" aria-label="Co-workers · Rafiki illustration, Storyset Rafiki">
+  <rect x="0" y="0" width="1080" height="1920" fill="#FFF6EC" rx="0" id="scene-background" />
+  <svg x="0" y="620" width="1080" height="1080" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet" overflow="hidden" aria-label="Co-workers · Rafiki illustration, Storyset Rafiki">
     <g id="scoworkers-background-complete">
       <rect y="382.4" width="500" height="0.25" style="fill:#ebebeb" />
       <rect x="416.78" y="398.49" width="33.12" height="0.25" style="fill:#ebebeb" />
@@ -50,10 +50,6 @@
       <rect x="91.43" y="86.47" width="85.69" height="166.2" transform="translate(268.55 339.13) rotate(180)" style="fill:#e6e6e6" />
       <rect x="85.82" y="86.47" width="89.79" height="166.2" transform="translate(261.43 339.13) rotate(180)" style="fill:#f5f5f5" />
       <polygon points="161.41 249.23 168.29 89.91 100.02 89.91 93.15 249.23 161.41 249.23" style="fill:#fff" />
-    </g>
-    <g id="scoworkers-background-simple">
-      <path d="M289.46,166.76c-31.4-19-43.22-60-77-75.85-29.7-14-80.39-13.67-107.18,7.51-29.87,23.63-29.22,65.48-7.59,95.14,23.8,32.64,64.46,33.05,98.71,46.47,60,23.51,187.36,111.68,233.12,14.79,14.2-30.07,7.73-91.08-32.58-96C358.18,154.06,333.66,193.5,289.46,166.76Z" style="fill:#3D2645" />
-      <path d="M289.46,166.76c-31.4-19-43.22-60-77-75.85-29.7-14-80.39-13.67-107.18,7.51-29.87,23.63-29.22,65.48-7.59,95.14,23.8,32.64,64.46,33.05,98.71,46.47,60,23.51,187.36,111.68,233.12,14.79,14.2-30.07,7.73-91.08-32.58-96C358.18,154.06,333.66,193.5,289.46,166.76Z" style="fill:#fff;opacity:0.9" />
     </g>
     <g id="scoworkers-Shadow">
       <ellipse id="scoworkers-path" cx="250" cy="416.24" rx="193.89" ry="11.32" style="fill:#f5f5f5" />
@@ -128,43 +124,45 @@
     </g>
   </svg>
   <g id="missed-target-card">
-    <rect x="1178" y="114" width="560" height="142" fill="#3D2645" rx="22" />
-    <text x="1210" y="155" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="start" letter-spacing="1.0">
-      <tspan x="1210" dy="0">TARGET KERJA</tspan>
+    <rect x="70" y="84" width="450" height="130" fill="#3D2645" rx="24" />
+    <text x="102" y="124" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="start" letter-spacing="1.0">
+      <tspan x="102" dy="0">TARGET KERJA</tspan>
     </text>
-    <text x="1230" y="222" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="41" font-weight="700" text-anchor="start" letter-spacing="0">
-      <tspan x="1230" dy="0">10</tspan>
+    <text x="116" y="188" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700" text-anchor="start" letter-spacing="0">
+      <tspan x="116" dy="0">10</tspan>
     </text>
-    <text x="1294" y="217" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="500" text-anchor="start" letter-spacing="0">
-      <tspan x="1294" dy="0">target</tspan>
+    <text x="176" y="183" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="500" text-anchor="start" letter-spacing="0">
+      <tspan x="176" dy="0">target</tspan>
     </text>
-    <text x="1452" y="222" fill="#E4572E" font-family="Arial, Helvetica, sans-serif" font-size="41" font-weight="700" text-anchor="start" letter-spacing="0">
-      <tspan x="1452" dy="0">6</tspan>
+    <line x1="260" y1="148" x2="260" y2="198" stroke="#FFF6EC" stroke-width="2" stroke-linecap="round" opacity="0.45" />
+    <text x="292" y="188" fill="#E4572E" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700" text-anchor="start" letter-spacing="0">
+      <tspan x="292" dy="0">6</tspan>
     </text>
-    <text x="1507" y="217" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="500" text-anchor="start" letter-spacing="0">
-      <tspan x="1507" dy="0">tercapai</tspan>
+    <text x="334" y="183" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="500" text-anchor="start" letter-spacing="0">
+      <tspan x="334" dy="0">tercapai</tspan>
     </text>
-    <line x1="1392" y1="172" x2="1392" y2="224" stroke="#FFF6EC" stroke-width="2" stroke-linecap="round" opacity="0.45" />
   </g>
   <g id="raka-small-thought-cloud" data-role="animatable-thought-label">
-    <rect x="850" y="324" width="536" height="154" fill="#3D2645" rx="56" />
-    <circle cx="904" cy="330" r="40" fill="#3D2645" />
-    <circle cx="973" cy="319" r="48" fill="#3D2645" />
-    <circle cx="1052" cy="318" r="49" fill="#3D2645" />
-    <circle cx="1134" cy="322" r="45" fill="#3D2645" />
-    <circle cx="1213" cy="328" r="37" fill="#3D2645" />
-    <circle cx="1280" cy="337" r="26" fill="#3D2645" />
-    <circle cx="824" cy="485" r="15" fill="#3D2645" />
-    <circle cx="792" cy="500" r="10" fill="#3D2645" />
-    <circle cx="760" cy="515" r="6" fill="#3D2645" />
-    <text x="1118" y="391" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
-      <tspan x="1118" dy="0">Aku depresi. Ada yang salah</tspan>
+    <rect x="682" y="648" width="324" height="232" fill="#3D2645" rx="38" />
+    <circle cx="710" cy="658" r="25" fill="#3D2645" />
+    <circle cx="754" cy="644" r="32" fill="#3D2645" />
+    <circle cx="810" cy="644" r="32" fill="#3D2645" />
+    <circle cx="866" cy="648" r="28" fill="#3D2645" />
+    <circle cx="917" cy="654" r="23" fill="#3D2645" />
+    <circle cx="676" cy="896" r="12" fill="#3D2645" />
+    <circle cx="655" cy="918" r="8" fill="#3D2645" />
+    <circle cx="641" cy="937" r="5" fill="#3D2645" />
+    <text x="844" y="708" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="844" dy="0">Aku depresi.</tspan>
     </text>
-    <text x="1118" y="426" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">
-      <tspan x="1118" dy="0">banget sama aku.</tspan>
+    <text x="844" y="740" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="844" dy="0">Ada yang salah</tspan>
     </text>
-    <text x="1118" y="458" fill="#FFC4A3" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" text-anchor="middle" letter-spacing="0.8">
-      <tspan x="1118" dy="0">SEDIH BEBERAPA HARI</tspan>
+    <text x="844" y="772" fill="#FFF6EC" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" text-anchor="middle" letter-spacing="0">
+      <tspan x="844" dy="0">banget sama aku.</tspan>
+    </text>
+    <text x="844" y="834" fill="#FFC4A3" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0.5">
+      <tspan x="844" dy="0">SEDIH BEBERAPA HARI</tspan>
     </text>
   </g>
 </svg>
